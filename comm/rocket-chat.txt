@@ -1,0 +1,11 @@
+http://rocket.chat/
+https://github.com/RocketChat/Rocket.Chat
+Install
+	wget https://github.com/RocketChat/Rocket.Chat/archive/master.zip
+	unzip master.zip
+	cd Rocket.Chat-master
+Or clone it
+	git clone https://github.com/RocketChat/Rocket.Chat.git
+	cd Rocket.Chat
+Run
+	meteor

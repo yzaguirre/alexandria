@@ -1,0 +1,23 @@
+https://news.ycombinator.com/item?id=9040841
+https://sdelements.github.io/lets-chat/
+https://github.com/sdelements/lets-chat/wiki/XMPP
+Requirements
+Node.js 0.10+
+MongoDB 2.0+
+Python 2.7
+
+Download
+	wget https://github.com/sdelements/lets-chat/archive/master.zip
+	unzip master.zip
+	cd lets-chat-master
+Or clone it
+	git clone https://github.com/sdelements/lets-chat.git
+	cd lets-chat
+Install
+	npm install
+	
+Optional - For custom settings, copy and edit settings.yml.sample:
+	cp settings.yml.sample settings.yml
+Run Let's Chat:
+	npm start
+Party time at http://localhost:5000/!
