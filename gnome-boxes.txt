@@ -1,0 +1,9 @@
+http://xkahn.zoned.net/blog/2013/11/26/networking-and-gnome-boxes/
+	# zypper install gnome-boxes
+	$ gnome-boxes
+You can find out if gnome-boxes will work on your machine:
+	$ gnome-boxes --checks
+
+You can also open a VM from the command line, by name:
+    $ gnome-boxes f18
+Change hard drive directory

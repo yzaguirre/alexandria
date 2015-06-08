@@ -1,0 +1,11 @@
+https://help.github.com/articles/markdown-basics
+https://help.github.com/articles/github-flavored-markdown
+
+https://stackoverflow.com/questions/17630486/how-to-convert-from-markdown-to-pdf
+	apt-get install latex-beamer pandoc
+Conversion to pdf
+	pandoc -t beamer -o output.pdf yourInput.mkd
+https://stackoverflow.com/questions/11025123/how-to-convert-r-markdown-to-pdf
+	pandoc -s example-r-markdown.html -o example-r-markdown.pdf
+Conversion to html
+	pandoc --self-contained -t slidy -o output-slidy.html yourInput.mkd

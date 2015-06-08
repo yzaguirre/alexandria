@@ -1,0 +1,13 @@
+http://www.fosshub.com/Audacity.html/audacity-minsrc-2.1.0.tar.xz
+Audacity Linux Source - 4.87 MB | version: 2.1.0
+MD5: d21a794cc1e2a1567d3d75b53b1f2f02
+SHA1: a53bce0276240bb56f2e3fd1bf235a4ef688caa3
+Audacity Manual - 18.49 MB | version: 2.1.0
+MD5: 7d6eeb30b87a73dc74ac2f0252d8ee02
+SHA1: d0c90cbcd304cbe4c45a693b9a3143c9c23e43eb
+	tar xf audacity-minsrc-2.1.0.tar.xz
+	cd audacity-minsrc-2.1.0
+	apt-get install libsoxr-dev libsndfile1-dev libwxgtk2.8-dev
+	./configure
+	make
+	make install

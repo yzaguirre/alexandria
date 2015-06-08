@@ -1,0 +1,2 @@
+http://blog.bobbyallen.me/2013/01/21/installing-a-high-availability-web-server-cluster-on-ubuntu-12-04-lts-using-haproxy-heartbeat-and-nginx/
+http://blog.romerojunior.com/linux/linux-building-basic-high-availability-infrastructure-for-web-servers/

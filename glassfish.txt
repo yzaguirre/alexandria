@@ -1,0 +1,32 @@
+https://glassfish.java.net/download.html
+GlassFish Documentation : http://glassfish.org/documentation.html
+GlassFish Forum : https://www.java.net/forums/glassfish/glassfish
+
+The GlassFish Server Administration server console may be accessed with the URL
+http://localhost:4848/common/index.jsf
+
+The server can be accessed at 
+http://localhost:8080
+
+Tutorial WEBSERVICE
+https://netbeans.org/kb/docs/websvc/jax-ws.html
+
+	vim +366 /VMs/opt/glassfish-4.1/glassfish/domains/domain1/config/domain.xml
+
+The 'asadmin' command-line utility is used to control and manage GlassFish (start, stop, configure, deploy applications, etc).
+Make an alias in ~/.bash_alias
+	alias glasstart='/VMs/opt/glassfish-4.1/bin/asadmin start-domain'
+	alias glasstop='/VMs/opt/glassfish-4.1/bin/asadmin stop-domain'
+Start Glassfish server
+	glasstart
+Stop Glassfish server
+	glasstop
+The default 'domain1' domain is configured to listen on port 8080. 
+In your browser, go to http://localhost:8080 to see the default landing page.
+To manage GlassFish, just go to web administration console: http://localhost:4848
+
+Log File: /VMs/opt/glassfish-4.1/glassfish/domains/domain1/logs/server.log
+
+Open the following local file in your browser: glassfish4/glassfish/docs/quickstart.html
+It contains useful information such as the details about the pre-configured 'domain1',
+links to the GlassFish Documentation, etc.

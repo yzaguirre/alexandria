@@ -1,0 +1,7 @@
+An AppID must be supplied in all calls to the Wolfram|Alpha API.
+If you have multiple applications using the Wolfram|Alpha API, each must have its own AppID.
+
+http://products.wolframalpha.com/docs/WolframAlpha-API-Reference.pdf
+	curl https://api.wolframalpha.com/v2/query?input=pi&appid=XXXX
+	curl https://api.wolframalpha.com/v2/query -d input="Pi" -d appid=XXXX
+	curl https://api.wolframalpha.com/v2/query -d input="weather Guatemala, Guatemala" -d appid=XXXX

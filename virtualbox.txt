@@ -1,0 +1,115 @@
+https://forums.virtualbox.org/viewtopic.php?t=15868
+Mount shared folders
+	# mount -t vboxsf share ~/host
+	# mount -t vboxsf -o uid=1000,gid=100 share /home/david/host
+	
+If you want to have it mount automatically upon each boot, put the mount command in /etc/rc.local (Debian based distro's), 
+or whatever script is run at the end of the boot process. The Shared Folders service should mount them automatically, but that doesn't always happen.
+
+http://dedoimedo.com/computers/virtualbox-usb.html
+Expansion Pack
+http://www.sysprobs.com/guide-download-install-oracle-vm-virtualbox-extension-pack-windows-host
+http://download.virtualbox.org/virtualbox/4.2.18/
+	$ wget http://download.virtualbox.org/virtualbox/4.2.18/Oracle_VM_VirtualBox_Extension_Pack-4.2.18-88780.vbox-extpack
+The other way is, go to File -> Preferences in menu bar and select Extensions option in VirtualBox console.
+Press Add Extension button and browse the downloaded VM VirtualBox Extension Pack. That
+
+http://xmodulo.com/2013/05/how-to-create-and-start-virtualbox-vm-without-gui.html
+https://www.virtualbox.org/manual/ch08.html#vboxmanage-startvm
+Start headless
+	VBoxManage startvm --type headless --vrde off usTahr\ 2
+to stop/poweroff a VM:
+	VBoxManage controlvm usTahr\ 2 poweroff 
+to check an already created VM:
+	VBoxManage showvminfo usTahr\ 2
+
+Virtual machine groups
+https://blogs.oracle.com/fatbloke/entry/creating_and_using_vm_groups
+	VBoxManage modifyvm externalnyc --groups "/NYC2 datacenter"
+	VBoxManage modifyvm Desarrollo --groups "/DVD datacenter"
+
+Favorates
+	VBoxManage startvm --type headless externalnyc --vrde off
+	VBoxManage startvm --type headless internalnyc
+	VBoxManage startvm --type headless ams1
+	
+	VBoxManage controlvm externalnyc poweroff 
+	VBoxManage controlvm internalnyc poweroff 
+	VBoxManage controlvm ams1 poweroff 
+
+Install VBoxAddons on lubuntu
+http://askubuntu.com/questions/311161/how-to-install-guest-additions-in-lubuntu-13-04
+https://superuser.com/questions/729515/cant-install-guest-additions-to-lubuntu
+	sudo apt-get install dkms 
+http://www.binarytides.com/vbox-guest-additions-ubuntu-14-04/
+	sudo apt-get install build-essential module-assistant linux-headers-$(uname -r)
+
+Install ExpPacks
+https://www.virtualbox.org/manual/ch01.html#intro-installing
+https://www.virtualbox.org/wiki/Downloads
+VirtualBox extension packages have a .vbox-extpack file name extension
+	VBoxManage list extpacks
+Install an extension
+	VBoxManage extpack install *.vbox-extpack
+The optional --replace parameter can be used to uninstall the old package
+before the new package is installed.
+Clean up
+	VBoxManage extpack cleanup
+
+https://www.virtualbox.org/manual/ch07.html#vboxheadless
+Create virtual machine
+	VBoxManage createvm --name helium --register --ostype Debian_64
+	VBoxManage modifyvm helium --name helium2 \
+		--description "Pruebas moodle Elearning" \
+		--memory 1500 \
+		--acpi on --pae off --hwvirtex on \
+		--boot1 dvd --nic1 nat --audio none --usb off --vrde on
+Create harddrive
+	VBoxManage createhd --filename heliumhd.vdi --size 15000 --format VDI
+Add an IDE Controller to the new VM:
+	VBoxManage storagectl "helium" --name "IDE Controller"
+      --add ide --controller PIIX4
+Set the VDI file created above as the first virtual hard disk of the new VM:
+	VBoxManage storageattach helium --storagectl "IDE Controller" --port 0 --device 0 --type hdd --medium heliumhd.vdi
+Attach the ISO file that contains the operating system installation that you want to install later to the virtual machine, so the machine can boot from it:
+	VBoxManage storageattach helium --type dvddrive --medium /debian.iso
+Start the virtual machine using VBoxHeadless:
+	VBoxHeadless --startvm "helium"
+Connect via RDP at
+	rdesktop -a 16 -N 1.2.3.4:3389
+	rdesktop -a 16 -N -u dave -p password -f 1.2.3.4:3389
+		
+Modify network
+	VBoxManage modifyvm helium --nic1 bridged --bridgeadapter1 eth0
+Activate/Deactivate VRDP
+https://www.virtualbox.org/manual/ch07.html#vboxheadless
+	VBoxManage modifyvm --vrde on helium
+	VBoxManage modifyvm --vrde off helium
+Change VRDP port
+	VBoxManage modifyvm --vrdeport 3390
+Modify RAM
+https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm
+to 1.5GB
+	VBoxManage modifyvm --memory 1500 helium
+to 512MB
+	VBoxManage modifyvm --memory 512 helium
+
+Show info
+	VBoxManage showvminfo helium | less
+
+Delete VM
+	VBoxManage unregistervm --delete helium
+
+Asign RTC time
+	--rtcuseutc on
+Remove disc
+	VBoxManage storageattach "helium"  --storagectl "Controlador IDE" --type dvddrive --port 0 --device 1 --medium none
+
+Make a snapshot
+	VBoxManage snapshot "helium" take "snap01" --description "lamp stack ready"
+Restore snapshot
+	VBoxManage snapshot "helium" restore "snap01"
+Delete snapshot
+	VBoxManage snapshot "helium" delete "snap01"
+List snapshot
+	VBoxManage snapshot "helium" list --details

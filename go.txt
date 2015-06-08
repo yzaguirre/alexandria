@@ -1,0 +1,24 @@
+https://golang.org/dl/
+https://golang.org/doc/install
+	wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
+	sha1sum go1.4.2.linux-amd64.tar.gz
+	tar xf go1.4.2.linux-amd64.tar.gz -C /VMs/opt
+	mkdir /VMs/opt/go/libs
+	vim + ~/.profile
+export GOROOT=/VMs/opt/go
+export GOPATH=$GOROOT/libs
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+Test your installation
+	vim hello.go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Printf("hello, world\n")
+}
+
+Run
+	go run hello.go
+hello, world

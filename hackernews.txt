@@ -1,0 +1,26 @@
+system tray
+https://news.ycombinator.com/item?id=6819042
+https://github.com/captn3m0/hackertray/
+HackerTray is a simple Hacker News Linux application that lets you view top HN stories in your System Tray. 
+It relies on appindicator, so it is not guaranteed to work on all systems. 
+It also provides a Gtk StatusIcon fallback in case AppIndicator is not available.
+	# pip install hackertray
+OR
+	# easy_install hackertray
+OR
+#Download Source and cd to it
+	# python setup.py install
+
+
+After that, you can run 
+	$ hackertray
+from anywhere and it will run. 
+You can now add it to your OS dependent session autostart method. 
+In Ubuntu, you can access it via:
+    System > Preferences > Sessions
+    (OR)
+    System > Preferences > Startup Applications
+depending on your Ubuntu Version. 
+Or put it in 
+	~/.config/openbox/autostart 
+if you are running OpenBox. Here is how the configuration should look like in Ubuntu and its derivatives.

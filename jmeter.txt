@@ -1,0 +1,20 @@
+To get started, grab the latest binary release by
+pointing your browser to http://jmeter.apache.org/download_jmeter.cgi
+
+Once downloaded, extract the archive to a location of your choice. 
+The location you extracted the archive to will be referred to as JMETER_HOME
+
+Provided you have a JDK/JRE correctly installed and a JAVA_HOME environment
+variable set, you are all set and ready to run!
+
+On Unix
+For illustrative purposes, we assume you have installed Java JDK at /opt/tools/jdk:
+1.	 Open a terminal window.
+2.	 Export JAVA_HOME=/opt/tools/jdk.
+3.	 Export PATH=$PATH:$JAVA_HOME.
+It is advisable to set this in your shell profile settings such as .bash_profile
+(for Bash users) or .zshrc (for zsh users) so you won't have to set it for each new
+terminal window you open.
+
+To start JMeter, open a terminal shell, change to the JMETER_HOME\bin folder and
+run the following:

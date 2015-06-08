@@ -1,0 +1,10 @@
+	# apt-get install gfortran
+Install PCRE
+http://www.cyberciti.biz/faq/debian-ubuntu-linux-install-libpcre3-dev/
+	apt-get install libpcre3 libpcre3-dev
+	apt-get install libfreetype6-dev libopenblas-dev liblapack-dev
+	wget ftp://ftp.gnu.org/gnu/octave/octave-3.8.0.tar.bz2
+	tar xf octave-3.8.0.tar.bz2 && cd octave-3.8.0
+	./configure
+	make
+	# make install

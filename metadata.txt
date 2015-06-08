@@ -1,0 +1,28 @@
+https://mat.boum.org/
+	$ mat -d filename.ext
+That command will return (to the display) the metadata stored in a
+file. 
+To clean a file and save a backup copy (the default behavior for
+the GUI application), you would enter the command like this:
+	$ mat -b filename.ext
+
+Extraer, crear, borrar y modificar metadatos con Exiftool. 
+http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-metadatos-con-Exiftool.html
+http://www.avpreserve.com/exiftool-tutorial-series/ 
+	sudo apt-get install libimage-exiftool-perl
+	exiftool 413511-1920x1080.jpg 
+
+Crear metadatos
+Para crear metadatos basta con escribir el "tag" que queremos crear. En este caso le añadimos el metadato copyright.
+Escribimos el siguiente comando en la terminal:
+	exiftool -exif:Copyright="Linkwer" 413511-1920x1080.jpg
+
+Modificar los metadatos
+En este caso modificaremos "Copyright".
+Escribimos el siguiente comando en la terminal:
+	exiftool -exif:Copyright="taringa" 413511-1920x1080.jpg
+
+Eliminar los metadatos
+Escribimos el siguiente comando en la terminal:
+exiftool -all= 413511-1920x1080.jpg
+	Dónde -all= significa que vamos a borrar todos los metadatos. 

@@ -1,0 +1,53 @@
+Google OAuth
+https://code.google.com/apis/console
+URLs de redireccionamiento: http://cb64.local/moodle/auth/googleoauth2/google_redirect.php 
+Orígenes de Javascript: http://cb64.local
+
+PHP client
+https://github.com/fkooman/php-oauth-client
+composer.json
+```json
+{
+    "name": "fkooman/my-demo-oauth-app",
+    "require": {
+        "fkooman/guzzle-bearer-auth-plugin": "dev-master",
+        "fkooman/php-oauth-client": "dev-master"
+    }
+}
+```
+Required variables:
+* authorize_endpoint
+* token_endpoint
+* client_id
+* client_secret
+
+### Storing access tokens
+Two ways
+* Tokens stored in database
+* Tokens stored in user session
+
+### Client
+* index.php
+* callback.php
+
+### Client Configuration
+`ClientConfig`
+```php
+$clientConfig = new ClientConfig(
+    array(
+        "authorize_endpoint" => "http://localhost/oauth/php-oauth/authorize.php",
+        "client_id" => "foo",
+        "client_secret" => "foobar",
+        "token_endpoint" => "http://localhost/oauth/php-oauth/token.php",
+    )
+);
+```
+`GoogleClientConfig`
+```php
+
+// Google
+$googleClientConfig = new GoogleClientConfig(
+    json_decode(file_get_contents("client_secrets.json"), true)
+);
+
+```

@@ -1,0 +1,293 @@
+IDE
+geany
+vim
+sublime
+limetext.org
+atom
+LightTable
+brackets
+zed
+gobby
+
+Paste Bin
+http://0bin.net/
+
+Sysadmin
+https://sysadmincasts.com/
+facebook path picker (fpp)
+ccat
+
+http://www.privacytools.io/
+
+organization
+tudo
+https://en.wikipedia.org/wiki/List_of_repetitive_strain_injury_software#Partial_list_of_solutions
+https://superuser.com/questions/305940/linux-software-for-periodical-work-break
+https://www.rescuetime.com/
+workrave
+
+QR
+http://goqr.me
+https://zxing.appspot.com/generator/
+
+File base encryption
+zuluCrypt
+tomb
+freebsd has gdbe
+gpg & seahorse
+http://gpg4win.org/
+
+secure comm
+https://encrypt.to/
+https://tox.im
+https://ostel.co/
+
+comm
+https://ekiga.im/
+http://www.linphone.org/
+http://yateclient.yate.ro/
+http://sflphone.org/
+
+Storage & sharing
+Hosting and sharing multimedia
+https://img.bi/
+http://imgbifwwqoixh7te.onion/
+http://piwigo.org/
+http://www.zenphoto.org/
+http://pyd.io/
+http://owncloud.org/
+https://tahoe-lafs.org/trac/tahoe-lafs
+http://buddycloud.com/
+
+Transit base encryption
+OpenSSL
+cryptcat, the encrypted netcat tool
+
+console print
+http://www.taringa.net/posts/linux/17844694/Imprimir-en-Linux-desde-la-consola.html
+
+sync
+btsync
+syncthing.net
+aerofs
+seafile
+dotfiles.github.io
+https://spideroak.com/
+
+search
+https://duckduckgo.com/
+http://searx.me/
+https://github.com/asciimoo/searx
+
+
+bookie http://docs.bmark.us
+
+firefox plugins
+https://www.ghostery.com
+
+docs
+apache wave
+http://www.gutenberg.org
+
+Terminal as a service
+https://manageacloud.com/
+http://instantcloud.io/
+https://manageacloud.com/terminal
+
+VPN
+tinc
+OpenVPN
+https://github.com/schwabe/ics-openvpn
+... many others
+
+VPN as a service
+https://bitmask.net/
+https://airvpn.org
+https://en.kebrum.com
+https://www.frootvpn.com
+https://vpn.ccrypto.org/
+https://www.liquidvpn.com/
+https://proxy.sh/
+https://www.privateinternetaccess.com/
+
+comm/social
+mumble - voip
+movim - social
+diasp.eu
+
+Comm
+https://crypto.cat/
+https://duck.co/blog/using-pidgin-with-xmpp-jabber
+https://riseup.net/en
+https://help.riseup.net/en/vpn
+http://www.autistici.org/en/index.html
+https://vpn.autistici.org/
+https://mykolab.com/
+
+mobile chat
+Telegram, Kontalk Messenger, Xabber
+https://safeum.com/price
+
+Screenreaders
+http://www.squirt.io/install.html
+https://news.ycombinator.com/item?id=7385634
+
+analitics
+piwik
+http://www.openwebanalytics.com/
+
+CMS
+ghost
+picocms
+
+
+Apache2
+https://github.com/phanan/htaccess
+
+https://appthwack.com/
+transcoder
+http://handbrake.fr
+linux alternatives
+http://www.linuxalt.com
+http://www.linuxrsp.ru/win-lin-soft/table-eng 
+http://www.openshot.org/
+lightworks http://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206#
+
+Hosting
+https://www.hetzner.de/en/hosting/unternehmen/rechenzentrum
+scaleengine.net	
+https://www.vultr.com/
+http://fortrabbit.com/pricing
+https://www.digitalocean.com/features
+http://www.prq.se
+
+email services
+https://protonmail.ch/
+https://openmailbox.org
+http://tempmail.de/
+http://tormail.net/
+https://www.mailoo.org/
+
+email as a service
+Mailgun
+
+email self-hosted
+Postfix, Exim, Cyrus, Dovecot
+
+email clients & Secure Email
+Thunderbird
+https://www.mailpile.is/
+https://www.mailvelope.com/
+https://www.enigmail.net/
+
+firefox privacy plugins
+ublock https://news.ycombinator.com/item?id=8919523
+
+fb deletion
+http://saintsal.com/facebook/
+http://activityremover.com/
+http://lifehacker.com/5813506/how-to-delete-your-facebook-account
+
+Git Gutters
+https://news.ycombinator.com/item?id=7393001
+
+Javascript
+http://www.oembed.com/
+progress bars
+https://news.ycombinator.com/item?id=7376969
+
+web devel
+http://prefixr.com/
+http://yepnopejs.com/
+https://github.com/ryanseddon/H5F
+http://tinkerbin.com
+
+movie streaming
+https://news.ycombinator.com/item?id=7377089
+castawesome
+CPU
+i-nex
+
+img
+http://drp.io/
+http://chromatic.io/
+http://quickscreen.me/
+http://kegoi.com/
+https://img.bi
+
+self hosted img
+images3
+
+Gifs
+https://news.ycombinator.com/item?id=7121104
+http://gfycat.com/
+https://mediacru.sh/
+
+study
+http://code.edx.org/
+
+Video
+http://simplewebrtc.com/demo.html?dvd
+https://news.ycombinator.com/item?id=7159896
+https://echoplex.us/
+
+pdf
+sumatra pdf
+
+iso
+WinCDEmu
+
+password manager
+cpm
+
+Modeling
+k3d
+blender
+openshot
+pinta - http://pinta-project.com/
+
+backup
+tarsnap
+spideroak
+bacula
+http://obnam.org/
+
+internet speed
+nload
+iftop
+slurm
+speedometer
+nethogs
+nbwmon
+
+monitor
+monitorix
+
+Graphics
+gimp, blender, shellpic
+http://www.birdfont.org/
+	pip install Shellpic
+
+libreoffice, vlc, winrar, sublime_text, retroshare, notepad++, virtualbox, jitsi, linphone
+xrdp, samba, youtube-dl, mosh
+
+terminal recorder
+http://www.taringa.net/posts/linux/17810503/Grabar-subir-y-compartir-tu-sesiones-en-la-terminal.html
+http://www.taringa.net/posts/linux/17810079/Graba-y-reproduce-tus-sesiones-en-la-terminal-con-TermRecord.html
+
+download
+sickbeard
+sabnzb 
+couchpotato
+plexapp
+headphones
+
+htop
+logwatch
+bash podder | gpodder
+
+tasks
+http://www.taskunifier.com/web/en/app
+
+Licencia
+http://generalbasiclicense.wordpress.com/

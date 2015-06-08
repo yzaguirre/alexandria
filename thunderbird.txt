@@ -1,0 +1,23 @@
+http://www.mozilla.org/en-US/thunderbird/all.html
+	cd downloads/
+For nightly builds, use:
+	ftp ftp.mozilla.org
+For releases, use (user and pass is anonymous:anonymous):
+	ftp releases.mozilla.org
+	cd pub/mozilla.org/thunderbird/releases/latest/linux-x86_64/es-AR/
+	get thunderbird-24.2.0.tar.bz2
+	quit
+or 
+	wget ftp://anonymous@releases.mozilla.org/pub/mozilla.org/thunderbird/releases/latest/linux-x86_64/es-AR/thunderbird-24.2.0.tar.bz2
+	tar xf thunderbird-24.2.0.tar.bz2 -C /VMs/opt
+	ln -s /VMs/opt/thunderbird/thunderbird-bin /usr/local/bin/thunderbird
+
+gmail
+https://support.mozillamessaging.com/en-US/kb/Thunderbird-and-Gmail
+
+Install enigmail
+https://www.enigmail.net/documentation/quickstart.php
+https://www.enigmail.net/documentation/quickstart-ch2.php
+https://www.enigmail.net/download/index.php
+	thunderbird -install-global-extension ~/downloads/enigmail*.xpi
+Alternatively, to install the extension for your account only, load Thunderbird and choose Tools > Extensions > Install. Select the XPI file, and OK. Close Thunderbird. 

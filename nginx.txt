@@ -1,0 +1,66 @@
+SSL config
+blog.commando.io/the-perfect-nginx-ssl-configuration/
+
+http://nginx.org/
+Install on Debian
+	# apt-get install nginx
+For Red Hat-based operating systems:
+	# yum install nginx
+you will find a lot of interesting documentation and examples on the official wiki, 
+http://wiki.nginx.org
+If you have specific questions though, you might as well use the forums
+http://forum.nginx.org
+And if you need direct assistance, there is always a bunch of regulars helping
+each other out on the IRC channel #Nginx on irc.freenode.net
+	# zypper install php5-fpm
+	# mkdir -p /usr/var/log
+	# chown david:users -R /usr/var
+configure fpm
+	# cp /etc/php5/fpm/php-fpm.conf.default /etc/php5/fpm/php-fpm.conf
+	# vim /etc/php5/fpm/php-fpm.conf
+important configuration directives that you
+shouldn't miss:
+-	 Edit the user(s) and group(s) used by the worker processes and optionally the UNIX sockets
+-	 Address(es) and port(s) on which PHP-FPM will be listening
+-	 Amount of simultaneous requests that will be served
+-	 IP address(es) allowed to connect to PHP-FPM
+-	 Log location
+
+http://www.binarytides.com/php-fpm-separate-user-uid-linux/
+Start it up
+	# php-fpm -c /etc/php5/apache2/php.ini --pid /var/run/php-fpm.pid --fpm-config=/etc/php5/fpm/php-fpm.conf -D
+	# php-fpm -c /etc/php5/cli/php.ini --pid /var/run/php-fpm.pid --fpm-config=/etc/php5/fpm/php-fpm.conf -D
+
+Kill it
+	# killall -2 php-fpm
+Update the nginx config file
+	# vim /etc/nginx/nginx.conf
+	
+location ~* \.php$ { # for requests ending with .php
+	# specify the listening address and port that you configured previously
+root /srv/www/htdocs
+fastcgi_pass 127.0.0.1:9000;
+# the document path to be passed to PHP-FPM
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+# the script filename to be passed to PHP-FPM
+fastcgi_param PATH_INFO $fastcgi_script_name;
+# include other FastCGI related configuration settings
+include fastcgi_params;
+}
+Reload the service
+	# service nginx reload
+
+For Python (see django.txt):
+The Nginx configuration is similar to the PHP one, modify the nginx.txt file:
+	# vim 
+#location / {
+location ~* \.py$ {
+fastcgi_pass 127.0.0.1:9000;
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_
+name;
+fastcgi_param PATH_INFO $fastcgi_script_name;
+include fastcgi_params;
+}
+
+BSDNow
+http://www.bsdnow.tv/tutorials/nginx

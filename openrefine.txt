@@ -1,0 +1,6 @@
+http://openrefine.org/
+https://github.com/OpenRefine
+	wget https://github.com/OpenRefine/OpenRefine/releases/download/2.6-beta.1/openrefine-linux-2.6-beta.1.tar.gz
+	tar xf openrefine-linux-2.6-beta.1.tar.gz -C /VMs/opt
+	mv /VMs/opt/{openrefine-2.6-beta.1,openrefine}
+	echo $'#!/bin/bash\n/VMs/opt/openrefine/refine' > /usr/local/bin/refine && chmod +x /usr/local/bin/refine

@@ -1,0 +1,23 @@
+https://stackoverflow.com/questions/11489824/how-do-i-choose-between-tesseract-and-opencv
+Optical Character Recognition
+http://jocr.sourceforge.net/
+	sudo apt-get install gocr
+	gocr -i 1.jpg
+
+ocrad
+get image to pmn with imagemagik
+	convert 1.jpg 1.pmn
+Now run ocr
+	ocrad 1.pnm
+
+https://code.google.com/p/tesseract-ocr/
+	sudo apt-get install tesseract-ocr tesseract-ocr-spa tesseract-ocr-equ
+get image to TIF file with imagemagik
+	convert 1.jpg 1.tif
+Now run ocr
+	tesseract 1.tif output
+	cat output
+Make a "better" quality
+	convert 1.jpg -resize 1000 1.tif
+	convert 1.jpg -resize 5000 1.tif
+And run tesseract again

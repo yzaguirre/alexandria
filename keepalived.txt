@@ -1,0 +1,14 @@
+http://www.alexwilliams.ca/blog/2009/08/10/using-haproxy-for-mysql-failover-and-redundancy/
+http://mysql.wingtiplabs.com/documentation/hap225xe/fail-over-mysql-with-haproxy
+
+http://www.sebastien-han.fr/blog/2012/05/13/active-passive-failover-using-keepalived-on-a-galera-cluster-with-haproxy/
+http://support.severalnines.com/entries/23612682-Install-HAProxy-and-Keepalived-Virtual-IP-
+
+1. Install Keepalived package:
+	# apt-get install keepalived
+	# update-rc.d keepalived defaults 
+2. Tell kernel to allow binding non-local IP into the hosts and apply the changes:
+	$ echo "net.ipv4.ip_nonlocal_bind = 1" >> /etc/sysctl.conf
+	$ sysctl -p
+
+Editar fichero de configuracion

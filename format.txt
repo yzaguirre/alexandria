@@ -1,0 +1,61 @@
+https://debiantalk.wordpress.com/2015/02/16/format-a-usb-flash-drive-in-debian-7/
+# fdisk /dev/sdb 
+
+	p
+	1
+	d
+	1
+
+	n
+	p
+	b
+	
+	t
+	b
+	w
+
+	mkfs.msdos -F 32 /dev/sdb1 -n SanDisk
+
+	mkfs -t ext2 /dev/sdb1 -L SanDisk
+
+Asi que para FAT32: 
+	mkfs.vfat -n "DEVICENAME" -I /dev/sdb1
+Para EXT3:
+	sudo mkfs.ext3 -L data / dev/sdb1
+Esto formateará sdb1 a ext3 y agregar una etiqueta de "datos". 
+LIVEUSB
+http://www.pendrivelinux.com/vga-boot-modes-to-set-screen-resolution/
+http://crunchbang.org/forums/viewtopic.php?pid=210477%23p210477#p210477
+
+http://crunchbang.org/forums/viewtopic.php?id=23267
+	$ ls -l /dev/disk/by-id/*usb*
+usbdevice has to be sdb
+	# dd if=mini.iso of=/dev/sdb bs=4M; sync
+	# dd if=crunchbag.iso of=/dev/sdb bs=4M; sync
+http://community.linuxmint.com/tutorial/view/744
+	# dd if=linuxmint.iso of=/dev/sdb oflag=direct bs=1048576
+	
+isolinux/install.cfg
+cambiar donde dice 
+   vga=788
+y ponerle
+   vga=771
+
+For OpenSuse
+	# zypper install dc3dd
+http://es.opensuse.org/SDB:Live_USB_stick#Grabar_la_ISO_a.C2.A0la_memoria_USB_2
+	# dd_rescue openSUSE-11.4-KDE-LiveCD-x86_64.iso /dev/sdX
+
+Wipe Disk
+http://ubuntuforums.org/archive/index.php/t-777518.html
+	# dd if=/dev/zero of=/dev/whatever_your_drive_is
+Or
+	# dd if=/dev/urandom of=/dev/sdb bs=4k
+
+You can use the shred tool to overwrite the file X times so it will not
+be able to recover
+	$ shred -n 10 -z TOP-SECRET.txt
+
+Encrypt, rescue, transfer
+http://www.linuxquestions.org/questions/linux-newbie-8/learn-the-dd-command-362506/
+check encryption.txt

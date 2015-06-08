@@ -1,0 +1,42 @@
+http://www.privoxy.org/
+http://proxy-list.org/
+http://www.checkedproxylists.com/
+http://proxy-list.org/english/index.php?pp=any&pt=any&pc=Mexico&ps=any#proxylist
+
+http://blog.sensible.io/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
+http://kev.inburke.com/kevin/how-to-use-ec2-as-a-web-proxy/
+    # ssh ec2 -D 2001
+Configure firefox to use SOCKS host: localhost, Port: 2001
+Make alias
+	$ echo $'\nalias proxyec2=\'ssh ec2proxy\'\n' >> ~/.bash_aliases
+
+Other way, with tinyproxy
+http://blog.i-evaluation.com/2013/09/21/tunnelling-using-ec2-as-web-proxy-complete-guide/
+http://frankhq.io/blog/2012/11/14/how-to-setup-a-private-proxy-server-on-ec2-in-under-10-minutes/
+
+explain
+https://en.wikipedia.org/wiki/Reverse_proxy
+https://stackoverflow.com/questions/224664/difference-between-proxy-server-and-reverse-proxy-server
+http://expedienttech.net/?p=68
+
+channel 3: open failed: administratively prohibited: open failed
+http://linuxindetails.wordpress.com/2010/02/18/channel-3-open-failed-administratively-prohibited-open-failed/
+check /var/log/auth.log and add cb64 crunchbag and any other to /etc/hosts
+
+http://supporthandbook.wordpress.com/2011/01/10/using-squid-hosted-on-ec2-to-bypass-corporate-proxy/
+http://hackingonstuff.net/post/23929749838/setting-up-a-squid-proxy-on-aws
+sudo nano /etc/squid3/squid.conf
+acl all src all
+acl SSL_ports port 443
+acl CONNECT method CONNECT
+http_access allow all
+http_port 3128
+hierarchy_stoplist cgi-bin ?
+coredump_dir /var/spool/squid3
+	sudo service squid3 restart
+
+Free proxy
+https://blog.haschek.at/post/fd9bc
+
+http://mitmproxy.org/doc/howmitmproxy.html
+	pip install mitmproxy

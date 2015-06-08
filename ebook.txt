@@ -1,0 +1,4 @@
+http://askubuntu.com/questions/14378/what-software-can-i-use-to-view-epub-documents
+	sudo apt-get install calibre
+	ebook-viewer
+http://fbreader.org/FBReaderJ

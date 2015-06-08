@@ -1,0 +1,33 @@
+http://linux.koolsolutions.com/2009/01/29/installing-linux-on-usb-part-3-which-linux-filesystem-for-usb-devices/
+To summarize, when it comes to ext3 or ext2 filesystem:
+    USB Hard Drives = Ext3 or Ext2
+    USB Flash Drives = Ext2 with "noatime" or "relatime" mount option
+
+http://solutionsandtips.blogspot.com/2009/05/uuid-fstab-and-automatically-mount-usb.html
+	blkid /dev/sdc1
+Next in fstab, make a line like this:
+	UUID=3272f388-ad6a-4ff5-9782-43388d0273ca /media/DA ext2 defaults,auto,umask=000,users,rw 0 0
+Make the changes you need, but make sure you use your correct UUID(and remove the "") and it is set auto like above.
+	mount -a
+
+Ok, make sure you got udev installed. This is what's gonna automaticly mount our drives when new ones are detected. Make a new file;
+	NoMore:/home# nano /etc/udev/rules.d/99-mount.rules
+And add the following line:
+	SUBSYSTEM=="block", run+="/bin/mount -a"
+Just make sure it uses the correct path to the mount command.
+Next restart udev:
+	NoMore:/home# /etc/init.d/udev restart
+Now unmount(umount) your drive, unplug it and try it out. 
+
+determine type
+	df -T
+https://unix.stackexchange.com/questions/36636/mount-t-type-how-to-know-that-what-could-the-type-be
+	cat /proc/filesystems | awk '{print $NF}' | sed '/^$/d'
+mount ext2
+	mount -t ext2 /dev/sda1 /media/directory
+http://elinux.org/R-Pi_NAS#Adding_USB_Storage
+
+	vim /etc/fstab
+/dev/sdxx /home/shares/public/disk1 auto noatime 0 0
+or
+/dev/sdxx /home/shares/public/disk1 auto gid=pi,uid=pi,noatime 0 0

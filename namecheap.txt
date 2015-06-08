@@ -1,0 +1,4 @@
+change TXT record
+https://www.namecheap.com/support/knowledgebase/article.aspx/317
+http://www.mail-tester.com/spf/namecheap
+http://www.pfinn.net/mandrill-namecheap-dns-settings-spf-dkim.html

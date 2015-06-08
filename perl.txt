@@ -1,0 +1,27 @@
+Perl
+http://www.perl.org
+http://perlmonks.org
+http://www.pm.org
+	apt-get install perldoc
+
+Type 		Sigil	Example 	Is a Name For
+Scalar		$		$cents		An individual value (number or string)
+Array		@		@large		A list of values, keyed by number
+Hash		%		%interest	A group of values, keyed by string
+Subroutine	&		&how		A callable chunk of Perl code
+Typeglob	*		*struck 	Everything named struck
+
+http://www.cpan.org
+http://www.cpan.org/SITES.html
+Open README and INSTALL.platform files
+
+	% wget http://www.cpan.org/src/5.0/maint.tar.gz
+
+	% tar zxf latest.tar.gz     # or gunzip first, then tar xf 
+	% cd perl-5.14.2            # or 5.* for whatever number 
+	% sh Configure -des         # assumes default answers 
+	% make test && make install # install typically requires superuser 
+
+You can do all that, or use Perlbrew
+	% curl -L http://xrl.us/perlbrewinstall | bash
+	% ~/perl5/perlbrew/bin/perlbrew install perl-5.14.2

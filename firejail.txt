@@ -1,0 +1,4 @@
+http://l3net.wordpress.com/projects/firejail/
+http://l3net.wordpress.com/projects/firejail/firejail-usage/
+	firejail --seccomp --debug firefox
+	firejail netstat -rn

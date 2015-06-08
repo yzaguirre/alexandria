@@ -1,0 +1,68 @@
+Install 10
+	$ chmod +x VMware-Workstation-Full-10.0.0-1295980.x86_64.bundle
+root is required
+	# ./VMware-Workstation-Full-10.0.0-1295980.x86_64.bundle
+	
+user that connect to Workstation Server is "david"
+Shared virtual Machines
+"/var/lib/vmware/Shared VMs"
+but will be
+"/home/david/win7David/VMware VMs"
+
+"/media/3AB6DF05B6DEC115/Users/David/Shared VMs"
+"/media/3AB6DF05B6DEC115/Users/David/VMware VMs"
+
+Port for https access to Workstation Server
+443
+
+CLEAN UP
+ls /etc/init.d/vm* -l
+/etc/init.d/vmamqpd
+/etc/init.d/vmware
+/etc/init.d/vmware-USBArbitrator
+/etc/init.d/vmware-workstation-server
+
+
+# update-rc.d -f vmware remove
+update-rc.d -f vmamqpd remove
+update-rc.d -f vmware-workstation-server remove
+update-rc.d -f vmware-USBArbitrator remove
+service vmware stop
+service vmware-USBArbitrator stop
+service vmware-workstation-server stop
+service vmamqpd stop
+
+
+# service vmware start
+# service vmamqpd start
+# service vmware-workstation-server start
+# service vmware-USBArbitrator start
+
+netstat -ano | grep vmware
+ps aux | grep vmware
+/usr/lib/vmware/bin/vmware-tray poweredOn # ESTE YA NO
+/usr/lib/vmware/bin/vmware-unity-helper --daemon
+
+$ killall -2 vmware-tray
+killall -2 vmware-unity-helper
+
+Uninstall
+The vmware-uninstall* scripts have been deprecated.  Instead, please use
+the vmware-installer.
+
+Long form:
+      vmware-installer --uninstall-product PRODUCT
+Short form:
+      vmware-installer -u PRODUCT
+
+Where PRODUCT is one of vmware-workstation, vmware-player, or vmware-vix.
+
+For a list of which products are installed, you may run:
+      vmware-installer --list-products
+or:
+      vmware-installer -l
+root is required
+	# vmware-installer --uninstall-product vmware-workstation
+	# rmdir /var/lib/vmware/hostd/
+	# rmdir /var/lib/vmware/
+	

@@ -1,0 +1,16 @@
+see php/php-qrcode.txt js/js-qrcode.txt
+apt-get install qrencode
+
+from stdin to stdout
+	qrencode -l L -v 1 -o -
+from stdin to file
+	qrencode -iSv 1 --output=output.png
+from string to stdout
+	qrencode -l L -v 1 -o - 'Hello, world!'
+from string to file
+	qrencode -l L -v 1 -o output.png 'Hello, world!'
+
+Serve with netcat
+	echo 'Hello, world!' | qrencode -l L -v 1 -o - | ncat -lp 55556
+Image tag:
+<img src="http://localhost:55556" >

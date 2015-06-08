@@ -1,0 +1,8 @@
+http://simon.kde.org
+http://userbase.kde.org/Simon
+http://kde-files.org/index.php?xcontentmode=692
+
+firefox
+http://kde-files.org/content/show.php/%5BEN%2BVF%5D+Firefox?content=123596
+To use all functions of this scenario please install the following Firefox extension:
+https://addons.mozilla.org/en-US/firefox/addon/879

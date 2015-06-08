@@ -1,0 +1,32 @@
+http://blogs.technet.com/b/heyscriptingguy/archive/2013/06/02/weekend-scripter-install-powershell-3-0-on-windows-7.aspx
+$psversiontable
+Make shortcut to Desktop
+C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
+
+Startup scripts stored in
+C:\Users\David\Documents\WindowsPowerShell
+
+Para correr Scripts
+	Get-ExecutionPolicy -List
+	Set-ExecutionPolicy unrestricted
+
+Crear Profile
+http://www.howtogeek.com/126469/how-to-create-a-powershell-profile/
+	New-Item -Path $Profile -Type File -Force
+	notepad $Profile
+crear Zip e descomprimir
+http://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
+function Expand-ZIPFile($file, $destination)
+{
+$shell = new-object -com shell.application
+$zip = $shell.NameSpace($file)
+foreach($item in $zip.items())
+{
+$shell.Namespace($destination).copyhere($item)
+}
+}
+
+Eject USB
+Dismount-DiskImage G:\
+
+Expand-ZIPFile 

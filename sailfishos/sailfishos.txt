@@ -1,0 +1,3 @@
+https://sailfishos.org/develop-installation-article.html
+	wget http://releases.sailfishos.org/sdk/installers/1412/SailfishOSSDK-Beta-1412-Qt5-linux-64-offline.run
+	chmod +x SailfishOSSDK-Beta-1412-Qt5-linux-64-offline.run

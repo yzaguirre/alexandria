@@ -1,0 +1,30 @@
+https://obsproject.com/
+https://github.com/jp9000/obs-studio
+https://github.com/jp9000/obs-studio/blob/master/INSTALL
+
+Linux (Manually compiling on Debian-based distros)
+Set up a build environment:
+	apt-get install build-essential pkg-config cmake git checkinstall
+Install FFmpeg, see video/ffmpeg.txt
+Required packages
+	apt-get install libx11-dev libgl1-mesa-dev libpulse-dev libxcomposite-dev \
+	libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev \
+	libfontconfig-dev qtbase5-dev libqt5x11extras5-dev libx264-dev \
+	libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev
+Building and installing OBS:
+x	git clone https://github.com/jp9000/obs-studio.git
+	wget https://github.com/jp9000/obs-studio/archive/0.9.1.tar.gz
+	tar xf 0.9.1.tar.gz
+	cd obs-studio-0.9.1
+	mkdir build && cd build
+	cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+	make -j4
+	sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
+	   --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+
+Linux portable mode
+	mkdir build && cd build
+	cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+	make -j4 && make install
+After that you should have a portable install in ~/obs-studio-portable
+Change to bin/64bit or bin/32bit and then simply run:  ./obs

@@ -1,0 +1,7 @@
+http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines
+For BSD or GNU grep you can use -B num to set how many lines before the match and -A num for the number of lines after the match.
+	$ grep -B 3 -A 2 foo README.txt
+
+	$ grep group -d recurse
+Remove comments
+	grep -v '^#' filename | grep -v '^$'

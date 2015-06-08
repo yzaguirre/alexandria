@@ -1,0 +1,19 @@
+la version actual es 2013, pero se elige trabajar con 2012
+http://miguel.leugim.com.mx/index.php/2008/05/09/latex-install-on-debian-gnulinux/
+
+http://xmodulo.com/2013/01/how-to-install-latex-on-ubuntu-or-debian.html
+http://www.tug.org/texlive/debian.html
+# apt-get install texlive texlive-fonts-extra texlive-latex-extra 
+
+how to remove a column
+https://www.youtube.com/watch?v=9LLF9VmBEA4
+
+LaTex Tutorial en consola
+https://www.youtube.com/user/GlenMacLachlan/videos
+
+Como compilar:
+	latex documento.tex
+	dvipdf documento.dvi
+	evince documento.pdf
+o tambien
+	pdflatex ejemplo.tex

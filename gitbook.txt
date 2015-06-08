@@ -1,0 +1,19 @@
+https://github.com/GitbookIO/gitbook
+	npm install gitbook-cli -g
+Create the directories and files for a book from its SUMMARY.md file (if existing) using
+	gitbook init
+You can serve a repository as a book using:
+	gitbook serve ./repository
+Or simply build the static website using:
+	gitbook build ./repository ./outputFolder
+Generate a PDF using:
+	gitbook pdf ./myrepo ./mybook.pdf
+
+A book is a Git repository containing at least 2 files: README.md and SUMMARY.md.
+README.md
+Typically, this should be the introduction for your book. It will be automatically added to the final summary.
+
+SUMMARY.md
+The SUMMARY.md defines your book's structure. It should contain a list of chapters, linking to their respective pages.
+
+warn: you should specify a gitbook version to use in your book.json, for example: 2.x.x

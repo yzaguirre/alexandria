@@ -1,0 +1,40 @@
+http://basket.kde.org/index.php
+
+http://www.zim-wiki.org/downloads/
+https://addons.mozilla.org/fr/firefox/addon/zim-clip/
+	# dpkg -i zim_0.60_all.deb
+
+http://sourceforge.net/projects/znotes/
+
+http://nitrotasks.com
+	$ wget https://launchpad.net/nitrotasks/trunk/1.5.1/+download/nitrotasks_1.5.1.tar.gz
+https://launchpad.net/python-distutils-extra
+https://stackoverflow.com/questions/7823972/cant-import-webkit-from-gi-repository
+	# zypper install python-distutils-extra typelib-1_0-WebKit2-3_0 python-webkitgtk
+	$ tar xf nitrotasks_1.5.1.tar.gz
+	$ cd quickly_trunk/
+
+http://getspringseed.com/
+	$ wget http://springseed.s3.amazonaws.com/dl/springseed_1.0.2_i386.deb
+	$ wget http://springseed.s3.amazonaws.com/dl/springseed_1.0.2_amd64.deb
+From repository
+	$ cd /VMs/opt/
+	$ git clone https://github.com/consindo/notes.git springseed
+https://github.com/consindo/notes/tree/v1.0.2
+Got to tag 1.0.2
+https://stackoverflow.com/questions/791959/how-to-use-git-to-download-a-particular-tag
+	$ git tag -l
+	$ git checkout tags/v1.0.2
+dependencies
+	# npm install coffee-script -g
+x	# npm install cake -g
+	# gem install --version '~> 0.9' rb-inotify
+	# gem install compass
+
+You'll need node & npm installed.
+	$ npm install .
+	$ cake -w server
+or
+	$ compass watch
+Make it a script
+	$ echo $'#!/bin/bash\ncd /VMs/opt/springseed\ncake -w server' > ~/bin/springseed && chmod u+x ~/bin/springseed

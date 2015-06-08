@@ -1,0 +1,13 @@
+http://lignux.com/usemos-sox-para-manipular-archivos-de-audio/
+	apt-get install sox libsox-fmt-all
+	
+	play tux.mp3
+	play http://direccióndelaudioquequiero.ogg
+Grabar, en 8 kbps
+	rec -r 8000 -c 1 migrabacion.mp3
+Convertir
+	sox tux.mp3 tux.ogg
+Acelerar reproduccion
+	sox tux.ogg acelerado.wav speed 2.0
+Recortar, seleccionar los primeros 10 segundos después del primer minuto de reproducción
+	sox tux.wav recortado.ogg trim 60 10

@@ -1,0 +1,46 @@
+https://github.com/hughsie/gnome-multi-writer
+
+Find out your device
+http://www.cyberciti.biz/faq/linux-find-out-the-name-of-dvd-cd-rom-writer-blu-ray-device/
+http://stackoverflow.com/questions/7357924/how-to-mount-img-file-on-linux-extracted-from-a-modem-firmware
+	$ less /proc/sys/dev/cdrom/info
+	# mount -r -o loop /dev/sr0 /media/cdrom/
+Mount an ISO
+	# mkdir /mnt/iso_image
+	# mount -t iso9660 -o loop image.iso /mnt/iso_image
+
+Create ISO from CD
+	mkisofs -r -o xxxx.iso /cdrom/
+	dd if=/dev/cdrom of=ubuntu.iso
+Create ISO from collection of files
+	genisoimage -o cd-rom.iso -R -J ~/cd-rom-files
+
+Eliminar un CD
+x		cdrecord -v dev=/dev/cdrom blank=fast
+	wodim dev=/dev/cdrw blank=fast
+
+Burn a ISO
+	wodim dev=/dev/cdrw image.iso
+In addition to the device name and image file, wodim supports a very
+large set of options. Two common ones are -v for verbose output and -dao,
+which writes the disc in disc-at-once mode. This mode should be used if you
+are preparing a disc for commercial reproduction. The default mode for
+wodim is track-at-once, which is useful for recording music tracks.
+
+http://askubuntu.com/questions/174626/how-do-i-burn-a-dvd-iso-using-the-terminal
+There are several ways to do this, but here are just two ways that I use regularly. Please replace /dev/sr1 with the device identifier of your target drive (find out what it is with inxi -d), and replace myiso with your iso and its disk location if necessary.
+    wodim -eject -tao speed=2 dev=/dev/sr1 -v -data myiso.iso
+
+    growisofs -dvd-compat -Z /dev/sr1=myiso.iso
+
+More information about the read and write capabilities of your drive can be found with the following command, again substututing my example /dev with your device identifier:
+	wodim -prcap dev=/dev/sr1
+
+For more options relating to wodim and growisofs, see their respective manpages, by entering man wodim and man growisofs. (Note: wodim is a fork of the original cdrecord program)
+
+Use the following command to locate your DVD drive:
+
+wodim --devices
+
+cdrecord
+	cdrecord speed=4 -eject --dev=/dev/sr0 /tmp/BOOT-CD.iso

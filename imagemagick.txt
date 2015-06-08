@@ -1,0 +1,99 @@
+Shrink 200 .png files to 50%
+	for f in *.png; do mogrify -resize 50% $f; done
+Convert those files to another format
+	for f in *.png; do convert $f ${f%.png}.jpg; done
+Convertion
+	convert image.png image.jpg
+	convert -quality 90 image.png image.jpg
+http://www.taringa.net/post/linux/18482317/Herramientas-Tratando-imagenes-con-ImageMagick.html
+Recortar
+	convert -crop 250x100+20+40 image.png image.jpg
+In order to modify and not save a new file, use mogrify
+Redimensionar
+	convert -resize {dimensión} {entrada} {salida}
+	convert -resize x200 {entrada} {salida}
+	convert -resize 150x300 {entrada} {salida}
+	convert -resize {porcentaje} {entrada} {salida}
+	convert -resize 10% {entrada} {salida}
+Force the image to be 300 x 300 pixels and ignore the aspect ratio,
+add blackslash-exclamation to the dimensions
+	convert -resize 300x300\! image.png image.jpg
+VOLTEAR
+Horizontalmente
+	convert -flop {entrada} {salida}
+Verticalmente
+	convert -flip {entrada} {salida}
+Both
+	convert -flip -flop {entrada} {salida}
+ROTAR o GIRAR (clockwise)
+	convert -rotate {angulo} -background {color} {entrada} {salida}
+	convert -rotate 25 -background  "#ffffff" {entrada} {salida}
+	convert -rotate -25 -background  "#ffffff" {entrada} {salida}
+AGREGAR BORDES
+	convert -bordercolor {color} -border {horizontal}x{vertical} {entrada} {salida}
+	convert -bordercolor {color} -border 10x20 {entrada} {salida}
+BORDE INTERNO
+	convert -raise {horizontal}x{vertical} {entrada} {salida}
+POLAROID
+	convert -polaroid {angulo} -background transparent {entrada} {salida}
+APLICAR EFECTOS
+	convert -sepia-tone {porcentaje} {entrada} {salida}
+	convert -sepia-tone 75% {entrada} {salida}
+
+Blur
+	mogrify -blur 5x2 image.jpg
+The first number here is the radius, while the second is the sigma
+
+Charcoal
+	mogrify -charcoal 5 image.jpg
+
+Brightness and contrast
+	mogrify -brightness-contrast 20x-30 image.jpg
+This improves the brightness of the image by 20%, and reduces the contrast by 30%
+
+VARIAR NIVELES DE BRILLO, SATURACIÓN Y TONO
+De entrada los niveles de brillo, saturación y tono de una imagen se encuentran al 100%, entonces si nosotros queremos aumentar alguno de ellos debemos usar un número superior al 100,
+mientras que si lo que queremos es bajarlos debemos introducir números menores.
+	convert -modulate {brillo},{saturacion},{tono} {entrada} {salida}
+	convert -modulate 120,0,100 {entrada} {salida}
+	convert -modulate 100,100,120 {entrada} {salida}
+JUNTAR O UNIR
+Supongamos que queremos unir seis imágenes en dos filas y tres columnas.
+	montage -tile {columnas}x{filas} -geometry +{horizontal}+{vertical} -background {color} {entrada} {salida}
+	montage -tile 3x2 -geometry +2+2 -background {color} {entrada} {salida}
+si no se quiere usar "separadores" se debe declarar +0+0
+	montage -label "My caption" image.jpg -geometry +0+0 -pointsize 30 newimage.jpg
+This creates a white rectangle with a 1-pixel black border, 200 pixels wide and 100
+pixels tall, and places it at 30 pixels across and 10 pixels down on file.png.
+See www.imagemagick.org/script/command-line-options.php
+
+INSERTAR TEXTO
+	convert -font {fuente} -pointsize {tamaño} -gravity {posicion} -fill {color} -draw 'text {horizontal} {vertical} "{texto}"' {entrada} {salida}
+{posicion} puede ser: north, northeast, northwest, south, southeast, southwest, center, east, west,
+	convert -size {ancho}x{alto} xc:{fondo} -font {fuente} -pointsize {tamaño} -gravity {posicion} -fill {color} -draw 'text {horizontal} {vertical} "{texto}"' {salida}
+
+Shapes
+mogrify -fill white -stroke black -draw "rectangle 30,10 200,100" file.png
+
+CAMBIAR EL ESPACIO DE COLOR
+	convert -colorspace {espacio} {entrada} {salida}
+Si queremos consultar los espacios de color disponibles
+	convert -list colorspace
+COMBINAR
+	composite -gravity {posicion} -geometry +{horizontal}+{vertical} -dissolve {porcentaje} {entrada} {salida}
+	composite -gravity {posicion} -geometry +{horizontal}+{vertical} -dissolve 40 {entrada} {salida}
+ANIMAR
+Si queremos crear una imagen .gif a partir de imágenes estáticas que tengamos tiradas por ahí podemos hacerlo de este modo: 
+	convert -delay {tiempo} -loop {cantidad} {entrada} {salida}
+Donde {tiempo} es un número en milisegundos que indica cuánto tardará
+la transición de un fotograma a otro y {cantidad} es el número de veces
+que se repetirá la secuencia (si ponemos 0 se repetirá indefinidamente como suele ser habitual en este tipo de imágenes). 
+	convert -adjoin {entrada} {salida}
+CAPTURAR PANTALLA
+Para capturar la pantalla completa
+	import -window root {salida}
+Para capturar una ventana
+	import {salida}
+
+Extraer los frames de un GIF y poderlos unir con ffmpeg para convertirlos en un video, codec de por medio, y asi poderlos pasar por Whatsapp 
+	convert -coalesce {entrada} jpg:{salida} + "%04d.jpg"

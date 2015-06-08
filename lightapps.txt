@@ -1,0 +1,13 @@
+cmus
+mocp
+sxiv
+ranger
+mplayer
+mpd with vimpc as the frontend, dwb as web browser
+weechat
+i3
+deadbeef
+dont pet it, its not windows
+
+http://galeon.sourceforge.net/
+lynx browser

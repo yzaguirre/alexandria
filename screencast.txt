@@ -1,0 +1,47 @@
+Grabar la pantalla
+
+clear;recordmydesktop -x 0 -y 0 --width 800 --height 600 --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
+
+1024x768 MP4 - FTW!
+clear;recordmydesktop -x 0 -y 0 --width 1024 --height 768 --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
+
+1280x720
+clear;recordmydesktop -x 0 -y 0 --width 1280 --height 720 --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/PI.ogv
+
+Netbook
+clear;recordmydesktop --fps 15 --delay 3 --no-frame -o tmp/pi.ogv
+
+clear;recordmydesktop --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
+vlc grabaciones/03_qt_-13.ogv 
+rm grabaciones/03_qt_-13.ogv 
+
+1024x768 MP4 - FTW!
+Keynote slides?
+font 24 monaco
+
+otras medidas, para FIREFOX
+x: 3.269 Y -1.620
+x: 0.800 Y: -1.620
+
+Vokoscreen
+libx264 mkv
+libmp3lame
+
+camtasia
+https://thepiratebay.se/torrent/8742921/Camtasia_Studio_FULL_8.1.2___Serials-ThumperDC
+
+http://www.maartenbaert.be/simplescreenrecorder/
+need 32 libs, no brainer!
+
+MPV
+screencast
+https://gist.github.com/ricardosiri68/6dc945849b450c4a34c7
+Too much CPU
+	mpv --tv driver=v4l2:width=320:height=240: -vo xv tv:// --geometry "99%:98%" --no-border --ontop
+	mpv --tv driver=v4l2:width=320:height=240: -vo xv --geometry "100%:100%" --no-border --ontop tv://
+https://github.com/mpv-player/mpv/issues/852
+	mpv --tv driver=v4l2:width=320:height=240: -vo xv --geometry "99%:94%" --no-border --ontop --fps=30 --tv-device=/dev/video0 --no-correct-pts tv://
+Other options
+	--tv-device=/dev/video0
+A list of compiled-in TV input drivers
+	mpv --tv=driver=help

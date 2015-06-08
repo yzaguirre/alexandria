@@ -1,0 +1,104 @@
+Instalar mdadm y crear RAID1
+	# apt-get install mdadm
+-> Solo correo local
+nombre del sistema de correo -> ecys.gt
+Vamos a ver los discos que tiene el sistema
+	$ ls /dev/sd*
+
+Con comando fdisk vamos particionar cada uno de los discos
+	# fdisk /dev/sdb
+nueva->n
+primario->p
+numero de particion (predeterminado)->1
+primer sector (predeterminado)->2048
+ultimo sector (predeterminado)->204799
+tipo->t
+tipo de ->da
+guardar -> w
+Hacer los mismo para los 7 discos
+	# fdisk /dev/sdc
+Comprobar los discos estan particionados
+	$ ls /dev/sd
+Crear el array, array md0 de nivel 1, 2 discos espejos. Va tener de repuesto 2 discos, el sdg1
+	# mdadm --create --verbose /dev/md0 --level=mirror --raid-devices=2 /dev/sdb1 /dev/sdc1 --spare-devices=2 /dev/sdd1 /dev/sde1
+caracteristicas que tiene
+	# watch cat /proc/mdstat
+El marcado con S es Spare (el repuesto)
+
+Nos da otra informacion del array que creamos. Lo guardamos en fichero /etc/mdadm/mdadm.conf o /etc/mdadm.conf
+	# mdadm --detail --scan >> /etc/mdadm/mdadm.conf
+De esta manera se queda guardado la configuracion para proximo booteao del servidor
+
+Particionar y poner sistema de archivos al raid
+	# fdisk /dev/md0
+nueva->n
+primario->p
+numero de particion (predeterminado)->1
+primer sector (predeterminado)->4096
+ultimo sector (predeterminado)->906911
+tipo->t
+tipo de ->da
+guardar -> w
+
+	# fdisk /dev/md0
+nueva->n
+primario->p
+numero de particion (predeterminado)->2
+primer sector (predeterminado)->4096
+ultimo sector (predeterminado)->906911
+tipo->t
+tipo de ->da
+guardar -> w
+
+Formatear
+	# mkdfs.ext2 /dev/md0p1
+	# mkdfs.ext2 /dev/md0p2
+
+	ls /dev/md0*
+Crear carpeta donde montar el disco md0p1 y md0p2
+	# mkdir /media/datadir1 /media/datadir2
+	# mount /dev/md0p1 /media/datadir1
+	# mount /dev/md0p2 /media/datadir2
+	
+Para que lo haga al inicio hacer
+cat >> /etc/fstab
+/dev/md0p1 /media/datadir1 ext2
+/dev/md0p2 /media/datadir2 ext2
+CTRL+D+D
+
+Stopping a running RAID device is easy:
+   # mdadm --stop /dev/md0
+Start it up
+	# mdadm --assemble /dev/md0 /dev/sdb1 /dev/sdc1 /dev/sdd1
+or
+	# mdadm --assemble --scan 
+
+MONITOREO
+	$ sudo su
+Vigilar el estado de los discos en una pantalla
+	# watch cat /proc/mdstat
+En otra ventana, fallar un disco
+	# mdadm /dev/md0p1 --fail /dev/sdb1
+En el monitor, sdb1 tiene la F de fail. Entra el repuesto. El RAID esta reconstruido la informacion que habia en sdb1 en el repuesto.
+Fail otro disco, ya trabajamos en modo degradado
+	# mdadm /dev/md0p1 --fail /dev/sdc1
+
+Quitar el disco averiado
+	# mdadm /dev/md0p1 -r /dev/sdc1
+Volver a montar disco nuevo, reparado
+	# mdadm /dev/md0p1 -a /dev/sdc1
+Lo vuelve a restaurar
+
+Tenemos el RAID completo pero sigue defectuoso
+
+Provocamos que falle otro disco
+	# mdadm /dev/md0p1 --fail /dev/sdd1
+
+Probamos el disco
+	/media/prueba
+
+Provocamos que falle otro disco, con RAID inoperativo
+	# mdadm /dev/md0p1 --fail /dev/sde1
+Ver el correo
+	# less /var/mail/root
+	

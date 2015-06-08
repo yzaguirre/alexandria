@@ -1,0 +1,8 @@
+keyboard distribution
+http://www.malcolmhardie.com/weblogs/angus/2006/05/02/change-console-keyboard-layout-in-debian/
+Debian:
+	dpkg-reconfigure console-data
+or
+	dpkg-reconfigure keyboard-configuration
+
+	setxkbmap

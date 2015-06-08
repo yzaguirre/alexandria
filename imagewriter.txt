@@ -1,0 +1,7 @@
+https://github.com/opensuse/imagewriter
+	apt-get install qt5-qmake
+	wget https://github.com/openSUSE/imagewriter/archive/master.zip
+	unzip master.zip
+	cd imagewriter-master
+	qmake DEFINES=USEUDISKS imagewriter.pro
+	make
