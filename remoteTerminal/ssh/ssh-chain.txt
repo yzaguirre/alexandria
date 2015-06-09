@@ -1,0 +1,18 @@
+http://www.cyberciti.biz/faq/linux-unix-osx-bsd-ssh-multiplexing-to-speed-up-ssh-connections/
+www.bsdnow.tv/tutorials/ssh-chaining
+First logs in to 10.1.1.254
+	ssh -o ProxyCommand="ssh -W %h:%p allan@10.1.1.254" allan@192.168.1.16
+Config file
+
+Host sftpserver
+	HostName 192.168.1.16
+	HostKeyAlias trooper
+	ProxyCommand ssh allan@10.1.1.254 -W %h:%p
+
+Host trooper
+User allan
+HostName 192.168.1.16
+ProxyCommand ssh -l allan 10.1.1.254 -W %h:%p
+
+	ssh trooper
+

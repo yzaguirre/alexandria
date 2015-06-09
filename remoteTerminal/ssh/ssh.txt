@@ -1,0 +1,140 @@
+Secure SSH
+https://stribika.github.io/2015/01/04/secure-secure-shell.html
+if you need to forcibly exit your ssh session, type the escape sequence of a tilde followed by a period (~.). If that doesn’t work, try Ctrl+c.
+
+Disable root login
+http://www.howtogeek.com/howto/linux/security-tip-disable-root-ssh-login-on-linux/
+PermitRootLogin no
+Password
+https://stackoverflow.com/questions/20898384/ssh-disable-password-authentication
+PasswordAuthentication no
+
+the following runs the tar command on a remote site (to archive and compress the files), pipes the tar stream to standard output, 
+and uses the ssh command to catch the backup locally (over ssh) with tar:
+	mkdir mybackup ; cd mybackup
+	ssh chris@server1 'tar cf - myfile*' | tar xvf -
+
+To reverse the process and copy files from the local system to the remote system,
+you can run a local tar command first.
+	$ tar cf - myfile* | ssh chris@server1 \
+		'cd /home/chris/myfolder; tar xvf -'
+In this next example, you’re not going to untar the files on the receiving end, but
+instead write the results to tgz files:
+	$ ssh chris@server1 'tar czf - myfile*' | cat > myfiles.tgz
+	$ tar cvzf - myfile* | ssh chris@server1 'cat > myfiles.tgz'
+
+http://blog.grayghostvisuals.com/workflow/how-to-ssh-easily/
+http://pentestmonkey.net/cheat-sheet/ssh-cheat-sheet
+ssh in a box
+	# service shellinabox restart
+SSH-AGENT
+add a key
+	$ ssh-add .ssh/cb64team
+list keys
+	$ ssh-add -l
+Mensajes de Bievenida
+http://www.howtogeek.com/howto/ubuntu/change-ssh-welcome-banner-on-ubuntu/
+http://askubuntu.com/questions/100052/modify-the-ssh-welcome-message-to-include-system-ip-address
+http://serverfault.com/questions/36421/stop-ssh-login-from-printing-motd-from-the-client
+Changing this message requires editing two different files. The first three sections can be modified by editing the following file:
+First, "Message of the Day"
+	# vim /etc/motd
+Comment out some lines of
+	# vim /etc/pam.d/ssh
+# Print the message of the day upon successful login.
+# session    optional     pam_motd.so
+
+bsdnow podcast
+	$ ssh-keygen -t rsa -b 4096
+
+Conexiones SSH
+http://kb.mediatemple.net/questions/1625/Using+an+SSH+Config+File
+http://www.openbsd.org/cgi-bin/man.cgi?query=ssh_config&sektion=5
+http://lookherefirst.wordpress.com/2007/12/17/a-simple-ssh-config-file/
+http://ubuntuforums.org/showthread.php?t=172848
+
+Frozen connection
+http://random.kakaopor.hu/ssh-connection-timeout-frozen-terminal
+
+/home/david/.ssh
+Ssh to remote machine:
+	ssh js@10.0.1.201
+	ssh david@localhost
+then input password
+
+Generate SSH keys
+	ssh-keygen -t nombre
+	ssh-keygen -t rsa
+	ssh-keygen -t rsa -C "your_email@example.com"
+	# Creates a new ssh key, using the provided email as a label
+Its gonna save it in .ssh directory (~/.ssh/id_rsa), hit enter
+Its gonna ask for passphrase, hit enter for no passphrase
+
+	cd ~/.ssh
+	ls 
+Having id_rsa as our private key and id_rsa.pub as our public key. 
+-t stands for type
+
+Secure copy our public key to the server
+	scp id_rsa.pub js@10.0.1.20:~/.ssh/authorized_keys
+	... enter the password for the remote server ...
+
+We are copying the public key on the file authorized_keys at the remote server.
+So next time you login as:
+	ssh js@10.0.1.20
+
+
+You won't need to type in your password. In order to avoid to override remote server ssh files, we append new keys as:
+	cat id_rsa.pub | ssh js@10.0.1.201 "cat >> ~/.ssh/authorized_keys"
+En PowerShell es:
+	Get-Content id_rsa.pub | ssh js@10.0.1.201 "cat >> ~/.ssh/authorized_keys"
+	... type password for SSH conexion, enter ...
+
+Or use ssh-id-copy
+	$ ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
+
+Creating an SSH host alias
+	$ touch ~/.ssh/config
+Give it rw permissions: (vía http://serverfault.com/questions/253313)
+	$ chmod 600 ~/.ssh/config
+	
+	IdentityFile ~/.ssh/id_rsa.git
+	Host server                      Any name you want
+	Hostname localhost          IP address or domain name
+	User david                        valid user
+
+Configure the server
+http://www.openbsd.org/cgi-bin/man.cgi?query=sshd_config&sektion=5
+
+	# vim /etc/ssh/sshd_config
+
+Banner /etc/mensaje.ssh
+Banner /etc/issue.net
+
+convert the .pem key to .ppk
+http://itmeditate.blogspot.com/2012/10/generate-ppk-out-of-pem-with-linux.html
+	# apt-get install putty-tools
+	$ puttygen key.pem -o key.ppk 
+But.. with -P switch you can set passphrase for extra security, this is recommended and easy to do:
+	$ puttygen key.pem -o key.ppk -P -C "My server key"  
+It is also recommended to set comment for your key using -C switch, because this string will be prompted to you when you are entering your passphrase.
+Note that you can also change passphrase afterwards by using -P switch
+	$ puttygen -P key.ppk
+
+
+[me@linuxbox ~]$ sftp remote-sys
+Connecting to remote-sys...
+me@remote-sys's password:
+sftp> ls
+ubuntu-8.04-desktop-i386.iso
+sftp> lcd Desktop
+sftp> get ubuntu-8.04-desktop-i386.iso
+Fetching /home/me/ubuntu-8.04-desktop-i386.iso to ubuntu-8.04-desktop-i386.iso
+/home/me/ubuntu-8.04-desktop-i386.iso 100% 699MB
+sftp> bye
+
+Block .ssh directory in apache
+<Directory /var/www/.ssh>
+        Order deny,allow
+        deny from all
+</Directory>

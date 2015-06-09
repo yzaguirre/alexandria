@@ -1,0 +1,42 @@
+http://mosh.mit.edu/
+https://github.com/keithw/mosh
+	apt-get install protobuf-compiler protobuf-c-compiler libncursesw5-dev
+https://en.wikipedia.org/wiki/Mosh_%28software%29
+http://www.slashroot.in/mosh-better-alternative-ssh
+
+The default port for mosh server range from 60001 to 61000
+suppose you have your mosh-server binary in a different location, other than the default one. You can pass that path as an argument to mosh command from the client as shown below.
+	mosh --server=/path/to/mosh-server-binary <hostname>
+Now as i told before mosh, gets connected initially using ssh. So what if your server is using an another ssh port than the default. In that case you can specify that ssh port to your mosh command.
+	mosh --ssh="ssh -p 1000" <hostname> 
+
+https://www.digitalocean.com/community/articles/how-to-install-and-use-mosh-on-a-vps
+http://www.linuxscrew.com/2012/04/11/why-mosh-is-better-than-ssh/
+http://www.ubuntugeek.com/mosh-a-replacement-for-ssh.html
+http://www.linux.com/learn/tutorials/562553-into-the-mosh-pit-a-mobile-shell-replacement-for-ssh
+http://www.infoq.com/news/2012/05/mosh
+mosh pit http://bandwagon-gig-finder.s3.amazonaws.com/editorials/uploads/post/564/MOSH.jpg
+
+https://play.google.com/store/apps/details?id=com.sonelli.juicessh
+http://www.jupiterbroadcasting.com/58192/openshot-2-0-interview-las-314/
+    Remote terminal application that
+    allows roaming, supports intermittent connectivity, and provides intelligent local echo and line editing of user keystrokes.
+
+    Mosh is a replacement for SSH. It’s more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.
+
+    Mosh is free software, available for GNU/Linux, FreeBSD, Solaris, Mac OS X, and Android. 
+https://www.usenix.org/conference/atc12/technical-sessions/presentation/winstein
+for pdf presentation
+http://www.wordreference.com/definicion/intermitente
+Conexion remota 
+
+security
+is it safe to mosh
+https://www.youtube.com/watch?v=P_Jd5k0S_AQ
+http://linux.conf.au/schedule/30080/view_talk?day=thursday
+Mosh is proposed as a replacement for ssh, seamlessly supporting IP address roaming, intermittent connectivity and lagging networks. As far as user experience is concerned, it seems to be a winner. But under the hood it uses a new State Synchronisation Protocol, and we need to know if that can be trusted.
+This talk will introduce Mosh, compare it to existing working practices with ssh, autossh, screen, tmux and VPNs, and help you to assess the risks around SSP.
+
+Jim Cheetham
+
+

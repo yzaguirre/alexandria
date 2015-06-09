@@ -1,0 +1,16 @@
+ Using the SSH filesystem (sshfs), you can mount any directory from an SSH
+server that your user account can access from your local Linux system. sshfs pro-
+vides encryption of the mount operation as well as of all the data being transferred.
+
+Install sshfs software
+	# apt-get install sshfs
+Create mount point
+	$ mkdir /var/tmp/chris
+añadirse al grupo fuse
+http://www.taringa.net/posts/linux/17914915/Como-montar-carpetas-remotamente-con-SSHFS.html
+	# gpasswd -a $USER fuse
+Mount remote directory
+	$ sshfs chris@10.0.0.5:/home/chris /var/tmp/chris
+When you are done using the remote directory, you can unmount it with the fuser-
+mount command (part of the fuse-utils package):
+	$ fusermount -u /var/tmp/chris

@@ -1,0 +1,13 @@
+https://en.wikipedia.org/wiki/Comparison_of_SSH_servers
+http://www.extenua.com/silvershield.htm
+	$ wget http://dl.extenua.com/SilverSHielD_Setup.exe
+
+http://www.powershellserver.com/
+	$ wget http://www.powershellserver.com/downloads/free/NSX6-A/setup.exe#wpcf7-f1977-p2125-o1
+
+http://mobassh.mobatek.net/index.php
+http://mobaxterm.mobatek.net/download.html
+	$ wget http://mobassh.mobatek.net/MobaSSH_Server_Home_1.42.zip
+
+https://www.itefix.no/i2/copssh
+http://www.bitvise.com/tunnelier

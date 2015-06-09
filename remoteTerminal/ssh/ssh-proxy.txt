@@ -1,0 +1,25 @@
+http://stackoverflow.com/questions/15577300/connecting-to-host-by-ssh-client-in-linux-by-proxy
+http://www.zeitoun.net/articles/ssh-through-http-proxy/start
+http://unix.stackexchange.com/questions/68826/connecting-to-host-by-ssh-client-in-linux-by-proxy
+
+Corkscrew
+http://www.agroman.net/corkscrew/
+	$ wget http://www.agroman.net/corkscrew/corkscrew-2.0.tar.gz
+	$ cd corkscrew-2.0
+	$ ./configure
+	$ make
+	# make install
+ProxyCommand /usr/local/bin/corkscrew 192.168.1.14 3128 %h %p
+
+ConnectProxy
+connect-proxy
+http://askubuntu.com/questions/85766/how-to-use-ssh-with-tor
+https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/Misc#SSH
+Host *
+CheckHostIP no
+Compression yes
+Protocol 2
+ProxyCommand connect -4 -S localhost:9050 $(tor-resolve %h localhost:9050) %p
+
+ProxyChains
+http://proxychains.sourceforge.net/howto.html

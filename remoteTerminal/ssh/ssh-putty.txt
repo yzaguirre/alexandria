@@ -1,0 +1,7 @@
+http://www.putty.org/
+http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+	$ wget http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.63-installer.exe
+Checksum
+http://the.earth.li/~sgtatham/putty/0.63/md5sums
+	$ md5sum putty-0.63-installer.exe
+18bd0948d254894441dd6f818d9b3811  putty-0.63-installer.exe

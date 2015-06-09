@@ -1,0 +1,15 @@
+http://ubuntuforums.org/showthread.php?t=2022708
+The easy solution then, is to expand the path as the first line of your crontab, so that includes /sbin. For instance:
+
+# m h  dom mon dow   command
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+*/1 * * * * service mysql stop
+
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+4   4 * * *     service ssh start
+30  4 * * *     service ssh stop
+
+To start week day from 6:50am to 9pm do
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+50 6 * * * service ssh start
+0 21 * * * service ssh stop

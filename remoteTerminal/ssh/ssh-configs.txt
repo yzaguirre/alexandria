@@ -1,0 +1,44 @@
+# SSH config file, 'man ssh_config' for more details.
+IdentityFile ~david/.ssh/cb64key
+HostName cb64
+Host cb
+HostName crunchbag.local
+
+Host PracticasIntermedias
+IdentityFile /home/david/BTSync/PI/aws/PracticasIntermedias001.pem 
+Hostname 54.215.152.201
+User ubuntu
+
+Host github
+HostName github.com
+User git
+#HostName ssh.github.com
+#Port 443
+
+Host ringtail
+HostName ringtail.local
+
+Host *
+HostName hiecys.gt
+
+Host nfs
+Port 22
+Host mysql*
+Port 23
+Host mysqlmaster
+User master
+Host mysqlslave
+User slave
+Host loadbalancer
+Port 24
+Host webserver
+Port 25
+
+
+
+
+crunchbag
+IdentityFile ~/.ssh/cb32key
+Host cb64
+Hostname 192.168.0.3
+User david

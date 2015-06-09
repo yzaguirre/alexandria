@@ -1,0 +1,46 @@
+SSH Agents
+
+SSH agents can be used to hold your private SSH keys in memory.  The agent will then authenticate you to any hosts that trust your SSH key.
+
+This has the following advantages:
+
+    You don't have to keep entering your passphrase (if you chose to encrypt your private key)
+    But you still get to store your private SSH key in an encrypted format on disk.
+
+Using an SSH agent is probably more secure than storing your key in cleartext, but agents can be hijacked.
+Using an SSH Agent
+
+First start your agent:
+
+	$ eval `ssh-agent`
+
+Then add your keys to it - you'll need to enter your passphrase for any encrypted keys:
+
+	$ ssh-add ~/dir/mykey
+
+Hijacking SSH Agents
+
+If you see SSH agents running on a pentest (process called "ssh-agent"), you might be able to use it to authenticate you to other hosts – or other accounts on that host.  Check out ~/.ssh/known_hosts for some ideas of where you might be able to connect to.
+
+You can use any agents running under the account you compromised.  If you’re root you can use any SSH agent.
+
+SSH agents listen on a unix socket.  You need to figure where this is for each agent (e.g. /tmp/ssh-tqiEl28473/agent.28473). You can then use the agent like this:
+
+	$ export  SSH_AUTH_SOCK=/tmp/ssh-tqiEl28473/agent.28473
+	$ ssh-add -l # lists the keys loaded into the agent
+	$ ssh user@host # will authenticate you if server trusts key in agent
+
+This command illustrates how you could inspect the environment of every ssh-agent process on a Linux system.  It should yield a list of unix sockets for SSH agents.
+
+	$ ps auxeww | grep ssh-agent | grep SSH_AUTH_SOCK | sed 's/.*SSH_AUTH_SOCK=//' | cut -f 1 -d ' '
+
+Agent Forwarding
+
+If you enable SSH agent forwarding then you’ll be able to carry on using the SSH agent on your SSH client during your session on the SSH server.  This is potentially insecure because so will anyone else who is root on the SSH server you’re connected to.  Avoid using this feature with any keys you care about.
+
+list keys
+	ssh-add -l
+Remove key
+	ssh-add -d /media/THUMBDRIVE1/myprivatekey
+To remove all the keys stored in the agent, use the -D option:
+	$ ssh-add -D

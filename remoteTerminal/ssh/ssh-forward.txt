@@ -1,0 +1,28 @@
+	$ ssh -L 12345:localhost:631 chris@myserver
+The following example lets you visit
+the Google.com website (HTTP, TCP port 80) across an SSH connection to a computer
+named myserver that has a connection to the Internet:
+	$ ssh -L 12345:google.com:80 chris@myserver
+You can now browse to http://localhost:12345 and use myserver as a relay to the
+Google.com website. Because you're using ssh only to forward a port and not to
+obtain a shell on the server, you can add the -N option to prevent the execution of
+remote commands:
+	$ ssh -L 12345:google.com:80 -N myserver
+
+Host remotepc
+User usuario
+HostName 10.0.0.7
+LocalForward 12345 192.168.0.5:80
+
+https://unix.stackexchange.com/questions/57656/how-to-access-a-machine-behind-a-restricted-nat-gateway-i-dont-manage
+	ssh -R 2242:localhost:22 E sleep 999999999
+	ssh -fR 2242:localhost:22 E -N
+On the remote E machine, I can access local machine ssh on port 2242
+
+https://stackoverflow.com/questions/9146457/ssh-port-forwarding-in-a-ssh-config-file
+LocalForward 5901 computer.myHost.edu:5901
+
+http://www.bsdnow.tv/tutorials/reverse-ssh
+
+Dynamic forwarding
+User allan
