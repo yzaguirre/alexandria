@@ -17,3 +17,16 @@ SUMMARY.md
 The SUMMARY.md defines your book's structure. It should contain a list of chapters, linking to their respective pages.
 
 warn: you should specify a gitbook version to use in your book.json, for example: 2.x.x
+
+http://help.gitbook.com/format/markdown.html
+Links
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[You can use numbers for reference-style link definitions][1]
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+
+Footnotes
+
+Text prior to footnote reference.[^2]
+[^2] Comment to include in footnote.

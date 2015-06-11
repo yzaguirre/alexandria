@@ -21,3 +21,6 @@ Optional - For custom settings, copy and edit settings.yml.sample:
 Run Let's Chat:
 	npm start
 Party time at http://localhost:5000/!
+
+XMPP
+https://github.com/sdelements/lets-chat/wiki/XMPP
