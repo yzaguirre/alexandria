@@ -1,0 +1,241 @@
+https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/zimmermann-why-pgp.html
+http://www.techweekeurope.co.uk/e-regulation/phil-zimmermann-privacy-silent-circle-166897
+http://www.bootc.net/archives/2013/06/07/generating-a-new-gnupg-key/
+http://viccuad.me/blog/secure-yourself-part-1-airgapped-computer-and-GPG-smartcards/
+https://news.ycombinator.com/item?id=9550094
+https://github.com/ioerror/duraconf/raw/master/configs/gnupg/gpg.conf
+
+see secure/LUKS.txt
+Create a directory for GnuPG to use as its 'home' directory, and set an environment variable to point to it
+	mkdir -p /mnt/gpg-key-backup/gnupghome
+	chmod go= /mnt/gpg-key-backup/gnupghome
+	export GNUPGHOME=/mnt/gpg-key-backup/gnupghome
+
+Creating your primary key. Sign Only, 4096 keysize
+	gpg2 --full-gen-key
+Add a new identity
+	gpg2 --edit-key 27703CF0
+	adduid
+	save
+Just keep running adduid for each identity you want to add.
+Finally, you want to set the primary UID on your key;
+this is the main one that shows up when there isn't space to list all of the identities,
+but it has no other special meaning - it's purely cosmetic.
+	gpg2 --edit-key 27703CF0
+	uid 2
+	primary
+	save
+The primary key is denoted by the '.' next to the UID number, the '*' is the identity selected using the uid command.
+Creating your sub-keys
+Use the primary key only for signing other people's keys and our own identities - not for daily signing or encryption use.
+Now create sub-keys for signing, encryption and authentication.
+	gpg2 --expert --edit-key 27703CF0
+	addkey
+	8
+take the encrypt action out of the key (f00.bar2)
+	C
+	S
+	4096
+	1y
+	s
+	s
+Create an encryption-only key (f00.bar3)
+	addkey
+	8
+	F
+	S
+	4096
+	1y
+	s
+	s
+Create an authentication-only key (f00.bar4)
+	addkey
+	8
+	F
+	C
+	A
+	S
+	4096
+	1y
+	s
+	s
+Don't forget to save your key when you have finished.
+	save
+Creating a revocation certificate
+	gpg2 -o /mnt/gpg-key-backup/revoke.asc --gen-revoke 27703CF0
+Export public key
+	gpg2 --export 27703CF0 > 27703CF0.gpg
+
+http://blog.dasroot.net/2015-gpg-made-a-comeback-in-my-workflow.html
+https://www.apache.org/dev/release-signing#verifying-signature
+https://www.fayerwayer.com/2015/03/que-es-y-como-usar-pgp-en-tu-vida-diaria
+DNS leaks
+http://superuser.com/questions/888049/preveting-dns-leaks-using-gnupg-over-tor-while-allowing-key-fetching-via-dns
+_pgpkey-http._tcp.[IPADDRESS]
+port lookup for HKPS, specifically (HKP over TLS)
+Solution: Specify the port
+
+http://www.ba.infn.it/~fminafra/Docs/gpg-trustdb.html
+	gpg --update-trustdb
+https://www.gnupg.org/gph/en/manual.html#AEN464
+
+
+GPG2 
+https://lists.gnupg.org/pipermail/gnupg-devel/2014-December/029179.html
+
+Discussion
+http://www.propublica.org/article/the-worlds-email-encryption-software-relies-on-one-guy-who-is-going-broke
+https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html
+
+Create key set (Generate a new key pair. This command is normally only used interactively.)
+	gpg --gen-key
+Edit ~/.gnupg/gpg.conf and set the new secret key as the default key using the ID of the key pair: 
+	default-key E3DF66D2
+Revocation cert in
+~/.gnupg/openpgp-revocs.d
+
+print public keys (Create a database and show available keys)
+	gpg -k
+print keys
+	gpg -K
+Print fingerprint
+The key ID is the last 8 bytes of the fingerprint
+	gpg --fingerprint keyID
+trust a public key
+
+sign a public key
+	gpg --lsign-key keyID # do not export to a keyserver
+	gpg --sign-key keyID # export to a keyserver
+unsign a public key
+http://gnupg.10057.n7.nabble.com/How-to-un-sign-a-key-td12973.html
+	gpg --revsig keyID
+print sign keys
+	gpg --list-sigs
+	gpg --list-sigs keyID
+
+import public key
+	from stdin
+		gpg --import
+	from filesystem
+		gpg --import filename
+
+export key set
+	to filesystem
+	to stdout
+export public key
+	to filesystem
+		gpg -o filename.asc --export david@gmail.com
+		gpg -ao filename.asc --export david@gmail.com
+	to stdout
+		gpg --export david@gmail.com
+		gpg -a --export david@gmail.com
+	encrypt the exported key
+		gpg -c --cipher-algo AES256 foo@bar.com_private_key.asc
+eliminate key set
+	gpg --delete-secret-and-public-key "Roxana"
+Delete a public key
+	gpg --delete-key "Roxana"
+Delete a private key
+	gpg --delete-secret-key "Roxana"
+If a user, for some reason, looses his private key and needs to generate a new key pair, you would need to delete his old key before you import his new one.
+	$ gpg --delete-keys bob@example.com
+
+Generating a Revocation Certificate
+	to stdout
+		gpg --gen-revoke key-id
+	to file system, generate revoke certificate (and keep it safe)
+		gpg -o revkey-id.asc --gen-revoke key-id
+For key-id, substitute either the key ID of your primary keypair or any part of a user ID that identifies your keypair.
+Once you create the certificate (the revoke.asc file), you should protect it.
+If it is published by accident or through the malicious actions of others, the public key will become unusable.
+It is a good idea to write the revocation certificate to secure removable media or print out a hard copy for secure storage to maintain secrecy. 
+
+Revoke key set
+	first load the certificate into your keyring
+	Import revoke certificate when necesary
+		gpg --import revkey.asc
+Once you locally revoke the key, you should send the revoked certificate to a keyserver, regardless of whether the key was originally issued in this way.
+Distribution through a server helps other users to quickly become aware the key has been compromised. 
+	Public the revocation to any keyservers I posted my key to
+		gpg --keyserver keyserver --send-keys 1A0F711A
+		gpg --keyserver keyserver --send-key 1A0F711A
+		gpg --keyserver keyserver --send 1A0F711A
+Revoke key set without revcertificate
+	gpg --edit-key keyid revkey
+And don't forget, if you're doing a routine revocation,
+use the old key to sign your new key before you revoke
+the old one.
+	other way to do it (not recomended)
+		gpg --revoke-keys keyID
+
+clearsigned signature
+The --clearsign option will wrap the message in an ASCII-armored signature but will not otherwise modify its contents.
+This allows even the losers who don't use gpg to read the body of the message, but allows gpg users to verify that you wrote it and that the message wasn't changed. 
+	from file system to file system
+		gpg --clearsign file.txt # creates file.txt.asc in ascii
+	from stdin to file system
+		gpg -o filename.asc -u opmbx --clearsign
+	from stdin to stdout
+		gpg -u opmbx --clearsign
+detached signature
+	gpg -b linuxdistro.iso # generates binary linuxdistro.iso.sig
+	gpg -ab linuxdistro.iso # generates ascii linuxdistro.iso.asc
+attached signature, Sign a file, compress, but does not encrypt
+	gpg -s filename.txt
+	gpg -aso filename.sig -u opmbx filename
+
+verify file
+	verify an detached signature .sig|.asc
+		gpg filename.sig
+		gpg --verify filename.sig filename
+		gpg --verify filename.sig
+		gpg -d filename.sig
+	verify an attached signature .sig|.asc
+		gpg filename.sig # recreates original file
+		gpg --verify filename.sig # does not recreate original file
+		gpg -d filename.sig # prints original file to stdout
+	verify from clearsign
+		gpg --verify filename.sig
+	verify clearsign interactively
+		gpg --verify
+
+encrypt file using symmetric secret key encryption
+	from file system to file system
+		gpg -c exampel.txt # file out is example.txt.gpg
+		gpg -ac exampel.txt # file out is example.txt.asc
+	from stdin to stdout
+		gpg -ac # output is on screen, no pipe yet
+		gpg -c --cipher-algo AES256
+decrypt file using symmetric secret key encryption
+	from file system to file system
+		gpg example.txt.gpg # output is example.txt
+	from file system to stdout
+		gpg -d example.txt.gpg # output is on screen, no pipe yet
+		gpg -d example.txt.asc # output is on screen, no pipe yet
+		gpg -o example.txt -d example.txt.gpg # output is on screen, no pipe yet
+	from stdin to stdout
+		gpg -d
+	from stdin to file system
+		gpg -o example.txt -d
+
+encrypt file
+	from file system to file system
+		gpg -aseo essay.gpg -r 'Sam Mallory' bio_lab.jpg
+		gpg -aser 'Sam Mallory' bio_lab.jpg # file is bio_lab.jpg.asc
+		gpg -ser 'Sam Mallory' bio_lab.jpg # file is bio_lab.jpg.gpg
+	from file system to stdout
+		gpg -aseo - -r 'Sam Mallory' bio_lab.jpg
+	from stdin to file system
+		gpg -aseo essay.gpg -r 'Sam Mallory'
+	from stdin to stdout
+		gpg -aser 'Sam Mallory'
+decrypt file
+	from file system to file system
+		gpg -o file.txt -d file.txt.gpg
+	from file system to stdout
+		gpg -o - -d file.txt.gpg
+		gpg -d file.txt.gpg
+	from stdin to file system
+		gpg -o file.txt -d
+	from stdin to stdout
+		gpg -d

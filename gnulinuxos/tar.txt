@@ -1,0 +1,149 @@
+http://gnuwin32.sourceforge.net/packages.html
+
+For use in other languajes, see java/jtar.txt and js/js-tar.txt
+Rar Files
+Print comment and extract
+	$ rar x -zCMT file.rar
+Show file list
+	$ unrar l file.rar
+	$ rar vt file.rar
+
+http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file
+Type at the command prompt 
+	tar xvzf file-1.0.tar.gz - to uncompress a gzip tar file (.tgz or .tar.gz) 
+	tar xvjf file-1.0.tar.bz2 - to uncompress a bzip2 tar file (.tbz or .tar.bz2) 
+	tar xJf file-1.0.tar.xz
+	tar xvf file-1.0.tar - to uncompressed tar file (.tar) 
+http://askubuntu.com/questions/92328/how-do-i-uncompress-a-tarball-that-uses-xz
+Suggests use xf
+ x = eXtract, this indicated an extraction c = create to create ) 
+ v = verbose (optional) the files with relative locations will be displayed. 
+ z = gzip-ped; j = bzip2-zipped; J = xz
+ f = from/to file ... (what is next after the f is the archive file) 
+ The files will be extracted in the current folder (most of the times in a folder with the name 'file-1.0').
+
+-A, --catenate, --concatenate
+	append tar files to an archive
+-r, --append
+	append files to the end of an archive
+
+
+
+http://www.cyberciti.biz/faq/howto-compress-expand-gz-files/
+gz
+	$ gunzip file.gz
+	or
+	$ gzip -d file.gz
+on unix
+	$ gunzip < file.tar.gz | tar xvf -
+	$ gunzip < file.tgz | tar xvf 
+
+rar
+	$ unrar x file.rar
+
+zip
+http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-directory-via-terminal-without-hidden
+	zip -r file.zip file1.txt files/
+	unzip file.zip -d exdir
+
+7z
+	$ tar cf - directory  |  7za  a  -si  directory.tar.7z
+	$ 7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1
+	          adds  all  files  from  directory  "dir1" to archive archive.7z
+              using "ultra settings"
+
+       -t7z   7z archive
+
+       -m0=lzma
+              lzma method
+
+       -mx=9  level of compression = 9 (Ultra)
+
+       -mfb=64
+              number of fast bytes for LZMA = 64
+
+       -md=32m
+              dictionary size = 32 megabytes
+
+       -ms=on solid archive = on
+
+	$ 7z a -sfx archive.exe dir1
+              add all files from directory "dir1" to SFX archive  archive.exe
+              (Remark : SFX archive MUST end with ".exe")
+	$ 7z a -mhe=on -pmy_password archive.7z a_directory
+              add  all files from directory "a_directory" to the archive "ar‐
+              chive.7z" (with data and header archive encryption on)
+extract
+	$ 7z x file.7z -o /tmp
+Even extracts tar files
+https://stackoverflow.com/questions/1359793/programmatically-extract-tar-gz-in-a-single-step-on-windows-with-7zip
+	7z e example.tar.gz  && 7z x example.tar
+	7z x "somename.tar.gz" -so | 7z x -aoa -si -ttar -o"somename"
+x    = Extract with full paths command
+-so  = write to stdout switch
+-si  = read from stdin switch
+-aoa = Overwrite all existing files without prompt. 
+-o   = output directory
+	
+
+Crear tar.gz
+http://mylinuxnotebook.blogspot.com/2008/11/create-extract-targz-files.html
+	$ tar -czf new-tar-file-name.tar.gz file1 file2 folder1 folder2
+
+Here is the command explanation:
+tar - the tar command.
+c - create new archive.
+z - compress the archive using gzip.
+f - use archive file.
+new-tar-file-name.tar.gz - the name of the tar.gz to create.
+file-or-folder-to-archive - the name of the folder we want to archive.
+
+http://arxiv.org/help/tar
+	$ tar -cvf mystuff.tar foo.tex fig1.eps fig2.eps
+	$ gzip mystuff.tar
+o también
+	$ tar -cvzf mystuff.tar.gz foo.tex fig1.eps fig2.eps
+
+xz http://unix.stackexchange.com/questions/28976/how-to-xz-a-directory-with-tar-using-maximum-compression
+lzma http://www.fileinfo.com/extension/lzma
+http://martin.ankerl.com/2006/06/22/lzma-compression-in-linux/
+http://superuser.com/questions/540042/how-do-i-compress-multiple-files-into-one-archive-using-lzma
+	$ tar -cv gimp |lzma e -d25 -si -so >gimp.tar.lzma
+	$ tar cf gimp.tar.lzma --lzma files
+Append
+http://unix.stackexchange.com/questions/13093/add-update-a-file-to-an-existing-tar-gz-archive
+	$ gunzip archive.tar.gz
+	$ tar rf archive.tar data/data/com.myapp.backup/./files/settings.txt
+	$ gzip archive.tar
+Create rar
+http://commandline4winrar.blogspot.com/
+http://www.tecmint.com/how-to-open-extract-and-create-rar-files-in-linux/
+The next example: add all *.WAV files to the solid RAR archive Songs:
+	rar A -S Songs.RAR *.WAV
+	rar a MYS1_Practica1_200819312.rar *
+
+Multi Volume tar
+http://www.linuxquestions.org/questions/linux-software-2/multi-volume-tar-278989/
+You need to use the multi-archive flags, and to give it a tape length which is N*1024 bytes
+
+So to split a large archive you can use: ( note 4505600 is a guess it maybe a little smaller size that you need )
+
+tar -c -M -L=4505600 --file=part1.tar largefile.tar.gz
+
+It will stop after creating the first part and ask you:
+
+Prepare volume #2 for part1.tar and hit return:
+
+What you need to do is enter:
+n part2.tar
+
+You will then get the prompt
+Prepare volume #2 for part2.tar and hit return:
+
+and you can hit return. You can of couse repeat this for as many parts as you want.
+
+Putting the parts back together is a matter of
+
+tar -x -M --file=part1.tar largefile.tar.gz
+Prepare volume #2 for part1.tar and hit return: n part2.tar
+Prepare volume #2 for part2.tar and hit return:

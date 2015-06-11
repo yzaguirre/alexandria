@@ -1,0 +1,45 @@
+https://github.com/auth0/node-jsonwebtoken
+https://github.com/ryanfitz/hapi-auth-jwt
+http://hapijs.com/api#serverauthstrategyname-scheme-mode-options
+	npm install jsonwebtoken
+
+payload could be an literal, buffer or string
+options = {
+    algorithm (default: HS256)
+    expiresInMinutes or expiresInSeconds
+    audience
+    subject
+    issuer
+    noTimestamp
+    headers
+}
+algorithms
+https://github.com/auth0/node-jsonwebtoken#algorithms-supported
+default HMAC SHA256
+
+// sign with default (HMAC SHA256)
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh', options);
+
+// sign with RSA SHA256
+var cert = fs.readFileSync('private.key');  // get private key
+var token = jwt.sign({ foo: 'bar' }, cert, { algorithm: 'RS256'});
+
+==============================
+https://www.npmjs.com/package/jwt-simple
+https://github.com/hokaccha/node-jwt-simple
+0.3.0 is the latest of 3 releases
+	npm install jwt-simple
+By default the algorithm to encode is HS256.
+The supported algorithms for encoding and decoding are HS256, HS384, HS512 and RS256.
+
+var jwt = require('jwt-simple');
+var payload = { foo: 'bar' };
+var secret = 'xxx';
+ 
+// encode 
+var token = jwt.encode(payload, secret); // jwt.encode(payload, secret, 'HS512');
+ 
+// decode 
+var decoded = jwt.decode(token, secret);
+console.log(decoded); //=> { foo: 'bar' }

@@ -1,0 +1,56 @@
+https://github.com/sitaramc/gitolite/
+http://gitolite.com/gitolite/master-toc.html
+http://www.project-longinus.es/2012/07/instalando-y-configurando-gitolite/
+http://stackoverflow.com/questions/10888300/gitosis-vs-gitolite
+http://geekaholic.github.io/blog/2012/05/14/git-on-p2p-development/
+
+see http://git-scm.com/book/ch4-8.html
+FriendsofED Foundation Version Control for Web Developers - page 283
+	# apt-get install git-core gitolite git-daemon-run
+	# passwd gitolite
+On the local workstation, generate a rsa key pair
+	$ ssh-keygen -t rsa
+
+	$ echo "IdentityFile ~/.ssh/id_rsa.git" >> ~/.ssh/config
+	$ chmod 600 ~/.ssh/config
+Copy the public key to the server
+	$ scp /Users/Chris/.ssh/id_rsa.pub user@gitserver:/tmp/chris.pub
+If I were to have a home and work machine, I wouldn't require multiple users for this, as
+gitolite has a way of dealing with this case. Rather than just naming the file chris.pub, I would instead call
+it chris@work.pub or chris@home.pub because gitolite is smart enough realize that "chris" is the username
+used by both. Just something to bear in mind if you do plan on working on multiple machines.
+
+On the server do:
+	$ chmod 666 /tmp/chris.pub
+	$ su gitolite
+	$ gl-setup /tmp/chris.pub
+
+Head back to your local machine and clone the repository.
+	$ git clone gitolite@server:gitolite-admin
+With the repository cloned, it's time to open up the config file, located in conf/gitolite.conf, which should
+look something like this:
+repo gitolite-admin
+	RW+ = chris
+repo testing
+	RW+ = @all
+
+Let's create a test repository to ensure everything is working, which can be done by adding the following:
+	repo test
+	RW+ = chris
+
+In both cases repo is the name of the repository and RW+ shows the users that can access the repository.
+You can use @all, as in the testing repository, which will allow all the users added to access the
+repository, or add additional users on another line, like so:
+repo mytest
+	RW+ = craig
+	R = chris
+You'll notice I've only used R for “craig” which gives him read access, but not the ability to commit, so just
+tweak as necessary. Of course, to actually give access to "craig" he would need his own public key file
+(craig.pub) which will have been created by him and sent to you to be added to the admin-repository.
+
+With the changes made and any new users created, and their public keys living in the keydir/ directory,
+they need to be pushed up to the remote server in the form of a git commit. This is done as follows:
+	$ git commit -m "Added mytest repo" conf/gitolite.conf
+	$ git push
+You can now check out the newly created repository by using this command:
+	$ git clone gitolite@server:test

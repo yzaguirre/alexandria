@@ -1,0 +1,24 @@
+https://www.keepassx.org/downloads/
+https://github.com/keepassx/keepassx
+QT5 support
+https://github.com/keepassx/keepassx/pull/70
+	sudo apt-get install build-essential cmake libqt4-dev libqt5x11extras5-dev libgcrypt11-dev zlib1g-dev
+	wget https://github.com/keepassx/keepassx/archive/master.zip
+	unzip master.zip && rm master.zip
+	cd keepassx-master
+	mkdir build && cd build
+	cmake .. -DCMAKE_BUILD_TYPE=Release -DUSE_QT5=ON -DCMAKE_INSTALL_PREFIX=/usr/local
+	make
+	make install
+Ubuntu
+Packages needed for building:
+	# apt-get install build-essential cmake libqt4-dev libgcrypt11-dev libxtst-dev
+http://ubuntuforums.org/showthread.php?t=1620356
+	# apt-get install zlib1g-dev
+
+To make sure Qt 4 is used, do this before building:
+export QT_SELECT=qt4
+Installing:
+x	$ make install DESTDIR=/VMs/opt
+	# make install
+https://www.keepassx.org/dev/projects/keepassx/wiki/Install_instructions

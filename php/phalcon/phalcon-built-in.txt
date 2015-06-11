@@ -1,0 +1,13 @@
+http://docs.phalconphp.com/en/latest/reference/built-in.html
+
+If you want to rewrite the URIs to the index.php file use the following router file (.htrouter.php):
+<?php
+if (!file_exists(__DIR__ . '/' . $_SERVER['REQUEST_URI'])) {
+    $_GET['_url'] = $_SERVER['REQUEST_URI'];
+}
+return false;
+?>
+
+To start the server type:
+	cd public
+	php -S localhost:8000 -t . .htrouter.php

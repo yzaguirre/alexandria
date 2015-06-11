@@ -1,0 +1,135 @@
+Print cyphers
+	openssl ciphers -v|less
+inspect a private key
+	openssl rsa -text -in private.key
+inspect a certificate
+	request openssl req -text -in certificate.csr
+inspect a certificate (signed from the CSR by a CA)
+	openssl X.509 -text -in certificate.crt
+	
+
+SSL Generator
+https://mozilla.github.io/server-side-tls/ssl-config-generator/?1
+
+https://https.cio.gov/
+https://news.ycombinator.com/item?id=9220001
+https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority
+https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/
+https://news.ycombinator.com/item?id=8907148
+https://github.com/zakjan/cert-chain-resolver
+https://www.ssllabs.com/ssltest/
+
+https://cheapsslsecurity.com/comodo/positivessl.html
+
+https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority
+Here you create 4 files
+	1 .secure (which is a private key with password)
+	1 .key (which is a private key without password)
+	1 .csr (certificate sign request)
+	1 .crt (public certificate signed by some CA)
+Other tutorials that touch SSL topic
+gnulinuxos/ec2/ec2-vitals.txt gnulinuxos/scripts/change-all-ssl.sh gnulinuxos/scripts/list.sh comm/irc/bitlbee.txt comm/irc/ircd-hybrid.txt comm/owncloud.txt tunnels/ssl.txt tunnels/openvpn.txt tunnels/openssl.txt apache/apache-ssl.txt db/mariadb/mariadb-ssl.txt
+
+page 170 ubuntu server guide
+https://pip.verisignlabs.com/
+www.startcom.org
+https://www.startssl.com/
+https://login.persona.org/about
+
+	sudo apt-get install openssl
+1. First, create the directories to hold the CA certificate and related files:
+	# mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
+	# cd /etc/ssl
+2. Generating your keys. Generate a 2048-bit RSA private key and save it to a file:
+In higher-security environments, encrypting the key by adding the -des3 argument
+after the genrsa argument on the openssl command line is a good idea:
+	# openssl genrsa -des3 -out sitio1.key 2048
+	# chmod 600 sitio1.key
+
+3. You are asked for a passphrase, which is needed every time you start Apache.
+The minimum length when specifying -des3 is four characters.
+
+4. Now create the insecure key, the one without a passphrase, and shuffle the key names:
+	openssl rsa -in sitio1.key -out sitio1.key.insecure
+	mv sitio1.key sitio1.key.secure
+	mv sitio1.key.insecure sitio1.key
+The insecure key is now named server.key, and you can use this file to generate the CSR without
+passphrase.
+
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Washington
+Locality Name (eg, city) []:Bellingham
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Example Company, LTD.
+Organizational Unit Name (eg, section) []:Network Operations
+Common Name (eg, YOUR name) []:secure.example.org
+Email Address []:dom@example.org
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+
+The Common Name should match the name that clients will use to access your server. Be
+sure to get the other details right if you plan to have the CSR signed by a third-party CA
+
+5. To create the CSR, run the following command at a terminal prompt:
+	openssl req -new -key sitio1.key -out sitio1.csr
+It will prompt you enter the passphrase. If you enter the correct passphrase, it will prompt you to enter
+Company Name, Site Name, Email Id, etc. Once you enter all these details, your CSR will be created
+and it will be stored in the server.csr file.
+
+When using a third-party CA, submit the CSR to it and then place the certificate it 
+provides you into /etc/ssl/certs/sitio1_com.crt (or a different file, as desired).
+
+You can now submit this CSR file to a CA for processing. The CA will use this CSR file and issue the
+certificate. On the other hand, you can create self-signed certificate using this CSR.
+    Root CA Certificate - AddTrustExternalCARoot.crt
+    Intermediate CA Certificate - COMODORSAAddTrustCA.crt
+    Intermediate CA Certificate - COMODORSADomainValidationSecureServerCA.crt
+    Your PositiveSSL Certificate - sitio1_com.crt
+First make a bundle
+https://support.comodo.com/index.php?/Default/Knowledgebase/Article/View/643/17/
+ej:	cat EssentialSSLCA_2.crt ComodoUTNSGCCA.crt UTNAddTrustSGCCA.crt AddTrustExternalCARoot.crt > yourDomain.ca-bundle
+	cat COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt > sitio1_com.ca-bundle
+6. create the self-signed certificate, run the following command at a terminal prompt:
+(not used, but is self-signed using the sign request)
+	openssl x509 -req -days 365 -in sitio1.csr -signkey sitio1.key -out sitio1.crt
+
+The above command will prompt you to enter the passphrase. Once you enter the correct passphrase,
+your certificate will be created and it will be stored in the server.crt file.
+
+7. Installing the Certificate
+You can install the key file server.key and certificate file server.crt, or the certificate file issued
+by your CA, by running following commands at a terminal prompt:
+	sudo cp server.crt /etc/ssl/certs
+	sudo cp server.key /etc/ssl/private
+Now simply configure any applications, with the ability to use public-key cryptography, to use the
+certificate and key files. For example, Apache can provide HTTPS, Dovecot can provide IMAPS and
+POP3S, etc.
+
+So you need yourDomainName.crt and yourDomainName.ca-bundle
+	sudo mv sitio1.key.secure /etc/ssl/private
+	sudo mv sitio1_com.crt sitio1_com.ca-bundle /etc/ssl/certs
+edit apache2
+	sudo vim /etc/apache2/sites-available/000-yzaguirre.me-ssl.conf
+SSLEngine on
+SSLCertificateKeyFile /etc/ssl/private/sitio1.key.secure
+SSLCertificateFile /etc/ssl/certs/sitio1_com.crt
+SSLCertificateChainFile /etc/ssl/certs/sitio1_com.ca-bundle
+x	sudo chmod 600 /etc/ssl/certs/sitio1_com.crt /etc/ssl/certs/sitio1_com.ca-bundle /etc/ssl/private/sitio1.key.secure
+
+8.) Extra
+Check out tunnels/openssl.txt
+
+Summary
+	mkdir -p /etc/ssl/{private,certs,requests,CA}
+	cd /etc/ssl
+	openssl genrsa -des3 -out private/sitio1.key.secure 2048
+	chmod 600 private/sitio1.key.secure
+	openssl rsa -in private/sitio1.key.secure -out sitio1.key
+	openssl req -new -key sitio1.key -out requests/sitio1.csr
+Once recieved the crt and other files from CA, do:
+	cat COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt > sitio1.ca-bundle
+	mv sitio1.crt sitio1.ca-bundle certs/
+You may want to securely erase the .csr and .key (the one without password, DONT'T DELETE THE PRIVATE KEY .SECURE !!) files
+	shred -n 10 -z requests/sitio1.csr sitio1.key
+	rm requests/sitio1.csr sitio1.key

@@ -1,0 +1,60 @@
+http://www.fpdf.org/
+FPDF es una clase escrita en PHP que permite generar documentos PDF directamente desde PHP,
+es decir, sin usar la biblioteca PDFlib.
+La F de FPDF significa Free (gratis y libre): 
+puede usted usarla para cualquier propósito y modificarla a su gusto
+para satisfacer sus necesidades.
+
+FPDF tiene otras ventajas: funciones de alto nivel. Esta es una lista de sus principales características:
+
+    Elección de la unidad de medida, formato de página y márgenes
+    Gestión de cabeceras y pies de página
+    Salto de página automático
+    Salto de línea y justificación del texto automáticos
+    Admisión de imágenes (JPEG, PNG y GIF)
+    Colores
+    Enlaces
+    Admisión de fuentes TrueType, Type1 y codificación
+    Compresión de página
+FPDF no necesita de ninguna extensión para PHP 
+(excepto zlib para activar la compresión y GD para soporte a GIF)
+y funciona con PHP4 (≥ 4.3.10) y PHP5.
+
+¿Y qué hay de la eficiencia?
+Como es lógico, 
+la velocidad de generación de un documento es menor que con PDFlib.
+Sin embargo, la desventaja en cuanto a rendimiento es muy razonable y se adecúa a la mayoría de los casos,
+a no ser que sus documentos vayan a ser especialmente complejos o extensos.
+
+Manual
+http://www.fpdf.org/es/doc/index.php
+Scripts
+http://www.fpdf.org/es/script/index.php
+	apt-get install zlib1g php5-gd
+	tar xf fpdf17.tgz -C /var/www/html/
+	cd /var/www/html/
+	mv fpdf17 fpdf
+Composer
+https://packagist.org/packages/itbz/fpdf
+{
+    "require": {
+        "itbz/fpdf": "1.7.2"
+    }
+}
+
+special caracters
+https://stackoverflow.com/questions/3514076/special-characters-in-fpdf-with-php
+$str = utf8_decode($str);
+
+Include qr image
+http://foro.elhacker.net/php/crear_codigo_qr_en_pdf_usando_libreria_fpdf-t353841.0.html
+$fpdf->Image('https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=SoyUnDios&.png',100,100,10);
+<?php
+require_once("fpdf.php");
+ 
+$pdf = new FPDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial','B',16);
+$pdf->Cell(40,10,'Esto es un codigo QR xD');
+$pdf->Image('http://chart.googleapis.com/chart?chs=100x100&cht=qr&chl=SoyUnDios&.png',20,20,100,100);
+$pdf->Output();

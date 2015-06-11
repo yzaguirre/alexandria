@@ -1,0 +1,13 @@
+https://vgough.github.io/encfs/
+https://github.com/vgough/encfs
+	apt-get install openssl fuse boost-serialization gettext libtool libintl
+	wget https://github.com/vgough/encfs/releases/download/v1.8.1/encfs-1.8.1.tar.gz
+	tar xf encfs-1.8.1.tar.gz
+	cd encfs-1.8.1
+	autoreconf -if
+	./configure
+	make
+Testing
+	make test
+Install	
+	make install

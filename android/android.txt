@@ -1,0 +1,88 @@
+32 libs
+	sudo apt-get install lib32stdc++6 lib32z1 lib32z1-dev
+Variables de entorno
+https://stackoverflow.com/questions/6234403/sdk-manager-exe-doesnt-work-android
+	export JAVA_HOME=C:\Program Files\Java\jdk1.7.0_10\bin
+	export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/bin
+	export ANT_HOME=/usr/share/ant/bin
+	ANDROID_HOME=/VMs/opt/android-sdk-linux
+
+	tools\android
+
+Busybox
+https://stackoverflow.com/questions/14398543/android-install-apk-silently-by-busybox-command-line
+	
+Design Guidelines
+http://developer.android.com/design/index.html
+
+On some web servers, you may need to configure the MIME type for the
+APK file so that it can be served correctly. The MIME type for the APK file is
+application/vnd.android.package-archive.
+
+Developer Training
+http://developer.android.com/training/index.html
+
+Api Reference
+http://developer.android.com/reference/packages.html
+
+Distribute your app
+http://developer.android.com/distribute/index.html
+
+Setting up an Existing IDE
+	wget http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+Verify sha-1
+	sha1sum android-sdk_r24.2-linux.tgz
+1a29f9827ef395a96db629209b0e38d5e2dd8089
+	tar xf android-sdk_r24.2-linux.tgz -C /opt
+	cd /opt/android-sdk-linux
+Install everything (couple of gigabytes, not recommended)	
+	tools/android update sdk --no-ui
+http://tools.android.com/recent/updatingsdkfromcommand-line
+	android list sdk
+	tools/android update sdk --no-ui --filter 2.3.34,31,tool,platform-tools
+	
+
+Set the path variable
+	vim /etc/profile.d/android_sdk.sh
+#!/bin/bash
+PATH=$PATH:/opt/android-sdk-linux/tools
+
+	# chmod +x /etc/profile.d/android_sdk.sh
+
+Install the Android Developer Tools (ADT) plug-in for Eclipse.
+http://developer.android.com/sdk/installing/installing-adt.html
+
+Download the ADT Plugin
+1. Start Eclipse, then select Help > Install New Software.
+2. Click Add, in the top-right corner.
+3. In the Add Repository dialog that appears, enter "ADT Plugin" for the Name and the following URL for the Location:
+https://dl-ssl.google.com/android/eclipse/
+4. Click OK.
+If you have trouble acquiring the plugin, try using "http" in the Location URL, instead of "https" (https is preferred for security reasons).
+5. In the Available Software dialog, select the checkbox next to Developer Tools and click Next.
+6. In the next window, you'll see a list of the tools to be downloaded. Click Next.
+7. Read and accept the license agreements, then click Finish.
+If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.
+8. When the installation completes, restart Eclipse.
+
+Adding Packages
+http://developer.android.com/sdk/installing/adding-packages.html
+To develop an Android app, you also need to download at least one Android platform and the latest SDK Platform-tools.
+	$ android sdk
+
+Building your first app
+http://developer.android.com/training/basics/firstapp/index.html
+
+List devices
+	$ android list avd
+Run a device
+	$ emulator -avd <Virtual Device Name>
+
+	# apt-get install android-tools-adb android-tools-fastboot 
+	# ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
+	# ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
+
+http://stackoverflow.com/questions/4454107/how-to-convert-an-eclipse-android-project-to-use-ant-for-build
+	$ android update project -p .
+
+http://developer.android.com/tools/building/building-cmdline.html

@@ -1,0 +1,35 @@
+http://www.vim.org/scripts/script.php?script_id=3645
+http://experimentswithlinuxrelatedtech.blogspot.com/2014/03/keep-files-secure-and-edit-gpg-files.html
+http://usevim.com/2012/11/21/vim-gpg/
+https://github.com/jamessan/vim-gnupg/
+Turn of viminfo and swapfile
+	wget https://github.com/jamessan/vim-gnupg/archive/v2.5.tar.gz
+	tar xf v2.5.tar.gz
+	cd vim-gnupg-2.5/plugin
+	cp gnupg.vim ~/.vim/plugin
+Guide
+http://michaelrash.blogspot.com/2008/02/interfacing-vim-with-gnupg-encrypted.html
+Practical
+http://jasonseney.com/post/18646147210/open-edit-save-encrypted-files-with-vim-and-gpg
+	-n turns off swap file - important!
+	-i turns off .viminfo - important!
+To Open an Encrypted File (from shell)
+	gpg2 -d myfile.mkdn.gpg | vim - -n -i "NONE" "+set filetype=markdown"
+
+Bonus: Add a function (and easy alias) to your ~/.bash_profile file:
+vimdecrypt() { gpg2 -d "$1" | vim - -n -i "NONE" "+set filetype=$2"; }
+alias vd="vimdecrypt"
+
+You can now simply type (2nd argument optional):
+	vd myfile.mkdn.gpg markdown
+
+
+To Encrypt and Save a File (from vim)
+	:w !gpg -c -o myfile.mkdn.gpg
+	:w !gpg2 -aser keyX -u keyY|less
+
+Bonus: Add a command to your ~/.vimrc file:
+command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
+
+Now, from within vim you type
+	WriteEncrypted myfile.txt.gpg

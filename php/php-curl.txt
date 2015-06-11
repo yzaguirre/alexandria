@@ -1,0 +1,18 @@
+Get Content-Encoding
+https://stackoverflow.com/questions/12792910/php-curl-not-returning-content-encoding-header
+function handle_headers($rawHeader){
+  $cutHeaders = explode("\r\n", $rawHeader);
+  $headers = array();
+  foreach ($cutHeaders as $row)
+  {
+      $cutRow = explode(":", $row, 2); 
+      $headers[$cutRow[0]] = trim($cutRow[1]);
+  }
+  return $headers;
+}
+curl_setopt($ch, CURLOPT_HEADER, true);
+$return = curl_exec($ch);
+list($rawHeader, $response) = explode("\r\n\r\n", $return, 2);
+$header = handle_headers($rawHeader);
+
+$header['Content-Encoding']

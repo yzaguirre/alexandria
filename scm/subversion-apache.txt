@@ -1,0 +1,93 @@
+/home/david/ecys/2013/2S13/AYDLab/Practica1/practica1ayd2.txt
+TortoiseSVN e Windows Installer 4.5 Redistributable
+
+http://www.jejik.com/articles/2007/06/apache_and_subversion_authentication_with_microsoft_active_directory/
+http://gurudelleccelsopicco.wordpress.com/2009/04/14/svn-ldap-authentication-on-apache/
+
+https://help.ubuntu.com/13.04/serverguide/subversion.html
+sudo apt-get install subversion libapache2-svn
+
+http://shah-oss.blogspot.com/2011/01/apache-and-subversion-authentication.html
+http://stackoverflow.com/questions/5652982/setting-up-apache-and-subversion-to-use-ldap-windows-active-directory-group-au
+
+SEGUN Foundation
+Instalación Según Libro FriendsofED Foundation Version Control for Web Developers Mar 2012
+	# apt-get install tasksel
+	# tasksel install lamp-server
+	# apt-get update
+	# apt-get install subversion libapache2-svn apache2-utils
+The next step is to create a location to store the repositories. This can, in theory, be anywhere in the
+system, but a common location is in the var directory within the file system, so you'll be creating a folder
+called svn-repos in there. Feel free to change the name or location of the folder, just be sure to remember
+it for later. The following command will create the folder:
+	# mkdir /var/svn-repos/
+Apache apuntará DocumentRoot a la siguiente carpeta
+	# mkdir -p /var/svn-repos/htdocs
+This creates the repositories’ house. Now you need to actually create some repositories, which can be
+done using the following commands. You’ll also be adding the trunk, branches, and tags directories into
+the repositories here to ensure the repository is in the correct format.
+	# svnadmin create --fs-type fsfs /var/svn-repos/project_test
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/trunk
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/branches
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/tags
+Crear repositorio de prueba, "sandbox"
+	$ sudo su www-data -c "svnadmin --fs-type fsfs create /var/svn-repos/sandbox"
+	$ sudo su www-data -c "svnadmin --fs-type fsfs create /var/svn-repos/ProyectoMocos"
+Of course, in the above, just replace project_test with the desired name of the repository, and repeat as
+needed for additional repositories.
+
+One password for all repositories, f00bar
+	# htpasswd -c /var/svn-repos/users david
+	# htpasswd    /var/svn-repos/users erick
+	# htpasswd -m /var/svn-repos/users david
+Managing users
+	# groupadd subversion
+	# usermod -aG subversion david
+	# chmod -R 770 /var/svn-repos/
+	# chown -R www-data:subversion /var/svn-repos/
+
+
+Integrating with Apache
+http://www.debuntu.org/how-to-subversion-svn-with-apache2-and-dav/
+	# vim /etc/apache2/mods-available/dav_svn.conf
+
+Old way of doing it
+	# vim /etc/apache2/sites-available/svn.conf
+<VirtualHost 178.79.159.153:80>
+	DocumentRoot /srv/www/code.chrisdkemper.co.uk/public_html/
+	ServerName svn.chrisdkemper.co.uk
+	<Location /svn>
+		DAV svn
+		SVNParentPath /var/svn-repos/
+		SVNListParentPath on # Show an index of all repositories in /var/svn-repos
+		AuthType Basic
+		AuthName "Chrisdkemper Repositories"
+		AuthUserFile /var/svn-repos/users
+		Require valid-user
+	</Location>
+</VirtualHost>
+
+Y de una vez crear el softlink
+	# ln -s /etc/apache2/sites-available/svn.conf /etc/apache2/sites-enabled
+
+Better solution http://svnbook.red-bean.com/en/1.7/svn.serverconfig.httpd.html
+	# vim /etc/apache2/sites-available/svn.conf
+<Location /svn>
+        DAV svn
+        SVNParentPath /var/svn-repos/
+        SVNListParentPath on # Show an index of all repositories in /var/svn-repos
+        AuthType Basic
+        AuthName "Repositorios dvd"
+        AuthUserFile /var/svn-repos/users
+        Require valid-user
+</Location>
+
+	
+	# service apache2 restart
+Open this link in the browser
+http://svn.chrisdkemper.co.uk/project_test
+
+Descargar Tortoise http://tortoisesvn.net/downloads.html
+Each of the repository should be accessible using a URL which looks like
+	$ svn co http://svn.ayd2.internal/svn/sandbox --username david --password Pass11
+	$ svn co https://54.193.39.157/svn/Academy/ --username dvdyzag --password nhcqW9rBNHlMftRIcHj6

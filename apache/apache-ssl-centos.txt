@@ -1,0 +1,44 @@
+http://wiki.centos.org/HowTos/Https
+
+yum install mod_ssl
+mkdir /etc/httpd/ssl
+
+vi /etc/httpd/conf.d/ssl.conf
+
+Scroll down to the section that begins with <VirtualHost _default_:443> and
+locate the following line:
+#ServerName www.example.com:443
+
+Uncomment this line and modify the value shown to match the Common Name value
+used during the creation of your certificate as follows:
+ServerName www.mylocaldomain.home:443
+
+Now make sure the following line reads as follows:
+SSLEngine on
+
+Following this, scroll down and find the line that looks as follows:
+SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+
+Modify this line to reflect the location of your certificate as follows:
+SSLCertificateFile /etc/httpd/ssl/apache.crt
+
+Now scroll down and locate the following line:
+SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+Again, modify this line to reflect the location of your server key as follows:
+SSLCertificateKeyFile /etc/httpd/ssl/apache.key
+
+When you have finished, simply save and close the file in the usual way before
+protecting your files with the following command:
+chmod 400 apache.*
+
+Now restart the Apache httpd service:
+service httpd restart
+
+Well done, you can now visit your server with a secure connection by visiting the
+https://www.myserverdomain.lan
+
+Configure firewall
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+/sbin/service iptables save
+iptables -L -v

@@ -1,0 +1,127 @@
+http://www.phalconphp.com/en/
+http://docs.phalconphp.com/en/latest/index.html
+http://vimeo.com/phalconphp
+
+documentation
+	wget http://media.readthedocs.org/htmlzip/phalcon-php-framework-documentation/latest/phalcon-php-framework-documentation.zip
+
+http://forum.phalconphp.com/discussion/167/how-i-can-add-external-library-to-phalcon-project-
+http://docs.phalconphp.com/en/latest/reference/loader.html#registering-classes
+$loader->registerClasses(
+    array(
+        "Some"         => "library/OtherComponent/Other/Some.php",
+        "Example\Base" => "vendor/example/adapters/Example/BaseClass.php",
+        "PHPMailer"         => "library/PHPMailer/PHPMailer.php",
+    )
+);
+
+apache config
+	# site=zgas
+	# apachedir=/var/www/html
+	cat <<EOF > /etc/apache2/conf-available/060-${site}.conf
+<Directory ${apachedir}/${site}>
+Options FollowSymLinks
+AllowOverride All
+</Directory>
+EOF
+	# a2enconf 060-${site}.conf
+	# service apache2 restart
+
+Make a project
+	$ phalcon project blog
+	$ phalcon create-project invo --enable-webtools
+Create a controller
+	$ cd blog
+	$ phalcon controller poll
+
+Before creating a model, create the database
+CREATE DATABASE phalcon;
+GRANT ALL ON phalcon.* TO phalcon@'localhost' IDENTIFIED BY 'phalcon';
+GRANT ALL ON phalcon.* TO phalcon@'localhost' IDENTIFIED BY 'xDg4Mze3mHbQ';
+FLUSH PRIVILEGES;
+USE phalcon;
+CREATE TABLE polls(id INT PRIMARY KEY AUTO_INCREMENT, question VARCHAR(60));
+CREATE TABLE poll_options(id INT PRIMARY KEY AUTO_INCREMENT, polls_id INT, name VARCHAR(60), number_votes INT);
+INSERT INTO polls VALUES (1, "what's your favorate planet?");
+INSERT INTO polls VALUES (2, "what's the smartest animal?");
+INSERT INTO poll_options VALUES (1, 1, 'earth', 0);
+INSERT INTO poll_options VALUES (2, 2, 'cow', 0);
+Edit phalcon db config file in "app/config/config.php"
+
+send to ec2
+	$ tar cf ~david/tmp/blog.tar.lzma --lzma blog/
+	$ scp ~david/tmp/blog.tar.lzma ec2:
+	
+Create a model
+	$ phalcon model polls
+	$ phalcon model poll_options
+
+Configure your controller
+
+Create view 
+	$ mkdir app/views/poll
+	$ subl app/views/poll/index.volt
+	$ subl app/views/poll/show.volt
+	$ subl app/views/poll/add.volt
+Navigate to
+osuse64/blog/poll
+
+http://docs.phalconphp.com/en/latest/reference/security.html
+		//Store the password hashed
+        $user->password = $this->security->hash($password);
+
+Security
+http://docs.phalconphp.com/en/latest/reference/security.html
+http://docs.phalconphp.com/en/latest/reference/crypt.html
+
+Tags
+http://docs.phalconphp.com/en/latest/reference/tags.html
+
+Volt templating
+http://docs.phalconphp.com/en/latest/reference/volt.html
+
+Models
+http://docs.phalconphp.com/en/latest/reference/models.html#relationships-between-models
+
+Transacciones
+http://docs.phalconphp.com/en/latest/reference/models.html#transactions
+
+MySQL adapter
+http://docs.phalconphp.com/en/latest/api/Phalcon_Db_Adapter_Pdo_Mysql.html
+
+Config file for development and production
+https://gist.github.com/a6oozar/9364705
+set up apache $_SERVER['PHALCON_ENV'] environment variable to 'config.php' or 'dev.php'
+https://stackoverflow.com/questions/10902433/setting-environment-variables-for-accessing-in-php
+http://httpd.apache.org/docs/2.4/mod/mod_env.html
+you do it like
+	SetEnv VARIABLE_NAME variable_value
+	SetEnv PHALCON_ENV config.php
+	SetEnv PHALCON_ENV dev.php
+Modify public/index.php
+	$config = include __DIR__ . "/../app/config/" . $_SERVER['PHALCON_ENV'];
+
+Load external library
+http://docs.phalconphp.com/en/latest/reference/loader.html
+http://forum.phalconphp.com/discussion/167/how-i-can-add-external-library-to-phalcon-project-
+https://stackoverflow.com/questions/23638863/how-to-include-files-in-php-phalcon-controllers
+
+include $config->application->libraryDir . "zgas/functions.php";
+
+Finding records
+http://docs.phalconphp.com/en/latest/reference/models.html#finding-records
+
+debug
+http://docs.phalconphp.com/en/latest/reference/debug.html
+
+Request
+http://docs.phalconphp.com/en/latest/reference/request.html
+Response
+http://docs.phalconphp.com/en/latest/reference/response.html
+Set header values
+	$response->setHeader("Content-Type", "application/json");
+	$response->setHeader('Cache-Control', 'max-age=86400');
+	$response->setHeader('Accept-Encoding', 'gzip, deflate');
+Set the content
+	$response->setContent(json_encode($data));
+	return $response;

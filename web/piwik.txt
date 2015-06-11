@@ -1,0 +1,44 @@
+piwik
+http://piwik.org/
+http://piwik.org/roadmap
+https://en.wikipedia.org/wiki/Do_Not_Track
+http://piwik.org/docs/analytics-api/
+http://es.piwik.org/documentacion/
+http://piwik.org/shop/
+http://piwik.org/docs/installation/
+	wget http://builds.piwik.org/piwik.tar.gz
+	wget http://builds.piwik.org/piwik.tar.gz.asc
+Verify
+find 0x5590A237 key
+	gpg2 --verify piwik.tar.gz.asc
+Extract
+	tar xf piwik.tar.gz -C /var/www
+	cd /var/www
+	rm How\ to\ install\ Piwik.html
+	mv piwik analytics
+	chown www-data:www-data -R analytics
+
+You will also need to have either the pdo and pdo_mysql extension installed,
+or the mysqli extension installed. These MySQL extensions can use some of
+the more advanced features of MySQL 4.1 necessary for Piwik to run.
+You will also need the PHP GD extension to create the images for some of the
+graphs in Piwik.
+	# apt-get install php5-mysql php5-gd
+
+	# vim /etc/php5/apache2/php.ini
+
+Time for database
+	$ mysql -u root -p
+	CREATE DATABASE piwik;
+	GRANT ALL ON piwik.* TO piwik_user@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;
+
+Cron jobs
+https://piwik.org/docs/setup-auto-archiving/
+	su www-data
+	crontab -e
+5 * * * * /usr/bin/php5 /path/to/piwik/console core:archive --url=http://example.org/piwik/ > /home/example/piwik-archive.log
+
+The Piwik archive script will run every hour (at 5 minutes past).
+Generally, it completes in less than one minute. On larger websites (10,000 visits and more),
+Piwik archiving can take up to 30 minutes.

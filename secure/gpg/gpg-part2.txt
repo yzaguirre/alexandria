@@ -1,0 +1,100 @@
+Recommendations
+	If you compress after encrypting, the file,
+	which will already be mostly random-seeming data,
+	won't compress very much if at all. Always compress first.
+
+Most used options
+-a, --armor create ascii armored output
+-b, --detach-sign
+-c, --symmetric, single-key encryption, with one passphrase
+-d, --decrypt
+-e, --encrypt, public-key encryption
+-k, --list-keys
+-r, --recipient USER-ID encrypt for USER -ID
+-s, --sign  crea una firma
+-u, --local-user USER-ID use USER-ID to sign or decrypt
+-z N set compress leve l to N (0 disables)
+--textmode use canonical text mode
+-o, --output FILE write output to FILE
+-v, --verbose verbose
+-n, --dry-run do not make any changes
+-i, --interactive prompt before overwriting
+--openpgp use strict OpenPGP behavior
+
+recommendations
+https://we.riseup.net/riseuplabs+paow/openpgp-best-practices
+
+http://elbinario.net/2014/06/04/crear-par-claves-gpg-terminal/
+x http://www.bitflop.com/document/129
+http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html
+good explain http://futureboy.us/pgp.html
+x https://fedoraproject.org/wiki/Creating_GPG_Keys
+https://fedoraproject.org/wiki/Using_GPG
+x http://www.queen.clara.net/pgp/art4.html
+http://www.gnupg.org/documentation/manuals/gnupg/Operational-GPG-Commands.html
+for android https://play.google.com/store/apps/details?id=org.thialfihar.android.apg&hl=en
+
+COMMUNICATION give other my public key
+To communicate with others you must exchange public keys. To send your public key to a correspondent you must first export it.
+	gpg -ao dvdyzag@opmbx.org_public.asc --export dvdyzag@opmbx.org
+In the above example you are using the email address to identify which public key you need to export, but you can also use the ID of the key pair:
+	gpg --armor --output dvdyzag@opmbx.org_public.asc --export C28EE996
+Or send it to a public key server
+	gpg --keyserver hkp://subkeys.pgp.net --send-key KEYNAME
+	gpg --send-keys --keyserver hkp://subkeys.pgp.net KEYNAME
+or send it ssh
+	gpg -a --export C28EE996 | ssh ec2 "gpg --import -"
+
+COMMUNICATION how to import public key, just like before
+In order to encrypt a message or a file to someone else using their public key, you first need to import their public key.
+
+You cannot simply download the public key of someone you know and then trust it really is his public key. If he uploaded it to a web server, what happens if a hacker gains access to the web server and then exchange the public key of your friend with his own public key?
+
+If you communicate with another key owner, in person, or over the phone (if you know their voice), you know them to be who they say they are, and the key fingerprints match, then you may sign their key.
+First, get the fingerprint of Bob's public key without actually importing it:
+	gpg --with-fingerprint bob-public-key.asc
+Once Bob's public key has been verified, you need to import his key:
+	gpg --import bob-public-key.asc
+Import from a server
+	gpg --keyserver pgp.mit.edu --recv-keys 402CC0D3D52713E3FB7C7103E48184B5B05676B1 
+	gpg --keyserver pgp.mit.edu --search-keys 402CC0D3D52713E3FB7C7103E48184B5B05676B1 
+Next, check and verify the signature with:
+	gpg --check-sigs bob@example.com
+Then you need to sign it:
+	gpg --sign-key bob@example.com
+	gpg --sign-key dvdyzag@opmbx.org
+Sign someones public key in order to pass on to other.
+Unlike PGP for RISC OS, GnuPG has an option for creating "local" signatures.
+This prevents your signature from being propagated if you send a copy of the signed key to anyone else.To create a local signature, use "--lsign-key" instead of "--sign-key". 
+A local signature is one that cannot be exported together with the public key to which it applies.
+
+In order to assign trust to a key owner, you must assign the owner a value in your GnuPG trust database. You do this by editing their key:
+
+EDITING public keys
+	gpg --edit-key <name>
+	gpg --edit-key C28EE996
+Give it full trust
+	trust
+	5
+	quit
+To check the signatures added to Bob's public key type "check"
+You might need to clean the key from unusable user IDs or unusable signatures, this can be done with the command "clean"
+
+Fingerprint key
+Your "GPG key ID" consists of 8 hex digits identifying the public key.
+In the example above, the GPG key ID is 1B2AFA1C. 
+In most cases, if you are asked for the key ID, you should prepend "0x" to the key ID, as in "0x1B2AFA1C".
+
+"addphoto". GnuPG will ask for the filename of a suitable JPEG. No other types of image files can be used. 
+"fpr". Fingerprint
+"sign". Sign key
+"check". View signatures
+
+Exception
+https://www.google.com.gt/search?q=gpg:+3+marginal%28s%29+needed,+1+complete%28s%29+needed,+PGP+trust+model&ie=utf-8&oe=utf-8&rls=org.mozilla:es-MX:official&client=firefox-a&channel=sb&gws_rd=cr&ei=Q4BZU7WnLMrk2QX22YDQAw
+https://security.stackexchange.com/questions/41208/what-is-the-exact-meaning-of-this-gpg-output-regarding-trust
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+batchmode run complete: shutting down
+program is already running, taking no action

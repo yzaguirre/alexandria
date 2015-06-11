@@ -1,0 +1,13 @@
+http://private.sit.fraunhofer.de/~stotz/software/jpdfsign/
+Install its only dependacy http://sourceforge.net/projects/itext/files/
+last update 2006-08-22
+PdfSign is a commandline application written in Java which allows to add an invisible signature to PDF documents.
+Download 2 jars
+http://prdownloads.sourceforge.net/itext/itext-1.4.jar
+	wget http://private.sit.fraunhofer.de/~stotz/software/jpdfsign/jPdfSign.jar
+Copy them into the same directory.
+
+	mkdir /VMs/opt/jpdfsign-old
+	unzip itext-5.5.3.zip -d /VMs/opt/jpdfsign-old
+	cd /VMs/opt/jpdfsign-old
+	java -jar jPdfSign.jar pkcs12FileName pdfInputFileName pdfOutputFileName

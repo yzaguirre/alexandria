@@ -1,0 +1,23 @@
+http://docs.phalconphp.com/en/latest/reference/linuxtools.html
+	wget https://github.com/phalcon/phalcon-devtools/archive/v2.0.2.tar.gz
+	tar xf v2.0.2.tar.gz -C /VMs/opt/
+	mv /VMs/opt/phalcon-devtools{-2.0.2,}
+	cd /VMs/opt/phalcon-devtools
+	
+Create a symbolink link to the phalcon.php script:
+	ln -s /VMs/opt/phalcon-devtools/phalcon.php /usr/local/bin/phalcon
+
+How to use it
+http://docs.phalconphp.com/en/latest/reference/tools.html
+
+Create Project
+	phalcon project store
+	phalcon project store --type=simple --enable-webtools
+--type=s Type of the application to be generated (micro, simple, modules)
+
+Create modles
+	phalcon model product --get-set --schema=[SCHEMA]
+	phalcon model robot  --get-set --schema=phalcon_schema
+
+Scaffold a CRUD
+	phalcon scaffold --table-name test

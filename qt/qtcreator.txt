@@ -1,0 +1,21 @@
+http://www.qt.io/download-open-source/
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.sha256
+3273d27ee8ae0068cd6b39bc21e9a6ee78d93102934c650b4c2086da9d98fdc6
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.sha1
+ae1d8f09653b12c86792d8ab55fc2a9ac41ae6b8
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.md5
+a9aede5e928bfc4e9c3f3b670a01aec7
+
+For android
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.sha256
+e133bd33bc1a0b69899a5e1d477f5fca7cce444c165b40b263bd9f982ea58078
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.sha1
+a2172207a4405a0efcbd46768a90d3bde40f14f3
+	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.md5
+e22be41827b36b0dbccd6d76eb7ccb51
+
+Install
+	chmod u+x qt-opensource-linux-x64-5.4.2.run
+	./qt-opensource-linux-x64-5.4.2.run

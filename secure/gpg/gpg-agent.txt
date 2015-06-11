@@ -1,0 +1,9 @@
+gpg-agent
+Change time-to-ilve of the cache
+https://wiki.archlinux.org/index.php/GnuPG#gpg-agent
+	echo use-agent >> ~/.gnupg/gpg.conf
+	echo "default-cache-ttl 1300" >> ~/.gnupg/gpg-agent.conf
+	echo "max-cache-ttl 1300" >> ~/.gnupg/gpg-agent.conf
+	echo "default-cache-ttl-ssh 1300" >> ~/.gnupg/gpg-agent.conf
+	echo "max-cache-ttl-ssh 1300" >> ~/.gnupg/gpg-agent.conf
+	echo RELOADAGENT | gpg-connect-agent

@@ -1,0 +1,36 @@
+Install
+	apt-get install php5-xdebug
+configure xdebug
+http://www.xdebug.org/docs/remote
+	vim + /etc/php5/mods-available/xdebug.ini
+zend_extension=/usr/lib/php5/20100525+lfs/xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+xdebug.profiler_enable=1
+xdebug.profiler_output_dir="/tmp"
+xdebug.idekey=PHPSTORM
+
+With an unknown IP/multiple developers
+xdebug.remove_connect_back=1
+
+xdebug.remote_handler=dbgp
+
+xdebug.remote_autostart=1
+
+xdebug.remote_connect_back=1
+the xdebug.remote_host setting is ignored and Xdebug will try to connect to the client that made the HTTP request
+
+Edit php.ini
+	vim /etc/php5/apache2/php.ini
+html_error = On
+
+URL variables
+?XDEBUG_SESSION_START=netbeans-xdebug
+?XDEBUG_SESSION_STOP
+?XDEBUG_SESSION_STOP_NO_EXEC
+
+Troubleshoot
+http://wiki.netbeans.org/HowToConfigureXDebug#Troubleshooting
+http://www.devside.net/wamp-server/netbeans-waiting-for-connection-netbeans-xdebug-issue
+https://stackoverflow.com/questions/17613726/netbeans-shows-waiting-for-connection-netbeans-xdebug

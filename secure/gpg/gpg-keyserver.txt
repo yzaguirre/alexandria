@@ -1,0 +1,42 @@
+Server Install
+	apt-get install sks
+	sks build
+	chown debian-sks:debian-sks -R /var/lib/sks/DB
+	vim /etc/default/sks
+initstart=yes
+
+	service sks start
+Look for ports 11370 and 11371
+	netstat -pant
+(Install apache2)
+x	mkdir /var/lib/sks/www
+x	chown debian-sks:debian-sks -R /var/lib/sks/www
+Open localhost:11371
+	
+Use a gpg server
+https://help.riseup.net/en/security/message-security/openpgp/best-practices
+	apt-get install gnupg-curl
+	cd /etc/ssl/CA
+	wget https://sks-keyservers.net/sks-keyservers.netCA.pem
+https://sks-keyservers.net/verify_tls.php
+	vim ~/.gnupg/gpg.conf
+keyserver hkps://hkps.pool.sks-keyservers.net
+keyserver-options ca-cert-file=/etc/ssl/CA/sks-keyservers.netCA.pem
+keyserver-options no-honor-keyserver-url
+
+Updates to keys can be published to public key servers, including new signatures. You can periodically update your keys by using
+update key in my keyring
+	gpg --refresh-keys
+	gpg --keyserver keyserver --refresh-keys searchterm # Search term can be key ID or string; if left out, updates entire keyring. Used to check for new sigs and revocations.
+Now that you've updated keys from a keyserver, you might want to see who has signed your key.
+After all, anyone can sign any key and re-upload that key to a key server.
+You can see the signatures with the --list-sigs command to gpg:
+	gpg --list-sigs your@email.address 
+
+If you signed a pub key, export that change to keyserver
+send key to key server (and update new signs and revocations)
+	gpg --keyserver keyserver --send-keys 0xCFD7010E
+search keys
+	gpg --keyserver keyserver --search-keys searchterm # Search by key ID (prefixedwith "0x") or string.
+receive key from key server, use keys.gnupg.net
+	gpg --keyserver keys.mozilla.org --recv-keys 0x29846B3C683686CC

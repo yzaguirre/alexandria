@@ -1,0 +1,60 @@
+http://xmodulo.com/use-systemd-system-administration-debian.html
+	systemctl - list all loaded units and their state (where unit is the term for a job/service)
+	systemctl list-units - list all units
+	systemctl start [NAME...] - start (activate) one or more units
+	systemctl stop [NAME...] - stop (deactivate) one or more units
+	systemctl disable [NAME...] - disable one or more unit files
+	systemctl list-unit-files - show all installed unit files and their state
+	systemctl --failed - show which units failed during boot
+	systemctl --type=mount - filter for types; types could be: service, mount, device, socket, target
+	systemctl enable debug-shell.service - start a root shell on TTY 9 for debugging 
+
+For more convinience in handling units, there is the package systemd-ui, which is started as user with the command systemadm.
+
+Switching runlevels, reboot and shutdown are also handled by systemctl:
+    systemctl isolate graphical.target - take you to what you know as init 5, where your X-server runs
+    systemctl isolate multi-user.target - take you to what you know as init 3, TTY, no X
+    systemctl reboot - shut down and reboot the system
+    systemctl poweroff - shut down the system 
+
+All these commands, other than the ones for switching runlevels, can be executed as normal user.
+
+Basic Usage of journalctl
+With systemd, logs are aggregated in the journal which resides in /var/log/.
+To be able to make full use of the journal, we first need to set it up,
+as Debian does not do that for you yet:
+	# addgroup --system systemd-journal
+	# mkdir -p /var/log/journal
+	# chown root:systemd-journal /var/log/journal
+	# gpasswd -a $user systemd-journa
+That will set up the journal in a way where you can query it as normal user.
+Querying the journal with journalctl offers some advantages over the way syslog works:
+	journalctl --all - show the full journal of the system and all its users
+	journalctl -f - show a live view of the journal (equivalent to "tail -f /var/log/messages")
+	journalctl -b - show the log since the last boot
+	journalctl -k -b -1 - show all kernel logs from the boot before last (-b -1)
+	journalctl -b -p err - shows the log of the last boot, limited to the priority "ERROR"
+	journalctl --since=yesterday - since Linux people normally do not often reboot, this limits the size more than -b would
+	journalctl -u cron.service --since='2014-07-06 07:00' --until='2014-07-06 08:23' - show the log for cron for a defined timeframe
+	journalctl -p 2 --since=today - show the log for priority 2, which covers emerg, alert and crit; resembles syslog priorities emerg (0), alert (1), crit (2), err (3), warning (4), notice (5), info (6), debug (7)
+	journalctl > yourlog.log - copy the binary journal as text into your current directory 
+Journal and syslog can work side-by-side. On the other hand,
+you can remove any syslog packages like rsyslog or syslog-ng once
+you are satisfied with the way the journal works.
+
+For very detailed output, append "systemd.log_level=debug" to the kernel boot-time parameter list, and then run:
+	# journalctl -alb 
+Log levels can also be edited in /etc/systemd/system.conf.
+
+Analyzing the Boot Process with systemd
+systemd allows you to effectively analyze and optimize your boot process:
+	systemd-analyze - show how long the last boot took for kernel and userspace
+	systemd-analyze blame - show details of how long each service took to start
+	systemd-analyze critical-chain - print a tree of the time-critical chain of units
+	systemd-analyze dot | dot -Tsvg > systemd.svg - put a vector graphic of your boot process (requires graphviz package)
+	systemd-analyze plot > bootplot.svg - generate a graphical timechart of the boot process 
+
+More information
+http://0pointer.de/blog/projects/systemd.html
+http://www.freedesktop.org/wiki/Software/systemd/
+	 # man systemd.index 

@@ -1,0 +1,26 @@
+https://gnupg.org/download/
+https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html
+https://gnupg.org/faq/whats-new-in-2.1.html
+Download source
+	wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.4.tar.bz2
+	wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.4.tar.bz2.sig
+Grab pub keys of the developers
+https://gnupg.org/signature_key.html
+	gpg --recv-keys 249B39D24F25E3B6 04376F3EE0856959 2071B08A33BD3F06 8A861B1C7EFD60D9
+Check integrity with gpg
+	gpg --verify gnupg-2.1.4.tar.bz2.sig
+Check integrity with sha1
+	sha1sum gnupg-2.1.4.tar.bz2
+Must match
+ad68d65c54698e3c781e17864ab5918442df155a  gnupg-2.1.4.tar.bz2
+
+Extract
+	tar xf gnupg-2.1.4.tar.bz2
+	cd gnupg-2.1.4
+	apt-get update
+	apt-get install libassuan-dev libksba-dev libnpth0-dev libgpg-error-dev libgcrypt20-dev libgcrypt11-dev
+	./configure
+	make
+	make install
+Uninstall
+	make uninstall

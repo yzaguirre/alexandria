@@ -1,0 +1,25 @@
+phpqrcode
+https://github.com/endroid/QrCode
+
+Play with composer
+	composer search endroid
+	composer show endroid/qrcode
+
+Download with dependency manager "composer"
+	vim composer.json
+{
+	"require": {
+		"endroid/qrcode": "1.3.*"
+	}
+}
+	composer install
+<img src="qrcode.php">
+
+http://prgm.spipu.net/php_qrcode
+	wget 'http://prgm.spipu.net/?id=40&download' -O qrcode.zip
+	unzip qrcode.zip
+require_once('qrcode.class.php');
+$qrcode = new QRcode('your message here', 'H'); // error level : L, M, Q, H
+$qrcode->displayPNG();
+
+$qrcode->displayFPDF($fpdf, $x, $y, $s, $background, $color);

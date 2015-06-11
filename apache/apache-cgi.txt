@@ -1,0 +1,114 @@
+yum -y install httpd mod_perl
+Create a home page by typing:
+vi /var/www/html/index.html
+Now create a link for Perl by typing:
+ln -s /usr/bin/perl /usr/local/bin/perl
+
+Having completed these steps, we will now consider the need to configure the httpd
+service for improved performance, security, and a few extra features. To do this, open
+the httpd configuration file in your favorite text editor by typing:
+vi /etc/httpd/conf/httpd.conf
+
+Scroll down and find the following line:
+ServerTokens OS
+We do not want our server to relay any important information through the header so
+change this line to read:
+ServerTokens Prod
+
+Now scroll down and find the following line:
+KeepAlive Off
+In order to enable a persistent connection we should change this line to read:
+KeepAlive On
+
+Now scroll down to find the following line:
+ServerAdmin root@localhost
+The traditional approach to set this value is based on the use of the webmaster
+identity, so simply modify the e-mail address to reflect something more relevant to
+your own needs. For example, if your server's domain name was www.henry.home
+then your entry will look similar to this:
+ServerAdmin webmaster@henry.home
+
+Now scroll down a few more lines to find the ServerName directive as follows:
+#ServerName www.example.com:80
+Uncomment this line and replace the value www.example.com with something
+more appropriate to your own needs. For example, if your server's domain name
+was www.henry.home then your entry will look as follows:
+ServerName www.henry.home:80
+
+
+Now scroll down to find the following section:
+# The Options directive is both complicated and important.
+see
+Please
+# http://httpd.apache.org/docs/2.2/mod/core.html#options
+# for more information
+#
+Options Indexes FollowSymLinks
+
+Change this to disable Indexes and enable CGI by making it as follows:
+Options FollowSymLinks ExecCGI
+
+If you would like to keep Indexes, simply modify the previous instruction in
+the following way:
+Options Indexes FollowSymLinks ExecCGI
+
+
+Now find the following section:
+# AllowOverride controls what directives may be placed in .htaccess files.
+# It can be "All", "None", or any combination of the keywords:
+# Options FileInfo AuthConfig Limit
+#
+AllowOverride None
+
+Change this to read as follows:
+AllowOverride All
+
+Now scroll down to find the following line:
+DirectoryIndex index.html index.html.var
+Include a reference for CGI pages by making it as follows:
+DirectoryIndex index.html index.htm index.cgi
+
+You can use this opportunity to reorganize the order in a way that
+pages are called and add new home page variations to suit your
+own needs. For example, you could write the following:
+index.html index.cgi welcome.html welcome.cgi
+
+
+Now scroll down to find the following lines:
+#CustomLog logs/access_log common
+#CustomLog logs/referer_log referrer
+#CustomLog logs/agent_log agent
+
+To enable additional logging, simply uncomment them as follows:
+CustomLog logs/access_log common
+CustomLog logs/referer_log referrer
+CustomLog logs/agent_log agent
+
+For future reference, all log files for the httpd service
+can be found at /var/log/httpd.
+
+Now find the following line:
+ServerSignature On
+For reasons of security we do not want to expose the server's signature, so change
+this to read as follows:
+ServerSignature Off
+
+Now scroll down to find the following line:
+AddDefaultCharset UTF-8
+
+We want the character set to be determined by the values used in our web pages,
+so comment out this line in the following way:
+#AddDefaultCharset UTF-8
+
+Now scroll down to find the following line:
+#AddHandler cgi-script .cgi
+Uncomment this line to enable CGI and include a file reference for any other related
+CGI-based extensions as follows:
+AddHandler cgi-script .cgi .pl
+
+Having done this, simply save and close the file in the usual way before proceeding to
+set the httpd service to start at boot by typing:
+chkconfig httpd on
+
+Now start the httpd service by typing the following command:
+service httpd start

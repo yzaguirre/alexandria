@@ -1,0 +1,12 @@
+http://gpg4win.org/download.html
+	wget http://files.gpg4win.org/gpg4win-2.2.4.exe
+	wget http://files.gpg4win.org/gpg4win-2.2.4.exe.sig
+	gpg2 --recv-keys 0xEC70B1B8
+	gpg2 --verify gpg4win-2.2.4.exe.sig
+	sha1sum gpg4win-2.2.4.exe
+8ddcbf14eb6df11139f709320a71d197a83bf9e1
+	wget ftp://ftp.gnupg.org/gcrypt/binary/gnupg-w32-2.1.4_20150512.exe
+	wget ftp://ftp.gnupg.org/gcrypt/binary/gnupg-w32-2.1.4_20150512.exe.sig
+	gpg2 --verify gnupg-w32-2.1.4_20150512.exe.sig
+	sha1sum gnupg-w32-2.1.4_20150512.exe
+d8f4a326c36578d05af5751abea668a15ea0aae1

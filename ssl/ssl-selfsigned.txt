@@ -1,0 +1,49 @@
+http://www.blackmoreops.com/2015/05/12/ssl-sign-with-sha256-hash-using-openssl/
+https://pip.verisignlabs.com/
+www.startcom.org
+https://www.startssl.com/
+https://login.persona.org/about
+https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7
+Generating your keys
+	sudo apt-get install openssl
+2. Generate a 1024-bit RSA private key and save it to a file:
+	$ sudo su -
+	# mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
+	# cd /etc/ssl
+	# openssl genrsa -out private/sitio1.key 2048
+In higher-security environments, encrypting the key by adding the -des3 argument
+after the genrsa argument on the openssl command line is a good idea:
+	# openssl genrsa -des3 -out private/sitio1.key 2048
+Finally change the file mode
+	# chmod 600 private/sitio1.key
+3. You are asked for a passphrase, which is needed every time you start Apache.
+
+Create Certificate Sign Request CSR, see ssl-self-ca.txt or ssl-trusted-ca.txt
+	openssl req -new -key private/sitio1.key -out requests/sitio1.csr
+
+6. If you don't plan to have your certificate signed, or if you want to test your configura-
+tion, generate a self-signed certificate and save it in a file named server.crt:
+	# openssl req -new -x509 -nodes -sha1 -days 365 -key private/sitio1.key -out certs/sitio1.crt
+	# openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout www.blackmoreops.com.key -out www.blackmoreops.com.crt
+or (not used)
+	# openssl req -newkey -x509 -nodes -rsa:2048 -days 365 -keyout /etc/ssl/apache.key -out /etc/ssl/apache.crt
+Country Name (2 letter code) [AU]: .
+State or Province Name (full name) [Some-State]: .
+Locality Name (eg, city) []: .
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:TEST USE ONLY
+Organizational Unit Name (eg, section) []:TEST USE ONLY
+Common Name (eg, YOUR name) []:secure.example.org
+Email Address []:dom@example.org
+
+7. Extra
+Check out tunnels/openssl.txt
+
+8. Verify sha256 hash function in self-signed x509 digital certificate
+	openssl x509 -noout -text -in www.blackmoreops.com.crt 
+
+Summary
+	mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
+	cd /etc/ssl
+	openssl genrsa -des3 -out private/sitio1.key 2048
+	chmod 600 private/sitio1.key
+	openssl req -new -x509 -nodes -sha256 -days 365 -key private/sitio1.key -out certs/sitio1.crt

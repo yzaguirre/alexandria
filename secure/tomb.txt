@@ -1,0 +1,37 @@
+www.dyne.org/software/tomb/
+	apt-get install pinentry-curses zsh gnupg dcfldd cryptsetup
+Download
+	wget https://github.com/dyne/Tomb/archive/v2.0.1.tar.gz
+Install
+	tar xf v2.0.1.tar.gz
+	cd Tomb-2.0.1
+    # make install
+Swap file off with
+	swapoff -a
+Create a tomb
+	-s size in megabytes
+	You can grow, but cant shrink
+	tomb dig -s 10 secret.tomb -f
+Forge key and lock tomb
+	tomb forge secret.tomb.key -f
+	tomb lock secret.tomb -k secret.tomb.key
+Comes with gtk window for password -f
+Open tomb file
+	tomb open secret.tomb -k secret.tomb.key -f
+Check mounts
+	mount
+Make your user own it
+	chown chrisf /media/secret.tomb/
+Close tomb
+	tomb close
+
+Handle your key
+Stenographics
+	-k Key destination
+	tomb exhume -k ./Win7d2.vdi.key /home/chrisf/Documents/golf.jpg
+	apt-get install steghide
+
+Alias
+https://github.com/dyne/Tomb/issues/201
+HISTIGNORESPACE=1
+alias tomb=' tomb'

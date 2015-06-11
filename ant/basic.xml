@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="Hello" default="compile">
+    <target name="clean" description="borrar archivos temporales">
+        <delete dir="classes"/>
+    </target>
+    <target name="clobber" depends="clean" description="eliminar todos los archivos artefacto">
+        <delete file="hello.jar"/>
+    </target>
+    <target name="compile" description="compilar el código java a un archivo class">
+        <mkdir dir="classes"/>
+        <javac srcdir="." destdir="classes"/>
+    </target>
+    <target name="jar" depends="compile" description="crear un archivo Jar para la aplicación">
+        <jar destfile="hello.jar">
+            <fileset dir="classes" includes="**/*.class"/>
+            <manifest>
+                <attribute name="Main-Class" value="HelloProgram"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

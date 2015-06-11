@@ -1,0 +1,39 @@
+SSL
+http://www.pacorabadan.com/?p=319
+http://ubuntuserverguide.com/2013/04/how-to-setup-owncloud-server-5-with-ssl-connection.html
+
+	apt-get install mod_ssl
+	mkdir /etc/apache2/ssl
+
+Primero activamos el módulo SSL de Apache
+	# a2enmod rewrite && a2enmod headers && a2enmod ssl
+	# a2enmod status
+	# a2enmod socache_shmcb
+http://www.apachefriends.org/f/viewtopic.php?f=16&t=52857
+	SSLSessionCache         shmcb:/var/lib/apache2/ssl_scache(512000)
+o quitarlo
+http://ubuntuforums.org/showthread.php?t=1594331
+	# a2dismod ssl
+	# a2dissite default-ssl
+
+El paso final consiste en configurar apache para que el servicio por misión HTTPS, sea owncloud.
+
+	# mkdir /var/www/logs
+	# chown wwwrun:www -R /srv/www/htdocs/logs
+	# vim /etc/apache2/conf.d/owncloud5-ssl.conf
+	# vim /etc/apache2/vhosts.d/owncloud5-ssl.conf
+
+Copia y pega la siguiente configuración:
+http://httpd.apache.org/docs/current/ssl/ssl_howto.html
+http://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
+
+https://httpd.apache.org/docs/current/ssl/ssl_howto.html
+	SSLCACertificateFile conf/ssl.crt/ca.crt
+
+Additionally, if you do not serve clear text content, let the client know it by using the Strict Transport Security HTTP header.
+Once it has been received by a browser, it will force HTTP over TLS even if the user follows a http:// URL setup on a malicious site.
+This thwarts possible MITM attacks.
+	Header set Strict-Transport-Security "max-age=15768000"
+
+Intermediate certificate
+https://www.digicert.com/ssl-certificate-installation-apache.htm

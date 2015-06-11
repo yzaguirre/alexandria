@@ -1,0 +1,61 @@
+friendica.com
+	apt-get install php5-curl php5-cli php5-gd libapache2-mod-php5 mcrypt
+	a2enmod rewrite
+Edit 000-default.conf
+	vim /etc/apache2/sites-available/000-default.conf
+<directory "/var/www/html">
+ AllowOverride All
+</directory>
+
+Install email
+	apt-get install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules
+Choose "Internet Site"
+
+edit postfix
+	vim /etc/postfix/main.cf
+remove
+	relayhost
+add the following:
+
+relayhost=[smtp.gmail.com]:587
+smtp_sasl_auth_enable=yes
+smtp_sasl_password_maps=hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options=noanonymous
+smtp_tls_CAfile=/etc/postfix/cacert.pem
+smtp_use_tls=yes
+
+Edit sasl_passwd
+	vim sasl_passwd
+[smtp.gmail.com]:587 snubstest1@gmail.com:Starbuck
+
+	chmod 400 sasl_passwd
+	postmap sasl_passwd
+Append our CA to cacert.pem
+	cat /etc/ssl/certs/Thawte_Premium_Server_CA.pem >> /etc/postfix/cacert.pem
+Restart postfix
+	service postfix restart
+Email test
+	echo "Hello World" | mail -s "testing postfix" real@email.com
+	
+
+In gmail, enable Forwarding POP & IMAP
+
+Edit 
+	vim /etc/hosts
+127.0.1.1 social
+
+Edit
+	vim /etc/hostname
+social
+
+Database
+	mysql -u root -p
+	create database friendica;
+	GRANT ALL ON friendica.* TO friendica@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;
+
+Download friendica
+	wget https://github.com/friendica/friendica/archive/3.4.tar.gz
+	tar xf 3.4.tar.gz -C /var/www/html
+	cd /var/www/html
+	chown www-data:www-data -R *

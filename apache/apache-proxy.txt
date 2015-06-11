@@ -1,0 +1,23 @@
+https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
+http://www.apacheref.com/ref/mod_proxy/ProxyPass.html
+http://www.apacheref.com/ref/mod_proxy/ProxyPassReverse.html
+
+Alias /redmine "/usr/local/share/redmine-2.4.2" 
+<Proxy *>
+  RequestHeader set X_FORWARDED_PROTO 'https'
+  Order deny,allow
+  Allow from all
+</Proxy>
+
+ProxyRequests Off
+
+ProxyPass /redmine/ http://127.0.0.1:3000/redmine/
+ProxyPassReverse /redmine http://127.0.0.1:3000/redmine/
+
+https://httpd.apache.org/docs/2.4/vhosts/examples.html
+<VirtualHost *:*>
+    ProxyPreserveHost On
+    ProxyPass / http://192.168.111.2/
+    ProxyPassReverse / http://192.168.111.2/
+    ServerName hostname.example.com
+</VirtualHost>

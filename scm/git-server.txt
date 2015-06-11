@@ -1,0 +1,66 @@
+https://news.ycombinator.com/item?id=7197548
+
+
+http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server
+	# adduser git
+	$ su git
+	$ cd
+	$ mkdir .ssh
+
+Append public keys to authorized_keys
+Append something like .git to the end of the file, which will differentiate it from
+the other keys in the folder.
+	$ cat /tmp/id_rsa.john.pub >> ~/.ssh/authorized_keys
+	$ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys
+	$ cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys
+Or remotely
+	$ ssh-copy-id -i /home/david/.ssh/id_rsa.david.pub git@server
+
+Now, you can set up an empty repository for them by running git init with the --bare option, which initializes the repository without a working directory:
+	$ cd /opt/git
+	$ mkdir project.git
+	$ cd project.git
+	$ git --bare init
+
+Then, John, Josie, or Jessica can push the first version of their project into that repository by adding it as a remote and pushing up a branch. 
+Note that someone must shell onto the machine and create a bare repository every time you want to add a project. 
+Let's use gitserver as the hostname of the server on which you've set up your 'git' user and repository. 
+If you're running it internally, and you set up DNS for gitserver to point to that server, then you can use the commands pretty much as is:
+
+# on Johns computer
+	$ cd myproject
+	$ git init
+	$ git add .
+	$ git commit -m 'initial commit'
+	$ git remote add origin git@gitserver:/opt/git/project.git
+	$ git push origin master
+
+At this point, the others can clone it down and push changes back up just as easily:
+	$ git clone git@gitserver:/opt/git/project.git
+	$ cd project
+	$ vim README
+	$ git commit -am 'fix for the README file'
+	$ git push origin master
+With this method, you can quickly get a read/write Git server up and running for a handful of developers.
+
+As an extra precaution, you can easily restrict the 'git' user to only doing Git activities with a limited shell tool called git-shell that comes with Git. 
+If you set this as your 'git' user's login shell, then the 'git' user can't have normal shell access to your server. 
+To use this, specify git-shell instead of bash or csh for your user's login shell. 
+To do so, you'll likely have to edit your /etc/passwd file:
+	# vim /etc/passwd
+
+At the bottom, you should find a line that looks something like this:
+
+git:x:1000:1000::/home/git:/bin/sh
+
+Change /bin/sh to /usr/bin/git-shell (or run which git-shell to see where it's installed). The line should look something like this:
+
+git:x:1000:1000::/home/git:/usr/bin/git-shell
+
+Now, the 'git' user can only use the SSH connection to push and pull Git repositories and can't shell onto the machine. If you try, you'll see a login rejection like this:
+	$ ssh git@gitserver
+fatal: What do you think I am? A shell?
+Connection to gitserver closed.
+
+Shorcut command:
+	# usermod git --shell /usr/bin/git-shell

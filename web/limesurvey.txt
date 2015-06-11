@@ -1,0 +1,24 @@
+https://www.limesurvey.org/
+https://github.com/LimeSurvey/LimeSurvey
+Download
+	https://www.limesurvey.org/en/downloads/category/25-latest-stable-release?download=1268:limesurvey205plus-build150520targz
+	wget http://download.limesurvey.org/latest-stable-release/limesurvey205plus-build150520.tar.gz
+	tar xf limesurvey205plus-build150520.tar.gz -C /var/www/html
+	cd /var/www/html
+	chown www-data:www-data -R limesurvey
+Database
+MySQL
+	mysql -u root -p
+	CREATE DATABASE encuestas;
+	GRANT ALL ON encuestas.* TO lime_user@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;
+PostgreSQL
+	sudo su postgres
+	createuser -P limesurvey
+	createdb -E 'UTF8' -O 'limesurvey' survey
+	psql
+	CREATE GROUP apps;
+	ALTER GROUP apps ADD USER "limesurvey";
+x	\c simple-api
+Run the installation script
+http://www.example.com/limesurvey/admin

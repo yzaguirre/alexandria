@@ -1,0 +1,12 @@
+check for www-datas' assigned shell
+	less /etc/passwd
+Change it from /usr/sbin/nologin to /bin/sh
+	# usermod -s /bin/sh www-data
+Assign it a password for the sole purpose of copy a public key
+	# passwd www-data
+Make a .ssh folder
+	# mkdir /var/www/.ssh
+Change ownership
+	# chown www-data:www-data -R /var/www/.ssh
+After the public key is copied, remove that password
+	passwd -l www-data

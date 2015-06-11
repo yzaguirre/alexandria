@@ -1,0 +1,33 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-12-04-lts
+http://www.foscode.com/apache-virtual-host-ubuntu/
+http://www.cyberciti.biz/faq/apache-name-based-virtualhost-example/
+http://www.thegeekstuff.com/2011/07/apache-virtual-host/
+https://httpd.apache.org/docs/2.2/vhosts/examples.html
+https://httpd.apache.org/docs/2.4/vhosts/examples.html
+
+Set up Apache to Host Multiple Domains on the Same Server
+	# cd /var/www
+	# mkdir error_logs logs domains domains/domain{1,2}.tld
+the default site should look like
+	# vim /etc/apache2/sites-available/default
+<VirtualHost *:80>
+	ServerAdmin YourEmail@Domain.tld
+	ServerName domain1.tld
+	ServerAlias www.domain1.tld
+	DocumentRoot /var/www/domains/domain1.tld
+	CustomLog /var/www/logs/domain1.tld.log combined
+	ErrorLog /var/www/error_logs/domain1.tld.log
+</VirtualHost>
+<VirtualHost *:80>
+	ServerAdmin YourEmail@Domain.tld
+	ServerName domain2.tld
+	ServerAlias www.domain2.tld
+	DocumentRoot /var/www/domains/domain2.tld
+	CustomLog /var/www/logs/domain2.tld.log combined
+	ErrorLog /var/www/error_logs/domain2.tld.log
+</VirtualHost>
+
+Restart apache
+	# service apache2 restart
+Open domain2.tld/ in the browser
+	

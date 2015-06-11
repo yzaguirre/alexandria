@@ -1,0 +1,23 @@
+http://random.zerodogg.org/gpgpwd/
+	apt-get install libjson-perl libtry-tiny-perl gnupg xclip git
+	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys 0xD76A12A07374A722
+	wget http://files.zerodogg.org/gpgpwd/gpgpwd-0.6.tar.bz2
+	wget http://files.zerodogg.org/gpgpwd/gpgpwd-0.6.tar.bz2.sig
+	gpg --verify gpgpwd-0.6.tar.bz2.sig gpgpwd-0.6.tar.bz2
+	tar xf gpgpwd-0.6.tar.bz2
+	cd gpgpwd-0.6
+	make install
+
+If you are upgrading from an old version you may need to run 
+	make uninstall
+first.
+An intuitive command-line interface with simple commands
+like get, add, remove and change
+Create a new entry
+	gpgpwd set somesite.com
+A few commands are available for generating passwords:
+	/alphanumeric 20
+To retrieve
+	gpgpwd get somesite.com
+To remove
+	gpgpwd remove somesite.com

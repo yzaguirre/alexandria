@@ -1,0 +1,59 @@
+https://docs.phalconphp.com/en/latest/reference/apache.html
+	a2enmod rewrite
+	
+	chown www-data:www-data -R /var/www/blog
+	
+.htaccess 1
+	cd /var/www/blog/
+	vim .htaccess
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule  ^$ public/    [L]
+    RewriteRule  (.*) public/$1 [L]
+</IfModule>
+
+.htaccess 1
+	vim public/.htaccess
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>
+
+Or keep them in a apache config file
+<IfModule mod_rewrite.c>
+
+    <Directory "/var/www/blog">
+        RewriteEngine on
+        RewriteRule  ^$ public/    [L]
+        RewriteRule  (.*) public/$1 [L]
+    </Directory>
+
+    <Directory "/var/www/blog/public">
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+    </Directory>
+
+</IfModule>
+
+	vim /etc/apache2/sites-available/001-phalcon.conf
+<VirtualHost *:80>
+
+    ServerAdmin admin@example.host
+    DocumentRoot "/var/www/blog"
+    DirectoryIndex index.php
+    ServerName example.host
+    ServerAlias www.example.host
+
+    <Directory "/var/www/blog">
+        Options All
+        AllowOverride All
+        Allow from all
+    </Directory>
+
+</VirtualHost>
+
+	a2ensite 001-phalcon.conf

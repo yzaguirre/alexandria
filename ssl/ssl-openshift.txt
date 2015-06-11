@@ -1,0 +1,12 @@
+There is no need to setup an HttpsServer
+http://stackoverflow.com/questions/25321432/how-to-access-the-openshift-wildcard-ssl-certificate-and-private-key
+
+Using non shared SSL cert
+http://stackoverflow.com/questions/26025468/openshift-with-comodo-ssl
+http://cloudhostingsource.com/setup-ssl-certificate-openshift/
+https://blog.openshift.com/domain-names-and-ssl-in-the-openshift-web-console/
+https://developers.openshift.com/en/managing-domains-ssl.html
+Upgrade to Openshift "Silver Plan"
+$20/month including 3 small gears for free.
+	
+	rhc alias update-cert php www.myapp.com --certificate myApp.crt --private-key myApp.key --passphrase mypass

@@ -1,0 +1,62 @@
+http://www.alternet.org/print/news-amp-politics/when-strong-encryption-isnt-enough-protect-our-privacy
+reop (https://github.com/tedu/reop). The cryptography is done by libsodium and it is well-written.
+NetPGP (http://www.netpgp.com/). The cryptography is done by the OpenPGP SDK. The NetPGP code is well-written but the OpenPGP SDK code looks like OpenSSL.
+	wget http://www.netpgp.com/src/netpgp.tar.gz
+	tar xf netpgp.tar.gz
+	apt-get install libbz2-dev
+	./configure
+	make
+	make install
+http://prestonbyrne.com/2015/01/13/you-cant-stop-crypto-mr-cameron/
+bug free phone https://people.torproject.org/~ioerror/skunkworks/moto_e/
+Python
+http://www.cyberciti.biz/python-tutorials/securely-hash-passwords-in-python/
+	sudo pip install passlib
+	
+realcrypt for mandriva based on truecrypt
+http://www.taringa.net/posts/linux/17726437/Cifra-tus-archivos-en-la-nube-con-EncFS.html
+cryptcat, the encrypted netcat tool
+Password manager cpm
+dm-crypt with LUKS is recomended option
+https://diskcryptor.net/wiki/Main_Page
+cryptsetup https://code.google.com/p/cryptsetup/
+cryptsetup
+zulucrypt https://code.google.com/p/zulucrypt/
+encryptfs-utils
+
+http://en.wikipedia.org/wiki/GNU_Privacy_Guard
+
+In order to encrypt a file with gpg use:
+	$ gpg -c filename
+This command reads the passphrase interactively and generates filename.gpg. In
+order to decrypt a gpg file use:
+	$ gpg filename.gpg
+This command reads a passphrase and decrypts the file.
+
+Base64 is a group of similar encoding schemes that represents binary data in an
+ASCII string format by translating it into a radix-64 representation. The base64
+command can be used to encode and decode the Base64 string. In order to
+encode a binary file into the Base64 format, use:
+	$ base64 filename > outputfile
+Decode Base64 data as follows:
+	$ base64 -d file > outputfile
+Serve the Base64 as image
+$DATA=$(base64 filename)
+<img src="data:image/png;base64,$DATA" />
+
+How To Encrypt an 8.0 GB SDHC MicroSD Card
+http://www.linuxquestions.org/questions/linux-newbie-8/learn-the-dd-command-362506/
+
+ccrypt
+http://jonblack.org/posts/using-ccrypt-as-a-password-manager/
+Encrypt
+	$ ccrypt -e mypasswords
+Decrypt
+	$ ccat mypasswords.cpt
+
+pass
+http://www.passwordstore.org/
+http://www.zx2c4.com/projects/password-store/
+https://news.ycombinator.com/item?id=7495337
+	apt-get install pass
+	echo "source /etc/bash_completion.d/password-store" >> ~/.bashrc

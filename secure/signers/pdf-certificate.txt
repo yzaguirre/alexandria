@@ -1,0 +1,24 @@
+https://es.wikipedia.org/wiki/Firma_electr%C3%B3nica
+Usando una firma digital.
+
+mozilla http://openbadges.org/
+
+http://lifehacker.com/5990172/whats-the-best-way-to-to-sign-documents-electronically-without-scanning-them
+http://www.howtogeek.com/164668/how-to-electronically-sign-documents-without-printing-and-scanning-them/?PageSpeed=noscript
+electronic signature - certificate
+digital signature - image
+
+http://www.linuxquestions.org/questions/linux-software-2/how-to-digitally-sign-a-pdf-document-324965/
+Signing any file is easy with gnupg
+	gpg --clearsign
+or
+	gpg --detach-sign
+
+
+PortableSigner
+jsignpdf
+
+Check out list at http://wiki.cacert.org/PdfSigning
+CAcert PDF Signer
+Command-line tool only for Linux, OSX, and Windows
+http://svn.cacert.org/CAcert/Software/PdfSigner/

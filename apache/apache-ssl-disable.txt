@@ -1,0 +1,6 @@
+https://wiki.mozilla.org/Security/Server_Side_TLS
+http://blog.christian-stankowic.de/?p=6263&lang=en
+https://unix.stackexchange.com/questions/162478/how-to-disable-sslv3-in-apache
+http://www.symantec.com/connect/articles/apache-2-ssltls-step-step-part-1
+	vim mods-available/ssl.conf
+	SSLProtocol all -SSLv2 -SSLv3

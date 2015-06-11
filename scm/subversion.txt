@@ -1,0 +1,56 @@
+checkout in another name
+http://svnbook.red-bean.com/en/1.6/svn.ref.svn.c.checkout.html
+
+	# apt-get update
+	# apt-get install subversion
+The next step is to create a location to store the repositories. This can, in theory, be anywhere in the
+system, but a common location is in the var directory within the file system, so you'll be creating a folder
+called svn-repos in there. Feel free to change the name or location of the folder, just be sure to remember
+it for later. The following command will create the folder:
+	# mkdir /var/svn-repos/
+Apache apuntará DocumentRoot a la siguiente carpeta
+	# mkdir -p /var/svn-repos/htdocs
+This creates the repositories’ house. Now you need to actually create some repositories, which can be
+done using the following commands. You’ll also be adding the trunk, branches, and tags directories into
+the repositories here to ensure the repository is in the correct format.
+	# svnadmin create --fs-type fsfs /var/svn-repos/project_test
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/trunk
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/branches
+	# svn mkdir -m "initial setup" file:///var/svn-repos/project_test/tags
+Crear repositorio de prueba, "sandbox"
+	$ sudo su www-data -c "svnadmin --fs-type fsfs create /var/svn-repos/sandbox"
+	$ sudo su www-data -c "svnadmin --fs-type fsfs create /var/svn-repos/ProyectoMocos"
+Of course, in the above, just replace project_test with the desired name of the repository, and repeat as
+needed for additional repositories.
+
+Managing users
+	# groupadd subversion
+	# usermod -aG subversion david
+	# chmod -R 770 /var/svn-repos/
+	# chown -R www-data:subversion /var/svn-repos/
+One password for all repositories, f00bar
+	# htpasswd -c /var/svn-repos/users david
+	# htpasswd    /var/svn-repos/users erick
+
+Descargar Tortoise http://tortoisesvn.net/downloads.html
+Each of the repository should be accessible using a URL which looks like
+	$ svn co http://svn.ayd2.internal/svn/sandbox --username david --password Pass1
+
+list command
+	 $ svn list http://svn.local/svn/haddoc
+Why use FSFS
+http://web.mit.edu/ghudson/info/fsfs
+
+How do I check what filesystem my SVN repository is using?
+stackoverflow.com/questions/1932008/
+	$ cat db/fs-type
+
+Raise timeout
+http://www.wandisco.com/svnforum/threads/39862-Timeouts-connection-reset-using-SVN-1-6-11-Apache-2-2-15
+
+View status of repository
+http://stackoverflow.com/questions/1252270/how-do-i-view-all-ignored-patterns-set-with-svnignore-recursively-in-an-svn-rep
+	$ svn proplist -Rv
+	$ svn pg -R svn:ignore .
+http://stackoverflow.com/questions/216049/how-do-i-get-a-list-of-all-unversioned-files-from-svn
+	$ svn status --no-ignore

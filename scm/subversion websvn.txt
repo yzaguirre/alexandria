@@ -1,0 +1,116 @@
+Link Recomendado:
+http://www.dhillonblog.com/2009/07/subversion-with-websvn-webdav-and-active-directory-or-ldap-authentication/
+
+http://www.jejik.com/articles/2007/06/apache_and_subversion_authentication_with_microsoft_active_directory/
+http://gurudelleccelsopicco.wordpress.com/2009/04/14/svn-ldap-authentication-on-apache/
+https://help.ubuntu.com/13.04/serverguide/subversion.html
+http://shah-oss.blogspot.com/2011/01/apache-and-subversion-authentication.html
+Solo repositorio, no directorio de repositorios
+http://stackoverflow.com/questions/5652982/setting-up-apache-and-subversion-to-use-ldap-windows-active-directory-group-au
+Domain Name: AYD2.internal
+pfSense Firewall
+	pfSense64_AYD2
+	LAN IP address: 192.168.1.1
+Windows2012Servidor Active Directory
+	Computer name: AD-PC
+	WinServer2012AD_AYD2
+	IP address: 192.168.1.10
+	Subnet mask: 255.255.255.0
+	Default gateway: 192.168.1.1
+	Preferred DNS server: 192.168.1.1 or localhost, it will use itself as DNS server
+Servidor SVN
+	Ubuntu 12.04.2_64bitPAE_SVN_AYD2
+	Ubuntu 13.04Server_64bit_SVN_AYD2
+Cliente
+	Debian32PAE_client_ayd2
+
+WinServer2012AD_AYD2 como servidor Active Directory
+Usar clone de Crunchbang linux como servidor ldap
+
+En Windows Server 2012
+Crear usuario
+	username: user1
+	password: Pass2
+Crear usuario
+	username: user2
+	password: Pass2
+En servidor Ubuntu
+	# tasksel install lamp-server
+	# apt-get install subversion libapache2-svn
+	# apt-get install websvn # es la interfaz gráfica
+	# a2enmod ldap
+	# a2enmod authnz_ldap
+	Crear usuarios
+usuario ubuntu root/f00bar
+
+Crear directorio de repositorios
+	# mkdir -p /var/lib/svn
+XApache apuntará DocumentRoot a la siguiente carpeta
+X	# mkdir /var/lib/svn/htdocs
+
+Crear repositorio de prueba, "sandbox"
+	# svnadmin --fs-type fsfs create /var/lib/svn/sandbox
+Debe ser dueño por apache (el www-data)
+	# chown -R www-data:www-data /var/lib/svn/sandbox
+	
+	
+Configurar websvn
+	# dpkg-reconfigure websvn
+Puede usar el comando anterior para añadir mas repositorios a websvn	
+
+si	# ln -s /etc/websvn/apache.conf /etc/apache2/sites-enabled/websvn.conf
+x	# ln -s /etc/websvn/svn_deb_conf.inc /etc/apache2/conf.d/websvn
+Editar
+	# vim /etc/apache2/conf.d/websvn
+	## añadir lo siguiente adentro del <Directory>
+AuthBasicProvider ldap
+AuthType Basic
+AuthzLDAPAuthoritative off
+AuthName "Mi servidor Subversion"
+AuthLDAPURL "ldap://192.168.1.10:389/CN=Users,DC=ayd2,DC=internal?sAMAccountName?sub?(objectClass=*)" NONE
+AuthLDAPBindDN "CN=Administrador,CN=Users,DC=ayd2,DC=internal"
+AuthLDAPBindPassword hOLAMUNDO90
+
+require valid-user
+
+Next, create the new configuration file for WebSVN from default configuration files ships with the package.
+	# cd /usr/share/websvn/include
+	# vim config.php
+Puedes añadir al fichero config.php las siguientes sentencias para colorear sintaxis de código fuente
+$extEnscript[".pl"] = "perl";
+$extEnscript[".py"] = "python";
+$extEnscript[".sql"] = "sql";
+$extEnscript[".java"] = "java";
+$extEnscript[".html"] = "html";
+$extEnscript[".xml"] = "html";
+$extEnscript[".thtml"] = "html";
+$extEnscript[".tpl"] = "html";
+$extEnscript[".sh"] = "bash";
+
+Integración webdav
+	# vim /etc/apache2/mods-enabled/dav_svn.conf
+Y descomentar algunas líneas
+<Location /svn>
+	DAV svn
+	AuthBasicProvider ldap
+	AuthType Basic
+	AuthzLDAPAuthoritative off
+	AuthName "Subversion Repository"
+	# al fin definimos el directorio donde estan todos los repositorios, "/var/lib/svn"
+	SVNParentPath /var/lib/svn
+	SVNListParentPath on # Show an index of all repositories in /var/lib/svn/sandbox
+	
+	<LimitExcept GET PROPFIND OPTINOS REPORT>
+		require ldap-group CN=apache,CN=Users,DC=ayd2,DC=internal
+	</LimitExcept>
+</Location>	
+
+# less /etc/apache2/mods-enabled/dav_svn.conf | grep -v '#'
+
+Target is to have a setup where we can browse all the repositories using WebSVN with URL
+
+http://<hostname>/websvn
+
+Each of the repository should be accessible using a URL which looks like
+http://<hostname>/<repository name>
+	svn co http://svn.ayd2.internal/svn/sandbox

@@ -1,0 +1,21 @@
+http://www.git-scm.com/downloads
+https://github.com/git/git/releases
+	apt-get install libcurl4-openssl-dev
+	wget https://github.com/git/git/archive/v2.3.3.tar.gz -O git-2.3.3.tar.gz
+	tar xf git-2.3.3.tar.gz
+	cd git-2.3.3
+	
+	make prefix=/usr all doc info
+	make prefix=/usr install install-doc install-html install-info
+Or
+	make prefix=/usr profile-fast
+x	make prefix=/usr profile
+	make prefix=/usr PROFILE=BUILD install
+http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+method not used
+	tar -zxf git-2.3.3.tar.gz
+	cd git-2.3.3
+	make configure
+	./configure --prefix=/usr
+	make all doc info
+	sudo make install install-doc install-html install-info

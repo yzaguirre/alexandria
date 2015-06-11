@@ -1,0 +1,10 @@
+SCP para PHP (No necesario)
+Para Usar secure copy (SCP) en php hacer
+http://www.php.net/manual/en/ssh2.requirements.php 
+	# apt-get install openssl ssh2-php ssh2-1-dev
+	# pecl install ssh2
+	# pecl install "channel://pecl.php.net/ssh2-0.11.3"
+	# vim /etc/php5/apache2/php.ini
+Agregar la linea:
+	extension=ssh2.so
+Los ficheros que residen en el servidor apache a copiar deben tener permisos 0644

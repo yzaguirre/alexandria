@@ -1,0 +1,4 @@
+http://www.tcpdf.org/
+soporte QR
+writeHTMLCell
+writeHTML

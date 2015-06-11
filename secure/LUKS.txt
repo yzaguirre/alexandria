@@ -1,0 +1,57 @@
+LUKS - Linux Unified Key Setup
+http://elbinario.net/2014/12/19/cifrar-usb-con-luks/
+	apt-get install cryptsetup
+Creating a vault inside a file
+Create an empty file to hold our vault.
+	dd if=/dev/zero of=~/myvault.vol bs=1M count=[size]
+
+Create an encrypted filesystem inside the myvault.vol file
+	luksformat -t vfat ~/myvault.vol
+	luksformat -t ext4 ~/myvault.vol
+
+Get a detailed report
+	cryptsetup luksDump ~/myvault.vol
+Type cryptsetup --help to get a list of possible actions that can be performed on your vault.
+Unlock the vault
+	cryptsetup luksOpen ~/myvault.vol myvault
+your vault will be made available in /dev/mapper/
+Mount the vault under a directory in /home/user/ for easy access.
+	mkdir ~/vault
+	mount -o uid=1000,gid=1000 /dev/mapper/myvault ~/vault
+The user ID/group ID arguments that we specify here are specifically for the FAT32 filesystem
+With an ext4 filesystem these extra flags are not necessary because the permissions of the directory itself determine access.
+Use df -h ~/vault to keep an eye on the space available in the vault.
+
+To safely close the vault, you need to unmount it first
+	umount ~/vault
+Lock your vault
+	cryptsetup luksClose myvault
+
+To access your vault from Windows, visit http://www.freeotfe.org/download.html
+to download the latest version of FreeOTFE or FreeOTFE Explorer. It's aportable application and very easy to use.
+
+http://www.bootc.net/archives/2013/06/07/generating-a-new-gnupg-key/#Moving_keys_to_your_smart_cards
+Create a ~10MB file to act as the container
+	dd if=/dev/urandom of=gpg-key-backup.luks.img iflag=fullblock bs=1M count=10
+Now, create the LUKS container with cryptsetup:
+	sudo su
+	chmod go= gpg-key-backup.luks.img
+	cryptsetup --verbose --verify-passphrase luksFormat gpg-key-backup.luks.img
+Now, you need to open the encrypted container, put a filesystem on it, and mount it so that we can use it:
+	cryptsetup --verbose luksOpen gpg-key-backup.luks.img gpg-key-backup
+	mkfs.ext4 /dev/mapper/gpg-key-backup
+
+	mkdir /mnt/gpg-key-backup
+	mount -t ext4 -o journal_checksum /dev/mapper/gpg-key-backup /mnt/gpg-key-backup
+	chown bootc: /mnt/gpg-key-backup
+	chmod go= /mnt/gpg-key-backup
+	exit
+We can now carry on as non-root again.
+
+Let's tidy up and lock up our backup volume now:
+	rm -rf /mnt/gpg-key-backup/gnupghome-temp/
+	sudo -s
+	umount /mnt/gpg-key-backup 
+	cryptsetup luksClose gpg-key-backup
+	exit
+	unset GNUPGHOME

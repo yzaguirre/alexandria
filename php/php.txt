@@ -1,0 +1,106 @@
+Most packages
+	apt-get install php5 php5-pgsql php5-phalcon php5-curl php5-gd php5-gnupg php5-imagick php5-json php5-mcrypt php5-mongo php5-ssh2
+validation
+https://stackoverflow.com/questions/110575/do-htmlspecialchars-and-mysql-real-escape-string-keep-my-php-code-safe-from-inje
+intval()
+
+timezones
+http://php.net/manual/es/timezones.america.php
+http://php.net/manual/en/datetime.configuration.php#ini.date.timezone
+http://askubuntu.com/questions/260303/how-do-i-change-the-timezone-on-php5-for-apache
+
+Installing PHP
+Installing PHP for IIS is very straightforward. We just need to download the latest
+installer from http://windows.php.net/download/ and run it. At the time of
+writing this book, PHP 5.3 VC9 x86 was the latest installer available. Select the IIS
+FastCGI radio button when prompted, and install keeping the rest as default.
+
+Install PHP on OpenSuse
+http://www.howtoforge.com/installing-apache2-with-php5-and-mysql-support-onopensuse-12.3-lamp
+	# sudo zypper install php5 php5-gd php-exif apache2-mod_php5 nginx
+Restart Apache
+	# systemctl restart apache2.service
+
+Install apc
+	apt-get install php5-apcu
+Habilitar Alternative PHP Cache APC
+https://www.digitalocean.com/community/articles/how-to-install-alternative-php-cache-apc-on-a-cloud-server-running-ubuntu-12-04
+http://naveensnayak.wordpress.com/2013/03/04/simple-php-apc-setup-on-ubuntu-12-04/
+https://rtcamp.com/tutorials/php/apc-cache-with-web-interface/
+http://www.euperia.com/development/php/viewing-the-php-apc-cache-in-ubuntu/437
+	# apt-get install php-pear php5-dev make libpcre3-dev
+	# zypper install php5-pear php5-devel make libpcre3-dev
+	# pecl install apc
+Build process completed successfully
+Installing '/usr/lib64/php5/extensions/apc.so'
+Installing '/usr/include/php5/ext/apc/apc_serializer.h'
+install ok: channel://pecl.php.net/APC-3.1.13
+configuration option "php_ini" is not set to php.ini location
+You should add "extension=apc.so" to php.ini
+
+The next and final step of the installation is also mentioned in the terminal window. 
+You need to edit the php.ini file and add a line at the end. Open and edit the file:
+	# vim /etc/php5/apache2/php.ini
+extension = apc.so
+Save, exit the file, and restart Apache:
+	# service apache2 restart
+	# cp /usr/share/php/apc.php /var/www
+	# chown www-data:www-data /var/www/apc.php
+	
+	# cp /usr/share/php5/apc.php /srv/www/htdocs
+	# chown wwwrun:www /srv/www/htdocs/apc.php
+Get apc.php from scp
+	$ scp ec2:/usr/share/php/apc.php ~/tmp
+	# mv ~/tmp/apc.php /srv/www/htdocs/
+	# chown wwwrun:www /srv/www/htdocs/apc.php
+
+Comentarios con 
+#
+
+Breaks y Continues
+	break 2;
+	continue 2;
+
+Funciones
+<?php function column()
+{ ?>
+</td><td>
+<?php }
+
+Variable Parameters
+function getPreferences(){
+	// some code
+}
+
+$array = func_get_args();
+$count = func_num_args();
+$value = func_get_arg(argument_number);
+
+Variable Functions
+$imprimir = 6
+$hola = 'imprimir'
+$$hola // devuelve 6
+function imprimir(){}
+$hola2 = 'imprimir'
+$hola2(); // llama a 'imprimir'
+Check with
+	function_exists($hola2);
+
+Here Doc
+$tabla = 'usuario';
+$sql = << sql
+select * from $tabla;
+sql;
+
+Acceder a un caracter
+
+$string = 'Hello';
+echo $string{0}; // 'H'
+
+Arrays
+$values = array("hello", "world");
+list($a, $b, $c) = $values;
+
+UTF-8
+https://stackoverflow.com/questions/20134353/character-set-configuration-in-php-ini-file
+	vim +694 /etc/php5/apache2/php.ini

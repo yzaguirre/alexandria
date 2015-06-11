@@ -1,0 +1,192 @@
+http://www.slashroot.in/how-to-secure-apache-web-server
+ServerSignature Off
+ServerTokens Prod
+
+Allow only required HTTP methods with ModSecurity
+<LimitExcept GET POST OPTIONS>
+Deny from all
+</LimitExcept>
+
+TraceEnable Off
+
+Show Custom Error Messages
+ErrorDocument 400 /mycute400.html
+ErrorDocument 401 /mycute401.html
+ErrorDocument 403 /mycute401.html
+ErrorDocument 404 /mycute404.html
+ErrorDocument 405 /mycute405.html
+ErrorDocument 500 /mycute500.html
+
+Delete Default Files in Apache
+
+	rm -rf /usr/local/apache2/htdocs/*
+	rm -rf /usr/local/apache2/cgi-bin/*
+	rm -rf /usr/local/apache2/manual
+
+Timeout 10
+KeepAlive On
+KeepAliveTimeout 15
+
+Disable SSL version 2 in apache for more security
+	SSLProtocol -ALL +SSLv3 +TLSv1
+
+https://www.digitalocean.com/community/tutorials/how-to-optimize-apache-web-server-performance
+
+http://www.cyberciti.biz/faq/howto-find-unix-linux-apache-documentroot/
+Find directory
+grep -i 'DocumentRoot' /etc/apache2/sites-available/000-default.conf | sed 's/^.*DocumentRoot[ ]*//' > t.txt
+
+http://httpd.apache.org/docs/2.2/misc/password_encryptions.html
+	$ htpasswd -m /var/svn-repos/users david
+http://httpd.apache.org/docs/2.4/upgrading.html#run-time
+
+In this example, all requests are denied.
+2.2 configuration:
+Order deny,allow
+Deny from all
+
+2.4 configuration:
+Require all denied
+
+In this example, all requests are allowed.
+2.2 configuration:
+Order allow,deny
+Allow from all
+
+2.4 configuration:
+Require all granted
+
+In the following example, all hosts in the example.org domain are allowed access; all other hosts are denied access.
+2.2 configuration:
+Order Deny,Allow
+Deny from all
+Allow from example.org
+
+2.4 configuration:
+Require host example.org
+
+AllowOverride now defaults to None.
+htpasswd now uses MD5 hash by default on all platforms.
+
+http://stackoverflow.com/questions/18392741/apache2-ah01630-client-denied-by-server-configuration
+http://dabase.com/blog/AH01630:_client_denied_by_server_configuration/
+http://stackoverflow.com/questions/12759854/client-denied-by-server-configuration-while-trying-to-use-git-http-backend-exe
+	# usermod -aG www david
+	# chmod g+x -R /srv/www/htdocs
+http://www.debianadmin.com/apache2-installation-and-configuration-with-php-support-in-debian-linux.html
+a2enmod and a2dismod are available for enabling and disabling modules utilizing the above configuration system.
+a2ensite and a2dissite have been added, which do essentially the same thing as the above tools, but for sites rather than modules.
+
+http://httpd.apache.org/docs/current/sections.html
+
+Red Hat htdocs location
+/srv/www/htdocs
+	# chown wwwrun:www -R /srv/www/htdocs
+
+Shared NTFS/apache working directory (Page 1) / Tips, Tricks & Scripts / CrunchBang Linux Forums
+http://crunchbang.org/forums/viewtopic.php?id=29307
+apache
+	# passwd www-data
+	# chown www-data:www-data /var/www/ -R
+	# mkdir .ssh
+	
+	# ssh-copy-id -i key.pub www-data:IP
+Add the following to /etc/apache2/apache2.conf
+<Directory /var/www/.ssh>
+        Order deny,allow
+        deny from all
+</Directory>
+
+Configure Mime type
+	C:\xampp\apache\conf\mime.types
+	$ echo "application/vnd.android.package-archive apk" >> /etc/mime.types
+	
+http://stackoverflow.com/questions/5046100/prevent-access-to-files-in-a-certain-folder
+http://verifiedjoseph.com/blog/htaccess-prevent-access-to-specific-files
+http://www.youtube.com/watch?v=Je_RbJu_lgo
+	# vim .htaccess
+<Files authorized_users>
+order deny,allow
+deny from all
+</Files>
+https://help.ubuntu.com/community/EnablingUseOfApacheHtaccessFiles
+<Directory /var/www/.ssh>
+	Order deny,allow
+	deny from all
+</Directory>
+        
+referencias "/home/david/win7David/Sistemas/2013/Jun12/SOPES2LAB/Proyecto_SOPES2"
+http://www.youtube.com/watch?v=tX-QSWfqst0 
+	# apt-get install httpd
+	# apt-get install apache2 apache2-doc
+Start server automatically
+	# chkconfig --levels 3 httpd on
+	# service httpd start
+Or stop it from autostarting
+x	# update-rc.d -f apache2 remove
+
+Instalar PHP
+x	# apt-get install php5 php-pear
+Crear pagina en 
+	# nano /var/www/html/info.php
+
+Fix the fireswall
+	# system-config-firewall
+->customized->secure www (https)
+->customized->www (https)
+close->ok-> confirm
+	# iptables --lis
+
+Find document root
+	$ grep -i 'DocumentRoot' httpd.conf
+	$ cd /etc/apache2/sites-available
+	$ grep -i 'DocumentRoot' default
+
+
+extras (no necesario)
+x	# install php-mysql php-gd php-nbstring php-odbc php-xml php-xmlrpc
+
+Instalar Driver Mongo para PHP
+http://docs.mongodb.org/ecosystem/drivers/php/ 
+http://php.net/mongo/ 
+Primero instalar Pear
+x	# apt-get install php5-dev php5-cli php-pear make
+x	# pecl install mongo
+	$ php --ini
+x	# nano /etc/php5/apache2/php.ini
+Agregar la linea:
+x	extension=mongo.so
+
+Aumentar PHP max_file_size
+Según http://www.sitepoint.com/upload-large-files-in-php/ se debe modificar los parametros:
+
+	# nano /etc/php5/apache2/php.ini
+		upload_max_filesize = 8000M
+		post_max_size = 8000M
+		max_input_time = 3600
+		max_execution_time = 3600
+3600 segundos es una hora
+
+Personal folder, unless you have mod_userdir.conf
+	# vim /etc/apache2/conf.d/david.conf
+Alias /david "/home/david/public_html/"
+
+<Directory "/home/david/public_html">
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+
+Ahora quitar el index.php con mod_rewrite y el .htaccess en el link de arriba (quickstart):
+	# vim .htaccess
+<IfModule mod_rewrite.c>
+RewriteEngine on
+# prevent httpd from serving dotfiles (.htaccess, .svn, .git, etc.)
+
+RedirectMatch 403 /\..*$
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# otherwise forward it to index.php
+RewriteRule . index.php
+</IfModule>

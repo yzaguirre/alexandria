@@ -1,0 +1,18 @@
+https://tails.boum.org/download/index.en.html#index2h1
+Download PGP key
+	wget https://tails.boum.org/tails-signing.key
+	gpg --with-fingerprint tails-signing.key
+	gpg --import tails-signing.key
+Follow this guide
+https://tails.boum.org/doc/get/trusting_tails_signing_key/index.en.html
+	diff -qs --from-file tails-signing*.key
+Verify torrent file
+	wget https://tails.boum.org/torrents/files/tails-i386-1.3.2.torrent
+	wget https://tails.boum.org/torrents/files/tails-i386-1.3.2.torrent.sig
+	gpg --verify tails-i386-1.3.2.torrent.sig tails-i386-1.3.2.torrent
+Verify ISO file
+	wget https://tails.boum.org/torrents/files/tails-i386-1.3.2.iso.sig
+	gpg --verify tails-i386-1.3.2.iso.sig tails-i386-1.3.2.iso
+SHA256 CHECKSUM
+	sha256sum tails-i386-1.3.2.iso
+a32009af6d65cdc158bb4592f28f64147bbc5c9468693a413333dd7999f93592

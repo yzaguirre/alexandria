@@ -1,0 +1,42 @@
+http://portablesigner.sourceforge.net/
+https://github.com/pflaeging/PortableSigner2
+GUI and commandline tool for Linux, OSX, and Windows 
+PortableSigner is a signing (with X.509 certificates) program for PDF files.
+INSTALL
+	sh ./linux-install.sh
+	chmod u+x /VMs/opt/PortableSigner/PortableSigner.sh
+
+You can use the following commandline parameter:
+	java -jar PortableSigner.jar -n -t unsigned.pdf -o signed.pdf -s pfp.p12 -p MySecretPassword
+	PortableSigner -n -t "[IPC2]Sesion1.pdf" -o "[IPC2]Sesion1-firma.pdf" -s server.p12 -p PvM5oAL7Yyus
+pfp$ java -jar PortableSigner.jar -h
+usage: PortableSigner
+ -b <arg>              Append signature block [german|english|polish] as
+                       parameter
+ -c <arg>              Comment under signature block (text)
+ -f                    If this is set, the document is NOT finalized
+ -h                    Help (this page)
+ -i <arg>              Image file for signature block
+ -l <arg>              Contents of "Location" - field (text)
+ -n                    Without GUI
+ -o <arg>              Outputfile (PDF)
+ -ownerpwd <arg>       Owner password
+ -ownerpwdfile <arg>   Owner password file
+ -p <arg>              Signaturepassword
+ -pwdfile <arg>        Password file
+ -r <arg>              Contents of "Reason" - field (text)
+ -s <arg>              Signaturefile (P12 or PFX)
+ -t <arg>              Inputfile (PDF)
+
+https://paulbradley.org/digitally-sign-pdf-files/
+PortableSigner expects a pfx (Personal Information Exchange) file as the certificate input. 
+See ssl/ssl-pfx.txt
+
+Below is a sample command line showing how to sign a PDF called input.pdf
+	java -jar PortableSigner.jar -n -t input.pdf -o output.pdf -s certificate.pfx -p secret -c "Signed after 4 alterations" -r "Approved for publication" -l "Department of Dermatology" -b en -i some_image.png
+More simple
+	PortableSigner -n \
+	-t /Users/pfp/Desktop/unsigned.pdf \
+	-o /Users/pfp/Desktop/signed.pdf \
+	-s /Users/pfp/Desktop/pfp.p12 \ 
+	-p MySecretPassword
