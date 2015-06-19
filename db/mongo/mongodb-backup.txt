@@ -1,0 +1,27 @@
+http://www.mkyong.com/mongodb/mongodb-import-and-export-example/
+http://docs.mongodb.org/manual/core/import-export/
+Backup database with mongoexport
+
+Review some of the common use options.
+	mongoexport
+Export all documents (all fields) into the file "domain-bk.json".
+	mongoexport -d webmitta -c domain -o domain-bk.json
+Export all documents with fields "domain" and "worth" only.
+	mongoexport -d webmitta -c domain -f "domain,worth" -o domain-bk.json
+Export all documents with a search query, in this case, only document with "worth > 100000" will be exported.
+	mongoexport -d webmitta -c domain -f "domain,worth" -q '{worth:{$gt:100000}}' -o domain-bk.json
+Connect to remote server like mongolab.com, using username and password.
+	mongoexport -h id.mongolab.com:47307 -d heroku_app -c domain -u username123 -p password123 -o domain-bk.json
+
+Restore database with mongoimport
+
+Review some of the common use options.
+	mongoimport
+mports all documents from file "domain-bk.json" into database.collection named
+"webmitta2.domain2". All non-exists databases or collections will be created automatically.
+	mongoimport -d webmitta2 -c domain2 --file domain-bk.json
+Imports all documents, insert or update objects that already exist (based on the _id).
+	mongoimport -d webmitta2 -c domain2 --file domain-bk.json --upsert
+Connect to remote server - mongolab.com, using username and password, and import the documents
+from the local file domain-bk.json into remote MongoDB server.
+	mongoimport -h id.mongolab.com:47307 -d heroku_app -c domain -u username123 -p password123 --file domain-bk.json

@@ -6,6 +6,7 @@ Download
 	tar xf limesurvey205plus-build150520.tar.gz -C /var/www/html
 	cd /var/www/html
 	chown www-data:www-data -R limesurvey
+Uncomment the last line in limesurvey/.htaccess
 Database
 MySQL
 	mysql -u root -p

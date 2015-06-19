@@ -72,7 +72,7 @@ The Common Name should match the name that clients will use to access your serve
 sure to get the other details right if you plan to have the CSR signed by a third-party CA
 
 5. To create the CSR, run the following command at a terminal prompt:
-	openssl req -new -key sitio1.key -out sitio1.csr
+	openssl req -new -sha256 -key sitio1.key -out sitio1.csr
 It will prompt you enter the passphrase. If you enter the correct passphrase, it will prompt you to enter
 Company Name, Site Name, Email Id, etc. Once you enter all these details, your CSR will be created
 and it will be stored in the server.csr file.
@@ -126,10 +126,13 @@ Summary
 	openssl genrsa -des3 -out private/sitio1.key.secure 2048
 	chmod 600 private/sitio1.key.secure
 	openssl rsa -in private/sitio1.key.secure -out sitio1.key
-	openssl req -new -key sitio1.key -out requests/sitio1.csr
+	openssl req -new -sha256 -key sitio1.key -out requests/sitio1.csr
 Once recieved the crt and other files from CA, do:
 	cat COMODORSADomainValidationSecureServerCA.crt COMODORSAAddTrustCA.crt AddTrustExternalCARoot.crt > sitio1.ca-bundle
 	mv sitio1.crt sitio1.ca-bundle certs/
 You may want to securely erase the .csr and .key (the one without password, DONT'T DELETE THE PRIVATE KEY .SECURE !!) files
 	shred -n 10 -z requests/sitio1.csr sitio1.key
 	rm requests/sitio1.csr sitio1.key
+
+Make .pfx or .p12
+	openssl pkcs12 -export -in certs/js_security.crt -inkey private/js_security.key.secure -certfile certs/js_security.ca-bundle -out js_security.pfx

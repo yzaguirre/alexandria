@@ -23,7 +23,7 @@ Create Certificate Sign Request CSR, see ssl-self-ca.txt or ssl-trusted-ca.txt
 
 6. If you don't plan to have your certificate signed, or if you want to test your configura-
 tion, generate a self-signed certificate and save it in a file named server.crt:
-	# openssl req -new -x509 -nodes -sha1 -days 365 -key private/sitio1.key -out certs/sitio1.crt
+	# openssl req -new -x509 -nodes -sha256 -days 365 -key private/sitio1.key -out certs/sitio1.crt
 	# openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout www.blackmoreops.com.key -out www.blackmoreops.com.crt
 or (not used)
 	# openssl req -newkey -x509 -nodes -rsa:2048 -days 365 -keyout /etc/ssl/apache.key -out /etc/ssl/apache.crt

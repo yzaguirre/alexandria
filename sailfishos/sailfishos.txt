@@ -1,3 +1,12 @@
-https://sailfishos.org/develop-installation-article.html
-	wget http://releases.sailfishos.org/sdk/installers/1412/SailfishOSSDK-Beta-1412-Qt5-linux-64-offline.run
-	chmod +x SailfishOSSDK-Beta-1412-Qt5-linux-64-offline.run
+https://sailfishos.org/develop/sdk-overview/develop-installation-article/
+	wget http://releases.sailfishos.org/sdk/installers/1504/SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run
+	wget http://releases.sailfishos.org/sdk/installers/1504/SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run.md5
+	md5sum SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run
+	cat SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run.md5
+	chmod +x SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run
+	./SailfishOSSDK-Beta-1504-Qt5-linux-64-offline.run
+modify QT Creator Mer options
+	ln -s /VMs/opt/SailfishOS/bin/qtcreator /usr/local/bin/sailfish-ide
+documents
+https://sailfishos.org/develop/docs/silica/
+https://sailfishos.org/develop/docs/silica/sailfish-silica-introduction.html/

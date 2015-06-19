@@ -2,14 +2,21 @@ openshift.com
 https://www.openshift.com/legal/services_agreement
 https://www.openshift.com/legal/openshift_privacy
 https://www.redhat.com/en/about/privacy-policy
+http://docs.openshift.org/origin-m4/oo_user_guide.html#ssh-to-an-application-gear
 	gem install rhc
 	rhc setup
 	rhc create-app
 	rhc create-app MyAppName nodejs-0.10
+Will clone the repo
 	rhc create-app wpsendgrid php-5.4 mysql-5.5 --from-code=https://github.com/openshift/wordpress-example
 Print cartridges
 	rhc cartridge list
-	
+
+Create a domain
+	rhc domain create mydomain
+Delete a domain
+	rhc domain delete mydomain
+
 List keys
 https://blog.openshift.com/dive-into-openshift-with-ssh/
 https://developers.openshift.com/en/managing-remote-connection.html
@@ -25,7 +32,7 @@ Edit config files
 Connect to most mongo server
 	mongo --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT -u username -p password database
 
-Delete project
+Delete application
 	rhc git-clone MyAppName
 	rhc app delete MyAppName --confirm
 
@@ -34,4 +41,4 @@ https://help.openshift.com/hc/en-us/articles/202399040-How-to-restart-an-applica
 	rhc app reload -a $your_app
 	rhc app restart -a $your_app
 In shell
-	ctl_app graceful
+	ctl_app reload

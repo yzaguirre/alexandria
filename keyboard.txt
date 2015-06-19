@@ -6,3 +6,6 @@ or
 	dpkg-reconfigure keyboard-configuration
 
 	setxkbmap
+
+Virtual Keyboard
+https://github.com/mwilliams03/matchbox-keyboard

@@ -1,0 +1,151 @@
+https://www.mongodb.org/downloads
+http://docs.mongodb.org/master/tutorial/install-mongodb-on-debian/
+	apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+	echo "deb http://repo.mongodb.org/apt/debian "$(lsb_release -sc)"/mongodb-org/3.0 main" > /etc/apt/sources.list.d/mongodb-org-3.0.list
+	apt-get update
+	apt-get install mongodb-org-server mongodb-org-shell mongodb-org-tools
+	update-rc.d -f mongod remove
+Curso de MongoDB con PHP - YouTube
+https://www.youtube.com/playlist?list=PLEtcGQaT56cgAsJUMz3xY9-W7a4nkCXqV
+
+Aggregation
+http://docs.mongodb.org/manual/core/aggregation-pipeline/
+http://docs.mongodb.org/manual/tutorial/aggregation-zip-code-data-set/
+
+
+Comandos recurrentes
+db.users.find().pretty();
+
+Included tools:
+-mongo
+-mongodump
+-mongorestore
+-mongoexport
+-mongoimport
+-mongostat
+-mongotop
+-bsondump
+
+Configuración
+	/etc/mongodb.conf
+	/etc/init.d/mongodb
+Data files in
+	/var/lib/mongodb
+Log files in
+	/var/log/mongodb
+	/var/log/mongodb/mongod.log
+Run using the mongodb user account.
+
+sudo /etc/init.d/mongodb start
+> db.test.save( { a: 1 } )
+> db.test.find()
+En fedora: configurar YUM
+
+El fichero a crear es /etc/yum.repos.d/10gen.repo
+	sudo touch /etc/yum.repos.d/10gen.repo
+	sudo gedit /etc/yum.repos.d/10gen.repo
+
+Incluir las siguientes líneas para el repositorio 10gen
+Para 64 bits:
+[10gen]
+name=10gen Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64
+gpgcheck=0
+enabled=1
+
+Para 32 bits
+[10gen]
+name=10gen Repository
+baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/i686
+gpgcheck=0
+enabled=1
+
+Instalar los paquetes
+	sudo yum install mongo-10gen mongo-10gen-server
+
+
+
+GridFS
+Metadatos en collection "files" y datos en collection "chunks"
+Cada chunk son 256KB de datos
+
+Instalar Driver Mongo para PHP
+http://docs.mongodb.org/ecosystem/drivers/php/ 
+http://php.net/mongo/ 
+Primero instalar Pear
+	sudo apt-get install php5-dev php5-cli php-pear
+	sudo pecl install mongo
+	sudo vim php.ini
+Agregar la linea:
+	extension=mongo.so
+
+
+
+Configuración de Mongo
+
+El fichero de configuración se ubica en 
+	/etc/mongodb.conf
+Los Scripts de control se ubican en
+	/etc/rc.d/init.d/mongod para Fedora
+	/etc/init.d/mongod para Ubuntu
+	
+
+La instancia de MongoDB almacena ficheros de datos en 
+	/var/lib/mongodb 
+
+Los ficheros log están en:
+	/var/log/mongodb en ubuntu
+	/var/log/mongo/mongod.log en Fedora
+
+Se corre bajo la cuenta de usuario
+	mongodb
+
+Iniciar el servicio
+	sudo service mongodb start
+Para verificar el arranque correcto, revisar el fichero
+	/var/log/mongodb/mongodb.log
+Para arrancar al iniciar el sistema
+	sudo chkconfig mongod on
+
+Detener el servicio
+	sudo service mongodb stop
+
+Reiniciar el servicio
+	sudo service mongodb restart
+Utilizar el mongo shell
+Conectar a la base de datos ubicado en la interface localhost por defecto.
+	mongo
+Insertar dos registros en la collection "test" de la base de datos (por defecto) "test".
+	> db.test.save( { a: 1 } )
+	> db.test.find()
+
+Note: If you change the user that runs the MongoDB process, you will need to modify the access control rights to the /var/lib/mongodb and /var/log/mongodb directories.
+
+
+Crear una base de datos
+	mkdir ~/Desktop/data
+	mongod --dbpath ~/Desktop/data
+
+Instalar RockMongo
+http://code.google.com/p/rock-php/wiki/rock_mongo
+http://Rockmongo.com/downloads
+	# cd Descargas
+	# unzip rockmongo-1.1.5.zip -d /var/www
+
+Ir a localhost/rockmongo
+Si no carga, hacer
+	# chmod 755 /var/www/rockmongo -R
+Logearse con admin, admin
+Tambien modificar config.php
+	# vim rockmongo/config.php
+
+Crear un usuario en mongo
+http://stackoverflow.com/questions/4881208
+	use admin
+	db.addUser('theadmin', '12345');
+	db.auth('theadmin', '12345');
+Reiniciar servidor mongodb e ingresar con los datos de arriba
+Modificar el config.php de rockmongo
+
+Sharding
+http://yakiloo.com/mongodb-sharding/

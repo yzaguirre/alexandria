@@ -6,7 +6,9 @@ http://www.qt.io/download-open-source/
 ae1d8f09653b12c86792d8ab55fc2a9ac41ae6b8
 	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.md5
 a9aede5e928bfc4e9c3f3b670a01aec7
-
+	sha256sum qt-opensource-linux-x64-5.4.2.run
+	sha1sum qt-opensource-linux-x64-5.4.2.run
+	md5sum qt-opensource-linux-x64-5.4.2.run
 For android
 	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run
 	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.sha256
@@ -19,3 +21,4 @@ e22be41827b36b0dbccd6d76eb7ccb51
 Install
 	chmod u+x qt-opensource-linux-x64-5.4.2.run
 	./qt-opensource-linux-x64-5.4.2.run
+	ln -s /VMs/opt/Qt5.4.2/Tools/QtCreator/bin/qtcreator /usr/local/bin/qtcreator

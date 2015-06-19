@@ -2,3 +2,15 @@ change TXT record
 https://www.namecheap.com/support/knowledgebase/article.aspx/317
 http://www.mail-tester.com/spf/namecheap
 http://www.pfinn.net/mandrill-namecheap-dns-settings-spf-dkim.html
+
+https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean
+
+How do I set my domain to use Namecheap's default DNS servers?
+https://www.namecheap.com/support/knowledgebase/article.aspx/782/10/how-do-i-set-my-domain-to-use-namecheaps-default-dns-servers
+
+Why are Email, URL forwarding and All Host Records options missing from my Namecheap account?
+https://www.namecheap.com/support/knowledgebase/article.aspx/323/10/why-are-email-url-forwarding-and-all-host-records-options-missing-from-my-namecheap-account
+
+How can I change the nameservers for my domain?
+https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-can-i-change-the-nameservers-for-my-domain
