@@ -1,5 +1,7 @@
 https://news.ycombinator.com/item?id=7197548
-
+http://monkeyhacks.com/post/raspberry-pi-as-private-git-server
+http://www.instructables.com/id/GitPi-A-Private-Git-Server-on-Raspberry-Pi/?ALLSTEPS
+https://help.github.com/articles/changing-a-remote-s-url/
 
 http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server
 	# adduser git

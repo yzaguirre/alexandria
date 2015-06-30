@@ -45,3 +45,5 @@ Other options
 	--tv-device=/dev/video0
 A list of compiled-in TV input drivers
 	mpv --tv=driver=help
+
+https://news.ycombinator.com/item?id=9753537

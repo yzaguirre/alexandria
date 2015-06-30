@@ -1,6 +1,12 @@
 Secure SSH
 https://stribika.github.io/2015/01/04/secure-secure-shell.html
+http://sysconfig.org.uk/two-factor-authentication-with-ssh.html
 if you need to forcibly exit your ssh session, type the escape sequence of a tilde followed by a period (~.). If that doesn’t work, try Ctrl+c.
+
+Key type
+https://security.stackexchange.com/questions/23383/ssh-key-type-rsa-dsa-ecdsa-are-there-easy-answers-for-which-to-choose-when
+https://askubuntu.com/questions/363207/what-is-the-difference-between-the-rsa-dsa-and-ecdsa-keys-that-ssh-uses
+
 
 Disable root login
 http://www.howtogeek.com/howto/linux/security-tip-disable-root-ssh-login-on-linux/
