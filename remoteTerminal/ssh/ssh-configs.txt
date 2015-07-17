@@ -1,3 +1,6 @@
+Compression yes
+ProxyCommand ssh -W %h:%p raspberrypi
+ProxyCommand /usr/local/bin/corkscrew 192.168.1.14 3128 %h %p
 # SSH config file, 'man ssh_config' for more details.
 IdentityFile ~david/.ssh/cb64key
 HostName cb64

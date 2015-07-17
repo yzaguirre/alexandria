@@ -1,3 +1,5 @@
+Definition https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly?resubmit=true
+https://news.ycombinator.com/item?id=9864728
 http://www.alternet.org/print/news-amp-politics/when-strong-encryption-isnt-enough-protect-our-privacy
 reop (https://github.com/tedu/reop). The cryptography is done by libsodium and it is well-written.
 NetPGP (http://www.netpgp.com/). The cryptography is done by the OpenPGP SDK. The NetPGP code is well-written but the OpenPGP SDK code looks like OpenSSL.

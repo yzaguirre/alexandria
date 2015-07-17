@@ -1,4 +1,8 @@
 Server Install
+https://keyserver.ubuntu.com/
+http://www.rainydayz.org/node/8
+https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Documentation
+https://lists.nongnu.org/archive/html/sks-devel/2009-03/msg00078.html
 	apt-get install sks
 	sks build
 	chown debian-sks:debian-sks -R /var/lib/sks/DB
@@ -15,6 +19,7 @@ Open localhost:11371
 	
 Use a gpg server
 https://help.riseup.net/en/security/message-security/openpgp/best-practices
+https://marc.info/?l=gnupg-users&m=139895658401578&w=2
 	apt-get install gnupg-curl
 	cd /etc/ssl/CA
 	wget https://sks-keyservers.net/sks-keyservers.netCA.pem
@@ -40,3 +45,5 @@ search keys
 	gpg --keyserver keyserver --search-keys searchterm # Search by key ID (prefixedwith "0x") or string.
 receive key from key server, use keys.gnupg.net
 	gpg --keyserver keys.mozilla.org --recv-keys 0x29846B3C683686CC
+Print pub keys keyserver
+	

@@ -1,0 +1,46 @@
+Tunnels
+https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts
+
+https://www.torproject.org/projects/torbrowser.html.en#downloads
+Verify download
+https://www.torproject.org/docs/verifying-signatures.html.en
+https://www.torproject.org/docs/debian.html.en
+xerinn	gpg --keyserver keys.gnupg.net --recv F65C2036
+x	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys 0x416F061063FEE659
+	gpg --keyserver keys.gnupg.net --recv 0x4E2C6E8793298290
+	gpg --verify tor-browser-linux64-4.0.3_es-ES.tar.xz.asc
+	rm -r /VMs/opt/tor
+	tar xf tor-browser-linux-* -C /VMs/opt/
+	mv /VMs/opt/{tor-browser_*,tor}
+	ln -s /VMs/opt/tor/Browser/start-tor-browser /usr/local/bin/tor
+
+As a service
+https://www.torproject.org/docs/debian.html.en
+https://abarax.github.io/output/tor-the-onion-router-hidden-services.html
+	echo "deb http://deb.torproject.org/torproject.org wheezy main" > /etc/apt/sources.list.d/tor.list
+	echo "deb-src http://deb.torproject.org/torproject.org wheezy main" >> /etc/apt/sources.list.d/tor.list
+	apt-key adv --keyserver keys.gnupg.net --recv-keys 886DDD89
+	apt-get update
+Install tor
+	apt-get install tor deb.torproject.org-keyring
+
+SOCKS proxy at localhost port 9050, or port 9150 for Tor Browser
+
+Set up the hidden server. Edit the torrc configuration file:
+	vim /etc/tor/torrc
+HiddenServiceDir /home/ubuntu/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:80
+
+Restart tor
+	service tor restart
+
+Inside the 
+	/home/ubuntu/tor/hidden_service
+directory you will now find two files, a private_key file and a hostname file.
+Inside the private_key file is your services' private key and is vitally important to keep safe.
+Inside your host name file is the address which you can disseminate to users of your anonymous service,
+in my case it is mtq7eecokwr5kn22.onion. 
+
+Popular onion sites
+https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237
+https://facebookcorewwwi.onion/

@@ -16,3 +16,7 @@ list($rawHeader, $response) = explode("\r\n\r\n", $return, 2);
 $header = handle_headers($rawHeader);
 
 $header['Content-Encoding']
+
+SOCKS Proxy
+https://stackoverflow.com/questions/13444738/how-to-use-a-socks-5-proxy-with-curl
+curl_setopt($ch, CUROPT_PROXY, 'socks5://bob:marley@localhost:12345');

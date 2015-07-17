@@ -1,5 +1,5 @@
 Most packages
-	apt-get install php5 php5-pgsql php5-phalcon php5-curl php5-gd php5-gnupg php5-imagick php5-json php5-mcrypt php5-mongo php5-ssh2
+	apt-get install php5 php5-pgsql php5-mysql php5-phalcon php5-curl php5-gd php5-gnupg php5-imagick php5-json php5-mcrypt php5-mongo php5-ssh2
 validation
 https://stackoverflow.com/questions/110575/do-htmlspecialchars-and-mysql-real-escape-string-keep-my-php-code-safe-from-inje
 intval()

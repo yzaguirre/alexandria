@@ -1,12 +1,17 @@
 https://news.ycombinator.com/item?id=9040841
 https://sdelements.github.io/lets-chat/
-https://github.com/sdelements/lets-chat/wiki/XMPP
 Requirements
 Node.js 0.10+
 MongoDB 2.0+
 Python 2.7
+Make
+g++
 
 Download
+Stable
+	wget https://github.com/sdelements/lets-chat/archive/0.4.0.tar.gz
+	tar xf 0.4.0.tar.gz
+Latest
 	wget https://github.com/sdelements/lets-chat/archive/master.zip
 	unzip master.zip
 	cd lets-chat-master
@@ -24,3 +29,12 @@ Party time at http://localhost:5000/!
 
 XMPP
 https://github.com/sdelements/lets-chat/wiki/XMPP
+
+Login
+https://github.com/sdelements/lets-chat/wiki/Authentication
+auth.local.enableRegistration: false
+
+Gravatar
+https://github.com/sdelements/lets-chat/wiki/Avatars
+https://en.gravatar.com/support/how-to-sign-up/
+https://en.gravatar.com/support/activating-your-account/

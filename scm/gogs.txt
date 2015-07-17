@@ -34,3 +34,9 @@ ROOT = /var/gogs/git
 PATH = /var/gogs/git/gogs.db
 	su git
 	/var/gogs/bin/gogs web
+
+DB
+	$ mysql -u root -p
+	CREATE DATABASE gogs;
+	GRANT ALL ON gogs.* TO gogs@'localhost' IDENTIFIED BY 'gogs';
+	FLUSH PRIVILEGES;

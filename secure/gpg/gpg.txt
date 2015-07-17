@@ -1,3 +1,4 @@
+https://news.ycombinator.com/item?id=8761896
 https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/zimmermann-why-pgp.html
 http://www.techweekeurope.co.uk/e-regulation/phil-zimmermann-privacy-silent-circle-166897
 http://www.bootc.net/archives/2013/06/07/generating-a-new-gnupg-key/

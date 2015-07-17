@@ -1,4 +1,5 @@
 https://www.meteor.com
+https://www.meteor.com/install
 Install
 	curl https://install.meteor.com/ > meteor-install.sh
 	chmod +x meteor-install.sh

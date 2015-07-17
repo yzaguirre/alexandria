@@ -1,3 +1,8 @@
+https://news.ycombinator.com/item?id=9809427
+	vim /etc/systemd/timesyncd.conf
+[Time]
+NTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
+
 http://xmodulo.com/use-systemd-system-administration-debian.html
 	systemctl - list all loaded units and their state (where unit is the term for a job/service)
 	systemctl list-units - list all units
