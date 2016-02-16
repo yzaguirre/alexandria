@@ -3,7 +3,7 @@ http://miguel.leugim.com.mx/index.php/2008/05/09/latex-install-on-debian-gnulinu
 
 http://xmodulo.com/2013/01/how-to-install-latex-on-ubuntu-or-debian.html
 http://www.tug.org/texlive/debian.html
-# apt-get install texlive texlive-fonts-extra texlive-latex-extra 
+	apt-get install texlive texlive-fonts-extra texlive-latex-extra texlive-latex-recommended texlive-xetex potrace inkscape python-pygments
 
 how to remove a column
 https://www.youtube.com/watch?v=9LLF9VmBEA4
@@ -17,3 +17,9 @@ Como compilar:
 	evince documento.pdf
 o tambien
 	pdflatex ejemplo.tex
+
+Creative Commons
+https://tex.stackexchange.com/questions/1725/how-do-i-generate-creative-commons-license-information
+Packages:
+	-ccicons
+	-cclisences

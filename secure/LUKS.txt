@@ -6,8 +6,8 @@ Create an empty file to hold our vault.
 	dd if=/dev/zero of=~/myvault.vol bs=1M count=[size]
 
 Create an encrypted filesystem inside the myvault.vol file
-	luksformat -t vfat ~/myvault.vol
-	luksformat -t ext4 ~/myvault.vol
+	sudo luksformat -t vfat ~/myvault.vol
+	sudo luksformat -t ext4 ~/myvault.vol
 
 Get a detailed report
 	cryptsetup luksDump ~/myvault.vol
@@ -55,3 +55,35 @@ Let's tidy up and lock up our backup volume now:
 	cryptsetup luksClose gpg-key-backup
 	exit
 	unset GNUPGHOME
+
+Backup LUKS
+https://www.lisenet.com/2013/luks-add-keys-backup-and-restore-volume-header/
+http://www.saout.de/pipermail/dm-crypt/2012-July/002564.html
+LUKS format uses a metadata header and 8 key-slot areas that are being placed at the beginning of the disk. The passphrases are used to decrypt a single master key that is stored in the anti-forensic stripes.
+
+Add a Backup Key
+We would like to add a backup passphrase to the slot "1". This can be achieved by using the luksAddKey parameter:
+	sudo cryptsetup luksAddKey --key-slot 1 /dev/sdb2
+Change or Remove a Key
+We can remove the supplied passphrase from the LUKS device by issuing:
+	sudo cryptsetup luksRemoveKey /dev/sdb2
+WARNING: removing the last passphrase makes the LUKS container permanently inaccessible!
+If we want to change one of our existing passphrases, we can simply remove the unneeded one and add a new one to its place instead.
+
+There are two critical components for decryption: the salt values in the header itself and the key-slots.
+
+Ceate a header backup
+	sudo cryptsetup luksHeaderBackup <device> --header-backup-file <file>
+	sudo cryptsetup luksHeaderBackup /dev/sdb2 --header-backup-file /root/sdb2-header-backup
+In case of disaster where our LUKS header gets broken, we can restore it by issuing the following command:
+	sudo cryptsetup luksHeaderRestore <device> --header-backup-file <file>
+WARNING: LUKS header restoration procedure will replace all key-slots, therefore only the passphrases from the backup will work afterwards!
+
+Securely Erase a LUKS Header
+LUKS filesystem can be identified by checking its volume header:
+	sudo cryptsetup -v isLuks /dev/sdb2
+
+The default LUKS header (with only one key-slot enabled) takes 1052672 bytes, what is slightly more than 1 MiB. Having 2 key-slots enabled this would extend the header almost twice (key-slots * stripes * keysize + offset bytes). Therefore overwriting the first 3 MiB would do the job for us:
+	sudo su
+	head -c 3145728 /dev/zero > /dev/sdb2; sync
+	head -c 3145728 /dev/zero > myvault.vol; sync

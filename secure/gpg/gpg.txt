@@ -1,3 +1,7 @@
+https://alexcabal.com/creating-the-perfect-gpg-keypair/
+https://news.ycombinator.com/item?id=10723727
+
+Privacy Please! https://vimeo.com/132517596
 https://news.ycombinator.com/item?id=8761896
 https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/zimmermann-why-pgp.html
 http://www.techweekeurope.co.uk/e-regulation/phil-zimmermann-privacy-silent-circle-166897
@@ -5,6 +9,10 @@ http://www.bootc.net/archives/2013/06/07/generating-a-new-gnupg-key/
 http://viccuad.me/blog/secure-yourself-part-1-airgapped-computer-and-GPG-smartcards/
 https://news.ycombinator.com/item?id=9550094
 https://github.com/ioerror/duraconf/raw/master/configs/gnupg/gpg.conf
+
+http://blog.cryptographyengineering.com/2015/02/how-do-we-pay-for-privacy.html
+http://comments.gmane.org/gmane.comp.encryption.gpg.user/41144
+http://aplawrence.com/Basics/gpg.html
 
 see secure/LUKS.txt
 Create a directory for GnuPG to use as its 'home' directory, and set an environment variable to point to it

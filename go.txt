@@ -1,8 +1,9 @@
 https://golang.org/dl/
 https://golang.org/doc/install
-	wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
-	sha1sum go1.4.2.linux-amd64.tar.gz
-	tar xf go1.4.2.linux-amd64.tar.gz -C /VMs/opt
+	wget https://storage.googleapis.com/golang/go1.5.3.linux-amd64.tar.gz
+	sha256sum go1.5.3.linux-amd64.tar.gz
+43afe0c5017e502630b1aea4d44b8a7f059bf60d7f29dfd58db454d4e4e0ae53
+	tar xf go1.5.3.linux-amd64.tar.gz -C /VMs/opt
 	mkdir /VMs/opt/go/libs
 	vim + ~/.profile
 export GOROOT=/VMs/opt/go
@@ -18,7 +19,37 @@ import "fmt"
 func main() {
     fmt.Printf("hello, world\n")
 }
-
-Run
+Compile
+	go build
+Or Run
 	go run hello.go
 hello, world
+
+https://golang.org/doc/effective_go.html
+
+Crypto
+Original class
+https://gist.github.com/stuart-warren/93750a142d3de4e8fdd2
+https://gist.github.com/jyap808/8250067
+https://stackoverflow.com/questions/25715304/issues-with-openpgp-golang-gpg-library
+
+openpgp Lib documentation
+https://godoc.org/golang.org/x/crypto/openpgp#Encrypt
+Signing attempt
+https://stackoverflow.com/questions/21494035/cannot-sign-a-valid-gpg-key-using-golangs-openpgp-packet
+pgp regulation https://www.phildev.net/pgp/pgp_clear_vs_mime.html
+https://www.packetizer.com/rfc/rfc3156/
+RFC 3156 ftp://ftp.rfc-editor.org/in-notes/rfc3156.txt 6.  Encrypted and Signed Data
+RFC 4880 ftp://ftp.rfc-editor.org/in-notes/rfc4880.txt
+
+Append to array
+https://stackoverflow.com/questions/20954030/initialize-array-of-interfaces-in-golang
+var names []interface{}
+names = append(names, "first")
+names = append(names, "second")
+
+Bytes to string
+https://blog.golang.org/strings
+for i := 0; i < len(sample); i++ {
+        fmt.Printf("%x ", sample[i])
+    }

@@ -45,6 +45,11 @@ For 512 MB of RAM, the recommended setting is 50 users for 60Kbps-72Kbps bandwid
 Install client
 	apt-get install mumble
 
+Change SuperUser password
+	/usr/sbin/murmurd -ini /etc/mumble-server.ini -supw "PASS" 1
+Ubuntu
+https://launchpad.net/~mumble/+archive/ubuntu/release
+
 Compile client
 http://wiki.mumble.info/wiki/BuildingLinux
 Download 

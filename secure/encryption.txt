@@ -1,3 +1,5 @@
+https://math.berkeley.edu/~kpmann/encryption.pdf
+http://www.jupiterbroadcasting.com/91736/lets-encrypt-a-new-hope-las-396/
 Definition https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly?resubmit=true
 https://news.ycombinator.com/item?id=9864728
 http://www.alternet.org/print/news-amp-politics/when-strong-encryption-isnt-enough-protect-our-privacy

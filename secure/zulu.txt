@@ -1,24 +1,31 @@
 https://github.com/mhogomchungu/zuluCrypt/releases/
 https://code.google.com/p/zulucrypt/	
-	apt-get install libqt4-dev libblkid-dev gcc g++ libcryptsetup-dev cmake libgcrypt11-dev pkg-config libdevmapper-dev uuid-dev libudev-dev chrpath bzip2 debhelper
+	apt-get install libqt4-dev libblkid-dev gcc g++ libcryptsetup-dev cmake libgcrypt11-dev pkg-config uuid-dev hrpath bzip2 debhelper
+Might want to keep the following with debian stable
+	apt-get install libdevmapper-dev libudev-dev
 optional dependencies
 	libpwquality-devel libtcplay-dev libsecret-dev qtbase5-dev
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/4.7.5/zuluCrypt-4.7.5.tar.bz2
-	tar xf zuluCrypt-4.7.5.tar.bz2
-	cd zuluCrypt-4.7.5
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/4.7.7/zuluCrypt-4.7.7.tar.bz2
+	tar xf zuluCrypt-4.7.7.tar.bz2
+	cd zuluCrypt-4.7.7
 	mkdir build
 	cd build
-Qt4 is the default Qt dependency,to build against Qt5,pass "-DQT5=true" to cmake
-To build the backends as well as front ends,run the following command
 	cmake -DQT5=true -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_BUILD_TYPE=RELEASE . ..
 For Raspberry pi
 	cmake -DCMAKE_INSTALL_PREFIX=/usr/ -DNOGUI=yes -DCMAKE_BUILD_TYPE=RELEASE . ..
 Volumes by default are mounted in "/run/media/private/$USER".A compile time option of "-DHOMEMOUNTPREFIX=true" will cause volumes to be mounted
 instead in user's home directory.
-	make
-	# make install
+	make -j2
+	sudo make install
 After you have it installed,run "zuluCrypt-test" to make sure everything is working as expected.
 	zuluCrypt-test
+
+Binary install
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/4.8.0/zuluCrypt-4.8.0-debian-8-Jessie.tar.xz
+	tar xf zuluCrypt-4.8.0-debian-8-Jessie.tar.xz
+	cd zuluCrypt-4.8.0-debian-8-Jessie/amd64
+	sudo dpkg -i *.dev
+
 Open a zulu drive
 Read only
 	zuluCrypt-cli -o -d /dev/sdc1 -m sdc1 -e ro -p xxx

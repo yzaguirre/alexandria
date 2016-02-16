@@ -1,6 +1,7 @@
 https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
 http://www.apacheref.com/ref/mod_proxy/ProxyPass.html
 http://www.apacheref.com/ref/mod_proxy/ProxyPassReverse.html
+	a2enmod proxy proxy_http headers
 
 Alias /redmine "/usr/local/share/redmine-2.4.2" 
 <Proxy *>

@@ -13,6 +13,7 @@ Redimensionar
 	convert -resize {dimensión} {entrada} {salida}
 	convert -resize x200 {entrada} {salida}
 	convert -resize 150x300 {entrada} {salida}
+	convert -resize 640x360 {entrada} {salida}
 	convert -resize {porcentaje} {entrada} {salida}
 	convert -resize 10% {entrada} {salida}
 Force the image to be 300 x 300 pixels and ignore the aspect ratio,
@@ -96,4 +97,4 @@ Para capturar una ventana
 	import {salida}
 
 Extraer los frames de un GIF y poderlos unir con ffmpeg para convertirlos en un video, codec de por medio, y asi poderlos pasar por Whatsapp 
-	convert -coalesce {entrada} jpg:{salida} + "%04d.jpg"
+	convert -coalesce {entrada} jpg:{salida}+"%04d.jpg"

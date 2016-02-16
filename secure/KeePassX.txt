@@ -3,12 +3,18 @@ https://github.com/keepassx/keepassx
 QT5 support
 https://github.com/keepassx/keepassx/pull/70
 	sudo apt-get install build-essential cmake libqt4-dev libqt5x11extras5-dev libgcrypt11-dev zlib1g-dev
-	wget https://github.com/keepassx/keepassx/archive/master.zip
-	unzip master.zip && rm master.zip
-	cd keepassx-master
-	mkdir build && cd build
-	cmake .. -DCMAKE_BUILD_TYPE=Release -DUSE_QT5=ON -DCMAKE_INSTALL_PREFIX=/usr/local
-	make
+	wget https://www.keepassx.org/gpg/0x83135D45.asc
+	gpg2 --with-fingerprint 0x83135D45.asc
+	gpg2 --import 0x83135D45.asc
+	wget https://www.keepassx.org/releases/2.0/keepassx-2.0.tar.gz
+	wget https://www.keepassx.org/releases/2.0/keepassx-2.0.tar.gz.sig
+	gpg2 --verify keepassx-2.0.tar.gz.sig
+	tar xf keepassx-2.0.tar.gz
+	cd keepassx-2.0
+	mkdir build
+	cd build
+	cmake -DCMAKE_BUILD_TYPE=Release -DUSE_QT5=ON -DCMAKE_INSTALL_PREFIX=/usr/local ..
+	make -j2
 	make install
 Ubuntu
 Packages needed for building:

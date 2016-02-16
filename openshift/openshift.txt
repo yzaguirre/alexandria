@@ -16,11 +16,94 @@ Create a domain
 	rhc domain create mydomain
 Delete a domain
 	rhc domain delete mydomain
+Adding a Member
+	
+
+Add a member
+	rhc member add user@myemail.com -n Domain_Name --role Member_Role
+Changing Member Role
+	rhc member update user@myadmin.com -n Domain_Name --role Member_Role
+Member_Role: edit, view, administer
+Adding a Team to a Domain
+	rhc member add Team_Name -n Domain_Name --type team --role Team_Role
+You can also add a team by specifying the team ID: 
+	rhc member add Team_ID -n Domain_Name --type team --ids --role Team_Role
+Creating a Team
+	rhc team create Team_Name
+Adding Members to a Team
+	rhc member add user@myemail.com -t Team_Name
+Listing Domain Members
+	rhc member list Domain_Name
+ 
+Listing Your Teams
+	rhc teams
+	rhc teams --mine
+Viewing Team Information
+	rhc team show Team_Name
+	rhc team show --team-id Team_ID
+Leaving a Team
+	rhc team leave Team_Name
+	rhc team leave --team-id Team_ID
+Deleting a Team
+	rhc team delete Team_Name
+	rhc team delete --team-id Team_ID
+List regions
+	rhc region list
+
+Create app
+	rhc app create -g small --region aws-us-east-1 APP_NAME nodejs-0.10
+Create app from a public git repo
+	rhc app create -g small --from-code RepoURL#mybranch --region aws-us-east-1 APP_NAME nodejs-0.10
+
+Create app from a private git repo
+https://forums.openshift.com/creating-an-application-from-a-private-github-repository
+	git remote add github <github repo url>
+	git push github master
+Any changes received
+	git pull github master
+Send them to openshift
+	git push origen master
+
+Delete a app
+	rhc app delete App_Name
+Other acciones
+https://access.redhat.com/documentation/en-US/OpenShift_Online/2.0/html/User_Guide/Application_Management_Commands4.html
+
+https://developers.openshift.com/en/managing-deployments.html
+Enabling/Disabling Automatic Deployments
+	rhc app-configure <app> --no-auto-deploy # Disable Auto Deploy
+	rhc app-configure <app> --auto-deploy # Enable Auto Deploy
+Using the Deploy Command
+	rhc deploy <ref> -a <app>
+	rhc deploy <branch_name> -a <app>
+	rhc deploy <SHA1> -a <app>
+Configuring How Many Deployments to Keep
+	rhc app-configure <app> --keep-deployments <number> 
+Configuring Which Branch to Deploy
+	rhc app-configure <app> --deployment-branch develop
+List deployments
+	rhc deployment list -a <app>
+Viewing Individual Deployment Details
+	rhc deployment show <deployment_id> -a <app>
+Activating a Deployment
+	rhc deployment activate <deployment_id> -a <app>
+Rolling Back a Deployment
+	rhc deployment activate <deployment_id> -a <app>
+
+List cartridges
+https://access.redhat.com/documentation/en-US/OpenShift_Online/2.0/html/User_Guide/Adding_a_Cartridge_to_an_Application.html
+	rhc cartridge list
+Add a cartridge
+	rhc cartridge add mongodb-2.4 -a App_Name -g small
 
 List keys
 https://blog.openshift.com/dive-into-openshift-with-ssh/
 https://developers.openshift.com/en/managing-remote-connection.html
 	rhc sshkey list
+View a specific key
+	rhc sshkey show KeyName
+Delete a key
+	rhc sshkey remove KeyName
 Add Cartridges
 	rhc cartridge add mongodb-2.4 -a MyApp
 Check logs
@@ -36,9 +119,16 @@ Delete application
 	rhc git-clone MyAppName
 	rhc app delete MyAppName --confirm
 
+Start the app
+	rhc app start -a app
 Restart an app
 https://help.openshift.com/hc/en-us/articles/202399040-How-to-restart-an-application-
 	rhc app reload -a $your_app
 	rhc app restart -a $your_app
 In shell
 	ctl_app reload
+
+Running Node v0.12
+https://github.com/ryanj/nodejs-custom-version-openshift
+https://github.com/ryanj/nodejs-custom-version-openshift/issues/2#issuecomment-140337668
+	rhc app create nodeapp nodejs --from-code=git://github.com/ryanj/nodejs-custom-version-openshift.git

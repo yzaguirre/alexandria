@@ -1,15 +1,16 @@
-http://gogs.io/
+https://gogs.io/
 https://news.ycombinator.com/item?id=7623589
 https://news.ycombinator.com/item?id=9210978
 https://news.ycombinator.com/item?id=8797283
 http://www.apertoire.net/gogs-an-alternative-to-gitlab/
+https://help.github.com/articles/closing-issues-via-commit-messages/
 
 http://gogs.io/docs/installation
-	wget https://github.com/gogits/gogs/releases/download/v0.6.1/linux_amd64.zip
+	wget https://github.com/gogits/gogs/releases/download/v0.8.10/linux_amd64.tar.gz
 	mkdir -p /home/git/.ssh
-	unzip linux_amd64.zip -d /opt
+	tar xf linux_amd64.tar.gz -C /opt
 Create User to run gogs
-	useradd -m -d /home/git --uid 1005 -s /bin/bash git
+	useradd -d /home/git --uid 1005 -s /bin/bash git
 x	usermod -s /usr/bin/git-shell git
 x	usermod -s /bin/bash git
 	chown git:git -R /home/git
@@ -19,24 +20,37 @@ Run
 	cd /opt/gogs
 	./gogs web
 	
-http://gogs.io/docs/advanced/configuration_cheat_sheet.html
+https://gogs.io/docs/advanced/configuration_cheat_sheet
 Configuration file is located in <install folder>/custom/conf/app.ini
-Repository location
-Database location
-Public key to enable commit over ssh
-	cd /opt/gogs
-	mkdir -p custom/conf
-	cd custom/conf
-	vim app.ini
-[repository]
-ROOT = /var/gogs/git
-[database]
-PATH = /var/gogs/git/gogs.db
-	su git
-	/var/gogs/bin/gogs web
 
 DB
 	$ mysql -u root -p
 	CREATE DATABASE gogs;
 	GRANT ALL ON gogs.* TO gogs@'localhost' IDENTIFIED BY 'gogs';
 	FLUSH PRIVILEGES;
+
+Update gogs
+Backup configuration and data dir
+	cd /opt/gogs
+	cp -r custom data attachments go.key /tmp
+	cd ..
+	rm -rf gogs
+Download latest release
+	wget https://github.com/gogits/gogs/releases/download/v0.8.10/linux_amd64.tar.gz
+	tar xfv linux_amd64.tar.gz -C /opt
+	mv /tmp/{data,custom,attachments,go.key} /opt/gogs
+	chown git:git -R /opt/gogs
+
+https://gogs.io/docs/features/webhook.html
+https://stackoverflow.com/questions/22169225/how-to-setup-gitlab-web-hook-to-deployment
+https://github.com/stephenhowells/WebHook
+
+From field
+	`"Name" <email@example.com>`
+
+Developer
+https://plus.google.com/u/0/+JiahuaChen
+https://twitter.com/joe2010xtmf
+
+LDAP
+https://gogs.io/docs/features/authentication

@@ -34,6 +34,11 @@ Additionally, if you do not serve clear text content, let the client know it by 
 Once it has been received by a browser, it will force HTTP over TLS even if the user follows a http:// URL setup on a malicious site.
 This thwarts possible MITM attacks.
 	Header set Strict-Transport-Security "max-age=15768000"
+https://doc.owncloud.org/server/8.2/admin_manual/configuration_server/harden_server.html
+	<IfModule mod_headers.c>
+      Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains; preload"
+    </IfModule>
+This example configuration will make all subdomains only accessible via HTTPS. If you have subdomains not accessible via HTTPS, remove includeSubdomains;.
 
 Intermediate certificate
 https://www.digicert.com/ssl-certificate-installation-apache.htm

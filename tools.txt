@@ -9,6 +9,11 @@ brackets
 zed
 gobby
 
+https://victorhaggqvist.github.io/selfhosted/
+https://github.com/victorhaggqvist/selfhosted
+https://github.com/Kickball/awesome-selfhosted
+http://libreprojects.net/#favs=joindiaspora-com,owncloud,openstreetmap,jamendo,plos
+
 Paste Bin
 http://0bin.net/
 
@@ -61,6 +66,10 @@ http://pyd.io/
 http://owncloud.org/
 https://tahoe-lafs.org/trac/tahoe-lafs
 http://buddycloud.com/
+More Hosting
+https://neocities.org/
+http://mediaon.com/About-Us.php#Payment
+https://www.nearlyfreespeech.net/
 
 Transit base encryption
 OpenSSL
@@ -162,6 +171,8 @@ scaleengine.net
 https://www.vultr.com/
 http://fortrabbit.com/pricing
 https://www.digitalocean.com/features
+https://www.ovh.com/us/
+https://sysdig.com/
 http://www.prq.se
 
 email services
@@ -294,3 +305,5 @@ http://www.taskunifier.com/web/en/app
 
 Licencia
 http://generalbasiclicense.wordpress.com/
+
+http://xiki.org/

@@ -1,13 +1,10 @@
 piwik
-http://piwik.org/
-http://piwik.org/roadmap
+https://piwik.org/
 https://en.wikipedia.org/wiki/Do_Not_Track
-http://piwik.org/docs/analytics-api/
-http://es.piwik.org/documentacion/
-http://piwik.org/shop/
-http://piwik.org/docs/installation/
-	wget http://builds.piwik.org/piwik.tar.gz
-	wget http://builds.piwik.org/piwik.tar.gz.asc
+https://piwik.org/docs/analytics-api/
+https://piwik.org/docs/installation/
+	wget https://builds.piwik.org/piwik.tar.gz
+	wget https://builds.piwik.org/piwik.tar.gz.asc
 Verify
 find 0x5590A237 key
 	gpg2 --verify piwik.tar.gz.asc
@@ -15,8 +12,7 @@ Extract
 	tar xf piwik.tar.gz -C /var/www
 	cd /var/www
 	rm How\ to\ install\ Piwik.html
-	mv piwik analytics
-	chown www-data:www-data -R analytics
+	chown www-data:www-data -R piwik
 
 You will also need to have either the pdo and pdo_mysql extension installed,
 or the mysqli extension installed. These MySQL extensions can use some of
@@ -28,7 +24,7 @@ graphs in Piwik.
 	# vim /etc/php5/apache2/php.ini
 
 Time for database
-	$ mysql -u root -p
+	mysql -u root -p
 	CREATE DATABASE piwik;
 	GRANT ALL ON piwik.* TO piwik_user@'localhost' IDENTIFIED BY 'password';
 	FLUSH PRIVILEGES;

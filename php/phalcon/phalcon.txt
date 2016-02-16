@@ -2,6 +2,8 @@ http://www.phalconphp.com/en/
 http://docs.phalconphp.com/en/latest/index.html
 http://vimeo.com/phalconphp
 
+https://docs.phalconphp.com/en/latest/reference/built-in.html
+	php -S localhost:8000 -t public/ .htrouter.php
 documentation
 	wget http://media.readthedocs.org/htmlzip/phalcon-php-framework-documentation/latest/phalcon-php-framework-documentation.zip
 

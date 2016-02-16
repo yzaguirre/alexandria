@@ -10,6 +10,9 @@ Or simply build the static website using:
 	gitbook build ./repository ./outputFolder
 Generate a PDF using:
 	gitbook pdf ./myrepo ./mybook.pdf
+Versions
+	gitbook versions:available
+	gitbook versions:install latest
 
 A book is a Git repository containing at least 2 files: README.md and SUMMARY.md.
 README.md

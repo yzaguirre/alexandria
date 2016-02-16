@@ -1,3 +1,9 @@
+http://www.linuxjournal.com/content/ssh-tunneling-poor-techies-vpn
+www.linuxjournal.com/article/4412
+
 https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process
 https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys
 https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+
+http://esr.ibiblio.org/?p=6990
+http://martin.kleppmann.com/2013/05/24/improving-security-of-ssh-private-keys.html

@@ -3,6 +3,8 @@ http://proxy-list.org/
 http://www.checkedproxylists.com/
 http://proxy-list.org/english/index.php?pp=any&pt=any&pc=Mexico&ps=any#proxylist
 
+http://www.redpill-linpro.com/sysadvent//2015/12/13/socks-proxy-as-poor-mans-vpn.html
+https://news.ycombinator.com/item?id=10726158
 http://blog.sensible.io/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 http://kev.inburke.com/kevin/how-to-use-ec2-as-a-web-proxy/
     # ssh ec2 -D 2001
@@ -38,5 +40,16 @@ coredump_dir /var/spool/squid3
 Free proxy
 https://blog.haschek.at/post/fd9bc
 
-http://mitmproxy.org/doc/howmitmproxy.html
+https://mitmproxy.org/doc/howmitmproxy.html
+https://github.com/mitmproxy/mitmproxy
+	apt-get install python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg-dev
 	pip install mitmproxy
+https://mitmproxy.org/doc/transparent/linux.html
+	sudo sysctl -w net.ipv4.ip_forward=1
+	echo 0 | sudo tee /proc/sys/net/ipv4/conf/*/send_redirects
+	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8080
+	mitmproxy -T --host
+
+http://darkk.net.ru/redsocks/
+http://proxychains.sourceforge.net/howto.html

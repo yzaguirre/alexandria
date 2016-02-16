@@ -1,24 +1,24 @@
-http://www.qt.io/download-open-source/
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.sha256
-3273d27ee8ae0068cd6b39bc21e9a6ee78d93102934c650b4c2086da9d98fdc6
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.sha1
-ae1d8f09653b12c86792d8ab55fc2a9ac41ae6b8
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-5.4.2.run.md5
-a9aede5e928bfc4e9c3f3b670a01aec7
-	sha256sum qt-opensource-linux-x64-5.4.2.run
-	sha1sum qt-opensource-linux-x64-5.4.2.run
-	md5sum qt-opensource-linux-x64-5.4.2.run
-For android
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.sha256
-e133bd33bc1a0b69899a5e1d477f5fca7cce444c165b40b263bd9f982ea58078
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.sha1
-a2172207a4405a0efcbd46768a90d3bde40f14f3
-	wget http://download.qt.io/official_releases/qt/5.4/5.4.2/qt-opensource-linux-x64-android-5.4.2.run.md5
-e22be41827b36b0dbccd6d76eb7ccb51
+Just the qt creator
+http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.mirrorlist
+    Filename: qt-creator-opensource-linux-x86_64-3.6.0.run
+    Size: 97M (101655798 bytes)
+    Last modified: Mon, 14 Dec 2015 13:42:05 GMT (Unix time: 1450100525)
+    SHA-256 Hash: 9a09ca20128db96bd27618dcccfeb2b66bd2b9ae69c6f9a19820a06226bf717e
+    SHA-1 Hash: a8e9131874e37d12ca003c07c7b838ada5fec51a
+    MD5 Hash: 79471dec0c326a7b632af84c30bf4fa8
 
+	wget https://download.qt.io/official_releases/qtcreator/3.6/3.6.0/md5sums.txt
+	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run
+	
+	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.sha256
+	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.sha1
+	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.md5
+Verify
+	sha1sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.sha1
+	sha256sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.sha256
+	md5sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.md5
+	md5sum -c md5sums.txt | grep coincide
 Install
-	chmod u+x qt-opensource-linux-x64-5.4.2.run
-	./qt-opensource-linux-x64-5.4.2.run
-	ln -s /VMs/opt/Qt5.4.2/Tools/QtCreator/bin/qtcreator /usr/local/bin/qtcreator
+	chmod u+x qt-creator-opensource-linux-x86_64-3.6.0.run
+	./qt-creator-opensource-linux-x86_64-3.6.0.run
+	ln -s /DVD/opt/qtcreator-3.6.0/bin/qtcreator.sh /usr/local/bin/qtcreator

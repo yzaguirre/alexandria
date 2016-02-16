@@ -1,3 +1,19 @@
+Mongo shell 
+https://docs.mongodb.org/manual/reference/mongo-shell/
+	show databases
+	use <db>
+	show collections
+	show users
+	
+https://docs.mongodb.org/manual/tutorial/configure-ssl/
+	mongod --sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem
+net:
+   ssl:
+      mode: requireSSL
+      PEMKeyFile: /etc/ssl/mongodb.pem
+      PEMKeyPassword: passw0rd
+      CAFile: /etc/ssl/ca.pem
+      disabledProtocols: TLS1_0,TLS1_1
 https://www.mongodb.org/downloads
 http://docs.mongodb.org/master/tutorial/install-mongodb-on-debian/
 	apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
@@ -15,12 +31,16 @@ http://docs.mongodb.org/manual/tutorial/aggregation-zip-code-data-set/
 
 Comandos recurrentes
 db.users.find().pretty();
+db.getCollectionInfos()
+db.getCollectionNames()
 
 Included tools:
 -mongo
 -mongodump
+	mongodump -d <db> --out <file>
 -mongorestore
 -mongoexport
+	mongoexport -d <db> -c <collection> --out <file>
 -mongoimport
 -mongostat
 -mongotop
@@ -149,3 +169,47 @@ Modificar el config.php de rockmongo
 
 Sharding
 http://yakiloo.com/mongodb-sharding/
+
+Delete records
+
+db.users.remove({});
+db.events.remove({});
+
+Update
+https://docs.mongodb.org/manual/tutorial/modify-documents/
+db.inventory.update(
+    { item: "MNO2" },
+    {
+      $set: {
+        category: "apparel",
+        details: { model: "14Q3", manufacturer: "XYZ Company" }
+      },
+      $currentDate: { lastModified: true }
+    }
+)
+
+Copy DB
+https://docs.mongodb.org/manual/reference/method/db.copyDatabase/
+db.copyDatabase(fromdb, todb, fromhost, username, password, mechanism)
+
+Update or remove array
+https://stackoverflow.com/questions/16959099/how-to-remove-array-element-in-mongodb
+collection.update(
+  { _id: id },
+  { $pull: { 'contact.phone': { number: '+1786543589455' } } }
+);
+where phone is the array, number is an attribute of one object in said array
+
+Or
+https://docs.mongodb.org/manual/reference/operator/query/or/
+db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+Populate
+http://mongoosejs.com/docs/populate.html
+http://mongoosejs.com/docs/api.html#model_Model.populate
+http://mongoosejs.com/docs/api.html#document_Document-populate
+
+
+Query
+https://docs.mongodb.org/manual/reference/operator/query/
+http://mongoosejs.com/docs/queries.html

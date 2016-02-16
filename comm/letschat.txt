@@ -27,6 +27,28 @@ Run Let's Chat:
 	npm start
 Party time at http://localhost:5000/!
 
+Update
+Make a backup
+	cd /opt/lets-chat
+	cp -r settings.yml lets-chat.key uploads /tmp
+	cd ..
+	rm -rf lets-chat
+	cd /tmp
+backup mongo
+	mongodump -d letschat -out /tmp/mongodump
+get latest release
+	wget https://github.com/sdelements/lets-chat/archive/0.4.5.tar.gz
+	tar xf 0.4.5.tar.gz -C /opt
+	mv /opt/{lets-chat-0.4.5,lets-chat}
+	mv settings.yml lets-chat.key uploads /opt/lets-chat
+	rm 0.4.5.tar.gz
+	cd /opt/lets-chat
+	npm install
+
+With git
+	git pull
+	npm run-script migrate
+
 XMPP
 https://github.com/sdelements/lets-chat/wiki/XMPP
 
@@ -38,3 +60,6 @@ Gravatar
 https://github.com/sdelements/lets-chat/wiki/Avatars
 https://en.gravatar.com/support/how-to-sign-up/
 https://en.gravatar.com/support/activating-your-account/
+
+LDAP
+https://github.com/sdelements/lets-chat-ldap

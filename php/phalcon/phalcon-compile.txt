@@ -2,18 +2,15 @@ Compile
 http://phalconphp.com/en/download
 https://stackoverflow.com/questions/3108937/how-to-install-and-run-phpize
 Debian
-	# apt-get install php5-dev php5-mysql gcc libpcre3-dev
-
-On some Linux installations, the compilation may fail because  libpcre3-dev
-is missing. You can fix this issue by installing this package with your Linux
-package manager.
-
-	wget https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.2.tar.gz
-	tar xf phalcon-v2.0.2.tar.gz
-	cd cphalcon-phalcon-v2.0.2/build
+	apt-get install php5-dev php5-mysql gcc libpcre3-dev
+	wget https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.9.tar.gz
+	tar xf phalcon-v2.0.9.tar.gz
+	cd cphalcon-phalcon-v2.0.9/build
 	sudo ./install
+Installing shared extensions:     /usr/lib/php5/20131226/
+Installing header files:          /usr/include/php5/
 
 2. Add the extension to your 30-phalcon.ini:
 https://github.com/phalcon/cphalcon/issues/2224
-	echo $'[phalcon]\nextension=phalcon.so' > /etc/php5/mods-available/phalcon.ini
+	echo $'extension=phalcon.so' > /etc/php5/mods-available/phalcon.ini
 	php5enmod phalcon

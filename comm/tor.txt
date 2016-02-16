@@ -1,3 +1,11 @@
+https://torflow.uncharted.software/
+https://news.ycombinator.com/item?id=10938103
+https://github.com/unchartedsoftware/torflow
+
+http://jordan-wright.com/blog/2015/02/28/how-tor-works-part-one/
+http://jordan-wright.com/blog/2015/05/09/how-tor-works-part-two-relays-vs-bridges/
+https://metrics.torproject.org/networksize.html
+
 Tunnels
 https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts
 
@@ -8,17 +16,17 @@ https://www.torproject.org/docs/debian.html.en
 xerinn	gpg --keyserver keys.gnupg.net --recv F65C2036
 x	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys 0x416F061063FEE659
 	gpg --keyserver keys.gnupg.net --recv 0x4E2C6E8793298290
-	gpg --verify tor-browser-linux64-4.0.3_es-ES.tar.xz.asc
+	gpg --verify tor-browser-linux64-5.0.7_en-US.tar.xz.asc
 	rm -r /VMs/opt/tor
-	tar xf tor-browser-linux-* -C /VMs/opt/
+	tar xf tor-browser-linux* -C /VMs/opt/
 	mv /VMs/opt/{tor-browser_*,tor}
 	ln -s /VMs/opt/tor/Browser/start-tor-browser /usr/local/bin/tor
 
 As a service
 https://www.torproject.org/docs/debian.html.en
 https://abarax.github.io/output/tor-the-onion-router-hidden-services.html
-	echo "deb http://deb.torproject.org/torproject.org wheezy main" > /etc/apt/sources.list.d/tor.list
-	echo "deb-src http://deb.torproject.org/torproject.org wheezy main" >> /etc/apt/sources.list.d/tor.list
+	echo "deb http://deb.torproject.org/torproject.org sid main" > /etc/apt/sources.list.d/tor.list
+	echo "deb-src http://deb.torproject.org/torproject.org sid main" >> /etc/apt/sources.list.d/tor.list
 	apt-key adv --keyserver keys.gnupg.net --recv-keys 886DDD89
 	apt-get update
 Install tor

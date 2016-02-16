@@ -3,7 +3,7 @@ Print cyphers
 inspect a private key
 	openssl rsa -text -in private.key
 inspect a certificate
-	request openssl req -text -in certificate.csr
+	openssl req -text -in certificate.csr
 inspect a certificate (signed from the CSR by a CA)
 	openssl X.509 -text -in certificate.crt
 	

@@ -3,10 +3,12 @@ http://gnuwin32.sourceforge.net/packages.html
 For use in other languajes, see java/jtar.txt and js/js-tar.txt
 Rar Files
 Print comment and extract
-	$ rar x -zCMT file.rar
+	rar x -zCMT file.rar
 Show file list
-	$ unrar l file.rar
-	$ rar vt file.rar
+	unrar l file.rar
+	rar vt file.rar
+https://diasp.eu/posts/3890839
+	rarcrack file.ext --threads 10 --type zip
 
 http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file
 Type at the command prompt 
