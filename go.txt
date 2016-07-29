@@ -1,12 +1,14 @@
+https://talks.golang.org/2016/applicative.slide
+http://engineroom.teamwork.com/go-learn/
 https://golang.org/dl/
 https://golang.org/doc/install
-	wget https://storage.googleapis.com/golang/go1.5.3.linux-amd64.tar.gz
-	sha256sum go1.5.3.linux-amd64.tar.gz
-43afe0c5017e502630b1aea4d44b8a7f059bf60d7f29dfd58db454d4e4e0ae53
-	tar xf go1.5.3.linux-amd64.tar.gz -C /VMs/opt
+	wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
+	sha256sum go1.6.3.linux-amd64.tar.gz
+cdde5e08530c0579255d6153b08fdb3b8e47caabbe717bc7bcd7561275a87aeb
+	tar xf go1.6.3.linux-amd64.tar.gz -C /opt
 	mkdir /VMs/opt/go/libs
 	vim + ~/.profile
-export GOROOT=/VMs/opt/go
+export GOROOT=/opt/go
 export GOPATH=$GOROOT/libs
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 

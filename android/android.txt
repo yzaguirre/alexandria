@@ -43,3 +43,5 @@ If you have trouble acquiring the plugin, try using "http" in the Location URL, 
 If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.
 8. When the installation completes, restart Eclipse.
 
+
+https://developer.android.com/training/connect-devices-wirelessly/nsd.html

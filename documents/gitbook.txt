@@ -1,5 +1,6 @@
 https://github.com/GitbookIO/gitbook
 	npm install gitbook-cli -g
+	npm update gitbook-cli -g
 Need calibre dependency
 	apt-get install calibre
 Create the directories and files for a book from its SUMMARY.md file (if existing) using

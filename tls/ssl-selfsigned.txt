@@ -5,28 +5,33 @@ https://www.startssl.com/
 https://login.persona.org/about
 https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7
 Generating your keys
-	sudo apt-get install openssl
+	apt update && apt install openssl
 2. Generate a 1024-bit RSA private key and save it to a file:
-	$ sudo su -
-	# mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
-	# cd /etc/ssl
-	# openssl genrsa -out private/sitio1.key 2048
+	mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
+	cd /etc/ssl
+	openssl genrsa -out private/site1.key 2048
 In higher-security environments, encrypting the key by adding the -des3 argument
 after the genrsa argument on the openssl command line is a good idea:
-	# openssl genrsa -des3 -out private/sitio1.key 2048
+	openssl genrsa -des3 -out private/site1.key 2048
 Finally change the file mode
-	# chmod 600 private/sitio1.key
+	chmod 600 private/site1.key
 3. You are asked for a passphrase, which is needed every time you start Apache.
 
-Create Certificate Sign Request CSR, see ssl-self-ca.txt or ssl-trusted-ca.txt
-	openssl req -new -key private/sitio1.key -out requests/sitio1.csr
-
+Create Certificate Sign Request CSR
+	openssl req -new -key -sha256 private/site1.key -out requests/site1.csr
 6. If you don't plan to have your certificate signed, or if you want to test your configura-
-tion, generate a self-signed certificate and save it in a file named server.crt:
-	# openssl req -new -x509 -nodes -sha256 -days 365 -key private/sitio1.key -out certs/sitio1.crt
-	# openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout www.blackmoreops.com.key -out www.blackmoreops.com.crt
-or (not used)
-	# openssl req -newkey -x509 -nodes -rsa:2048 -days 365 -keyout /etc/ssl/apache.key -out /etc/ssl/apache.crt
+tion, create the self-signed certificate and save it in a file named server.crt:
+(not used, but is self-signed using the sign request)
+	openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+The above command will prompt you to enter the passphrase. Once you enter the correct passphrase,
+your certificate will be created and it will be stored in the server.crt file.
+
+Generate the crt directly from the private key:
+	openssl req -new -x509 -nodes -sha256 -days 365 -key private/site1.key -out certs/site1.crt
+When private key does not exist:
+	openssl req -x509 -nodes -sha256 -days 365 -newkey rsa:2048 -keyout www.blackmoreops.com.key -out www.blackmoreops.com.crt
+
 Country Name (2 letter code) [AU]: .
 State or Province Name (full name) [Some-State]: .
 Locality Name (eg, city) []: .
@@ -44,6 +49,6 @@ Check out tunnels/openssl.txt
 Summary
 	mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
 	cd /etc/ssl
-	openssl genrsa -des3 -out private/sitio1.key 2048
-	chmod 600 private/sitio1.key
-	openssl req -new -x509 -nodes -sha256 -days 365 -key private/sitio1.key -out certs/sitio1.crt
+	openssl genrsa -des3 -out private/site1.key 2048
+	chmod 600 private/site1.key
+	openssl req -new -x509 -nodes -sha256 -days 365 -key private/site1.key -out certs/site1.crt

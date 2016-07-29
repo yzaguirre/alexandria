@@ -1,0 +1,82 @@
+https://helloworld.letsencrypt.org/
+https://twitter.com/letsencrypt/status/672465561872306176
+
+https://github.com/diafygi/letsencrypt-nosudo
+https://github.com/kuba/simp_le
+Remember to use same email
+Get scripts
+	git clone https://github.com/diafygi/letsencrypt-nosudo.git
+	cd letsencrypt-nosudo
+	chmod u+x sign_csr.py
+	ln -s $PWD/sign_csr.py ~/bin/sign_csr
+Create private key
+	openssl genrsa -aes128 4096 -out user.key
+	openssl rsa -in user.key -pubout -out user.pub
+	mkdir private certs requests
+
+Generate the domain key:
+	#Create a CSR for example.com
+	SITENAME=sitio1
+	openssl genrsa -aes128 -out private/$SITENAME.key.secure 2048
+	openssl rsa -in private/$SITENAME.key.secure -out private/$SITENAME.key
+Generate certificate request:
+	openssl req -new -sha256 -key private/$SITENAME.key -out requests/$SITENAME.csr
+or
+	openssl req -new -sha256 -key private/$SITENAME.key -subj "/CN=sitio1.com" -out requests/$SITENAME.csr
+Alternatively, if you want both example.com and www.example.com
+	openssl req -new -sha256 -key private/$SITENAME.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:example.com,DNS:www.example.com")) -out requests/$SITENAME.csr
+See http://blog.endpoint.com/2014/10/openssl-csr-with-alternative-names-one.html
+and https://easyengine.io/wordpress-nginx/tutorials/ssl/multidomain-ssl-subject-alternative-names/
+	
+Run the script using python and passing in the path to your user account public key and the domain CSR.
+The paths can be relative or absolute.
+	sign_csr --public-key user.pub requests/$SITENAME.csr > certs/$SITENAME.crt
+For apache2
+	sign_csr --public-key user.pub requests/$SITENAME.csr --file-based > certs/$SITENAME.crt
+
+How to use the signed https certificate
+NOTE: For web servers, you need to append the Let's Encrypt intermediate cert to your cert
+	wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem
+	cat certs/$SITENAME.crt lets-encrypt-x3-cross-signed.pem > certs/${SITENAME}_chained.pem
+
+Revocation script
+	python revoke_crt.py --public-key user.pub domain.crt
+
+NOTES:
+- lets-encrypt-x1-cross-signed.pem is a bundle cert
+- *_chained.pem is the crt + bundle cert
+- app.pem is the private + chained + diffie-hellman key exchange parameters
+	openssl dhparam -out dhparam.pem 2048
+	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem dhparam.pem > znc.pem
+
+# Regular client example
+	./letsencrypt-auto --email diafygi@gmail.com --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr
+# Regular client
+Official Let's Encrypt Client
+Setup letsencrypt
+	git clone https://github.com/letsencrypt/letsencrypt
+	cd letsencrypt
+Stop port 80 activities and start letsencrypt
+	./letsencrypt-auto certonly --standalone
+You can find your certificate in /etc/letsencrypt/live
+Add the following line to cron so the cert will renew every month
+	crontab -e
+@monthly /home/ubuntu/letsencrypt/letsencrypt-auto certonly --reinstall -d yourdomainname && sudo service nginx reload
+
+Using the webroot plugin
+see tls/ssl-nginx.txt
+	./letsencrypt-auto certonly -a webroot --webroot-path=/var/www/html -d example.com -d www.example.com
+Files created:
+    cert.pem: Your domain's certificate
+    chain.pem: The Let's Encrypt chain certificate
+    fullchain.pem: cert.pem and chain.pem combined
+    privkey.pem: Your certificate's private key
+You can find your certificate in /etc/letsencrypt/live
+
+Generate Strong Diffie-Hellman Group
+	openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+Continue to tls/ssl-nginx.txt
+
+With renew cronjob
+30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
+35 2 * * 1 /bin/systemctl reload nginx

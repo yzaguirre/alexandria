@@ -9,8 +9,8 @@ g++
 
 Download
 Stable
-	wget https://github.com/sdelements/lets-chat/archive/0.4.0.tar.gz
-	tar xf 0.4.0.tar.gz
+	wget https://github.com/sdelements/lets-chat/archive/0.4.7.tar.gz
+	tar xf 0.4.7.tar.gz
 Latest
 	wget https://github.com/sdelements/lets-chat/archive/master.zip
 	unzip master.zip
@@ -30,18 +30,18 @@ Party time at http://localhost:5000/!
 Update
 Make a backup
 	cd /opt/lets-chat
-	cp -r settings.yml lets-chat.key uploads /tmp
+	cp -r settings.yml lets-chat.key uploads /tmp locales/es.json
 	cd ..
 	rm -rf lets-chat
 	cd /tmp
 backup mongo
 	mongodump -d letschat -out /tmp/mongodump
 get latest release
-	wget https://github.com/sdelements/lets-chat/archive/0.4.5.tar.gz
-	tar xf 0.4.5.tar.gz -C /opt
-	mv /opt/{lets-chat-0.4.5,lets-chat}
+	wget https://github.com/sdelements/lets-chat/archive/0.4.7.tar.gz
+	tar xf 0.4.7.tar.gz -C /opt
+	mv /opt/{lets-chat-0.4.7,lets-chat}
 	mv settings.yml lets-chat.key uploads /opt/lets-chat
-	rm 0.4.5.tar.gz
+	rm 0.4.7.tar.gz
 	cd /opt/lets-chat
 	npm install
 

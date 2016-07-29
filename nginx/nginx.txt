@@ -64,3 +64,7 @@ include fastcgi_params;
 
 BSDNow
 http://www.bsdnow.tv/tutorials/nginx
+
+https://www.nginx.com/blog/mitigating-the-httpoxy-vulnerability-with-nginx/
+fastcgi_param HTTP_PROXY "";
+proxy_set_header Proxy "";

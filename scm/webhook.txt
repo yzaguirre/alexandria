@@ -1,0 +1,55 @@
+https://developer.github.com/webhooks/#payloads
+https://developer.github.com/v3/activity/events/types/#pushevent
+
+
+NodeJS
+https://www.npmjs.com/package/simple-github-webhook
+	git clone https://github.com/melonmanchan/simple-github-webhook
+	cd simple-github-webhook
+	npm install
+	PORT=1337 SECRET='My secret secret' BRANCH='feature-foo' npm start
+
+Go
+https://github.com/adnanh/webhook
+Install golang, see go.txt
+	go get github.com/adnanh/webhook
+Define webhooks in hooks.json
+	mkdir /opt/webhooks
+	cd /opt/webhooks
+	vim hooks.json
+Example:
+https://github.com/adnanh/webhook/wiki/Hook-Examples
+[
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "/opt/webhooks/redeploy.sh",
+    "command-working-directory": "/var/www/mysite"
+  }
+]
+
+Create the scripts
+	vim /opt/webhooks/redeploy.sh
+#!/bin/bash
+git pull
+	chmod +x /opt/webhooks/redeploy.sh
+
+You can now run webhook using
+	webhook -hooks hooks.json -verbose
+Other parameters
+https://github.com/adnanh/webhook/wiki/Webhook-Parameters
+	webhook -hooks hooks.json -verbose -ip localhost
+	webhook -hooks hooks.json -verbose -secure -cert site1.com_chained.pem -key site1.com.key
+
+NodeJS
+https://github.com/camme/webhook-deployer
+
+PHP
+https://github.com/Coppertino/github-webhook
+
+NodeJS
+https://github.com/rvagg/github-webhook-handler
+
+# Appliance configuration
+for the www-data user
+1. create ssh keys
+2. ssh clone the project to fill known_hosts with the git server

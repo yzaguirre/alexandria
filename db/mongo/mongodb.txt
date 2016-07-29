@@ -213,3 +213,22 @@ http://mongoosejs.com/docs/api.html#document_Document-populate
 Query
 https://docs.mongodb.org/manual/reference/operator/query/
 http://mongoosejs.com/docs/queries.html
+
+Base64 field
+https://stackoverflow.com/questions/30042577/change-id-string-to-base64-encoded-string-in-mongodb-via-mongoose
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var Test = new Schema({
+	_id: {
+		type: String,
+		required: true,
+		index: true,
+		unique: true,
+		default: function(){
+			var b64 = new Buffer(new mongoose.mongo.ObjectID().toString()).toString('base64');
+			return b64;
+		}
+	},
+	title: String,
+	body: String, });
+module.exports = mongoose.model('Test', Test);

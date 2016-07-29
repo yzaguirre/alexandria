@@ -1,16 +1,17 @@
+Make .pfx or .p12
 https://www.openssl.org/docs/apps/pkcs12.html
 One PKCS#12 file with your personal digital X.509 certificate (from CAcert for example)
 Following the ssl/ssl-selfsigned.txt tutorial
 1.) First create the private key
-	openssl genrsa -out sitio1.key.secure 1024
+	openssl genrsa -out sitio1.key.secure 2048
 2.) Create the certificate (there is no csr nor ca at this point)
-	openssl req -new -x509 -nodes -sha1 -days 365 -key sitio1.key.secure -out sitio1.crt
+	openssl req -new -x509 -nodes -sha256 -days 365 -key sitio1.key.secure -out sitio1.crt
 
 Alternative #2
 https://paulbradley.org/digitally-sign-pdf-files/
 Creating a certificate which is valid for one year for a Dr Khan, employee number 357. 
 You are embedding the consultants name, job title and hospital name in the organisation field of the certificate.
-	openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout 357.key -out 357.pem -subj "/C=GB/ST=Cumbria/O=Dr Z Khan Consultant Dermatologist (Holby City Hospital)/CN=alma.nhs.io"
+	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout 357.key -out 357.pem -subj "/C=GB/ST=Cumbria/O=Dr Z Khan Consultant Dermatologist (Holby City Hospital)/CN=alma.nhs.io"
 Your private key is 357.key
 Your certificate is 357.pem
 
@@ -32,3 +33,16 @@ http://jonathanmanning.com/2011/02/10/how-to-convert-ssl-certificates-to-differe
 (more converts) https://stackoverflow.com/questions/16583428/how-to-convert-an-ssl-certificate-in-linux
 	openssl pkcs12 -export -out sitio1.pfx -in sitio1.crt -inkey sitio1.key.secure -certfile CACert.crt
 	openssl pkcs12 -export -out sitio1.pfx -in sitio1.crt -inkey sitio1.key.secure -certfile sitio1_com.ca-bundle
+	openssl pkcs12 -export -name "My Certificate" -out fd.p12 -inkey fd.key -in fd.crt -certfile fd-chain.crt
+
+Reverse conversion
+	openssl pkcs12 -in fd.p12 -out fd.pem -node
+Reverse per output file
+	openssl pkcs12 -in fd.p12 -nocerts -out fd.key -nodes
+	openssl pkcs12 -in fd.p12 -nokeys -clcerts -out fd.crt
+	openssl pkcs12 -in fd.p12 -nokeys -cacerts -out fd-chain.crt
+
+With the old pkcs7 format
+	openssl crl2pkcs7 -nocrl -out fd.p7b -certfile fd.crt -certfile fd-chain.crt
+Reverse conversion
+	openssl pkcs7 -in fd.p7b -print_certs -out fd.pem

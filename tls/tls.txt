@@ -1,0 +1,71 @@
+Print cyphers
+	openssl ciphers -v|less
+Generate a RSA key
+Encrypted with AES128, 2048 keysize
+	openssl genrsa -aes128 -out fd.key.key.secure 2048
+Unencrypt the key
+	openssl rsa -in fd.key.secure -out fd.key
+Not encrypted, 2048 keysize
+	openssl genrsa -out fd.key 2048
+
+Inspect the key content
+	openssl rsa -text -in fd.key
+
+Export the public key
+	openssl rsa -in fd.key -pubout fd.pub
+
+DSA generation
+Step 1- Create DSA parameters
+Step 2- Create the DSA key
+	openssl dsaparam -genkey 2048 | openssl dsa -out dsa.key -aes128
+It's password protected (encrypted with AES128)
+
+ECDSA
+Create a 256-bit ECDSA key using the secp256r1
+	openssl ecparam -genkey -name secp256r1 | openssl ec -out ec.key -aes128
+It's password protected (encrypted with AES128)
+List curves
+	openssl ec -list_curves
+
+Create a Certificate Signing Request
+This is a formal request asking a CA to sign a certificate, and it contains the public key of the entity requesting the certificate and some information about the entity.
+If you want a field to be empty, you must enter a single dot (.) on the line
+	openssl req -new -key fd.key -out fd.csr
+Specifies the message digest to sign the request with -sha256
+	openssl req -new -sha256 -key fd.key -out fd.csr
+
+Inspect the csr
+	openssl req -text -in fd.csr -noout
+
+Create csr from existing certificate
+	openssl x509 -x509toreq -in fd.crt -out fd.csr -signkey fd.key
+
+Use a config file:
+[req]
+prompt = no
+distinguished_name = dn
+req_extensions = ext
+# input_password = PASSPHRASE
+
+[dn]
+CN = www.feistyduck.com
+CN =  www.feistyduck.com
+emailAddress = webmaster@feistyduck.com
+O = Feisty Duck Ltd
+OU = Production
+ST = Guatemala
+L = Ciudad de Guatemala
+C = GT
+
+[ext]
+subjectAltName = DNS:www.feistyduck.com,DNS:feistyduck.com
+
+	openssl req -new -sha256 -config fd.cnf -key fd.key -out fd.csr
+
+Self signed certificate
+	openssl x509 -req -days 365 -in fd.csr -signkey fd.key -out fd.crt
+Self signed without CSR
+	openssl req -new -x509 -days 365 -key fd.key -out fd.crt
+
+Verify the certificate (self-signed or CA signed)
+	openssl x509 -noout -text -in www.blackmoreops.com.crt 

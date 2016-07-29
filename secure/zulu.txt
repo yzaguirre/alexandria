@@ -5,9 +5,9 @@ Might want to keep the following with debian stable
 	apt-get install libdevmapper-dev libudev-dev
 optional dependencies
 	libpwquality-devel libtcplay-dev libsecret-dev qtbase5-dev
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/4.7.7/zuluCrypt-4.7.7.tar.bz2
-	tar xf zuluCrypt-4.7.7.tar.bz2
-	cd zuluCrypt-4.7.7
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0.tar.bz2
+	tar xf zuluCrypt-5.0.0.tar.bz2
+	cd zuluCrypt-5.0.0
 	mkdir build
 	cd build
 	cmake -DQT5=true -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_BUILD_TYPE=RELEASE . ..
@@ -21,10 +21,14 @@ After you have it installed,run "zuluCrypt-test" to make sure everything is work
 	zuluCrypt-test
 
 Binary install
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/4.8.0/zuluCrypt-4.8.0-debian-8-Jessie.tar.xz
-	tar xf zuluCrypt-4.8.0-debian-8-Jessie.tar.xz
-	cd zuluCrypt-4.8.0-debian-8-Jessie/amd64
-	sudo dpkg -i *.dev
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.asc
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.sha256
+	sha256sum -c zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.sha256
+	gpg2 --verify zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.asc
+	tar xf zuluCrypt-5.0.0-debian-8-Jessie.tar.xz
+	cd zuluCrypt-5.0.0-debian-8-Jessie/amd64
+	sudo dpkg -i *.deb
 
 Open a zulu drive
 Read only

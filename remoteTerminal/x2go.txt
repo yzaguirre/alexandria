@@ -1,0 +1,20 @@
+wiki.x2go.org
+http://janvandevoort.wordpress.com/2010/08/29/x2go-home-a-outstanding-remote-desktop-solution-for-ubuntu/
+	# apt-get install x2goclient
+http://wiki.x2go.org/doku.php/wiki:repositories:debian
+	apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
+	cat << EOF > /etc/apt/sources.list.d/x2go.list
+# X2Go Repository (release builds)
+deb http://packages.x2go.org/debian wheezy main
+# X2Go Repository (sources of release builds)
+deb-src http://packages.x2go.org/debian wheezy main
+
+# X2Go Repository (nightly builds)
+#deb http://packages.x2go.org/debian wheezy heuler
+# X2Go Repository (sources of nightly builds)
+#deb-src http://packages.x2go.org/debian wheezy heuler
+EOF
+	apt-get update
+	apt-get install x2go-keyring
+	apt-get update
+	apt-get install x2goserver x2goserver-xsession

@@ -32,13 +32,13 @@ DB
 Update gogs
 Backup configuration and data dir
 	cd /opt/gogs
-	cp -r custom data attachments go.key /tmp
+	cp -r custom data attachments gogs.key /tmp
 	cd ..
 	rm -rf gogs
 Download latest release
-	wget https://github.com/gogits/gogs/releases/download/v0.8.10/linux_amd64.tar.gz
+	wget https://github.com/gogits/gogs/releases/download/v0.9.46/linux_amd64.tar.gz
 	tar xfv linux_amd64.tar.gz -C /opt
-	mv /tmp/{data,custom,attachments,go.key} /opt/gogs
+	mv /tmp/{data,custom,attachments,gogs.key} /opt/gogs
 	chown git:git -R /opt/gogs
 
 https://gogs.io/docs/features/webhook.html

@@ -38,3 +38,10 @@ https://piwik.org/docs/setup-auto-archiving/
 The Piwik archive script will run every hour (at 5 minutes past).
 Generally, it completes in less than one minute. On larger websites (10,000 visits and more),
 Piwik archiving can take up to 30 minutes.
+
+Javascript tracking client
+https://developer.piwik.org/guides/tracking-javascript-guide
+https://developer.piwik.org/api-reference/tracking-javascript
+
+Tracking HTTP API
+https://developer.piwik.org/api-reference/tracking-api

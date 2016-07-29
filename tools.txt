@@ -1,3 +1,9 @@
+https://voat.co/
+https://empeopled.com/
+https://www.imzy.com/
+
+http://apidocjs.com/
+
 IDE
 geany
 vim
@@ -9,10 +15,27 @@ brackets
 zed
 gobby
 
+Editing
+sigil, mixxx, pinta, ardour, rosegarden, musescore, hydrogen, meshlab, trelby
+
+Markdown
+Haroopad
+Abricotine
+Marp
+
+Syntax highlighting
+Microlight
+https://asvd.github.io/microlight
+
+https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/linux/
+
+https://n0where.net/best-self-hosted-alternatives/
 https://victorhaggqvist.github.io/selfhosted/
 https://github.com/victorhaggqvist/selfhosted
 https://github.com/Kickball/awesome-selfhosted
 http://libreprojects.net/#favs=joindiaspora-com,owncloud,openstreetmap,jamendo,plos
+
+cheatography.com
 
 Paste Bin
 http://0bin.net/
@@ -22,7 +45,7 @@ https://sysadmincasts.com/
 facebook path picker (fpp)
 ccat
 
-http://www.privacytools.io/
+https://www.privacytools.io/
 
 organization
 tudo
@@ -46,6 +69,7 @@ secure comm
 https://encrypt.to/
 https://tox.im
 https://ostel.co/
+https://hubl.in/
 
 comm
 https://ekiga.im/
@@ -53,8 +77,16 @@ http://www.linphone.org/
 http://yateclient.yate.ro/
 http://sflphone.org/
 
+GPS
+http://owntracks.org/
+https://www.traccar.org/
+
 saas
 firebase
+
+Feeds
+canto
+newsbeuter
 
 Storage & sharing
 Hosting and sharing multimedia
@@ -140,6 +172,13 @@ mobile chat
 Telegram, Kontalk Messenger, Xabber
 https://safeum.com/price
 
+screen recorders
+recordmydesktop
+kazam
+vokoscreen
+simplescreenrecorder
+byzanz
+
 Screenreaders
 http://www.squirt.io/install.html
 https://news.ycombinator.com/item?id=7385634
@@ -176,6 +215,7 @@ https://sysdig.com/
 http://www.prq.se
 
 email services
+https://encrypt.to/
 https://protonmail.ch/
 https://openmailbox.org
 http://tempmail.de/
@@ -244,6 +284,9 @@ Video
 http://simplewebrtc.com/demo.html?dvd
 https://news.ycombinator.com/item?id=7159896
 https://echoplex.us/
+
+streaming
+liquidsoap
 
 pdf
 sumatra pdf

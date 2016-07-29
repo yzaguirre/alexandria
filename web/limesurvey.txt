@@ -1,17 +1,22 @@
 https://www.limesurvey.org/
 https://github.com/LimeSurvey/LimeSurvey
 Download
-	https://www.limesurvey.org/en/downloads/category/25-latest-stable-release?download=1268:limesurvey205plus-build150520targz
-	wget http://download.limesurvey.org/latest-stable-release/limesurvey205plus-build150520.tar.gz
-	tar xf limesurvey205plus-build150520.tar.gz -C /var/www/html
-	cd /var/www/html
+https://www.limesurvey.org/en/downloads/category/25-latest-stable-release
+	wget "https://www.limesurvey.org/stable-release?download=1785:limesurvey250plus-build160728targz" -O limesurvey250plus-build160728.tar.gz
+	tar xf limesurvey250plus-build160728.tar.gz -C /var/www
+	cd /var/www
 	chown www-data:www-data -R limesurvey
+	chmod 660 -R limesurvey/admin
+Important files and folders
+	/limesurvey/tmp
+	/limesurvey/upload/
+	/limesurvey/application/config/
 Uncomment the last line in limesurvey/.htaccess
 Database
 MySQL
 	mysql -u root -p
-	CREATE DATABASE encuestas;
-	GRANT ALL ON encuestas.* TO lime_user@'localhost' IDENTIFIED BY 'password';
+	CREATE DATABASE limesurvey;
+	GRANT ALL ON limesurvey.* TO limesurvey@'localhost' IDENTIFIED BY 'password';
 	FLUSH PRIVILEGES;
 PostgreSQL
 	sudo su postgres
@@ -23,3 +28,10 @@ PostgreSQL
 x	\c simple-api
 Run the installation script
 http://www.example.com/limesurvey/admin
+
+Default credentials
+User: admin
+Password: password
+
+Updates
+https://manual.limesurvey.org/Upgrading_from_a_previous_version

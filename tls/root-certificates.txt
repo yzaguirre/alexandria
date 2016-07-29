@@ -1,0 +1,10 @@
+http://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html
+Add
+Copy your CA to dir /usr/local/share/ca-certificates/
+	cp foo.crt /usr/local/share/ca-certificates/foo.crt
+Update the CA store:
+	update-ca-certificates
+
+Remove your CA.
+Update the CA store:
+	update-ca-certificates --fresh

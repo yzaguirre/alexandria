@@ -1,0 +1,2 @@
+
+	sslscan --no-failed site1.com:4433
