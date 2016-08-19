@@ -1,0 +1,68 @@
+http://ionicframework.com/getting-started/
+http://ionicframework.com/docs/components/#header
+	# npm install -g cordova ionic
+Create the project
+	ionic start todo blank
+	ionic start myApp tabs
+	cd myApp
+Serve the site
+	ionic serve -b
+Add platform
+Set ANDROID_HOME and ANT_HOME env
+	ANDROID_HOME=/VMs/opt/android-sdk-linux
+	ANT_HOME=/VMs/opt/apache-ant
+	export ANT_HOME ANDROID_HOME
+	set PATH=$PATH;$ANDROID_HOME/tools;$ANDROID_HOME/platform-tools;$ANT_HOME/bin
+	
+	ionic platform add android
+Test
+	ionic build android
+	ionic emulate android
+	ionic run android
+
+Package an app using Ionic package service: ionic package <MODE> <PLATFORM>
+
+CORS
+https://forum.ionicframework.com/t/solved-cors-with-ionic/7454/15
+
+Don't commit resources/
+Recreate resources/ with config.xml, following <platform name="android"> tag
+Don't commit hooks/README.md
+Don't commit initial css/style.css img/ionic.png
+
+After a git repo clone
+	cordova plugin add BarcodeScanner-2.0.1
+Will download project at plugins/ and platforms/
+	ionic platform add android
+Will modify config.xml, package.json and hooks/after_prepare/010_add_platform_class.js
+write to platforms and resources
+	bower install
+It will read bower.js and thanks to .bowerrc, will download to www/lib
+	npm install
+Will download nodejs dependencies in node_modules/
+https://stackoverflow.com/questions/30042975/manage-cordova-plugins-with-npm-package-json
+	ionic state restore
+Will download cordova dependencies in plugins/
+After the setup, you can test
+Device
+	ionic run android
+	ionic run -l -c -s --debug --device android
+
+Tutorials
+http://ivanbtrujillo.com/lector-qr-ionic/
+
+Cordova bug
+https://stackoverflow.com/questions/21239197/cordova-add-plugin-unable-to-access
+
+https://docs.npmjs.com/files/folders
+npm uninstall -g cordova
+cd ~/.npm
+rm -r cordova*
+npm install -g cordova
+
+Error: spawn EACCES
+https://github.com/driftyco/ionic/issues/3469
+	chmod u+x hooks/after_prepare/010_add_platform_class.js
+
+Image upload
+https://github.com/Mischi/angularjs-imageupload-directive

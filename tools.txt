@@ -350,3 +350,14 @@ Licencia
 http://generalbasiclicense.wordpress.com/
 
 http://xiki.org/
+
+games
+tuxemon
+supertux
+hedgewars
+xmoto
+supertuxkart
+oolite
+
+Charts
+kartesio, maxima

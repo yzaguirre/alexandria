@@ -1,0 +1,31 @@
+https://facebook.github.io/react-native/
+Install xcode, nodejs, watchman
+For mack
+	brew update
+	brew install node
+	brew install watchman
+For new versions
+	brew upgrade node
+
+Watchman on Linux
+https://codeyarns.com/2015/02/10/how-to-install-and-use-watchman/
+https://facebook.github.io/watchman/docs/install.html
+	git clone https://github.com/facebook/watchman.git
+	cd watchman
+Checkout the latest release
+	git checkout v4.6.0
+	./autogen.sh
+	./configure
+	make
+	sudo make install
+The log file can be found in /tmp/.watchman.yourusername.log
+
+Install the cli
+	npm install -g react-native-cli
+	
+Start a new project
+	react-native init weekdays --version 0.31.0
+
+Running the emulator
+	cd weekdays
+	npm start

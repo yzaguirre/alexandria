@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/1207190/embedding-base64-images
+HTML
+<img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA..." />
+CSS
+div.image {
+  width:100px;
+  height:100px;
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...);
+}
+see js/base64.txt

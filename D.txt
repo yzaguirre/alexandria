@@ -1,0 +1,45 @@
+Folders
+	~/.dub
+Compiler
+https://dlang.org/download.html
+	wget https://dlang.org/dlangspec.pdf
+	wget http://downloads.dlang.org/releases/2.x/2.071.1/dmd_2.071.1-0_amd64.deb
+	wget http://downloads.dlang.org/releases/2.x/2.071.1/dmd_2.071.1-0_amd64.deb.sig
+http://dlang.org/gpg_keys.html
+	gpg2 --verify dmd_2.071.1-0_amd64.deb.sig
+	sudo dpkg -i dmd_2.071.1-0_amd64.deb
+	touch empty.d && dmd -main empty.d -L-lssl -L-levent && ./empty
+
+http://gdcproject.org/
+https://github.com/D-Programming-GDC/GDC/releases
+	apt-get install gdc
+
+http://github.com/ldc-developers/ldc/releases
+	apt-get install ldc
+
+http://code.dlang.org/download
+https://github.com/dlang/dub/releases
+	wget https://github.com/dlang/dub/archive/v1.0.0.tar.gz
+	tar xf dub-1.0.0-linux-x86_64.tar.gz -C /usr/local/bin
+
+Edit
+	vim hello.d
+Compile
+	dmd hello.d
+
+Get help
+	dub run --help
+--force you	can	force a recompilation even if nothing has changed.
+--verbose option prints diagnostic output
+
+vibe.d
+http://vibed.org/
+http://forum.rejectedsoftware.com/groups/rejectedsoftware.vibed/
+Set up project structure
+	dub init hello --type=vibe.d
+The	project	type can be minimal, vibe.d, or deimos
+Compile and run the application
+	dub
+Dependencies downloads in ~/.dub/packages folder
+
+Use Diet templates

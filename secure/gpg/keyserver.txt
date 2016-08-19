@@ -1,0 +1,14 @@
+https://keys.mailvelope.com/
+https://github.com/mailvelope/keyserver
+	git clone https://github.com/mailvelope/keyserver.git
+	cd keyserver
+	git checkout 7a6b8c5
+
+Edit config/production.js
+
+	mongo
+	use keyserver-test
+	db.createUser({ user:"keyserver-user", pwd:"trfepCpjhVrqgpXFWsEF", roles:[{ role:"readWrite", db:"keyserver-test" }] })
+
+	npm install
+	${NODE_ENV=development} && node index.js

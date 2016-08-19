@@ -1,0 +1,22 @@
+https://stackoverflow.com/questions/3521290/logout-get-or-post
+Use POST.
+
+In 2010, using GET was probably an acceptable answer. But today (in 2013), browsers will pre-fetch pages they "think" you will visit next.
+
+HTTP methods
+https://security.stackexchange.com/questions/38635/how-is-http-put-and-delete-methods-insecure-if-they-really-are
+
+API Versioning
+https://stackoverflow.com/questions/389169/best-practices-for-api-versioning
+	
+Using a version number in the URL should not be considered a bad practice when the underlying implementation changes.
+"When the interface to a service changes in a non-backwards-compatible way, in reality an entirely new service has been created...From the client's perspective, a service is no more than an interface and some non-functional qualities...if the interface to a service changes in a non-backwards-compatible way, it no longer represents an instance of the original service, but is rather a completely new service."
+
+https://programmers.stackexchange.com/questions/159860/what-is-the-logic-for-setting-the-version-numbers-in-an-app
+Version numbers are defined as major.minor.revision which can have any arbitrary meaning, but generally when referring to applications:
+
+    Revision = Bug fix
+    Minor = Feature fixes and small adjustments
+    Major = New features and other large changes
+
+When referring to an API, a major upgrade is usually an interface change that will break users of the API. A minor upgrade is typically a change to the functionality behind API calls but the interface remains the same.

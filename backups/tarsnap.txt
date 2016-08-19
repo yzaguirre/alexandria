@@ -1,0 +1,124 @@
+https://www.tarsnap.com/download.html
+	apt install libssl-dev zlib1g-dev e2fslibs-dev build-essential
+Proceed to downloading, verifying, and building Tarsnap.
+	curl https://www.tarsnap.com/tarsnap-signing-key.asc | gpg2 --import
+	wget https://www.tarsnap.com/download/tarsnap-autoconf-1.0.37.tgz
+	wget https://www.tarsnap.com/download/tarsnap-sigs-1.0.37.asc
+Verify the integrity
+	gpg2 --decrypt tarsnap-sigs-1.0.37.asc
+	sha256sum tarsnap-autoconf-1.0.37.tgz
+	tar xf tarsnap-autoconf-1.0.37.tgz
+	cd tarsnap-autoconf-1.0.37
+	./configure --prefix=/usr/local/tarsnap
+	make
+	# make install
+x	make all install clean
+	vim + ~/.profile
+export TARSNAP=/usr/local/tarsnap
+export PATH=$PATH:$TARSNAP/bin
+
+Tarsnap installs a default configuration file as
+	/usr/local/etc/tarsnap.conf.sample
+Config file
+	/usr/local/etc/tarsnap.conf
+	~/.tarsnaprc
+TCP port 9279
+
+	cp /usr/local/tarsnap/tarsnap.conf.sample /usr/local/tarsnap/tarsnap.conf
+
+Configure the client
+Registering machines to Tarsnap
+Create a key and register it in one step
+	tarsnap-keygen --keyfile keyfile --user username --machine machine
+	tarsnap-keygen --keyfile keyfile --user username --machine www
+	tarsnap-keygen --passphrased --keyfile keyfile --user username --machine www
+		Enter tarsnap account password:
+The default Tarsnap keyfile location is /root/tarsnap.key.
+If custom key, set the key location in tarsnap.conf
+Machine name can be: username@machine
+
+Naming convention
+user-date-directory
+ej: www-2016-12-01-varwww
+
+Your First Tarsnap Backup
+Archive names can be up to 1023 characters long.
+The -C flag tells Tarsnap to use a different working directory
+	tarsnap -c -f etctest-2014-12-23 /etc/
+	tarsnap -c -f homearchieve -C / home
+	tarsnap -c -f postgres -C /var/db/postgres/9.2 data
+List all of the archives associated with this machine's key
+	tarsnap --list-archives
+	tarsnap --list-archives -v
+List all of the archives in order by creation date
+	tarsnap --list-archives -v | sort -ik 2,3 | column -t
+To sort by reverse chronological order, add the -r option to the sort command.
+To see trailing spaces, do
+	tarsnap --list-archives | hexdump -C
+Your First Extraction
+	cd /tmp
+	tarsnap -x -f etctest-2014-12-23
+Delete mode removes an archive
+	tarsnap -d -f etctest-2014-12-23
+	tarsnap -d -f etctest-2014-12-23 -f archive2
+Listing archive displays a list of all files in that archive.
+	tarsnap -t -f etctest-2014-12-23
+	tarsnap -t -f etctest-2014-12-23 -v | sort
+Read mode is like Extract, but uses stdout
+	tarsnap -r -f etctest-2014-12-23
+Statistics on an individual archive, or on all archives stored with this key.
+	tarsnap --print-stats
+	tarsnap --print-stats -f etctest-2014-12-23
+	tarsnap --print-stats -f '*'
+
+Do dry runs
+	tarsnap -cvf complete-2014-12-28 --dry-run /home/$USER/downloads
+Delete EVERYTHING!
+	tarsnap --nuke
+If you didn't use -v, send a SIGUSR1
+	pkill --signal SIGUSR1 tarsnap
+
+Tarsnap GUI
+https://news.ycombinator.com/item?id=9698404
+https://github.com/Tarsnap/tarsnap-gui/wiki/Tarsnap#screenshots
+https://github.com/Tarsnap/tarsnap-gui/blob/master/INSTALL
+	sudo apt-get install g++ git qtbase5-dev
+	wget https://github.com/Tarsnap/tarsnap-gui/archive/v0.5.tar.gz
+	tar xf v0.5.tar.gz
+	cd tarsnap-gui-0.5
+	export QT_SELECT=qt5
+	qmake && make -j$(nproc)
+	mv tarsnap-gui /usr/local/bin
+
+Recovery
+To manually recover a Tarsnap archive
+	tarsnap --recover
+Incomplete archives have .part added to the end.
+Look at this partial archive and see what it contains
+	tarsnap -tf flamp3.part
+What you can do is create a new backup of the same files, using a different archive name. Tarsnap won't re-upload the blocks in the truncated upload.
+
+To create a checkpoint when you manually quit a Tarsnap session, use
+CTRL-Q (or send SIGQUIT to the Tarsnap process) instead of CTRL-C.
+
+Substitution
+Here I create a new archive, but have Tarsnap look for the string etc in a file path and replace it on the fly with oldetc.
+	tarsnap -s /etc/oldetc/ -cf etcbackup /etc
+	tarsnap -s ,etc,/var/tarsnap/dr, -cf etcbackup3 etc
+
+# Key management
+Key permissions and subkeys
+Priviledge flags
+	* -r list and extract
+	* -w write
+	* -d list and delete
+	* --nuke delete without read
+Create a read-only key from main key
+	tarsnap-keymgmt --outkeyfile readonly.key -r tarsnap.key
+Create a key with multiple permissions
+	tarsnap-keymgmt --outkeyfile rwd.key -r -w -d tarsnap.key
+	tarsnap-keymgmt --outkeyfile rwd.key -r -w -d --passphrased tarsnap.key
+This generates a read/write key identical to the original key. It's useful if you want to add a passphrase.
+
+Pull a key out of a main file key
+

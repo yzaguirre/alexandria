@@ -1,0 +1,23 @@
+Adapters
+http://docs.phalconphp.com/en/latest/reference/db.html#database-adapters
+http://docs.phalconphp.com/en/latest/api/Phalcon_Db_Adapter_Pdo_Sqlite.html
+
+Create database
+	cd ~/public_html/sandbox/phalcon/zgasite/
+	sqlite3 zgasite.db
+	CREATE TABLE cliente(id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, telefono INTEGER, nit INTEGER, fecha_transaccion TEXT, lote TEXT, manzana TEXT, sector INTEGER, colonia TEXT, comentario TEXT, suscrito INTEGER DEFAULT 1);
+Code
+// Required
+$config = array(
+    "dbname" => "/home/david/public_html/sandbox/phalcon/zgasite"
+);
+
+// Create a connection
+$connection = new \Phalcon\Db\Adapter\Pdo\Sqlite($config);
+
+Create a project
+	phalcon project zgasite --enable-webtools
+Modify config.php
+Create client model
+	phalcon model cliente
+	phalcon scaffold --table-name cliente

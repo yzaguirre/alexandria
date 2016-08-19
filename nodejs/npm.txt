@@ -1,0 +1,42 @@
+Install NPM
+http://gurustop.net/blog/2015/01/12/sudo-npm-install-g-global-mac-ubuntu-linux-windows
+Make a folder
+	sudo mkdir /opt/npm
+	chown $user:$user -R /opt/npm
+	npm config set prefix /opt/npm
+Install common libs
+	apt-get install libkrb5-dev
+Add /opt/npm/bin directory to PATH, adapt ~/.profile
+	export PATH="$PATH:/opt/npm/bin"
+First project
+	$ vim package.json
+	$ npm install
+show modules
+	$ npm ls
+Add dependency
+http://stackoverflow.com/questions/16564746/how-to-add-browserify-as-a-dependency-of-your-node-js-application
+	npm install --save browserify
+This not only installs browserify for you, but also adds it as a dependency to your dependencies in your package.json file.
+Remove dependency
+	npm ls
+	npm rm --save jsonwebtoken
+
+Update package
+https://docs.npmjs.com/getting-started/updating-global-packages
+	npm outdated -g --depth=0
+	npm update jshint -g
+Uninstall package
+https://docs.npmjs.com/getting-started/uninstalling-global-packages
+	npm uninstall jshint -g
+
+https://stackoverflow.com/questions/32919589/npm-install-mongoose-causes-gyp-and-kerberos-errors-gssapi-gssapi-h-file-not-fo
+	apt-get install libkrb5-dev
+.node-gyp/4.2.3/common.gypi not found
+https://stackoverflow.com/questions/33068594/node-gyp-4-1-2-common-gypi-not-found
+	Fix it by removing the version restriction from gulp, gulp-sass and reinstalling the modules
+https://stackoverflow.com/questions/33068594/node-gyp-4-1-2-common-gypi-not-found
+https://stackoverflow.com/questions/17967546/common-gypi-not-found-error-in-node-js
+	rm -rf ~/.node_gyp
+	cd myAwesomeProject
+	npm install
+	npm rebuild

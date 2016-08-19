@@ -2,10 +2,10 @@ https://talks.golang.org/2016/applicative.slide
 http://engineroom.teamwork.com/go-learn/
 https://golang.org/dl/
 https://golang.org/doc/install
-	wget https://storage.googleapis.com/golang/go1.6.3.linux-amd64.tar.gz
-	sha256sum go1.6.3.linux-amd64.tar.gz
-cdde5e08530c0579255d6153b08fdb3b8e47caabbe717bc7bcd7561275a87aeb
-	tar xf go1.6.3.linux-amd64.tar.gz -C /opt
+	wget https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz
+	sha256sum go1.7.linux-amd64.tar.gz
+702ad90f705365227e902b42d91dd1a40e48ca7f67a2f4b2fd052aaa4295cd95
+	tar xf go1.7.linux-amd64.tar.gz -C /opt
 	mkdir /VMs/opt/go/libs
 	vim + ~/.profile
 export GOROOT=/opt/go
@@ -55,3 +55,6 @@ https://blog.golang.org/strings
 for i := 0; i < len(sample); i++ {
         fmt.Printf("%x ", sample[i])
     }
+
+https://github.com/gtank/cryptopasta
+https://news.ycombinator.com/item?id=12107682s

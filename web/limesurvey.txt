@@ -27,7 +27,7 @@ PostgreSQL
 	ALTER GROUP apps ADD USER "limesurvey";
 x	\c simple-api
 Run the installation script
-http://www.example.com/limesurvey/admin
+http://www.example.com/limesurvey
 
 Default credentials
 User: admin

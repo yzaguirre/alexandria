@@ -1,0 +1,5 @@
+Calculator
+	bc
+obase=2
+6
+110

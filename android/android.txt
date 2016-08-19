@@ -45,3 +45,6 @@ If you get a security warning saying that the authenticity or validity of the so
 
 
 https://developer.android.com/training/connect-devices-wirelessly/nsd.html
+
+Colors
+https://developer.android.com/reference/android/R.color.html

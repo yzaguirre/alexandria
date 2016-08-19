@@ -1,3 +1,7 @@
+Remote login access
+	sudo chsh www-data
+replace /usr/sbin/nologin for /bin/bash
+
 http://www.slashroot.in/how-to-secure-apache-web-server
 ServerSignature Off
 ServerTokens Prod

@@ -7,8 +7,3 @@ https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-
 
 http://esr.ibiblio.org/?p=6990
 http://martin.kleppmann.com/2013/05/24/improving-security-of-ssh-private-keys.html
-
-
-backups
-https://news.ycombinator.com/item?id=11342968
-

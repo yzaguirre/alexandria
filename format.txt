@@ -32,6 +32,7 @@ http://crunchbang.org/forums/viewtopic.php?id=23267
 usbdevice has to be sdb
 	# dd if=mini.iso of=/dev/sdb bs=4M; sync
 	# dd if=crunchbag.iso of=/dev/sdb bs=4M; sync
+	# dd if=crunchbag.iso of=/dev/sdb bs=4M status=progress; sync
 http://community.linuxmint.com/tutorial/view/744
 	# dd if=linuxmint.iso of=/dev/sdb oflag=direct bs=1048576
 	

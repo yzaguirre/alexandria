@@ -1,0 +1,86 @@
+List of all connected audio devices that ALSA knows about
+	cat /proc/asound/cards
+Control audio
+	alsamixer
+Control audio on other devce (found in asound folder)
+	alsamixer -c1
+You can easily switch between cards using the F6 or S keys
+
+Switching between HDMI and analog audio output
+Sets the audio out to the 3.5 mm analog jack.
+	amixer cset numid=3 1: 
+Sets the audio out to the HDMI cable.
+	amixer cset numid=3 2: 
+
+Install SoX and an add-on for dealing with MP3 files
+	sudo apt-get install sox libsox-fmt-mp3
+
+Testing the speakers
+	speaker-test -c2 -t wav
+
+To save a recording to a file named myrec.wav on the SD card
+	sox -t alsa plughw:1 myrec.wav
+Play back the recording using the following command
+	sox myrec.wav -d
+If your USB gadget happens to have speakers, like a headset, you could listen
+to the recording in the headphones with the following command:
+	sox myrec.wav -t alsa plughw:1
+
+Writing to an MP3 or OGG file
+Type in the following command to install the LAME encoder (for MP3) and the
+Vorbis encoder (for OGG)
+	sudo apt-get install lame vorbis-tools
+
+To encode myrec.wav to myrec.mp3
+	lame myrec.wav
+To encode myrec.wav to myrec.ogg
+	oggenc myrec.wav
+
+Record straight to an MP3 or OGG file
+	sox -t alsa plughw:1 -t wav - | lame - myrec.mp3
+	sox -t alsa plughw:1 -t wav - | oggenc - -o myrec.ogg
+You can then play back these formats with sox just like any other file:
+	sox myrec.mp3 -d
+
+Make alias
+	alias record='sox -t alsa plughw:1 -t wav - | lame -'
+	alias micmaxvol='amixer -c1 sset Mic 100'
+Now all you have to do to start recording to the newrec.mp3 file is type in
+the following:
+	record newrec.mp3
+Now, to send the audio from our microphone to the speakers on the Pi, use
+the following command
+	sox -d -d
+	sox -d -t sox - | ssh rasp sox -q -t sox - -d
+
+	cat ~/"Desktop/My Song.mp3" | ssh pi@[IP address] sox -t mp3 - -d
+	cat ~/"Desktop/My Album/"*.mp3 | ssh pi@[IP address] sox -t mp3 - -d
+
+
+Tired of your own voice by now? Let's make it more interesting by applying some
+interesting SoX effects!
+	sox --help-effect=all
+
+In this example, we'll start a monitoring loop on the Pi and apply a reverb effect to
+our voice, live as it plays back through the speakers:
+	sox -t alsa plughw:1 -d reverb
+How about that? Sounds like we're stuck in a cave. Let's see what parameters the
+reverb effect takes:
+	sox -t alsa plughw:1 -d reverb ?
+Normal record
+	sox -t alsa plughw:0 myvoice.wav
+
+Make it talk
+espeak "I'm sorry, Dave. I'm afraid I can't do that."
+espeak -f /etc/motd -v french
+ls | espeak --stdout | sox -t wav - -d reverb 99 50 0
+echo "It's a UNIX system. I know this." | espeak -w iknow.wav
+
+Finally, to get a list of the different voices available, use 
+	espeak --voices
+	espeak --voices=es
+
+An automated SoX recording will continue to run until the Pi runs out of SD card
+space. We can use the trim effect to stop the recording (or playback) after a certain
+amount of time has elapsed:
+	sox -t alsa plughw:1 myrec.wav trim 0 00:30:00
