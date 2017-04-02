@@ -12,20 +12,20 @@ tftpd
 trivial ftp server
 
 http://www.proftpd.org/
-	# apt-get install proftpd-basic
+	apt install proftpd-basic
 http://www.proftpd.org/docs/howto/ConfigFile.html
 edit
-	# vim /etc/proftpd.conf
-	# vim /usr/local/etc/proftpd.conf
+	vim /etc/proftpd.conf
+	vim /usr/local/etc/proftpd.conf
 to add FTP users, you simply need to create new system accounts for those users in your /etc/passwd file.
 
 
 Intalar el servidor FTP "proftpd" en Linux Ubuntu 13.04
 http://www.youtube.com/watch?v=CQfzF2hlDKg
-	# apt-get install proftpd
+	apt install proftpd
 -> independiente
-	# apt-get install apache2
-	# vim /etc/apache2/apache2.conf
+	apt install apache2
+	vim /etc/apache2/apache2.conf
 Crear usuarios, por el momento tenemos a user y root
 
 #!/bin/bash

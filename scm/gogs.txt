@@ -6,9 +6,10 @@ http://www.apertoire.net/gogs-an-alternative-to-gitlab/
 https://help.github.com/articles/closing-issues-via-commit-messages/
 
 http://gogs.io/docs/installation
-	wget https://github.com/gogits/gogs/releases/download/v0.9.71/linux_amd64.tar.gz
+	wget https://github.com/gogits/gogs/releases/download/v0.10.18/linux_amd64.tar.gz
 	mkdir -p /home/git/.ssh
 	tar xf linux_amd64.tar.gz -C /opt
+	
 Create User to run gogs
 	useradd -d /home/git --uid 1005 -s /bin/bash git
 x	usermod -s /usr/bin/git-shell git
@@ -36,7 +37,7 @@ Backup configuration and data dir
 	cd ..
 	mv gogs gogs-old
 Download latest release
-	wget https://github.com/gogits/gogs/releases/download/v0.9.71/linux_amd64.tar.gz
+	wget https://github.com/gogits/gogs/releases/download/v0.9.113/linux_amd64.tar.gz
 	tar xf linux_amd64.tar.gz -C /opt
 	mv /tmp/{data,custom,attachments,gogs.key} /opt/gogs
 	chown git:git -R /opt/gogs

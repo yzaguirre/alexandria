@@ -14,3 +14,6 @@ Although Phalcon does not binary link to other extensions it does use some of th
     PDO/Sqlite
     PDO/Oracle
     Mongo
+
+	curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.rpm.sh | sudo bash
+	sudo apt-get install php7.0-phalcon

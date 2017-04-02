@@ -36,7 +36,7 @@ http_port 3128
 hierarchy_stoplist cgi-bin ?
 coredump_dir /var/spool/squid3
 	sudo service squid3 restart
-
+	grep -Ev "(^#|^$)" /etc/squid/squid.conf > /etc/squid/squid.edit
 Free proxy
 https://blog.haschek.at/post/fd9bc
 
@@ -74,3 +74,6 @@ Concat the private + public + intermediate + dh
 	mitmproxy -T --host --client-certs DIRECTORY
 http://darkk.net.ru/redsocks/
 http://proxychains.sourceforge.net/howto.html
+
+Chromium proxy
+	chromium --proxy-server="socks5://foobar:66"

@@ -1,0 +1,138 @@
+https://news.ycombinator.com/item?id=10364760
+http://dougblack.io/words/a-good-vimrc.html
+
+https://sankho.github.io/web_log/2015/08/02/vim-8-takeaways-from-one-year-of-typing.html
+http://www.badassvim.com/
+Plugins
+https://news.ycombinator.com/item?id=9111344
+
+Comment out all lines containing DEBUG by putting hash marks at the start
+:g/DEBUG/norm 0i#
+Add C-like comments to DEBUG lines
+:g/DEBUG/norm 0i/* ^[A */
+
+Globalization
+:g/someword/m0
+:g/someword/d
+
+delete paragraph dap
+delete sentence das
+change inside quotes ci"
+find matching bracket %
+search word under the cursor *
+
+:w !sudo tee %﻿
+http://blog.desdelinux.net/viernes-terminal-pensando-vim/
+substitute
+:%s/\s\+/ /g
+:%s/vim/Vim/g
+:3,5s/Vim/VIM/g
+:3,5s/Vim/VIM
+Eliminar comentarios
+:.,$g/#/d
+
+http://www.linuxvoice.com/learn-to-love-vim/
+http://michael.peopleofhonoronly.com/vim/
+
+http://vim.wikia.com/wiki/Display_line_numbers
+	:set nonumber
+	:set ruler
+	:set laststatus=2
+	:syntax on
+Edit ~/.vimrc, contents:
+set ruler laststatus=2 number title hlsearch
+syntax on
+	
+Open Vim and jump to end of file:
+	$ vim + some_file_name
+http://vim.wikia.com/wiki/Using_tab_pages
+^WT mv to new tab
+:tabs         list all tabs including their displayed windows
+:tabm 0       move current tab to first
+:tabm         move current tab to last
+:tabm {i}     move current tab to position i+1
+
+:tabn         go to next tab
+:tabp         go to previous tab
+:tabfirst     go to first tab
+:tablast      go to last tab
+
+gt            go to next tab
+gT            go to previous tab
+{i}gt         go to tab in position i
+
+^D half page down
+^U half page up
+^F page forward
+^B page backward
+^E on line up
+^Y on line down
+z ENTER Move current line to top of screen and scroll.
+z. Move current line to center of screen and scroll.
+z- Move current line to bottom of screen and scroll.
+
+^wj down
+^wk up
+^wh left
+^wl right
+https://github.com/mattn/gist-vim
+w - Moves the cursor to the beginning of the next word.
+b - Moves the cursor to the beginning of the previous word.
+0 (zero) - Moves the cursor to the beginning of the current line.
+$ - Moves the cursor to the end of the current line.
+H - Moves the cursor to the upper-left corner of the screen (first line on the screen).
+M - Moves the cursor to the first character of the middle line on the screen.
+L - Moves the cursor to the lower-left corner of the screen (last line on the screen).
+
+x - Deletes the character under the cursor.
+X - Deletes the character directly before the cursor.
+dw - Deletes from the current character to the end of the current word.
+d$ - Deletes from the current character to the end of the current line.
+d0 - Deletes from the previous character to the beginning of the current line.
+
+Change		Delete		Copy From	cursor to...
+cH			dH			yH			Top of screen
+cL			dL			yL			Bottom of screen
+c+			d+			y+			Next line
+c5|			d5|			y5|			Column 5 of current line
+2c)			2d)			2y)			Second sentence following
+c{			d{			y{			Previous paragraph
+c/pattern	d/pattern	y/pattern	Pattern
+cn			dn			yn			Next pattern
+cG			dG			yG			End of file
+c13G		d13G		y13G		Line number 13
+
+Go to given line n	nG
+Go to end of file	G
+
+Command line
++n file			Open file at line number n.
++ file			Open file at last line.
++/pattern file	Open file at first occurrence of pattern (traditional version of POSIX -c).
+-c command file	Run command after opening file; usually a line number or search (POSIX version of +).
+-R 				Operate in read-only mode (same as using view instead of vi).
+-r 				Recover files after a crash.
+
+Bookmarks
+mx	Mark current position with x.
+'x	Move cursor to first character of line marked by x.
+`x	Move cursor to character marked by x.
+``	Return to exact position of previous mark or context.
+''	Return to beginning of the line of previous mark or context.
+
+Panes
+v - vertical
+s - horizontal
+
+
+Ex commands
+d delete
+m move
+co copy
+t copy
+
+Total line numbers
+:=
+
+http://vim.wikia.com/wiki/AES256_encryption_in_Vim
+https://linux-audit.com/using-encrypted-documents-with-vim/

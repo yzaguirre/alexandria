@@ -1,0 +1,26 @@
+http://www.tinc-vpn.org/examples/windows-install/
+cd tinc
+	tincd.exe -n dvdnet -K
+Administrador
+Configuring the virtual network device
+run addtap.bat in tinc's installation directory.
+This will add a new virtual network device. (If you want to run more than one tinc daemon, you will need to create extra virtual network devices.)
+
+After that, open the Network and Dial-up connections control panel,
+and change the name of the new interface to the same as you specified in tinc.conf, 
+in our case to tap0.
+
+Then, double-click on the new interface. 
+You can enable the icon in the taskbar if you want.
+Click on Internet Protocol and then on Configure.
+Manually set the address to that of your computer on the VPN, in this example 10.20.40.1.
+The subnet mask should be set to that of the entire VPN, in this example 255.255.0.0.
+
+Starting tinc
+
+Now that everything has been set up, it is time to start tinc.
+Start command.com, go to tinc’s installation directory and start tinc with the right -n option:
+	tincd -n dvdnet
+If everything went well, it will tell you that it installed itself as a service and started it.
+
+You can temporarily stop and start tinc from the Service control panel.

@@ -14,3 +14,15 @@ Serve with netcat
 	echo 'Hello, world!' | qrencode -l L -v 1 -o - | ncat -lp 55556
 Image tag:
 <img src="http://localhost:55556" >
+
+https://outflux.net/blog/archives/2015/01/13/barcode-consolidation/
+Install barcode
+	wget https://ftp.gnu.org/gnu/barcode/barcode-0.99.tar.gz
+	wget https://ftp.gnu.org/gnu/barcode/barcode-0.99.tar.gz.sig
+	gpg --verify barcode-0.99.tar.gz.sig
+	tar xf barcode-0.99.tar.gz
+	cd barcode-0.99
+	config
+	make
+	sudo make install
+	barcode -S -u in -g 1.5x0.5 -e upc-a      -b '035576322436' > albertsons.svg

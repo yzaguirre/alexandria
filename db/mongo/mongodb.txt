@@ -4,7 +4,32 @@ https://docs.mongodb.org/manual/reference/mongo-shell/
 	use <db>
 	show collections
 	show users
-	
+Create admin
+https://www.cyberciti.biz/faq/how-to-secure-mongodb-nosql-production-database/
+	use admin
+	db.createUser({user:"vivek",pwd:"mySuperSecretePasswordHere", roles:[{role:"userAdminAnyDatabase",db:"admin"}]})
+	exit
+	vim /etc/mongodb.conf
+security:
+  authorization: enabled
+  
+  systemctl restart mongodb
+To authenticate during connection using user vivek and password for the admin database:
+	mongo -u vivek -p mySuperSecretePasswordHere --authenticationDatabase admin
+Add additional user to your DB. First create a new database called "nixcraft":
+	use nixcraft
+Create a user named 'nixdbuser' with a password named 'myKoolPassowrd' for nixcraft db:
+	db.createUser(
+     {
+       USER: "nixdbuser",
+       pwd: "myKoolPassowrd",
+       roles: [ { ROLE: "readWrite", db: "nixcraft" },
+                { ROLE: "read", db: "reporting" } ]
+     }
+   )
+
+You can now connect to nixcraft db as follows:		
+	mongo --port 27017 -u "nixdbuser" -p "myKoolPassowrd" --authenticationDatabase "nixcraft"
 https://docs.mongodb.org/manual/tutorial/configure-ssl/
 	mongod --sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem
 net:

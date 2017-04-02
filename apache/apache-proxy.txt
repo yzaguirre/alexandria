@@ -22,3 +22,9 @@ https://httpd.apache.org/docs/2.4/vhosts/examples.html
     ProxyPassReverse / http://192.168.111.2/
     ServerName hostname.example.com
 </VirtualHost>
+
+https://www.digitalocean.com/community/tutorials/how-to-use-apache-as-a-reverse-proxy-with-mod_proxy-on-ubuntu-16-04
+<Proxy balancer://mycluster>
+    BalancerMember http://127.0.0.1:8080
+    BalancerMember http://127.0.0.1:8081
+</Proxy>

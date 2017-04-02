@@ -1,0 +1,89 @@
+https://play.google.com/store/apps/details?id=org.poirsouille.tinc_gui
+http://tinc_gui.poirsouille.org/
+
+netname=dvdnet
+nodename=bmobile
+ip='10.0.0.11'
+subnet=${ip}'/32'
+interface='tun0'
+connectto=ec2tk
+
+on android
+	mkdir /sdcard/tinc
+	mkdir /sdcard/tinc/dvdnet/
+	mkdir /sdcard/tinc/dvdnet/hosts
+
+	vim tinc.conf
+Name = bmobile
+AddressFamily = ipv4
+ConnectTo = ec2dvd
+Device = /dev/tun
+DeviceType = tap
+Mode = switch
+KeyExpire = 3600
+Interface = tap0
+PrivateKeyFile = /sdcard/tinc/dvdnet/rsa_key.priv
+ScriptsInterpreter = /system/bin/sh
+
+	vim tinc-up
+#!/system/bin/sh
+ifconfig $INTERFACE 10.7.7.13
+echo 1 > /proc/sys/net/ipv4/conf/$INTERFACE/rp_filter
+
+	vim ec2dvd-up
+#!/system/bin/sh 
+echo $REMOTEADDRESS
+echo $INTERFACE 
+VPN_GATEWAY=10.7.7.1
+ORIGINAL_GATEWAY=`ip route show | grep ^default | cut -d ' ' -f 2-5`
+
+ip route add $REMOTEADDRESS $ORIGINAL_GATEWAY 
+ip route add $VPN_GATEWAY dev $INTERFACE 
+ip route add 0.0.0.0/1 via $VPN_GATEWAY dev $INTERFACE 
+ip route add 128.0.0.0/1 via $VPN_GATEWAY dev $INTERFACE
+
+	vim ec2dvd-down
+#!/system/bin/sh
+VPN_GATEWAY=10.7.7.1
+ORIGINAL_GATEWAY=`ip route show | grep ^default | cut -d ' ' -f 2-5`
+
+ip route del $REMOTEADDRESS $ORIGINAL_GATEWAY 
+ip route del $VPN_GATEWAY dev $INTERFACE 
+ip route del 0.0.0.0/1 via $VPN_GATEWAY dev $INTERFACE 
+ip route del 128.0.0.0/1 via $VPN_GATEWAY dev $INTERFACE
+
+	adb push tinc.conf /sdcard/tinc/dvdnet/
+	adb push tinc-up /sdcard/tinc/dvdnet/
+	adb push ec2dvd-up /sdcard/tinc/dvdnet/hosts
+	adb push ec2dvd-down /sdcard/tinc/dvdnet/hosts
+
+Push server public key
+	adb push /etc/tinc/dvdnet/hosts/ec2dvd /sdcard/tinc/dvdnet/hosts
+
+# generate the public/private keypair for this host:
+tincd -n $netname -K4096
+push private key
+	adb push /etc/tinc/dvdnet/rsa_key_bmobile.priv /sdcard/tinc/dvdnet/
+# now push its public key, but combine the key with Subnet
+	vim bmobile
+Subnet = $subnet
+	adb push /etc/tinc/dvdnet/hosts/bmobile /sdcard/tinc/dvdnet/hosts
+# and send this public key to $connectto (server)
+
+I'm getting "/dev/net/tun not found" error when starting tinc
+
+Depending on your ROM, the path to TUN/TAP device might be different. 
+Use the Device directive in tinc.conf to specify the correct one (eg. "Device = /dev/tun for CM ROMs).
+
+
+Is it possible to start/stop the service from other applications (such as tasker)?
+
+Yes, since version 0.9.9. This can be done using the custom actions of TincdService.
+Package: org.poirsouille.tinc_gui
+Class: org.poirsouille.tinc_gui.TincdService
+Actions: org.poirsouille.tinc_gui.TincdService.START / org.poirsouille.tinc_gui.TincdService.STOP
+
+You may test this functionality using ADB to send the intents:
+
+	adb shell am startservice -a org.poirsouille.tinc_gui.TincdService.START org.poirsouille.tinc_gui/.TincdService
+	adb shell am startservice -a org.poirsouille.tinc_gui.TincdService.STOP org.poirsouille.tinc_gui/.TincdService

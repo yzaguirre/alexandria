@@ -1,0 +1,9 @@
+pkg install tinc
+mkdir /usr/local/etc/tinc
+cd /usr/local/etc/tinc
+http://www.tinc-vpn.org/documentation/Configuration-of-FreeBSD-kernels.html
+http://www.notadiscussion.com/2012/06/my-tinc-setup-after-upgrading-from.html
+	kldload if_tap
+	echo 'if_tap_load="YES"' >> /boot/loader.conf
+	echo 'tincd_enable="YES"' >> /etc/rc.conf
+	echo 'cloned_interfaces="lo1 lo2 lo3 tap0 tun0"' >> /etc/rc.conf

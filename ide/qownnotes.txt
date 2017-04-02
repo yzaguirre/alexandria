@@ -1,0 +1,5 @@
+http://www.qownnotes.org/
+	wget http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/Release.key -O - | sudo apt-key add - 
+	echo 'deb http://download.opensuse.org/repositories/home:/pbek:/QOwnNotes/Debian_8.0/ /' >> /etc/apt/sources.list.d/qownnotes.list
+	sudo apt-get update
+	sudo apt-get install qownnotes

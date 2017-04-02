@@ -1,4 +1,12 @@
+Install or update packages
+	apt install libgcrypto20
 https://alexcabal.com/creating-the-perfect-gpg-keypair/
+https://keyring.debian.org/creating-key.html
+https://ekaia.org/blog/2009/05/10/creating-new-gpgkey/
+https://www.gnupg.org/gph/en/manual.html
+https://wiki.debian.org/Subkeys?action=show&redirect=subkeys
+http://fedoraproject.org/wiki/Creating_GPG_Keys
+https://help.ubuntu.com/community/GnuPrivacyGuardHowto
 https://news.ycombinator.com/item?id=10723727
 
 Privacy Please! https://vimeo.com/132517596
@@ -6,13 +14,19 @@ https://news.ycombinator.com/item?id=8761896
 https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/zimmermann-why-pgp.html
 http://www.techweekeurope.co.uk/e-regulation/phil-zimmermann-privacy-silent-circle-166897
 http://www.bootc.net/archives/2013/06/07/generating-a-new-gnupg-key/
-http://viccuad.me/blog/secure-yourself-part-1-airgapped-computer-and-GPG-smartcards/
+http://viccuad.me/blog/secure-yourself-part-1-airgapped-computer-and-GPG-smartcards
 https://news.ycombinator.com/item?id=9550094
 https://github.com/ioerror/duraconf/raw/master/configs/gnupg/gpg.conf
 
-http://blog.cryptographyengineering.com/2015/02/how-do-we-pay-for-privacy.html
-http://comments.gmane.org/gmane.comp.encryption.gpg.user/41144
+https://blog.cryptographyengineering.com/2015/02/10/how-do-we-pay-for-privacy/
 http://aplawrence.com/Basics/gpg.html
+
+Print hashes
+http://www.gossamer-threads.com/lists/gnupg/users/51288
+	gpg --print-md SHA256 file
+
+Automating
+	gpg2 --batch --yes --logger-file filename --passphrase-file filename -s
 
 see secure/LUKS.txt
 Create a directory for GnuPG to use as its 'home' directory, and set an environment variable to point to it
@@ -33,6 +47,7 @@ but it has no other special meaning - it's purely cosmetic.
 	gpg2 --edit-key 27703CF0
 	uid 2
 	primary
+	setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
 	save
 The primary key is denoted by the '.' next to the UID number, the '*' is the identity selected using the uid command.
 Creating your sub-keys

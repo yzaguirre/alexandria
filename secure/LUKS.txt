@@ -1,6 +1,13 @@
+Check if dm_crypt is compiled
+	grep -i config_dm_crypt /boot/config-$(uname -r)
+Check if loaded
+	lsmod | grep dm_crypt
+If not loaded, load
+	modprobe dm_crypt
+
 LUKS - Linux Unified Key Setup
 http://elbinario.net/2014/12/19/cifrar-usb-con-luks/
-	apt-get install cryptsetup
+	apt install cryptsetup
 Creating a vault inside a file
 Create an empty file to hold our vault.
 	dd if=/dev/zero of=~/myvault.vol bs=1M count=[size]
@@ -8,6 +15,11 @@ Create an empty file to hold our vault.
 Create an encrypted filesystem inside the myvault.vol file
 	sudo luksformat -t vfat ~/myvault.vol
 	sudo luksformat -t ext4 ~/myvault.vol
+Or
+	sudo cryptsetup luksFormat ~/myvault.vol
+But you have to format the mapper drive using fdisk to an apropiate file system (eg. ext4)
+Print defaults for encryption drive are
+	less /proc/crypto
 
 Get a detailed report
 	cryptsetup luksDump ~/myvault.vol
@@ -21,6 +33,10 @@ Mount the vault under a directory in /home/user/ for easy access.
 The user ID/group ID arguments that we specify here are specifically for the FAT32 filesystem
 With an ext4 filesystem these extra flags are not necessary because the permissions of the directory itself determine access.
 Use df -h ~/vault to keep an eye on the space available in the vault.
+	mount -t ext4 -o journal_checksum /dev/mapper/myvault ~/vault
+
+Before the mount, you might want for format the mapper
+	mkfs -t ext4 /dev/mapper/myvault
 
 To safely close the vault, you need to unmount it first
 	umount ~/vault

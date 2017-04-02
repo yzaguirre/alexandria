@@ -28,3 +28,5 @@ Installing:
 x	$ make install DESTDIR=/VMs/opt
 	# make install
 https://www.keepassx.org/dev/projects/keepassx/wiki/Install_instructions
+
+http://keepass.info/help/base/autotype.html

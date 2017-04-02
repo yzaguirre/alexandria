@@ -1,6 +1,8 @@
 tmpfs
 https://www.youtube.com/watch?v=yGLD0a-C4Uc
-	mkdir memo && mount -t tmpfs -o size=1G tmpfs memo
+	mkdir memo
+	mount -t tmpfs -o size=1G tmpfs memo
+or	mount -t tmpfs -o size=2048m shmfs /dev/shm
 	cd memo/ && time sh -c "dd if=/dev/zero of=ddfile bs=700M count=1 && sync"
 
 http://www.cyberciti.biz/tips/what-is-devshm-and-its-practical-usage.html
@@ -10,6 +12,7 @@ How do I restrict or modify size of /dev/shm permanently?
 	vim /etc/fstab
 Append or modify /dev/shm entry as follows to set size to 8G
 none      /dev/shm        tmpfs   defaults,size=8G        0 0
+tmpf /mnt/memo tmpfs size=2G 0 0
 
 For the changes to take effect immediately remount /dev/shm:
 	mount -o remount /dev/shm

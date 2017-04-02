@@ -64,3 +64,24 @@ http://www.zx2c4.com/projects/password-store/
 https://news.ycombinator.com/item?id=7495337
 	apt-get install pass
 	echo "source /etc/bash_completion.d/password-store" >> ~/.bashrc
+
+https://www.cyberciti.biz/open-source/debian-ubuntu-centos-linux-setup-additional-entropy-for-server-using-aveged-rng-tools-utils/#comments
+https://linux-audit.com/gpg-key-generation-not-enough-random-bytes-available/
+	cat /proc/sys/kernel/random/entropy_avail
+	apt install rng-tools dieharder haveged
+Test it
+	cat /dev/random | rngtest -c 1000
+	rngd -f -r /dev/urandom
+
+	haveged -n 2g -f - | dd of=/dev/null
+	cat /proc/sys/kernel/random/entropy_avail
+	
+Now you can generate faster crypto params, like dh
+	openssl dhparam -out dhparams.pem 2048
+	openssl dhparam -out dhparams.pem -dsaparam 4096
+Create a key
+	sudo haveged -n 2048 -f /root/keyfile
+To generate random ASCII passwords of the length 16 characters, run:
+	(haveged -n 1000 -f - 2>/dev/null | tr -cd '[:graph:]' | fold -w 16 && echo ) | head -1
+To test the randomness of the generated data with dieharder test suite
+	haveged -n 0 | dieharder -g 200 -a

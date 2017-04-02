@@ -1,19 +1,12 @@
-https://debiantalk.wordpress.com/2015/02/16/format-a-usb-flash-drive-in-debian-7/
-# fdisk /dev/sdb 
-
-	p
-	1
-	d
-	1
-
+gdisk uses the GPT (Good Partition Table)
+	gdisk /dev/sdb
 	n
-	p
-	b
-	
-	t
-	b
 	w
-
+	
+	
+https://debiantalk.wordpress.com/2015/02/16/format-a-usb-flash-drive-in-debian-7/
+	fdisk /dev/sdb 
+Create a partition
 	mkfs.msdos -F 32 /dev/sdb1 -n SanDisk
 
 	mkfs -t ext2 /dev/sdb1 -L SanDisk

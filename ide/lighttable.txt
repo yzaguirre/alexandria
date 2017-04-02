@@ -1,0 +1,38 @@
+Python, closure, javascript
+https://news.ycombinator.com/item?id=7024626
+http://www.chris-granger.com/2014/01/07/light-table-is-open-source/
+http://www.lighttable.com/
+http://docs.lighttable.com/tutorials/full/
+http://www.chris-granger.com/lighttable/
+https://github.com/LightTable/
+
+http://leiningen.org/#install
+	$ cd ~/bin
+	$ wget https://raw.github.com/technomancy/leiningen/stable/bin/lein
+	$ chmod a+x ~/bin/lein
+Extra instructions
+	# zypper install libudev-devel
+deb	# apt-get install libudev-dev libudev0
+https://unix.stackexchange.com/questions/85505/need-to-install-glibc-2-14-on-wheezy
+https://superuser.com/questions/537683/how-to-fix-lib-x86-64-linux-gnu-libc-so-6-version-glibc-2-14-not-found
+	# apt-get -t testing install libc6-dev
+# For 64 bit machines
+	wget https://github.com/LightTable/LightTable/releases/download/0.8.1/lighttable-0.8.1-linux.tar.gz
+	tar -xf lighttable-0.8.1-linux.tar.gz -C /opt
+	cd /opt
+	mv lighttable-0.8.1-linux lighttable
+	ln -s /opt/lighttable/LightTable /usr/local/bin/lighttable
+
+http://ubuntuhandbook.org/index.php/2013/09/install-light-table-ide-create-launcher-ubuntu/
+x	# ln -sf /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0
+Locations, remember you have a fucking 32 bit library hanging somewhere. Best if you remove and reinstall it
+	# zypper remove libudev0
+	# zypper install libudev0
+/usr/lib/libudev.so.0.13.1
+/usr/lib/libudev.so.0
+/usr/lib64/libudev.so.1
+/usr/lib64/libudev.so.1.4.0
+m	# ln -s /usr/lib/libudev.so.0 /usr/lib64/
+m	# ln -s /usr/lib64/libudev.so.1 /usr/lib/
+	# ln -s /VMs/opt/LightTable/LightTable /usr/local/bin
+32	# ln -s /opt/LightTable/LightTable /usr/local/bin

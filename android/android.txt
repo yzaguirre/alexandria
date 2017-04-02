@@ -1,3 +1,16 @@
+Set the path variable
+	vim /etc/profile.d/android_sdk.sh
+#!/bin/bash
+PATH=$PATH:/opt/android-sdk-linux/tools
+
+	chmod +x /etc/profile.d/android_sdk.sh
+
+Develop
+https://developer.android.com/guide/topics/resources/providing-resources.html
+
+Sign app
+https://developer.android.com/studio/publish/app-signing.html#studio
+
 	apt-get install lib32ncurses5 lib32stdc++6 lib32zlib1g
 Busybox
 https://stackoverflow.com/questions/14398543/android-install-apk-silently-by-busybox-command-line
@@ -18,33 +31,12 @@ http://developer.android.com/reference/packages.html
 Distribute your app
 http://developer.android.com/distribute/index.html
 
-Setting up an Existing IDE
-
-Set the path variable
-	vim /etc/profile.d/android_sdk.sh
-#!/bin/bash
-PATH=$PATH:/opt/android-sdk-linux/tools
-
-	# chmod +x /etc/profile.d/android_sdk.sh
-
-Install the Android Developer Tools (ADT) plug-in for Eclipse.
-http://developer.android.com/sdk/installing/installing-adt.html
-
-Download the ADT Plugin
-1. Start Eclipse, then select Help > Install New Software.
-2. Click Add, in the top-right corner.
-3. In the Add Repository dialog that appears, enter "ADT Plugin" for the Name and the following URL for the Location:
-https://dl-ssl.google.com/android/eclipse/
-4. Click OK.
-If you have trouble acquiring the plugin, try using "http" in the Location URL, instead of "https" (https is preferred for security reasons).
-5. In the Available Software dialog, select the checkbox next to Developer Tools and click Next.
-6. In the next window, you'll see a list of the tools to be downloaded. Click Next.
-7. Read and accept the license agreements, then click Finish.
-If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.
-8. When the installation completes, restart Eclipse.
-
-
 https://developer.android.com/training/connect-devices-wirelessly/nsd.html
 
 Colors
 https://developer.android.com/reference/android/R.color.html
+
+HTTPS
+https://developer.android.com/training/articles/security-ssl.html
+Network Security
+https://developer.android.com/training/articles/security-config.html

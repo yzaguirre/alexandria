@@ -1,0 +1,18 @@
+http://zedapp.org/download/
+	tar xf zed-linux64-v0.11.0.tar.gz -C /VMs/opt
+x	ln -s /VMs/opt/zed/zed /usr/local/bin
+	echo $'#!/bin/bash\n/VMs/opt/zed/zed' > /usr/local/bin/zed && chmod a+x /usr/local/bin/zed
+
+ec2
+	curl http://get.zedapp.org | bash
+	./zedrem --server
+	./zedrem --server -h yzag.tk -p 7337 --sslcrt sslcrt.crt --sslkey sslkey.key
+	./zedrem --server -p 7337 --sslcrt sslcrt.crt --sslkey sslkey.key
+or, leave out the <dir-to-edit> entirely and just run ./zedrem to edit files in the current directory.
+
+This will run a proxy server listening on port 7337 by default (check 
+	./zedrem --help
+for command line options). 
+Then to connect to it, pass the -u flag to override the server.zedapp.org default:
+	./zedrem -u ws://yzag.tk:7337
+	./zedrem -u wss://yzag.tk:7337

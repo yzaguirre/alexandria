@@ -1,0 +1,14 @@
+http://agateau.com/2014/mup-a-markup-previewer/
+https://github.com/agateau/mup
+	apt-get install python-qt4
+	wget https://github.com/agateau/mup/archive/master.zip
+	unzip master.zip && rm master.zip
+	cd mup-master
+	python setup.py install
+Install kramdown
+http://kramdown.gettalong.org/installation.html
+	apt-get install ruby rubygems
+	gem install kramdown
+Configure mup with kramdown
+	mkdir -p ~/.local/share/mup/converters
+	vim ~/.local/share/mup/converters/kramdown.yaml

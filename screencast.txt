@@ -1,4 +1,7 @@
-Grabar la pantalla
+peek
+https://github.com/phw/peek
+
+Screen Record
 
 clear;recordmydesktop -x 0 -y 0 --width 800 --height 600 --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
 

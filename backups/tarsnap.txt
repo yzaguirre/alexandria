@@ -47,11 +47,19 @@ The -C flag tells Tarsnap to use a different working directory
 	tarsnap -c -f etctest-2014-12-23 /etc/
 	tarsnap -c -f homearchieve -C / home
 	tarsnap -c -f postgres -C /var/db/postgres/9.2 data
+	tarsnap -T tarsnapfiles -cf archive1
+	tarsnap -X exclusionfile -T tarsnapfiles -cf archive1
+	BKUP=ALL_`date +'%F_%H.%M.%S'`
+	tarsnap -T tarsnapfiles -cf $BKUP
+Like most tar programs, tarsnap removes the leading slash from filenames.
+This makes restoring without overwriting existing files easier,
+and in general reduces the risk of problems created by restoring files.
 List all of the archives associated with this machine's key
 	tarsnap --list-archives
 	tarsnap --list-archives -v
 List all of the archives in order by creation date
 	tarsnap --list-archives -v | sort -ik 2,3 | column -t
+	tarsnap --list-archives -v | sort -rik 2,3 | column -t
 To sort by reverse chronological order, add the -r option to the sort command.
 To see trailing spaces, do
 	tarsnap --list-archives | hexdump -C
@@ -69,6 +77,7 @@ Read mode is like Extract, but uses stdout
 Statistics on an individual archive, or on all archives stored with this key.
 	tarsnap --print-stats
 	tarsnap --print-stats -f etctest-2014-12-23
+View the complete stats on all archives
 	tarsnap --print-stats -f '*'
 
 Do dry runs
@@ -83,9 +92,9 @@ https://news.ycombinator.com/item?id=9698404
 https://github.com/Tarsnap/tarsnap-gui/wiki/Tarsnap#screenshots
 https://github.com/Tarsnap/tarsnap-gui/blob/master/INSTALL
 	sudo apt-get install g++ git qtbase5-dev
-	wget https://github.com/Tarsnap/tarsnap-gui/archive/v0.5.tar.gz
-	tar xf v0.5.tar.gz
-	cd tarsnap-gui-0.5
+	wget https://github.com/Tarsnap/tarsnap-gui/archive/v0.9.tar.gz
+	tar xf v0.9.tar.gz
+	cd tarsnap-gui-0.9
 	export QT_SELECT=qt5
 	qmake && make -j$(nproc)
 	mv tarsnap-gui /usr/local/bin

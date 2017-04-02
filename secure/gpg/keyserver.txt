@@ -4,6 +4,11 @@ https://github.com/mailvelope/keyserver
 	cd keyserver
 	git checkout 7a6b8c5
 
+	wget https://github.com/mailvelope/keyserver/archive/v1.2.6.tar.gz
+	tar xf v1.2.6.tar.gz
+	mv keyserver-1.2.6 /opt/keyserver
+	cd /opt/keyserver
+
 Edit config/production.js
 
 	mongo
@@ -12,3 +17,5 @@ Edit config/production.js
 
 	npm install
 	${NODE_ENV=development} && node index.js
+Or
+	NODE_ENV=production HTTPS_UPGRADE=true HTTPS_KEY_PIN=base64_encoded_sha256 HTTPS_KEY_PIN_BACKUP=base64_encoded_sha256 npm start

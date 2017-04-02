@@ -1,0 +1,6 @@
+https://github.com/notepadqq/notepadqq
+	git clone https://github.com/notepadqq/notepadqq.git
+	cd notepadqq
+	./configure --prefix /usr
+	make
+	sudo make install

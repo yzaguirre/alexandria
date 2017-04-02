@@ -1,0 +1,34 @@
+http://tinc-vpn.org/download/
+	wget http://tinc-vpn.org/packages/tinc-1.0.25.tar.gz
+	wget http://tinc-vpn.org/packages/tinc-1.0.25.tar.gz.sig
+OpenBSD dependencies
+	pkg_add -Iv lzo2
+http://www.oberhumer.com/opensource/lzo/
+	wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.09.tar.gz
+	wget http://www.oberhumer.com/opensource/lzo/download/minilzo-2.09.tar.gz
+	sha1 lzo-2.09.tar.gz
+e2a60aca818836181e7e6f8c4f2c323aca6ac057
+	sha1 minilzo-2.09.tar.gz
+32d43a04d16da65258427d978960ecf1bf751ec1
+	tar xzf lzo-2.09.tar.gz
+	cd lzo-2.09
+x	mv src/ /usr/local/include/lzo
+	mv src/lzo* /usr/local/
+	cd
+	
+	tar xzf minilzo-2.09.tar.gz
+	cd minilzo-2.09
+x	mkdir -p /usr/local/share/lzo/minilzo
+x	mv *.c *.h /usr/local/share/lzo/minilzo
+	mv -i lzo* minilzo.* /usr/include/
+Debian
+	apt-get install liblzo2-dev
+Verify with C0D71F4A key fingerprint
+	gpg2 -q --verify tinc-1.0.25.tar.gz.sig
+Extract
+	tar xzf tinc-1.0.25.tar.gz
+	cd tinc-1.0.25
+Compile
+	./configure
+	make
+	sudo make install

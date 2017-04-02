@@ -1,3 +1,18 @@
+https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices
+
+Implementations
+openssl
+s2n
+axTLS
+libressl
+rustls
+boringssl
+MatrixSSL
+mbedTLS/PolarSSL
+
+https://badssl.com/
+
+https://www.namecheap.com/resources/what-is-an-ssl-certificate.aspx
 Print cyphers
 	openssl ciphers -v|less
 Generate a RSA key

@@ -2,8 +2,17 @@ gpg-agent
 Change time-to-ilve of the cache
 https://wiki.archlinux.org/index.php/GnuPG#gpg-agent
 	echo use-agent >> ~/.gnupg/gpg.conf
-	echo "default-cache-ttl 1300" >> ~/.gnupg/gpg-agent.conf
-	echo "max-cache-ttl 1300" >> ~/.gnupg/gpg-agent.conf
-	echo "default-cache-ttl-ssh 1300" >> ~/.gnupg/gpg-agent.conf
-	echo "max-cache-ttl-ssh 1300" >> ~/.gnupg/gpg-agent.conf
+
+Options for ~/.gnupg/gpg-agent.conf
+default-cache-ttl 1300
+max-cache-ttl 1300
+default-cache-ttl-ssh 1300
+max-cache-ttl-ssh 1300
+
+Reload the agent
 	echo RELOADAGENT | gpg-connect-agent
+
+http://www.fsij.org/doc-gnuk/gpg-settings.html
+Deactivate seahorse-agent and gnome-keyring
+	gconftool-2 --type bool --set /apps/gnome-keyring/daemon-components/ssh false
+Edit the file /etc/X11/Xsession.options and comment out use-ssh-agent line.

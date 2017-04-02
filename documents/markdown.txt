@@ -14,3 +14,4 @@ Popular IDEs
 * Haroopad
 * Abricotine
 * Marp
+* Ghostwriter (https://github.com/wereturtle/ghostwriter)

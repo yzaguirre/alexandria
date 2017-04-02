@@ -1,0 +1,7 @@
+neovim.org
+	wget https://github.com/neovim/neovim/archive/master.zip
+	apt-get install libtool-bin autoconf automake cmake libncurses5-dev g++
+	unzip master.zip
+	cd neovim-master
+	make CMAKE_BUILD_TYPE=Release
+	sudo make install

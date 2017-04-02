@@ -1,3 +1,6 @@
+Other clients
+http://gpg4win.org/download.html
+
 Recommendations
 	If you compress after encrypting, the file,
 	which will already be mostly random-seeming data,
@@ -98,3 +101,15 @@ gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
 gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
 batchmode run complete: shutting down
 program is already running, taking no action
+
+https://www.gnupg.org/faq/whats-new-in-2.1.html
+Since version 2.1.14 it is possible to specify the recipient's key by providing a file with that key.
+This done with the new options --recipient-file (or short -f) and --hidden-recipient-file (or short -F).
+The file must containing exactly one key in binary or armored format.
+All keys specified with those options are always considered fully valid.
+These option may be mixed with the regular options to specify a key.
+Along with the new convenience option --no-keyring it is now possible to
+encrypt data without maintaining a local keyring. 
+
+ECC keys
+	gpg --expert --full-gen-key

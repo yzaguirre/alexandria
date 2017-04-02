@@ -9,8 +9,8 @@ g++
 
 Download
 Stable
-	wget https://github.com/sdelements/lets-chat/archive/0.4.7.tar.gz
-	tar xf 0.4.7.tar.gz
+	wget https://github.com/sdelements/lets-chat/archive/0.4.8.tar.gz
+	tar xf 0.4.8.tar.gz
 Latest
 	wget https://github.com/sdelements/lets-chat/archive/master.zip
 	unzip master.zip
@@ -37,11 +37,11 @@ Make a backup
 backup mongo
 	mongodump -d letschat -out /tmp/mongodump
 get latest release
-	wget https://github.com/sdelements/lets-chat/archive/0.4.7.tar.gz
-	tar xf 0.4.7.tar.gz -C /opt
-	mv /opt/{lets-chat-0.4.7,lets-chat}
+	wget https://github.com/sdelements/lets-chat/archive/0.4.8.tar.gz
+	tar xf 0.4.8.tar.gz -C /opt
+	mv /opt/{lets-chat-0.4.8,lets-chat}
 	mv settings.yml lets-chat.key uploads /opt/lets-chat
-	rm 0.4.7.tar.gz
+	rm 0.4.8.tar.gz
 	cd /opt/lets-chat
 	npm install
 

@@ -6,6 +6,7 @@ NTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
 http://xmodulo.com/use-systemd-system-administration-debian.html
 	systemctl - list all loaded units and their state (where unit is the term for a job/service)
 	systemctl list-units - list all units
+	systemctl status [NAME...] - service status
 	systemctl start [NAME...] - start (activate) one or more units
 	systemctl stop [NAME...] - stop (deactivate) one or more units
 	systemctl disable [NAME...] - disable one or more unit files
@@ -13,6 +14,9 @@ http://xmodulo.com/use-systemd-system-administration-debian.html
 	systemctl --failed - show which units failed during boot
 	systemctl --type=mount - filter for types; types could be: service, mount, device, socket, target
 	systemctl enable debug-shell.service - start a root shell on TTY 9 for debugging 
+	
+	systemctl enable telnet.sockets
+	systemctl enable telnet
 
 For more convinience in handling units, there is the package systemd-ui, which is started as user with the command systemadm.
 

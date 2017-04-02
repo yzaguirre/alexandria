@@ -1,11 +1,68 @@
+Passwords
+KeepassX
+apg
+
+http://asciimath.org/
+https://weforum.org
+http://www.datatau.com/
+https://news.ycombinator.com/
+
+SafeEyes
+https://github.com/slgobinath/SafeEyes
+
+web frameworks
+http://www.yesodweb.com/page/about
+https://www.spock.li/
+
+CSS frameworks
+https://getbootstrap.com/
+https://foundation.zurb.com/
+https://milligram.github.io/
+http://jamiewilson.io/corpus/
+
+prism-break.org
+https://victorhck.gitlab.io/privacytools-es/
+linux-audit.org
+
 https://voat.co/
 https://empeopled.com/
 https://www.imzy.com/
 
+Screen
+https://news.ycombinator.com/item?id=12581874
+flux
+redshift
+Twilight (Proprietary app)
+
+Logo design
+https://twitter.com/jdorfman/status/780080622400249857
+
 http://apidocjs.com/
 
+Hardware
+http://www.lowrisc.org/
+http://vocore.io/v2u.html
+Ubiquiti EdgeRouter X
+HD Pro Webcam C920
+Logitech C930e 
+http://www.zeevee.com/
+STM32 32-bit ARM Cortex MCUs
+http://www.leolaporte.com/blog/a-grand-experiment
+http://www.squirrelsystems.com/
+
+Travel bags
+GORUCK GR2 $395
+
+
 IDE
+rednotebook
+leafpad
+notepadqq
+micro
 geany
+gedit
+medit
+focuswriter
 vim
 sublime
 limetext.org
@@ -14,14 +71,32 @@ LightTable
 brackets
 zed
 gobby
+rstudio
 
 Editing
 sigil, mixxx, pinta, ardour, rosegarden, musescore, hydrogen, meshlab, trelby
+Bombono
 
 Markdown
 Haroopad
 Abricotine
 Marp
+remarkable
+gitbook editor
+ghostwriter
+retext
+
+Slides and teaching
+Pagekite
+gotty
+tmux
+ngrok
+tmate
+nutty
+showterm
+termshare
+hterm
+screenkey https://www.thregr.org/~wavexx/software/screenkey/
 
 Syntax highlighting
 Microlight
@@ -64,6 +139,10 @@ tomb
 freebsd has gdbe
 gpg & seahorse
 http://gpg4win.org/
+
+Secure cards
+https://github.com/limpkin/mooltipass
+https://cryptosteel.com/
 
 secure comm
 https://encrypt.to/
@@ -142,6 +221,9 @@ VPN
 tinc
 OpenVPN
 https://github.com/schwabe/ics-openvpn
+OpenSwan
+SoftEther
+wireguard
 ... many others
 
 VPN as a service
@@ -168,9 +250,16 @@ http://www.autistici.org/en/index.html
 https://vpn.autistici.org/
 https://mykolab.com/
 
+chat
+pidgin
+
+
 mobile chat
 Telegram, Kontalk Messenger, Xabber
 https://safeum.com/price
+
+chat
+https://otr.to/
 
 screen recorders
 recordmydesktop
@@ -186,6 +275,12 @@ https://news.ycombinator.com/item?id=7385634
 analitics
 piwik
 http://www.openwebanalytics.com/
+https://goaccess.io/
+http://www.webalizer.org/
+AWStats http://www.awstats.org/
+W3Perl http://www.w3perl.com/
+Analog http://www.c-amie.co.uk/analog/
+https://my-netdata.io/
 
 CMS
 ghost
@@ -202,6 +297,7 @@ linux alternatives
 http://www.linuxalt.com
 http://www.linuxrsp.ru/win-lin-soft/table-eng 
 http://www.openshot.org/
+https://github.com/jliljebl/flowblade
 lightworks http://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206#
 
 Hosting
@@ -215,12 +311,18 @@ https://sysdig.com/
 http://www.prq.se
 
 email services
+https://10minutemail.com/
+https://mail.yandex.com/ (https://domain.yandex.com/domains_add/) https://yandex.com/support/mail/mail-clients.xml
+https://mailbox.org/
 https://encrypt.to/
 https://protonmail.ch/
 https://openmailbox.org
 http://tempmail.de/
 http://tormail.net/
 https://www.mailoo.org/
+https://runbox.com/
+https://mailfence.com/
+https://www.fastmail.com/
 
 email as a service
 Mailgun
@@ -229,10 +331,16 @@ email self-hosted
 Postfix, Exim, Cyrus, Dovecot
 
 email clients & Secure Email
+https://news.ycombinator.com/item?id=12620468
 Thunderbird
 https://www.mailpile.is/
+https://roundcube.net/
+http://www.rainloop.net/
 https://www.mailvelope.com/
 https://www.enigmail.net/
+
+email archieve
+http://www.mailpiler.org/wiki/start
 
 firefox privacy plugins
 ublock https://news.ycombinator.com/item?id=8919523
@@ -262,7 +370,11 @@ castawesome
 CPU
 i-nex
 
-img
+image editing
+https://realfavicongenerator.net/
+http://draw9patch.com/
+
+imgage hosting
 http://drp.io/
 http://chromatic.io/
 http://quickscreen.me/
@@ -352,6 +464,7 @@ http://generalbasiclicense.wordpress.com/
 http://xiki.org/
 
 games
+minetest
 tuxemon
 supertux
 hedgewars
@@ -361,3 +474,5 @@ oolite
 
 Charts
 kartesio, maxima
+
+http://homebank.free.fr/

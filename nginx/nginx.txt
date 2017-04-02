@@ -68,3 +68,10 @@ http://www.bsdnow.tv/tutorials/nginx
 https://www.nginx.com/blog/mitigating-the-httpoxy-vulnerability-with-nginx/
 fastcgi_param HTTP_PROXY "";
 proxy_set_header Proxy "";
+
+https://www.cyberciti.biz/faq/linux-unix-nginx-access-file-log-real-ip-address-of-visitor/
+	vim /etc/nginx/conf.d/default.conf
+set_real_ip_from  192.168.1.4;
+real_ip_header    X-Forwarded-For;
+
+Where 192.168.1.4 is my loadbalancer

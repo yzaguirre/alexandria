@@ -1,4 +1,15 @@
 piwik
+https://piwik.org/changelog/piwik-3-0-0/
+https://news.ycombinator.com/item?id=13210195
+
+"Also, just to keep you all posted.
+We, the Piwik creators and core engineers, are no longer related or working with Piwik PRO,
+and we have founded a new company: InnoCraft which supports Piwik and our mission going forward."
+https://piwik.org/faq/new-to-piwik/faq_21984/
+https://piwik.org/roadmap/
+https://piwik.org/blog/2016/09/piwik-3-development-update-1-new-ui-design-api-changes-release-date/
+https://piwik.org/blog/2016/10/piwik-3-development-update-4-important-notes-breaking-changes/
+
 https://piwik.org/
 https://en.wikipedia.org/wiki/Do_Not_Track
 https://piwik.org/docs/analytics-api/

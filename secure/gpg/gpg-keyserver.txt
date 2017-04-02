@@ -3,7 +3,7 @@ https://keyserver.ubuntu.com/
 http://www.rainydayz.org/node/8
 https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Documentation
 https://lists.nongnu.org/archive/html/sks-devel/2009-03/msg00078.html
-	apt-get install sks
+	apt install sks
 	sks build
 	chown debian-sks:debian-sks -R /var/lib/sks/DB
 	vim /etc/default/sks
@@ -20,14 +20,30 @@ Open localhost:11371
 Use a gpg server
 https://help.riseup.net/en/security/message-security/openpgp/best-practices
 https://marc.info/?l=gnupg-users&m=139895658401578&w=2
-	apt-get install gnupg-curl
+	apt install gnupg-curl
 	cd /etc/ssl/CA
 	wget https://sks-keyservers.net/sks-keyservers.netCA.pem
+	wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem
 https://sks-keyservers.net/verify_tls.php
+For old GnuPG
 	vim ~/.gnupg/gpg.conf
 keyserver hkps://hkps.pool.sks-keyservers.net
 keyserver-options ca-cert-file=/etc/ssl/CA/sks-keyservers.netCA.pem
 keyserver-options no-honor-keyserver-url
+
+For latest GnuPG ("keyserver" option is still valid in gpg.conf)
+	vim ~/.gnupg/dirmngr.conf
+log-file ~/.gnupg/dirmngr.log
+hkp-cacert /etc/ssl/CA/lets-encrypt-x3-cross-signed.pem
+hkp-cacert /etc/ssl/CA/sks-keyservers.netCA.pem
+
+Terminate the dirmngr process
+	ps aux | grep dirmngr
+	kill -2 1224
+More on dirmngr
+https://www.gnupg.org/documentation/manuals/gnupg/Dirmngr-Options.html#Dirmngr-Options
+https://www.mankier.com/8/dirmngr
+	man dirmngr
 
 Updates to keys can be published to public key servers, including new signatures. You can periodically update your keys by using
 update key in my keyring

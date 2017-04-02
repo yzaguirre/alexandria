@@ -1,3 +1,5 @@
+https://letsencrypt.org/docs/client-options/
+
 https://helloworld.letsencrypt.org/
 https://twitter.com/letsencrypt/status/672465561872306176
 
@@ -49,15 +51,13 @@ NOTES:
 	openssl dhparam -out dhparam.pem 2048
 	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem dhparam.pem > znc.pem
 
+
+
 # Regular client example
 	./letsencrypt-auto --email diafygi@gmail.com --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr
 # Regular client
-Official Let's Encrypt Client
-Setup letsencrypt
-	git clone https://github.com/letsencrypt/letsencrypt
-	cd letsencrypt
-Stop port 80 activities and start letsencrypt
-	./letsencrypt-auto certonly --standalone
+https://certbot.eff.org/docs/using.html
+	certbot certonly --webroot -w /var/www/example/ -d www.example.com -d example.com -w /var/www/other -d other.example.net -d another.other.example.net
 You can find your certificate in /etc/letsencrypt/live
 Add the following line to cron so the cert will renew every month
 	crontab -e
@@ -80,3 +80,5 @@ Continue to tls/ssl-nginx.txt
 With renew cronjob
 30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
 35 2 * * 1 /bin/systemctl reload nginx
+
+https://github.com/kaienkira/acme-client-quick
