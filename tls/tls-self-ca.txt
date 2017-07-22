@@ -1,0 +1,115 @@
+https://jamielinux.com/docs/openssl-certificate-authority/index.html
+http://apetec.com/support/GenerateSAN-CSR.htm
+
+Also check out tls/root-certificates, tunnels/openssl.txt
+
+Root key ca.key.pem
+Root certificate ca.cert.pem
+Make a directory to store all keys and certificates
+	mkdir /root/ca
+	cd /root/ca
+	mkdir certs crl newcerts private
+	chmod 700 private
+The CA needs a few additional files to operate, one to keep track of the last serial number used
+by the CA, each certificate must have a unique serial number, and another file to record which
+	touch index.txt
+	echo 1000 > serial
+Prepare the configuration file
+See https://jamielinux.com/docs/openssl-certificate-authority/appendix/root-configuration-file.html
+
+Create the cert
+	openssl genrsa -aes256 -out private/ca.key.pem 4096
+	chmod 400 private/ca.key.pem
+Create the root certificate
+	openssl req -config openssl.cnf \
+      -key private/ca.key.pem \
+      -new -x509 -days 7300 -sha256 -extensions v3_ca \
+      -out certs/ca.cert.pem
+	chmod 444 certs/ca.cert.pem
+Verify the root certificate
+	openssl x509 -noout -text -in certs/ca.cert.pem
+
+Create the intermediate pair
+Prepare the directory
+	mkdir /root/ca/intermediate
+	cd intermediate
+	mkdir certs crl csr newcerts private
+	chmod 700 private
+	touch index.txt
+	echo 1000 > serial
+Add a crlnumber file to the intermediate CA directory tree. crlnumber is used to keep track of certificate revocation lists.
+	echo 1000 > crlnumber
+See https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html
+
+Create the intermediate key
+	cd /root/ca
+	openssl genrsa -aes256 \
+      -out private/intermediate.key.pem 4096
+	chmod 400 private/intermediate.key.pem
+Create the intermediate certificate
+	cd ..
+	openssl req -config intermediate/openssl.cnf -new -sha256 \
+      -key intermediate/private/intermediate.key.pem \
+      -out intermediate/csr/intermediate.csr.pem
+Sign the csr with root CA
+	openssl ca -config openssl.cnf -extensions v3_intermediate_ca \
+      -days 3650 -notext -md sha256 \
+      -in intermediate/csr/intermediate.csr.pem \
+      -out intermediate/certs/intermediate.cert.pem
+	chmod 444 intermediate/certs/intermediate.cert.pem
+Verify the intermediate certificate
+	openssl x509 -noout -text -in intermediate/certs/intermediate.cert.pem
+Verify the intermediate certificate against the root certificate. An OK indicates that the chain of trust is intact.
+	openssl verify -CAfile certs/ca.cert.pem \
+      intermediate/certs/intermediate.cert.pem
+Create the certificate chain file (OPTIONAL)
+	cat intermediate/certs/intermediate.cert.pem \
+      certs/ca.cert.pem > intermediate/certs/ca-chain.cert.pem
+	chmod 444 intermediate/certs/ca-chain.cert.pem
+
+Sign server and client certificates
+	cd /etc/tls
+	mkdir private certs requests
+Create a key. Generate a server pair
+	openssl genrsa -aes256 -out private/www.example.com.key.pem 2048
+	chmod 400 private/www.example.com.key.pem
+Create a certificate. 
+May want to add a Subject Alternative Name extension (see man x509v3_config)
+Add to [req] section
+	req_extensions = SAN
+[ SAN ]
+subjectAltName = DNS:www.example.com,DNS:example.com
+
+Create a CSR
+	openssl req -config ca/intermediate/openssl.cnf \
+      -key private/www.example.com.key.pem \
+      -new -sha256 -out requests/www.example.com.csr.pem
+Better way (replace appropriate values)
+	openssl req -key private/www.example.com.key.pem \
+      -subj "/C=US/ST=California/L=Mountain View/O=Alice Ltd/OU=Alice Ltd Web Services/CN=www.example.com" \
+      -reqexts SAN -config <(cat ca/intermediate/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.example.com,DNS:example.com")) \
+      -new -sha256 -out requests/www.example.com.csr.pem
+    
+Sign the csr with Intermediate CA
+If the certificate is going to be used on a server, use the server_cert extension.
+If the certificate is going to be used for user authentication, use the usr_cert extension.
+	openssl ca -config ca/intermediate/openssl.cnf \
+      -extensions server_cert -days 375 -notext -md sha256 \
+      -in requests/www.example.com.csr.pem \
+      -out ca/intermediate/certs/www.example.com.cert.pem
+	chmod 444 ca/intermediate/certs/www.example.com.cert.pem
+	cp ca/intermediate/certs/www.example.com.cert.pem certs
+Verify the certificate
+	openssl x509 -noout -text \
+      -in intermediate/certs/www.example.com.cert.pem
+Verify the server certificate against the certificate chain.
+	openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
+      certs/www.example.com.cert.pem
+Create a dh file
+	cd certs
+	openssl dhparam -out dhparam.pem 2048
+Make a chain file
+	cat www.example.cert.pem \
+      intermediate.cert.pem \
+      dhparam.pem \
+      > www.example.com_chained.cert.pem

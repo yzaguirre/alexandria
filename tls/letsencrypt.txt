@@ -82,3 +82,7 @@ With renew cronjob
 35 2 * * 1 /bin/systemctl reload nginx
 
 https://github.com/kaienkira/acme-client-quick
+
+With ECC
+https://thecustomizewindows.com/2016/11/how-to-generate-lets-encrypt-ecc-ssl-ecdsa-certificate/
+https://blog.joelj.org/ecdsa-certificates-with-apache-2-4-lets-encrypt/

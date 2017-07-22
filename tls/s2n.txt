@@ -1,0 +1,3 @@
+http://blogs.aws.amazon.com/security/post/TxCKZM94ST1S6Y/Introducing-s2n-a-New-Open-Source-TLS-Implementation
+https://news.ycombinator.com/item?id=9804349
+https://github.com/awslabs/s2n

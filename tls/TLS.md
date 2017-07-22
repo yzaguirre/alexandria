@@ -19,7 +19,7 @@ cd /etc/ssl
 ## Create Private Key
 Create de private key with and without a password for the www.securejump.com site.
 ```bash
-openssl genrsa -aes128 -out private/www_securejump_com.key.secure 2048
+openssl genrsa -aes256 -out private/www_securejump_com.key.secure 2048
 openssl rsa -in private/www_securejump_com.key.secure -out private/www_securejump_com.key
 chmod 600 private/www_securejump_com.key*
 ```
@@ -31,15 +31,21 @@ Options
 * `-keyout private/cakey.pem` file to send the key to
 
 Generate a ECC private cert and encrypt said cert
+https://www.digitalocean.com/community/tutorials/how-to-create-an-ecc-certificate-on-nginx-for-debian-8
 ```bash
 openssl ecparam -out private/www_securejump_com.key -name prime256v1 -genkey
-openssl ec -in private/www_securejump_com.key -des3 -out private/www_securejump_com.key.secure
+openssl ec -in private/www_securejump_com.key -aes256 -out private/www_securejump_com.key.secure
 chmod 600 private/www_securejump_com.key*
 ```
 Options
 * `-out private/www_securejump_com.key.secure` output file
 * `-name prime256v1` use the ec parameters with 'prime256v1' short name
 * `-genkey` generate ec key
+
+Create custom EC curve name for ephemeral keys
+```bash
+openssl ecparam
+```
 
 ---
 # Create Certificate Sign Request CSR

@@ -8,3 +8,12 @@ Update the CA store:
 Remove your CA.
 Update the CA store:
 	update-ca-certificates --fresh
+
+https://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate
+	mkdir /usr/share/local/ca-certificates/extra
+	cp foo.crt /usr/local/share/ca-certificates/extra/foo.crt
+	dpkg-reconfigure ca-certificates
+In case of a .pem file, it must first be converted to a .crt file:
+	openssl x509 -in foo.pem -inform PEM -out foo.crt
+For der format
+	openssl x509 -inform DER -outform PEM -in foo.crt -out foo.pem
