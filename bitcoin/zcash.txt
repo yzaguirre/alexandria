@@ -1,0 +1,27 @@
+https://github.com/Electric-Coin-Company/zcash/wiki/Public-Alpha-Guide
+https://z.cash/blog/helloworld.html
+https://news.ycombinator.com/item?id=11042096
+https://github.com/Electric-Coin-Company/zcash
+	git clone https://github.com/Electric-Coin-Company/zcash.git
+	cd zcash/
+	./zcutil/fetch-params.sh
+Compiling
+	apt-get install build-essential pkg-config libgtest-dev libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils
+	./zcutil/build.sh
+
+Ubuntu
+	apt install apt-transport-https
+	wget -qO - https://z.cash/gpg-pubkeys/zcash.asc | apt-key add -
+	echo "deb https://apt.z.cash jessie main" | tee /etc/apt/sources.list.d/zcash.list
+	apt update
+	apt install zcash
+	zcash-fetch-params
+
+	mkdir ~/.zcash
+	cd ~/.zcash
+	echo "rpcuser=username" > zcash.conf
+	echo "rpcpassword=`head -c 32 /dev/urandom | base64`" >> zcash.conf
+Include mining variable
+	echo "gen=1" >> zcash.conf
+
+	zcashd

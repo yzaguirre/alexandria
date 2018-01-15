@@ -1,0 +1,144 @@
+https://www.ethereum.org/
+https://github.com/vincentchu/eth-private-net
+https://www.cryptocompare.com/mining/guides/how-to-mine-ethereum/
+Geth
+	geth account new
+	geth --rpc
+Install Ethminer
+	cd cpp-ethereum
+	ethminer -G
+To mine with cpu
+	ethminer
+
+https://news.ycombinator.com/item?id=15786780
+http://www.gjermundbjaanes.com/understanding-ethereum-smart-contracts/
+
+Mobile ethereum
+https://news.ycombinator.com/item?id=16063635
+https://www.cipherbrowser.com/
+
+# Ethereum Wallet
+https://github.com/ethereum/mist/releases
+	wget https://github.com/ethereum/mist/releases/download/v0.9.3/Ethereum-Wallet-linux64-0-9-3.deb
+	sha256sum Ethereum-Wallet-linux64-0-9-3.deb
+946b4b7dec1b6f2b58b6ef21d06a12dcee691fa2186baad7d99872f94240ced8
+	dpkg -i Ethereum-Wallet-linux64-0-9-3.deb
+# geth client
+https://github.com/ethereum/go-ethereum
+https://geth.ethereum.org/downloads/
+	wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.7.3-4bb3c89d.tar.gz
+	wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.7.3-4bb3c89d.tar.gz.asc
+	gpg --verify geth-linux-amd64-1.7.3-4bb3c89d.tar.gz.asc geth-linux-amd64-1.7.3-4bb3c89d.tar.gz
+	md5sum geth-linux-amd64-1.7.3-4bb3c89d.tar.gz
+66e1fa9514b410a71273e56a9fe6a5ab
+	tar xf geth-linux-amd64-1.7.3-4bb3c89d.tar.gz -C /opt
+	mv /opt/{geth*,geth}
+	vim ~/.profile
+export PATH=$PATH:/opt/geth/:$GOPATH/bin
+# Install on ubuntu
+https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu
+	apt install software-properties-common
+	add-apt-repository -y ppa:ethereum/ethereum
+	apt update
+	apt install ethereum
+Compile the client
+	git clone https://github.com/ethereum/go-ethereum
+	cd go-ethereum
+	make geth
+You can now run
+	build/bin/geth
+to start your node.
+## Installed commands
+swarm, abigen, bootnode, evm, geth, puppeth, rlpdump, wnode, ethereum
+
+# Private network with geth
+https://github.com/ethereum/go-ethereum/wiki/Private-network
+https://github.com/ethereum/homestead-guide/blob/master/source/network/test-networks.rst
+https://ethereum.stackexchange.com/questions/2376/what-does-each-genesis-json-parameter-mean#2377
+https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network
+https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/private-chain.html
+https://www.gitbook.com/book/ethereum/frontier-guide/details
+Needs three things:
+	1. Network ID: Can be any positive number except 1 (Main Net) and 3 (Ropsten). Ej: 786
+	2. The genesis file: privategenesis.json
+{
+    "config": { }, "nonce": "0x0000000000000042",     "timestamp": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x00",     "gasLimit": "0x8000000",     "difficulty": "0x400",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x3333333333333333333333333333333333333333",     "alloc": {     }
+}
+
+	3. Data directory: This is the directory where the blockchain data for the private Ethereum network will be saved
+	mkdir -p ~/.ethereum/privatenet
+
+Additional settings:
+	4. Peer file ~/.ethereum/privatenet/static-nodes.json
+[
+  "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
+  "enode://pubkey@ip:port"
+]
+Initialize a network
+	
+	geth --datadir ~/.ethereum/privatenet init ./privether/privategenesis.json
+Run
+	geth --datadir ~/.ethereum/privatenet --networkid 786
+Also can run in REPL console
+	geth --datadir ~/.ethereum/privatenet --networkid 786 console 2> console.log
+Now geth can be attached via IPC to the running geth client on a private network:
+Connect a terminal window to the same node
+	geth attach ipc:.ethereum/privatenet/geth.ipc
+
+admin.nodeInfo
+personal.newAccount()
+personal.listAccounts
+eth.blockNumber
+admin.peers
+
+Create a another node on the network. Point to a diffrent data directory. We're reinitializing another node from scratch
+Point to the same genesys block.
+	geth --datadir ~/.ethereum/privatenet-a init ./privether/privategenesis.json
+When we start this node, we make sure it has a different port
+	geth --datadir ~/.ethereum/privatenet-a --networkid 786 --port 30304 --nodiscover
+	geth --datadir ~/.ethereum/privatenet-a --networkid 786 --port 30304 --nodiscover console 2> console.log
+This is a different node, with a different blockchain
+Make the 2nd node a peer, a member of the same blockchain
+	admin.peers
+	admin.nodeInfo
+Copy the enode with quotes. On the master node do:
+	admin.addPeer("enode://jaldjflk_example@IP:30304?discport=0")
+
+On both nodes have blockNumber = 0
+eth.blockNumber
+
+Start mining with one thread (on master node)
+miner.start(1)
+
+Stop the mining
+miner.stop()
+
+Compare block 90 on both nodes
+eth.getBlock(90)
+
+Get latest block in the chain
+	eth.getBlock(eth.blockNumber)
+
+Get the miner account (the guy/gal who mined it)
+	eth.getBlock(eth.blockNumber).miner
+Get the balance of the guy who mined the last block
+	eth.getBalance(eth.getBlock(eth.blockNumber).miner)
+
+Start mining at the 2nd node
+Create an account first
+	personal.newAccount()
+	miner.start(1)
+
+# Wallet
+## Mist Browser
+https://github.com/ethereum/mist/releases
+Mist browser is a user-friendly interface for end users with a
+feature-rich graphical user interface that us used to browse DAPPS and
+for account management and contract management.
+## MyEtherWallet
+https://www.myetherwallet.com/
+Is an open source ether wallet developed in JavaScript. MyEtherWallet runs in the client browser
