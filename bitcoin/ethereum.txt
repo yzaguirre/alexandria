@@ -18,11 +18,15 @@ https://news.ycombinator.com/item?id=16063635
 https://www.cipherbrowser.com/
 
 # Ethereum Wallet
+https://blog.ethereum.org/2015/09/16/ethereum-wallet-developer-preview/
 https://github.com/ethereum/mist/releases
 	wget https://github.com/ethereum/mist/releases/download/v0.9.3/Ethereum-Wallet-linux64-0-9-3.deb
 	sha256sum Ethereum-Wallet-linux64-0-9-3.deb
 946b4b7dec1b6f2b58b6ef21d06a12dcee691fa2186baad7d99872f94240ced8
 	dpkg -i Ethereum-Wallet-linux64-0-9-3.deb
+Start the wallet, using a running geth instance. Specify the custom IPC path
+	ethereumwallet --rpc /home/david/.ethereum/privatenet/geth.ipc  
+
 # geth client
 https://github.com/ethereum/go-ethereum
 https://geth.ethereum.org/downloads/
@@ -142,3 +146,13 @@ for account management and contract management.
 ## MyEtherWallet
 https://www.myetherwallet.com/
 Is an open source ether wallet developed in JavaScript. MyEtherWallet runs in the client browser
+
+# Solidity
+https://github.com/ethereum/browser-solidity/tree/gh-pages
+	git clone https://github.com/ethereum/browser-solidity
+	cd browser-solidity
+	npm install
+	npm run prepublish
+	wget https://github.com/ethereum/browser-solidity/raw/gh-pages/remix-d50dcc4.zip
+	mkdir /opt/remix
+	unzip remix-d50dcc4.zip -d /opt/remix
