@@ -26,6 +26,7 @@ https://github.com/ethereum/mist/releases
 	dpkg -i Ethereum-Wallet-linux64-0-9-3.deb
 Start the wallet, using a running geth instance. Specify the custom IPC path
 	ethereumwallet --rpc /home/david/.ethereum/privatenet/geth.ipc  
+	./Ethereum\ Wallet.exe --rpc //./pipe/geth.ipc
 
 # geth client
 https://github.com/ethereum/go-ethereum
@@ -92,6 +93,7 @@ Also can run in REPL console
 Now geth can be attached via IPC to the running geth client on a private network:
 Connect a terminal window to the same node
 	geth attach ipc:.ethereum/privatenet/geth.ipc
+	geth attach ipc://./pipe/geth.ipc
 
 admin.nodeInfo
 personal.newAccount()

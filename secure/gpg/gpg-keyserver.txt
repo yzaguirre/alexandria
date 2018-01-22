@@ -31,7 +31,7 @@ keyserver hkps://hkps.pool.sks-keyservers.net
 keyserver-options ca-cert-file=/etc/ssl/CA/sks-keyservers.netCA.pem
 keyserver-options no-honor-keyserver-url
 
-For latest GnuPG ("keyserver" option is still valid in gpg.conf)
+For latest GnuPG
 	vim ~/.gnupg/dirmngr.conf
 log-file ~/.gnupg/dirmngr.log
 hkp-cacert /etc/ssl/CA/lets-encrypt-x3-cross-signed.pem
@@ -55,11 +55,23 @@ You can see the signatures with the --list-sigs command to gpg:
 	gpg --list-sigs your@email.address 
 
 If you signed a pub key, export that change to keyserver
-send key to key server (and update new signs and revocations)
+send key to key server
 	gpg --keyserver keyserver --send-keys 0xCFD7010E
 search keys
-	gpg --keyserver keyserver --search-keys searchterm # Search by key ID (prefixedwith "0x") or string.
+	gpg --keyserver keyserver --search-keys searchterm # Search by key ID
 receive key from key server, use keys.gnupg.net
 	gpg --keyserver keys.mozilla.org --recv-keys 0x29846B3C683686CC
 Print pub keys keyserver
 	
+
+Compile
+https://keyserver.mattrude.com/guides/building-server/
+http://stackoverflow.com/questions/18148075/ddg#38277221
+	apt install libz-devel
+	
+	wget https://github.com/mattrude/pgpkeyserver-lite/archive/v2.0.zip
+	
+QR
+https://security.stackexchange.com/questions/70501/putting-my-pgp-id-link-on-printed-business-cards
+https://github.com/open-keychain/open-keychain/wiki/QR-Codes
+	qrencode -t PNG 'OPENPGP4FPR:1357B01865B2503C18453D208CAC2A9678548E35' -o myopenpgpfpr.png

@@ -1,0 +1,77 @@
+http://www.mutt.org
+http://www.mutt.org/relnotes/1.9/
+http://www.mutt.org/doc/UPDATING
+http://www.mutt.org/doc/manual/#core-concepts
+	gpg2 --verify mutt-1.5.24.tar.gz
+	tar xf mutt-1.5.24.tar.gz
+	cd mutt
+	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --with-ssl --with-sasl
+	sudo make install
+Install PGP support
+	cd contrib
+	mv gpg.rc ~/documents/.gpg.rc
+
+Openmailbox no smtp support
+https://www.openmailbox.org/forum/viewtopic.php?id=423
+
+https://wiki.archlinux.org/index.php/Mutt
+http://www.linuxandlife.com/2012/03/how-to-configure-mutt-for-gmail.html
+Install
+	apt install mutt
+Note that Mutt will recognize by default two locations for its configuration file; ~/.muttrc and ~/.mutt/muttrc
+
+Password safety
+Create a file in a secure environment since it will contain your passwords for a couple of seconds: 
+
+Now encrypt the file
+	gpg -er 'your-name' -o ~/.my-pwds.gpg
+set my_pw_personal = ****
+set my_pw_work = ****
+
+Back to your account dedicated files, ~/.muttrc
+set imap_pass=$my_pw_personal
+
+And in your .muttrc, before you source any account dedicated file:
+	source "gpg -dq $HOME/.my-pwds.gpg |"
+
+Configure mutt by editing /etc/Muttrc. You also need to configure sendmail to allow for sending e‐mail.
+Like mail, mutt can also be used to send a message from a script. mutt also adds the
+capability to send attachments. For example:
+	$ mutt -s "My Linux Version" -a /etc/lsb-release \
+		chris@example.com < email-body.txt
+	$ mutt -s "My Linux Version" -a /etc/lsb-release \
+	chris@example.com < /dev/null
+You can begin your mutt mail session (assuming your default mailbox is $MAIL) by
+simply typing mutt:
+	$ mutt
+
+? - As usual, you types this to get help. Hints appear across the top bar to help you with your mail.
+Up and down arrow keys - To highlight the messages you want to read.
+Enter - To view the highlighted message.
+PageUp and PageDown - To page through each message.
+i - To return to the message headers.
+slash (/) - Search forward for text.
+Esc-/—Search backwards.
+n - To search again.
+Tab - To jump to the next new or unread message.
+Esc+Tab - To go to the previous message.
+s - To save the current message to a file.
+d - To delete a message.
+u - To undelete a message.
+
+You can type the following to write and send e‐mails:
+m - To send a new mail message. After adding the recipient and subject, a blank message opens in joe (or whatever you have your $EDITOR set to).
+a - After exiting the message body, type a to add an attachment, if you like.
+? - To see other ways of manipulating your message, headers, or attachments.
+y - To send the message or q to abort the send.
+x - To exit without changing your mailbox when you are done.
+q - To exit and incorporate the changes you made (messages read, deleted, and so on).
+
+https://unix.stackexchange.com/questions/310451/how-do-i-send-mutt-postponed-mail-at-a-later-time
+shift+r open a menu for postpone message
+
+If you know
+the address of your mail server, here are examples of how to connect to a POPS or
+IMAPS e‐mail server from mutt:
+	$ mutt -f imaps://chris@imapsserver.example.com
+	$ mutt -f pops://chris@popsserver.example.com

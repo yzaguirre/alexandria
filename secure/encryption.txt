@@ -1,3 +1,4 @@
+https://access.redhat.com/blogs/766093/posts/3050871
 https://math.berkeley.edu/~kpmann/encryption.pdf
 http://www.jupiterbroadcasting.com/91736/lets-encrypt-a-new-hope-las-396/
 Definition https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly?resubmit=true
@@ -37,6 +38,9 @@ order to decrypt a gpg file use:
 	$ gpg filename.gpg
 This command reads a passphrase and decrypts the file.
 
+https://github.com/theno/ctutlz
+	verify-scts google.com --short
+
 Base64 is a group of similar encoding schemes that represents binary data in an
 ASCII string format by translating it into a radix-64 representation. The base64
 command can be used to encode and decode the Base64 string. In order to
@@ -69,6 +73,8 @@ https://www.cyberciti.biz/open-source/debian-ubuntu-centos-linux-setup-additiona
 https://linux-audit.com/gpg-key-generation-not-enough-random-bytes-available/
 	cat /proc/sys/kernel/random/entropy_avail
 	apt install rng-tools dieharder haveged
+	systemctl disable haveged.service
+	systemctl disable rng-tools.service
 Test it
 	cat /dev/random | rngtest -c 1000
 	rngd -f -r /dev/urandom

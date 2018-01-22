@@ -1,0 +1,282 @@
+Install
+	apt install postfix
+# Email Aliases
+Add a user
+	adduser user2
+	passwd user2
+Go to config directory
+	cd /etc/postfix
+	vim alias
+user: user, user2
+admin: user
+secretary: user2
+
+Add a user per mailbox
+	adduser admin
+	adduser secretary
+But they won't receive an email, because they're not on the list of aliases
+
+Make postfix pick up the aliases
+	postalias /etc/postfix/aliases
+aliases.db is created
+
+# Install and Configure an SMTP Service
+	vim /etc/postfix/main.cf
+myorigin = mail.mylabserver.com
+mydestination = $myhostname, localhost.$mydomain, mail, mail.mylabserver.com # Send mail locally instead of relay
+
+Edit transport file for lan transfers
+	vim transport
+mail local:
+mail.mylabserver.com local:
+.mail local:
+.mail.mylabserver.com local:
+
+With local resolution, edit /etc/hosts
+	vim /etc/hosts
+52.3.220.14 mail.mylabserver.com mail
+
+Create another database when add transport
+	postmap /etc/postfix/transport
+Reads mail.cf and transport. It also tells us of any error. It also overrites database, so back it up before any new configuration.
+Edit subnet in mynetworks section
+
+# Restrict access to SMTP
+Edit main.cf, there are 4 options to choose from
+	vim main.cf
+# require HELO or EHLO
+smtpd_helo_required = yes
+# Restrictions for senders, reject requests for any outbound destination
+# reject any non local destinations fro sender address
+smtpd_sender_restrictions = permite_mynetworks, reject_unknown_sender_domain
+# Reject any HELO or EHLO identification after introduction
+# reject anything that has a bad domain or network addresss
+smtpd_helo_restrictions = permite_mynetworks, reject_invalid_helo_hostname
+# Reject any request unless it has: is finaldestination or postfix is the mail forwarder
+# reject anything for mail forwarding and non-destinations
+smtpd_recipient_restrictions = permite_mynetworks, reject_unauth_destination
+
+Now recreate the db
+	postmap /etc/postfix/transport
+
+# Install and Configure an IMAP and IMAPS Service: IMAP/IMAPS
+Using the dovecot package
+What group our postfix process runs as
+	cat /etc/group | grep mail
+mail group controls postfix
+	apt install dovecot-core dovecot-pop3d dovecot-imapd
+	cd /etc/dovecot/conf.d
+	vim 10-mail.conf
+mail_location = mbox:~/mail:INBOX=/var/mail/%u
+mail_privileged_group = mail
+
+Edit dovecot.conf
+	cd /etc/dovecot
+	vim dovecot.conf
+protocols = imap pop3 imaps pop3s
+
+Edit 10-ssl.conf
+	cd conf.d
+	vim 10-ssl.conf
+ssl_cert = /etc/pki/dovecot/certs/dovecot.pem
+ssl_key = /etc/pki/dovecot/private/dovecot.pem
+
+
+Install certificates in /etc/pki/dovecot
+	
+Start dovecot
+	systemctl start dovecot
+	netstat -46plunt | grep dove
+
+# Lecture: Install and Configure an SMTP Service: Client Setup and Testing
+	apt install mutt
+	mutt -s "This is my test email to a user called user" user@localhost < /dev/null
+	mutt -s "This is my test email to a user called user" user@mail.mylabserver.com
+	ls /home/user -la
+We have Mail/ directory
+Log in as User and run mutt
+	mutt
+Send an attachment as Root
+	mutt -s "Test attachment" user@mail.mylabserver.com -a /root/test.txt < /dev/nulll
+Check mail as User
+	mutt
+Send mail from telnet
+	telnet localhost smtp
+	HELO
+	HELO mail
+	mail from: tcox@yzaguirre.com 
+	rcpt to: user@mail.mylabserver.com
+	data
+This is a message for user
+
+Thanks
+.
+	quit
+
+Use mail
+	$ echo "prueba "| mail -s "ensayo" dvdyzag@gmail.com
+	$ echo "prueba x"| mail -s "ensayo mail" david@correo.osuse64.local
+
+https://rtcamp.com/tutorials/linux/ubuntu-postfix-gmail-smtp
+http://mhawthorne.net/posts/postfix-configuring-gmail-as-relay.html
+
+http://wiki.centos.org/HowTos/postfix
+Postfix Project Homepage:
+	http://www.postfix.org
+Postfix Project Documentation, Postfix Basic Configuration:
+	http://www.postfix.org/BASIC_CONFIGURATION_README.html
+	
+	
+
+Client
+	$ mail david@correo.osuse64.local
+Subject: Hi this is a test mail from david
+Then here is the message which im sending to you
+.
+EOT
+
+read
+	$ mail
+	$ mail -f ~/Maildir
+
+http://www.youtube.com/user/Wilson18com/videos
+	apt install postfix libsas12 ca-certificate libsas12-modules
+Sistem mail name:
+	correo.osuse64.local
+SMTP relay host:
+	smtp.gmail.com
+Now edit main.cf
+	# vim /etc/postfix/main.cf
+mydestination = localhost
+Create credentials folder
+	echo '[smtp.gmail.com]:587 username@gmail.com:password' > /etc/postfix/sasl_password
+	chmod 400 /etc/postfix/sasl_password
+	postmap /etc/postfix/sasl_password
+	rm /etc/postfix/sasl_password
+	cat /etc/ssl/certs/Equifax_Secure_CA.pem >> /etc/postfix/cacert.pem
+	service postfix restart
+	echo '<?php $to = "YourEmail@Addreess.com"; \n $subject = "Successful Email Setup Confimation"; $message="Woop, Email now work from your server!"; $headers = "From: <Username@domain.tld>\r\n"; mail($to,$subject,$message,$headers); echo "Mail Sent."; ?>' > /var/www/email.php
+	php /var/www/email.php
+View log file:
+	less /var/log/mail.log
+CentOS Project Postfix HowTo:
+	http://wiki.centos.org/HowTos/Postfix
+
+In OpenSuse, disable apparmor
+http://forums.opensuse.org/english/get-technical-help-here/applications/492351-dovecot-not-running-help-plz-2.html
+http://lists.opensuse.org/opensuse-bugs/2011-07/msg02654.html
+https://bugs.launchpad.net/ubuntu/+source/dovecot/+bug/997269
+
+How to set up a mail server on a GNU / Linux system
+https://news.ycombinator.com/item?id=6748670
+http://flurdy.com/docs/postfix/
+1.   Install telnet for testing purposes
+	zypper install telnet
+2.	 Now open the main Postfix configuration file by typing:
+	vim /etc/postfix/main.cf
+3.	 First of all we will want Postfix to listen on all interfaces. So scroll down and update
+the following line that starts with inet_interfaces to read:
+	inet_interfaces = all
+4.	 With the intention that this server may become a domain-wide mail server you should
+now update the following line that starts with mydestination to read:
+	mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+5.	 We now need to specify the pathname of a mailbox file relative to a user's home
+directory. To do this, scroll down and locate the line that begins with home_mailbox
+and uncomment the following option:
+	home_mailbox = Maildir/
+6.	 Now scroll down and make sure that the following line remains commented out:
+	#mail_spool_directory = /var/spool/mail
+7.	 Now save and close the file in the usual way before restarting the Postfix service
+as follows:
+	service postfix restart
+8.	 Having finished the basic configuration of Postfix we will now proceed to test the MTA
+with Telnet. To do this, we will begin by opening a Telnet session in the following way:
+	telnet localhost smtp
+10.	 Now type the following:
+	ehlo localhost
+11.	 Having done this, your server should respond as follows:
+	250-servername.localdomain
+	250-PIPELINING
+	250-SIZE 10240000
+	250-VRFY
+	250-ETRN
+	250-ENHANCEDSTATUSCODES
+	250-8BITMIME
+	250 DSN
+12.	 We will now send a message. So replace the <username> value with a valid system
+account and type the following command:
+	mail from:<username>
+	mail from:david
+13.	 Now press the Enter key and the terminal will respond in the following way:
+	250 2.1.0 Ok
+14.	 Now replace the <recipient> value with either a valid user account or a third party
+e-mail address and type the following command:
+	rcpt to:<recipient>
+	rcpt to:david
+15.	 Press the Enter key to continue and the terminal should respond as follows:
+	250 2.1.5 Ok
+16.	 Now type the following command in order that we can create a simple message:
+	data
+17.	 The terminal will now respond as follows:
+	354 End data with <CR><LF>.<CR><LF>
+18.	 Now type your message. Remember to keep it simple, so you could type:
+	Hello, this is a test message.
+19.	 When you complete typing, press the Enter key and use a . key to finish the process
+as follows:
+	.
+20.	 On success, the terminal should respond in the following way:
+	250 2.0.0 Ok: queued as 6A35D19F61A
+21.	 To quit the Telnet session, type:
+	quit
+22.	 At this stage your first e-mail should be on route to its destination, meanwhile the
+terminal will now respond as follows:
+	221 2.0.0 Bye
+	Connection closed by foreign host.
+
+Having done this, you should have received a test message and as a result you will be happy
+to know that everything is working correctly. However, if you did happen to encounter any
+errors you should always refer to the log file located at /var/log/maillog.
+
+Building a local POP3/SMTP server with Postfix and Dovecot
+1.	 To do this, log in as root and install Dovecot by typing the following command:
+	zypper install dovecot
+2.	 Once installed, enable the Dovecot service at boot by typing:
+	# chkconfig dovecot on
+3.	 Now open the main Dovecot configuration file in your favorite text editor by typing:
+	vim /etc/dovecot/dovecot.cf
+or change file extension
+	vim /etc/dovecot/dovecot.conf
+4.	 Begin by confirming the protocols we want to use by un-commenting the
+following line:
+	protocols = imap pop3
+5.	 Now save and close the file in the usual way before opening the following file in your
+favorite text editor:
+	vim /etc/dovecot/conf.d/10-mail.conf
+6.	 Scroll down and uncomment the following line:
+	mail_location = maildir:~/Maildir
+7.	 Again, save and close the file in the usual way before opening the following file in your
+favorite text editor:
+	vim /etc/dovecot/conf.d/20-pop3.conf
+8.	 Start by uncommenting the following line:
+	pop3_uidl_format = %08Xu%08Xv
+9.	 Now scroll down and amend the following line:
+	pop3_client_workarounds = outlook-no-nuls oe-ns-eoh
+10.	 Save and close the file in the usual way. In our final configuration setting we will now
+allow for plain text logins. To do this, open the following file in your favorite text editor:
+	vim /etc/dovecot/conf.d/10-auth.conf
+11.	 Change the following line to state:
+	disable_plaintext_auth = no
+12.	 Now scroll down and ensure the following line reads:
+	auth_mechanisms = plain
+13.	 Now, save and close the file before starting the Dovecot service:
+	service dovecot start
+
+Make Alias
+	vim /etc/aliases
+#users aliases for mail
+marketing: 	henry
+
+Repeat this action for all aliases, but when you have finished, remember to save and close the
+file in the usual way before running the following command:
+	newaliases
+

@@ -31,3 +31,13 @@ https://www.enigmail.net/documentation/quickstart.php
 https://www.enigmail.net/documentation/quickstart-ch2.php
 https://www.enigmail.net/download/index.php
 To install the extension for your account only, load Thunderbird and choose Tools > Extensions > Install. Select the XPI file, and OK. Close Thunderbird. 
+
+Default key servers
+hkps://hkps.pool.sks-keyservers.net, hkps://pgp.mit.edu
+
+https://support.mozilla.org/es/kb/novedades-de-thunderbird-520
+
+Download image and uri encode it 
+mail.compose.attach_http_images
+
+https://support.mozilla.org/es/kb/firma-digital-y-cifrado-de-mensajes

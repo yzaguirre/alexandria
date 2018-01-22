@@ -1,0 +1,56 @@
+https://news.ycombinator.com/item?id=6748670
+http://flurdy.com/docs/postfix/
+https://workaround.org/ispmail/jessie/big-picture
+https://gerritbeine.com/2014/02/postfix-und-dovecot-mit-startssl-zertifikaten/
+https://www.grepular.com/Automatically_Encrypting_all_Incoming_Email
+https://www.slideshare.net/jvehent/di-ymail
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-postfix-e-mail-server-with-dovecot
+https://www.digitalocean.com/community/tutorials/how-to-configure-a-mail-server-using-postfix-dovecot-mysql-and-spamassassin
+https://www.namecheap.com/support/knowledgebase/article.aspx/322/2237/how-can-i-set-up-mx-records-required-for-mail-service
+http://www.postfix.org/postconf.5.html
+	man 5 postconf
+http://www.postfix.org/BASIC_CONFIGURATION_README.html
+https://wiki2.dovecot.org/
+
+Setting up the database schema
+CREATE DATABASE mailserver;
+GRANT SELECT,INSERT,UPDATE,DELETE ON mailserver.* TO 'mailuser'@'127.0.0.1' IDENTIFIED BY 'ChangeMe';
+USE mailserver;
+CREATE TABLE IF NOT EXISTS `virtual_domains`
+ `id` int(11) NOT NULL auto_increment,
+ `name` varchar(50) NOT NULL,
+ PRIMARY KEY
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+USE mailserver;
+CREATE TABLE IF NOT EXISTS `virtual_users`
+ `id` int(11) NOT NULL auto_increment,
+ `domain_id` int(11) NOT NULL,
+ `email` varchar(100) NOT NULL,
+ `password` varchar(150) NOT NULL,
+ PRIMARY KEY
+ UNIQUE KEY `email`
+ FOREIGN KEY
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+USE mailserver;
+CREATE TABLE IF NOT EXISTS `virtual_aliases`
+ `id` int(11) NOT NULL auto_increment,
+ `domain_id` int(11) NOT NULL,
+ `source` varchar(100) NOT NULL,
+ `destination` varchar(100) NOT NULL,
+ PRIMARY KEY
+ FOREIGN KEY
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Make password hash
+To create a secure hash of the simple password "summersun":
+	dovecot pw -s SHA256-CRYPT
+
+# DKIM
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-dkim-with-postfix-on-debian-wheezy
+http://www.opendkim.org/opendkim-README
+https://easyengine.io/tutorials/mail/dkim-postfix-ubuntu/
+Just be very careful about the three essential files; the KeyTable, SigningTable and TrustedHosts,
+only in as much as their syntax can be easily misconfigured, if you're not very careful.
+
+# Max mail
+https://www.electrictoolbox.com/postfix-email-size-limit/

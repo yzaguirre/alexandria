@@ -1,3 +1,7 @@
+https://lwn.net/Articles/735840/
+Use a key without importing it
+    gpg -f FILE_WITH_KEY -e DATAFILE
+
 Install or update packages
 	apt install libgcrypto20
 https://alexcabal.com/creating-the-perfect-gpg-keypair/
@@ -33,6 +37,9 @@ Create a directory for GnuPG to use as its 'home' directory, and set an environm
 	mkdir -p /mnt/gpg-key-backup/gnupghome
 	chmod go= /mnt/gpg-key-backup/gnupghome
 	export GNUPGHOME=/mnt/gpg-key-backup/gnupghome
+
+View fingerprint, list the keys in a file without actually importing them:
+gpg --import-options show-only --import FILE
 
 Creating your primary key. Sign Only, 4096 keysize
 	gpg2 --full-gen-key

@@ -1,0 +1,5 @@
+http://www.exim.org/
+Message transfer agent (MTA) developed at the University of Cambridge.
+Postfix alternative
+Install 
+	sudo apt-get install exim4
