@@ -1,0 +1,76 @@
+https://github.com/leandromoreira/ffmpeg-libav-tutorial#learn-ffmpeg-libav-the-hard-way
+http://www.ffmpeg.org/
+http://en.wikipedia.org/wiki/FFmpeg
+The project comprises several components:
+ffmpeg is a command-line tool to convert one video file format to another. It can also grab and encode in real-time from a TV card.
+ffserver is an HTTP and RTSP multimedia streaming server for live broadcasts. It can also time shift live broadcast.
+ffplay is a simple media player based on SDL and on the FFmpeg libraries.
+ffprobe is a command-line tool to show media information.
+libswresample is a library containing audio resampling routines.
+libavresample is a library containing audio resampling routines from the Libav project, completely different from libswresample from ffmpeg.
+libavcodec is a library containing all the FFmpeg audio/video encoders and decoders. Most codecs were developed from scratch to ensure best performance and high code reusability.
+libavformat is a library containing demuxers and muxers for audio/video container formats.
+libavutil is a helper library containing routines common to different parts of FFmpeg. This library includes Adler-32, CRC, MD5, RIPEMD, SHA-1, SHA-2, LZO decompressor, Base64 encoder/decoder, DES encrypter/decrypter, RC4 encrypter/decrypter and AES encrypter/decrypter.
+libpostproc is a library containing video postprocessing routines.
+libswscale is a library containing video image scaling and colorspace/pixelformat conversion routines.
+libavfilter is the substitute for vhook which allows the video/audio to be modified or examined between the decoder and the encoder.
+
+Tool
+http://rodrigopolo.com/ffmpeg/
+
+Custom compilation with FDK AAC encoder and such, see:
+https://trac.ffmpeg.org/wiki/CompilationGuide
+
+Compile
+	wget https://www.ffmpeg.org/releases/ffmpeg-2.6.2.tar.bz2
+	wget https://www.ffmpeg.org/releases/ffmpeg-2.6.2.tar.bz2.asc
+	gpg2 --recv-keys 0xd67658d8
+	gpg2 --edit-key 0xd67658d8
+	gpg2 --verify ffmpeg-2.6.2.tar.bz2.asc ffmpeg-2.6.2.tar.bz2
+	tar xf ffmpeg-2.6.2.tar.bz2
+	cd ffmpeg-2.6.2
+	./configure
+	make -j2
+	make install
+
+Very minimal FFmpeg installation:
+	sudo apt-get install zlib1g-dev yasm
+	git clone --depth 1 git://source.ffmpeg.org/ffmpeg.git
+	cd ffmpeg
+	./configure --enable-shared --prefix=/usr
+	make -j4
+	sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
+				--pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+
+Trim video
+https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
+	ffmpeg -i "Path\do you want him.flv"        \
+       -ss 00:00:05.240 -to 00:00:08.360    \
+       -vcodec libx264 -acodec libvo_aacenc \
+       "Path\Do you want him1.flv"
+https://sandilands.info/sgordon/multimedia-on-linux-command-line
+
+Change libvo_aacenc to libfaac
+
+COncat
+https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg
+https://trac.ffmpeg.org/wiki/Concatenate
+mylist.txt
+# this is a comment
+file '/path/to/file1'
+file '/path/to/file2'
+file '/path/to/file3'
+
+	ffmpeg -f concat -i mylist.txt -c copy output.mp4
+
+https://superuser.com/questions/704493/ffmpeg-convert-m4a-files-to-mp3-without-significant-loss-of-information-
+	mkdir newfiles
+	for f in *.m4a; do ffmpeg -i "$f" -codec:v copy -codec:a libmp3lame -q:a 2 newfiles/"${f%.m4a}.mp3"; done
+
+Convert video to gif
+https://superuser.com/a/556031
+Generate a palette:
+	ffmpeg -y -ss 30 -t 3 -i input.flv -vf fps=10,scale=320:-1:flags=lanczos,palettegen palette.png
+
+Output the GIF using the palette:
+	ffmpeg -ss 30 -t 3 -i input.flv -i palette.png -filter_complex "fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" output.gif
