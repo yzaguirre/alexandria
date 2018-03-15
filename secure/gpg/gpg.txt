@@ -1,3 +1,4 @@
+https://xkcd.com/1553/
 https://lwn.net/Articles/735840/
 Use a key without importing it
     gpg -f FILE_WITH_KEY -e DATAFILE

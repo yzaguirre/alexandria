@@ -3,9 +3,10 @@ http://engineroom.teamwork.com/go-learn/
 https://golang.org/dl/
 https://golang.org/doc/install
 	wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
-	sha256sum go1.8.linux-amd64.tar.gz
-53ab94104ee3923e228a2cb2116e5e462ad3ebaeea06ff04463479d7f12d27ca
-	tar xf go1.8.linux-amd64.tar.gz -C /opt
+	wget https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz
+	sha256sum go1.9.2.linux-amd64.tar.gz
+de874549d9a8d8d8062be05808509c09a88a248e77ec14eb77453530829ac02b
+	tar xf go1.9.2.linux-amd64.tar.gz -C /opt
 	mkdir /opt/go/libs
 	vim + ~/.profile
 export GOROOT=/opt/go

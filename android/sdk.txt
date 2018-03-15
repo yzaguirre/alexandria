@@ -1,0 +1,46 @@
+Dependencies
+	sudo apt-get install lib32stdc++6 lib32z1
+# lib32z1-dev
+Download
+	wget http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz
+Verify sha-1
+	sha1sum android-sdk_r24.3.3-linux.tgz
+cd4cab76c2e3d926b3495c26ec56c831ba77d0d0
+	tar xf android-sdk_r24.3.3-linux.tgz -C /opt
+	cd /opt/android-sdk-linux
+	mkdir /opt/android
+Edit ~/.profile
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/bin
+export ANDROID_HOME=/opt/android-sdk-linux
+export ANDROID_SDK_HOME=/opt/android
+export ANDROID_NDK_HOME=/opt/android-ndk-linux
+export NDK_ROOT=/opt/android-ndk-linux
+PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
+Install everything (couple of gigabytes, not recommended)
+	android update sdk --no-ui
+http://tools.android.com/recent/updatingsdkfromcommand-line
+	android list sdk
+	android update sdk --no-ui --filter 2.3.34,31,tool,platform-tools
+
+Adding Packages
+http://developer.android.com/sdk/installing/adding-packages.html
+To develop an Android app, you also need to download at least one Android platform and the latest SDK Platform-tools.
+	android sdk
+
+Building your first app
+http://developer.android.com/training/basics/firstapp/index.html
+
+List devices
+	android list avd
+Run a device
+	emulator -avd <Virtual Device Name>
+
+	# apt-get install android-tools-adb android-tools-fastboot
+	# ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
+	# ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
+
+http://stackoverflow.com/questions/4454107/how-to-convert-an-eclipse-android-project-to-use-ant-for-build
+	$ android update project -p .
+
+http://developer.android.com/tools/building/building-cmdline.html

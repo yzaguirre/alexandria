@@ -84,10 +84,12 @@ Additional settings:
   "enode://pubkey@ip:port"
 ]
 Initialize a network
-	
-	geth --datadir ~/.ethereum/privatenet init ./privether/privategenesis.json
+Geth es una herramienta de consola para Ethereum. La opcion "init" inicializa el bloque inicial.
+	geth --datadir ~/.ethereum/privatenet init ~/.ethereum/privatenet/privategenesis.json
 Run
 	geth --datadir ~/.ethereum/privatenet --networkid 786
+Run with web4
+	geth --datadir ~/.ethereum/privatenet --networkid 786 --rpc --rpccorsdomain "*"
 Also can run in REPL console
 	geth --datadir ~/.ethereum/privatenet --networkid 786 console 2> console.log
 Now geth can be attached via IPC to the running geth client on a private network:
@@ -139,6 +141,11 @@ Create an account first
 	personal.newAccount()
 	miner.start(1)
 
+List pending contracts
+	eth.pendingTransactions
+Unblock an account
+	personal.unlockAccount(eth.accounts[0])
+
 # Wallet
 ## Mist Browser
 https://github.com/ethereum/mist/releases
@@ -149,8 +156,8 @@ for account management and contract management.
 https://www.myetherwallet.com/
 Is an open source ether wallet developed in JavaScript. MyEtherWallet runs in the client browser
 
-# Solidity
 https://github.com/ethereum/browser-solidity/tree/gh-pages
+# Solidity
 	git clone https://github.com/ethereum/browser-solidity
 	cd browser-solidity
 	npm install
@@ -158,3 +165,49 @@ https://github.com/ethereum/browser-solidity/tree/gh-pages
 	wget https://github.com/ethereum/browser-solidity/raw/gh-pages/remix-d50dcc4.zip
 	mkdir /opt/remix
 	unzip remix-d50dcc4.zip -d /opt/remix
+
+# Compiler
+Javascript version
+	npm install -g solc
+	solcjs --help
+Compile
+	solcjs --bin counter.sol
+Output is an hex encoded string in .bin file
+Generate the ABI. The ABI tells us how to use an contract
+	solcjs --abi counter.sol
+Generate both at the same time
+	solcjs --abi --bin counter.sol
+To use a contract, send a transaction to the network. Unlock the account, because ether will be needed
+	personal.unlockAccount(eth.accounts[0])
+	eth.sendTransaction({
+		from: eth.accounts[0],
+		data: "0x" + counterCode,
+		gas: 1000000
+	},
+	function(err, tx){
+		console.log(err, tx);
+	})
+Save the contract address.
+Check on the contract
+	eth.getCode(contractAddr)
+Start mining. 
+Calling deployed smart contract code
+	var abi = JSON.parse('...abi code...')
+	var Counter = eth.contract(abi)
+	var counter = Counter.at(contractAddr)
+Now we can interact with contract code like a js object. All reads are free locally, as long they don't modify state.
+	counter.get()
+Send a transaction (unlock account first)
+	counter.increment.sendTransaction({from: eth.accounts[0]})
+Debug a transaction
+	debug.traceTransaction(txid)
+	eth.getTransaction(txid)
+	eth.getTransactionReceipt(txid)
+	
+
+C++ compiler
+https://github.com/ethereum/solidity
+
+Javascript dev
+	npm install web3
+	

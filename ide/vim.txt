@@ -1,3 +1,7 @@
+https://kinbiko.com/vim/my-shiniest-vim-gems/
+https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
+tutors https://news.ycombinator.com/item?id=15693906
+
 https://news.ycombinator.com/item?id=10364760
 http://dougblack.io/words/a-good-vimrc.html
 

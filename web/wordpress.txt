@@ -1,0 +1,23 @@
+https://wordpress.org/download/
+	cd downloads
+	wget https://wordpress.org/latest.tar.gz -O wordpress-4.9.4.tar.gz
+	wget https://wordpress.org/wordpress-4.9.4.tar.gz.md5
+	wget https://wordpress.org/wordpress-4.9.4.tar.gz.sha1
+	md5sum wordpress-4.9.4.tar.gz
+	sha1sum wordpress-4.9.4.tar.gz
+	tar xf wordpress-4.9.4.tar.gz -C /var/www/html
+	chown www-data:www-data -R /var/www/html/wordpress
+
+CREATE DATABASE wp;
+GRANT ALL ON wp.* TO wp@'localhost' IDENTIFIED BY 'f00.bar';
+FLUSH PRIVILEGES;
+
+Reset password
+https://codex.wordpress.org/Resetting_Your_Password
+
+https://wp-cli.org/
+https://www.digitalocean.com/community/tutorials/how-to-use-wp-cli-to-manage-your-wordpress-site-from-the-command-line
+	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+	php wp-cli.phar --info
+	chmod +x wp-cli.phar
+	mv wp-cli.phar /usr/local/bin/wp

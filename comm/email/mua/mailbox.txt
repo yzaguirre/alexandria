@@ -1,0 +1,5 @@
+https://support-en.mailbox.org/knowledge-base/article/e-mail-addresses-of-your-own-domain
+https://support-en.mailbox.org/knowledge-base/article/using-jabber-service-with-own-domain
+https://support-en.mailbox.org/knowledge-base/article/how-to-use-a-catch-all-alias-with-your-own-domain-name
+
+http://help.dnsmadeeasy.com/managed-dns/records/txt-record/

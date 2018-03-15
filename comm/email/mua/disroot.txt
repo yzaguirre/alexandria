@@ -1,0 +1,4 @@
+https://howto.disroot.org/email/email-clients
+IMAP: disroot.org | SSL Port 993 | Authentication: Normal Password
+SMTP: disroot.org | STARTTLS Port 587 | Authentication: Normal Password
+POP: disroot.org | SSL Port 995 | Authentication: Normal Password

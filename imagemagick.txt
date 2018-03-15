@@ -84,7 +84,8 @@ COMBINAR
 	composite -gravity {posicion} -geometry +{horizontal}+{vertical} -dissolve {porcentaje} {entrada} {salida}
 	composite -gravity {posicion} -geometry +{horizontal}+{vertical} -dissolve 40 {entrada} {salida}
 ANIMAR
-Si queremos crear una imagen .gif a partir de imágenes estáticas que tengamos tiradas por ahí podemos hacerlo de este modo: 
+Si queremos crear una imagen .gif a partir de imágenes estáticas que tengamos tiradas por ahí podemos hacerlo de este modo:
+http://xmodulo.com/convert-video-animated-gif-image-linux.html
 	convert -delay {tiempo} -loop {cantidad} {entrada} {salida}
 Donde {tiempo} es un número en milisegundos que indica cuánto tardará
 la transición de un fotograma a otro y {cantidad} es el número de veces

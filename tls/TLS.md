@@ -42,10 +42,6 @@ Options
 * `-name prime256v1` use the ec parameters with 'prime256v1' short name
 * `-genkey` generate ec key
 
-Create custom EC curve name for ephemeral keys
-```bash
-openssl ecparam
-```
 
 ---
 # Create Certificate Sign Request CSR

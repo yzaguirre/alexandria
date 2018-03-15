@@ -1,5 +1,8 @@
 https://jamielinux.com/docs/openssl-certificate-authority/index.html
 http://apetec.com/support/GenerateSAN-CSR.htm
+https://blog.zencoffee.org/2013/04/creating-and-signing-an-ssl-cert-with-alternative-names/
+https://stackoverflow.com/questions/21297139/how-do-you-sign-certificate-signing-request-with-your-certification-authority
+https://sites.google.com/site/ddmwsst/create-your-own-certificate-and-ca#TOC-Set-Up-a-Certificate-Authority
 
 Also check out tls/root-certificates, tunnels/openssl.txt
 
@@ -42,7 +45,7 @@ Add a crlnumber file to the intermediate CA directory tree. crlnumber is used to
 See https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html
 
 Create the intermediate key
-	cd /root/ca
+	cd /root/ca/intermediate
 	openssl genrsa -aes256 \
       -out private/intermediate.key.pem 4096
 	chmod 400 private/intermediate.key.pem

@@ -1,0 +1,3 @@
+https://qiime2.org/
+Install (with python2)
+	sudo -H pip install qiime

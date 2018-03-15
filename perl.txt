@@ -25,3 +25,9 @@ Open README and INSTALL.platform files
 You can do all that, or use Perlbrew
 	% curl -L http://xrl.us/perlbrewinstall | bash
 	% ~/perl5/perlbrew/bin/perlbrew install perl-5.14.2
+Regex
+http://perldoc.perl.org/perlre.html#Modifiers
+http://perldoc.perl.org/perlrebackslash.html#Character-Escapes
+Multistring
+https://unix.stackexchange.com/questions/26284/how-can-i-use-sed-to-replace-a-multi-line-string#26289
+	perl -0777 -i.original -pe 's/a test\nPlease do not/not a test\nBe/igs' alpha.txt

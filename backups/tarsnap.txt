@@ -2,17 +2,16 @@ https://www.tarsnap.com/download.html
 	apt install libssl-dev zlib1g-dev e2fslibs-dev build-essential
 Proceed to downloading, verifying, and building Tarsnap.
 	curl https://www.tarsnap.com/tarsnap-signing-key.asc | gpg2 --import
-	wget https://www.tarsnap.com/download/tarsnap-autoconf-1.0.37.tgz
-	wget https://www.tarsnap.com/download/tarsnap-sigs-1.0.37.asc
+	wget https://www.tarsnap.com/download/tarsnap-autoconf-1.0.39.tgz
+	wget https://www.tarsnap.com/download/tarsnap-sigs-1.0.39.asc
 Verify the integrity
-	gpg2 --decrypt tarsnap-sigs-1.0.37.asc
-	sha256sum tarsnap-autoconf-1.0.37.tgz
-	tar xf tarsnap-autoconf-1.0.37.tgz
-	cd tarsnap-autoconf-1.0.37
+	gpg2 --decrypt tarsnap-sigs-1.0.39.asc
+	sha256sum tarsnap-autoconf-1.0.39.tgz
+	tar xf tarsnap-autoconf-1.0.39.tgz
+	cd tarsnap-autoconf-1.0.39
 	./configure --prefix=/usr/local/tarsnap
-	make
+	make all
 	# make install
-x	make all install clean
 	vim + ~/.profile
 export TARSNAP=/usr/local/tarsnap
 export PATH=$PATH:$TARSNAP/bin

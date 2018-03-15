@@ -1,0 +1,14 @@
+https://www.cyberciti.biz/faq/ssh-passwordless-login-with-keychain-for-scripts/
+	apt install keychain
+	vim ~/.bash_profile
+### START-Keychain ###
+# Let  re-use ssh-agent and/or gpg-agent between logins
+/usr/bin/keychain --clear $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOSTNAME-sh
+### End-Keychain ###
+
+Task: Clear or delete all of ssh-agent’s keys
+	keychain --clear
+
+Add the following before your rsync, tar over ssh, or any other network backup command:
+source $HOME/.keychain/$HOSTNAME-sh

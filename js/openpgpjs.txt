@@ -1,0 +1,12 @@
+https://openpgpjs.org/
+https://protonmail.com/blog/openpgpjs-3-release/
+https://news.ycombinator.com/item?id=16553485
+
+In case anyone that doesn't follow the development of the library closely missed it,
+the main improvement in this version is the introduction of ECC support.
+ECC tends to be able to provide equivalent levels of security as traditional "big prime" cryptography (like RSA) with less computationally intensive operations.
+This is especially important in a library like OpenPGPjs that is primarily meant for in browser based web usage because it should make things,
+like sending and receiving mail, faster when ECC is used over older PGP public key encryption systems.
+
+For people that use ProtonMail's web based crypto on mobile or tablet devices,
+a switch to ECC would result not just in similar performance improvements but also in lower battery usage.

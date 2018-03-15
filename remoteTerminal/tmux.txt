@@ -1,3 +1,4 @@
+https://leanpub.com/the-tao-of-tmux/read
 https://sourceforge.net/projects/tmux/files/tmux/tmux-2.0/
 http://www.bsdnow.tv/tutorials/ssh-tmux
 Install

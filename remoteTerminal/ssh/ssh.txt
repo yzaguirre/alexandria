@@ -1,3 +1,5 @@
+https://infosec.mozilla.org/guidelines/openssh.html
+https://news.ycombinator.com/item?id=16503768
 http://blog.infertux.com/2012/12/20/properly-close-a-frozen-ssh-session/
     [Enter]
     ~
@@ -7,7 +9,7 @@ http://sandrinodimattia.net/posting-successful-ssh-logins-to-slack/
 Secure SSH
 https://stribika.github.io/2015/01/04/secure-secure-shell.html
 http://sysconfig.org.uk/two-factor-authentication-with-ssh.html
-if you need to forcibly exit your ssh session, type the escape sequence of a tilde followed by a period (~.). If that doesn’t work, try Ctrl+c.
+if you need to forcibly exit your ssh session, type the escape sequence of a tilde followed by a period
 
 Key type
 https://security.stackexchange.com/questions/23383/ssh-key-type-rsa-dsa-ecdsa-are-there-easy-answers-for-which-to-choose-when
@@ -21,8 +23,8 @@ Password
 https://stackoverflow.com/questions/20898384/ssh-disable-password-authentication
 PasswordAuthentication no
 
-the following runs the tar command on a remote site (to archive and compress the files), pipes the tar stream to standard output, 
-and uses the ssh command to catch the backup locally (over ssh) with tar:
+the following runs the tar command on a remote site
+and uses the ssh command to catch the backup locally
 	mkdir mybackup ; cd mybackup
 	ssh chris@server1 'tar cf - myfile*' | tar xvf -
 
@@ -79,7 +81,7 @@ Generate SSH keys
 	ssh-keygen -t rsa
 	ssh-keygen -t rsa -C "your_email@example.com"
 	# Creates a new ssh key, using the provided email as a label
-Its gonna save it in .ssh directory (~/.ssh/id_rsa), hit enter
+Its gonna save it in .ssh directory
 Its gonna ask for passphrase, hit enter for no passphrase
 
 	cd ~/.ssh
@@ -107,7 +109,7 @@ Or use ssh-id-copy
 
 Creating an SSH host alias
 	$ touch ~/.ssh/config
-Give it rw permissions: (vía http://serverfault.com/questions/253313)
+Give it rw permissions:
 	$ chmod 600 ~/.ssh/config
 	
 	IdentityFile ~/.ssh/id_rsa.git

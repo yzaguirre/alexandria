@@ -1,6 +1,16 @@
+Services
+https://diasp.eu/posts/6566140
+
+trading networks
+https://www.etoro.com/
+https://www.tradegeniusacademy.com
+
+https://github.com/herrbischoff/awesome-command-line-apps
+https://github.com/alebcay/awesome-shell
 Passwords
 KeepassX
 apg
+bitwarden
 
 http://asciimath.org/
 https://weforum.org
@@ -16,8 +26,10 @@ https://www.spock.li/
 
 CSS frameworks
 https://getbootstrap.com/
+http://minicss.org/
 https://foundation.zurb.com/
 https://milligram.github.io/
+https://github.com/milligram/milligram
 http://jamiewilson.io/corpus/
 
 prism-break.org
@@ -32,12 +44,18 @@ Screen
 https://news.ycombinator.com/item?id=12581874
 flux
 redshift
-Twilight (Proprietary app)
+Twilight
 
 Logo design
 https://twitter.com/jdorfman/status/780080622400249857
 
 http://apidocjs.com/
+
+hacker news
+https://github.com/donnemartin/haxor-news
+
+translate
+http://tuxdiary.com/2015/01/21/translate-shell/
 
 Hardware
 http://www.lowrisc.org/
@@ -117,7 +135,7 @@ http://0bin.net/
 
 Sysadmin
 https://sysadmincasts.com/
-facebook path picker (fpp)
+facebook path picker
 ccat
 
 https://www.privacytools.io/
@@ -185,6 +203,7 @@ https://www.nearlyfreespeech.net/
 Transit base encryption
 OpenSSL
 cryptcat, the encrypted netcat tool
+https://github.com/theno/ctutlz
 
 console print
 http://www.taringa.net/posts/linux/17844694/Imprimir-en-Linux-desde-la-consola.html
@@ -246,13 +265,13 @@ https://crypto.cat/
 https://duck.co/blog/using-pidgin-with-xmpp-jabber
 https://riseup.net/en
 https://help.riseup.net/en/vpn
-http://www.autistici.org/en/index.html
+https://www.autistici.org/
 https://vpn.autistici.org/
 https://mykolab.com/
 
 chat
 pidgin
-
+gajim
 
 mobile chat
 Telegram, Kontalk Messenger, Xabber
@@ -285,7 +304,7 @@ https://my-netdata.io/
 CMS
 ghost
 picocms
-
+https://getgrav.org/downloads
 
 Apache2
 https://github.com/phanan/htaccess
@@ -312,17 +331,17 @@ http://www.prq.se
 
 email services
 https://10minutemail.com/
-https://mail.yandex.com/ (https://domain.yandex.com/domains_add/) https://yandex.com/support/mail/mail-clients.xml
+https://mail.yandex.com/
 https://mailbox.org/
 https://encrypt.to/
 https://protonmail.ch/
-https://openmailbox.org
 http://tempmail.de/
 http://tormail.net/
 https://www.mailoo.org/
 https://runbox.com/
 https://mailfence.com/
 https://www.fastmail.com/
+www.disroot.org
 
 email as a service
 Mailgun
@@ -335,7 +354,7 @@ https://news.ycombinator.com/item?id=12620468
 Thunderbird
 https://www.mailpile.is/
 https://roundcube.net/
-http://www.rainloop.net/
+https://www.rainloop.net/
 https://www.mailvelope.com/
 https://www.enigmail.net/
 
@@ -391,6 +410,7 @@ https://mediacru.sh/
 
 study
 http://code.edx.org/
+https://www.codewars.com/
 
 Video
 http://simplewebrtc.com/demo.html?dvd
@@ -476,3 +496,10 @@ Charts
 kartesio, maxima
 
 http://homebank.free.fr/
+
+Books
+Competitive Programmer's Handbook https://cses.fi/book.html
+No bullshit linear algebra v2 release https://minireference.com/blog/no-bullshit-linear-algebra-v2-release/
+
+mail lists
+https://news.ycombinator.com/item?id=14086259

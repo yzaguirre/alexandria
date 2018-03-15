@@ -5,8 +5,10 @@ https://news.ycombinator.com/item?id=8797283
 http://www.apertoire.net/gogs-an-alternative-to-gitlab/
 https://help.github.com/articles/closing-issues-via-commit-messages/
 
-http://gogs.io/docs/installation
-	wget https://github.com/gogits/gogs/releases/download/v0.10.18/linux_amd64.tar.gz
+https://gogs.io/docs/installation
+	wget https://github.com/gogits/gogs/releases/download/v0.11.34/linux_amd64.tar.gz
+	wget https://dl.gogs.io/0.11.34/checksum_sha256.txt
+	sha256sum -c --ignore-missing checksum_sha256.txt
 	mkdir -p /home/git/.ssh
 	tar xf linux_amd64.tar.gz -C /opt
 	
@@ -36,9 +38,7 @@ Backup configuration and data dir
 	cp -r custom data attachments gogs.key /tmp
 	cd ..
 	mv gogs gogs-old
-Download latest release
-	wget https://github.com/gogits/gogs/releases/download/v0.9.113/linux_amd64.tar.gz
-	tar xf linux_amd64.tar.gz -C /opt
+Download latest release (see above)
 	mv /tmp/{data,custom,attachments,gogs.key} /opt/gogs
 	chown git:git -R /opt/gogs
 

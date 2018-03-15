@@ -1,6 +1,6 @@
 https://www.digitalocean.com/community/tutorials/how-to-use-the-mumble-server-one-click-application-image
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-mumble-server-murmur-on-ubuntu-14-04
-	apt-get install mumble-server
+	apt install mumble-server
 	dpkg-reconfigure mumble-server
 Advance config
 If you would like to customize your server even further we will need to edit the configuration file located
@@ -43,7 +43,7 @@ For 512 MB of RAM, the recommended setting is 50 users for 60Kbps-72Kbps bandwid
 	service mumble-server restart
 	
 Install client
-	apt-get install mumble
+	apt install mumble
 
 Change SuperUser password
 	/usr/sbin/murmurd -ini /etc/mumble-server.ini -supw "PASS" 1

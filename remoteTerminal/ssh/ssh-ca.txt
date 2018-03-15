@@ -1,0 +1,55 @@
+https://github.com/commercehub-oss/ssh-ca-server
+https://code.facebook.com/posts/365787980419535/scalable-and-secure-access-with-ssh/
+Create the CA pair
+	ssh-keygen -C CA -f ca
+Send the CA's public key (ca.pub) to the SSH server
+Modify /etc/ssh/sshd_config
+	TrustedUserCAKeys /etc/ssh/ca.pub
+At a SSH user machine, generate a key pair
+	ssh-keygen -t ecdsa
+Send the public key (id_ecdsa.pub) to the server containing the CA
+At the CA server, sign the user's public key
+	ssh-keygen -s ca -I mfdutra -n root -V +1w -z 1 id_ecdsa.pub
+
+At anytime, inspect a public key
+	ssh-keygen -Lf id_ecdsa-cert.pub
+
+Now the user can SSH into any server thats configured with the CA's public key
+
+Configure one of our servers to accept only certain principals
+	vim /etc/ssh/sshd_config
+AuthorizedPrincipalsFile /etc/ssh/auth_principals/%u
+
+Populate the principals file:
+	mkdir /etc/ssh/auth_principals
+	echo -e 'zone-webservers\nroot-everywhere' > /etc/ssh/auth_principals/root
+Make a new certificate for the user, but with different principal
+	ssh-keygen -s ca -I mfdutra -n zone-webservers -V +1w -z 2 id_ecdsa.pub
+
+https://www.digitalocean.com/community/tutorials/how-to-create-an-ssh-ca-to-validate-hosts-and-clients-with-ubuntu
+Create certificate authority for servers
+	ssh-keygen -t ed25519 -f server_ca
+Create keypair for each server
+	ssh-keygen -t ed25519 -f ssh_host_ed25519_key
+Sign the digitalocean servers pubkey
+	ssh-keygen -s server_ca -I host_digitalocean -h -n example.com -V +21w ssh_host_ed25519_key.pub
+Sign the 192.168.0.8 server pubkey
+	ssh-keygen -s server_ca -I host_localserver -h -n 192.168.0.8 -V +21w ssh_host_ed25519_key.pub
+The ssh service has to offer the new certificate
+Edit sshd_config
+	HostKey /etc/ssh/ssh_host_ed25519_key
+	HostCertificate /etc/ssh/ssh_host_ed25519_key-cert.pub
+Insert the CA pub key (server_ca.pub) at every client's .ssh/known_hosts. (example: server at 192.168.0.8 and another at example.com)
+Edit client .ssh/known_hosts
+	@cert-authority 192.168.0.8,example.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBXfXng21+kqG9eZo2FFqE5XznubRgSsk1k8Jk0xtbnB david@playground
+
+Create a ca for users
+	ssh-keygen -t ed25519 -f users_ca
+Create keypair for each client (any name is good)
+	ssh-keygen -t ed25519 -f id_ed25519
+Sign the client's pubkey
+	ssh-keygen -s users_ca -I user_david -n david,root,pi -V +21w ~/.ssh/id_ed25519.pub
+
+Every server should trust client certificates signed by the ca's private key
+Edit /etc/ssh/sshd_config
+	TrustedUserCAKeys /etc/ssh/users_ca.pub

@@ -1,3 +1,6 @@
+https://dlang.org/
+http://jordi.inversethought.com/blog/advent-of-d/
+https://news.ycombinator.com/item?id=16562456
 Folders
 	~/.dub
 Compiler

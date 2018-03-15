@@ -33,18 +33,19 @@ DSA generation
 Step 1- Create DSA parameters
 Step 2- Create the DSA key
 	openssl dsaparam -genkey 2048 | openssl dsa -out dsa.key -aes128
-It's password protected (encrypted with AES128)
+It's password protected
 
 ECDSA
+https://wiki.openssl.org/index.php/Command_Line_Elliptic_Curve_Operations
 Create a 256-bit ECDSA key using the secp256r1
-	openssl ecparam -genkey -name secp256r1 | openssl ec -out ec.key -aes128
-It's password protected (encrypted with AES128)
+	openssl ecparam -genkey -name secp256r1 | openssl ec -out ec.key -aes256
+It's password protected
 List curves
-	openssl ec -list_curves
+	openssl ecparam -list_curves
 
 Create a Certificate Signing Request
 This is a formal request asking a CA to sign a certificate, and it contains the public key of the entity requesting the certificate and some information about the entity.
-If you want a field to be empty, you must enter a single dot (.) on the line
+If you want a field to be empty, you must enter a single dot
 	openssl req -new -key fd.key -out fd.csr
 Specifies the message digest to sign the request with -sha256
 	openssl req -new -sha256 -key fd.key -out fd.csr
@@ -82,5 +83,5 @@ Self signed certificate
 Self signed without CSR
 	openssl req -new -x509 -days 365 -key fd.key -out fd.crt
 
-Verify the certificate (self-signed or CA signed)
+Verify the certificate
 	openssl x509 -noout -text -in www.blackmoreops.com.crt 

@@ -40,14 +40,16 @@ HiddenServiceDir /home/ubuntu/tor/hidden_service/
 HiddenServicePort 80 127.0.0.1:80
 
 Restart tor
-	service tor restart
+	systemctl restart tor
 
 Inside the 
 	/home/ubuntu/tor/hidden_service
 directory you will now find two files, a private_key file and a hostname file.
 Inside the private_key file is your services' private key and is vitally important to keep safe.
 Inside your host name file is the address which you can disseminate to users of your anonymous service,
-in my case it is mtq7eecokwr5kn22.onion. 
+in my case it is mtq7eecokwr5kn22.onion.
+
+https://www.lapsedordinary.net/2016/01/24/setting-up-your-wordpress-blog-as-a-tor-hidden-service/
 
 Popular onion sites
 https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237
