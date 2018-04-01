@@ -1,3 +1,4 @@
+https://scotthelme.co.uk/hybrid-rsa-and-ecdsa-certificates-with-nginx/
 Check syntax
 	nginx -t
 https://www.eff.org/deeplinks/2015/04/effs-updated-ssl-configuration

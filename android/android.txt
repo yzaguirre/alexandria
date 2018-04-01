@@ -1,3 +1,6 @@
+Android P will strengthen requirements for TLS traffic in apps, blocking all non-TLS traffic if a developer doesn’t explicitly opt-in for unencrypted traffic.
+https://android-developers.googleblog.com/2018/03/previewing-android-p.html
+
 Set the path variable
 	vim /etc/profile.d/android_sdk.sh
 #!/bin/bash

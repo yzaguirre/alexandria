@@ -1,0 +1,18 @@
+https://www.wallabag.org/
+https://doc.wallabag.org/en/admin/installation/installation.html#installation
+	cd /var/www/
+	git clone https://github.com/wallabag/wallabag.git
+    cd wallabag
+    make install
+	chown www-data:www-data -R /var/www/wallabag
+Database:
+	mysql -u root -p
+	CREATE DATABASE wallabag;
+	GRANT ALL ON wallabag.* TO wallabag@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;
+
+Update
+https://doc.wallabag.org/en/admin/upgrade.html#upgrading-from-23x-to-23y
+	cd /var/www/wallabag
+	make update
+	chown www-data:www-data -R /var/www/wallabag

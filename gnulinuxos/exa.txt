@@ -1,0 +1,18 @@
+https://the.exa.website/
+https://github.com/ogham/exa
+	wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
+	wget https://github.com/ogham/exa/releases/download/v0.8.0/MD5SUMS
+	wget https://github.com/ogham/exa/releases/download/v0.8.0/SHA1SUMS
+	unzip exa-linux-x86_64-0.8.0.zip
+	sha1sums -c --ignore-missing exa-linux-x86_64
+	md5sums -c --ignore-missing exa-linux-x86_64
+Move binary to a PATH directory (~/bin, /usr/local/bin, other)
+	mv exa-linux-x86_64 ~/bin/exa
+Useful alias
+	alias ll='exa -bghHlS'
+Other examples
+	exa -R
+	exa -T
+	exa -R --level=4
+	exa ‐l -‐sort=size
+	exa ‐lr -‐sort=size

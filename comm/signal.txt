@@ -1,0 +1,12 @@
+https://signal.org/
+https://github.com/WhisperSystems/Signal-Android
+
+	curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+	echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+	apt update
+	apt install signal-desktop
+Protocol libraries
+https://signal.org/docs/
+https://github.com/signalapp/libsignal-protocol-java
+https://github.com/signalapp/libsignal-protocol-c
+https://github.com/signalapp/libsignal-protocol-javascript

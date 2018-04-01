@@ -1,5 +1,8 @@
+https://emojipedia.org
+
 Services
 https://diasp.eu/posts/6566140
+https://notabug.org/
 
 trading networks
 https://www.etoro.com/
@@ -306,6 +309,8 @@ ghost
 picocms
 https://getgrav.org/downloads
 
+Caddy
+NGINX
 Apache2
 https://github.com/phanan/htaccess
 

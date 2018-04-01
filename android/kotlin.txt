@@ -1,0 +1,11 @@
+https://developer.android.com/kotlin/index.html
+https://www.youtube.com/watch?v=2IJaRSqPqN4
+Toast Function
+
+fun Activity.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, message, duration).show()
+}
+
+Call Toast
+
+toast("Hello Kotlin, Hackbal Teamz")

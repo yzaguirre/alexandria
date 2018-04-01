@@ -1,0 +1,83 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04#install-ansible-on-ubuntu-1404
+https://www.reddit.com/r/linuxadmin/comments/83vhi2/a_system_administrators_guide_to_getting_started/
+https://www.redhat.com/en/blog/system-administrators-guide-getting-started-ansible-fast?scid=701f2000000tnTlAAI
+How to install Ansible on a Ubuntu 16.04 server
+	apt-add-repository ppa:ansible/ansible
+	apt update
+	apt install ansible
+Setup the hosts file
+	vim /etc/ansible/hosts
+Define which users to connect to
+	mkdir /etc/ansible/group_vars
+	vim /etc/ansible/group_vars/servers
+---
+ansible_ssh_user: root
+
+To apply it to all groups, edit /etc/ansible/group_vars/all
+Individual hosts can be configured by creating files under a directory at /etc/ansible/host_vars.
+
+Ping all servers
+	ansible -m ping all
+	ansible -m ping servers
+	ansible -m ping host1
+Multiple hosts, separated by comma
+	ansible -m ping host1:host2
+
+We pass arguments into a script by typing -a.
+The "shell" module lets us send a terminal command to the remote host and retrieve the results.
+	ansible -m shell -a 'free -m' host1
+
+https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2-with-ansible-2-0-on-ubuntu-16-04
+The dopy (DigitalOcean API Python Wrapper) Python module is what will allow Ansible to communicate with the API.
+	pip3 install dopy
+Edit hosts
+	vim /etc/ansible/hosts
+Use the local hosts file
+	mkdir ~/ansible-do-api
+	cd ~/ansible-do-api/
+When you run Ansible, it will look for an ansible.cfg file in the directory where it is run, and if it finds one, it'll apply those configuration settings. This means we can easily override options, such as the hostfile option, for each individual use case.
+
+Create ansible.cfg
+	vim ansible.cfg
+[defaults]
+hostfile = hosts
+
+Create hosts file. Because we will only be dealing with the DigitalOcean API in this tutorial, we can tell Ansible to run on localhost, which keeps things simple and will remove the need to connect to a remote host.
+	vim hosts
+[digitalocean]
+localhost ansible_connection=local
+
+Create the playbook
+	vim digitalocean.yml
+---
+- hosts: digitalocean
+
+  vars:
+    do_token: your_API_token
+
+  tasks:
+
+Use the users module in Ansible to create an ssh key pair
+- name: ensure ssh key exists
+  user: >
+    name={{ ansible_user_id }}
+    generate_ssh_key=yes
+    ssh_key_file=.ssh/id_rsa
+Run the playbook
+	ansible-playbook digitalocean.yml
+	ls -la ~/.ssh/id_rsa*
+Use the digital_ocean Ansible module to upload your SSH key.
+We will also register the output of the task as the my_ssh_key variable because we'll need it for a later step.
+- name: ensure key exists at DigitalOcean
+    digital_ocean: >
+      state=present
+      command=ssh
+      name=my_ssh_key
+      ssh_pub_key={{ lookup('file', '~/.ssh/id_rsa.pub') }}
+      api_token={{ do_token }}
+    register: my_ssh_key
+
+Run the playbook
+	ansible-playbook digitalocean.yml
+
+Create a droplet

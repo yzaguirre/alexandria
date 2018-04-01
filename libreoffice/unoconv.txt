@@ -1,0 +1,4 @@
+https://github.com/dagwieers/unoconv
+https://api.libreoffice.org/
+https://wiki.openoffice.org/wiki/API/Tutorials/PDF_export
+	unoconv [FILE].EXTENSION

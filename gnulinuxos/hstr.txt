@@ -1,0 +1,15 @@
+https://github.com/dvorka/hstr
+https://github.com/dvorka/hstr/blob/master/INSTALLATION.md#debianmint
+	wget www.clfh.de/frankh.asc
+	apt-key add frankh.asc
+	vim /etc/apt/source
+deb http://www.clfh.de/debian wheezy main
+deb-src http://www.clfh.de/debian wheezy main
+	apt update
+	apt install hh
+	hh --show-configuration >> ~/.bashrc
+See configuration
+https://github.com/dvorka/hstr/blob/master/CONFIGURATION.md
+
+Mark as favorate with Ctrl + F
+Change sort order Ctrl + Shift + 7

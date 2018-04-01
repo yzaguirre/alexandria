@@ -1,3 +1,12 @@
+https://letsencrypt.org/
+https://alwaysonssl.com/
+https://api-crypt.com/
+
+https://en.internetwache.org/certificate-transparency-as-a-source-for-subdomains-14-12-2017/
+
+https://www.ct-observatory.org/
+https://www.certificate-transparency.org/
+https://crt.sh/?q=internetwache.org
 https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices
 
 Implementations
@@ -8,6 +17,7 @@ libressl
 rustls
 boringssl
 MatrixSSL
+WolfSSL
 mbedTLS/PolarSSL
 
 https://badssl.com/

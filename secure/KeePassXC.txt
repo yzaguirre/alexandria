@@ -1,0 +1,13 @@
+https://keepassxc.org/
+https://github.com/keepassxreboot/keepassxc/blob/develop/INSTALL.md
+https://github.com/keepassxreboot/keepassxc/wiki/Building-KeePassXC
+	apt install qttools5-dev g++ cmake libgcrypt11-dev libsodium-dev libargon2-0-dev libcurl4-openssl-dev libqt5x11extras5-dev libxi-dev libxtst-dev qtbase5-dev qttools5-dev-tools libgcrypt20-dev
+	git clone https://github.com/keepassxreboot/keepassxc.git
+	cd keepassxc
+	git checkout 2.2.4
+	mkdir build
+	cd build
+	cmake -DWITH_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DWITH_XC_HTTP=ON -DWITH_TESTS=OFF ..
+	make -j 2
+	sudo make install
+Install in /usr/local/share/keepassxc/

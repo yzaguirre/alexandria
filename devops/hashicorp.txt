@@ -1,0 +1,3 @@
+https://www.nomadproject.io/
+https://www.terraform.io/
+see secure/vault.txt

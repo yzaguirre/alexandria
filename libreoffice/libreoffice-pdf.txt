@@ -1,0 +1,24 @@
+Autogeneration (it's unanswered)
+http://www.linuxine.com/story/how-generate-automatically-odt-documents-libreoffice-using-variables
+
+Make libreoffice listen for clients
+http://www.maketecheasier.com/batch-convert-documents-at-the-command-line/
+	libreoffice4.3 --headless --accept="socket,host=127.0.0.1,port=8100;urp;"
+
+https://github.com/mirkonasato/jodconverter
+https://code.google.com/p/jodconverter/
+
+giberrish
+http://api.libreoffice.org/docs/idl/ref/namespacecom_1_1sun_1_1star_1_1text.html
+
+Working pdf document generator:
+https://github.com/mirkonasato/pyodconverter
+Just tweek it for python3 syntax
+
+Cracked the case
+http://comments.gmane.org/gmane.comp.openoffice.devel.udk/1522
+https://wiki.openoffice.org/wiki/Documentation/DevGuide/Text/Text_Fields
+	python-uno DocumentConverter.py ~/sandbox/a/libreoffice/diploma.ott diploma.pdf
+
+Might of worked
+https://stackoverflow.com/questions/14104128/programmatic-creation-of-setexpression-fields-in-openoffice-org-writer

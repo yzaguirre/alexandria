@@ -1,0 +1,6 @@
+https://github.com/easymodo/qimgv
+	apt install build-essential cmake libmpv-dev qt5-default
+	git clone https://github.com/easymodo/qimgv.git
+	cd qimgv/scripts
+	./build.sh
+	./install.sh

@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=N1hwEfa9W1s
+https://manual.calibre-ebook.com/cli/calibre-server.html
+Disable calibre as default PDF viewer
+	mv /usr/share/applications/ebook-viewer.desktop{,.disabled}
+	mv /usr/local/share/applications/ebook-viewer.desktop{,.disabled}
+
+Binary install
+https://calibre-ebook.com/download_linux
+	sudo su
+	wget https://download.calibre-ebook.com/linux-installer.py
+	cat linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
+Uninstall
+	/usr/bin/calibre-uninstall

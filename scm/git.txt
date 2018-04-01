@@ -1,0 +1,145 @@
+git contribution workflow
+https://diasp.eu/posts/6508007
+
+http://ohshitgit.com/
+https://news.ycombinator.com/item?id=15951825
+
+https://github.com/k88hudson/git-flight-rules
+How to write commit messages
+https://chris.beams.io/posts/git-commit/
+https://news.ycombinator.com/item?id=13889155
+
+https://news.ycombinator.com/item?id=14045787
+
+https://git-scm.com/
+https://github.com/blog/2242-git-2-10-has-been-released
+http://www.systutorials.com/366/set-up-git-server-through-ssh-connection/
+https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+
+https://codewords.recurse.com/issues/two/git-from-the-inside-out
+https://news.ycombinator.com/item?id=12802949
+
+User config
+	git config --global user.name "David Y. Gonzalez"
+	git config --global user.email "dvdyzag@gmail.com"
+	git config --global commit.gpgsign true
+	git config --local user.signingkey 3AA5C34371567BD2
+Push options
+	git config --global push.default simple
+
+https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files#10018728
+	git ls-files -m
+
+Log options
+https://coderwall.com/p/euwpig/a-better-git-log
+	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	git log --all --graph --decorate --oneline --abbrev-commit
+Lists version history for a file, including renames
+	git log --follow [file]
+	git log --author=your-username
+	git log --branches[=<branch>]
+	git log --oneline
+	git shortlog
+https://zwischenzugs.com/2018/03/26/git-log-the-good-parts/
+https://news.ycombinator.com/item?id=16677308
+	git log -G 'chef-client' --graph --oneline --stat --pickaxe-all
+Grep
+	git log --grep
+Set a alias
+	git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	git config --global alias.lg2 "log --all --graph --decorate --oneline --abbrev-commit"
+If you want to see the lines that changed
+	git lg -p
+Diff color attributes
+	git config --global color.diff.old "red strike"
+	git config --global color.diff.new "green italic"
+	git diff
+	git diff --color-words
+
+https://stackoverflow.com/questions/2389361/undo-a-git-merge
+	git reset --hard HEAD~5
+Unstage a file
+https://stackoverflow.com/questions/6919121/why-are-there-2-ways-to-unstage-a-file-in-git
+	git reset file
+Create Branch
+	git branch hello-england
+	git checkout hello-england
+Show branches
+https://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+	git for-each-ref --sort=-committerdate refs/heads/
+	git checkout branch_id
+If branch is remote
+	git checkout -b hello-england ref/remote/origin/hello-england
+Push with present branch
+	git push origin hello-england
+merge to master
+	git checkout master
+	git merge hello-england
+delete branch
+	git branch -d hello-england
+delete branch at github
+	git push origin --delete hello-england
+Show current branch
+	git branch
+Diff Against the Previous Commit
+	git show $COMMIT
+	git diff HEAD^ HEAD
+Send signed tags
+	git tag -s
+	git push origen --follow-tags
+
+Add origin
+	git remote add origin git@server:yzaguirre/CustomerScaffold.git
+	git remote add write-repo git@server:yzaguirre/CustomerScaffold.git
+Remove origin
+	git remote rm origin git@server:yzaguirre/CustomerScaffold.git
+
+Make Release branch
+	git tag -s v1.0
+	git checkout -b release master
+
+Removes the file from version control but preserves the file locally
+	git rm --cached [file]
+Lists all ignored files in this project
+	git ls-files --other --ignored --exclude-standard
+	
+clone via SSH
+	$ git clone git@github.com:dvdyzag/alec.git
+or
+	$ git clone github:dvdyzag/alec.git
+
+clone via HTTPS
+git clone https://github.com/dvdyzag/alec.git
+
+git proxy
+http://stackoverflow.com/questions/128035/how-do-i-pull-from-a-git-repository-through-an-http-proxy
+git config --global http.proxy $http_proxy
+git config --global https.proxy $http_proxy
+
+https://help.github.com/articles/using-ssh-over-the-https-port
+Probar si tienes conexion ssh
+	$ ssh -T -p 443 git@ssh.github.com
+	
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+
+	$ ssh -T git@github.com
+
+How to rebase
+https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request
+	git rebase -S -i HEAD~x
+If, however, you don't know how many commits you have made on your branch,
+you'll need to find which commit is the base of your branch, which you can do by running the following command:
+	git merge-base new-branch master
+We'll use this commit hash to pass to the git rebase command:
+	git rebase -S -i 66e506853b0366c87f4834bb6b39d341cd094fe9
+Clean up a branch
+    git checkout master
+    git pull --rebase upstream master
+    git push -f origin master
+    git branch -d new-branch
+    git push origin --delete new-branch
+
+http://blog.davidecoppola.com/2016/11/howto-contribute-to-open-source-project-on-github/
+https://news.ycombinator.com/item?id=12880792

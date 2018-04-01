@@ -1,0 +1,88 @@
+version 3.1.3
+Source code
+https://telegram.org/apps#source-code
+
+TDesktop
+https://tdesktop.com/
+	tar xf tsetup.0.8.48.tar.xz -C /VMs/opt
+	ln -s /VMs/opt/Telegram/Telegram /usr/local/bin/Telegram
+Config file in
+	~/.telegram/
+https://telegram.org/
+https://telegram.org/source
+https://github.com/vysheng/tg
+Clone GitHub Repository
+	$ git clone https://github.com/vysheng/tg.git tg-master && cd tg
+or download and extract zip
+	$ wget https://github.com/vysheng/tg/archive/master.zip -O tg-master.zip
+	$ unzip tg-master.zip && cd tg-master
+
+Install libs: readline openssl and (if you want to use config) libconfig. On ubuntu use: 
+	# apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev
+	# zypper install readline-dev libconfig-dev libssl-dev libopenssl-devel
+Then
+	$ ./configure
+	$ make
+	$ rm *.o *.h config* Makefile* .gitignore
+Usage
+	$ ./telegram -k <public-server-key>
+By default public key is stored in the same folder named tg.pub:
+	$ ./telegram -k tg.pub
+	
+	$ mv tg-master /VMs/opt
+	$ echo $'#!/bin/bash\ncd /VMs/opt/tg-master\n./telegram -k tg.pub' > /usr/local/bin/telegram && chmod u+x /usr/local/bin/telegram
+
+Client support TAB completion and command history.
+Supported commands
+Messaging
+
+    msg <peer> Text - sends message to this peer
+    fwd <user> <msg-seqno> - forward message to user. You can see message numbers starting client with -N
+    chat_with_peer <peer> starts one on one chat session with this peer. /exit or /quit to end this mode.
+    add_contact <phone-number> <first-name> <last-name> - tries to add contact to contact-list by phone
+    rename_contact <user> <first-name> <last-name> - tries to rename contact. If you have another device it will be a fight
+    mark_read <peer> - mark read all received messages with peer
+
+Multimedia
+
+    send_photo <peer> <photo-file-name> - sends photo to peer
+    send_video <peer> <video-file-name> - sends video to peer
+    send_text <peer> <text-file-name> - sends text file as plain messages
+    load_photo/load_video/load_video_thumb <msg-seqno> - loads photo/video to download dir
+    view_photo/view_video/view_video_thumb <msg-seqno> - loads photo/video to download dir and starts system default viewer
+
+Group chat options
+
+    chat_info <chat> - prints info about chat
+    chat_add_user <chat> <user> - add user to chat
+    chat_del_user <chat> <user> - remove user from chat
+    rename_chat <chat> <new-name>
+    create_group_chat <user> <chat topic> - creates a groupchat with user, use chat_add_user to add more users
+
+Search
+
+    search <peer> pattern - searches pattern in messages with peer
+    global_search pattern - searches pattern in all messages
+
+Secret chat
+
+    create_secret_chat <user> - creates secret chat with this user
+    visualize_key <secret_chat> - prints visualization of encryption key. You should compare it to your partner's one
+
+Stats and various info
+
+    user_info <user> - prints info about user
+    history <peer> [limit] - prints history (and marks it as read). Default limit = 40
+    dialog_list - prints info about your dialogs
+    contact_list - prints info about users in your contact list
+    suggested_contacts - print info about contacts, you have max common friends
+    stats - just for debugging
+    show_license - prints contents of GPLv2
+    help - prints this help
+
+Bots
+https://www.paymentwall.com/payment-methods
+https://core.telegram.org/bots/payments
+https://core.telegram.org/bots/api#payments
+
+	pip3 install python-telegram-bot

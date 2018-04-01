@@ -1,0 +1,2 @@
+https://weechat.org/
+	apt install weechat

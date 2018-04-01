@@ -1,0 +1,3 @@
+https://cygwin.com/mirrors.html
+https://superuser.com/questions/366864/how-to-download-individual-cygwin-packages-and-or-individual-files-within-them#366919
+https://superuser.com/questions/40545/upgrading-and-installing-packages-through-the-cygwin-command-line/301026#301026

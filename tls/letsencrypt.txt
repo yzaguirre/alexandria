@@ -86,3 +86,29 @@ https://github.com/kaienkira/acme-client-quick
 With ECC
 https://thecustomizewindows.com/2016/11/how-to-generate-lets-encrypt-ecc-ssl-ecdsa-certificate/
 https://blog.joelj.org/ecdsa-certificates-with-apache-2-4-lets-encrypt/
+
+Create certs for multiple domains
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates
+	add-apt-repository ppa:certbot/certbot
+	apt update
+	apt install python-certbot-apache
+For apache
+	certbot --apache -d example.com -d www.example.com
+Standalone
+	certbot certonly --standalone --preferred-challenges http -d example.com -d www.example.com
+Certs are saved in
+/etc/letsencrypt/live
+
+Autorenewal with systemd timer. It runs
+	certbot renew --dry-run
+Also check /etc/cron.d. This script runs twice a day and will renew any certificate that's within thirty days of expiration.
+
+Add a hook to restart services running TLS
+	vim /etc/letsencrypt/renewal/example.com.conf
+renew_hook = systemctl reload rabbitmq
+
+Run a Certbot dry run to make sure the syntax is ok
+	certbot renew --dry-run
+
+Create standalone wildcard cert

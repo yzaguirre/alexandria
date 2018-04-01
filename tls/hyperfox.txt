@@ -1,0 +1,5 @@
+https://hyperfox.org/
+https://github.com/malfunkt/hyperfox
+https://www.kitploit.com/2017/12/hyperfox-httphttps-mitm-proxy-and.html
+Install
+	go install github.com/malfunkt/hyperfox

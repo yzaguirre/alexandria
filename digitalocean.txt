@@ -1,0 +1,38 @@
+https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2#how-to-generate-a-personal-access-token
+- How to generate personal access tokens, which will be used for authentication.
+- Show a few examples of how the API can be used.
+The DigitalOcean API allows you to manage Droplets and other resources within the DigitalOcean cloud in a simple, programmatic way using conventional HTTP requests. 
+
+1. Log in to the DigitalOcean Control Panel.
+2. Follow the API link in the main navigation.
+3. Click the Generate New Token button.
+
+Then, on the New personal access token form:
+
+- Enter the token name. This is for your own reference.
+- Select the scope.
+- Then click the Generate Token button.
+
+Your token will be generated and presented to you on your Personal Access Tokens page.
+
+	export TOKEN=77e027c7447f468068a7d4fea41e7149a75a94088082c66fcf555de3977f69d3
+
+Get list of actions
+List all of the actions that have been executed on the current accoun
+	curl -X GET "https://api.digitalocean.com/v2/actions" -H "Authorization: Bearer $TOKEN" 
+List all Droplets
+	curl -X GET "https://api.digitalocean.com/v2/droplets" -H "Authorization: Bearer $TOKEN" 
+Create a New Droplet. The following example creates an Ubuntu 16.04 Droplet called "My-Droplet" in the NYC3 data center, with 512MB RAM:
+	    curl -X POST "https://api.digitalocean.com/v2/droplets" \
+        -d'{"name":"My-Droplet","region":"nyc3","size":"512mb","image":"ubuntu-14-04-x64"}' \
+        -H "Authorization: Bearer $TOKEN" \
+        -H "Content-Type: application/json" 
+
+For a full list of attributes that must be set to successfully create a Droplet, see the full documentation:
+https://developers.digitalocean.com/v2/#create-a-new-droplet
+
+Create Multiple Droplets
+	curl -X POST "https://api.digitalocean.com/v2/droplets" \
+        -d'{"names":["sub-01.example.com","sub-02.example.com"],"region":"nyc3","size":"512mb","image":"ubuntu-16-04-x64"}' \
+        -H "Authorization: Bearer $TOKEN" \
+        -H "Content-Type: application/json" 

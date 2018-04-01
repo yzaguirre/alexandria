@@ -1,0 +1,16 @@
+https://netbeans.org/
+Download
+	wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-linux.sh
+	sha256sum netbeans-8.2-linux.sh
+0442d4eaae5334f91070438512b2e8abf98fc84f07a9352afbc2c4ad437d306c
+	chmod u+x netbeans-8.2-linux.sh
+	./netbeans-8.2-linux.sh
+create softlink
+	ln -s /opt/netbeans-8.2/bin/netbeans /usr/local/bin/netbeans
+Or make script
+	echo $'#!/bin/bash\n/opt/netbeans-8.2/bin/netbeans --jdkhome /usr/lib/jvm/java-8-openjdk-amd64' > /usr/local/bin/netbeans
+	chmod 555 /usr/local/bin/netbeans
+
+Run with custom java 
+	vim netbeans-8.2/etc/netbeans.conf
+netbeans_jdkhome="/opt/jdk1.8.0_45"

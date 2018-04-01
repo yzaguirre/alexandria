@@ -1,0 +1,142 @@
+https://www.vaultproject.io
+	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_linux_amd64.zip
+	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_SHA256SUMS
+	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_SHA256SUMS.sig
+	gpg --verify vault_0.7.0_SHA256SUMS.sig
+	sha256sum --ignore-missing -c vault_0.7.0_SHA256SUMS
+	unzip vault_0.7.0_linux_amd64.zip
+	./vault server --dev
+
+Test with client
+	export VAULT_ADDR='http://127.0.0.1:8200'
+	./vault status
+
+Write and read secrets
+	vault write secret/hello value=world
+	vault read secret/hello
+	
+	vault read -format=json secret/hello | jq -r .data.excited
+	vault read -format=json secret/hello | jq -r .data.value
+	
+	vault delete secret/hello
+
+https://www.vaultproject.io/intro/index.html
+https://www.vaultproject.io/intro/getting-started/secret-backends.html
+http://chairnerd.seatgeek.com/secret-management-with-vault/
+https://news.ycombinator.com/item?id=12819595
+
+Initialize the vault
+	vault init -key-shares=1 -key-threshold=1
+Save the Key 1 and Initial Root Token
+Key 1: cb4789fef3a710c38f7d2fba991dd84888bd32efbe0f2016a03c5c1d6eabf24b
+Initial Root Token: 11c336d4-307f-0044-722e-33aebb4ec794
+
+Unseal the vault
+	vault unseal <key 1>
+
+Authorize your requests
+	vault auth <root token>
+
+Read and write secrets
+	vault write secret/hello value=world
+	vault read secret/hello
+
+Seal your Vault
+	vault seal
+
+Install
+	export VAULTROOT=/opt/vault
+	export PATH=$PATH:$VAULTROOT
+
+Setup
+To mount the backend:
+	vault mount generic
+Mount a Backend
+	vault mounts
+Unmount a Backend
+	vault unmount generic/
+
+Authenticate
+Create tokens
+	 vault token-create
+After a token is created, you can revoke it with vault token-revoke:
+	vault token-revoke c2c2fbd5-2893-b385-6fa5-30050439f698
+To authenticate with a token, use the vault auth command:
+	vault auth d08e2bd5-ffb0-440d-6486-b8f650ec8c0c
+Enable other auth backends
+	vault auth-enable github
+Establish a organization users must be a part of, and map a team to a policy
+	vault write auth/github/config organization=hashicorp
+	vault write auth/github/map/teams/default value=default
+Now we can authenticate
+	vault auth -method=github token=e6919b17dd654f2b64e67b6369d61cddc0bcc7d5
+To revoke all GitHub tokens
+	vault token-revoke -mode=path auth/github
+Disable authentication backends with vault auth-disable
+	vault auth-disable github
+
+Print policies
+	vault policies
+Writing policies
+	vault policy-write secret acl.hcl
+where acl.hcl file contains the following
+path "secret/*" {
+  policy = "write"
+}
+
+path "secret/foo" {
+  policy = "read"
+}
+
+path "auth/token/lookup-self" {
+  policy = "read"
+}
+
+Testing the policy
+Let's create a token and assign it to that policy.
+	vault token-create -policy="secret"
+	vault auth d97ef000-48cf-45d9-1907-3ea6ce298a29
+You can now verify that you can write data to secret/, but only read from secret/foo:
+	vault write secret/bar value=yes
+	vault write secret/foo value=yes
+
+Deployment
+https://www.vaultproject.io/intro/getting-started/deploy.html
+Start the consul
+	consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -bind 127.0.0.1
+Starting the Server
+	vault server -config=/etc/vault.d/example.hcl
+Initialize the server
+During initialization, the encryption keys are generated, unseal keys are created, and the initial root token is setup. 
+	export VAULT_ADDR='http://127.0.0.1:8200'
+	vault init
+Unseal Key 1: wOOngjF1OFSruwPGXqS8GJeOmRdFsiVIFm7xFhxrMZkB
+Unseal Key 2: kFgMhS8U4EdxPNOKwNg+qk33N3avXiChXotqh5y9H04C
+Unseal Key 3: 0KewMpQERe7RjkX7y4oz7eYRmB9Ux912X4QQzSJK/B8D
+Unseal Key 4: 1ib+d9bY13N7UMacXrTWWS52PytBqlf5slMG1qGjE08E
+Unseal Key 5: ltlCwG3Ictrb4lDtVebbHoWQkEK6M6ous1x8nB9U8B4F
+Initial Root Token: 010bfb3e-d70d-dfc7-cd33-6614d779e036
+
+You would likely use Vault's PGP and Keybase.io support to encrypt each of these keys with the users' PGP keys.
+https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html
+
+With keybase
+	vault init -key-shares=3 -key-threshold=2 \
+    -pgp-keys="keybase:jefferai,keybase:vishalnayak,keybase:sethvargo"
+Unsealing with Keybase
+	echo "wcBMA37..." | base64 -d | keybase pgp decrypt
+	vault unseal
+With gnupg
+Save key to disk as either base64 or binary key files.
+	gpg -ao seth.asc --export 348FFC4C 
+
+	vault init -key-shares=3 -key-threshold=2 \
+    -pgp-keys="jeff.asc,vishal.asc,seth.asc"
+Unsealing with a GPG
+	echo "wcBMA37..." | base64 -d | gpg -dq
+The output will be the plain-text key
+	vault unseal
+
+Now authenticate and access secrets
+
+SSH secret backend

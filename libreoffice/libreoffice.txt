@@ -1,0 +1,51 @@
+https://mierda.tv/2016/09/23/convertir-a-png-una-presentacion-creada-con-libreoffice-impress/
+	libreoffice5.2 --headless --convert-to pdf 7_vidas_extra_tiene_un_juanker.odp 
+	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png
+
+Mirror
+http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/5.0.2/deb/x86_64/
+
+Keys
+http://ask.libreoffice.org/en/question/45539/where-is-the-signing-public-gpgpgp-key-the-libreoffice-webpage/
+http://listarchives.libreoffice.org/global/users/msg27065.html
+https://download.documentfoundation.org/libreoffice/stable/5.3.1/deb/x86_64/
+	gpg --keyserver hkp://keys.gnupg.net --recv-keys /AFEEAEA3/
+Verify download
+	gpg --verify LibreOffice_5.3.1_Linux_x86-64_deb.tar.gz.asc
+	gpg --verify LibreOffice_5.3.1_Linux_x86-64_deb_langpack_es.tar.gz.asc
+	gpg --verify LibreOffice_5.3.1_Linux_x86-64_deb_helppack_es.tar.gz.asc
+Uncompress
+	tar xf LibreOffice_5.3.1_Linux_x86-64_deb.tar.gz
+	tar xf LibreOffice_5.3.1_Linux_x86-64_deb_langpack_es.tar.gz
+	tar xf LibreOffice_5.3.1_Linux_x86-64_deb_helppack_es.tar.gz
+
+Remember
+	/usr/bin/libreoffice4.3 -> /opt/libreoffice4.3/program/soffice
+Print as pdf
+	--convert-to output_file_extension[:output_filter_name[:output_filter_options]] [--outdir output_dir] files
+http://askubuntu.com/questions/382389/how-do-i-install-libreoffice-on-10-04-server
+http://ask.libreoffice.org/en/question/2641/convert-to-command-line-parameter/
+	libreoffice4.2 --headless --convert-to pdf:writer_pdf_Export result.odt --outdir /path/to/outdir
+    libreoffice4.3 --headless --convert-to pdf --outdir "/tmp" file.odg
+
+All available formats
+	pdf:writer_pdf_Export
+	txt:text
+	"html:XHTML Writer File:UTF8"
+output_file_extension
+	http://www.commandlinefu.com/commands/view/11692/commandline-document-conversion-with-libreoffice
+Output_filter_options
+	http://ask.libreoffice.org/en/question/11333/is-it-possible-to-specify-csv-filter-options-on-the-command-line/
+
+Diploma
+http://www.libreofficetemplates.net/preview/Diploma
+
+Publishing Extensions
+http://extensions.libreoffice.org/
+
+More on extensions
+https://wiki.documentfoundation.org/Documentation/Other_Documentation_and_Resources#Programmers
+http://api.libreoffice.org/examples/examples.html#python_examples
+http://api.libreoffice.org/docs/tools.html#unoexe
+http://api.libreoffice.org/docs/idl/ref/namespacecom_1_1sun_1_1star_1_1bridge.html
+https://wiki.openoffice.org/wiki/Documentation/DevGuide/OpenOffice.org_Developers_Guide

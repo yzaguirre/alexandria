@@ -1,0 +1,139 @@
+Download
+http://www.ubuntu.com/download/alternative-downloads
+	wget http://releases.ubuntu.com/16.04/MD5SUMS
+http://releases.ubuntu.com/16.04/ubuntu-16.04-server-i386.iso.torrent
+	wget http://releases.ubuntu.com/16.04/MD5SUMS.gpg
+	wget http://releases.ubuntu.com/16.04/SHA1SUMS
+	wget http://releases.ubuntu.com/16.04/SHA1SUMS.gpg
+	wget http://releases.ubuntu.com/16.04/SHA256SUMS
+	wget http://releases.ubuntu.com/16.04/SHA256SUMS.gpg
+https://help.ubuntu.com/community/VerifyIsoHowto
+	gpg2 --keyserver hkp://keyserver.ubuntu.com --recv-keys 0xFBB75451
+	gpg2 --verify SHA1SUMS.gpg SHA1SUMS
+	gpg2 --verify SHA256SUMS.gpg SHA256SUMS
+	gpg2 --verify MD5SUMS.gpg MD5SUMS
+arch=amd64
+	grep ubuntu-16.04-server-$arch.iso *SUMS
+	md5sum ubuntu-16.04-server-$arch.iso
+	sha1sum ubuntu-16.04-server-$arch.iso
+	sha256sum ubuntu-16.04-server-$arch.iso
+
+Install ONLY security updates
+http://serverfault.com/questions/270260/how-do-you-use-apt-get-to-only-install-critical-security-updates-on-ubuntu#282518
+	cp /etc/apt/sources.list /etc/apt/security.sources.list
+Edit the latter to contain only security repositories, then:
+	apt-get upgrade -o Dir::Etc::SourceList=/etc/apt/security.sources.list
+
+https://help.ubuntu.com/community/Tasksel
+	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock
+	apt install mat
+	sudo -H pip3 install mycli pgcli youtube-dl mitmproxy httpie livestreamer
+	pip install socks
+	tasksel install dns-server
+	tasksel install lamp-server
+	tasksel install openssh-server
+	apttitude
+	mysql_install_db --user=mysql
+Setup www-data ssh access
+	# mkdir /var/www/.ssh/
+	# vim /var/www/.ssh/.htaccess # (see apache.txt)
+	# cp /home/ubuntu/.ssh/authorized_keys /var/www/.ssh/
+	# chown www-data:www-data -R /var/www/.ssh/
+
+https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-debian-8
+https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04
+Create user
+	adduser sammy
+Root Privileges
+	usermod -aG sudo sammy
+SSH server config
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+	systemctl reload sshd
+
+Add config files
+
+DHCP client
+https://help.ubuntu.com/13.04/serverguide/network-configuration.html
+
+	# vim /etc/network/interfaces
+auto eth0
+iface eth0 inet dhcp
+
+if it doesn't exist, add it to the file above
+http://askubuntu.com/questions/7874/server-does-not-recognize-second-virtualbox-adapter
+
+By adding an interface configuration as shown above, you can manually enable the interface through the ifup command which initiates the DHCP process via dhclient.
+	# ifup eth0
+To manually disable the	interface, you can use the ifdown command, which in turn will initiate the DHCP release process and shut down the interface.
+	# ifdown eth0
+
+If eth0 is missing, do
+https://forums.virtualbox.org/viewtopic.php?f=7&t=43090
+each time you give a new MAC address (in VBox guest settings) Debian and Ubuntu guests udev assigns a new eth number
+edit /etc/udev/rules.d/70-persistent-net.rules or delete the file: it will be recreated @ next boot
+
+
+http://askubuntu.com/questions/155424/changing-keyboard-layout-in-ubuntu-12-04-server-command-line-interface
+	# dpkg-reconfigure keyboard-configuration
+
+Static IP address
+
+auto eth0
+iface eth0 inet static
+address 10.0.0.100
+netmask 255.255.255.0
+gateway 10.0.0.1
+dns-search example.com
+dns-nameservers 192.168.3.45 192.168.8.10
+
+Find the dns servers at 
+	$ less /etc/resolv.conf
+
+By adding an interface configuration as shown above, you can manually enable the interface through the ifup command.
+
+sudo ifup eth0
+
+To manually disable the interface, you can use the ifdown command.
+
+sudo ifdown eth0
+
+Default route
+https://singpolyma.net/2012/08/how-to-force-the-default-route-to-always-use-a-specific-interface-on-ubuntu/
+cat << EOF > /etc/dhcp/dhclient-enter-hooks.d/restrict-default-route
+## Only the DHCP server talking to eth0 is allowed to give us a default
+## route.  Other interfaces only get local-segment configuration.
+case ${interface} in
+  eth0)
+    ;;
+  *)
+    unset new_routers
+    ;;
+esac
+EOF
+
+Dual interface script: gointerfaces
+Works when eth1 is up or all interfaces are down
+#!/bin/bash
+#ifup eth1
+ifup eth0
+ifdown eth1
+ifdown eth0
+ifup eth0
+ifup eth1
+
+Install winrar
+http://www.winrar.es/soporte/articulo/31
+http://stackoverflow.com/questions/1139127/how-to-trust-a-apt-repository-debian-apt-get-update-error-public-key-is-not-av
+
+	# vim /etc/apt/sources.list.d/rar.list
+deb http://ftp.debian.org/debian/ unstable main contrib non-free
+	# vim /etc/apt/preferences.d/
+Package: *
+Pin: release a=unstable
+Pin-Priority: 50
+
+	# apt-get install debian-keyring
+	# gpg --keyserver pgp.mit.edu --recv-keys 1F41B907
+	# gpg --armor --export 1F41B907 | apt-key add -
+	# apt-get update

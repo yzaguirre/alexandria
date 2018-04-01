@@ -1,0 +1,10 @@
+https://irssi.org/
+https://github.com/irssi/irssi
+	wget https://github.com/irssi/irssi/releases/download/1.1.1/irssi-1.1.1.tar.gz
+	wget https://github.com/irssi/irssi/releases/download/1.1.1/irssi-1.1.1.tar.gz.asc
+	gpg --verify irssi-1.1.1.tar.gz.asc irssi-1.1.1.tar.gz
+	tar xf irssi-1.1.1.tar.gz
+	cd irssi-1.1.1
+	./configure
+	make -j 2
+	sudo make install

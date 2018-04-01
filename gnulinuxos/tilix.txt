@@ -1,0 +1,2 @@
+https://gnunn1.github.io/tilix-web/manual/vteconfig/
+	apt install tilix

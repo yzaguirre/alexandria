@@ -1,3 +1,7 @@
+Batch of root certificates are stored in
+	/usr/share/ca-certificates/mozilla/
+And are supplied by the ca-certificates package.
+
 http://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html
 Add
 Copy your CA to dir /usr/local/share/ca-certificates/

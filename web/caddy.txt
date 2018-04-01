@@ -1,0 +1,102 @@
+https://github.com/mholt/caddy
+https://news.ycombinator.com/item?id=12120167
+https://caddyserver.com/blog/caddy-0_10_12-released
+https://caddyserver.com/blog/caddy-0_9-released
+
+	gpg --verify caddy_v0.10.12_linux_amd64.tar.gz.asc
+	mkdir /opt/caddy
+	tar xf caddy_v0.10.12_linux_amd64.tar.gz -C /opt/caddy
+	ln -s /opt/caddy/caddy /usr/local/bin
+Configure
+	vim ~/templates/Caddyfile
+matt.life
+
+Run
+	Caddy
+https://caddyserver.com/docs/cli
+https://caddyserver.com/docs
+
+For example, a server that lets you browse files on the default host and port: 
+	caddy browse
+To serve markdown files on-the-fly, instantly, on a custom port: 
+	caddy -port 8080 markdown
+All of the above, but with an access log: 
+	caddy -port 8080 browse markdown "log access.log"
+lets encrypt
+https://caddyserver.com/docs/automatic-https
+	caddy -agree -email my@email.com
+	caddy -agree -email example@example.com -log /var/log/caddy/caddy.log -pidfile /home/caddy/caddy.pid -conf="/etc/caddy/Caddyfile"
+
+android
+https://github.com/mholt/caddy/wiki/Running-Caddy-on-Android
+Termux
+	curl https://getcaddy.com | bash -s http.ipfilter,http.jwt
+ADB
+	adb push caddy /data/local/tmp
+	adb shell "cd /data/local/tmp; chmod 755 caddy; ./caddy"
+
+Caddy files
+https://example.org, https://www.example.org{
+    root /home/caddy/domains/example.org/html
+    log ../logs/access.log {
+        size 10
+        age 7
+        keep 5
+    }
+    errors {
+        log ../logs/error.log {
+            size 10
+            age 7
+            keep 5
+        }
+    }
+    gzip
+    ext .html .htm .php
+    redir https://www.example.org https://example.org{uri} 301
+    fastcgi / /var/run/example.org.php.sock php
+}
+Prevent access to hidden files (hidden files start with a dot): 
+rewrite {
+    r   ^\.(.*)
+    to  /403.html
+}
+
+For phalcon
+fastcgi / /var/run/example.org.php.sock php
+	rewrite {
+    regexp .*
+    ext    /
+    to     /index.php?_url={uri}
+}
+
+Create caddy user
+	adduser --system --shell /bin/bash --group caddy
+Make log file
+	mkdir /etc/caddy
+	mkdir /var/log/caddy
+	touch /var/log/caddy/caddy.log
+	touch /etc/caddy/Caddyfile
+	chown caddy:caddy -R /var/log/caddy /etc/caddy
+Make pid file
+	su caddy -c touch /home/caddy/caddy.pid
+	su caddy -c touch /etc/caddy/Caddyfile
+	
+Run with
+caddy -log /var/log/caddy/caddy.log -pidfile /home/caddy/caddy.pid -conf="/etc/caddy/Caddyfile"
+
+A caddy file
+gzip
+localhost:2020 {
+	root /var/www
+}
+https://yzaguirre.tech {
+	root /var/www/html
+}
+# https://caddyserver.com/docs/fastcgi
+fastcgi / 127.0.0.1:9000
+fastcgi /foo endpoint [preset] {
+    ext   extension
+    split splitval
+    index indexfile
+    env   key value
+}
