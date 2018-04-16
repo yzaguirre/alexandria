@@ -1,79 +1,123 @@
 https://www.vaultproject.io
-	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_linux_amd64.zip
-	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_SHA256SUMS
-	wget https://releases.hashicorp.com/vault/0.7.0/vault_0.7.0_SHA256SUMS.sig
-	gpg --verify vault_0.7.0_SHA256SUMS.sig
-	sha256sum --ignore-missing -c vault_0.7.0_SHA256SUMS
-	unzip vault_0.7.0_linux_amd64.zip
-	./vault server --dev
-
-Test with client
-	export VAULT_ADDR='http://127.0.0.1:8200'
-	./vault status
-
-Write and read secrets
-	vault write secret/hello value=world
-	vault read secret/hello
-	
-	vault read -format=json secret/hello | jq -r .data.excited
-	vault read -format=json secret/hello | jq -r .data.value
-	
-	vault delete secret/hello
-
 https://www.vaultproject.io/intro/index.html
-https://www.vaultproject.io/intro/getting-started/secret-backends.html
-http://chairnerd.seatgeek.com/secret-management-with-vault/
+https://www.hashicorp.com/blog/vault-0-10
+https://news.ycombinator.com/item?id=16806447
+https://chairnerd.seatgeek.com/secret-management-with-vault/
 https://news.ycombinator.com/item?id=12819595
 
+	wget https://releases.hashicorp.com/vault/0.10.0/vault_0.10.0_linux_amd64.zip
+	wget https://releases.hashicorp.com/vault/0.10.0/vault_0.10.0_SHA256SUMS
+	wget https://releases.hashicorp.com/vault/0.10.0/vault_0.10.0_SHA256SUMS.sig
+	gpg --verify vault_0.10.0_SHA256SUMS.sig vault_0.10.0_SHA256SUMS
+	sha256sum --ignore-missing -c vault_0.10.0_SHA256SUMS
+	unzip vault_0.10.0_linux_amd64.zip
+	./vault server --dev
+	mv vault /usr/local/bin
+	setcap cap_ipc_lock=+ep /usr/local/bin/vault
+	vault --version
+Vault also includes command-line completion for subcommands, flags, and path arguments where supported. To install command-line completion, you must be using Bash, ZSH or Fish.
+	vault -autocomplete-install
+
+https://www.vaultproject.io/intro/getting-started/dev-server.html
+Test with client
+	export VAULT_ADDR='http://127.0.0.1:8200'
+	vault status
+
+Write and read secrets
+	vault kv put secret/hello foo=world
+You can even write multiple pieces of data, if you want:
+	vault kv put secret/hello foo=world excited=yes
+	vault kv get secret/hello
+	
+	vault kv get -format=json secret/hello | jq -r .data.excited
+	vault kv get -field=excited secret/hello
+	
+	vault kv delete secret/hello
+Create a secrets engine
+	vault secrets enable -path=kv kv
+	vault secrets list
+Disable secrets engine
+	vault secrets disable kv/
+
+https://www.digitalocean.com/community/tutorials/how-to-securely-manage-secrets-with-hashicorp-vault-on-ubuntu-16-04
+https://www.vaultproject.io/intro/getting-started/deploy.html
+Start the consul
+	consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -bind 127.0.0.1
+Setup as a service
+Create a vault system user:
+	useradd -r -d /var/lib/vault -s /bin/nologin vault
+	install -o vault -g vault -m 750 -d /var/lib/vault
+Edit config file, See vault.hcl
+	chown vault:vault /etc/vault.hcl
+	chmod 640 /etc/vault.hcl
+
+Let Systemd manage the persistent Vault daemon, create a unit file at 
+	vim /etc/systemd/system/vault.service
+See secure/vault.service
+Create a special group called pki to access tls cert files. We will create the group and then add the vault user to it.
+	groupadd pki
+	gpasswd -a vault pki
+	chgrp pki /etc/letsencrypt/{archive,live}
+	chmod g+rx /etc/letsencrypt/{archive,live}
+
+Start the server
+	sudo su -s /bin/bash -c '/usr/local/bin/vault server -config=/etc/vault.hcl -log-level=err' vault
+
 Initialize the vault
-	vault init -key-shares=1 -key-threshold=1
-Save the Key 1 and Initial Root Token
-Key 1: cb4789fef3a710c38f7d2fba991dd84888bd32efbe0f2016a03c5c1d6eabf24b
-Initial Root Token: 11c336d4-307f-0044-722e-33aebb4ec794
+Save the Key 1 to 5 and Initial Root Token.
+	vault operator init
+https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html
+Save key to disk as either base64 or binary key files.
+	gpg -ao seth.asc --export 348FFC4C
+	vault operator init -key-shares=3 -key-threshold=2 -pgp-keys="jeff.asc,vishal.asc,seth.asc"
+	vault operator init -root-token-pgp-key="jeff.asc"
 
 Unseal the vault
-	vault unseal <key 1>
+	vault operator unseal
+Decrypt a key
+	echo "wcBMA37..." | base64 -d | gpg -dq
+	vault operator unseal
 
 Authorize your requests
-	vault auth <root token>
+	vault login 14d1316e-78f6-910b-a4cc-9ba6697ec814
+
+Authenticate
+https://www.vaultproject.io/intro/getting-started/authentication.html
+Tokens
+Create a token
+	vault token create
+Revoke a token
+	vault token revoke 463763ae-0c3b-ff77-e137-af668941465c
+Authenticate with a token
+	vault login a402d075-6d59-6129-1ac7-3718796d4346
+
+Enable the GitHub auth method:
+	vault auth enable -path=github github
+Configure the GitHub auth method
+In this case, the minimal set of configuration is to map teams to policies.
+With the GitHub auth method enabled, we first have to configure it.
+For GitHub, we tell it what organization users must be a part of, and map a team to a policy:
+	vault write auth/github/config organization=hashicorp
+	vault write auth/github/map/teams/my-team value=default,my-policy
+List auth methods
+	vault auth list
+Re-authenticate as the root token
+	vault login <initial-root-token>
+You can revoke any logins from an auth method
+	vault token revoke -mode path auth/github
+Complete disable the GitHub auth method
+	vault auth disable github
 
 Read and write secrets
-	vault write secret/hello value=world
-	vault read secret/hello
+	vault kv put secret/hello foo=world excited=yes
+	vault kv get secret/hello
 
 Seal your Vault
-	vault seal
+	vault operator seal
 
 Install
 	export VAULTROOT=/opt/vault
 	export PATH=$PATH:$VAULTROOT
-
-Setup
-To mount the backend:
-	vault mount generic
-Mount a Backend
-	vault mounts
-Unmount a Backend
-	vault unmount generic/
-
-Authenticate
-Create tokens
-	 vault token-create
-After a token is created, you can revoke it with vault token-revoke:
-	vault token-revoke c2c2fbd5-2893-b385-6fa5-30050439f698
-To authenticate with a token, use the vault auth command:
-	vault auth d08e2bd5-ffb0-440d-6486-b8f650ec8c0c
-Enable other auth backends
-	vault auth-enable github
-Establish a organization users must be a part of, and map a team to a policy
-	vault write auth/github/config organization=hashicorp
-	vault write auth/github/map/teams/default value=default
-Now we can authenticate
-	vault auth -method=github token=e6919b17dd654f2b64e67b6369d61cddc0bcc7d5
-To revoke all GitHub tokens
-	vault token-revoke -mode=path auth/github
-Disable authentication backends with vault auth-disable
-	vault auth-disable github
 
 Print policies
 	vault policies
@@ -81,62 +125,74 @@ Writing policies
 	vault policy-write secret acl.hcl
 where acl.hcl file contains the following
 path "secret/*" {
-  policy = "write"
+  capabilities = ["create"]
 }
 
 path "secret/foo" {
-  policy = "read"
+  capabilities = ["read"]
 }
 
 path "auth/token/lookup-self" {
   policy = "read"
 }
 
+Vault includes a command that will format the policy automatically according to specification
+	vault policy fmt my-policy.hcl
+Upload policy
+	vault policy write my-policy acl.hcl
+To see the list of policies
+	vault policy list
+To view the contents of a policy
+	vault policy read my-policy
+
 Testing the policy
 Let's create a token and assign it to that policy.
-	vault token-create -policy="secret"
-	vault auth d97ef000-48cf-45d9-1907-3ea6ce298a29
+	vault token create -policy=my-policy
+	vault login a4ebda12-23bf-5cf4-f80e-803ee2f37aab
 You can now verify that you can write data to secret/, but only read from secret/foo:
 	vault write secret/bar value=yes
 	vault write secret/foo value=yes
+Re-authenticate as the initial root token to continue
+	vault login <initial-root-token>
+Map Policies to Auth Methods
+	vault write auth/github/map/teams/default value=my-policy
 
-Deployment
-https://www.vaultproject.io/intro/getting-started/deploy.html
-Start the consul
-	consul agent -server -bootstrap-expect 1 -data-dir /tmp/consul -bind 127.0.0.1
-Starting the Server
-	vault server -config=/etc/vault.d/example.hcl
-Initialize the server
-During initialization, the encryption keys are generated, unseal keys are created, and the initial root token is setup. 
-	export VAULT_ADDR='http://127.0.0.1:8200'
-	vault init
-Unseal Key 1: wOOngjF1OFSruwPGXqS8GJeOmRdFsiVIFm7xFhxrMZkB
-Unseal Key 2: kFgMhS8U4EdxPNOKwNg+qk33N3avXiChXotqh5y9H04C
-Unseal Key 3: 0KewMpQERe7RjkX7y4oz7eYRmB9Ux912X4QQzSJK/B8D
-Unseal Key 4: 1ib+d9bY13N7UMacXrTWWS52PytBqlf5slMG1qGjE08E
-Unseal Key 5: ltlCwG3Ictrb4lDtVebbHoWQkEK6M6ous1x8nB9U8B4F
-Initial Root Token: 010bfb3e-d70d-dfc7-cd33-6614d779e036
+K/V Secrets Engine v2
+https://www.vaultproject.io/docs/secrets/kv/versioned-kv.html
+Multiple versions of a single value can be read and written within Vault.
+To mount a new, versioned instance of the K/V Secrets engine
+	vault secrets enable kv-v2
+Writing data to a versioned K/V mount via the vault kv subcommand is similar to writing secrets via vault write:
+	vault kv put secret/my-secret my-value=shh
+Check and Set
+If -cas=0 the write will only be performed if the key doesn't exist.
+	vault kv put -cas=1 secret/my-secret my-value=itsasecret
+If the index is non-zero the write will only be allowed if the key's current version matches the version specified in the cas parameter.
+	vault kv put -cas=1 secret/my-secret my-value=itsasecret
+When now reading the secret via kv get, the current version is shown:
+	vault kv get secret/my-secret
+However previous versions of the secret are still accessible via the -version flag:
+	vault kv get -version=1 secret/my-secret
+There are two ways to delete versioned data with vault kv: vault kv delete and vault kv destroy.
+vault kv delete performs a soft deletion that marks a version as deleted and creates a deletion_time timestamp. Data removed with vault kv delete can be un-deleted by using vault kv undelete
+Soft delete the latest version. For a specific version, use -versions flag
+	vault kv delete secret/my-secret
+Restore a soft deleted version
+	vault kv undelete -versions=2 secret/my-secret
+Destroy
+	vault kv destroy -versions=2 secret/my-secret
 
-You would likely use Vault's PGP and Keybase.io support to encrypt each of these keys with the users' PGP keys.
-https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html
-
-With keybase
-	vault init -key-shares=3 -key-threshold=2 \
-    -pgp-keys="keybase:jefferai,keybase:vishalnayak,keybase:sethvargo"
-Unsealing with Keybase
-	echo "wcBMA37..." | base64 -d | keybase pgp decrypt
-	vault unseal
-With gnupg
-Save key to disk as either base64 or binary key files.
-	gpg -ao seth.asc --export 348FFC4C 
-
-	vault init -key-shares=3 -key-threshold=2 \
-    -pgp-keys="jeff.asc,vishal.asc,seth.asc"
-Unsealing with a GPG
-	echo "wcBMA37..." | base64 -d | gpg -dq
-The output will be the plain-text key
-	vault unseal
-
-Now authenticate and access secrets
-
-SSH secret backend
+Open Source Vault UI
+https://www.hashicorp.com/resources/vault-oss-ui-introduction
+Start vault server
+See other options for ports and address binding
+https://www.vaultproject.io/docs/configuration/index.html
+	vault server -dev
+Launch the Vault UI by entering /ui in the web browser: http://127.0.0.1:8200/ui
+Enter the root token generated at Step 1, and click Sign In.
+Specify the number of shamir key shards as well as the threshold of shards required to unseal the Vault when you launch the UI for the first time.
+Optionally, select the Encrypt Output with PGP and/or Encrypt Root Token with PGP to avoid having the outputs displayed in clear text.
+Click Initialize.
+The output displays the shamir keys, as well as the root token. Click Download Keys to store the this information.
+Click Continue to Unseal.
+Enter the root token and click Sign In.

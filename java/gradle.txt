@@ -1,0 +1,95 @@
+https://news.ycombinator.com/item?id=16742858
+Groovy 
+Learn X in Y: http://learnxinyminutes.com/docs/groovy/
+http://groovy-lang.org/documentation.html
+
+Using Gradle bundled with android studio
+Edit ~/.profile
+	export GRADLE_HOME=/opt/android-studio/gradle/gradle-3.5
+	export GRADLE_OPTS="-Dorg.gradle.daemon=true"
+	PATH=$PATH:$GRADLE_HOME/bin
+
+Download latest build
+https://gradle.org/gradle-download/
+	wget https://services.gradle.org/distributions/gradle-3.5-bin.zip
+Installation
+https://docs.gradle.org/current/userguide/installation.html
+Unpacking
+	unzip gradle-3.5-bin.zip -d /opt/
+Edit ~/.profile
+	export GRADLE_HOME=/opt/gradle-3.5
+	PATH=$PATH:$GRADLE_HOME/bin
+	gradle -v
+
+Use the daemon
+	vim ~/.gradle/gradle.properties
+org.gradle.daemon=true
+Stop the daemon
+	gradle --stop
+
+List taks
+	gradle tasks
+Run a task
+	gradle tellJoke
+
+Run a specific solution file
+	gradle -b solution.gradle hello
+
+Add a Java plugin
+https://docs.gradle.org/current/userguide/tutorial_java_projects.html
+https://docs.gradle.org/current/userguide/java_plugin.html
+https://gradle.org/getting-started-gradle-java/
+	vim build.gradle
+apply plugin: "java"
+Print tasks that Java plugin can handle
+	gradle tasks
+Jar
+	gradle assemble
+Source code must be in src/main/java
+
+Run project? add the snippet to build.gradle
+task execute(type: JavaExec) {
+    main = "com.udacity.gradle.Person"
+    classpath = sourceSets.main.runtimeClasspath
+}
+Java project layout
+https://gradle.org/why/powerful-yet-concise-logic/
+
+Add implementation view to JAR manifest
+https://docs.gradle.org/current/userguide/java_plugin.html#sec:jar
+https://docs.gradle.org/current/dsl/org.gradle.api.tasks.bundling.Jar.html
+
+Dependencies
+http://gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+https://docs.gradle.org/current/userguide/dependency_management.html
+Use repositories
+Declare the repository in build.gradle
+repositories {
+	flatDir {
+		dirs 'libs'
+	}
+
+repositories {
+	mavenCentral()
+}
+List of dependencies
+dependencies {
+	compile: 'com.google.guava:guava:18.0'
+}
+Download dependencies
+	gradle --refresh-dependencies printDependencies
+Local cache copy
+	gradle printDependencies
+Dependencies report
+	gradle dependencies
+	gradle dependencies --configuration runtime
+	gradle dependencyInsight --dependency commons-logging
+
+Start a wrapper
+	gradle wrapper
+Configuration file is in
+	gradle/wrappers/gradle-wrapper.properties
+Or
+wrapper{
+	gradleVersion = '2.2'
+}

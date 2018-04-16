@@ -88,8 +88,8 @@ Geth es una herramienta de consola para Ethereum. La opcion "init" inicializa el
 	geth --datadir ~/.ethereum/privatenet init ~/.ethereum/privatenet/privategenesis.json
 Run
 	geth --datadir ~/.ethereum/privatenet --networkid 786
-Run with web4
-	geth --datadir ~/.ethereum/privatenet --networkid 786 --rpc --rpccorsdomain "*"
+Run with web3 and Whisper v5
+	geth --datadir ~/.ethereum/privatenet --networkid 786 --rpc --rpccorsdomain "*" --shh
 Also can run in REPL console
 	geth --datadir ~/.ethereum/privatenet --networkid 786 console 2> console.log
 Now geth can be attached via IPC to the running geth client on a private network:

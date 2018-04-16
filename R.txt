@@ -1,0 +1,89 @@
+http://www.r-project.org/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-r-on-ubuntu-14-04
+http://cyclismo.org/tutorial/R/index.html
+https://www.datacamp.com/community/tutorials/15-questions-about-r-plots
+https://news.ycombinator.com/item?id=9795377
+	apt install r-base
+Instalar librerias
+	install.package (c('devtools'))
+	install.packages("plyr")
+	install.packages("psych")
+	install.packages(c("ggplot2", "ggmap"))
+
+RStudio Desktop
+https://blog.rstudio.org/2016/11/01/announcing-rstudio-v1-0/
+https://www.rstudio.com/products/rstudio/download/
+	wget https://download1.rstudio.org/rstudio-1.0.136-amd64.deb
+	md5sum rstudio-1.0.136-amd64.deb
+2a73b88a12a9fbaf96251cecf8b41340
+	dpkg -i rstudio-1.0.136-amd64.deb
+
+Server package
+	apt install r-base gdebi-core
+	wget https://download2.rstudio.org/rstudio-server-1.0.136-amd64.deb
+	md5sum rstudio-server-1.0.136-amd64.deb
+0ff8966c474a87bec26177879f51ceb8
+	sudo gdebi rstudio-server-1.0.136-amd64.deb
+
+Install packages readr, readxl and rcpp
+	apt install r-cron-rcpp
+
+Import data in a data.frame
+	wget http://archive.ics.uci.edu./ml/machine-learning-databases/iris/iris.data
+	x=read.csv("iris.data",col.names=c("sepal_length","sepal_width","petal_length","petal_width","class"))
+	head(x)
+	str(x)
+	str(x$petal_length)
+	mean(x$sepal_length)
+	var(x$sepal_length)
+
+How to plot?
+	plot(x$sepal_length)
+	plot(x$sepal_length, type="h")
+	plot(x)
+	plot(x = x$petal_length, y = x$petal_width)
+	axis(side = 1, at = v1, labels = v2, tck=-.05)
+
+Plotting a dataframe
+	x <- c(1,2,3)
+	y <- c(4,6,8)
+	data <- data.frame(x,y)
+Graphing types:
+	p for points
+	l for lines
+	b for both
+	c for the lines part alone of b
+	o for both overplotted
+	h for histogram-like (or high-density) vertical lines
+	s for stair steps
+	S for other steps-refer to details provided later
+	n for no plotting
+Using psych
+	library(psych)
+	pairs.panels(iris, hist.col="white", ellipses = FALSE)
+Using ggplot2
+	library(ggplot2)
+	library(ggmap)
+	plot <- ggplot(data = x, aes(x = sepal_length, y= sepal_width)) + geom_point()
+	text <- "there are some cool correlations here"
+	location <- gglocator(1,xexpand=c(0,0), yexpand=c(0,0))
+	location
+Add text to the plot
+	plot + 
+		scale_x_continuous(expand = c(0,0)) +
+		scale_y_continuous(expand = c(0,0)) +
+		geom_text(aes(x=location[[1]], y = location[[2]], label= text), colour="red", size=7)
+
+Dates
+http://statmethods.net/input/dates.html
+The default format is yyyy-mm-dd
+	mydates <- as.Date(c("2007-06-22", "2004-02-13"))
+	# number of days between 6/22/07 and 2/13/04
+	days <- mydates[1] - mydates[2]
+	
+	# convert date info in format 'mm/dd/yyyy'
+	strDates <- c("01/05/1965", "08/16/1975")
+	dates <- as.Date(strDates, "%m/%d/%Y") 
+Date to Character
+	 strDates <- as.character(dates) 
+	

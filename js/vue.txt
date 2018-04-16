@@ -1,0 +1,53 @@
+https://vuepress.vuejs.org/
+https://news.ycombinator.com/item?id=16836394
+https://vuejs.org/v2/guide/computed.html
+https://vuejs.org/guide/
+https://vuejs.org/v2/api/
+Download the development version with full warnings and debug mode
+	wget https://vuejs.org/js/vue.js
+Production Version (Warnings stripped, 23.55kb min+gzip)
+	wget https://vuejs.org/js/vue.min.js
+NPM way
+	npm install vue
+Bower way
+	bower install vue
+
+Install the CLI
+https://github.com/vuejs/vue-cli
+	npm install -g vue-cli
+	vue init <template-name> <project-name>
+	vue init webpack my-project
+	vue init webpack-simple my-project
+	vue init browserify my-project
+	vue init browserify-simple my-project
+	vue init simple my-project
+Or use own template
+	vue init username/repo my-project
+	vue init bitbucket:username/repo my-project
+	vue init bitbucket:username/repo#branch my-project
+Use --clone for private git repo
+
+Local template
+	vue init ~/fs/path/to-custom-template my-project
+
+Run the project
+	cd my-project
+	npm install
+	npm run dev
+
+API Reference
+https://vuejs.org/v2/api/
+
+Hackernews
+https://hnews.xyz/top
+https://github.com/thelinuxlich/vue-dashing-js
+https://github.com/vuejs/vue-hackernews-2.0
+https://github.com/vuejs-templates/webpack#vue-webpack-boilerplate
+https://github.com/misterGF/CoPilot
+https://copilot.mistergf.io/
+
+routing https://github.com/inca/voie-example
+http://voie-example.netlify.com/
+
+Make http calls
+https://gist.github.com/chudaol/d5176b88ba2c5799c0b7b0dd33ac0426

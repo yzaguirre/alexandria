@@ -1,4 +1,5 @@
 https://developer.android.com/kotlin/index.html
+https://twitter.com/i/moments/980488782406303744
 https://www.youtube.com/watch?v=2IJaRSqPqN4
 Toast Function
 

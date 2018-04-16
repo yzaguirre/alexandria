@@ -1,4 +1,5 @@
 https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2#how-to-generate-a-personal-access-token
+https://developers.digitalocean.com/documentation/v2/
 - How to generate personal access tokens, which will be used for authentication.
 - Show a few examples of how the API can be used.
 The DigitalOcean API allows you to manage Droplets and other resources within the DigitalOcean cloud in a simple, programmatic way using conventional HTTP requests. 
@@ -36,3 +37,5 @@ Create Multiple Droplets
         -d'{"names":["sub-01.example.com","sub-02.example.com"],"region":"nyc3","size":"512mb","image":"ubuntu-16-04-x64"}' \
         -H "Authorization: Bearer $TOKEN" \
         -H "Content-Type: application/json" 
+Power On a Droplet
+	curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" -d '{"type":"power_on"}' "https://api.digitalocean.com/v2/droplets/3164450/actions"

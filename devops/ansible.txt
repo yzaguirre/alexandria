@@ -1,3 +1,5 @@
+https://ansible.com/
+irc.freenode.net #ansible IRC chat channel
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04#install-ansible-on-ubuntu-1404
 https://www.reddit.com/r/linuxadmin/comments/83vhi2/a_system_administrators_guide_to_getting_started/
 https://www.redhat.com/en/blog/system-administrators-guide-getting-started-ansible-fast?scid=701f2000000tnTlAAI
@@ -5,9 +7,22 @@ How to install Ansible on a Ubuntu 16.04 server
 	apt-add-repository ppa:ansible/ansible
 	apt update
 	apt install ansible
+Using PIP
+	sudo -H pip3 install ansible
+	mkdir -p /etc/ansible/roles
 Setup the hosts file
 	vim /etc/ansible/hosts
-Define which users to connect to
+[servers]
+host1 ansible_ssh_host=192.0.2.1
+host2 ansible_ssh_host=192.0.2.2
+host3 ansible_ssh_host=192.0.2.3
+
+Use other location, setting the env variable ANSIBLE_INVENTORY
+	echo "127.0.0.1" > ~/ansible_hosts
+	export ANSIBLE_INVENTORY=~/ansible_hosts
+
+Define which users to connect to.
+We can create a file that tells all of the servers in the "servers" group to connect using the root user.
 	mkdir /etc/ansible/group_vars
 	vim /etc/ansible/group_vars/servers
 ---

@@ -1,0 +1,46 @@
+https://news.ycombinator.com/item?id=16721690
+https://newsblur.com/
+https://github.com/samuelclay/NewsBlur
+
+Newsbeuter
+https://www.youtube.com/watch?v=cpSKsQ2CdAU&list=PLqv94xWU9zZ30jHFe8pqC5qES6ya6v2sE
+Newsboat
+https://www.youtube.com/watch?v=z359lWo3eQA
+https://newsboat.org/
+	apt install newsboat
+
+https://twitrss.me/t
+
+http://allrss.com/rssreaderslinuxunix.html
+http://www.johndcook.com/blog/2013/03/14/rss-readers-on-linux/
+
+http://codezen.org/canto-ng/
+http://www.linux.com/news/software/applications/710409-goodbye-google-reader-linux-rss-aggregator
+
+Canto operates from a configuration file, ~/.canto/conf.py. 
+It creates a default configuration automatically when you don't have one, 
+~/.canto/conf.py.example:
+Refresh all feeds:
+	$ canto -a
+Update all feeds, and then run Canto:
+	$ canto -u
+List all feeds:
+	$ canto -l
+Quick help:
+	$ canto -h
+
+New canto
+http://codezen.org/canto-ng/source/
+     echo "deb http://codezen.org/debian sid main " > /etc/apt/sources.list.d/canto.list
+     curl http://codezen.org/static/canto-pub.gpg | sudo apt-key add -
+     apt-get update
+     apt-get install python3-canto-curses
+http://offog.org/code/rawdog/
+	# apt-get install python-feedparser python-tidylib
+	$ wget http://offog.org/files/rawdog-2.18.tar.gz
+	$ tar xf rawdog-2.18
+	$ cd rawdog-2.18
+	# python setup.py install
+	$ mkdir .rawdog
+	
+see web/tt-rss.txt

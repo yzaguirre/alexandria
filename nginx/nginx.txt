@@ -1,11 +1,13 @@
+https://www.digitalocean.com/community/tutorials/nginx-essentials-installation-and-configuration-troubleshootingSSL
 SSL config
 blog.commando.io/the-perfect-nginx-ssl-configuration/
 
-http://nginx.org/
+https://nginx.org/
 Install on Debian
-	# apt-get install nginx
+	apt install nginx
+	nginx -v
 For Red Hat-based operating systems:
-	# yum install nginx
+	yum install nginx
 you will find a lot of interesting documentation and examples on the official wiki, 
 http://wiki.nginx.org
 If you have specific questions though, you might as well use the forums
@@ -75,3 +77,35 @@ set_real_ip_from  192.168.1.4;
 real_ip_header    X-Forwarded-For;
 
 Where 192.168.1.4 is my loadbalancer
+
+HTTP2
+https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-with-http-2-support-on-ubuntu-16-04
+Use custom dh param (DHE) file at 2048-bit length, use 4096-bit length for higher. Used along with RSA but not with elliptic curve algo (like prime256v1)
+	openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
+
+Add o use similar settings to the "default" config file:
+	vim /etc/nginx/sites-available/default
+listen 443 ssl http2 default_server;
+listen [::]:443 ssl http2 default_server;
+server_name example.com;
+ssl_certificate /etc/nginx/ssl/example.com.crt;
+ssl_certificate_key /etc/nginx/ssl/example.com.key;
+ssl_prefer_server_ciphers on;
+ssl_ciphers EECDH+CHACHA20:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;
+ssl_dhparam  /etc/nginx/ssl/dhparam.pem; # when using RSA algo.
+
+Optimizing Nginx for Best Performance	
+Edit /etc/nginx/nginx.conf
+Enabling Connection Credentials Caching
+To enable session caching, add these lines at the end of http block of your nginx.conf file:
+ssl_session_cache shared:SSL:5m;
+ssl_session_timeout 1h;
+
+Enabling HTTP Strict Transport Security (HSTS)
+add_header Strict-Transport-Security "max-age=15768000; includeSubDomains" always;
+
+Check for syntax errors
+	nginx -t
+
+Restart nginx
+	systemctl restart nginx

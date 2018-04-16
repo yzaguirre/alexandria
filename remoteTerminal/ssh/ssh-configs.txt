@@ -1,16 +1,21 @@
+# Ensure KnownHosts are unreadable if leaked - it is otherwise easier to know which hosts your keys have access to.
+HashKnownHosts yes
+# Host keys the client accepts - order here is honored by OpenSSH
+HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+# Ignore SSH keys unless specified in Host subsection
+IdentitiesOnly yes
 Compression yes
-ProxyCommand ssh -W %h:%p raspberrypi
-ProxyCommand /usr/local/bin/corkscrew 192.168.1.14 3128 %h %p
+
 # SSH config file, 'man ssh_config' for more details.
 IdentityFile ~david/.ssh/cb64key
 HostName cb64
 Host cb
 HostName crunchbag.local
 
-Host PracticasIntermedias
-IdentityFile /home/david/BTSync/PI/aws/PracticasIntermedias001.pem 
-Hostname 54.215.152.201
-User ubuntu
+# SSH config file, 'man ssh_config' for more details.
 
 Host github
 HostName github.com
@@ -18,30 +23,5 @@ User git
 #HostName ssh.github.com
 #Port 443
 
-Host ringtail
-HostName ringtail.local
-
-Host *
-HostName hiecys.gt
-
-Host nfs
-Port 22
-Host mysql*
-Port 23
-Host mysqlmaster
-User master
-Host mysqlslave
-User slave
-Host loadbalancer
-Port 24
-Host webserver
-Port 25
-
-
-
-
-crunchbag
-IdentityFile ~/.ssh/cb32key
-Host cb64
-Hostname 192.168.0.3
-User david
+ProxyCommand ssh -W %h:%p raspberrypi
+ProxyCommand /usr/local/bin/corkscrew 192.168.1.14 3128 %h %p

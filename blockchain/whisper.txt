@@ -1,0 +1,8 @@
+https://ethereum.stackexchange.com/questions/127/what-is-whisper-and-what-is-it-used-for
+https://github.com/ethereum/wiki/wiki/Whisper
+https://github.com/ethereum/wiki/wiki/Whisper-Overview
+
+https://github.com/llSourcell/Decentralized_Chat
+	git clone https://github.com/llSourcell/Decentralized_Chat.git
+	npm install
+	npm run dev

@@ -1,0 +1,10 @@
+https://www.udemy.com/70534-azure/
+https://www.udemy.com/70533-azure/
+https://www.reddit.com/r/sysadmin/comments/84x6ti/udemy_75_off_azure_modules/
+https://docs.microsoft.com/es-es/dotnet/azure/
+https://docs.microsoft.com/es-es/dotnet/api/overview/azure/?view=azure-dotnet
+https://docs.microsoft.com/es-es/dotnet/api/overview/azure/virtualmachines?view=azure-dotnet
+	Install-Package Microsoft.Azure.Management.Compute.Fluent
+Blobs
+https://docs.microsoft.com/es-es/azure/storage/blobs/storage-quickstart-blobs-dotnet?view=azure-dotnet&tabs=windows
+https://azure.microsoft.com/en-us/documentation/articles/storage-encrypt-decrypt-blobs-key-vault/

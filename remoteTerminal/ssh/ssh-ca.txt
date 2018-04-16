@@ -1,3 +1,6 @@
+https://www.reddit.com/r/linuxadmin/comments/8bh7v3/ssh_key_management/
+https://github.com/mikesmitty/curse
+
 https://github.com/commercehub-oss/ssh-ca-server
 https://code.facebook.com/posts/365787980419535/scalable-and-secure-access-with-ssh/
 Create the CA pair

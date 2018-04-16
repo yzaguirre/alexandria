@@ -1,4 +1,5 @@
 https://signal.org/
+Signal's Double Ratchet
 https://github.com/WhisperSystems/Signal-Android
 
 	curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -

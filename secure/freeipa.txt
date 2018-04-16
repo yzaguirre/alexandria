@@ -1,0 +1,8 @@
+https://www.freeipa.org
+	apt install freeipa-server
+https://www.freeipa.org/page/Quick_Start_Guide
+https://www.youtube.com/watch?v=VLhNcirKFDs
+https://www.youtube.com/watch?v=cUQcNi_obIc
+https://www.youtube.com/watch?v=LCT6E8-j8m0
+https://www.youtube.com/watch?v=EZE24QZmPKk
+https://www.youtube.com/watch?v=kwM7qnjyOu8

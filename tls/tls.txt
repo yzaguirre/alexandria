@@ -7,6 +7,7 @@ https://en.internetwache.org/certificate-transparency-as-a-source-for-subdomains
 https://www.ct-observatory.org/
 https://www.certificate-transparency.org/
 https://crt.sh/?q=internetwache.org
+https://hstspreload.org
 https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices
 
 Implementations
