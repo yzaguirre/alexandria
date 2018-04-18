@@ -1,0 +1,38 @@
+http://truffleframework.com/
+	npm install -g truffle
+
+Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
+http://truffleframework.com/ganache/
+
+	mkdir election
+	cd election
+	truffle unbox pet-shop
+
+Locate the local node
+http://truffleframework.com/docs/advanced/configuration
+Edit truffle.js
+
+Run a migration
+	truffle migrate
+Open truffle console
+	truffle console
+Get an instance of smart contract
+	Election.deployed().then(function(instance){app = instance})
+	app.address
+Solidity makes a getter function for free, when the state variable
+was declared with public access.
+	app.candidate()
+
+All data is inmutable. If the contract changes for dev purposes,
+we must push a new copy of our contract to the local blockchain to get
+our code changes. Even a new address is uses. Use reset flag.
+	truffle migrate --reset
+	truffle console
+	Election.deployed().then(function(i){app = i})
+	app.candidates(1)
+	app.candidates(2)
+	app.candidates(99)
+	app.candidates(1).then(function(c) { candidate = c; })
+	candidate[0] // id
+	candidate[1] // name
+	candidate[2] // voteCount

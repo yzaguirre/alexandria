@@ -327,9 +327,9 @@ lightworks http://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=20
 Hosting
 https://www.hetzner.de/en/hosting/unternehmen/rechenzentrum
 https://hawkhost.com/
-scaleengine.net	
+https://www.scaleengine.com/
 https://www.vultr.com/
-http://fortrabbit.com/pricing
+https://www.fortrabbit.com/pricing
 https://www.digitalocean.com/features
 https://www.ovh.com/us/
 https://sysdig.com/

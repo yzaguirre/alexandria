@@ -9,7 +9,7 @@ https://lists.nongnu.org/archive/html/sks-devel/2009-03/msg00078.html
 	vim /etc/default/sks
 initstart=yes
 
-	service sks start
+	systemctl start sks
 Look for ports 11370 and 11371
 	netstat -pant
 (Install apache2)
@@ -62,7 +62,6 @@ search keys
 receive key from key server, use keys.gnupg.net
 	gpg --keyserver keys.mozilla.org --recv-keys 0x29846B3C683686CC
 Print pub keys keyserver
-	
 
 Compile
 https://keyserver.mattrude.com/guides/building-server/

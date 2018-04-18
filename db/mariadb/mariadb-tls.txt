@@ -1,0 +1,43 @@
+PP MariaDB Cookbook Mar 2014 page 249
+
+Certificates signed by a recognized and trusted certificate authority are preferred, but we
+can also use certificates we create ourselves. To create a set of self-signed certificates,
+we need to perform the following steps:
+
+1.	 Create a temporary directory and navigate to it by using the following statement:
+	mkdir -v tls-tmp
+	cd tls-tmp
+2.	 Create a certificate authority key file using the following statement:
+	openssl genrsa -out mariadb-ca.key 4096
+3.	 Create a certificate authority certificate using the following statements:
+	openssl req -x509 -new -nodes -days 9999 \
+	-key mariadb-ca.key \
+	-out mariadb-ca.pem
+4.	 Answer the questions asked when running the command in step 3 using the defaults
+or our actual information. Do the same when asked in subsequent steps.
+5.	 Create a key and certificate files for our MariaDB server using the following set
+of statements:
+	openssl genrsa -out mariadb-server.key 4096
+	openssl req -new \
+	-key mariadb-server.key \
+	-out mariadb-server.csr
+	openssl x509 -req -set_serial 01 -days 9999 \
+	-CA mariadb-ca.pem \
+	-CAkey mariadb-ca.key \
+	-in mariadb-server.csr \
+	-out mariadb-server.pem
+6.	 Create a key and a certificate file to use with the mysql command-line client using
+the following set of statements:
+	openssl genrsa -out mariadb-client.key 4096
+	openssl req -new \
+	-key mariadb-client.key \
+	-out mariadb-client.csr
+	openssl x509 -req -set_serial 02 -days 9999 \
+	-CA	mariadb-ca.pem \
+	-CAkey mariadb-ca.key \
+	-in mariadb-client.csr \
+	-out mariadb-client.pem
+7.	 Move the certificates and keys to our MariaDB data directory using the
+following statements:
+	sudo mv -vi mariadb*.pem /var/lib/mysql/
+	sudo mv -vi mariadb*.key /var/lib/mysql/

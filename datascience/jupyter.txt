@@ -1,0 +1,23 @@
+https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906
+https://news.ycombinator.com/item?id=16420142
+
+http://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
+	sudo -H pip3 install jupyterlab
+	jupyter notebook --version
+Start JupyterLab
+	jupyter lab
+Visit http://localhost:8888/
+Because JupyterLab is a server extension of the classic Jupyter Notebook server,
+you can also use JupyterLab by starting the classic Jupyter Noteboook
+	jupyter notebook
+and visiting the /lab URL (usually http://localhost:8888/lab) rather than the default /tree URL.
+Conversely, to go to the classic Notebook from JupyterLab, you can change the URL from /lab to /tree
+
+TLS
+Edit
+~/.jupyter/jupyter_notebook_config.py
+Assign a .pem file
+c.NotebookApp.certfile = '/etc/tls/certs/site.pem'
+
+https://jupyter-notebook.readthedocs.io/en/stable/security.html

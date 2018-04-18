@@ -1,0 +1,93 @@
+https://bsdmag.org/tls/
+Inspect a private key 
+	openssl rsa -text -in private/sitio1.key -noauth
+Inspect a certificate request
+	openssl req -text -in requests/sitio1.csr -noauth
+Inspect a certificate (signed from the CSR by a CA)
+	openssl x509 -text -in certs/sitio1.crt -noauth
+
+The complete list of available ciphers for OpenSSL-based software can be obtained by running the following command:
+	openssl ciphers -v
+We find here the encryption algorithm, with optional key length.
+Here are a few examples:
+DES     The ancient Data Encryption Standard, with 56 bit keys
+
+3DES    Triple DES, which is equivalent to 168 bit keys
+
+RC2     Ancient and insecure Rivest Cipher v2, with 40 bit keys
+
+AES128  Modern Advanced Encryption Standard, with 128 bit keys
+
+AES256  Modern Advanced Encryption Standard, with 256 bit keys
+
+https://www.howsmyssl.com/
+
+http://ananthakrishnanravi.wordpress.com/2012/04/15/configuring-ssl-and-https-for-your-website-amazon-ec2/
+Please be aware of the laws and regulations in your own country. Some
+countries do not allow usage of a strong cryptography. The author,
+publisher, and the developers of the OpenSSL and Nginx projects will
+not be held liable for any violations or law infringements on your part.
+
+Install the library and its development package:
+	apt install openssl openssl-dev
+	yum install openssl openssl-devel
+
+Wrox Shell Scripting 383
+OpenSSL is the library that manages Secure Sockets Layer (SSL) connections. SSL provides two
+key benefits, authentication and encryption. This section mainly deals with the encryption side. For
+authentication, the key is signed by a Certificate Authority (CA), which is recognized by the client
+software (normally a web browser or mail client). The rest is the same whether signed by a CA or by
+yourself (known as a self-signed certificate).
+
+The openssl binary provides a useful wrapper with the s_client command. 
+This implements all of the SSL protocol behind the scenes and provides a 
+secure transport mechanism as painlessly as possible.
+
+In the following code snippet, a connection to www.google.com on port 443 exchanges
+certificates and establishes a secure connection. The HTTP session is then just the same as the unen-
+crypted session shown previously; a 302 status code redirects to another page at google.com. This
+time, however, all that an eavesdropper would see is the encrypted traffic.
+	
+	openssl s_client -connect www.google.com:443
+
+The openssl binary is also capable of running a very basic secure web server. It passes files relative
+to the local directory in which it is running, so a request for /README when running in /var/tmp
+will return the fi le /var/tmp/README. This is not suitable for production use, but it is very useful for
+testing SSL clients connectivity. This is not the place for a primer on SSL, but the following will get
+you a self-signed certificate (with a password of welcome123) for the OpenSSL server to use.
+
+	openssl genrsa -sha256 2048 -out server.key
+	openssl req -new -key server.key -x509 -days 365 -out server.crt
+	cat server.key server.crt > server.pem
+You can throw away the server.key and server.crt files after creating server.pem; only server.pem is required.
+	rm server.key server.crt
+
+You are now ready to start your SSL web server. Create a text file in the current directory, call
+it README, and put some congratulatory text in it. I have used the message Success! The Shell
+Scripting Recipes Self-Signed Key has worked! Once set up, run openssl s_server, as shown
+in the code snippet that follows. Provide the key's passphrase when prompted.
+
+	echo $'Success! The Shell Scripting Recipes Self-Signed Key has worked!' > README
+
+If server.pem is not in the current directory, provide the -cert /var/tmp/server.pem, 
+as in the example that follows. By default, it will use ./server.pem.
+
+	openssl s_server -cert /var/tmp/server.pem -accept 4433 -WWW
+
+Now launch a web browser pointing at https://localhost:4433/README. (Be sure to specify https,
+not just http.) 
+
+	firefox https://localhost:4433/README
+
+You can also use the openssl s_client to test your openssl s_server web server. The response
+from s_server (when in -WWW mode) is to send the appropriate HTTP headers followed by the
+README file. Again, the server will display the ACCEPT and FILE:README messages, but unlike the
+web browser, s_client did not query the fact that this test certificate is self-signed. It notes the
+verification error, but continues with the encrypted section.
+
+	openssl s_client -quiet -connect localhost:4433
+
+Symmetric encryption
+	openssl enc -aes-128-cbc -in file.txt -out file
+Decrypt
+	openssl enc -d -aes-128-cbc -in file -out file.txt

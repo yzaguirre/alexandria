@@ -1,0 +1,11 @@
+Use specified user profile
+https://www.chromium.org/developers/creating-and-using-profiles
+https://superuser.com/questions/377186/how-do-i-start-chrome-using-a-specified-user-profile
+https://chromium.googlesource.com/chromium/src/+/master/docs/user_data_dir.md
+Helps with unknown plugins
+Create profile directory
+	mkdir ~/.config/chromium/Jail
+Start chromium
+	chromium --user-data-dir=$HOME/.config/chromium/Jail
+Make an alias
+	alias chromiumjails='chromium --user-data-dir=$HOME/.config/chromium/Jail'

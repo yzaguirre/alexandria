@@ -31,7 +31,7 @@ http://www.gossamer-threads.com/lists/gnupg/users/51288
 	gpg --print-md SHA256 file
 
 Automating
-	gpg2 --batch --yes --logger-file filename --passphrase-file filename -s
+	gpg --batch --yes --logger-file filename --passphrase-file filename -s
 
 see secure/LUKS.txt
 Create a directory for GnuPG to use as its 'home' directory, and set an environment variable to point to it
@@ -43,9 +43,9 @@ View fingerprint, list the keys in a file without actually importing them:
 gpg --import-options show-only --import FILE
 
 Creating your primary key. Sign Only, 4096 keysize
-	gpg2 --full-gen-key
+	gpg --full-gen-key
 Add a new identity
-	gpg2 --edit-key 27703CF0
+	gpg --edit-key 27703CF0
 	adduid
 	save
 Just keep running adduid for each identity you want to add.

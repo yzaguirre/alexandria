@@ -1,0 +1,168 @@
+https://www.digitalocean.com/community/tutorials/how-to-create-an-intranet-with-openvpn-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-setup-and-configure-an-openvpn-server-on-centos-7
+https://www.reddit.com/r/VPN/comments/11vmnf/how_to_use_a_freetier_amazon_aws_ec2_cloud_server/
+https://www.taringa.net/posts/linux/17483606/Creando-un-servidor-VPN.html
+	apt install openvpn
+
+http://www.slashroot.in/ssl-openvpn-linux-installation-and-configuration
+http://geekland.eu/crear-y-configurar-servidor-openvpn/
+	apt install openvpn easy-rsa openssl
+Now ya'll deal with pki
+	make-cadir /etc/openvpn/easy-rsa
+	cd /etc/openvpn/easy-rsa
+Edit config file
+	vim vars
+Modify:
+export_KEY_SIZE=2048
+Generate master certificate
+	source vars
+	./clean-all
+	./build-dh # creates keys/dh2048.pem
+	./build-ca # creates ca.crt and ca.key
+	./build-ca-server whezzyVPN # create cert and private key: whezzyVPN.key, whezzyVPN.crt, whezzyVPN.csr
+Start creating the client certificate keys (edit vars and source it again)
+	./build-key bobClient # creates bobClient.key, bobClient.crt, bobClient.csr
+
+Now build server config files
+	cd /etc/openvpn
+	cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz .
+	gunzip -cd /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz > server.conf
+	vim server.conf
+ca ca.crt
+cert ubuntuserver.crt
+key ubuntuserver.key
+dh dh1024.pem
+
+server 10.30.0.0 255.255.255.0
+
+push "route 10.6.11.1 255.255.255.0"
+push "dhcp-option DOMAIN ubuntutest.com"
+push "dhcp-option DNS 10.6.11.4"
+
+keepalive 10 120
+
+log openvpn.log
+
+comp-lzo
+
+push "redirect-gateway def1 bypass-dhcp"
+
+Allan Jude guide
+https://www.bsdnow.tv/tutorials/openvpn
+	pkg install openvpn
+sysrc is a handy command line tool for editing your rc.conf file created by devin testy
+	sysrc openvpn_enable="YES"
+Two types of interfaces that openvpn can use: tun which is IP interface, and tap which is ethernet interface
+	sysrc openvpn_if="tun"
+Check rc.conf
+	cat /etc/rc.conf
+Set up our syslog
+	vim /etc/syslog.conf
+Add these two lines above the last line: !*
+	!openvpn
+	*.*			/var/log/openvpn.log
+Create that file
+	touch /var/log/openvpn.log
+Reload syslogd
+	service syslogd reload
+Now it will log any openvpn entries into openvpn.log
+
+Lastly, set up log rotate
+Edit syslog.conf edit
+	vim /etc/newsyslog.conf
+	/var/log/openvpn.log	600	30	*	@T00	ZC
+
+Now switch to server instance, set up keys
+Copy easy-rsa tool to /root
+	cp -r /usr/local/share/easy-rsa /root/easy-rsa
+	cd /root/easy-rsa
+Edit vars file
+	vim vars
+Set key settings, to create ssl certificat
+Include vars file
+	. ./vars
+Remove any build from last time
+	./clean-all
+Build private CA
+	./build-ca
+Lastly
+	./build-key-server openvpn.bsdnow.tv
+Sign that certificate with the newly created CA
+Now build diffie-helman key which will take a little bit
+	./build-dh
+Build keys for our clients, first client is bsdnow1
+	./build-key bsdnow1
+
+Make a directory for the keys on the server
+	mkdir -p /usr/local/etc/openvpn/keys
+	chmod 700 /usr/local/etc/openvpn/ /usr/local/etc/openvpn/keys
+Copy the CA public key there
+	cp /root/easy-rsa/ca.crt /usr/local/etc/openvpn/keys
+Copy diffy hellman parameter
+	cp /root/easy-rsa/dh*.pem /usr/local/etc/openvpn/keys
+Copy the server certificate
+	cp /root/easy-rsa/openvpn.bsdnow.tv.crt /usr/local/etc/openvpn/keys
+And the private key
+	cp /root/easy-rsa/openvpn.bsdnow.tv.key /usr/local/etc/openvpn/keys
+
+Back on the client, create that keys directory
+	mkdir -p /usr/local/etc/openvpn/keys
+	chmod 700 /usr/local/etc/openvpn/ /usr/local/etc/openvpn/keys
+Copy some files into this directory from the server which we generate the keys on
+	cd /usr/local/etc/openvpn/keys
+	sftp allan@us-pdx1-01.scaleengine.net
+	cd cd /root/easy-rsa/keys
+	get ca.crt # public key for ca
+Do not get the certificate sign request (csr)
+	get bsdnow1.crt # public key for the client
+	get bsdnow1.key # private key for the client
+Secure those keys
+	chmod 600 *
+
+Back to the server and finish the installation of openvpn itself
+	chmod g+rx .
+	chmod g+r bsdnow1.key
+Grab the sample of vpn config file
+	cp /usr/local/share/examples/openvpn/sample-config-files/server.conf /usr/local/etc/openvpn/openvpn.conf
+	vim /usr/local/etc/openvpn/openvpn.conf
+Make a couple of changes
+	ca /usr/local/etc/openvpn/keys/ca.crt
+	cert /usr/local/etc/openvpn/keys/openvpn.bsdnow.tv.crt
+	key /usr/local/etc/openvpn/keys/openvpn.bsdnow.tv.key
+	dh /usr/local/etc/openvpn/keys/dh1024.pem
+lzo has an issue with no plain text syntax
+	comp-lzo no
+	push "comp-lzo no"
+
+Back to client to make changes as well
+	Grab the sample of vpn config file
+	cp /usr/local/share/examples/openvpn/sample-config-files/server.conf /usr/local/etc/openvpn/openvpn.conf
+	vim /usr/local/etc/openvpn/openvpn.conf
+	remote openvpn.badnow.tv 1194
+	ca /usr/local/etc/openvpn/keys/ca.crt
+	cert /usr/local/etc/openvpn/keys/bsdnow1.crt
+	key /usr/local/etc/openvpn/keys/bsdnow1.key
+	dh /usr/local/etc/openvpn/keys/dh1024.pem
+	comp-lzo no
+
+Edit hosts file if necesary
+	vim /etc/hosts
+	64.62.249.131 openvpn.bsdnow.tv
+When dealing with crypto, remember that your clock needs to be right
+On client and server run 
+	service openvpn start
+Ping host on the other side of the vpn
+	ping 10.8.0.1
+	
+
+http://geekland.eu/conectarse-servidor-openvpn-en-android/
+
+Point to Point Networks
+Start a server
+	openvpn --ifconfig 10.200.0.1 10.200.0.2 --dev tun
+Connect to server
+	openvpn --ifconfig 10.200.0.2 10.200.0.1 --dev tun --remote openvpnserver.example.com
+The server listens on UDP port 1194, which is the OpenVPN default port for incoming connections
+Use the TCP instead of UDP
+	openvpn --ifconfig 10.200.0.1 10.200.0.2 --dev tun --proto tcp-server
+	openvpn --ifconfig 10.200.0.2 10.200.0.1 --dev tun --proto tcp-server --remote openvpnserver.example.com

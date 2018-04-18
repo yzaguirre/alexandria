@@ -1,0 +1,44 @@
+Register an account
+	
+https://wiki.bitlbee.org/XChatTips
+Autologin:
+	File -> Network List... -> edit your Bitlbee Server -> go to the "Connect Command:"-Field, 
+and type in 
+	/quote nickserv identify YOURPASSWORD
+Alternative method for autologin:
+	Select File -> Network List... -> edit your Bitlbee Server ->
+	go to the "Server password" and type there your Bitlbee password. 
+
+Add google account
+https://wiki.bitlbee.org/HowtoGtalk
+	account add jabber you@gmail.com
+Enable oauth
+	acc gtalk set oauth on
+Enable it
+	acc gtalk on
+
+If you have a Google+ account, your G+ contacts will also appear with odd names. 
+To fix this, set the nick_format account setting to %full_name, like this: 
+	account gtalk set nick_format %full_name
+You can now use the /OPER command to enter the password
+For more details. (Note that you must acc off and acc on for the new format to take effect.) 
+	help nick_format
+	help set nick_format
+
+Add Facebook account
+https://wiki.bitlbee.org/HowtoFacebook
+	account add jabber wilmer@chat.facebook.com
+	acc fb set oauth on
+	acc fb on
+As you can see, during login the server will tell you your real (numeric) XMPP username. 
+It might be a good idea to update your account settings with this information using: 
+	acc fb off
+	acc fb set username -1278655042@chat.facebook.com
+	acc fb on
+Fix usernames
+	account fb set nick_format %full_name
+
+Add Twitter account
+https://wiki.bitlbee.org/HowtoTwitter
+	account add twitter BitlBee
+	account twitter on

@@ -84,5 +84,6 @@ Bots
 https://www.paymentwall.com/payment-methods
 https://core.telegram.org/bots/payments
 https://core.telegram.org/bots/api
-
-	pip3 install python-telegram-bot
+https://core.telegram.org/bots/samples/hellobot
+See telegram-hellobot.php
+	sudo -H pip3 install python-telegram-bot

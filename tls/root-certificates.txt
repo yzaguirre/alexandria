@@ -2,7 +2,7 @@ Batch of root certificates are stored in
 	/usr/share/ca-certificates/mozilla/
 And are supplied by the ca-certificates package.
 
-http://kb.kerio.com/product/kerio-connect/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html
+https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html
 Add
 Copy your CA to dir /usr/local/share/ca-certificates/
 	cp foo.crt /usr/local/share/ca-certificates/foo.crt
@@ -13,6 +13,12 @@ Remove your CA.
 Update the CA store:
 	update-ca-certificates --fresh
 
+Windows
+Add
+	certutil -addstore -f "ROOT" new-root-certificate.crt
+Remove
+	certutil -delstore "ROOT" serial-number-hex
+
 https://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate
 	mkdir /usr/share/local/ca-certificates/extra
 	cp foo.crt /usr/local/share/ca-certificates/extra/foo.crt
@@ -21,3 +27,5 @@ In case of a .pem file, it must first be converted to a .crt file:
 	openssl x509 -in foo.pem -inform PEM -out foo.crt
 For der format
 	openssl x509 -inform DER -outform PEM -in foo.crt -out foo.pem
+Other convertions
+https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs#convert-certificate-formats

@@ -1,0 +1,74 @@
+https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores
+Java truststore is located at
+$JAVA_HOME/jre/lib/security/cacerts
+
+Create java keystore
+Modify java keystore
+
+Generate keypair
+This will create a new key pair in a new or existing Java Keystore,
+which can be used to create a CSR, and obtain an TLS certificate from a Certificate Authority.
+	keytool -genkeypair \
+        -alias domain \
+        -keyalg RSA \
+        -keystore keystore.jks
+If the keystore (keystore.jks) doesn't exist, it will be created.
+
+Generate CSR
+	keytool -certreq \
+        -alias domain \
+        -file domain.csr \
+        -keystore keystore.jks
+
+Generate self signed certs
+	keytool -genkey \
+        -alias domain \
+        -keyalg RSA \
+        -validity 365 \
+        -keystore keystore.jks
+
+Import certificate
+	keytool -importcert \
+        -trustcacerts -file domain.crt \
+        -alias domain \
+        -keystore keystore.jks
+
+List keystore certificate fingerprints
+	keytool -list \
+        -keystore keystore.jks
+Restrict the output to a specific alias by using the -alias domain option, where "domain" is the alias name.
+
+List Verbose Keystore Contents
+	keytool -list -v \
+        -keystore keystore.jks
+You may also use this command to view which certificates are in your Java truststore
+
+Use Keytool to View Certificate Information
+	keytool -printcert \
+        -file domain.crt
+
+Export Certificate
+This command exports a binary DER-encoded certificate
+	keytool -exportcert
+        -alias domain
+        -file domain.der
+        -keystore keystore.jks
+
+Change keystore passwordDelete
+	keytool -storepasswd \
+        -keystore keystore.jks
+You may also specify the new password in the command by using the -new newpass option
+
+Delete alias
+	keytool -delete \
+        -alias domain \
+        -keystore keystore.jks
+
+Rename alias
+	keytool -changealias \
+        -alias domain \
+        -destalias newdomain \
+        -keystore keystore.jks
+
+
+

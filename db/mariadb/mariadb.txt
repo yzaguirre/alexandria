@@ -1,0 +1,36 @@
+https://downloads.mariadb.org/
+For Debian
+	sudo apt-get install python-software-properties
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+
+	# vim /etc/apt/sources.list.d/mariadb.list
+# MariaDB 10.0 repository list - created 2014-03-10 20:20 UTC
+# http://mariadb.org/mariadb/repositories/
+deb http://mirror.jmu.edu/pub/mariadb/repo/10.0/debian wheezy main
+deb-src http://mirror.jmu.edu/pub/mariadb/repo/10.0/debian wheezy main
+
+or
+
+# MariaDB 10.0 repository list - created 2014-06-17 19:38 UTC
+# http://mariadb.org/mariadb/repositories/
+deb http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/debian wheezy main
+deb-src http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/debian wheezy main
+
+Once the key is imported and the repository added you can install MariaDB with:
+
+	apt update
+	apt install mariadb-server
+
+
+Here are the commands to run to install MariaDB on your Ubuntu system:
+	sudo apt-get install software-properties-common
+	sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
+	sudo vim /etc/apt/sources.list.d/mariadb.list
+# MariaDB 10.0 repository list - created 2014-06-17 19:35 UTC
+# http://mariadb.org/mariadb/repositories/
+deb http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/ubuntu trusty main
+deb-src http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/ubuntu trusty main
+
+Once the key is imported and the repository added you can install MariaDB with:
+	apt update
+	apt install mariadb-server

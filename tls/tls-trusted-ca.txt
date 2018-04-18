@@ -7,34 +7,24 @@ Inspect a certificate (signed from the CSR by a CA)
 	
 
 SSL Generator
-https://mozilla.github.io/server-side-tls/ssl-config-generator/?1
-
+https://mozilla.github.io/server-side-tls/ssl-config-generator/
+https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/
 https://https.cio.gov/
 https://news.ycombinator.com/item?id=9220001
-https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority
-https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/
-https://news.ycombinator.com/item?id=8907148
 https://github.com/zakjan/cert-chain-resolver
+https://news.ycombinator.com/item?id=8907148
 https://www.ssllabs.com/ssltest/
-
-https://cheapsslsecurity.com/comodo/positivessl.html
-
 https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority
 Here you create 4 files
 	1 .secure (which is a private key with password)
 	1 .key (which is a private key without password)
 	1 .csr (certificate sign request)
 	1 .crt (public certificate signed by some CA)
-Other tutorials that touch SSL topic
-gnulinuxos/ec2/ec2-vitals.txt gnulinuxos/scripts/change-all-ssl.sh gnulinuxos/scripts/list.sh comm/irc/bitlbee.txt comm/irc/ircd-hybrid.txt comm/owncloud.txt tunnels/ssl.txt tunnels/openvpn.txt tunnels/openssl.txt apache/apache-ssl.txt db/mariadb/mariadb-ssl.txt
+Other tutorials that touch tls topic
+gnulinuxos/ec2/ec2-vitals.txt gnulinuxos/scripts/change-all-ssl.sh gnulinuxos/scripts/list.sh comm/irc/bitlbee.txt comm/irc/ircd-hybrid.txt comm/nextcloud.txt tunnels/tls.txt tunnels/openvpn.txt tunnels/openssl.txt apache/apache-tls.txt db/mariadb/mariadb-tls.txt
 
 page 170 ubuntu server guide
-https://pip.verisignlabs.com/
-www.startcom.org
-https://www.startssl.com/
-https://login.persona.org/about
-
-	sudo apt-get install openssl
+	apt install openssl
 1. First, create the directories to hold the CA certificate and related files:
 	mkdir -p /etc/ssl/{private,newcerts,certs,requests,CA}
 	cd /etc/ssl
@@ -97,7 +87,7 @@ certificate and key files. For example, Apache can provide HTTPS, Dovecot can pr
 POP3S, etc.
 
 7. Extra
-Check out tunnels/openssl.txt
+See tunnels/openssl.txt
 
 Summary
 	mkdir -p /etc/ssl/{private,certs,requests,CA}

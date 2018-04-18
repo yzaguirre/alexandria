@@ -1,0 +1,116 @@
+CentOS
+eth1
+192.168.10.1
+eth0
+192.168.0.10
+Change hostname
+	vim /etc/hostname
+vpncentos-c3
+Also change /etc/hosts
+Install openvpn server
+	yum install epel-release
+Configure firewalld
+Configure iptables
+	systemctl stop firewalld
+	systemctl disable firewalld
+	yum install iptables-services
+	systemctl enable iptables
+	systemctl start iptables
+	systemctl status iptables
+For now, shut down iptables
+	systemctl stop iptables
+Install openvpn server
+	yum install openvpn
+Copy server configuration file to openvpn folder
+	cd /usr/share/doc/openvpn-2.3.6/sample/sample-config-files
+	cp server.conf /etc/openvpn
+	cd /etc/openvpn
+Uncomment the following lines
+	vim server.conf
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 8.8.8.8"
+push "dhcp-option DNS 8.8.4.4"
+user nobody
+group nobody
+
+	yum install easy-rsa
+	mkdir -p /etc/openvpn/easy-rsa/keys
+	cp -r /usr/share/easy-rsa/2.0/* /etc/openvpn/easy-rsa/keys
+Edit vars file
+	cd /etc/openvpn/easy-rsa/
+	vim vars
+Build server keys
+	source ./vars
+	./clean-all
+	./build-ca
+	./build-key-server $( hostname )
+build dh
+	./build-dh
+	cd keys
+	cp ca.crt vpncentos-c3.crt vpncentos-c3.key dh2048.pem /etc/openvpn
+	cd /etc/openvpn
+Restore context for SElinux
+	restorecon -Rv /etc/openvpn
+	ln -s /lib/systemd/system/openvpn\@.service /etc/systemd/system/multi-user.target.wants/openvpn\@server.service
+Edit server.conf, change certificate files
+	vim server.conf
+cert vpncentos-c3.crt
+key vpncentos-c3.key
+
+Start openvpn service
+	systemctl -f enable openvpn@server.service
+	systemctl start openvpn@server.service
+	systemctl status openvpn@server.service
+Create client certificate and keys
+	cd /etc/openvpn/easy-rsa
+	source ./vars
+	./build-key client01
+Copy client certificate and keys to remote PC by any means possible
+ca.crt cliente01.crt cliente01.key
+In client, edit conf file
+	vim myclient.ovpn
+client
+dev tun
+proto udp
+remote 192.168.2.128 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+comp-lzo
+verb 3
+ca ca.crt
+cert cliente01.crt
+key cliente01.key
+auth-user-pass
+
+Back to server
+Change kernel parameters, set centos to router
+	vim /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+Load the previous file
+	sysctl -p
+Add module to openvpn
+	vim /etc/pam.d/openvpn
+auth	required	pam_unix.so	shadow	nodelay
+account	required	pam_unix.so
+
+Edit
+	/etc/openvpn/server.conf
+plugin /usr/lib64/openvpn/plugins/openvpn-plugin-auth-pam.so openvpn
+
+Also add a route to internal lan
+
+push "route 192.168.10.0 255.255.255.0"
+client-to-client
+
+Retart openvpn
+	systemctl stop openvpn@server.service
+	systemctl start openvpn@server.service
+	
+Start openvpn in client
+	sudo openvpn cliente01.ovpn
+Every user account is a nix account in the server
+	adduser david
+	passwd david

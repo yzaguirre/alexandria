@@ -1,0 +1,5 @@
+https://webpack.github.io/docs/installation.html
+	npm install webpack -g
+	npm install webpack --save-dev
+If you want to use dev tools you should install it:
+	npm install webpack-dev-server --save-dev

@@ -1,0 +1,3 @@
+https://github.com/gitpython-developers/GitPython
+https://pypi.org/project/GitPython/
+http://gitpython.readthedocs.io/en/stable/

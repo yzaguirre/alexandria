@@ -1,0 +1,103 @@
+https://www.laravel.com/
+Dependencies
+	apt install php7.1 php7.1-xml php7.1-mbstring php7.1-zip
+Install via composer
+	composer global require "laravel/installer"
+Make env variables in ~/.profile
+PATH=$PATH:$HOME/.composer/vendor/bin
+
+Create a fresh Larvel installation
+	laravel new blog
+Change webroot to blog/public
+Configuration files in blog/config
+Change directory permissions
+	sudo chown www-data:www-data -R blog/
+
+
+Open a shell
+	php artisan tinker
+App\Task::all();
+App\Task::where('id','>',1)->get();
+App\Task::pluck('body');
+App\Task::pluck('body')->first();
+
+Change Application Key in the .env file
+	php artisan key:generate
+
+Start built-in server
+	php artisan serve
+
+Help
+	php artisan help make:migration
+
+Define routes in web file routes/web.php
+Load views in resources/views
+
+Reference variables in routes
+return view('welcome', [
+  'name' => 'David'
+]);
+return view('welcome')->with('name', 'David');
+$name = 'David';
+ return view('welcome', compact('name'));
+
+Query Database
+	$tasks = DB::table('tasks')->get();
+
+DB migrations
+Create the database.
+Edit db credentials in .env
+	php artisan migrate
+If error, see
+https://laracasts.com/discuss/channels/laravel/php-artisan-migrate-errorclass-appprovidersschema-not-found
+https://laracasts.com/discuss/channels/general-discussion/syntax-error-or-access-violation-1071-specified-key-was-too-long
+Open app/Providers/AppServiceProvider.php
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191);
+
+Migration files in database/migrations
+Give it a name that corresponds to what I am doing
+	php artisan make:migration create_tasks_table --create=tasks
+To apply more changes, clear the dump
+	composer dump-autoload
+Migrate the database
+	php artisan migrate
+To modify a schema, edit the migration file and 
+	php artisan migrate:refresh
+
+To undo last migration
+	php artisan migrate:rollback
+Undo everything
+	php artisan migrate:reset
+
+Make a model
+	php artisan make:model Task
+File is created at app/Task.php
+Create the model and table
+	composer dump-autoload
+	php artisan make:model Task -m
+Create the model, table and controller
+	php artisan make:model Task -mc
+Update the filename
+	mv app/Http/Controllers/Post{,s}Controller.php
+Migrate the database
+	php artisan migrate
+Make a change and refresh
+	php artisan migrate:refresh
+Do some tinkering
+	php artisan tinker
+	$task = new App\Task;
+	$task->body = 'Go to the market';
+	$task->save();
+
+Make a controller
+	php artisan make:controller TasksController
+It creates it in app/Http/Controllers/TasksController.php
+Lumen
+https://lumen.laravel.com/docs/5.4
+	composer global require "laravel/lumen-installer"
+	php -S localhost:8080 -t public/
+
+Front end presets
+	php artisan preset none
+	php artisan preset bootstrap
