@@ -36,3 +36,8 @@ our code changes. Even a new address is uses. Use reset flag.
 	candidate[0] // id
 	candidate[1] // name
 	candidate[2] // voteCount
+
+Run test
+	truffle test
+Run
+	npm run dev

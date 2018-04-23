@@ -1,5 +1,0 @@
-https://webpack.js.org/guides/getting-started/
-https://medium.com/front-end-hacking/webpack-by-example-part-3-a4ceaaa6299a
-
-Build to dist
-./node_modules/.bin/webpack

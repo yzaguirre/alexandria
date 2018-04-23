@@ -1,0 +1,59 @@
+Download
+https://nmap.org/download.html
+https://nmap.org/dist/sigs/?C=M&O=D
+	wget https://nmap.org/dist/nmap-7.70.tgz
+	wget https://nmap.org/dist/sigs/nmap-7.70.tgz.asc
+	wget https://nmap.org/dist/sigs/nmap-7.70.tgz.digest.txt
+Verify
+https://nmap.org/book/install.html#inst-integrity
+import key
+	wget https://svn.nmap.org/nmap/docs/nmap_gpgkeys.txt
+	gpg --with-fingerprint nmap_gpgkeys.txt
+	gpg --import nmap_gpgkeys.txt
+	gpg --fingerprint nmap fyodor
+BB61 D057 C0D7 DCEF E730 996C 1AF6 EC50 3359 9B5F
+436D 66AB 9A79 8425 FDA0 E3F8 01AF 9F03 6B93 55D0
+	gpg --verify nmap-7.70.tgz.asc nmap-7.70.tgz
+	grep MD5 nmap-7.70.tgz.digest.txt
+	md5sum nmap-7.70.tgz
+	sha1sum nmap-7.70.tgz
+	sha224sum nmap-7.70.tgz
+	sha256sum nmap-7.70.tgz
+	sha384sum nmap-7.70.tgz
+	sha512sum nmap-7.70.tgz
+Compile
+https://nmap.org/book/inst-source.html
+	tar xf nmap-7.70.tgz
+	cd nmap-7.70
+	./configure
+configure directives
+--prefix=<directoryname>
+--prefix=/usr/local
+--without-zenmap
+	make
+	su root
+	make install
+
+Compile ncat
+https://github.com/ksylvan/MyPassportWirelessHacks/tree/master/ncat
+http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-MyPW/td-p/812349
+	cd nmap
+	./configure --with-pcap=null
+	cd libpcap
+	make
+	cd ../ncat/
+	make
+	apt-get install liblua5.2-0 libc6
+
+Scan a trace for open ports
+	nmap -A localhost
+Use tcp syn scan, prevents the tcp 3 way handshake
+	nmap -A -sS localhost
+Escanear puertos UDP
+	nmap -p1-500 -sU IP
+	nmap -sU -F IP
+
+List scripts
+https://elbinario.net/2018/04/17/testando-la-seguridad-de-nuestros-servidores-i/
+	locate nse | grep script
+	nmap -sS --script default IP 

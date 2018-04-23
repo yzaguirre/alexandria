@@ -1,0 +1,22 @@
+local install
+https://getcomposer.org/download/
+
+https://getcomposer.org/doc/01-basic-usage.md
+http://getcomposer.org/
+	wget https://getcomposer.org/composer.phar
+	chmod 555 composer.phar
+	mv composer.phar /usr/local/bin/composer
+Make sure you have ~/.composer/vendor/bin/ in your path. 
+	mkdir -p ~/.composer/vendor/bin/
+If on web server
+	mkdir -p /var/www/.composer/vendor/bin/
+	chown www-data:www-data -R /var/www/.composer
+Download dependencies
+	composer install
+
+Update global dependencies
+	composer global update
+
+Disable composer plugins
+https://stackoverflow.com/questions/37955880/composer-fatal-error-declaration-of-fxp-must-be-compatible-with-abstracta#37955910
+	composer global remove fxp/composer-asset-plugin --no-plugins

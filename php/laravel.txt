@@ -1,4 +1,5 @@
 https://www.laravel.com/
+https://laravel.com/docs/5.5/
 Dependencies
 	apt install php7.1 php7.1-xml php7.1-mbstring php7.1-zip
 Install via composer
