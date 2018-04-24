@@ -19,6 +19,7 @@ by the CA, each certificate must have a unique serial number, and another file t
 	echo 1000 > serial
 Prepare the configuration file
 See https://jamielinux.com/docs/openssl-certificate-authority/appendix/root-configuration-file.html
+	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/root-config.txt -O openssl.cnf
 
 Create the cert
 	openssl genrsa -aes256 -out private/ca.key.pem 4096
@@ -34,8 +35,8 @@ Verify the root certificate
 
 Create the intermediate pair
 Prepare the directory
-	mkdir /root/ca/intermediate
-	cd intermediate
+	mkdir /root/intermediate
+	cd /root/intermediate
 	mkdir certs crl csr newcerts private
 	chmod 700 private
 	touch index.txt
@@ -43,9 +44,10 @@ Prepare the directory
 Add a crlnumber file to the intermediate CA directory tree. crlnumber is used to keep track of certificate revocation lists.
 	echo 1000 > crlnumber
 See https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html
+	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/intermediate-config.txt -O openssl.cnf
 
 Create the intermediate key
-	cd /root/ca/intermediate
+	cd /root/intermediate
 	openssl genrsa -aes256 \
       -out private/intermediate.key.pem 4096
 	chmod 400 private/intermediate.key.pem
@@ -55,7 +57,7 @@ Create the intermediate certificate
       -key intermediate/private/intermediate.key.pem \
       -out intermediate/csr/intermediate.csr.pem
 Sign the csr with root CA
-	openssl ca -config openssl.cnf -extensions v3_intermediate_ca \
+	openssl ca -config ca/openssl.cnf -extensions v3_intermediate_ca \
       -days 3650 -notext -md sha256 \
       -in intermediate/csr/intermediate.csr.pem \
       -out intermediate/certs/intermediate.cert.pem
@@ -63,11 +65,11 @@ Sign the csr with root CA
 Verify the intermediate certificate
 	openssl x509 -noout -text -in intermediate/certs/intermediate.cert.pem
 Verify the intermediate certificate against the root certificate. An OK indicates that the chain of trust is intact.
-	openssl verify -CAfile certs/ca.cert.pem \
+	openssl verify -CAfile ca/certs/ca.cert.pem \
       intermediate/certs/intermediate.cert.pem
 Create the certificate chain file (OPTIONAL)
 	cat intermediate/certs/intermediate.cert.pem \
-      certs/ca.cert.pem > intermediate/certs/ca-chain.cert.pem
+      ca/certs/ca.cert.pem > intermediate/certs/ca-chain.cert.pem
 	chmod 444 intermediate/certs/ca-chain.cert.pem
 
 Sign server and client certificates

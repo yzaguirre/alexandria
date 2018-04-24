@@ -1,0 +1,24 @@
+https://phpraxis.wordpress.com/2016/08/02/steps-for-configuring-laravel-on-apache-http-server/
+https://www.howtoforge.com/tutorial/install-laravel-on-ubuntu-for-apache/
+## laravel_project.conf
+NameVirtualHost *:8080
+Listen 8080
+ 
+<VirtualHost *:8080>
+    ServerAdmin admin@example.com
+    ServerName laravel.dev
+    ServerAlias www.laravel.dev
+    DocumentRoot /home/user/projects/laravel_project/public
+     
+    <Directory /home/user/projects/laravel_project/public/>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Order allow,deny
+            allow from all
+            Require all granted
+    </Directory>
+     
+    LogLevel debug
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>

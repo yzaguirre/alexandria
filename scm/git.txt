@@ -1,5 +1,26 @@
 git contribution workflow
-https://diasp.eu/posts/6508007
+https://diasp.eu/posts/6508007 and https://diasp.eu/posts/6519103
+https://github.com/mindfulness-at-the-computer/mindfulness-at-the-computer/blob/master/CONTRIBUTING.md#workflow-overview
+Fork a project, clone the fork repo
+	git clone clone-repo
+Add the upstream project
+	git remote add upstream http://gitserver.domain/path
+Create a local branch, for a feature or bug fix
+	git branch mytake
+	git checkout mytake
+Push commited changes
+	git push origen mytake
+Regularly keep the local branch in sync with upstream
+	git fetch upstream
+	git merge upstream/master # merges the master branch to mytake branch
+Alternatively
+	git pull upstream/master
+
+Remove untracked files
+https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree#64966
+	git clean -n
+	git clean -f # will DELETE files permanently
+	git clean -X # Remove files listed in .gitignore
 
 http://ohshitgit.com/
 https://news.ycombinator.com/item?id=15951825

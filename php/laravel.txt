@@ -48,13 +48,19 @@ Query Database
 DB migrations
 Create the database.
 Edit db credentials in .env
-	php artisan migrate
-If error, see
+
+Prevent the Schema length error
 https://laracasts.com/discuss/channels/laravel/php-artisan-migrate-errorclass-appprovidersschema-not-found
 https://laracasts.com/discuss/channels/general-discussion/syntax-error-or-access-violation-1071-specified-key-was-too-long
-Open app/Providers/AppServiceProvider.php
-use Illuminate\Support\Facades\Schema;
-Schema::defaultStringLength(191);
+Open app/Providers/AppServiceProvider.php, write:
+
+	use Illuminate\Support\Facades\Schema;
+
+Inside boot method write:
+	Schema::defaultStringLength(191);
+
+Run migration
+	php artisan migrate
 
 Migration files in database/migrations
 Give it a name that corresponds to what I am doing
@@ -71,9 +77,31 @@ To undo last migration
 Undo everything
 	php artisan migrate:reset
 
+Seeder will load and inesrt data into the database
+	php artisan make:seeder ListingsTableSeeder
+Edit database/ListingsTableSeeder.php at the run method:
+	$path = base_path() . '/database/data.json';
+	$file = File::get($path);
+	$data = json_decode($file, true);
+	DB::table('listings')->insert($data);
+	
+Edit database/DatabaseSeeder.php run method with:
+	$this->call(ListingsTableSeeder::class);
+When we run the seeder, any code in the run method is executed.
+	php artisan db:seed
+
 Make a model
 	php artisan make:model Task
 File is created at app/Task.php
+Add castings as an class array variable
+	protected $casts = [
+      'amenity_wifi' => 'boolean',
+      'amenity_pets_allowed' => 'boolean',
+      'amenity_tv' => 'boolean',
+      'amenity_kitchen' => 'boolean',
+      'amenity_breakfast' => 'boolean',
+      'amenity_laptop' => 'boolean'
+    ];
 Create the model and table
 	composer dump-autoload
 	php artisan make:model Task -m
