@@ -46,3 +46,6 @@ With the old pkcs7 format
 	openssl crl2pkcs7 -nocrl -out fd.p7b -certfile fd.crt -certfile fd-chain.crt
 Reverse conversion
 	openssl pkcs7 -in fd.p7b -print_certs -out fd.pem
+
+DEM to PEM
+	openssl x509 -inform DER -outform PEM -in certificate.cer -out certificate.pe

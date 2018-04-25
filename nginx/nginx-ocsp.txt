@@ -1,0 +1,43 @@
+https://www.digitalocean.com/community/tutorials/how-to-configure-ocsp-stapling-on-apache-and-nginx
+OCSP (Online Certificate Status Protocol) is a protocol for checking if a TLS certificate has been revoked.
+In OCSP the browser sends a request to a OCSP URL and receives a response containing the validity status of the certificate.
+
+When OCSP stapling is implemented the certificate holder (read web server) queries the OCSP server themselves and caches the response.
+This response is "stapled" with the TLS/SSL Handshake via the Certificate Status Request extension response.
+
+Check for OCSP stapling support
+- Apache HTTP Server (>=2.3.3)
+- Nginx (>=1.3.7)
+	apache2 -v
+	nginx -v
+
+Retrieve the root CA and intermediate CA's certificate in PEM format and save them in a single file.
+For Let's Encrypt:
+	wget http://apps.identrust.com/roots/dstrootcax3.p7c
+Better get DST Root CA X3 from the OS root certificate lists, and convert it from DER (binary DER with .cer file extension) to PEM
+	openssl x509 -inform DER -outform PEM -in dstrootcax3.cer -out dstrootcax3.pem
+	wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem
+	cat dstrootcax3.pem lets-encrypt-x3-cross-signed.pem > ca-cert-chain.pem
+
+Configuring OCSP Stapling on Nginx
+Edit conf file
+	vim /etc/nginx/sites-enabled/example.com.ssl
+ssl_stapling on;
+ssl_stapling_verify on;
+ssl_trusted_certificate /etc/tls/private/ca-certs.pem;
+
+Do a configtest to see if everything is correct.
+	nginx -t
+Restart nginx
+	systemctl restart nginx
+Check logs
+	tail /var/log/nginx/error.log
+
+You can use the openssl command-line program to verify that an OCSP response is sent by your server:
+	openssl s_client -connect www.example.com:443 -status -servername www.example.com
+
+Run a Qualys online SSL test
+https://www.ssllabs.com/ssltest/index.html	
+
+If the certificate does not point to an OCSP responder, or if a different address must be used
+	openssl x509 -in ./www.example.com.crt -text | grep 'OCSP.*http'

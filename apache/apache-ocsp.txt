@@ -1,0 +1,54 @@
+https://www.digitalocean.com/community/tutorials/how-to-configure-ocsp-stapling-on-apache-and-nginx
+OCSP (Online Certificate Status Protocol) is a protocol for checking if a TLS certificate has been revoked.
+In OCSP the browser sends a request to a OCSP URL and receives a response containing the validity status of the certificate.
+
+When OCSP stapling is implemented the certificate holder (read web server) queries the OCSP server themselves and caches the response.
+This response is "stapled" with the TLS/SSL Handshake via the Certificate Status Request extension response.
+
+Check for OCSP stapling support
+- Apache HTTP Server (>=2.3.3)
+- Nginx (>=1.3.7)
+	apache2 -v
+	nginx -v
+CentOS/Fedora users replace apache2 with httpd.
+
+Retrieve the root CA and intermediate CA's certificate in PEM format and save them in a single file.
+For Let's Encrypt:
+	wget http://apps.identrust.com/roots/dstrootcax3.p7c
+Better get DST Root CA X3 from the OS root certificate lists, and convert it from DER (binary DER with .cer file extension) to PEM
+	openssl x509 -inform DER -outform PEM -in dstrootcax3.cer -out dstrootcax3.pem
+	wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem
+	cat dstrootcax3.pem lets-encrypt-x3-cross-signed.pem > ca-cert-chain.pem
+
+Configuring OCSP Stapling on Apache
+Notes:
+- SSLCACertificateFile isn't used anymore. Relay on SSLCertificateFile specifying a pem with Intermediate Cert + Server Cert
+- Don't add SSLUseStapling in sites-enabled/default-tls.conf
+https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#ocspstapling
+Edit ssl.conf
+	vim /etc/apache2/mods-enabled/ssl.conf
+SSLUseStapling On
+SSLStaplingCache "shmcb:logs/ssl_stapling(32768)"
+SSLStaplingCache shmcb:/tmp/stapling_cache(128000)
+
+The path on the SSLStaplingCache directive (e.g., logs/) should match the one on the SSLSessionCache directive.
+This path is relative to ServerRoot.
+
+Do a configtest to check for errors.
+	apachectl -t
+Restart apache
+	systemctl restart apache2.service
+
+You can use the openssl command-line program to verify that an OCSP response is sent by your server:
+	openssl s_client -connect www.example.com:443 -status -servername www.example.com
+
+Run a Qualys online SSL test
+https://www.ssllabs.com/ssltest/index.html	
+	
+If the certificate does not point to an OCSP responder, or if a different address must be used
+	openssl x509 -in ./www.example.com.crt -text | grep 'OCSP.*http'
+https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslstaplingforceurl
+If no OCSP URI is provided, contact your Certificate Authority to determine if one is available; if so, configure it with SSLStaplingForceURL in the virtual host that uses the certificate.
+
+If multiple SSL-enabled virtual hosts are configured and OCSP Stapling should be disabled for some
+Add SSLUseStapling Off to the virtual hosts for which OCSP Stapling should be disabled.

@@ -1,0 +1,92 @@
+http://duplicity.nongnu.org/index.html
+http://duplicity.nongnu.org/duplicity.1.html
+https://www.digitalocean.com/community/tutorials/how-to-use-duplicity-with-gpg-to-back-up-data-to-digitalocean-spaces
+Installing Duplicity
+	sudo -H pip install duplicity # Only available for python 2.7
+	apt install haveged
+For Ubuntu, use a PPA
+	apt-add-repository ppa:duplicity-team/ppa
+	apt update
+	apt install duplicity haveged
+
+Creating a Backup Directory
+To demonstrate how the backup process works, we will create a directory for our backups in our non-root user's home directory, along with some sample data. We will call our directory sammy_backups: 
+	mkdir ~/sammy_backups
+	echo "The ancient Megalodon shark reached lengths of up to 59 feet, and is widely regarded as one of history's most fearsome predators." >> ~/sammy_backups/historical_sharks.txt
+
+Create a sign only ECC GPG sub-key
+	gpg --expert --full-gen-key
+	gpg --expert --edit-key $key_id
+	
+Import the encrypt public gpg key
+
+Creating Manual Backups
+The variables that duplicity will need, which we will define as environment variables, include our Spaces Access Key and Secret, and our GPG public key ID and passphrase. 
+	mkdir ~/.duplicity
+	vim ~/.duplicity/.env_variables.conf
+export AWS_ACCESS_KEY_ID="your-access-key"
+export AWS_SECRET_ACCESS_KEY="your-secret-key"
+export GPG_S_KEY="your-GPG-public-signing-subkey-id"
+export GPG_E_KEY="your-GPG-public-key-id"
+export SIGN_PASSPHRASE="your-GPG-key-passphrase"
+
+We can now set permissions on the file to ensure that only our current non-root user has read and write access:
+	chmod 0600 ~/.duplicity/.env_variables.conf
+
+Make these variables available for use in the current Bash session by typing
+	source ~/.duplicity/.env_variables.conf
+
+Run duplicity to create a manual, full backup of our ~/sammy_backups directory.
+
+Running duplicity without the full action will create an initial full backup, followed by incremental backups.
+We will create a full backup in our first use of the command,
+but should you wish to create another full manual backup of this directory,
+you would need to specify the full action.
+
+Log file will be ~/.duplicity/info.log
+Save to Spaces
+	duplicity --verbosity info --encrypt-key=$GPG_E_KEY --sign-key=$GPG_S_KEY --log-file /home/sammy/.duplicity/info.log /home/sammy/sammy_backups s3://nyc3.digitaloceanspaces.com/sammys-bucket/
+Save to Nextcloud
+https://docs.nextcloud.com/server/13/user_manual/files/access_webdav.html
+	duplicity --verbosity info --encrypt-key=$GPG_E_KEY --sign-key=$GPG_S_KEY --log-file /home/sammy/.duplicity/info.log /home/sammy/sammy_backups webdavs://$USER:$PASSPHRASE@other.host/nextcloud/remote.php/dav/files/USERNAME/
+
+Or
+	duplicity --verbosity info --encrypt-key=$GPG_E_KEY --sign-key=$GPG_S_KEY --log-file /home/sammy/.duplicity/info.log /home/sammy/sammy_backups lftp+webdavs://$USER:$PASSPHRASE@other.host/nextcloud/remote.php/dav/files/USERNAME/
+
+Restore files
+It's necessary to reverse the order of items in our duplicity command.
+The --file-to-restore option allows us to specify the path of the file we would like to restore.
+This path should be relative to the directory that we have backed up; in our case, our relative path will be historical_sharks.txt.
+We will also reverse the order of our Space URL and backup directory to indicate that we are restoring the file from our repository:
+	duplicity --verbosity info --encrypt-key=$GPG_E_KEY --sign-key=$GPG_S_KEY --log-file /home/sammy/.duplicity/info.log --file-to-restore historical_sharks.txt s3://nyc3.digitaloceanspaces.com/sammys-bucket /home/sammy/sammy_backups/historical_sharks.txt
+
+Automating Backups
+We can use the cron job scheduler to create a backup schedule that will include a full backup each week and incremental backups otherwise.
+First, let's create a backup script in our ~/.duplicity directory
+Be sure to replace the highlighted username, backup directory, and bucket name with your information:
+	vim ~/.duplicity/.backup.sh
+#!/bin/bash
+
+HOME="/home/sammy"
+
+source "$HOME/.duplicity/.env_variables.conf"
+
+duplicity \
+    --verbosity info \
+    --encrypt-sign-key="$GPG_KEY" \
+    --full-if-older-than 7D \
+    --log-file "$HOME/.duplicity/info.log" \
+    /home/sammy/sammy_backups \
+    s3://nyc3.digitaloceanspaces.com/sammys-bucket/
+
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset GPG_KEY
+unset PASSPHRASE
+
+	chmod 0700 ~/.duplicity/.backup.sh
+	crontab -e 
+Execute backup every two minutes
+*/2 * * * * /home/sammy/.duplicity/.backup.sh
+Or every 8 hours
+* */8 * * * /home/sammy/.duplicity/.backup.sh

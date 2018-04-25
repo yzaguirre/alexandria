@@ -4,12 +4,12 @@ https://letsencrypt.org/docs/client-options/
 https://helloworld.letsencrypt.org/
 https://twitter.com/letsencrypt/status/672465561872306176
 
-https://github.com/diafygi/letsencrypt-nosudo
+https://github.com/diafygi/acme-nosudo
 https://github.com/kuba/simp_le
 Remember to use same email
 Get scripts
-	git clone https://github.com/diafygi/letsencrypt-nosudo.git
-	cd letsencrypt-nosudo
+	git clone https://github.com/diafygi/acme-nosudo
+	cd acme-nosudo
 	chmod u+x sign_csr.py
 	ln -s $PWD/sign_csr.py ~/bin/sign_csr
 Create private key
