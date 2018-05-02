@@ -1,0 +1,160 @@
+Also check out tls/root-certificates, tunnels/openssl.txt
+
+Root key ca.key.pem
+Root certificate ca.cert.pem
+Make a directory to store all keys and certificates
+	mkdir /root/ca
+	cd /root/ca
+	mkdir certs crl newcerts private
+	chmod 700 private
+The CA needs a few additional files to operate, one to keep track of the last serial number used
+by the CA, each certificate must have a unique serial number, and another file to record which
+	touch index.txt
+	echo 1000 > serial
+Prepare the configuration file
+See https://jamielinux.com/docs/openssl-certificate-authority/appendix/root-configuration-file.html
+	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/root-config.txt -O openssl.cnf
+
+Create the cert
+	openssl ecparam -genkey -name prime256v1 | openssl ec -out private/ca.key.pem -aes256
+	chmod 400 private/ca.key.pem
+Create the root certificate
+	openssl req -config openssl.cnf \
+      -key private/ca.key.pem \
+      -new -x509 -days 7300 -sha256 -extensions v3_ca \
+      -out certs/ca.cert.pem
+	chmod 444 certs/ca.cert.pem
+Verify the root certificate
+	openssl x509 -noout -text -in certs/ca.cert.pem
+
+Create the intermediate pair
+Prepare the directory
+	mkdir /root/intermediate
+	cd /root/intermediate
+	mkdir certs crl csr newcerts private
+	chmod 700 private
+	touch index.txt
+	echo 1000 > serial
+Add a crlnumber file to the intermediate CA directory tree. crlnumber is used to keep track of certificate revocation lists.
+	echo 1000 > crlnumber
+See https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html
+	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/intermediate-config.txt -O openssl.cnf
+
+Create the intermediate key
+	cd /root/intermediate
+    openssl ecparam -genkey -name prime256v1 | openssl ec -out private/intermediate.key.pem -aes256
+	chmod 400 private/intermediate.key.pem
+Create the intermediate certificate
+	cd ..
+	openssl req -config intermediate/openssl.cnf -new -sha256 \
+      -key intermediate/private/intermediate.key.pem \
+      -out intermediate/csr/intermediate.csr.pem
+Sign the csr with root CA
+	openssl ca -config ca/openssl.cnf -extensions v3_intermediate_ca \
+      -days 3650 -notext -md sha256 \
+      -in intermediate/csr/intermediate.csr.pem \
+      -out intermediate/certs/intermediate.cert.pem
+	chmod 444 intermediate/certs/intermediate.cert.pem
+Verify the intermediate certificate
+	openssl x509 -noout -text -in intermediate/certs/intermediate.cert.pem
+Verify the intermediate certificate against the root certificate. An OK indicates that the chain of trust is intact.
+	openssl verify -CAfile ca/certs/ca.cert.pem \
+      intermediate/certs/intermediate.cert.pem
+Create the certificate chain file (OPTIONAL)
+	cat intermediate/certs/intermediate.cert.pem \
+      ca/certs/ca.cert.pem > intermediate/certs/ca-chain.cert.pem
+	chmod 444 intermediate/certs/ca-chain.cert.pem
+
+Sign server and client certificates
+	cd /etc/tls
+	mkdir private certs requests
+Create a key. Generate a server pair
+	openssl ecparam -genkey -name prime256v1 | openssl ec -out private/www.example.com.key.pem -aes256
+Without password
+	openssl ecparam -genkey -name prime256v1 -out private/www.example.com.key.pem
+	chmod 400 private/www.example.com.key.pem
+Create a certificate. 
+May want to add a Subject Alternative Name extension (see man x509v3_config)
+Add to [req] section
+	req_extensions = SAN
+[ SAN ]
+subjectAltName = DNS:www.example.com,DNS:example.com
+
+Create a CSR
+	openssl req -config /root/intermediate/openssl.cnf \
+      -key private/www.example.com.key.pem \
+      -new -sha256 -out requests/www.example.com.csr.pem
+Better way (replace appropriate values)
+	openssl req -key private/www.example.com.key.pem \
+      -subj "/C=US/ST=California/L=Mountain View/O=Alice Ltd/OU=Alice Ltd Web Services/CN=www.example.com" \
+      -reqexts SAN -config <(cat /root/intermediate/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.example.com,DNS:example.com")) \
+      -new -sha256 -out requests/www.example.com.csr.pem
+    
+Sign the csr with Intermediate CA
+If the certificate is going to be used on a server, use the server_cert extension.
+If the certificate is going to be used for user authentication, use the usr_cert extension.
+	openssl ca -config intermediate/openssl.cnf \
+      -extensions server_cert -days 375 -notext -md sha256 \
+      -in requests/www.example.com.csr.pem \
+      -out /root/intermediate/certs/www.example.com.cert.pem
+	chmod 444 /root/intermediate/certs/www.example.com.cert.pem
+	cp /root/intermediate/certs/www.example.com.cert.pem certs
+Verify the certificate
+	openssl x509 -noout -text \
+      -in /root/intermediate/certs/www.example.com.cert.pem
+Verify the server certificate against the certificate chain.
+	openssl verify -CAfile /root/intermediate/certs/ca-chain.cert.pem \
+      certs/www.example.com.cert.pem
+Make a chain file
+	cat certs/www.example.cert.pem \
+      /root/intermediate/certs/intermediate.cert.pem
+      > certs/www.example.com_chained.cert.pem
+
+Online Certificate Status Protocol
+When a CA signs a certificate, they will typically include an OCSP
+server address (eg, http://ocsp.example.com) in the certificate.
+
+Add authorityInfoAccess to the intermediate config file
+[ server_cert ]
+# ... snipped ...
+authorityInfoAccess = OCSP;URI:http://ocsp.example.com
+
+Create a key. Generate the OCSP pair
+	cd /root
+	openssl ecparam -genkey -name prime256v1 | openssl ec -out intermediate/private/ocsp.example.com.key.pem -aes256
+Without password
+	openssl ecparam -genkey -name prime256v1 -out intermediate/private/ocsp.example.com.key.pem
+	chmod 400 intermediate/private/ocsp.example.com.key.pem
+Create a certificate signing request (CSR).
+The details should generally match those of the signing CA.
+The Common Name, however, must be a fully qualified domain name.
+	openssl req -config intermediate/openssl.cnf -new -sha256 \
+      -key intermediate/private/ocsp.example.com.key.pem \
+      -out intermediate/csr/ocsp.example.com.csr.pem
+Sign the CSR with the intermediate CA.
+	openssl ca -config intermediate/openssl.cnf \
+      -extensions ocsp -days 375 -notext -md sha256 \
+      -in intermediate/csr/ocsp.example.com.csr.pem \
+      -out intermediate/certs/ocsp.example.com.cert.pem
+Verify that the certificate has the correct X509v3 extensions.
+	openssl x509 -noout -text \
+      -in intermediate/certs/ocsp.example.com.cert.pem
+
+Revoke a certificate
+	openssl ca -config intermediate/openssl.cnf \
+      -revoke intermediate/certs/test.example.com.cert.pem
+Run the OCSP responder
+The OCSP responder reads index.txt directly.
+The response is signed with the OCSP cryptographic pair (using the -rkey and -rsigner options).
+	openssl ocsp -port 127.0.0.1:2560 -text -sha256 \
+      -index intermediate/index.txt \
+      -CA intermediate/certs/ca-chain.cert.pem \
+      -rkey intermediate/private/ocsp.example.com.key.pem \
+      -rsigner intermediate/certs/ocsp.example.com.cert.pem \
+      -nrequest 1
+Send a query to the OCSP responder, with another terminal
+The -cert option specifies the certificate to query.
+	openssl ocsp -CAfile intermediate/certs/ca-chain.cert.pem \
+      -url http://127.0.0.1:2560 -resp_text \
+      -issuer intermediate/certs/intermediate.cert.pem \
+      -cert intermediate/certs/test.example.com.cert.pem

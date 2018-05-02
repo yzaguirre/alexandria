@@ -1,0 +1,8 @@
+https://chrony.tuxfamily.org/comparison.html
+chrony replaces ntpd as the recommended NTP server in Ubuntu 18.04.
+Though the default Ubuntu system is set up to use systemd-timesyncd
+for simple sync needs, ntpd would often be required for more demanding
+time synchronization or to provide network time services for other
+clients.
+In 18.04 ntpd has been demoted to the universe repo,
+and is unavailable without updating your APT configuration.

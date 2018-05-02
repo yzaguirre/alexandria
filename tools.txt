@@ -337,6 +337,7 @@ https://www.vultr.com/
 https://www.fortrabbit.com/pricing
 https://www.digitalocean.com/features
 https://www.ovh.com/us/
+https://www.linode.com/pricing
 https://sysdig.com/
 http://www.prq.se
 
@@ -514,3 +515,11 @@ No bullshit linear algebra v2 release https://minireference.com/blog/no-bullshit
 
 mail lists
 https://news.ycombinator.com/item?id=14086259
+
+Browsers
+links
+https://news.ycombinator.com/item?id=16965534
+	links -dump 'https://web.archive.org/web/20160826003417/https://medium.co... | nc seashells.io 1337
+links2
+lynx
+w3m

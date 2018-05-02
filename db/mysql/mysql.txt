@@ -1,0 +1,247 @@
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+https://stackoverflow.com/questions/213543/how-can-i-check-mysql-engine-type-for-a-specific-table
+	SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'dbname'
+MySQL
+http://emoticode.net/mysql/mysql-unix-cheat-sheet.html
+
+https://dev.mysql.com/doc/refman/5.0/es/show-grants.html
+show grants;
+
+Select all tables
+http://www.cyberciti.biz/faq/how-do-i-empty-mysql-database/
+echo "select concat('drop table ', table_name, ';') from information_schema.tables where table_schema=schema()" | mysql CONNECT | grep "^drop table " | mysql CONNECT
+
+https://stackoverflow.com/questions/8147834/how-to-echo-print-statements-while-executing-a-sql-script
+http://www.codingforums.com/mysql/213881-how-get-mysql-echo-commands-batch-file.html
+select 'hola' as ' ';
+
+http://centoshelp.org/servers/database/common-useful-mysql-commands/
+mysql> DESC mytable;
+or
+mysql> SHOW COLUMNS FROM mytable;
+
+http://php.about.com/od/learnmysql/qt/change_column_name.htm
+alter table tablename change oldname newname varchar (10) ;
+
+CREATE DATABASE david;
+GRANT ALL ON david.* TO david@'localhost' IDENTIFIED BY 'f00.bar';
+FLUSH PRIVILEGES;
+
+MySQL :: MySQL Workbench :: 15.5 Manual Pages
+http://dev.mysql.com/doc/workbench/en/utils-manuals.html
+
+On OpenSuse:
+	# mkdir -p /var/lib/mysql/ /var/run/mysql/
+	# chown mysql:mysql -R /var/lib/mysql/ /var/run/mysql/
+
+Install
+http://dev.mysql.com/doc/refman/5.6/en/linux-installation-debian.html
+	# dpkg -i mysql-MVER-DVER-CPU.deb
+	# apt-get install libaio1
+
+http://dev.mysql.com/doc/refman/5.0/en/mysql-secure-installation.html
+Instalar
+Install mysql
+	# apt-get install mysql-server
+x	# chkconfig --levels 3 mysqld on
+
+Que usuario corre mysqld
+http://dev.mysql.com/doc/refman/5.6/en/changing-mysql-user.html
+
+For the mysql_install_db script to run properly, the MySQL server must be shut down. If not, your server may crash. If this happens, make sure mysqld is shut down and run the script again. 
+http://dev.mysql.com/doc/refman/5.6/en/mysql-install-db.html
+	# scripts/mysql_install_db --user=mysql
+	# mysql_install_db --user=mysql
+	$ '/usr/bin/mysqladmin' -u root password 'f00.bar'
+	$ '/usr/bin/mysqladmin' -u root -h osuse64 password 'new-password'
+
+Because the MySQL server, mysqld, needs to access the data directory when it runs later,
+you should either run mysql_install_db from the same system account that will be used for running mysqld
+or run it as root and use the --user option to indicate the user name that mysqld will run as.
+It might be necessary to specify other options such as --basedir or --datadir
+if mysql_install_db does not use the correct locations for the installation directory or data directory.
+For example:
+root va ser el usuario unix que corre el demonio mysqld
+	# bin/mysql_install_db --user=root \
+	--basedir=/opt/mysql/mysql \
+	--datadir=/var/datadir1/mysqldir
+x	--datadir=/opt/mysql/mysql/data
+
+
+asegurarlo http://dev.mysql.com/doc/refman/5.6/en/mysql-secure-installation.html
+	# mysql_secure_installation
+
+You can set a password for root accounts.
+You can remove root accounts that are accessible from outside the local host. root won't login remotely
+You can remove anonymous-user accounts.
+Remove test database and it's access
+
+You can start the MySQL daemon with:
+
+  cd /opt/mysql/server-5.6 ; /opt/mysql/server-5.6/bin/mysqld_safe &
+
+Edit and change the bind-address
+http://stackoverflow.com/questions/8348506/grant-remote-access-of-mysql-database-from-any-ip-address
+x	# vim /usr/bin/mysqld_safe
+	# vim /etc/mysql/my.cnf
+bind-address			= cb64.local
+
+You can test the MySQL daemon with mysql-test-run.pl
+
+  cd mysql-test ; perl mysql-test-run.pl
+
+New default config file was created as /opt/mysql/server-5.6/my.cnf and
+will be used by default by the server when you start it.
+You may edit this file to change server settings
+
+
+Crunchbang / Debian / Linux
+	# service mysql start
+	# service mysql stop
+	$ mysql -u dvdyzag -p
+	$ mysql -u root -p
+		exit or \q
+	\c
+
+Asignar contraseña a usuarios
+	mysqladmin -u root -h this_host_name password 'new-password'
+http://dev.mysql.com/doc/refman/5.5/en/set-password.html
+	set password for david@'cb64.local' = Password('f00.bar')
+Examples
+	/opt/mysql/server-5.6/bin/mysqladmin -u root password 'new-password'
+	/opt/mysql/server-5.6/bin/mysqladmin -u root -h ringtail password 'new-password'
+
+	mysqladmin --user=root --password=password password <newpassword>
+
+Here is an example where I successfully establish
+a connection and determine that the replication user has the right privileges:
+	$ mysql -h 127.0.0.1 -P 33511 -urepl -preplrepl
+
+	mysql> SELECT user(), current_user();
+	SHOW GRANTS\G
+
+
+Abrir /etc/mysql/my.cnf
+[client] database=mysql
+user=root
+password=foo.bar
+
+Datadir permissions
+r-x
+http://ubuntuforums.org/showthread.php?t=928445
+
+Ejercuatar Scripts
+	mysql -u root -p < sakila-data.sql
+o dentro de la sesión	
+	source /path/to/filename 
+	\. /path/to/filename 
+O ejecutar no interactivo
+	mysql -e "SHOW DATABASES; SELECT 1+2"
+descargar DB de ejemplo	
+	http://dev.mysql.com/doc/#sampledb
+
+Herramientas
+	sudo apt-get install mysql-gui-tools-common
+instala :
+libgtkhtml3.14-19
+mysql-admin
+mysql-query-browser
+configuración en carpeta
+	~/.mysqlgui
+	%APPDATA%/MySQL
+
+	sudo apt-get install mysql-navigator
+
+Configuración en
+	/etc/mysql/my.cnf
+	C:\ProgramData\MySQL\MySQL Server 5.6\my.ini
+Errores en 
+	/var/lib/mysql/hostname-err.log
+
+Windows
+	net start MySQL56
+	net stop MySQL56
+
+Configuración en
+	 %WINDIR%\my.cnf
+	%INSTALLDIR%\my.ini, %INSTALLDIR%\my.cnf
+
+Charset
+http://dev.mysql.com/doc/refman/5.5/en/charset-applications.html 
+http://stackoverflow.com/questions/3513773/change-mysql-default-character-set-to-utf8-in-my-cnf 
+http://stackoverflow.com/questions/11432758/mysql-utf32-unicode-ci-and-html-charset-utf-8-used-but-character-appear 
+http://stackoverflow.com/questions/10100192/changing-default-charset-to-latin 
+http://dev.mysql.com/doc/refman/5.6/en/charset-syntax.html 
+http://dev.mysql.com/doc/refman/5.6/en/charset-connection.html 
+
+http://www.webdeveloper.com/forum/showthread.php?194346-Spanish-accents-amp-MySQL-select-query 
+http://dev.mysql.com/doc/refman/5.5/en/charset-database.html 
+http://stackoverflow.com/questions/7894582/what-mysql-collation-character-set-should-i-use-for-english-and-spanish 
+http://stackoverflow.com/questions/7150622/mysql-spanish-character-data 
+
+http://dev.mysql.com/doc/refman/5.5/en/charset-mysql.html
+
+CHARACTER SET ó CHARSET
+000webhost CREATE DATABASE hiecys CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+dvdyzag CREATE DATABASE hiecys CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+CREATE DATABASE hiecys CHARACTER SET utf8 COLLATE utf8_spanish2_ci;
+CREATE DATABASE hiecys DEFAULT CHARACTER SET latin1 DEFAULT COLLATE latin1_general_ci;
+
+SHOW CHARACTER SET;
+SHOW COLLATION LIKE 'latin1%';
+SHOW COLLATION LIKE 'utf8%';
+SHOW VARIABLES LIKE 'character_set%';
+SHOW VARIABLES LIKE 'collation%';
+"C:\Program Files\MySQL\MySQL Server 5.6\bin\mysql.exe" "--defaults-file=C:\ProgramData\MySQL\MySQL Server 5.6\my.ini" "-uhiecys" "--password=hiecys" "hiecys"
+
+Assign Password to other users
+	mysql -u root
+	SET PASSWORD FOR root@'localhost' = PASSWORD('new_ password'); 
+or
+	UPDATE mysql.user SET Password = PASSWORD('foo.bar') WHERE user = 'root';
+	FLUSH PRIVILEGES;
+
+To ensure that you have set a password for all users with the root username, run the following query
+	SELECT user,host,password FROM mysql.user WHERE user='root' AND password=''; 
+Crear Usuarios
+	CREATE USER web@localhost;
+	CREATE USER admin@localhost;
+	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, FILE, INDEX, ALTER, CREATE TEMPORARY TABLES, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EXECUTE ON *.* TO web@localhost;
+	GRANT ALL ON *.* TO admin@localhost WITH GRANT OPTION;
+	FLUSH PRIVILEGES;
+	UPDATE mysql.user SET PASSWORD = PASSWORD('foo.baz')  vWHERE User = 'web';
+	UPDATE mysql.user SET PASSWORD = PASSWORD('foo.baz')  WHERE User = 'admin';
+Easy way
+	CREATE DATABASE symphony;
+	GRANT ALL ON symphony.* TO symfony@'localhost' IDENTIFIED BY 'cwmm3ZwiGGF6jWRCf4SV';
+	
+	mysql -u root -p -e "CREATE DATABASE autoestima; \
+GRANT ALL ON autoestima.* TO autoestima@'localhost' IDENTIFIED BY 'Uu7z6b4iQPTKpcxP'; \
+FLUSH PRIVILEGES;"
+
+Crear Bases de datos
+	CREATE DATABASE hiecys;
+	DROP DATABASE hiecys;
+
+Crear usuario admin global
+	CREATE USER 'admin'@'%' IDENTIFIED BY 'f00.bar';
+	GRANT ALL ON *.* TO 'admin'@'%' with grant option;
+	FLUSH PRIVILEGES;
+Mostrar los grants
+	show grants for symfony@localhost
+Eliminar usuario
+http://lists.mysql.com/mysql/218882
+
+delete from columns_priv where user='carlos';
+delete from db where user='carlos';
+delete from procs_priv where user='carlos';
+delete from tables_priv where user='carlos';
+delete from user where user='carlos';
+
+then a nice FLUSH PRIVILEGES;
+
+Or revoke privileges first
+http://major.io/2008/06/11/mysql-cant-drop-one-or-more-of-the-requested-users/
+	SHOW GRANTS FOR 'carlos'@'localhost';
+	REVOKE GRANT OPTION ON *.* FROM 'carlos'@'localhost';
+	REVOKE ALL PRIVILEGES, GRANT OPTION ON *.* FROM 'carlos'@'localhost';

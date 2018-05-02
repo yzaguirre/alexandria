@@ -1,0 +1,2 @@
+https://streamlink.github.io/install.html
+	sudo -H pip3 install streamlink

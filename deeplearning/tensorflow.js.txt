@@ -1,0 +1,7 @@
+https://js.tensorflow.org/
+Data never leaves the client
+
+https://github.com/llSourcell/tensorflow.js_explained
+https://github.com/tensorflow/tfjs-examples
+https://www.youtube.com/watch?v=Y_XM3Bu-4yc
+https://www.youtube.com/watch?v=YB-kfeNIPCE

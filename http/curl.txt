@@ -1,0 +1,79 @@
+Alternatives
+bat, httpie
+
+Socks Proxy
+http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXY
+	ALL_PROXY=socks5://bob:marley@localhost:12345 curl options
+https://stackoverflow.com/questions/14944067/curl-request-using-socks5-proxy-fails-when-using-php-but-works-through-the-comma
+	curl --socks5-hostname localhost:2001
+	
+
+
+http://orchestrate.io/
+curl https://api.orchestrate.io/v0/users/bigfoot \
+	-X PUT \
+	-H 'Content-Type:application/json' \
+	-u '12345678-1234-1234-1234-123456789012:' \
+	-d '{"name":"Bigfoot", "age":145, "relationship":"single", "interests":"hiding"}'
+
+hanging between GET, POST, and other HTTP verbs
+using Curl is done with the -X switch, so a POST request can be specifically made by
+using the following:
+	curl -X POST http://requestb.in/example
+To get more information from Curl than just the body response, there are a couple of
+useful switches. Try the -v switch since this will show everything: request headers, re‐
+sponse headers, and response body in full! It splits the response up, though, sending the
+header information to STDERR and the body to STDOUT.
+
+To silence the progress bar, use the -s switch (but
+beware that it also silences Curl’s errors). It can be helpful to use -s in combination with
+-v to create output that you can send to a pager such as less in order to examine it in
+detail, using a command like this:
+	curl -s -v http://requestb.in/example 2>&1 | less
+The extra 2>&1 is there to send the STDERR output to STDOUT so that you’ll see both
+headers and body; by default, only STDOUT would be visible to less.
+
+The simplest way is to send data along with
+a request in key/value pairs—exactly as when a form is submitted on the Web—which
+uses the -d switch. The switch is used as many times as there are fields to include:
+	curl -X POST http://requestb.in/example -d name="Lorna" -d email="lorna@example.com" -d message="this HTTP stuff is rather excellent"
+
+APIs accept their data in different formats; sometimes the data cannot be POSTed as a
+form, but must be created in JSON or XML format, for example. In such instances, the
+entire body of a request can be assembled in a file and passed to Curl. Inspect the
+previous request, and you will see that the body of it is sent as:
+	name=Lorna&email=lorna@example.com&message=this HTTP stuff is excellent
+Instead of sending the data as key/value pairs on the command line, it can be placed
+into a file called data.txt (for example). This file can then be supplied each time the
+request is made. This technique is especially useful for avoiding very long command
+lines when working with lots of fields, and when sending non-form data, such as JSON
+or XML. To use the contents of a file as the body of a request, we give the filename
+prepended with an @ symbol as a single -d switch to Curl:
+	curl -X POST http://requestb.in/example -d @data.txt
+
+Working with the extended features of HTTP requires the ability to work with various
+headers. Curl allows sending of any desired header (this is why, from a security stand‐
+point, the header can never be trusted!) by using the -H switch, followed by the full
+header to send. The command to set the Accept header to ask for an HTML response
+becomes:
+	curl -H "Accept: text/html" http://requestb.in/example
+
+COOKIES
+In Curl we need to do this manually by
+asking Curl to store the cookies in a response and then use them on the next request.
+The file that stores the cookies is called the "cookie jar"; clearly, even HTTP geeks have
+a sense of humor.
+To receive and store cookies from one request:
+	curl -c cookiejar.txt http://requestb.in/example
+At this point, cookiejar.txt can be amended in any way you see fit (again, never trust
+information that came from outside the application!), and then sent to the server with
+the next request you make. To do this, use the -b switch and specify the file to find the
+cookies in:
+	curl -b cookiejar.txt http://requestb.in/example
+To capture cookies and resend them with each request, use both -b and -c switches,
+referring to the same cookiejar file. This way, all incoming cookies are captured and sent
+to a file, and then sent back to the server on any subsequent request, behaving just as
+they do in a browser.
+
+HTTPS
+CURL_CA_BUNDLE

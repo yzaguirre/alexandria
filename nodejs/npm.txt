@@ -40,3 +40,9 @@ https://stackoverflow.com/questions/17967546/common-gypi-not-found-error-in-node
 	cd myAwesomeProject
 	npm install
 	npm rebuild
+
+Cleanup
+	rm -rf node_modules
+	rm package-lock.json
+	npm cache clear --force
+	npm install

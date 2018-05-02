@@ -1,0 +1,3 @@
+https://www.cyberciti.biz/faq/how-to-set-locales-i18n-on-a-linux-unix/
+	LANG="en_US.utf8"
+	export LANG

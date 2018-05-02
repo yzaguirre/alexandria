@@ -1,0 +1,15 @@
+https://netplan.io/
+https://netplan.io/reference
+Netplan is a simplified interface for configuring Linux networking,
+where YAML files in /etc/netplan are used to generate configuration
+information for either NetworkManager or systemd-networkd.
+	man systemd-networkd.service
+	man systemd.network
+
+Print a summary of your network devices
+	networkctl
+Print the state of each IP address on the system
+	networkctl status
+	
+The ip link set command is a replacement for ifup and ifdown.
+https://www.digitalocean.com/community/tutorials/how-to-use-iproute2-tools-to-manage-network-configuration-on-a-linux-vps#how-to-configure-network-interfaces-and-addresses

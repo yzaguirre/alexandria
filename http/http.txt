@@ -1,0 +1,14 @@
+http://codes.io/
+	curl -I http://codes.io/407
+http://httpbin.org/
+https://news.ycombinator.com/item?id=10976194
+
+https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+The moral of the story is,
+if you have binary
+Otherwise, use application/x-www-form-urlencoded.
+
+libhttp
+https://news.ycombinator.com/item?id=15666311
+
+https://matias.insaurral.de/post/http-load-testing-tools/

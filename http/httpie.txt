@@ -1,0 +1,21 @@
+httpie.org
+http://radek.io/2015/10/20/httpie/
+https://news.ycombinator.com/item?id=10418882
+https://github.com/jakubroztocil/httpie
+	pip install httpie
+Usage
+	http [OPTS] [METHOD] URL [REQUEST_ITEMS...]
+Custom HTTP method, HTTP headers and JSON data:
+	http PUT example.org X-API-Token:123 name=John
+Submitting forms:
+	http -f POST example.org hello=World
+See the request that is being sent using one of the output options:
+	http -v example.org
+Use Github API to post a comment on an issue with authentication:
+	http -a USERNAME POST https://api.github.com/repos/jakubroztocil/httpie/issues/83/comments body='HTTPie is awesome!'
+Upload a file using redirected input:
+	http example.org < file.json
+Download a file and save it via redirected output:
+	http example.org/file > file
+Download a file wget style:
+	http --download example.org/file

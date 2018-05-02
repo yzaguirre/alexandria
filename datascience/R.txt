@@ -1,4 +1,5 @@
 http://www.r-project.org/
+see datascience/rstudio.txt
 https://www.digitalocean.com/community/tutorials/how-to-set-up-r-on-ubuntu-14-04
 http://cyclismo.org/tutorial/R/index.html
 https://www.datacamp.com/community/tutorials/15-questions-about-r-plots
@@ -9,14 +10,6 @@ Instalar librerias
 	install.packages("plyr")
 	install.packages("psych")
 	install.packages(c("ggplot2", "ggmap"))
-
-RStudio Desktop
-https://blog.rstudio.org/2016/11/01/announcing-rstudio-v1-0/
-https://www.rstudio.com/products/rstudio/download/
-	wget https://download1.rstudio.org/rstudio-1.0.136-amd64.deb
-	md5sum rstudio-1.0.136-amd64.deb
-2a73b88a12a9fbaf96251cecf8b41340
-	dpkg -i rstudio-1.0.136-amd64.deb
 
 Server package
 	apt install r-base gdebi-core

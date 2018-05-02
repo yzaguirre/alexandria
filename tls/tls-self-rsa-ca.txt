@@ -86,35 +86,81 @@ Add to [req] section
 subjectAltName = DNS:www.example.com,DNS:example.com
 
 Create a CSR
-	openssl req -config ca/intermediate/openssl.cnf \
+	openssl req -config /root/intermediate/openssl.cnf \
       -key private/www.example.com.key.pem \
       -new -sha256 -out requests/www.example.com.csr.pem
 Better way (replace appropriate values)
 	openssl req -key private/www.example.com.key.pem \
       -subj "/C=US/ST=California/L=Mountain View/O=Alice Ltd/OU=Alice Ltd Web Services/CN=www.example.com" \
-      -reqexts SAN -config <(cat ca/intermediate/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.example.com,DNS:example.com")) \
+      -reqexts SAN -config <(cat /root/intermediate/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:www.example.com,DNS:example.com")) \
       -new -sha256 -out requests/www.example.com.csr.pem
     
 Sign the csr with Intermediate CA
 If the certificate is going to be used on a server, use the server_cert extension.
 If the certificate is going to be used for user authentication, use the usr_cert extension.
-	openssl ca -config ca/intermediate/openssl.cnf \
+	openssl ca -config intermediate/openssl.cnf \
       -extensions server_cert -days 375 -notext -md sha256 \
       -in requests/www.example.com.csr.pem \
-      -out ca/intermediate/certs/www.example.com.cert.pem
-	chmod 444 ca/intermediate/certs/www.example.com.cert.pem
-	cp ca/intermediate/certs/www.example.com.cert.pem certs
+      -out /root/intermediate/certs/www.example.com.cert.pem
+	chmod 444 /root/intermediate/certs/www.example.com.cert.pem
+	cp /root/intermediate/certs/www.example.com.cert.pem certs
 Verify the certificate
 	openssl x509 -noout -text \
-      -in intermediate/certs/www.example.com.cert.pem
+      -in /root/intermediate/certs/www.example.com.cert.pem
 Verify the server certificate against the certificate chain.
-	openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
+	openssl verify -CAfile /root/intermediate/certs/ca-chain.cert.pem \
       certs/www.example.com.cert.pem
 Create a dh file
-	cd certs
-	openssl dhparam -out dhparam.pem 2048
+	openssl dhparam -out certs/dhparam.pem 2048
 Make a chain file
-	cat www.example.cert.pem \
-      intermediate.cert.pem \
+	cat certs/www.example.cert.pem \
+      /root/intermediate/certs/intermediate.cert.pem \
       dhparam.pem \
-      > www.example.com_chained.cert.pem
+      > certs/www.example.com_chained.cert.pem
+
+Online Certificate Status Protocol
+When a CA signs a certificate, they will typically include an OCSP
+server address (eg, http://ocsp.example.com) in the certificate.
+
+Add authorityInfoAccess to the intermediate config file
+[ server_cert ]
+# ... snipped ...
+authorityInfoAccess = OCSP;URI:http://ocsp.example.com
+
+Create the OCSP pair
+	cd /root
+	openssl genrsa -aes256 \
+		-out intermediate/private/ocsp.example.com.key.pem 4096
+Create a certificate signing request (CSR).
+The details should generally match those of the signing CA.
+The Common Name, however, must be a fully qualified domain name.
+	openssl req -config intermediate/openssl.cnf -new -sha256 \
+      -key intermediate/private/ocsp.example.com.key.pem \
+      -out intermediate/csr/ocsp.example.com.csr.pem
+Sign the CSR with the intermediate CA.
+	openssl ca -config intermediate/openssl.cnf \
+      -extensions ocsp -days 375 -notext -md sha256 \
+      -in intermediate/csr/ocsp.example.com.csr.pem \
+      -out intermediate/certs/ocsp.example.com.cert.pem
+Verify that the certificate has the correct X509v3 extensions.
+	openssl x509 -noout -text \
+      -in intermediate/certs/ocsp.example.com.cert.pem
+
+Revoke a certificate
+	openssl ca -config intermediate/openssl.cnf \
+      -revoke intermediate/certs/test.example.com.cert.pem
+Run the OCSP responder
+The OCSP responder reads index.txt directly.
+The response is signed with the OCSP cryptographic pair (using the -rkey and -rsigner options).
+	openssl ocsp -port 127.0.0.1:2560 -text -sha256 \
+      -index intermediate/index.txt \
+      -CA intermediate/certs/ca-chain.cert.pem \
+      -rkey intermediate/private/ocsp.example.com.key.pem \
+      -rsigner intermediate/certs/ocsp.example.com.cert.pem \
+      -nrequest 1
+Send a query to the OCSP responder, with another terminal
+The -cert option specifies the certificate to query.
+	openssl ocsp -CAfile intermediate/certs/ca-chain.cert.pem \
+      -url http://127.0.0.1:2560 -resp_text \
+      -issuer intermediate/certs/intermediate.cert.pem \
+      -cert intermediate/certs/test.example.com.cert.pem

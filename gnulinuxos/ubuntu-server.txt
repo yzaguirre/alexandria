@@ -64,15 +64,21 @@ if it doesn't exist, add it to the file above
 http://askubuntu.com/questions/7874/server-does-not-recognize-second-virtualbox-adapter
 
 By adding an interface configuration as shown above, you can manually enable the interface through the ifup command which initiates the DHCP process via dhclient.
-	# ifup eth0
+	ifup eth0
 To manually disable the	interface, you can use the ifdown command, which in turn will initiate the DHCP release process and shut down the interface.
-	# ifdown eth0
+	ifdown eth0
 
 If eth0 is missing, do
 https://forums.virtualbox.org/viewtopic.php?f=7&t=43090
 each time you give a new MAC address (in VBox guest settings) Debian and Ubuntu guests udev assigns a new eth number
 edit /etc/udev/rules.d/70-persistent-net.rules or delete the file: it will be recreated @ next boot
 
+Configure DNS
+https://www.digitalocean.com/community/tutorials/what-s-new-in-ubuntu-18-04
+The default DNS resolver is now systemd-resolved
+The standard /etc/resolve.conf file is now managed by systemd-resolved,
+and configuration of the resolver should be done in
+/etc/systemd/resolved.conf.
 
 http://askubuntu.com/questions/155424/changing-keyboard-layout-in-ubuntu-12-04-server-command-line-interface
 	# dpkg-reconfigure keyboard-configuration
