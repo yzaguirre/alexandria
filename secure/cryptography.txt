@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/42042840/properties-of-a-cryptographic-hash-function

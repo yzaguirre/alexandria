@@ -1,0 +1,117 @@
+See
+https://www.cyberciti.biz/faq/centos-rhel-linux-kvm-virtulization-tutorial/
+redes/networks.txt
+
+Install
+	apt install qemu-kvm virt-manager
+Disable startup services
+	systemctl disable libvirtd.service libvirt-guests.service
+Start/Stop them on demand
+	systemctl stop libvirtd.service libvirt-guests.service
+	systemctl start libvirtd.service libvirt-guests.service
+http://ubuntuforums.org/showthread.php?t=1389692
+just ad a symbolic link to the desired target to /var/lib/libvirt/images
+
+# Disable virbr0 nat interface
+https://www.cyberciti.biz/faq/linux-kvm-disable-virbr0-nat-interface/
+1. List network interfaces
+	ifconfig
+	virsh net-list
+2. Run the following
+	virsh net-destroy default
+	virsh net-undefine default
+	systemctl restart libvirtd.service libvirt-guests.service
+	ifconfig
+
+# List domains
+	virsh list
+
+## Start/Stop a domain
+
+	virst start openbsd
+	virst shutdown openbsd
+
+## Forceful shutdown
+For unresponsive domains. Backup your VM everyday or at least backup important files including database.
+
+	virst destroy openbsd
+
+# Rename a domain
+## Method 1
+1. Shutdown the domain
+	virst shutdown freebsd
+2. Rename it
+	virsh domrename freebsd dns1
+## Method 2
+1. Shutdown the domain
+	virst shutdown freebsd
+2. Dump the config file
+	virsh dumpxml freebsd > freebsd.xml
+3. Delete the VM Gust
+	virsh undefine --domain freebsd
+4. Modify the config file with the correct name, import the config file
+	virst define freebsd.xml
+
+# Autostart a VM guest
+Create a symlink in directory /etc/libvirt/qemu/autostart of the config file
+	virsh autostart domain1
+	virsh autostart domain1 --disable
+
+# Delete a VM guest
+1. Get a guests storage files directory
+	virsh dumpxml --domain openbsd | grep 'source file'
+2. Shut it down
+	virsh shutdown --domain openbsd
+3. To delete a VM Guest with virsh run. Then remove the storage files
+	virsh undefine --domain openbsd --delete-snapshots --remove-all-storage 
+	rm -rf /nfswheel/kvm/openbsd.qcow2
+
+If the VM guest has snapshots, delete every single one
+
+# Using the console
+## Login to console
+
+	virsh console freebsd
+
+## Exit a console
+Exit the console in the guest login prompt.
+type CTRL+Shift followed by ].
+CTRL+Shift+5
+CTRL+Shift+]
+
+# All about snapshots
+https://www.cyberciti.biz/faq/how-to-create-create-snapshot-in-linux-kvm-vmdomain/
+The snapshot must base on qcow2 type disk.
+Make sure the instance is shutdown.
+
+## Check disk type
+The output should include 'qcow2'.
+	virsh dumpxml freebsd | grep -i qemu
+
+## Create a snapshot
+
+	virsh snapshot-create-as --domain {VM-NAME} --name "{SNAPSHOT-NAME}" --descripcion "More background information"
+
+Where:
+--domain {VM-NAME}: Domain name/VM name/id/uuid
+--name "{SNAPSHOT-NAME}": Name of snapshot
+--description "More background information": Provides context of the domain's state
+
+## List snapshots
+List running VMS/guests/domain from host os:
+
+	virsh list
+To see existing snapshots
+
+	virsh snapshot-list --domain openbsd
+
+## List snapshot information
+
+	virsh snapshot-info --domain freebsd --snapshotname 5Sep2016_S1
+
+## Revert to a snapshot
+	virsh shutdown --domain freebsd
+	virsh snapshot-revert --domain freebsd --snapshotname 5Sep2016_S1 --running
+
+## Delete a snapshot
+	virsh snapshot-delete --domain freebsd --snapshotname 5Sep2016_S2

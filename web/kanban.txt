@@ -1,0 +1,59 @@
+https://kanbanik.github.io/kanbanik/
+https://github.com/kanbanik/kanbanik
+
+https://kanboard.org/
+https://docs.kanboard.org/
+https://github.com/kanboard/kanboard/releases
+
+	cd /var/www
+	wget https://github.com/kanboard/kanboard/archive/v1.2.3.tar.gz
+	tar xf v1.2.3.tar.gz
+	mv kanboard-1.2.3 kanboard
+	chown www-data:www-data -R kanboard
+
+# Old instructions
+Make backup
+	cd /var/www
+	tar cfz kanboard.tgz kanboard
+	mv kanboard/data/ .
+	rm -rf kanboard
+Update
+	wget https://github.com/kanboard/kanboard/archive/v1.2.3.tar.gz
+	tar xf v1.2.3.tar.gz
+	mv kanboard-1.2.3 kanboard
+Restore the instance data
+	mv data/db.sqlite kanboard/data
+	chown www-data:www-data -R kanboard
+	rm -rf data
+
+Cron jobs
+https://docs.kanboard.org/en/latest/admin_guide/cronjob.html
+	crontab -u www-data -e
+0 8 * * * cd /var/www/kanboard && ./cli cronjob >/dev/null 2>&1
+
+Gogs integration
+https://github.com/kanboard/plugin-gogs-webhook
+	wget https://github.com/kanboard/plugin-gogs-webhook/releases/download/v1.0.3/GogsWebhook-1.0.3.zip
+	
+
+# Kanboard plugin for Mattermost
+https://github.com/kanboard/plugin-mattermost
+https://kanboard.net/plugin/mattermost
+Install the plugin from the Kanboard plugin manager in one click
+Configuration
+Firstly, you have to generate a new webhook url in Mattermost (Integration Settings > Incoming Webhooks).
+
+Receive project notifications to a room
+	> Go to the project settings then choose Integrations > Mattermost
+	> Copy and paste the webhook url from Mattermost or leave it blank if you want to use the global webhook url
+	> Use channel to override the webhook channel, example: off-topic
+	> Enable Mattermost in your project notifications Notifications > Mattermost
+You can also define the webhook URL globally in the Application settings > Integrations > Mattermost.
+
+Mattermost configuration
+Change the config option EnablePostUsernameOverride to true to have Kanboard as username
+Change EnablePostIconOverride to true to see Kanboard icon
+
+Troubleshooting
+	Enable the debug mode
+	All connection errors with the Mattermost API are recorded in the log files data/debug.log

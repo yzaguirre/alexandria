@@ -1,0 +1,55 @@
+http://wiki.znc.in/ZNC
+Download
+	wget https://znc.in/releases/archive/znc-1.7.0.tar.gz
+	wget https://znc.in/releases/archive/znc-1.7.0.tar.gz.sig
+Verify (0x0209989E)
+	gpg2 --verify znc-1.7.0.tar.gz.sig
+Compile
+	tar xf znc-1.7.0.tar.gz
+	cd znc-1.7.0
+	./configure
+	make
+	make install
+Ubuntu hack
+	ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /lib/libssl.so.1.0.2
+	ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /lib/libcrypto.so.1.0.2
+http://grahamgilbert.com/blog/2013/10/13/znc-an-irc-bouncer/
+
+http://www.codeography.com/2012/09/23/howto-irc-server.html
+http://www.nerdydork.com/setting-up-a-znc-irc-bouncer.html
+
+	apt install znc
+	znc --makeconf
+Follow the guides to setup the server. I mostly choose the defaults, and enabled all the modules
+
+Now you can run ZNC as that user and verify it works, and make tweaks to the config.
+	vim .znc/configs/znc.conf
+or with the webadmin module by pointing a browser to
+	https://yourhostname:6664
+
+Recent
+https://www.digitalocean.com/community/tutorials/how-to-install-znc-an-irc-bouncer-on-an-ubuntu-vps
+How To Install ZNC, an IRC bouncer, on an Ubuntu VPS
+Basic Usage
+Your ZNC web interface should be available at: http://<droplet_ip>:<specified_port>
+or if you used SSL https://<droplet_ip>:<specified_port>,
+you can sign in with your user and password to configure ZNC further.
+More help on configuring ZNC further can be found over here.
+
+You can connect to your ZNC account via an IRC client of your choice
+by trying
+	/server <droplet_ip> <specified_port> <user>:<pass>
+	/server <znc_server_ip> +5000 znc-admin:<pass>
+	/server <znc_server_ip> +5000 david:<pass>
+within your client, however this command is client dependent.
+
+It's a good idea to use username/network:password as the password in your client,
+so that (even for broken clients) ZNC can figure out which user you are connecting as.
+
+SSL
+http://wiki.znc.in/Signed_SSL_certificate
+	cat /etc/letsencrypt/live/example.org/{privkey,cert,chain}.pem > znc.pem
+	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem > znc.pem
+You should also generate the Diffie-Hellman key exchange parameters, also appended to znc.pem:
+	openssl dhparam -out dhparam.pem 2048
+	cat dhparam.pem >> znc.pem

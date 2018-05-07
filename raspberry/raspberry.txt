@@ -1,0 +1,99 @@
+No nfs support
+http://www.raspberrypi.org/forums/viewtopic.php?f=36&t=14500
+
+missing ifstate
+https://unix.stackexchange.com/questions/50602/cant-ifdown-eth0-main-interface
+/run/network/ifstate
+
+repair
+	fsck.ext4 -b 98304 /dev/dm-0
+
+poweroff
+http://www.3cc.org/blog/2013/01/raspberry-pi-shutdown-switch-safely-turning-off-the-pi/
+
+free memory
+http://www.thefruitycomputer.com/forums/tutorials/article/13-how-to-free-up-ram-on-your-pi-debian/
+	sync; echo 3 > /proc/sys/vm/drop_caches
+750mA @ 5 Volts
+600mA upto 1.2A @ 5 Volts B+
+
+http://pihw.wordpress.com/guides/direct-network-connection/
+
+http://mundomkiki.es/servidor-owncloud-con-raspberry-pi-y-raspbian-proyecto-completo/
+http://mundomkiki.es/montaje-automatico-de-disco-duro-externo-usb-ntfs-linux-debian-o-ubuntu/
+http://mundomkiki.es/servidor-de-descargas-torrent-en-raspberry/
+http://mundomkiki.es/servidor-web-con-raspberry-pi-y-raspbian-proyecto-completo/
+
+Network config
+http://mundomkiki.es/servidor-web-con-raspberry-pi-y-raspbian-proyecto-completo/
+
+	sudo apt install tar less wget curl slurm nmap pv tmux tinc mosh transmission-daemon vim openssh-server python python-pip avahi-daemon bash coreutils
+	sudo apt install irssi gpgv ntp sox transmission-remote-cli tty-clock locales libnotify-bin ncdu git
+	sudo pip install youtube_dl transmissionrpc deluge-client
+
+SHA-1:  3a34e7b05e1e6e9042294b29065144748625bea8
+SD SDHC
+Default login: pi / raspberry
+http://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-05-31/2016-05-27-raspbian-jessie-lite.zip.torrent
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2016-05-31/2016-05-27-raspbian-jessie-lite.zip.sha1
+Unmount the SD card and copy the OS image
+	dd bs=4M if=2014-12-24-wheezy-raspbian.img of=/dev/sdd; sync
+
+Recover /dev/sdb1
+Unmount sdbx
+	e2fsck /dev/sdb1
+	e2fsck -b 32768 /dev/sdb
+
+IMG data
+Startsector 8192
+Multiply 8192 times 512 byes
+8192*512 = 4194304
+	mount -o ro,loop,offset=4194304 2017-04-10-raspbian-jessie-lite.img /mnt/first
+	sudo dd if=/dev/loop4 of=/dev/sdb1 bs=512	
+
+After installing PHP, update krb5
+	sudo apt-get install libk5crypto3
+raspivid
+https://gist.github.com/qawemlilo/6605368
+
+Raspberry Pi $35
+SD card $10
+Display $100
+Power $5
+Keyboard $20
+Mouse $10
+Total $180+
+
+Radio
+http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter
+	wget http://omattos.com/pifm.tar.gz
+	tar xf pifm.tar.gz
+or
+	curl http://omattos.com/pifm.tar.gz | tar xfz -
+Now connect a 20cm or so plain wire to GPIO 4
+sudo python
+>>> import PiFm
+>>> PiFm.play_sound("sound.wav")
+	sudo ./pifm sound.wav
+The sound file must be 16 bit mono wav format.
+
+New! Now with stereo
+	sudo ./pifm left_right.wav 103.3 22050 stereo
+Play an MP3
+	ffmpeg -i input.mp3 -f s16le -ar 22.05k -ac 1 - | sudo ./pifm -
+
+Broadcast from a usb microphone
+	arecord -d0 -c2 -f S16_LE -r 22050 -twav -D copy | sudo ./pifm -
+
+It will work from about 1Mhz up to 250Mhz, although the useful FM band is 88 Mhz to 108 Mhz in most countries. 
+Pirate radio config file
+	vim pirateradio.config
+[pirateradio]
+frequency = 88.9
+shuffle = True
+repeat_all = True
+stereo_playback = True
+
+Golang
+https://news.ycombinator.com/item?id=10573166

@@ -1,0 +1,50 @@
+OSI
+http://null-byte.wonderhowto.com/how-to/spy-your-buddys-network-traffic-intro-wireshark-and-osi-model-0133807/
+
+https://www.wireshark.org/	
+	# apt-get install wireshark tshark
+	
+http://securityblog.gr/1195/run-wireshark-as-a-user-rather-than-root-ubuntu/
+	# chgrp adm /usr/bin/dumpcap
+	# chmod 750 /usr/bin/dumpcap
+	# setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
+
+Add yourself to wireshark group
+	sudo groupadd wireshark
+	sudo usermod -aG wireshark david
+After adding yourself to the group, your normal user may have to log out and back in.
+Or, you can run newgrp to force the effect of the new group
+(you'll have to launch Wireshark from this same terminal environment in step 3):
+	newgrp wireshark
+
+Sniffing phones
+https://stackoverflow.com/questions/9555403/capturing-mobile-phone-traffic-on-wireshark
+	
+For example, to capture TCP packets when the source port is 443, we will write the
+following rule:
+tcp src port 443
+
+	netstat atunp
+	netstat -r
+http://entextoplano.wordpress.com/2012/02/18/wireshark-en-debian/
+Para m
+
+Save http content from gzip to plain text
+https://ask.wireshark.org/questions/6598/how-to-decompress-gzipped-contents
+
+Tshark capture
+http://www.codealias.info/technotes/the_tshark_capture_and_filter_example_page
+	tshark -i eth0 -w capture.cap
+	tshark -f "HTTP" -i eth0 -w capture.cap
+
+Capture firefox TLS traffic 
+https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/
+https://news.ycombinator.com/item?id=9040876
+Mount memory partition
+	mkdir /mnt/memo
+	mount -t tmpfs -o size=10M tmpfs /mnt/memo
+	export SSLKEYLOGFILE=/mnt/memo/sslkeylogs.log
+	firefox-dev &
+	wireshark &
+In wireshark do
+edit -> Preferences -> Protocols -> SSL

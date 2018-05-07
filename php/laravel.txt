@@ -132,3 +132,8 @@ https://lumen.laravel.com/docs/5.4
 Front end presets
 	php artisan preset none
 	php artisan preset bootstrap
+
+https://laravel.com/docs/5.6/authentication#introduction
+See Path Customization, Username Customization and Retrieving The Authenticated User
+	php artisan make:auth
+	php artisan migrate:refresh
