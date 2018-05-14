@@ -1,5 +1,5 @@
 see php/php-qrcode.txt js/js-qrcode.txt
-apt-get install qrencode
+	apt install qrencode
 
 from stdin to stdout
 	qrencode -l L -v 1 -o -

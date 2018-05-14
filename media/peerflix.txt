@@ -1,0 +1,3 @@
+https://github.com/mafintosh/peerflix
+	npm install -g peerflix
+	peerflix "http://some-torrent/music.torrent" -a --vlc

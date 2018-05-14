@@ -1,0 +1,32 @@
+https://larsjung.de/jquery-qrcode/
+var canvas = $('#canvas');
+var txt_msg = $('#txt_msg');
+canvas.qrcode({
+	"width": 100,
+	"height": 100,
+	"color": "#3a3",
+	"text": txt_msg.val()
+});
+
+https://larsjung.de/kjua/
+var el = kjau({
+  "render": "image",
+  "crisp": true,
+  "ecLevel": "H",
+  "minVersion": 1,
+  "fill": "#000000",
+  "back": "#ffffff",
+  "text": "T1PF-18",
+  "size": 400,
+  "rounded": 100,
+  "quiet": 1,
+  "mode": "label",
+  "mSize": 12,
+  "mPosX": 50,
+  "mPosY": 50,
+  "label": "T1PF-18",
+  "fontname": "Ubuntu",
+  "fontcolor": "#ff9818",
+  "image": {}
+});
+document.querySelector('body').appendChild(el);

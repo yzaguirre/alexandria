@@ -1,3 +1,6 @@
+Why not use gmail
+https://news.ycombinator.com/item?id=17022695
+
 Accep-Language
 https://diasp.eu/posts/6361539
 
@@ -66,4 +69,3 @@ you have already viewed to the mailbox, type q to exit.
 You can open any file that is in MBOX format when you use mail. For example, if you
 are logged in as one user, but want to open the mailbox for the user chris, type this:
 	$ sudo mail -f /var/mail/chris
-	

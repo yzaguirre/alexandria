@@ -34,3 +34,7 @@ deb-src http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.0/ubuntu trusty mai
 Once the key is imported and the repository added you can install MariaDB with:
 	apt update
 	apt install mariadb-server
+Docs
+https://mariadb.com/kb/en/library/basic-sql-statements/
+https://mariadb.com/kb/en/library/basic-sql-statements/
+https://mariadb.com/kb/en/library/useful-mariadb-queries/

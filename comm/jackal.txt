@@ -1,0 +1,14 @@
+https://github.com/ortuman/jackal
+https://github.com/ortuman/jackal/releases/tag/0.2.0
+https://news.ycombinator.com/item?id=17019783
+	go get github.com/ortuman/jackal
+	mysql -u root -p
+	CREATE DATABASE jackal;
+	GRANT ALL ON jackal.* TO jackal@'localhost' IDENTIFIED BY 'jackal';
+	FLUSH PRIVILEGES;
+Download the db schema
+	wget https://raw.githubusercontent.com/ortuman/jackal/master/sql/mysql.sql
+	mysql -h localhost -D jackal -u jackal -p < mysql.sql
+	jackal
+Server config at /etc/jackal/jackal.yml or use custom file
+	jackal --config=$GOPATH/src/github.com/ortuman/jackal/example.jackal.yml

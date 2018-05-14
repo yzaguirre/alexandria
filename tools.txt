@@ -1,3 +1,15 @@
+https://www.reddit.com/r/sysadmin/comments/8huyxb/your_top_5_tools_for_sysadmin_productivity/
+https://www.reddit.com/r/commandline/
+https://news.ycombinator.com/item?id=17011227
+https://github.com/junegunn/fzf
+https://github.com/jamestomasino/dotfiles/blob/master/bash/.functions/c
+https://github.com/sharkdp/bat
+Console services
+	curl ifcfg.co
+	curl wttr.in
+	curl qrenco.de/hello
+	curl rate.sx/eth
+
 https://emojipedia.org
 
 Services

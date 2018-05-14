@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=zPkrcTidwQI
+https://www.youtube.com/watch?v=O04bBQGIfm0
+
+apt install apparmor-profiles
+apt install apparmor-utils
+	sudo apparmor_status
+
+Enable apparmor:
+If using grup
+	sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT="/&security=apparmor /' /etc/default/grub
+	update-grub
+	reboot
+
+Create a profile
+	aa-genprof
+apache2
+
+Start complaint mode
+	aa-complain apache2
+Complaints are stored in /var/log/syslog
+	tail -f /var/log/syslog
+For DENIED status
+
+Stop complaint mode 
+	aa-enforce apache2
+To modify a rule by hand
+	cd /etc/apparmor.d
+	vim usr.lib.apache2.mpm-prefork.apache2
+Add any directory to the file. It accepts wildcards

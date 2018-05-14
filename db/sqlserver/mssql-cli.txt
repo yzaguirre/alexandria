@@ -1,0 +1,4 @@
+https://cloudblogs.microsoft.com/sqlserver/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/
+https://github.com/dbcli/mssql-cli
+https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md
+	pip install mssql-cli

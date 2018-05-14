@@ -1,0 +1,8 @@
+https://github.com/muquit/mailsend
+	mailsend -to user@gmail.com -from user@gmail.com \
+		-starttls -port 587 -auth \
+		-smtp smtp.gmail.com \
+		-sub test +cc +bc -v \
+		-user you -pass "your_password"
+Note: Password can be set by env var SMTP_USER_PASS instead of -pass
+See comm/email/mua/mailsend.sh

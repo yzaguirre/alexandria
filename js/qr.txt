@@ -1,0 +1,30 @@
+UI examples
+www.online-qrcode-generator.com
+http://www.qr-code-generator.com/
+https://zxing.appspot.com/generator/
+
+JavaScript component to encode strings into QR codes. Works in both Node.js and the browser.
+MIT
+https://github.com/cryptocoinjs/qr-encode
+http://cryptocoinjs.com/modules/misc/qr-encode/
+
+https://davidshimjs.github.io/qrcodejs/
+https://github.com/davidshimjs/qrcodejs
+MIT
+Cross-browser QRCode generator for javascript
+
+https://github.com/lrsjng/jquery-qrcode
+jQuery plugin to dynamically generate QR codes. Uses QR Code Generator (MIT).
+https://github.com/kazuhikoarase/qrcode-generator
+QR Code Generator implementation in ActionScript3, Java, JavaScript and more.
+
+https://github.com/jeromeetienne/jquery-qrcode
+qrcode generation standalone (doesn't depend on external services)
+
+https://github.com/educastellano/qr-code
+Web Component for generating QR codes
+
+
+Decoder
+https://github.com/LazarSoft/jsqrcode
+

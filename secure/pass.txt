@@ -1,0 +1,22 @@
+https://www.passwordstore.org/
+All passwords live in ~/.password-store
+	apt install pass
+	echo "source /etc/bash_completion.d/password-store" >> ~/.profile
+
+Setup
+	pass init "ZX2C4 Password Storage Key"
+We can additionally initialize the password store as a git repository:
+	pass git init
+	pass git remote add origin kexec.com:pass-store
+
+install zsh completetion
+install fish completetion
+
+install ff plugin
+https://github.com/jvenant/passff#readme
+Download
+https://github.com/jvenant/passff/releases
+	wget https://github.com/jvenant/passff/releases/download/v1-pre-release-25/passff.xpi
+
+Migrate from keepassx
+	wget http://git.zx2c4.com/password-store/tree/contrib/importers/keepassx2pass.py

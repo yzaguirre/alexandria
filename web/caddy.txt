@@ -1,4 +1,12 @@
 https://github.com/mholt/caddy
+
+Telemetry
+https://caddy.community/t/caddy-0-11-will-have-telemetry-discuss/3610
+https://news.ycombinator.com/item?id=16958674
+
+Headers and fork
+https://news.ycombinator.com/item?id=15237923
+
 https://news.ycombinator.com/item?id=12120167
 https://caddyserver.com/blog/caddy-0_10_12-released
 https://caddyserver.com/blog/caddy-0_9-released

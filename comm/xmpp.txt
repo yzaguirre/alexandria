@@ -1,0 +1,21 @@
+ejabberd
+https://www.ejabberd.im/
+https://www.process-one.net/en/ejabberd/downloads
+	apt install ejabberd
+SSL certificate in /etc/ejabberd/ejabberd.pem
+Config file in /etc/ejabberd/ejabberd.yml
+	dpkg-reconfigure ejabberd
+Register users
+	ejabberdctl register admin localhost password
+	ejabberdctl register david mysite.com password
+	service ejabberd restart
+
+https://prosody.im/download/start
+http://www.lightwitch.org/blogger/maranda/2015/03/metronome-im-v37-released
+
+https://news.ycombinator.com/item?id=10483936
+https://xmpp.net/directory.php
+
+https://blog.process-one.net/ejabberd-16-06/
+
+See comm/jackal.txt

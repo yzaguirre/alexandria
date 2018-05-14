@@ -1,0 +1,9 @@
+http://csvkit.readthedocs.io/en/1.0.3/
+Convert Excel to CSV:
+	in2csv data.xls > data.csv
+Convert JSON to CSV:
+	in2csv data.json > data.csv
+Print column names:
+	csvcut -n data.csv
+View csv files
+	csvlook examples/testfixed_converted.csv

@@ -1,0 +1,21 @@
+https://thelocehiliosan.github.io/
+https://github.com/TheLocehiliosan/yadm
+	apt -t testing install yadm
+
+	vim $HOME/.yadm/encrypt
+.ssh/*.key
+
+Use Asymmetric Encryption
+	yadm config yadm.gpg-recipient <recipient-address>
+
+The yadm encrypt command will find all files matching the patterns, and prompt for a password.
+Once a password has confirmed, the matching files will be encrypted and saved as $HOME/.yadm/files.gpg.
+The patterns and files.gpg should be added to the yadm repository so they are available across multiple systems.
+
+	yadm add .yadm/encrypt
+	yadm add .yadm/files.gpg
+	
+To decrypt these files later, or on another system run
+	yadm decrypt
+and provide the correct password.
+By default, any decrypted files will have their "group" and "others" permissions removed.

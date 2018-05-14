@@ -1,0 +1,8 @@
+http://networkfilter.blogspot.com/2015/01/be-your-own-vpn-provider-with-openbsd.html
+https://news.ycombinator.com/item?id=8871705
+
+https://news.ycombinator.com/item?id=7015792
+http://www.softether.org/9-about/News/800-open-source
+
+http://unix.stackexchange.com/questions/57656/how-to-access-a-machine-behind-a-restricted-nat-gateway-i-dont-manage
+http://superuser.com/questions/121435/is-it-possible-to-host-a-web-server-from-behind-a-nat
