@@ -194,3 +194,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 # otherwise forward it to index.php
 RewriteRule . index.php
 </IfModule>
+
+Enable http2
+https://httpd.apache.org/docs/2.4/en/howto/http2.html
+https://www.digitalocean.com/community/questions/enable-http2-in-apache-on-ubuntu-16-04
+	apt install libnghttp2-14
+https://httpd.apache.org/docs/2.4/mod/mod_proxy_http2.html
+https://serverfault.com/questions/840827/should-we-use-apaches-http2#840905
+	a2enmod proxy_http2

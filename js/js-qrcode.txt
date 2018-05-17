@@ -9,6 +9,7 @@ canvas.qrcode({
 });
 
 https://larsjung.de/kjua/
+	npm install kjua -S
 var el = kjau({
   "render": "image",
   "crisp": true,

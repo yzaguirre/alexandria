@@ -1,0 +1,6 @@
+Windows hosts file
+https://www.techwalla.com/articles/how-to-edit-your-windows-hosts-file
+C:\Windows\System32\Drivers\etc\hosts
+
+Linux hosts file
+/etc/hosts

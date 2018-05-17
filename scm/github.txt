@@ -1,0 +1,77 @@
+https://help.github.com/articles/github-flavored-markdown
+https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
+Push a branch
+	git push --set-upstream origin new-branch
+Add remote
+	git remote add upstream https://github.com/original-owner-username/original-repository.git
+Sync the fork
+	git fetch upstream
+Merge changes in upstream master to local 'master' branch
+	git checkout master
+	git merge upstream/master
+Print remotes
+	git remote -v
+Inverse pull request
+https://stackoverflow.com/questions/22318145/update-github-fork-from-web-only-in-other-words-without-git#22321511
+
+https://github.com/tiimgreen/github-cheat-sheet
+Shift+?
+Clone your projects
+	git clone git@github.com:dvdyzag/JBubbles.git
+
+Get origin
+https://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from
+	git config --get remote.origin.url
+	git remote show origin
+http://dropshado.ws/post/8513715503/git-config-get-remote-origin-url
+	git config --local -l
+	
+https://stackoverflow.com/questions/11200237/how-do-i-get-github-to-default-to-ssh-and-not-https-for-new-repositories
+https://help.github.com/articles/changing-a-remote-s-url/
+	git remote set-url origin git@github.com:nikhilbhardwaj/abc.git
+	git remote set-url push git@github.com:yzaguirre/zgas.git
+
+Add .pibb to the end of any Gist URL (https://gist.github.com/tiimgreen/10545817.pibb) in order to get 
+the HTML only version suitable for embedding in any other site.
+Gists can be treated as a full repository so they can be cloned like any other:
+
+	git clone https://gist.github.com/tiimgreen/10545817
+
+Create a new repository on the command line
+	touch README.md LICENSE .gitignore
+	git init
+	git add README.md LICENSE .gitignore
+	git commit -m "first commit"
+	git remote add origin git@github.com:yzaguirre/CustomerScaffold.git
+	git push -u origin master
+
+https://education.github.com/pack/offers
+
+Publish a release based on a tag
+Create annotated tag
+https://git-scm.com/book/en/v2/Git-Basics-Tagging
+https://wiki.debian.org/Creating%20signed%20GitHub%20releases
+	git tag -a v5.9.1
+For signing the annotated tag, use -s instead of -a
+	git tag -s v5.9.1
+Tag a specific commit
+	git log --pretty=oneline
+	git tag -s v5.9.0 9fceb02
+List tags for v5
+	git tag -l v5
+	git show v5.9.1
+Push tags
+	git push origen v5.9.1
+or	git push origen --tags
+Sign the tarball with your key:
+	gpg -ab mysoftware-0.4.tar.gz
+This should give a file called mysoftware-0.4.tar.gz.asc.
+Now on /releases page
+	Clic "Publish a new release"
+	Add a version number
+	Clic "Publish release"
+
+Verifying Tags
+	git tag -v v5.9.1

@@ -140,3 +140,5 @@ Total line numbers
 
 http://vim.wikia.com/wiki/AES256_encryption_in_Vim
 https://linux-audit.com/using-encrypted-documents-with-vim/
+
+https://github.com/vim-airline/vim-airline

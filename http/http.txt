@@ -12,3 +12,5 @@ libhttp
 https://news.ycombinator.com/item?id=15666311
 
 https://matias.insaurral.de/post/http-load-testing-tools/
+
+https://howhttps.works/episodes/

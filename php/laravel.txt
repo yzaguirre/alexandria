@@ -1,5 +1,9 @@
 https://www.laravel.com/
 https://laravel.com/docs/5.5/
+Debugging with php methods
+var_dump($var)
+dd($var)
+
 Dependencies
 	apt install php7.1 php7.1-xml php7.1-mbstring php7.1-zip
 	npm install -g cross-env
@@ -34,6 +38,9 @@ Help
 	php artisan help make:migration
 
 Define routes in web file routes/web.php
+Route::get('/', 'MainController@index');
+Route::resource('posts', 'PostsController');
+
 Load views in resources/views
 
 Reference variables in routes
@@ -43,6 +50,49 @@ return view('welcome', [
 return view('welcome')->with('name', 'David');
 $name = 'David';
  return view('welcome', compact('name'));
+
+Validate a request
+https://laravel.com/docs/5.5/validation#available-validation-rules
+	$this->validate(request(), [
+		'title' => 'required',
+		'body' => 'required'
+	]);
+New since laravel 5.5
+	request()->validate([
+		'title' => 'required|min:3',
+		'body' => [
+			'required',
+			'max:100'
+		]
+	]);
+Returns validated data, and nothing outside the validation schema
+	$validatedData = request()->validate([
+		'title' => 'required',
+		'body' => 'required'
+	]);
+When validation fails, function flow stops there
+Test
+	dd($validatedData);
+	dd(request()->all());
+	\App\Client::forceCreate($validatedData);
+Create custom rules
+	php artisan make:rule MustBeFiveCharacters
+	php artisan make:rule SpamFree
+Creates app/Rules/MustBeFiveCharacters.php
+	$validatedData = request()->validate([
+		'title' => new App\Rules\MustBeFiveCharacters,
+		'body' => 'required'
+	]);
+If need to pass arguments to the rule constructor, use new App\Rules\MustBeFiveCharacters($arg0, $arg1)
+
+Print validation errors in blade view
+	@if (count($errors))
+		<ul>
+		@foreach($errors->all() as $error)
+			<li>{{ $error }}</li>
+		@endforeach
+		</ul>
+	@endif
 
 Query Database
 	$tasks = DB::table('tasks')->get();
@@ -73,6 +123,10 @@ Migrate the database
 	php artisan migrate
 To modify a schema, edit the migration file and 
 	php artisan migrate:refresh
+Rollbacks the migration and re-runs it.
+
+Drop every table and start from scratch
+	php artisan migrate:fresh
 
 To undo last migration
 	php artisan migrate:rollback
@@ -124,6 +178,59 @@ Do some tinkering
 Make a controller
 	php artisan make:controller TasksController
 It creates it in app/Http/Controllers/TasksController.php
+
+Create a factory
+	php artisan make:factory ClientFactory
+New factory is at database/factories/ClientFactory.php
+Order 10 factories
+	php artisan tinker
+	factory('App\Client', 10)->create();
+	App\Client->all();
+
+Using CSRF field. Add it to a blade view
+	{{ csrf_field() }}
+
+Email layout testing
+	php artisan make:mail Welcome --markdown=emails.welcome
+Return a class instance as a view
+	return new App\Mail\Welcome;
+Files created:
+app/Mail
+resources/views/emails
+
+Collection dump and dd method
+	$videos = App\Video::all();
+	$videos = $videos
+		->shuffle()
+		->dump()
+		->filter->archived()
+		->dump()
+		->pluck('title')
+		->dump();
+->dd() will dump and stop the execution.
+
+Custom 'If'
+	@member
+		<p>You are a subscribed user.</p>
+	@else
+		<p>You are just a guest.</p>
+	@endmember
+Open AppServiceProvider.php, at boot method write:
+	\Blade:if('member', function(){
+		// return true;
+		return auth()->check() && auth()->user()->isSubscribed();
+	});
+	\Blade:if('guest', function($param1){
+		// return true;
+		//return !auth()->check() && auth()->user()->isSubscribed();
+		return auth()->guest();
+	});
+Pass an argument
+	@guest('myargument1')
+Clear view cache
+	php artisan view:clear
+Simulate a login
+	auth()->loginUsingId(1);
 Lumen
 https://lumen.laravel.com/docs/5.4
 	composer global require "laravel/lumen-installer"
