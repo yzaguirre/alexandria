@@ -1,0 +1,22 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+https://www.cyberciti.biz/faq/how-to-install-setup-postgresql-9-6-on-debian-linux-9/
+	apt install postgresql postgresql-contrib
+
+Configuration files locations
+SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
+       name        |                 setting                  
+-------------------+------------------------------------------
+ config_file       | /etc/postgresql/9.4/main/postgresql.conf
+ data_directory    | /var/lib/postgresql/9.4/main
+ external_pid_file | /var/run/postgresql/9.4-main.pid
+ hba_file          | /etc/postgresql/9.4/main/pg_hba.conf
+ ident_file        | /etc/postgresql/9.4/main/pg_ident.conf
+
+pg_hba.conf
+hostssl - SSL connection rule.
+
+Authentication methods
+popular ones: trust, peer, ident, md5, and password .
+
+PSQL_HISTORY
+	~/.psql_history

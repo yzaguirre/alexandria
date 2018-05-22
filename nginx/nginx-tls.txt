@@ -1,3 +1,5 @@
+blog.commando.io/the-perfect-nginx-ssl-configuration/
+
 https://scotthelme.co.uk/hybrid-rsa-and-ecdsa-certificates-with-nginx/
 Check syntax
 	nginx -t
@@ -70,3 +72,10 @@ server {
 Check redes/firewall.txt settings
 Restart nginx
 Scan with Qualys SSL Labs Report https://www.ssllabs.com/ssltest/analyze.html?d=example.com
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
+	add-apt-repository ppa:certbot/certbot
+	apt update
+	apt install python-certbot-apache
+	certbot --nginx -d example.com -d www.example.com
+Cronjob installed at /etc/cron.d

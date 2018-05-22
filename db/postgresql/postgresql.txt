@@ -1,0 +1,124 @@
+Why migrate to postgresql? https://news.ycombinator.com/item?id=12489055
+https://pgexercises.com
+http://www.postgresguide.com/
+Client conexion
+	psql -h localhost -d postgres -p 5432
+	psql -U myuser -W -d mydb
+	psql -h myhost -U myuser -W -d mydb
+	-o output_file.txt
+	-f script.sql
+	< script.sql
+
+A user is a login role that is allowed to log in to the PostgreSQL server.
+http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html
+Create user
+	CREATE USER hr with PASSWORD 'hr';
+	createuser -h localhost -p 5432 -S nchabbra
+-S option specifies that the created user will not have the superuser privileges
+Change user password:
+	ALTER USER Postgres WITH PASSWORD 'mypass';
+Grant user createdb privilege:
+	ALTER USER myuser WITH createdb;
+Create a superuser user:
+	create user mysuper with password '1234' SUPERUSER
+or even better
+	create user mysuper with password '1234' SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN REPLICATION;
+
+A group in PostgreSQL serves to simplify the assignment of rights.
+Create group
+	CREATE GROUP dept;
+Assign user to group
+	ALTER GROUP dept ADD USER agovil,nchabbra;
+
+A database is a systematic and organized collection of data which can be easily accessed,
+managed, and updated.
+Create Database
+	CREATE DATABASE hrdb WITH ENCODING='UTF8' OWNER=hr CONNECTION LIMIT=25;
+	createdb -h localhost -p 5432 -U postgres testdb1
+A template database is, as the name suggests, a database that serves as a model for other
+databases.
+	CREATE DATABASE my_db TEMPLATE my_template_db;
+To make any database a template, PostgreSQL restricts the database from being edited or deleted
+	UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'mydb';
+	UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'mydb';
+Connect to database within admin login shell:
+	\c db_name;
+	\connect databasename
+	\connect mediawiki
+Drop database
+	DROP DATABASE hrdb;
+	dropdb hrdb;
+Before drop, first you must terminate active connections
+View Database Connections, Identify connections
+	SELECT * from pg_stat_activity where datname='testdb1';
+Terminate all of the active connections to the database.
+	SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'testdb1';
+
+A schema is a named collection of tables.
+http://www.postgresql.org/docs/current/static/ddl-schemas.html
+A schema may also contain views, indexes, sequences, data types,
+operators, and functions.
+Create schema
+	CREATE SCHEMA employee;
+Create a schema for a particular user
+	CREATE SCHEMA university AUTHORIZATION bob;
+Identify the schema in which you are currently working
+	SELECT current_schema();
+Search objects in schemas
+	ALTER DATABASE hrd SET search_path TO hr,hrms,public,pg_catalog;
+
+Create table
+CREATE	SEQUENCE my_schema.robots_id_seq;
+CREATE table my_schema.robots (
+  id INTEGER not null DEFAULT nextval('my_schema.robots_id_seq'),
+  type TEXT	NOT	NULL,
+  name TEXT	NOT	NULL,
+  year INTEGER NOT NULL,
+  primary key(id)
+);
+	
+CSV export
+https://stackoverflow.com/questions/1517635/save-postgres-sql-output-to-csv-file
+http://pookey.co.uk/wordpress/archives/51-outputting-from-postgres-to-csv
+
+HTML print
+psql -d postgresql_book -H -c "SELECT category, count(*) As num_per_cat FROM pg_settings WHERE category LIKE '%Query%' GROUP BY category ORDER BY category;" -o test.html
+
+Turn off line pager pagination in psql:
+\pset pager
+
+Quit psql:
+\q
+
+Increment a sequence:
+SELECT nextval('my_id_seq');
+
+Show Database Version:
+SELECT version();
+
+Change Database Owner:
+alter database database_name owner to new_owner;
+
+Copy a database:
+CREATE DATABASE newdb WITH TEMPLATE originaldb;
+http://www.commandprompt.com/ppbook/x14316
+
+View show data directory
+show data_directory;
+
+Show run-time parameters:
+show all;
+select * from pg_settings;
+
+http://www.devdaily.com/blog/post/postgresql/log-in-postgresql-database
+http://forums.devshed.com/postgresql-help-21/how-do-you-turn-off-more-scroll-lock-at-psql-174831.htm
+http://www.cyberciti.biz/faq/howto-add-postgresql-user-account/
+http://archives.postgresql.org/pgsql-general/1998-08/msg00050.php
+http://stackoverflow.com/questions/876522/creating-a-copy-of-a-database-in-postgres
+http://stackoverflow.com/questions/1137060/where-does-postgresql-store-the-database
+http://www.thegeekstuff.com/2009/04/15-practical-postgresql-database-adminstration-commands/
+
+https://news.ycombinator.com/item?id=11317899
+* A number have been shaken down by Oracle sales reps who threaten a license review and potentially stiff penalties and litigation if they find anything at all out of order - unless they purchase software they don't need.
+
+https://cwharton.com/blog/2016/10/postgresql-and-freebsd-quick-start/

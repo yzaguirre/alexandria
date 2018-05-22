@@ -1,7 +1,5 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 https://www.digitalocean.com/community/tutorials/nginx-essentials-installation-and-configuration-troubleshootingSSL
-SSL config
-blog.commando.io/the-perfect-nginx-ssl-configuration/
-
 https://nginx.org/
 Install on Debian
 	apt install nginx

@@ -1,3 +1,5 @@
+https://github.com/drwetter/testssl.sh
+
 https://www.reddit.com/r/sysadmin/comments/8huyxb/your_top_5_tools_for_sysadmin_productivity/
 https://www.reddit.com/r/commandline/
 https://news.ycombinator.com/item?id=17011227
@@ -214,6 +216,10 @@ More Hosting
 https://neocities.org/
 http://mediaon.com/About-Us.php#Payment
 https://www.nearlyfreespeech.net/
+
+https://www.netlify.com/pricing/
+https://glitch.com/
+now.sh / https://zeit.co/now
 
 Transit base encryption
 OpenSSL

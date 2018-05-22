@@ -202,3 +202,5 @@ https://www.digitalocean.com/community/questions/enable-http2-in-apache-on-ubunt
 https://httpd.apache.org/docs/2.4/mod/mod_proxy_http2.html
 https://serverfault.com/questions/840827/should-we-use-apaches-http2#840905
 	a2enmod proxy_http2
+
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-18-04

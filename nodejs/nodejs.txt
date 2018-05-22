@@ -1,0 +1,60 @@
+Install
+https://github.com/nodesource/distributions
+https://nodejs.org/en/download/package-manager/
+https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
+Ubuntu install
+	wget https://deb.nodesource.com/setup_6.x
+	sudo bash setup_6.x
+	rm setup_6.x
+	apt install nodejs=6.14.1-1nodesource1
+
+	node --inspect --debug-brk server.js
+Print Objects
+http://stackoverflow.com/questions/7428235/how-to-print-json-object-content-in-node-js
+	console.log("Session: %j", session);
+
+If the object could be converted into json, that will work.
+
+http://stackoverflow.com/questions/10729276/node-js-console-log-object-content
+You can use JSON.stringify, and get some nice indentation as well as perhaps easier to remember syntax.
+console.log(JSON.stringify(myObject, null, 4));
+Or you can
+	var util = require('util');
+	console.log(util.inspect(myObject, false, null));
+
+Static Web Server
+http://stackoverflow.com/questions/16698978/node-js-and-the-connect-module-how-do-i-get-the-message-out-of-a-request-object
+
+Environment Variables
+https://stackoverflow.com/questions/13333221/how-to-change-value-of-process-env-port-in-node-js
+For just one run (from the unix shell prompt):
+	$ PORT=1234 node app.js
+More permanently:
+	$ export PORT=1234
+	$ node app.js
+In Windows:
+	set PORT=1234
+In Windows PowerShell:
+	$env:PORT = 80
+
+https://stackoverflow.com/questions/5311334/what-is-the-purpose-of-node-js-module-exports-and-how-do-you-use-it
+exports.myFunction
+
+create JSON
+https://stackoverflow.com/questions/920930/how-to-create-json-by-javascript-for-loop#921012
+
+Random
+http://blog.tompawlak.org/how-to-generate-random-values-nodejs-javascript
+
+Comparison
+https://stackoverflow.com/questions/3586775/javascript-string-equality-whats-the-correct-way
+
+Encode URL
+https://stackoverflow.com/questions/6554039/how-do-i-url-encode-something-in-node-js
+	encodeURIComponent('select * from table where i()')
+or 
+	var querystring = require("querystring");
+	var result = querystring.stringify({query: "SELECT name FROM user WHERE uid = me()"});
+	console.log(result);
+	#prints 'query=SELECT%20name%20FROM%20user%20WHERE%20uid%20%3D%20me()'
+

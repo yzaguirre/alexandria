@@ -13,17 +13,8 @@ http://ubuntuforums.org/showthread.php?t=1594331
 	a2dismod ssl
 	a2dissite default-ssl
 
-El paso final consiste en configurar apache para que el servicio por misión HTTPS, sea owncloud.
-
-	mkdir /var/www/logs
-	chown wwwrun:www -R /srv/www/htdocs/logs
-	vim /etc/apache2/conf.d/owncloud5-ssl.conf
-	vim /etc/apache2/vhosts.d/owncloud5-ssl.conf
-
-Copia y pega la siguiente configuración:
 http://httpd.apache.org/docs/current/ssl/ssl_howto.html
 http://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
-
 https://httpd.apache.org/docs/current/ssl/ssl_howto.html
 	SSLCACertificateFile conf/ssl.crt/ca.crt
 
@@ -44,3 +35,10 @@ Elliptic curve ECC
 https://community.letsencrypt.org/t/elliptic-curve-cryptography-ecc-support/34/19
 https://serverfault.com/questions/665296/can-i-use-both-rsa-and-ecc-certificates-in-apache#704692
 https://blog.joelj.org/dual-rsaecdsa-certificates-in-apache-2-4/
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-18-04
+	add-apt-repository ppa:certbot/certbot
+	apt update
+	apt install python-certbot-apache
+	certbot --apache -d example.com -d www.example.com
+Cronjob installed at /etc/cron.d

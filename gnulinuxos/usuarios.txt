@@ -1,0 +1,119 @@
+https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04
+https://help.ubuntu.com/community/AddUsersHowto
+	sudo useradd username -m -s /bin/bash
+	sudo passwd username 
+expiration date
+http://www.linuxforums.org/forum/red-hat-fedora-linux/93498-how-reactivate-expired-account-linux-root-user.html
+	usermod -e 2015-12-31 david
+change shell
+	$ chsh -s $(which zsh)
+	$ chsh -s $(which bash)
+Create user
+https://help.ubuntu.com/lts/serverguide/user-management.html
+	# useradd -d /var/www/juan -s /bin/false juan
+	# passwd juan
+	
+	# mkdir -p /var/www/{juan,paco,luis,pedro}/doc
+	# chown -R juan /var/www/juan
+
+x	useradd -md /home/davison -s /bin/bash davison
+	adduser usuario sudo
+	
+Remove password
+	# passwd -l user
+
+To find information on any account that's tied to a user with the name Jones.
+	$ grep Jones /etc/passwd 
+
+	$ getent passwd
+This command retrieves entries from certain administrative databases,
+including the account database. In most cases, typing getent passwd produces
+results that are identical to typing cat /etc/passwd; however, sometimes the
+two aren't identical. The /etc/passwd file defines only local user accounts. It's
+possible to configure Linux to use a network account database to define some
+or all of its accounts. If you use such a configuration, typing getent passwd
+returns both local accounts and accounts defined on the network server.
+
+If you want to create files that are associated with another group to which you belong,
+you can use the newgrp command, as in:
+	$ newgrp project1
+This command makes project1 your current group, so that files you create
+will be associated with that group. 
+Other commands
+	$ who -q
+	$ id 
+	$ whoami
+	$ w
+	$ last
+Create account with
+	$ useradd
+o tambien
+	$ adduser
+Ejemplo
+	$ adduser -c "David Y. Gonzalez" -e 2014-12-31 -d /home/david -g ftp -s /bin/bash dvdyzag
+	$ useradd -c "David Y. Gonzalez" -e 2014-12-31 -d /home/david -g users -s /bin/bash david
+	$ adduser -c "David Y. Gonzalez" --home /home/david --group users --shell /bin/bash david
+
+The superuser, however, can pass a username to the command to
+change any account's password:
+	# passwd pamela
+
+Para Ubuntu 13.10
+	# adduser -c "David Yzaguirre Gonzalez" --home /home/dvdyzag2 -u 1001 -gid 100 dvdyzag2
+	# adduser -c "David Yzaguirre Gonzalez" --home /home/david -u 1000 -gid 100 david
+	# passwd david
+	# usermod --login david --home /home/david --gid 100 dvdyzag
+	Change home, name, default gid
+
+usermod - see page 249 of Sybex Linux Essentials
+
+chage
+
+Deleting Accounts	
+If you want to avoid any chance of confusion or claims of misbehavior fall-
+ing on new users because of UID or GID reuse, you can use the find command
+to locate all files with particular UID or GID values, using the -uid and -gid
+options, as in:
+	# find / -uid 1004
+The userdel command deletes accounts from a text-mode shell. In its simplest
+form, you pass it a username and nothing more:
+	# userdel pamela
+To both force account deletion and remove the user's files:
+	# userdel -rf pamela
+You can create groups from the shell using the groupadd command
+	# groupadd grinko
+Append a group
+	# usermod -aG vboxusers david
+
+To modify existing groups, you have three options:
+
+ The usermod command includes the --groups (-G) option to alter
+  group membership on a user-by-user basis. You can use this feature
+ to adjust who is a member of particular groups.
+
+ You can use the groupmod command. You can use the --gid (-g)
+  and --non-unique (-o) options from Table 14.3 with this com-
+ mand, as well as --new-name name (-n name), which changes the
+group's name. You cannot, however, change group membership with
+ groupmod.
+
+ You can directly edit the /etc/group file, which stores the group
+  definition. This option is sometimes handy if you want to add several
+ users to a new group; however, it's a bit risky, since a stray keypress
+  could damage the file.
+
+Deleting groups from the shell entails use of the groupdel command, which takes
+a group name as a single option, as in 
+	# groupdel gingko
+to delete the gingko group.
+
+Modify shell
+	usermod -s /bin/sh www-data
+Avoid login
+	usermod -s /usr/sbin/nologin www-data
+	passwd -l www-data
+
+SUDO
+https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
+http://askubuntu.com/questions/147241/ddg#147265
+username ALL=(ALL) NOPASSWD: ALL
