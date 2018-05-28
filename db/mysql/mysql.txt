@@ -52,8 +52,8 @@ For the mysql_install_db script to run properly, the MySQL server must be shut d
 http://dev.mysql.com/doc/refman/5.6/en/mysql-install-db.html
 	# scripts/mysql_install_db --user=mysql
 	# mysql_install_db --user=mysql
-	$ '/usr/bin/mysqladmin' -u root password 'f00.bar'
-	$ '/usr/bin/mysqladmin' -u root -h osuse64 password 'new-password'
+	'/usr/bin/mysqladmin' -u root password 'f00.bar'
+	'/usr/bin/mysqladmin' -u root -h osuse64 password 'new-password'
 
 Because the MySQL server, mysqld, needs to access the data directory when it runs later,
 you should either run mysql_install_db from the same system account that will be used for running mysqld
@@ -98,8 +98,8 @@ You may edit this file to change server settings
 Crunchbang / Debian / Linux
 	# service mysql start
 	# service mysql stop
-	$ mysql -u dvdyzag -p
-	$ mysql -u root -p
+	mysql -u dvdyzag -p
+	mysql -u root -p
 		exit or \q
 	\c
 
@@ -115,7 +115,7 @@ Examples
 
 Here is an example where I successfully establish
 a connection and determine that the replication user has the right privileges:
-	$ mysql -h 127.0.0.1 -P 33511 -urepl -preplrepl
+	mysql -h 127.0.0.1 -P 33511 -urepl -preplrepl
 
 	mysql> SELECT user(), current_user();
 	SHOW GRANTS\G

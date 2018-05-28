@@ -36,7 +36,7 @@ Kill it
 Update the nginx config file
 	# vim /etc/nginx/nginx.conf
 	
-location ~* \.php$ { # for requests ending with .php
+location ~* \.php{ # for requests ending with .php
 	# specify the listening address and port that you configured previously
 root /srv/www/htdocs
 fastcgi_pass 127.0.0.1:9000;
@@ -54,7 +54,7 @@ For Python (see django.txt):
 The Nginx configuration is similar to the PHP one, modify the nginx.txt file:
 	# vim 
 #location / {
-location ~* \.py$ {
+location ~* \.py{
 fastcgi_pass 127.0.0.1:9000;
 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_
 name;

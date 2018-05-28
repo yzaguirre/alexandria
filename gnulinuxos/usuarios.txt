@@ -116,4 +116,6 @@ Avoid login
 SUDO
 https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
 http://askubuntu.com/questions/147241/ddg#147265
-username ALL=(ALL) NOPASSWD: ALL
+	update-alternatives --config editor
+	visudo
+	username ALL=(ALL) NOPASSWD: ALL

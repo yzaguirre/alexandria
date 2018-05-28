@@ -48,7 +48,7 @@ set ruler laststatus=2 number title hlsearch
 syntax on
 	
 Open Vim and jump to end of file:
-	$ vim + some_file_name
+	vim + some_file_name
 http://vim.wikia.com/wiki/Using_tab_pages
 ^WT mv to new tab
 :tabs         list all tabs including their displayed windows
@@ -83,7 +83,7 @@ https://github.com/mattn/gist-vim
 w - Moves the cursor to the beginning of the next word.
 b - Moves the cursor to the beginning of the previous word.
 0 (zero) - Moves the cursor to the beginning of the current line.
-$ - Moves the cursor to the end of the current line.
+- Moves the cursor to the end of the current line.
 H - Moves the cursor to the upper-left corner of the screen (first line on the screen).
 M - Moves the cursor to the first character of the middle line on the screen.
 L - Moves the cursor to the lower-left corner of the screen (last line on the screen).
@@ -91,7 +91,7 @@ L - Moves the cursor to the lower-left corner of the screen (last line on the sc
 x - Deletes the character under the cursor.
 X - Deletes the character directly before the cursor.
 dw - Deletes from the current character to the end of the current word.
-d$ - Deletes from the current character to the end of the current line.
+d- Deletes from the current character to the end of the current line.
 d0 - Deletes from the previous character to the beginning of the current line.
 
 Change		Delete		Copy From	cursor to...

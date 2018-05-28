@@ -99,3 +99,12 @@ Para capturar una ventana
 
 Extraer los frames de un GIF y poderlos unir con ffmpeg para convertirlos en un video, codec de por medio, y asi poderlos pasar por Whatsapp 
 	convert -coalesce {entrada} jpg:{salida}+"%04d.jpg"
+
+Get height
+https://stackoverflow.com/questions/22393031/get-image-dimensions-using-batch-script-imagemagick
+	identify -ping -format "%h" dankmeme.png
+Resize image if height greater than 1000 pixels
+	if [ `identify -ping -format "%h" dankmeme.png 2> /dev/null` -gt 1000 ]
+	then
+		mogrify -resize 40% $line
+	fi

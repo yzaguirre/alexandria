@@ -13,15 +13,21 @@ Install via composer
 	composer global require "laravel/installer"
 Make env variables in ~/.profile
 PATH=$PATH:$HOME/.composer/vendor/bin
+Otherwise, update dependencies
+	composer global update
 
 Create a fresh Larvel installation
 	laravel new blog
+Make project based on laravel version 5.5.*
+https://stackoverflow.com/questions/42570359/artisan-clear-compiled-return-error-code-255#42570566
+	composer create-project --prefer-dist laravel/laravel blog "5.5.*"
 Change webroot to blog/public
 Configuration files in blog/config
 Change directory permissions
 	sudo chown www-data:www-data -R blog/
 
-
+Check laravel version
+	php artisan -V
 Open a shell
 	php artisan tinker
 App\Task::all();

@@ -1,0 +1,9 @@
+https://unix.stackexchange.com/questions/126630/creating-diagrams-in-ascii
+http://asciiflow.com/
+http://stable.ascii-flow.appspot.com/#Draw
+
+http://www.asciidraw.com/#Draw
+
+https://github.com/ironcamel/Graph-Easy
+
+http://search.cpan.org/dist/App-Asciio/lib/App/Asciio.pm

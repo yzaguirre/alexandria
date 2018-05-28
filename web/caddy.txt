@@ -1,4 +1,5 @@
 https://github.com/mholt/caddy
+Version 0.11 has telemetry.
 
 Telemetry
 https://caddy.community/t/caddy-0-11-will-have-telemetry-discuss/3610

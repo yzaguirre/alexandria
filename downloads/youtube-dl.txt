@@ -1,0 +1,53 @@
+https://rg3.github.io/youtube-dl/
+https://github.com/rg3/youtube-dl
+Config files in
+/etc/youtube-dl.conf
+~/.config/youtube-dl/config
+%APPDATA%\youtube-dl\config.txt
+C:\Users\<Yourname>\youtube-dl.conf
+	apt-get install youtube-dl rtmpdump
+	youtube-dl --max-quality mp4 http://www.youtube.com/watch?v=XJliy7abxCs
+
+Install
+	sudo curl https://yt-dl.org/downloads/2014.04.30/youtube-dl -o /usr/local/bin/youtube-dl
+	sudo chmod a+x /usr/local/bin/youtube-dl
+With pip
+	sudo -H pip install --upgrade youtube_dl
+	sudo -H pip3 install --upgrade youtube_dl
+
+List all formats
+	-F, --list-formats               list all available formats
+	youtube-dl -F http://www.youtube.com/watch?v=XJliy7abxCs
+format code extension resolution  note 
+140         m4a       audio only  DASH audio , audio@128k (worst)
+160         mp4       144p        DASH video , video only
+133         mp4       240p        DASH video , video only
+134         mp4       360p        DASH video , video only
+135         mp4       480p        DASH video , video only
+136         mp4       720p        DASH video , video only
+17          3gp       176x144     
+36          3gp       320x240     
+5           flv       400x240     
+18          mp4       640x360     
+22          mp4       1280x720    (best)
+
+for the medium type
+	youtube-dl -f 18 http://www.youtube.com/watch?v=XJliy7abxCs
+	
+For the best
+	youtube-dl -f best http://www.youtube.com/watch?v=XJliy7abxCs
+or
+	youtube-dl -f 22/18 http://www.youtube.com/watch?v=XJliy7abxCs
+Lyrics
+	youtube-dl --list-subs http://www.youtube.com/watch?v=
+	youtube-dl --write-sub --sub-format "srt" --sub-lang "es-ES" http://www.youtube.com/watch?v=
+
+Download mp3 and keep video
+	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -k http://www.youtube.com/watch?v=
+	
+
+https://github.com/JannikHv/gydl
+	cd /opt
+	git clone https://github.com/JannikHv/gydl.git
+	chmod u+x /opt/gydl/src/gydl.py
+	ln -s /opt/gydl/src/gydl.py /usr/local/bin/gydl

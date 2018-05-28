@@ -12,25 +12,25 @@ https://telegram.org/
 https://telegram.org/source
 https://github.com/vysheng/tg
 Clone GitHub Repository
-	$ git clone https://github.com/vysheng/tg.git tg-master && cd tg
+	git clone https://github.com/vysheng/tg.git tg-master && cd tg
 or download and extract zip
-	$ wget https://github.com/vysheng/tg/archive/master.zip -O tg-master.zip
-	$ unzip tg-master.zip && cd tg-master
+	wget https://github.com/vysheng/tg/archive/master.zip -O tg-master.zip
+	unzip tg-master.zip && cd tg-master
 
 Install libs: readline openssl and (if you want to use config) libconfig. On ubuntu use: 
 	# apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev
 	# zypper install readline-dev libconfig-dev libssl-dev libopenssl-devel
 Then
-	$ ./configure
-	$ make
-	$ rm *.o *.h config* Makefile* .gitignore
+	./configure
+	make
+	rm *.o *.h config* Makefile* .gitignore
 Usage
-	$ ./telegram -k <public-server-key>
+	./telegram -k <public-server-key>
 By default public key is stored in the same folder named tg.pub:
-	$ ./telegram -k tg.pub
+	./telegram -k tg.pub
 	
-	$ mv tg-master /VMs/opt
-	$ echo $'#!/bin/bash\ncd /VMs/opt/tg-master\n./telegram -k tg.pub' > /usr/local/bin/telegram && chmod u+x /usr/local/bin/telegram
+	mv tg-master /VMs/opt
+	echo $'#!/bin/bash\ncd /VMs/opt/tg-master\n./telegram -k tg.pub' > /usr/local/bin/telegram && chmod u+x /usr/local/bin/telegram
 
 Client support TAB completion and command history.
 Supported commands

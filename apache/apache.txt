@@ -41,7 +41,7 @@ Find directory
 grep -i 'DocumentRoot' /etc/apache2/sites-available/000-default.conf | sed 's/^.*DocumentRoot[ ]*//' > t.txt
 
 http://httpd.apache.org/docs/2.2/misc/password_encryptions.html
-	$ htpasswd -m /var/svn-repos/users david
+	htpasswd -m /var/svn-repos/users david
 http://httpd.apache.org/docs/2.4/upgrading.html#run-time
 
 In this example, all requests are denied.
@@ -103,7 +103,7 @@ Add the following to /etc/apache2/apache2.conf
 
 Configure Mime type
 	C:\xampp\apache\conf\mime.types
-	$ echo "application/vnd.android.package-archive apk" >> /etc/mime.types
+	echo "application/vnd.android.package-archive apk" >> /etc/mime.types
 	
 http://stackoverflow.com/questions/5046100/prevent-access-to-files-in-a-certain-folder
 http://verifiedjoseph.com/blog/htaccess-prevent-access-to-specific-files
@@ -142,9 +142,9 @@ close->ok-> confirm
 	# iptables --lis
 
 Find document root
-	$ grep -i 'DocumentRoot' httpd.conf
-	$ cd /etc/apache2/sites-available
-	$ grep -i 'DocumentRoot' default
+	grep -i 'DocumentRoot' httpd.conf
+	cd /etc/apache2/sites-available
+	grep -i 'DocumentRoot' default
 
 
 extras (no necesario)
@@ -156,7 +156,7 @@ http://php.net/mongo/
 Primero instalar Pear
 x	# apt-get install php5-dev php5-cli php-pear make
 x	# pecl install mongo
-	$ php --ini
+	php --ini
 x	# nano /etc/php5/apache2/php.ini
 Agregar la linea:
 x	extension=mongo.so

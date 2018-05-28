@@ -28,10 +28,10 @@ http://stackoverflow.com/questions/16698978/node-js-and-the-connect-module-how-d
 Environment Variables
 https://stackoverflow.com/questions/13333221/how-to-change-value-of-process-env-port-in-node-js
 For just one run (from the unix shell prompt):
-	$ PORT=1234 node app.js
+	PORT=1234 node app.js
 More permanently:
-	$ export PORT=1234
-	$ node app.js
+	export PORT=1234
+	node app.js
 In Windows:
 	set PORT=1234
 In Windows PowerShell:

@@ -21,7 +21,6 @@ Once the key is imported and the repository added you can install MariaDB with:
 	apt update
 	apt install mariadb-server
 
-
 Here are the commands to run to install MariaDB on your Ubuntu system:
 	sudo apt-get install software-properties-common
 	sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db

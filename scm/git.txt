@@ -125,9 +125,9 @@ Lists all ignored files in this project
 	git ls-files --other --ignored --exclude-standard
 	
 clone via SSH
-	$ git clone git@github.com:dvdyzag/alec.git
+	git clone git@github.com:dvdyzag/alec.git
 or
-	$ git clone github:dvdyzag/alec.git
+	git clone github:dvdyzag/alec.git
 
 clone via HTTPS
 git clone https://github.com/dvdyzag/alec.git
@@ -139,13 +139,13 @@ git config --global https.proxy $http_proxy
 
 https://help.github.com/articles/using-ssh-over-the-https-port
 Probar si tienes conexion ssh
-	$ ssh -T -p 443 git@ssh.github.com
+	ssh -T -p 443 git@ssh.github.com
 	
 Host github.com
   Hostname ssh.github.com
   Port 443
 
-	$ ssh -T git@github.com
+	ssh -T git@github.com
 
 How to rebase
 https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request

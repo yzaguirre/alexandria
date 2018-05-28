@@ -11,6 +11,8 @@ Make sure you have ~/.composer/vendor/bin/ in your path.
 If on web server
 	mkdir -p /var/www/.composer/vendor/bin/
 	chown www-data:www-data -R /var/www/.composer
+Print version
+	composer -V
 Download dependencies
 	composer install
 
