@@ -1,6 +1,7 @@
 see php/php-qrcode.txt js/js-qrcode.txt
 	apt install qrencode
-
+To stdout
+	echo hello | qrencode -o - -t UTF8
 from stdin to stdout
 	qrencode -l L -v 1 -o -
 from stdin to file

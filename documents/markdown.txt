@@ -2,7 +2,7 @@ https://help.github.com/articles/markdown-basics
 https://help.github.com/articles/github-flavored-markdown
 
 https://stackoverflow.com/questions/17630486/how-to-convert-from-markdown-to-pdf
-	apt-get install latex-beamer pandoc liblua5.1-0 texlive-math-extra
+	apt install latex-beamer pandoc liblua5.1-0 texlive-math-extra
 Conversion to pdf
 	pandoc -t beamer -o output.pdf yourInput.mkd
 https://stackoverflow.com/questions/11025123/how-to-convert-r-markdown-to-pdf
@@ -15,3 +15,9 @@ Popular IDEs
 * Abricotine
 * Marp
 * Ghostwriter (https://github.com/wereturtle/ghostwriter)
+
+markdown css class
+https://superuser.com/questions/796565/correctly-sizing-png-images-in-markdown-with-pandoc-for-html-pdf-docx
+![](){ class='meinclass' }
+![my caption](./figures/myimage.png){ width=250px }
+

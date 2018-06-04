@@ -3,7 +3,7 @@ https://www.c0ffee.net/blog/mail-server-guide
 
 https://news.ycombinator.com/item?id=6748670
 http://flurdy.com/docs/postfix/
-https://workaround.org/ispmail/jessie/big-picture
+https://workaround.org/ispmail/stretch
 https://gerritbeine.com/2014/02/postfix-und-dovecot-mit-startssl-zertifikaten/
 https://www.grepular.com/Automatically_Encrypting_all_Incoming_Email
 https://www.slideshare.net/jvehent/di-ymail
@@ -61,7 +61,8 @@ https://github.com/vstakhov/rspamd
 	apt install libicu-dev
 	apt install libmagic-dev
 	apt install libfann-dev
-	git clone --recursive https://github.com/vstakhov/rspamd.git
+	cd
+	git clone --recursive https://github.com/vstakhov/rspamd.git 
 	mkdir rspamd.build
 	cd rspamd.build
 	cmake ../rspamd

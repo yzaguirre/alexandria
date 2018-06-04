@@ -9,4 +9,9 @@ f7915ec8884164a564a48b7b67a8360895e185cb61ebed5eaee5a58d0fc0df05c786c7b59d616a88
 
 Extract
 	tar xf FileZilla_3.11.0.2_x86_64-linux-gnu.tar.bz2 -C /VMs/opt
-	ln -s /VMs/opt/FileZilla3/bin/filezilla /usr/local/bin/filezilla
+	ln -s /opt/FileZilla3/bin/filezilla /usr/local/bin/filezilla
+
+https://www.youtube.com/results?search_query=filezilla+sftp&page=&utm_source=opensearch
+https://superuser.com/questions/180221/connect-to-server-using-sftp-and-public-ssh-key-using-filezilla-on-windows
+https://wiki.filezilla-project.org/Howto
+https://wiki.filezilla-project.org/FileZilla_FTP_Client

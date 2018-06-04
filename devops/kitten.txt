@@ -1,0 +1,2 @@
+https://www.reddit.com/r/sysadmin/comments/8ng5fl/kitten_tiny_multihost_automation_tool/
+https://github.com/hoffa/kitten
