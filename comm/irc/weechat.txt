@@ -1,2 +1,17 @@
 https://weechat.org/
 	apt install weechat
+Compile
+https://weechat.org/download/
+https://weechat.org/files/doc/stable/weechat_faq.en.html
+	wget https://weechat.org/files/src/weechat-2.1.tar.gz
+	wget https://weechat.org/download/checksums/weechat-2.1-sha512.txt
+	wget https://weechat.org/files/src/weechat-2.1.tar.gz.asc
+Get key
+	gpg --keyserver ha.pool.sks-keyservers.net --recv-keys A9AB5AB778FA5C3522FD0378F82F4B16DEC408F8
+	gpg --fingerprint A9AB5AB778FA5C3522FD0378F82F4B16DEC408F8
+Check that the fingerprint is correct by asking to a developer on #weechat (chat.freenode.net).
+Verify the release
+	gpg --verify weechat-2.1.tar.xz.asc weechat-2.1.tar.xz
+
+https://weechat.org/files/doc/stable/weechat_quickstart.en.html
+https://weechat.org/files/doc/stable/weechat_user.en.html

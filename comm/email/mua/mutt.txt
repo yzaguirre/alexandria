@@ -1,9 +1,15 @@
 http://www.mutt.org
 http://www.mutt.org/relnotes/1.9/
-http://www.mutt.org/doc/UPDATING
-http://www.mutt.org/doc/manual/#core-concepts
-	gpg2 --verify mutt-1.5.24.tar.gz
-	tar xf mutt-1.5.24.tar.gz
+http://www.mutt.org/relnotes/1.10/
+https://gitlab.com/muttmua/mutt/raw/master/UPDATING
+http://www.mutt.org/doc/manual/
+Compile
+	wget https://bitbucket.org/mutt/mutt/downloads/mutt-1.10.0.tar.gz
+	wget ftp://ftp.mutt.org/pub/mutt/mutt-1.10.0.tar.gz.asc
+	wget http://www.mutt.org/keys/kevin.key
+	gpg --import kevin.key
+	gpg --verify mutt-1.10.0.tar.gz
+	tar xf mutt-1.10.0.tar.gz
 	cd mutt
 	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --with-ssl --with-sasl
 	sudo make install
@@ -37,13 +43,13 @@ And in your .muttrc, before you source any account dedicated file:
 Configure mutt by editing /etc/Muttrc. You also need to configure sendmail to allow for sending e‐mail.
 Like mail, mutt can also be used to send a message from a script. mutt also adds the
 capability to send attachments. For example:
-	$ mutt -s "My Linux Version" -a /etc/lsb-release \
+	mutt -s "My Linux Version" -a /etc/lsb-release \
 		chris@example.com < email-body.txt
-	$ mutt -s "My Linux Version" -a /etc/lsb-release \
+	mutt -s "My Linux Version" -a /etc/lsb-release \
 	chris@example.com < /dev/null
 You can begin your mutt mail session (assuming your default mailbox is $MAIL) by
 simply typing mutt:
-	$ mutt
+	mutt
 
 ? - As usual, you types this to get help. Hints appear across the top bar to help you with your mail.
 Up and down arrow keys - To highlight the messages you want to read.
@@ -73,5 +79,5 @@ shift+r open a menu for postpone message
 If you know
 the address of your mail server, here are examples of how to connect to a POPS or
 IMAPS e‐mail server from mutt:
-	$ mutt -f imaps://chris@imapsserver.example.com
-	$ mutt -f pops://chris@popsserver.example.com
+	mutt -f imaps://chris@imapsserver.example.com
+	mutt -f pops://chris@popsserver.example.com

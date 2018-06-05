@@ -1,19 +1,16 @@
 https://rg3.github.io/youtube-dl/
 https://github.com/rg3/youtube-dl
+https://pypi.org/project/youtube_dl/
 Config files in
 /etc/youtube-dl.conf
 ~/.config/youtube-dl/config
 %APPDATA%\youtube-dl\config.txt
 C:\Users\<Yourname>\youtube-dl.conf
-	apt-get install youtube-dl rtmpdump
+	apt install youtube-dl rtmpdump
 	youtube-dl --max-quality mp4 http://www.youtube.com/watch?v=XJliy7abxCs
 
-Install
-	sudo curl https://yt-dl.org/downloads/2014.04.30/youtube-dl -o /usr/local/bin/youtube-dl
-	sudo chmod a+x /usr/local/bin/youtube-dl
-With pip
-	sudo -H pip install --upgrade youtube_dl
-	sudo -H pip3 install --upgrade youtube_dl
+Install with pip
+	sudo -H pip3 install -U youtube_dl
 
 List all formats
 	-F, --list-formats               list all available formats

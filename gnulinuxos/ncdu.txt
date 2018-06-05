@@ -1,0 +1,45 @@
+https://dev.yorhel.nl/ncdu
+Ncdu is entirely written in C and available under a liberal MIT license.
+Download
+	wget https://dev.yorhel.nl/download/ncdu-1.13.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-1.13.tar.gz.asc
+	wget https://dev.yorhel.nl/download/ncdu-1.13.tar.gz.sha1
+	wget https://dev.yorhel.nl/download/ncdu-1.13.tar.gz.md5
+Verify
+	md5sum ncdu-1.13.tar.gz
+	cat ncdu-1.13.tar.gz.md5
+	sha1sum ncdu-1.13.tar.gz
+	cat ncdu-1.13.tar.gz.sha1
+PGP fingerprint
+7446 0D32 B808 10EB A9AF A2E9 6239 4C69 8C27 39FA
+	wget https://yorhel.nl/key.asc
+	gpg --import key.asc
+	gpg --verify ncdu-1.13.tar.gz.asc
+Extract
+	tar xf ncdu-1.13.tar.gz
+	cd ncdu-1.11
+	./configure
+	make
+	make install
+/bin/mkdir -p '/usr/local/bin'
+/usr/bin/install -c ncdu '/usr/local/bin'
+/bin/mkdir -p '/usr/local/share/man/man1'
+/usr/bin/install -c -m 644 ncdu.1 '/usr/local/share/man/man1'
+
+https://dev.yorhel.nl/ncdu/changes
+"Extended information" mode
+	ncdu -e
+Add experimental color support and --color flag
+	ncdu --color dark
+	ncdu --color off
+Add NCDU_SHELL environment variable
+	export NCDU_SHELL=vifm
+	ncdu
+Added 'b' key to spawn shell in the current directory
+Added 'c' key to display item counts
+Added 'C' key to order by item counts
+
+You can scan a directory and export the results for later viewing:
+	ncdu -1xo- / | gzip >export.gz
+...some time later
+	zcat export.gz | ncdu -f-

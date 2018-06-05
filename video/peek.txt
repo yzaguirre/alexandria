@@ -1,0 +1,7 @@
+https://github.com/phw/peek
+Combine with key-mon
+https://pypi.org/project/key-mon/
+https://code.google.com/p/key-mon
+	apt install peek key-mon
+	key-mon --visible_click
+	peek

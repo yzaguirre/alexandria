@@ -1,0 +1,3 @@
+https://github.com/dylanaraps/neofetch
+https://github.com/KittyKatt/screenFetch
+	neofetch

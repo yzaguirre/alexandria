@@ -1,3 +1,10 @@
+https://www.bitlbee.org/main.php/news.r.html
+	apt install bitlbee
+	apt install bitlbee-libpurple
+	systemctl disable bitlbee.service
+Listens port tcp 6667
+Edit config file
+	vim /etc/bitlbee/bitlbee.conf
 Register an account
 	
 https://wiki.bitlbee.org/XChatTips
@@ -24,6 +31,13 @@ You can now use the /OPER command to enter the password
 For more details. (Note that you must acc off and acc on for the new format to take effect.) 
 	help nick_format
 	help set nick_format
+
+Add hangouts
+https://wiki.bitlbee.org/Hangouts
+	account add hangouts you@gmail.com
+	account on
+Start bitlbee with -F
+	bitlbee -F
 
 Add Facebook account
 https://wiki.bitlbee.org/HowtoFacebook
