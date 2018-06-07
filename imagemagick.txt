@@ -96,6 +96,8 @@ Para capturar la pantalla completa
 	import -window root {salida}
 Para capturar una ventana
 	import {salida}
+https://www.imagemagick.org/Usage/video/
+	convert -quiet -delay 1 plane.avi -map colormap_332.png plane_ugc.gif
 
 Extraer los frames de un GIF y poderlos unir con ffmpeg para convertirlos en un video, codec de por medio, y asi poderlos pasar por Whatsapp 
 	convert -coalesce {entrada} jpg:{salida}+"%04d.jpg"

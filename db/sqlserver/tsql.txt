@@ -1,0 +1,21 @@
+https://www.researchgate.net/post/How_to_insert_multiline_text_in_SQL_server_directly
+https://stackoverflow.com/a/1586588
+DECLARE @my_table TABLE (
+    [value] VARCHAR(200)
+)
+
+INSERT INTO @my_table VALUES ('hi, my name''s tim.')
+
+SELECT * FROM @my_table
+
+http://stackoverflow.com/questions/4823880/sql-server-select-into-variable
+declare @var1 int,@var2 int,@var3 int;
+
+select
+    @var1 = field1,
+    @var2 = field2,
+    @var3 = field3
+from
+    table
+where
+    condition

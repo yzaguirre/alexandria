@@ -1,0 +1,28 @@
+https://stackoverflow.com/questions/1583219/awk-sed-how-to-do-a-recursive-find-replace-of-a-string
+	cd /home/www
+	find . -type f -print0 | xargs -0 sed -i 's/subdomainA.example.com/subdomainB.example.com/g'
+Remove comments
+	sed
+Remove href
+	sed 's/href=\"//'
+	sed "s/\"//g"
+Remove empty lines
+	sed ':a;N;$!ba;s/\n/" "/g'
+Surround in "
+	sed '1s/^/"/'
+	sed '$s/$/"/'
+https://stackoverflow.com/questions/7050717/bash-find-a-keyword-in-a-file-and-delete-its-line#7050760
+	sed -i ".bak" '/culpa/d' test.txt
+
+Print a line
+https://stackoverflow.com/questions/191364/quick-unix-command-to-display-specific-lines-in-the-middle-of-a-file
+print line number 52
+	sed '52q;d
+Respect CRLF, using binary mode
+https://stackoverflow.com/questions/4652652/preserve-line-endings#11508669 preserve line ending
+http://www.folkstalk.com/2013/03/sed-remove-lines-file-unix-examples.html
+	sed -b 's/foo/bar/'
+http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-how-to-write-to-a-file-using-sed/
+
+https://stackoverflow.com/a/7517900
+	sed 's#"http://www.fubar.com"#URL_FUBAR#g'

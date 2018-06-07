@@ -1,0 +1,29 @@
+https://roundcube.net/
+https://github.com/roundcube/roundcubemail/wiki/Configuration
+
+https://news.ycombinator.com/item?id=7552155
+http://roundcube.net/news/2014/04/07/roundcube-webmail-1.0.0-released/
+http://trac.roundcube.net/wiki/Howto_Install
+	apachedir=`grep -i 'DocumentRoot' /etc/apache2/sites-available/000-default.conf | sed 's/.*DocumentRoot[ ]*//'`
+	apt install php7.1-i
+	wget https://github.com/roundcube/roundcubemail/releases/download/1.3.6/roundcubemail-1.3.6-complete.tar.gz
+	wget https://github.com/roundcube/roundcubemail/releases/download/1.3.6/roundcubemail-1.3.6-complete.tar.gz.asc
+	sha256sum roundcubemail-1.3.6-complete.tar.gz
+f1b86e97cc8fd69bb1957d4115762af6ea2d6957ea17b33dd3ec2995662670d9
+	tar xf roundcubemail-1.3.6-complete.tar.gz
+Download pubkey
+	wget https://roundcube.net/download/pubkey.asc
+	gpg --import pubkey.asc
+	gpg --verify roundcubemail-1.3.6-complete.tar.gz.asc roundcubemail-1.3.6-complete.tar.gz
+https://github.com/roundcube/roundcubemail/wiki/Installation
+https://github.com/roundcube/roundcubemail/wiki/Configuration
+	cd roundcubemail-1.3.6
+	cp composer.json-dist composer.json
+	composer install --no-dev
+Database setup
+CREATE DATABASE roundcubemail;
+GRANT ALL PRIVILEGES ON roundcubemail.* TO username@localhost IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+
+Visit
+	localhost/rcm/installer

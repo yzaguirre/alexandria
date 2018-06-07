@@ -77,6 +77,9 @@ http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-d
               chive.7z" (with data and header archive encryption on)
 extract
 	$ 7z x file.7z -o /tmp
+Extract certain files, like camrec files
+https://superuser.com/questions/321829/extract-a-certain-file-from-an-archive-with-7-zip-from-the-command-line
+	7z x file.camrec *.avi -r
 Even extracts tar files
 https://stackoverflow.com/questions/1359793/programmatically-extract-tar-gz-in-a-single-step-on-windows-with-7zip
 	7z e example.tar.gz  && 7z x example.tar

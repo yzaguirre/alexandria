@@ -1,0 +1,3 @@
+https://stackoverflow.com/a/1252010
+	tr '\n' ' ' < input_filename
+	tr -d '\r\n' < input_filename

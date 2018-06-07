@@ -1,0 +1,9 @@
+https://docs.microsoft.com/en-us/sql/relational-databases/scripting/sqlcmd-use-the-utility?view=sql-server-2017
+	sqlcmd -?
+	sqlcmd -S '192.168.0.10\MyInstance,5000' -U 'user' -d 'clients' -q "SELECT * FROM log.clients;"
+
+MSSQL_CLI_SERVER=
+MSSQL_CLI_DATABASE=
+MSSQL_CLI_USER=
+MSSQL_CLI_PASSWORD=
+sqlcmd -S "$MSSQL_CLI_SERVER" -U "$MSSQL_CLI_USER" -P "$MSSQL_CLI_PASSWORD" -d $MSSQL_CLI_DATABASE -i MY_SCRIPT.sql -o output.txt
