@@ -1,0 +1,28 @@
+regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
+
+https://www.sublimetext.com/3
+	wget https://download.sublimetext.com/sublime_text_3_build_3176_x64.tar.bz2
+
+	tar xf sublime_text_3_build_3176_x64.tar.bz2 -C /opt
+	ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl
+Deactivate analytics
+
+https://www.sublimetext.com/docs/3/multiple_selection_with_the_keyboard.html
+
+Adding a Line
+To add the line above or below to the selection, use Ctl+Alt+Up and Ctrl+Alt+down (OS X: Ctrl+Shift+Up and Ctrl+Shift+Down).
+If you go too far, use Undo Selection (Ctrl+U, or Command+U on OS X) to step backwards.
+
+Splitting the Selection into Lines
+Select a block of lines, and then split it into many selections, one per line, using Ctrl+Shift+L, or Command+Shift+L on OS X.
+
+Quick Add Next
+To add the next occurrence of the current word to the selection, use Quick Add Next, which is bound to Ctrl+D on Windows and Linux, or Command+D on OS X.
+Again, if you go too far, use Undo Selection (Ctrl+U, or Command+U on OS X) to step backwards.
+Individual occurrences can be skipped via Quick Skip Next, which is bound to Ctrl+K,Ctrl+D on Windows and Linux, or Command+K,Command+D on OS X.
+
+Find All
+To add all occurrences of the current word to the selection, use Find All: Alt+F3 on Windows and Linux, or Ctrl+Command+G on OS X.
+
+Single Selection
+To go from multiple selections to a single selection, press Escape. 

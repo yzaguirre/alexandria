@@ -152,3 +152,10 @@ Block .ssh directory in apache
         Order deny,allow
         deny from all
 </Directory>
+
+https://www.cyberciti.biz/faq/howto-regenerate-openssh-host-keys/
+Delete old ssh host keys
+	rm -v /etc/ssh/ssh_host_*
+Debian or Ubuntu Linux Regenerate OpenSSH Host Keys
+	dpkg-reconfigure openssh-server
+	systemctl restart ssh

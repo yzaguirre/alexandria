@@ -1,0 +1,22 @@
+https://victorhckinthefreeworld.com/2018/05/30/enviar-un-correo-con-desde-la-linea-de-comandos-de-raspberry-pi-con-raspbian/
+	apt install ssmtp
+Edit config
+	vim /etc/ssmtp/ssmtp.conf
+root=tu_usuario@tu_correo.org
+mailhub=smtp.tu_correo.org:465
+FromLineOverride=YES
+AuthUser=tu_usuario@tu_correo.org
+AuthPass=tu_contraseña_segura
+UseTLS=YES
+
+Create correo.txt
+To: tannhausser@hackmail.com
+Subject: Probando, probando
+From: victorhck@flipmail.org
+-----------------------------
+Enviando un correo desde la línea de comandos de mi Raspberry Pi con Raspbian.
+Un placer leer tu blog!!
+Happy hacking
+
+Use an empty line to signal end of file.
+	sendmail -vt < correo.txt

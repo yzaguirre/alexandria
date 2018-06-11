@@ -1,0 +1,309 @@
+https://serverfault.com/questions/351046/run-script-as-user-who-has-nologin-shell
+	sudo su -s /bin/bash -c '/usr/local/bin/vault server -config=/etc/vault.hcl -log-level=err' vault
+Factor numbers with the factor program
+	factor 234123421341
+	factor $(date +%s) # factor current timestamp
+Find out how many terabytes are in 4123412312312 bytes:
+	numfmt --to=iec 4123412312312
+Columns
+	cat data.txt | column -t -s ','
+Disable IPv6
+http://ask.xmodulo.com/disable-ipv6-linux.html
+	echo 1 > /proc/sys/net/ipv6/conf/eth0/disable_ipv6
+	echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+Edit /etc/sysctl.conf
+	net.ipv6.conf.all.disable_ipv6 = 1
+And activate the changes
+	sudo sysctl -p /etc/sysctl.conf
+HTop
+threads Shift+H
+kernel threads Shift+K
+Stats
+	apt install sysstat
+	mpstat 1
+
+
+Repo url example
+http://ftp.mx.debian.org/debian/pool/main/c/chromium-browser/chromium-dbg_53.0.2785.89-1~deb8u1_amd64.deb
+
+"ncal -p" on the command line gives you a nifty list of when various countries switched to Gregorian.
+
+Consult memory procecess
+https://www.cyberciti.biz/faq/show-all-running-processes-in-linux/
+	ps aux | grep mysql
+	ps ef | grep guake
+http://stackoverflow.com/questions/9039107/dont-save-current-bash-session-to-history
+	history -r
+Chrome keyring solution
+https://diasp.eu/posts/4645745
+	vim /etc/chromium.d/settings
+CHROMIUM_FLAGS="$CHROMIUM_FLAGS --password-store=basic"
+
+HMAC digests
+https://stackoverflow.com/questions/7285059/hmac-sha1-in-bash
+	echo -n "value" | openssl dgst -sha1 -hmac "key"
+	echo -n "value" | openssl sha1 -hmac "key"
+https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html
+list installed software
+	dpkg --get-selections | grep -v deinstall > installed_software.txt
+	dpkg --get-selections | grep -v deinstall | grep -v "^lib*" > installed_software.txt
+	dpkg --listfiles geany
+https://sandilands.info/sgordon/multimedia-on-linux-command-line
+https://serverfault.com/questions/72476/clean-way-to-write-complex-multi-line-string-to-a-variable
+read -d '' variable <<EOF
+text
+EOF
+https://stackoverflow.com/questions/6712437/find-duplicate-lines-in-a-file-and-count-how-many-time-each-line-was-duplicated
+	sort <file> | uniq -c
+	sort <file> | uniq --count
+	sort FILE | uniq -cd
+	sort FILE | uniq --count --repeated
+Show the most frequent lines on top
+	sort <files> | uniq -c | sort -nr
+https://www.digitalocean.com/community/tutorials/building-for-production-web-applications-deploying
+Rename
+https://stackoverflow.com/questions/6329505/how-to-rename-all-file-in-a-folder-with-a-suffix-in-a-single-unix-command
+	rename 's/^/Unix_/' *
+
+Open files
+	file * | \grep JPEG | sed s/:.*// | xargs ls -S| head -n10 | xargs gimp
+block facebook
+https://diasp.eu/posts/2740828
+
+set locale
+http://perlgeek.de/en/article/set-up-a-clean-utf8-environment
+http://www.thomas-krenn.com/en/wiki/Perl_warning_Setting_locale_failed_in_Debian
+	# locale-gen es_GT.UTF-8
+	# dpkg-reconfigure locales
+mounts
+	mount | column -t 
+swap
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7
+digitalocean
+https://www.digitalocean.com/community/tutorials/additional-recommended-steps-for-new-ubuntu-14-04-servers
+
+http://www.cyberciti.biz/tips/spice-up-your-unix-linux-shell-scripts.html
+	apt-get install libnotify-bin
+	notify-send "rsnapshot done :)"
+https://stackoverflow.com/questions/8850995/notify-send-cause-invalid-number-of-options
+Always use double quotes
+
+The logger command writes entries in the system log file such as /var/log/messages.
+It provides a shell command interface to the syslog system log module:
+	logger "MySQL database backup failed."
+user management
+http://www.cyberciti.biz/faq/former-employees-keep-accessing-linux-unix-server/
+
+xrandr
+	xrandr --auto --output DVI-0 --mode 1440x900 --right-of DVI-1
+
+Send a message
+	DISPLAY=:0 xmessage -center "ATENCION, ATENCION ya esta listo el almuerzo"	
+https://github.com/kahun/awesome-sysadmin
+ssmtp
+logwatch emails me stuff
+monitorx
+Monitor the red
+	nbwmon -i eth0
+	sudo nethogs eth0
+	slurm -i wlan0
+	host-a$ cat /dev/zero | nc -l -p 12345
+	host-b$ nc host-a 12345 > /dev/null 
+	host-b$ speedometer -rx eth0
+hardinfo
+http://www.taringa.net/posts/linux/17855607/Toda-la-info-de-tu-sistema-con-HardInfo.html
+	hardinfo -r -f html > /var/log/reporte.html
+message of the day
+	/etc/motd
+	/etc/motd.tail
+http://forums.debian.net/viewtopic.php?f=5&t=85822
+	echo "" > /var/run/motd.dynamic
+
+All ports used
+	netstat -46plunt
+	netstat -ona | grep 9000
+	netstat -nltu
+	# netstat -ltnp | grep postgres
+	# netstat -tulpan | grep vnc
+http://www.cyberciti.biz/faq/what-process-has-open-linux-port/
+	# netstat -tulpn
+who is occupying port 60001
+	lsof -i :60001
+	lsof -i :portNumber
+	lsof -i tcp:portNumber
+	lsof -i udp:portNumber
+	lsof -i :80
+	lsof -i :80 | grep LISTEN
+
+Printe directory tree
+Combinando herramientas
+http://systembash.com/content/one-line-linux-command-to-print-out-directory-tree-listing/
+	ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' \
+-e 's/^/ /' -e 's/-/|/'
+http://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/
+	tree /VMs/ISO
+only directories
+	tree -d
+
+Directory navigation
+	$ pushd /var/log/apache2
+	$ popd
+
+Watch a file
+	$ watch 'ls -l mydownload.iso'
+Refresh every 10 seconds
+	$ watch -n 5 'ls -l mydownload.iso'
+To watch the contents of a plain text file grow over time, you can use the tail com-
+mand. For example, you can watch as messages are added to the /var/log/messages
+file and see those messages displayed on your screen as follows:
+	$ sudo tail -f /var/log/messages
+
+Manage hardware clock.
+	hwclock
+Get time from network time server.
+	rdate
+
+What are the most common steps in the procedure of
+installing a source tarball?
+Answer:
+a) extract the tarball
+b) ./configure
+c) make
+d) make install
+
+xargs
+	find albums -type d | xargs chmod 777
+
+The Linux system passwords are encrypted and saved in /etc/shadow
+
+Using the command 
+	df -ah 
+you can get information about your
+current mounts including available/used space
+
+Using free -m you will get the current memory status, including free,
+used, cached both for the physical and swap memory.
+
+map storage drives
+	lsblk
+	blkid /dev/sda1
+
+iostat gives you information and averages about your system I/O for
+the CPU and HD.
+
+The sysstat package contains the following system performance tools:
+ - sar: collects and reports system activity information;
+ - iostat: reports CPU utilization and disk I/O statistics;
+ - mpstat: reports global and per-processor statistics;
+ - pidstat: reports statistics for Linux tasks (processes);
+ - sadf: displays data collected by sar in various formats;
+ - nfsiostat: reports I/O statistics for network filesystems;
+ - cifsiostat: reports I/O statistics for CIFS filesystems.
+ 
+In order to find the Linux distro information, you can use: cat /etc/*release
+
+In order to know the listening ports and applications, you can check
+netstat output:
+	netstat -64tupln
+And use ss
+	ss -tn sport = :22
+
+How can you change the behavior of the Linux DNS search
+to first look for DNS and only then in the hosts files?
+Answer:
+Change hosts parameter in /etc/nsswitch.conf from “files dns” to “dns
+files”.
+
+How can you find out which process is using the port 80 on
+your Linux?
+Answer:
+	sudo fuser 80/tcp -v
+
+You can find the failed logins in the secure log, filter by failed logins,
+and make a unified line for parsing.
+cat /var/log/secure | grep "Failed password for" | sed 's/invalid user//g' | awk '{ print $1,$2,$3,$9,$11; }'
+
+http://www.taringa.net/posts/linux/17736867/Buscar-la-ubicacion-geografica-de-una-IP-desde-comandos.html
+	curl ipinfo.io/direccion_IP 
+
+You have decided to add 80.161.161.1 to your DNS servers
+(for DNS resolving), which file should be edited and what should
+be added to this file?
+The /etc/resolv.conf holds your DNS servers list; you need to add a
+new line "nameserver 80.161.161.1" at the end of the file.
+
+How can you set the eth0 interface to auto-negotiation on?
+Answer: You can use the ethtool to configure the eth card:
+	ethtool --change eth0 autoneg on
+
+How can you display your server routing table (IP view)?
+Answer: You can get a display of your current routing table without resolving
+for faster results, by using
+	route -n
+
+You want to run the application heavyapplication with a low
+priority so it will not take all the resources from the system and
+run at the lowest priority there is, how can you do it during the
+application start? Answer: Using the nice tool, you can start an application with the desired nice level
+	nice -n 19 heavyapplication
+
+The time is 1:00 PM, you have upgraded the kernel and need
+to reboot, but you won't be here at night, how can you tell the
+system to shutdown at 1AM?
+Answer: You can define time to the shutdown command: 
+	shutdown -r 01:00
+will reboot at 1AM
+
+What does each of the error codes 200, 300, 400 and 500 in
+apache mean?
+Answer:
+2xx are successful requests, 3xx are redirection, 4xx are client error
+and 5xx are server error codes.
+
+How can you dump all the packets of http traffic into
+http.out?
+Answer:
+In order to capture network traffic, we should use tcpdump.
+tcpdump tcp port 80 -s0 -w http.out
+
+You want to add logger to your script, how can you send
+logging messages to the /var/log/messages for your script
+"MyCoolScript"?
+Answer:
+If you want to write to the messages file, you can use the logger tool
+which is the syslogd api and send log messages 
+	logger -t MyCoolScript Starting Application....
+
+Using perl, write a command that will print all the IPs,
+Bcasts and Masks configured on the server line by line.
+Answer:
+You need to extract the IPs from the ifconfig first, then run on each
+line and get the required information 
+	ifconfig -a | perl -n -l -e '/ addr:([^ ].+)/ and print $1'
+
+You need to check if your script is currently running in the system -
+you can do it with ps
+#!/bin/bash
+cmd=namedScript
+runningProcs=`ps --no-headers -C${cmd}`
+count=`echo $runningProcs|wc -l`
+if [ $count -gt 1 ]; then
+	echo "Previous $cmd is still running."
+	exit 1
+fi
+
+How can you check what are the most common commands
+that you have used in the Linux shell?
+Answer:
+You can get this information from the history command and sort it by
+most used 
+	history | awk '{h[$2]++}END{for(c in h){print h[c] " " c}}' | sort -nr | head
+
+http://www.linux.com/learn/answers/view/1267-help--how-can-i-fix-this--i-cant-update
+	sudo rm -r /var/lib/apt/lists
+	sudo mkdir -p /var/lib/apt/lists/partial
+	sudo apt-get clean
+	sudo apt-get update
+
+/var/lib/dpkg/alternatives/x-www-browser
+	update-alternatives --config x-www-browser

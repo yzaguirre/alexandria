@@ -1,0 +1,14 @@
+https://victorhckinthefreeworld.com/2014/04/23/enviar-correo-desde-la-linea-de-comandos-con-mail/
+Edit /etc/mail.rc
+	vim /etc/mail.rc
+set smtp-use-starttls
+set ssl-verify=ignore
+set smtp-auth=login
+set smtp=smtp://smtp.email_provider:587
+set from="my_address@email_provider"
+set smtp-auth-user=my_address@email_provider
+set smtp-auth-password=my.password
+set ssl-verify=ignore
+
+	mail -s "asunto" geeko@correo.com
+Type email, press dot and enter to send or use CTRL+D

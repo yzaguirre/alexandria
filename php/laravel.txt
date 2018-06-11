@@ -1,5 +1,5 @@
 https://www.laravel.com/
-https://laravel.com/docs/5.5/
+https://laravel.com/docs/5.6/
 Debugging with php methods
 var_dump($var)
 dd($var)
@@ -31,6 +31,7 @@ Check laravel version
 Open a shell
 	php artisan tinker
 App\Task::all();
+App\Task::where('id',1)->get();
 App\Task::where('id','>',1)->get();
 App\Task::pluck('body');
 App\Task::pluck('body')->first();
@@ -251,3 +252,32 @@ https://laravel.com/docs/5.6/authentication#introduction
 See Path Customization, Username Customization and Retrieving The Authenticated User
 	php artisan make:auth
 	php artisan migrate:refresh
+Compile javascript and other items
+	npm run dev
+https://github.com/rails/webpacker/issues/422
+https://github.com/sass/node-sass/issues/1812
+https://stackoverflow.com/questions/49675098/enoent-no-such-file-or-directory-scandir-c-code-myproj-content-node-modules
+https://github.com/yarnpkg/yarn/issues/3485
+	npm rebuild node-sass
+Add that to package.json
+	vim package.json
+{
+  "scripts": {
+    "postinstall": "npm rebuild node-sass"
+  }
+}
+Now can do
+	npm run postinstall
+
+CORS
+https://laracasts.com/discuss/channels/requests/laravel-5-cors-headers-with-filters
+Edit bootstrap/app.php
+// allow origin
+header('Access-Control-Allow-Origin: *');
+// add any additional headers you need to support here
+header('Access-Control-Allow-Headers: Origin, Content-Type');
+
+CSRF Protection
+https://laravel.com/docs/5.6/csrf
+
+https://laravel.com/docs/5.6/passport#consuming-your-api-with-javascript
