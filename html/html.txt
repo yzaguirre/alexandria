@@ -1,0 +1,23 @@
+Create boiler plate
+	http://html5boilerplate.com/
+	http://www.initializr.com/
+
+HTML5 applications combine HTML, XML, CSS, JavaScript code and other technologies
+to create some of the most portable applications available. 
+	- http://kogmbh.com/consulting.html
+encode utf8
+	<meta charset="utf-8">
+
+https://stackoverflow.com/questions/32032035/how-do-i-embed-a-video-using-html5
+
+<video width="420" height="340" controls>
+  <source src="sample_movie.mp4" type="video/mp4">
+  <source src="sample_movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+<video width="320" height="240" autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>

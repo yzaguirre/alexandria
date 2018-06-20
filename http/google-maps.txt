@@ -1,0 +1,18 @@
+Tokyo, Japan
+Jakarta, Indonesia
+Maputo, Mozambique
+Geneva, Switzerland
+Los Angeles Californai, USA
+
+https://developers.google.com/maps/?hl=en
+
+Get Google Maps API key
+https://developers.google.com/maps/documentation/geocoding/get-api-key
+Use Google Maps Geocoding API
+https://developers.google.com/maps/documentation/geocoding/intro
+	APIKEY=YOURKEY
+	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Tokyo,+Japan&key=$APIKEY"
+	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Jakarta,+Indonesia&key=$APIKEY"
+	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Maputo,+Mozambique&key=$APIKEY"
+	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Geneva,+Switzerland&key=$APIKEY"
+	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Los+Angeles+California,+USA&key=$APIKEY"

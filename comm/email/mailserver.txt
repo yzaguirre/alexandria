@@ -49,32 +49,11 @@ To create a secure hash of the simple password "summersun":
 	dovecot pw -s SHA256-CRYPT
 
 # Rspamd
-https://rspamd.com
-https://github.com/vstakhov/rspamd
-	apt install cmake
-	apt install ragel
-	apt install pkg-config
-	apt install libluajit-5.1-dev
-	apt install libglib2.0-dev
-	apt install libevent-dev
-	apt install libsqlite3-dev
-	apt install libicu-dev
-	apt install libmagic-dev
-	apt install libfann-dev
-	cd
-	git clone --recursive https://github.com/vstakhov/rspamd.git 
-	mkdir rspamd.build
-	cd rspamd.build
-	cmake ../rspamd
-	make
-	make install
-/usr/local/etc/rspamd/
-/usr/local/share/rspamd/
-/usr/local/share/man/man8/rspamd.8
-/usr/local/share/man/man1/rspamc.1
-/usr/local/share/man/man1/rspamadm.1
-/usr/local/bin/rspamd_stats
-/usr/local/lib/rspamd/
+See /comm/email/rspamd.txt
+Test spam
+	wget http://spamassassin.apache.org/gtube/gtube.txt
+	sendmail john@example.org < gtube.txt
+	tail -f /var/log/mail.log
 
 # DKIM
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-dkim-with-postfix-on-debian-wheezy

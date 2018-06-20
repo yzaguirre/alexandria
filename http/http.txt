@@ -1,3 +1,9 @@
+HTTP <--> CRUD
+GET <--> READ
+POST<--> CREATE
+PUT <--> UPDATE/CREATE
+PATCH <--> UPDATE
+DELETE-<-->DELETE
 http://codes.io/
 	curl -I http://codes.io/407
 http://httpbin.org/

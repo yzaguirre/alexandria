@@ -1,0 +1,71 @@
+https://rspamd.com
+https://github.com/vstakhov/rspamd
+	apt install cmake
+	apt install ragel
+	apt install pkg-config
+	apt install libluajit-5.1-dev
+	apt install libglib2.0-dev
+	apt install libevent-dev
+	apt install libsqlite3-dev
+	apt install libicu-dev
+	apt install libmagic-dev
+	apt install libfann-dev
+	cd
+	git clone --recursive https://github.com/vstakhov/rspamd.git 
+	mkdir rspamd.build
+	cd rspamd.build
+	cmake ../rspamd
+	make
+	make install
+/usr/local/etc/rspamd/
+/usr/local/share/rspamd/
+/usr/local/share/man/man8/rspamd.8
+/usr/local/share/man/man1/rspamc.1
+/usr/local/share/man/man1/rspamadm.1
+/usr/local/bin/rspamd_stats
+/usr/local/lib/rspamd/
+
+Configuration
+	rspamadm configwizard
+Using /usr/local/etc/rspamd/rspamd.conf as template
+The following modules will be enabled if you add Redis servers:                                                              
+        * greylist             
+        * url_redirector       
+        * ratelimit            
+        * replies              
+        * history_redis
+DKIM directory /var/lib/rspamd/dkim/
+	groupadd rspamd
+	useradd -g rspamd -s /bin/false -c "rspamd for dkim" rspamd
+	adduser --system --home /usr/local/etc/rspamd --shell /bin/bash --group rspamd
+	mkdir /var/log/rspamd
+	chown rspamd:rspamd -R /var/log/rspamd	
+	chown rspamd:rspamd -R /usr/local/etc/rspamd
+	chown rspamd:rspamd -R /var/lib/rspamd
+	su rspam
+	rspam -f
+https://rspamd.com/doc/faq.html#how-to-use-the-webui-behind-a-proxy-server
+http://localhost:11334/
+
+Install pre-built statistics
+	cd /var/lib/rspamd
+	wget https://rspamd.com/rspamd_statistics/bayes.ham.sqlite
+	wget https://rspamd.com/rspamd_statistics/bayes.spam.sqlite
+	chown rspamd:rspamd -R /var/lib/rspamd/*sqlite
+Restart the daemon, print stats
+	rspamc stat
+
+The rspamc command will allow you to feed entire directories/folders of emails to the learning process.
+An example to train spam:
+	rspamc learn_spam /var/vmail/example.org/john/Maildir/.INBOX.Junk/cur
+And this would be an example to train ham:
+	rspamc learn_ham /var/vmail/example.org/john/Maildir/cur
+
+https://rspamd.com/doc/modules/dkim_signing.html
+Configwizard made the keys already.
+	cd /usr/local/etc/rspamd
+	vim local.d/dkim_signing.conf
+path = "/var/lib/rspamd/dkim/$domain.$selector.key";
+selector_map = "/usr/local/etc/rspamd/dkim_selectors.map";
+selector = "2018061601";
+	vim dkim_selectors.map

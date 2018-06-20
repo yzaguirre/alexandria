@@ -1,0 +1,16 @@
+https://github.com/xo/usql/releases
+https://news.ycombinator.com/item?id=17299356
+
+Windows install
+	wget https://github.com/xo/usql/releases/download/v0.7.0/usql-0.7.0-windows-amd64.zip
+	unzip usql-0.7.0-windows-amd64.zip
+Send the binary to a directory with $PATH with benefits
+	mv usql.exe ~/bin
+
+MS SQL Server
+https://github.com/denisenkom/go-mssqldb
+	MSSQL_CLI_SERVER='HOST:PORT/INSTANCE'
+	MSSQL_CLI_DATABASE=''
+	MSSQL_CLI_USER=''
+	MSSQL_CLI_PASSWORD=''
+	usql.exe sqlserver://${MSSQL_CLI_USER}:${MSSQL_CLI_PASSWORD}@${MSSQL_CLI_SERVER}?database=${MSSQL_CLI_DATABASE}

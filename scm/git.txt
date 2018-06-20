@@ -164,3 +164,11 @@ Clean up a branch
 
 http://blog.davidecoppola.com/2016/11/howto-contribute-to-open-source-project-on-github/
 https://news.ycombinator.com/item?id=12880792
+
+Undo commit
+http://stackoverflow.com/questions/927358/ddg#927386
+	git commit -m "Something terribly misguided"
+	git reset HEAD~
+	<< edit files as necessary >>
+	git add ...
+	git commit -c ORIG_HEAD

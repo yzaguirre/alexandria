@@ -1,0 +1,1 @@
+sudo -H pip3 install tweepy

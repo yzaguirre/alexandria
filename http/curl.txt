@@ -1,6 +1,9 @@
 Alternatives
 bat, httpie
 
+DNS server
+	curl --dns-server <addresses>
+
 Socks Proxy
 http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXY
 	ALL_PROXY=socks5://bob:marley@localhost:12345 curl options

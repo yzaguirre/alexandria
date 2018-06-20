@@ -21,3 +21,11 @@ https://www.digitalocean.com/community/tutorials/how-to-use-wp-cli-to-manage-you
 	php wp-cli.phar --info
 	chmod +x wp-cli.phar
 	mv wp-cli.phar /usr/local/bin/wp
+
+Update
+https://codex.wordpress.org/Upgrading_WordPress
+
+Backup
+https://codex.wordpress.org/WordPress_Backups
+	name=wp.sql
+	mysqldump -e -u wp -p wp > $name

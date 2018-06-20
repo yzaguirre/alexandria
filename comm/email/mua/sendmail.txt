@@ -1,5 +1,7 @@
 https://victorhckinthefreeworld.com/2018/05/30/enviar-un-correo-con-desde-la-linea-de-comandos-de-raspberry-pi-con-raspbian/
 	apt install ssmtp
+	date | sendmail john@example.org
+
 Edit config
 	vim /etc/ssmtp/ssmtp.conf
 root=tu_usuario@tu_correo.org

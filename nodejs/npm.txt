@@ -5,6 +5,7 @@ Make a folder
 	chown $user:$user -R /opt/npm
 	npm config set prefix /opt/npm
 Install common libs
+https://stackoverflow.com/questions/32919589/npm-install-mongoose-causes-gyp-and-kerberos-errors-gssapi-gssapi-h-file-not-fo
 	apt install libkrb5-dev
 Add /opt/npm/bin directory to PATH, adapt ~/.profile
 	export PATH="$PATH:/opt/npm/bin"
@@ -29,8 +30,6 @@ Uninstall package
 https://docs.npmjs.com/getting-started/uninstalling-global-packages
 	npm uninstall jshint -g
 
-https://stackoverflow.com/questions/32919589/npm-install-mongoose-causes-gyp-and-kerberos-errors-gssapi-gssapi-h-file-not-fo
-	apt-get install libkrb5-dev
 .node-gyp/4.2.3/common.gypi not found
 https://stackoverflow.com/questions/33068594/node-gyp-4-1-2-common-gypi-not-found
 	Fix it by removing the version restriction from gulp, gulp-sass and reinstalling the modules
