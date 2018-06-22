@@ -1,4 +1,5 @@
-http://csvkit.readthedocs.io/en/1.0.3/
+https://csvkit.readthedocs.io/en/1.0.3/
+	sudo -H pip3 install csvkit
 Convert Excel to CSV:
 	in2csv data.xls > data.csv
 Convert JSON to CSV:

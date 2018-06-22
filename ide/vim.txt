@@ -142,3 +142,20 @@ http://vim.wikia.com/wiki/AES256_encryption_in_Vim
 https://linux-audit.com/using-encrypted-documents-with-vim/
 
 https://github.com/vim-airline/vim-airline
+Install for vim 8
+	git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+	:helptags
+
+Vue syntax
+https://github.com/posva/vim-vue
+
+	git clone https://github.com/posva/vim-vue.git ~/.vim/pack/plugins/start/vim-vue
+https://github.com/posva/vim-vue/issues/95
+http://vim.wikia.com/wiki/Forcing_Syntax_Coloring_for_files_with_odd_extensions
+	set ft=html
+	set syntax=html
+	au BufNewFile,BufRead *.vue set syntax=html
+
+Indentation
+https://stackoverflow.com/questions/506075/how-do-i-fix-the-indentation-of-an-entire-file-in-vi
+	set ai
