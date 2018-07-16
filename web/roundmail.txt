@@ -27,3 +27,17 @@ FLUSH PRIVILEGES;
 
 Visit
 	localhost/rcm/installer
+
+Multiple domains
+https://github.com/roundcube/roundcubemail/wiki/Configuration:-Multi-Domain-Setup
+In case you have one installation of Roundcube to serve multiple domains
+hosted on one server you can create host-specific config files.
+These files have to be named like <hostname>.inc.php and are saved
+in Roundcube's config directory.
+
+Roundcube does not read them by default so you need to
+set the 'include_host_config' option to true in the main config file.
+<?php
+
+$config['default_host'] = '<imap-host-for-this-domain>';
+$config['username_domain'] = '<the-domain-name>';

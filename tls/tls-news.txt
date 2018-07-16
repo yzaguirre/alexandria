@@ -1,0 +1,8 @@
+https://news.ycombinator.com/item?id=17401509
+TLS typically works via per-hostname certificates. If you have only a single host on an end-point then no problem. But what if you want to host two or more domains with different certificates on a single end-point? It's a problem.
+
+So Server Name Indication (SNI) was invented. In effect you send, in plain text, the hostname name you wish to contact to the end-point, who is then able to use that information to route the request. The correctly routed request can then utilize the right certificate.
+
+At the time this didn't have large security implications because unencrypted DNS was already leaking requests like crazy. But with DNS slowly getting more secure and TLS gaining a huge market share (<3 Let's Encrypt), SNI is starting to stand out as an "easy" way to spy on what someone is requesting.
+
+While IP Addresses themselves can be used for spying, encrypted DNS, protected SNI, and TLS all increase the cost and complexity of that spying, and make the results harder to trust (particularly on shared hosts or sites using a shared load balancing system). If encrypted SNI becomes a reality, it is a huge win against ISPs spying on us and selling our browsing histories.

@@ -1,3 +1,4 @@
+http://www.studytrails.com/blog/15-page-tutorial-for-r/
 http://www.r-project.org/
 see datascience/rstudio.txt
 https://www.digitalocean.com/community/tutorials/how-to-set-up-r-on-ubuntu-14-04

@@ -7,3 +7,9 @@ MSSQL_CLI_DATABASE=
 MSSQL_CLI_USER=
 MSSQL_CLI_PASSWORD=
 sqlcmd -S "$MSSQL_CLI_SERVER" -U "$MSSQL_CLI_USER" -P "$MSSQL_CLI_PASSWORD" -d $MSSQL_CLI_DATABASE -i MY_SCRIPT.sql -o output.txt
+
+Hide affected rows
+https://serverfault.com/questions/168657/is-there-a-way-to-run-sqlcmd-to-get-query-output-without-showing-the-number-of-r
+set nocount on
+select x, y, z from agent
+set nocount off

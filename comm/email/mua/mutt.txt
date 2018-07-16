@@ -3,7 +3,10 @@ http://www.mutt.org/relnotes/1.9/
 http://www.mutt.org/relnotes/1.10/
 https://gitlab.com/muttmua/mutt/raw/master/UPDATING
 http://www.mutt.org/doc/manual/
+https://github.com/gotbletu/shownotes/blob/master/mutt.md
+https://twitter.com/climagic/status/1015270839829385216
 Compile
+https://askubuntu.com/questions/199057/mutt-not-working-due-to-gnutls-handshake-a-tls-packet-with-unexpected-length-w#202105
 	wget https://bitbucket.org/mutt/mutt/downloads/mutt-1.10.0.tar.gz
 	wget ftp://ftp.mutt.org/pub/mutt/mutt-1.10.0.tar.gz.asc
 	wget http://www.mutt.org/keys/kevin.key
@@ -11,14 +14,17 @@ Compile
 	gpg --verify mutt-1.10.0.tar.gz
 	tar xf mutt-1.10.0.tar.gz
 	cd mutt
-	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --with-ssl --with-sasl
+	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --enable-smtp --with-ssl --with-sasl --enable-hcache --with-gss --enable-debug --enable-gpgme
 	sudo make install
 Install PGP support
 	cd contrib
 	mv gpg.rc ~/documents/.gpg.rc
 
-Openmailbox no smtp support
-https://www.openmailbox.org/forum/viewtopic.php?id=423
+https://unix.stackexchange.com/questions/66560/mutt-smtp-tls-error-sending-mail
+When using smtp submission on port 587,
+the value for smtp_url should start with "smtp://", i.e. not with "smtps://".
+It is also important to make sure ssl_starttls is set to "yes",
+as correctly done in the config above.
 
 https://wiki.archlinux.org/index.php/Mutt
 http://www.linuxandlife.com/2012/03/how-to-configure-mutt-for-gmail.html
@@ -64,6 +70,13 @@ Esc+Tab - To go to the previous message.
 s - To save the current message to a file.
 d - To delete a message.
 u - To undelete a message.
+$ sync-mailbox
+y switch email to different mailboxes
+Ctrl+g = cancle a prompt
+
+SHIFT+$ to commit deletion
+To undelete, hit the number of email
+Hit u of undelete
 
 You can type the following to write and send e‐mails:
 m - To send a new mail message. After adding the recipient and subject, a blank message opens in joe (or whatever you have your $EDITOR set to).
@@ -81,3 +94,11 @@ the address of your mail server, here are examples of how to connect to a POPS o
 IMAPS e‐mail server from mutt:
 	mutt -f imaps://chris@imapsserver.example.com
 	mutt -f pops://chris@popsserver.example.com
+
+Mailboxes for gmail
+mailboxes +INBOX +archive +sent +drafts +spam +trash
+
+http://www.mutt.org/doc/manual/#mailcap
+	vim ~/.mailcap
+text/html; chromium %s
+image/png; viewnior %s

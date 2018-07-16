@@ -1,0 +1,140 @@
+Bash alias
+https://stackoverflow.com/questions/6883760/git-for-windows-bashrc-or-equivalent-config-files-for-git-bash-shell#6883798
+
+https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/
+https://www.gnu.org/software/bash/manual/html_node/Miscellaneous-Commands.html
+http://mywiki.wooledge.org/BashFAQ
+http://www.bash.academy/
+https://news.ycombinator.com/item?id=10737639
+
+http://mywiki.wooledge.org/BashPitfalls#for_i_in_.24.28ls_.2A.mp3.29
+https://www.linuxquestions.org/questions/programming-9/how-to-add-multiple-flags-in-bash-script-760323/
+https://stackoverflow.com/questions/7069682/how-to-get-arguments-with-flags-in-bash-script
+
+http://wiki.bash-hackers.org/doku.php?twitterID=nixCraft
+Make temporal directory
+	BCKP_DIR=$(mktemp -d)
+https://stackoverflow.com/questions/2489856/piping-a-bash-variable-into-awk-and-storing-the-output
+	name="$(ncat -lp 55556)"
+https://stackoverflow.com/questions/4277665/bash-how-do-i-compare-two-string-variables-in-an-if-statement
+	if [ "$name" == "D" ]; then
+https://stackoverflow.com/questions/92802/what-is-the-linux-equivalent-to-dos-pause
+	stty -echo
+	read -n1 -r -p "Press any key to start transfer..." key
+	stty echo
+	echo
+Remove any pesky trailing slash
+	name="${name%/}"
+
+Echo a netcat message
+	echo D | ncat --send-only $recipient $PORT
+
+http://askubuntu.com/questions/312428/how-can-i-make-a-list-with-most-used-commands-in-terminal
+	history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | head -n 20
+
+Reemplazar un texto en varios archivos
+	grep -lr =e 'xxx' | xargs sed -i 's/xxx/zzz/g'
+http://www.taringa.net/posts/linux/17713786/Comandos-para-GNU-Linux.html
+http://linuxconfig.org/bash-scripting-tutorial
+http://matt.might.net/articles/bash-by-example/
+
+There are three primary ways of assigning a value to a variable:
+	Explicit definition: VAR=value
+	Read: read VAR
+	Command substitution: VAR=`date`, VAR=$(date)
+
+	$ variable= foo
+This is a special case of a relatively widespread technique. To run a command with a certain envi-
+ronment without changing the environment of the calling shell, you can call the command prefixed
+by the variable assignment:
+	$ LD_LIBRARY_PATH=/usr/mozilla/lib firefox
+
+	$ echo -n "Enter your name: "
+	$ read myvar
+	$ echo "Hello $myvar"
+
+Usage message
+echo "Usage: `basename $0` username"
+
+Random number
+http://www.cyberciti.biz/tips/shell-scripting-bash-how-to-create-temporary-random-file-name.html
+	$ echo $RANDOM
+
+metalx1000
+number of lines
+	$ wc -l fichero
+Using sed
+	$ sed '=' fichero
+Not to print lines (quite mode)
+	$ sed -n '=' fichero
+Only print last of line of the output
+	$ sed -n '$=' fichero
+
+http://stackoverflow.com/questions/5116473/linux-command-to-open-url-in-default-browser
+	xdg-open http://localhost
+
+Make a backup
+https://stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash
+	cp /home/foo/realllylongname.cpp{,-old}
+Just to point out that to do the reverse (going from .cpp-old to .cpp) you'd do 
+	cp /home/foo/realllylongname.cpp{-old,}
+
+Replace echo for echo
+	!!:s/ehco/scho
+	
+Use mktemp to Create Temp Files 
+http://hacktux.com/bash/script/efficient
+	mktemp
+	tempfile=$(mktemp)
+	tempdir=$(mktemp -d)
+http://www.linuxjournal.com/article/7385
+
+http://www.unix.com/shell-programming-scripting/133825-how-remove-first-character-string-variable.html
+	var1=${var1#?}
+	var1=${var1:1}
+https://www.linuxquestions.org/questions/programming-9/remove-rightmost-character-from-bash-468398/
+	var=${var%\%}
+http://www.cyberciti.biz/faq/bash-remove-last-character-from-string-line-word/
+	echo "${x%?}"
+https://stackoverflow.com/questions/10218474/how-to-obtain-the-first-letter-in-a-bash-variable
+	firstletter=${word:0:1}
+	first=${word::1}
+
+The Sed double quote dilema
+http://www.linuxquestions.org/questions/programming-9/sed-doesn%27t-accept-$variable-in-bash-script-325935/
+http://www.linuxtopia.org/online_books/linux_tool_guides/the_sed_faq/sedfaq4_018.html
+
+executing sed from variable
+https://superuser.com/questions/104635/better-way-to-do-echo-x-sed-and-echo-x-grep
+	sed 's/foo/bar/' <<< "foobie"
+	grep 'this' <<< "this or that"
+
+Paste function
+	paste example1.txt example2.txt
+	paste example*.txt
+	paste -d: example*.txt
+	paste -d- example*.txt
+	paste -d. example*.txt
+	paste -d")" example*.txt
+If there were numbers involved.
+	paste -d+ pay*.txt
+	paste -d+ pay*.txt | while read line;do echo $line|bc;done
+	paste -d+ pay*.txt | while read line;do echo -n "${line}=";echo $line|bc;done
+Create CSV
+Dash for each line
+	< people.txt paste - - - - -
+	< people.txt paste -d, - - - - -
+
+https://www.reddit.com/r/linuxadmin/comments/7kvwjh/til_ctrlaltu_resets_and_erases_all_characters/
+https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts#Command_line_shortcuts
+	man readline
+Ctrl-U erases everything to the left of the cursor.
+Ctrl-K erases everything to the right of the cursor.
+CTRL-Y Paste 
+CTRL-W will delete the previous word (back to the last space)
+
+Ctrl+A OR ALT-B beginning of line
+Ctrl+E OR ALT-F end of line
+
+https://beyondgrep.com/feature-comparison/
+https://news.ycombinator.com/item?id=16096824

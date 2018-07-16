@@ -1,0 +1,7 @@
+Install
+	apt install shellinabox
+https://superuser.com/questions/309392/linux-console-session-over-http#309406
+https://code.google.com/archive/p/shellinabox/wikis/shellinaboxd_man.wiki
+	shellinaboxd -s /:LOGIN --disable-ssl --port 8080
+Will listen to localhost:8080. Use apache2 inverse proxy to secure it.
+You can Paste in Google Chrome with CTRL+SHIFT+V.

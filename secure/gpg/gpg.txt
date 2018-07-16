@@ -1,7 +1,7 @@
 https://xkcd.com/1553/
 https://lwn.net/Articles/735840/
 Use a key without importing it
-    gpg -f FILE_WITH_KEY -e DATAFILE
+    gpg --import-options show-only --import key_file.asc
 
 Install or update packages
 	apt install libgcrypto20

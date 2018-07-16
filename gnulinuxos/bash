@@ -1,0 +1,203 @@
+https://www.linuxquestions.org/questions/linux-networking-3/how-do-i-find-my-gateway-address-on-eth0-83484/
+	netstat -nr
+	ip route show
+	route -nee
+https://stackoverflow.com/questions/195655/how-to-copy-a-file-to-multiple-directories-using-the-gnu-cp-command
+	echo dir1 dir2 dir3 | xargs -n 1 cp file1
+	echo ./fs*/* | xargs -n 1 cp test 
+	cat <inputfile> | tee <outfile1> <outfile2> > /dev/null
+	find dir1 dir2 -exec cp file.txt {} \;
+http://askubuntu.com/questions/432795/how-to-copy-a-file-to-multiple-folders-in-terminal
+copy one file to multiple destinations
+	tee ~/folder1/test.txt ~/folder2/test.txt < ~/test.txt
+http://askubuntu.com/questions/432795/how-to-copy-a-file-to-multiple-folders-in-terminal
+	for dir in *; do [ -d "$dir" ] && cp /path/file.txt "$dir" ; done
+		
+http://stackoverflow.com/questions/15441744/how-do-i-append-some-text-to-pipe-without-temporary-file
+	cat <(ls smthing) <(echo more)
+http://www.theunixschool.com/2013/02/sed-examples-replace-delete-print-lines-csv-files.html
+http://www.folkstalk.com/2013/03/sed-remove-lines-file-unix-examples.html
+	sed '1d' file
+	sed '$d' file
+http://soft.zoneo.net/Linux/remove_empty_lines.php
+erase empty lines 
+	sed '/^$/d' myFile > tt 
+https://stackoverflow.com/questions/16414410/delete-empty-lines-using-sed
+more elaborated
+	sed '/^\s*$/d'
+
+https://stackoverflow.com/questions/10460919/how-to-delete-first-two-lines-and-last-four-lines-from-a-text-file-with-bash
+https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
+Delete first line
+	tail -n +2 "$FILE"
+Delete from head and tail of file
+	tail -n +3 file.txt | head -n -4
+EXCELENT WORK WITH AWK https://stackoverflow.com/questions/9894986/how-can-i-delete-every-xth-line-in-a-text-file
+Remove Every Nth line
+Remove every other line:
+	awk 'NR % 2 == 0' file > newfile
+Remove every 10th line:
+	awk 'NR % 10 != 0' file > newfile
+http://en.kioskea.net/faq/1451-sed-delete-one-or-more-lines-from-a-file
+With awk and sed
+Remove every other line:
+	awk 'NR % 2 == 0' file > newfile
+Remove every 10th line:
+	awk 'NR % 10 != 0' file > newfile
+
+	sed '4,5d'
+	seq 10 | sed '0~2d' # delete every 2nd line
+	seq 100 | sed '0~10!d' # delete 9 out of 10 lines
+
+Remove empty lines
+https://stackoverflow.com/questions/16414410/delete-empty-lines-using-sed
+	sed '/^\s*$/d'
+https://stackoverflow.com/questions/2099471/add-a-prefix-string-to-beginning-of-each-line
+	sed -e 's/^/prefix/' file
+https://stackoverflow.com/questions/1251999/sed-how-can-i-replace-a-newline-n
+	sed ':a;N;$!ba;s/\n/ /g'
+Trim
+http://www.cyberciti.biz/tips/delete-leading-spaces-from-front-of-each-word.html
+	sed -e 's/^[ \t]*//'
+Replace first word
+https://superuser.com/questions/246837/how-do-i-add-text-to-the-beginning-of-a-file-in-bash
+	sed -i '1itask goes here' todo.txt
+	sed '1s/^/"/'
+http://askubuntu.com/questions/21555/command-to-append-line-to-a-text-file-without-opening-an-editor
+	sed -i '$a hello world'
+https://stackoverflow.com/questions/8739427/bash-add-string-to-the-end-of-the-file-without-line-break
+	sed '$s/$/yourText2/' 
+http://askubuntu.com/questions/21555/command-to-append-line-to-a-text-file-without-opening-an-editor
+	sed -i '$a hello world'
+
+Read multifiles
+https://stackoverflow.com/questions/9885338/reading-lines-from-two-files-in-one-while-loop
+
+BASH NUMBERS
+https://stackoverflow.com/questions/6348902/how-can-i-add-numbers-in-a-bash-script
+	num=$(($num1 + $num2))
+Replace certain line
+https://stackoverflow.com/questions/11145270/bash-replace-an-entire-line-in-a-text-file
+	sed 'Ns/.*/replacement-line/' file.txt > new_file.txt
+where N should be replaced by your target line number
+
+Variables in SED
+https://stackoverflow.com/questions/584894/sed-scripting-environment-variable-substitution
+
+CONTROL-W Erase the preceding word
+CONTROL-U Erase the entire line
+CONTROL-A Move the cursor to the beginning of the line
+CONTROL-E Move the cursor to the end of the line
+
+https://stackoverflow.com/questions/4542732/how-do-i-negate-a-test-with-regular-expressions-in-a-bash-script
+
+http://www.emoticode.net/bash/view-your-public-ip-via-terminal.html
+With wget:
+    $ wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+With curl:
+    $ curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+or
+    $ curl ifconfig.me
+With lynx:
+    $ lynx -dump checkip.dyndns.org
+
+	$ echo $? 
+	$ echo %ERRORLEVEL% 
+
+# clear any previous sudo permission
+sudo -k
+
+# run inside sudo
+sudo sh <<SCRIPT
+
+  # add heroku repository to apt
+  echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+
+  # install heroku's release key for package verification
+  wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+
+  # update your sources
+  apt-get update
+
+  # install the toolbelt
+  apt-get install -y heroku-toolbelt
+
+SCRIPT
+
+Check if var is empty
+http://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty
+if [[ $variable ]]
+Check if directory exists
+if [ -d ~/bin ]; then
+	PATH=$PATH:~/bin
+fi
+
+Find Files by size
+http://www.cyberciti.biz/faq/find-large-files-linux/
+	$ find /home/david/BTSync -type f -size -1500c -exec ls -lh {} \;
+
+http://webcache.googleusercontent.com/search?q=cache:5z9gUWvIH40J:www.techbar.me/linux-shell-tips/+&cd=1&hl=en&ct=clnk&gl=fi
+http://www.techbar.me/linux-shell-tips/
+Show free RAM in MB:
+	$ free -m | grep cache | awk '/[0-9]/{ print $4" MB" }'
+Print out the last cat command from history:
+	$ !cat:p
+Run your last cat command from history:
+	$ !cat
+
+Run last command (if it was: mkdir /root/test, below will run: sudo mkdir /root/test):
+	$ sudo !!
+
+Go to the previous working directory:
+	$ cd -
+Split large tar.gz archive (100MB each) and put it back:
+	$ split -b 100m /path/to/large/archive /path/to/output/files
+	$ cat files* > archive
+
+# lets toos an image onto my server and pbcopy thoose sweet
+function scpp(){
+	scp "$1" paul@paulirish.com:~/pauliris.com/i;
+	echo "http://pauliris.com/i/$1" | pbcopy;
+	echo "Copied to clipboard: http://pauliris.com/i/$1"
+}
+
+$ cd ~/Download
+$ scpp omghilarious.png
+
+http://www.emoticode.net/bash/generate-md5-key-for-ssh.html
+head -c 200 /dev/urandom | md5sum | awk '{ print $1 }'
+
+read -d '' content <<EOF
+{
+  "device":"",
+  "tipousuario":"1111",
+  "nombre": "Allan",
+  "apellido": "Gutierrez",
+  "email": "201504139@ingenieria.usac.edu.gt",
+  "carrera":"2222",
+  "periodo":"3333",
+  "anio":"4444",
+  "cursos":[
+    {"curso":"home","seccion":"212 555-1234","activo":"212 555-1234"},
+    {"curso":"fax","seccion":"646 555-4567","activo":"646 555-4567"}
+  ]
+}
+EOF
+
+https://stackoverflow.com/a/3029040
+if [[ $VAR = *[[:digit:]]* ]]; then
+ echo "$VAR is numeric"
+else
+ echo "$VAR is not numeric"
+fi
+
+https://stackoverflow.com/a/965072
+First, get file name without the path:
+
+filename=$(basename -- "$fullfile")
+extension="${filename##*.}"
+filename="${filename%.*}"
+
+Alternatively, you can focus on the last '/' of the path instead of the '.' which should work even if you have unpredictable file extensions:
+
+filename="${fullfile##*/}"

@@ -67,5 +67,12 @@ Configwizard made the keys already.
 	vim local.d/dkim_signing.conf
 path = "/var/lib/rspamd/dkim/$domain.$selector.key";
 selector_map = "/usr/local/etc/rspamd/dkim_selectors.map";
-selector = "2018061601";
+# selector = "2018061601";
 	vim dkim_selectors.map
+example.com 2018061601
+
+Create more key pairs
+	rspamadm dkim_keygen -d example.org -s 2018022301
+
+Backup config
+	tar cf backup.tar dkim_selectors.map dkim_signing.conf local.d/worker-controller.inc local.d/dkim_signing.conf

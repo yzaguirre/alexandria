@@ -1,0 +1,4 @@
+https://ranger.github.io/
+	apt install ranger
+	ranger --copy-config rc
+	vim ~/.config/ranger/rc.conf

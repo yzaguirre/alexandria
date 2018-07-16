@@ -7,6 +7,8 @@ Print comment and extract
 Show file list
 	unrar l file.rar
 	rar vt file.rar
+Create file
+	rar a -r mybackup.rar file1 file2 
 https://diasp.eu/posts/3890839
 	rarcrack file.ext --threads 10 --type zip
 

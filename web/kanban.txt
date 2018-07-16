@@ -6,9 +6,9 @@ https://docs.kanboard.org/
 https://github.com/kanboard/kanboard/releases
 
 	cd /var/www
-	wget https://github.com/kanboard/kanboard/archive/v1.2.3.tar.gz
-	tar xf v1.2.3.tar.gz
-	mv kanboard-1.2.3 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.5.tar.gz
+	tar xf v1.2.5.tar.gz
+	mv kanboard-1.2.5 kanboard
 	chown www-data:www-data -R kanboard
 
 # Old instructions
@@ -18,9 +18,9 @@ Make backup
 	mv kanboard/data/ .
 	rm -rf kanboard
 Update
-	wget https://github.com/kanboard/kanboard/archive/v1.2.3.tar.gz
-	tar xf v1.2.3.tar.gz
-	mv kanboard-1.2.3 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.5.tar.gz
+	tar xf v1.2.5.tar.gz
+	mv kanboard-1.2.5 kanboard
 Restore the instance data
 	mv data/db.sqlite kanboard/data
 	chown www-data:www-data -R kanboard
@@ -33,8 +33,6 @@ https://docs.kanboard.org/en/latest/admin_guide/cronjob.html
 
 Gogs integration
 https://github.com/kanboard/plugin-gogs-webhook
-	wget https://github.com/kanboard/plugin-gogs-webhook/releases/download/v1.0.3/GogsWebhook-1.0.3.zip
-	
 
 # Kanboard plugin for Mattermost
 https://github.com/kanboard/plugin-mattermost

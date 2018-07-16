@@ -1,3 +1,6 @@
+Filezilla installer is suspicious again
+https://news.ycombinator.com/item?id=17381184
+
 https://filezilla-project.org/download.php?show_all=1
 Verify
 	sha512sum FileZilla_3.11.0.2_x86_64-linux-gnu.tar.bz2

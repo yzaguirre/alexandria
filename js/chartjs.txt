@@ -1,2 +1,3 @@
 https://www.chartjs.org/
 https://www.chartjs.org/docs/latest/general/responsive.html
+	npm install -s chart.js

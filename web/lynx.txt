@@ -1,0 +1,2 @@
+http://lynx.invisible-island.net/release/
+	apt install lynx

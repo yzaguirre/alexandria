@@ -1,0 +1,22 @@
+If you need to go via a proxy server, the ~/.wgetrc file can be used to set proxy settings for the
+wget tool.
+
+	$ vim ~/.wgetrc
+http_proxy = http://proxyserver.intranet.example.com:8080/
+https_proxy = http://proxyserver.intranet.example.com:8080/
+proxy_user = steve
+proxy_password = letmein
+
+You can also set equivalent variables in the shell.
+The /etc/wgetrc fi le will be processed first, but is overruled by the user's ~/.wgetrc (if it exists).
+
+You must use chmod 0600 ~/.wgetrc for ~/.wgetrc to be processed - this is for
+your own protection; valid passwords should not be visible by anyone but your-
+self! If the permissions are any more open than 0600, wget will ignore the file.
+
+	$ chmod 0600 ~/.wgetrc
+
+http://www.linuxbsdos.com/2015/01/12/wget-and-the-user-agent-option/
+	wget -U "" http://www.example.com/image.png
+https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it#273776
+	wget -r -np -R "index.html*" http://example.com/configs/.vim/

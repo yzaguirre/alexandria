@@ -1,0 +1,47 @@
+https://mitmproxy.org/
+https://docs.mitmproxy.org/stable/overview-installation/
+https://mitmproxy.org/doc/howmitmproxy.html
+https://github.com/mitmproxy/mitmproxy
+	apt install python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev
+	pip3 install mitmproxy
+http://docs.mitmproxy.org/en/latest/transparent/linux.html
+	sudo sysctl -w net.ipv4.ip_forward=1
+	echo 0 | sudo tee /proc/sys/net/ipv4/conf/*/send_redirects
+	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8080
+	mitmproxy -T --host
+https://dadario.com.br/mitming-ssl-tls-connections/
+Start up mitmdump in proxy mode, and write all traffic to outfile.
+	mitmdump -w outfile
+	curl -x http://127.0.0.1:8080 http://some-http-site.com
+
+Filtering saved traffic
+	mitmdump -nr infile -w outfile "~m post"
+As we're using the same machine, we have to make our operating system trust the CA cert from mitmproxy.
+Run mimtproxy once to generate the file below (mitmproxy-ca-cert.cer) and exit
+	mitmproxy
+Add cert to trusted certs on your OS
+	cp ~/.mitmproxy/mitmproxy-ca-cert.cer /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
+	/usr/sbin/update-ca-certificates
+And it's done. Now we can try HTTPS websites:
+	curl -x https://127.0.0.1:8080 https://dadario.com.br
+Ok, but how to manipulate requests?
+We can use just run mitmdump passing a script file
+	mitmdump -s add_headers.py
+The content of add_headers.py is this:
+
+def request(context, flow):
+    flow.request.headers["newheader"] = ["foo"]
+
+Use own certs
+Concat the private + public + intermediate + dh
+	mitmproxy -T --host --client-certs DIRECTORY
+
+Using a custom certificate authority
+You can use your own certificate authority by passing the --cadir DIRECTORY option to mitmproxy.
+Mitmproxy will then look for mitmproxy-ca.pem in the specified directory.
+	mitmproxy -T --host --cadir /etc/tls/certs/intermediate.pem
+
+Save master secrets
+	SSLKEYLOGFILE="$PWD/.mitmproxy/sslkeylogfile.txt" mitmproxy
+

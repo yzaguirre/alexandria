@@ -25,3 +25,6 @@ Bryce Harrington - GPG#E0E67611
 
 https://stackoverflow.com/questions/9853325/how-to-convert-a-svg-to-a-png-with-image-magick
 	inkscape -z -e test.png -w 1024 -h 1024 test.svg
+For favicon:
+https://stackoverflow.com/a/14174624
+	inkscape -z -e favicon-196x196.png -w 196 -h 196 icon.svg

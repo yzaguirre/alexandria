@@ -93,6 +93,10 @@ Creates app/Rules/MustBeFiveCharacters.php
 	]);
 If need to pass arguments to the rule constructor, use new App\Rules\MustBeFiveCharacters($arg0, $arg1)
 
+https://stackoverflow.com/questions/33624710/how-to-validate-money-in-laravel5-request-class#33624808
+Validate money
+	'amount' => "required|regex:/^\d*(\.\d{1,2})?$/"
+
 Print validation errors in blade view
 	@if (count($errors))
 		<ul>
@@ -281,3 +285,18 @@ CSRF Protection
 https://laravel.com/docs/5.6/csrf
 
 https://laravel.com/docs/5.6/passport#consuming-your-api-with-javascript
+
+Email setup
+https://github.com/swiftmailer/swiftmailer
+https://swiftmailer.symfony.com/docs/introduction.html
+https://stackoverflow.com/questions/31378357/laravel-5-sending-email#31379928
+https://github.com/swiftmailer/swiftmailer/commit/12a1510b0d29ccc33d772649415ddc43250dbb13
+	php artisan make:mail Welcome
+https://laravel.com/docs/5.6/mail#markdown-mailables
+	php artisan make:mail WelcomeMD --markdown="emails.welcomeMD"
+	php artisan vendor:publish --tag=laravel-mail
+Dates
+https://scotch.io/tutorials/easier-datetime-in-laravel-and-php-with-carbon
+Time zone
+https://stackoverflow.com/questions/31475014/how-to-set-local-timezone-in-laravel
+User::find(1)->foobazed_at->timezone(Auth::user()->timezone);

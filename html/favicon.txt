@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/23849377/html-5-favicon-support
+See inkscape.txt
+
+<link rel="icon" href="path/to/favicon.png">
+This icon should be 196x196 pixels in size to cover all devices that may use this icon.
+

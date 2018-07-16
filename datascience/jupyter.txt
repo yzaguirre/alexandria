@@ -1,11 +1,15 @@
 https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906
 https://news.ycombinator.com/item?id=16420142
 
-http://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
-http://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
+https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
+https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
 	sudo -H pip3 install jupyterlab
 	jupyter notebook --version
+https://jupyter-notebook.readthedocs.io/en/stable/config.html
+	jupyter notebook --generate-config
 Start JupyterLab
+https://github.com/jupyter/notebook/issues/1318
+	unset XDG_RUNTIME_DIR
 	jupyter lab
 Visit http://localhost:8888/
 Because JupyterLab is a server extension of the classic Jupyter Notebook server,
