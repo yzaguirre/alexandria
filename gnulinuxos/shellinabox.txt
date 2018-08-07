@@ -5,3 +5,5 @@ https://code.google.com/archive/p/shellinabox/wikis/shellinaboxd_man.wiki
 	shellinaboxd -s /:LOGIN --disable-ssl --port 8080
 Will listen to localhost:8080. Use apache2 inverse proxy to secure it.
 You can Paste in Google Chrome with CTRL+SHIFT+V.
+	systemctl stop shellinabox.service
+	systemctl disable shellinabox.service

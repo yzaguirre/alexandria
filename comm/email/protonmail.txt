@@ -1,0 +1,6 @@
+https://protonmail.com/blog/address-verification-pgp-support/
+https://news.ycombinator.com/item?id=17610127
+
+hkps://api.protonmail.ch
+Grab a key
+	wget -O this_key.asc "https://api.protonmail.ch/pks/lookup?op=get&search=username@protonmail.com"

@@ -21,6 +21,9 @@ https://www.digitalocean.com/community/tutorials/how-to-use-wp-cli-to-manage-you
 	php wp-cli.phar --info
 	chmod +x wp-cli.phar
 	mv wp-cli.phar /usr/local/bin/wp
+Change password
+	wp user list
+	wp user update 1 --user_pass=$UP3RstrongP4$$w0rd
 
 Update
 https://codex.wordpress.org/Upgrading_WordPress
@@ -29,3 +32,7 @@ Backup
 https://codex.wordpress.org/WordPress_Backups
 	name=wp.sql
 	mysqldump -e -u wp -p wp > $name
+Email capabilities
+https://wordpress.org/plugins/tags/smtp/
+https://wordpress.org/plugins/smtp-mailer/
+https://wordpress.org/plugins/wp-mail-smtp/

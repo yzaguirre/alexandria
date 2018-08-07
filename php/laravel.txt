@@ -300,3 +300,6 @@ https://scotch.io/tutorials/easier-datetime-in-laravel-and-php-with-carbon
 Time zone
 https://stackoverflow.com/questions/31475014/how-to-set-local-timezone-in-laravel
 User::find(1)->foobazed_at->timezone(Auth::user()->timezone);
+
+https://stackoverflow.com/questions/17591181/how-to-get-the-current-url-inside-if-statement-blade-in-laravel-4#17591908
+if (Request::is('admin/*'))

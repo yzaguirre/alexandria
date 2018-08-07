@@ -1,0 +1,17 @@
+https://kotlinlang.org/
+https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt
+https://kotlinlang.org/docs/tutorials/command-line.html
+	wget https://github.com/JetBrains/kotlin/releases/download/v1.2.51/kotlin-compiler-1.2.51.zip
+	unzip kotlin-compiler-1.2.51.zip -d /opt
+Compile
+	kotlinc HelloWorld.kt -include-runtime -d HelloWorld.jar
+Run
+	java -jar HelloWorld.jar
+REPL
+	kotlinc-jvm
+With a library
+	wget https://github.com/JodaOrg/joda-time/releases/download/v2.10/joda-time-2.10-dist.tar.gz
+	tar xf joda-time-2.10-dist.tar.gz
+	kotlinc-jvm -cp joda-time-2.10/joda-time-2.10.jar
+	import org.joda.time.DateTime
+	DateTime.now()

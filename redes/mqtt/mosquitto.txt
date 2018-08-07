@@ -1,0 +1,78 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04-quickstart
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04
+Install
+	apt install certbot mosquitto mosquitto-clients
+	add-apt-repository ppa:certbot/certbot
+Allow port 80
+	ufw allow 80
+Cert
+	certbot certonly --standalone --preferred-challenges http -d mqtt.example.com
+
+Configuring Mosquitto
+	mosquitto_passwd -c /etc/mosquitto/passwd your-username
+Create configuration file
+	vim /etc/mosquitto/conf.d/default.conf
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+
+listener 1883 localhost
+
+listener 8883
+certfile /etc/letsencrypt/live/mqtt.example.com/cert.pem
+cafile /etc/letsencrypt/live/mqtt.example.com/chain.pem
+keyfile /etc/letsencrypt/live/mqtt.example.com/privkey.pem
+
+listener 8083
+protocol websockets
+certfile /etc/letsencrypt/live/mqtt.example.com/cert.pem
+cafile /etc/letsencrypt/live/mqtt.example.com/chain.pem
+keyfile /etc/letsencrypt/live/mqtt.example.com/privkey.pem
+
+Restart Mosquitto to pick up the configuration changes:
+	systemctl restart mosquitto
+	systemctl status mosquitto
+	tail /var/log/mosquitto/mosquitto.log
+If all is well, use ufw to allow the two new ports through the firewall:
+	ufw allow 8883
+	ufw allow 8083
+Configuring Certbot Renewals
+Open the Certbot renewal configuration file for your domain name:
+	vim /etc/letsencrypt/renewal/mqtt.example.com.conf
+Add the following renew_hook option on the last line:
+renew_hook = systemctl restart mosquitto
+
+Try a dry run
+	certbot renew --dry-run
+
+Testing Mosquitto
+We can subscribe to the topic test on the localhost listener like so:
+	mosquitto_sub -h localhost -t test -u "your-user" -P "your-password"
+And we can publish with mosquitto_pub:
+	mosquitto_pub -h localhost -t test -m "hello world" -u "your-user" -P "your-password"
+To subscribe using the secured listener on port 8883, do the following:
+	mosquitto_sub -h mqtt.example.com -t test -p 8883 --capath /etc/ssl/certs/ -u "your-username" -P "your-password"
+And this is how you publish to the secured listener:
+	mosquitto_pub -h mqtt.example.com -t test -m "hello world" -p 8883 --capath /etc/ssl/certs/ -u "your-username" -P "your-password"
+
+To test the websocket functionality, we'll use a public, browser-based MQTT client.
+Open the Eclipse Paho javascript client utility in your browser and fill out the connection information as follows:
+https://www.eclipse.org/paho/clients/js/utility/
+Host is the domain for your Mosquitto server, mqtt.example.com
+Port is 8083
+ClientId can be left to the default randomized value
+Path can be left to the default value of /ws
+Username is your Mosquitto username from Step 3
+Password is the password you chose in Step 3
+After pressing Connect, the client will connect to your server.
+You can publish and subscribe using the Subscribe and Publish Message panes below the Connection pane.
+
+
+
+
+
+
+
+
+
+
+

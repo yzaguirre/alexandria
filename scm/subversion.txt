@@ -50,7 +50,9 @@ http://www.wandisco.com/svnforum/threads/39862-Timeouts-connection-reset-using-S
 
 View status of repository
 http://stackoverflow.com/questions/1252270/how-do-i-view-all-ignored-patterns-set-with-svnignore-recursively-in-an-svn-rep
-	$ svn proplist -Rv
-	$ svn pg -R svn:ignore .
+	svn proplist -Rv
+	svn pg -R svn:ignore .
 http://stackoverflow.com/questions/216049/how-do-i-get-a-list-of-all-unversioned-files-from-svn
-	$ svn status --no-ignore
+	svn status --no-ignore
+ihttps://stackoverflow.com/questions/86049/how-do-i-ignore-files-in-subversion
+	svn propset svn:ignore ".git" .

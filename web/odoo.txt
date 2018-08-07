@@ -1,0 +1,16 @@
+https://www.odoo.com/es_ES/page/download
+https://www.odoo.com/documentation/10.0/setup/install.html
+	npm install -g less
+	apt install postgresql-server wkhtmltopdf
+	postgresql-setup initdb
+	wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+	echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+	apt update && apt install odoo
+The configuration file can be found at /etc/odoo/odoo.conf
+on Linux, use your distribution's package, then create a postgres user named like your login:
+	su - postgres -c "createuser -s $USER"
+Python dependencies listed in the requirements.txt file.
+	cd /etc/odoo
+	pip install -r requirements.txt
+Run odoo
+	./odoo-bin --addons-path=addons,../mymodules --db-filter=mydb$

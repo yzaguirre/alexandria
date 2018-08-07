@@ -41,4 +41,5 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s
 	apt update
 	apt install python-certbot-apache
 	certbot --apache -d example.com -d www.example.com
+	certbot --apache certonly -d example.com -d www.example.com
 Cronjob installed at /etc/cron.d

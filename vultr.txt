@@ -1,0 +1,49 @@
+https://www.vultr.com/api/
+Account
+Show info
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/auth/info
+List applications
+	curl https://api.vultr.com/v1/app/list
+List plans
+	curl https://api.vultr.com/v1/plans/list?type=vc2
+	curl https://api.vultr.com/v1/plans/list_vc2
+201: $5.00 a month
+
+List regions
+	curl https://api.vultr.com/v1/regions/list
+List region availability
+	curl https://api.vultr.com/v1/regions/availability?DCID=1
+	curl https://api.vultr.com/v1/regions/availability_vc2?DCID=1
+List SSH keys
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/sshkey/list
+List OS
+	curl https://api.vultr.com/v1/v1/os/list
+167 CentOS 7 x64
+270 Ubuntu 18.04 x64
+244 Debian 9 x64 (stretch)
+
+Create a server
+Write down the SUBID
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/create --data 'DCID=39' --data 'VPSPLANID=1' --data 'OSID=270'
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/create --data 'DCID=39' --data 'VPSPLANID=1' --data 'OSID=270' --data 'SSHKEYID=key'
+DCID integer Location to create this virtual machine in.  See v1/regions/list
+SSHKEYID string (optional) List of SSH keys to apply to this server on install. Separate keys with commas
+label string (optional) This is a text label that will be shown in the control panel
+enable_private_network string (optional) 'yes' or 'no'. If yes, private networking support will be added to the new server.
+enable_ipv6 string (optional) 'yes' or 'no'.  If yes, an IPv6 subnet will be assigned to the machine (where available)
+notify_activate string (optional, default 'yes') 'yes' or 'no'. If yes, an activation email will be sent when the server is ready.
+ddos_protection (optional, default 'no') 'yes' or 'no'.  If yes, DDOS protection will be enabled on the subscription (there is an additional charge for this)
+hostname string (optional) The hostname to assign to this server.
+tag string (optional) The tag to assign to this server.
+FIREWALLGROUPID string (optional) The firewall group to assign to this server. See /v1/firewall/group_list.
+
+List a running servers
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/list
+
+Destroy a server
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/destroy --data 'SUBID=576965'
+
+Create SSH key
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/sshkey/create --data 'name=test SSH KEY' --data 'ssh_key=ssh-rsa AA... test@example.com'
+Destroy SSH key
+	curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/sshkey/destroy --data 'SSHKEYID=541b4960f23bd'

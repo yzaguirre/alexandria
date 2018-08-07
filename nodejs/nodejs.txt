@@ -6,7 +6,7 @@ Ubuntu install
 	wget https://deb.nodesource.com/setup_6.x
 	sudo bash setup_6.x
 	rm setup_6.x
-	apt install nodejs=6.14.1-1nodesource1
+	apt install nodejs=6.14.3-1nodesource1
 
 	node --inspect --debug-brk server.js
 Print Objects

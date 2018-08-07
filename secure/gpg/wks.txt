@@ -1,0 +1,9 @@
+https://www.gnupg.org/blog/20160830-web-key-service.html
+https://gnupg.org/blog/20170803-web-key-in-enigmail.html
+
+https://news.ycombinator.com/item?id=17611651
+WKD is both more secure than HKP (as it's always over HTTPS and authenticates user's domain),
+it's enabled by default in a growing number of email clients (Enigmail, GPG for Outlook, KMail)
+and providers (kernel.org [1], posteo.de),
+it's used by GPG when locating a key and the setup is incredibly easy
+(just put binary key in one location).

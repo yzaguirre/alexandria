@@ -1,0 +1,11 @@
+https://www.jetbrains.com/idea/download/index.html
+	wget https://download.jetbrains.com/idea/ideaIC-2018.1.6-no-jdk.tar.gz.sha256
+	sha256sum -c ideaIC-2018.1.6-no-jdk.tar.gz.sha256
+https://www.jetbrains.com/help/idea/install-and-set-up-product.html
+	apt install openjdk-8-jdk
+	tar xf ideaIC-2018.1.6-no-jdk.tar.gz -C /opt/
+	cd /opt/idea-IC-181.5540.7/bin
+	./idea.sh
+Add /opt/idea-IC-181.5540.7/bin to PATH
+	vim ~/.profile
+export PATH=$PATH:/opt/idea-IC-181.5540.7/bin

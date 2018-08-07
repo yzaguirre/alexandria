@@ -56,6 +56,7 @@ NOTES:
 
 # Regular client example
 	./letsencrypt-auto --email diafygi@gmail.com --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr
+
 # Regular client
 https://certbot.eff.org/docs/using.html
 	certbot certonly --webroot -w /var/www/example/ -d www.example.com -d example.com -w /var/www/other -d other.example.net -d another.other.example.net
@@ -113,3 +114,8 @@ Run a Certbot dry run to make sure the syntax is ok
 	certbot renew --dry-run
 
 Create standalone wildcard cert
+
+https://www.ericlight.com/using-ecdsa-certificates-with-lets-encrypt
+	openssl ecparam -genkey -name secp384r1 | openssl ec -out ec.key
+	openssl req -new -sha256 -key ec.key -nodes -out ec.csr -outform pem
+	certbot certonly -w /var/www/html/ -d {your_domain} --email "{your_email}" --csr ./ec.csr --agree-tos

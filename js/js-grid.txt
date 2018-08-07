@@ -1,0 +1,4 @@
+https://github.com/tabalinas/jsgrid#installation
+	bower install js-grid --save
+	npm install --save js-grid
+Include jsgrid.min.js, jsgrid-theme.min.css, and jsgrid.min.css files into the web page.

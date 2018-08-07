@@ -1,2 +1,5 @@
 https://getbootstrap.com/
 	npm install bootstrap
+
+nav bar
+https://getbootstrap.com/docs/4.1/components/navbar/
