@@ -1,32 +1,40 @@
+https://developer.android.com/studio/#downloads
+https://developer.android.com/studio/install
 Dependencies
-	sudo apt-get install lib32stdc++6 lib32z1
+	apt install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 # lib32z1-dev
 Download
-	wget http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz
-Verify sha-1
-	sha1sum android-sdk_r24.3.3-linux.tgz
-cd4cab76c2e3d926b3495c26ec56c831ba77d0d0
-	tar xf android-sdk_r24.3.3-linux.tgz -C /opt
-	cd /opt/android-sdk-linux
-	mkdir /opt/android
-Edit ~/.profile
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/bin
-export ANDROID_HOME=/opt/android-sdk-linux
-export ANDROID_SDK_HOME=/opt/android
-export ANDROID_NDK_HOME=/opt/android-ndk-linux
-export NDK_ROOT=/opt/android-ndk-linux
-PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+	wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+	mkdir /opt/android-sdk
+	unzip sdk-tools-linux-4333796.zip -qd /opt/android-sdk
+For W
+Env variables
+https://developer.android.com/studio/command-line/variables
+https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-environment-variable
+	vim ~/.profile
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_SDK_HOME=~/.android
+export ANDROID_NDK_ROOT=/opt/android-ndk
+PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools/bin
+To download for windows, set the env variable
+export REPO_OS_OVERRIDE=windows
+Windows locations
+Locations
+%LOCALAPPDATA%\Android\Sdk
+%LOCALAPPDATA%\Android\Sdk\platform-tools
 
-Install everything (couple of gigabytes, not recommended)
-	android update sdk --no-ui
-http://tools.android.com/recent/updatingsdkfromcommand-line
-	android list sdk
-	android update sdk --no-ui --filter 2.3.34,31,tool,platform-tools
+https://developer.android.com/studio/command-line/sdkmanager
+	sdkmanager --list
 
-Adding Packages
-http://developer.android.com/sdk/installing/adding-packages.html
-To develop an Android app, you also need to download at least one Android platform and the latest SDK Platform-tools.
-	android sdk
+Platforms
+https://en.wikipedia.org/wiki/Android_(operating_system)#Platform_usage
+	sdkmanager --install "platform-tools" "platforms;android-19" "platforms;android-21" "platforms;android-26" "platforms;android-27" "platforms;android-28"
+Build tools
+https://developer.android.com/studio/releases/build-tools
+	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2"
+More stuff
+	sdkmanager --install "add-ons;addon-google_apis-google-19"
 
 Building your first app
 http://developer.android.com/training/basics/firstapp/index.html

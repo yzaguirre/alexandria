@@ -16,6 +16,9 @@ PATH=$PATH:$HOME/.composer/vendor/bin
 Otherwise, update dependencies
 	composer global update
 
+Apache2 install
+https://stackoverflow.com/questions/35501041/how-to-configure-apache-web-server-to-deploy-laravel-5#35501156
+
 Create a fresh Larvel installation
 	laravel new blog
 Make project based on laravel version 5.5.*
@@ -131,6 +134,8 @@ Give it a name that corresponds to what I am doing
 	php artisan make:migration create_tasks_table --create=tasks
 To apply more changes, clear the dump
 	composer dump-autoload
+	php artisan cache:clear 
+	php artisan config:clear
 Migrate the database
 	php artisan migrate
 To modify a schema, edit the migration file and 
@@ -303,3 +308,14 @@ User::find(1)->foobazed_at->timezone(Auth::user()->timezone);
 
 https://stackoverflow.com/questions/17591181/how-to-get-the-current-url-inside-if-statement-blade-in-laravel-4#17591908
 if (Request::is('admin/*'))
+
+Eloquent relationships
+https://laravel.com/docs/5.6/eloquent-relationships
+	return $this->hasMany('App\Comment');
+	return $this->hasMany('App\Comment', 'foreign_key');
+	return $this->hasMany('App\Comment', 'foreign_key', 'local_key');
+
+Files
+https://laravel.com/docs/5.6/filesystem
+Upload files
+https://laraveldaily.com/upload-multiple-files-laravel-5-4/

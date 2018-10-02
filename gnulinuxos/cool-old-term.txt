@@ -1,0 +1,16 @@
+http://www.techdrivein.com/2014/07/cool-old-term-retro-styled-terminal-emulator-ubuntu1404.html
+http://swordfishslabs.wordpress.com/2014/07/29/brace-yourself-cool-old-term-is-coming/
+https://github.com/Swordifish90/cool-old-term
+	sudo apt-get install build-essential qmlscene qt5-qmake qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtgraphicaleffects qml-module-qtquick-dialogs qml-module-qtquick-localstorage qml-module-qtquick-window2
+	wget https://github.com/Swordifish90/cool-old-term/archive/master.zip
+	unzip cool-old-term-master.zip
+	cd cool-old-term-master/konsole-qml-plugin
+	qmake && make && make install
+	cd ..
+	./cool-old-term
+
+cat <<EOF > ~/bin/cool-old-term && chmod u+x ~/bin/cool-old-term
+#!/bin/bash
+cd /VMs/opt/cool-old-term/
+./cool-old-term
+EOF

@@ -1,0 +1,27 @@
+always store and broadcast your data in GMT, and then adjust on the client if you want it shown in
+the user's local time zone.
+
+CheckBox
+https://stackoverflow.com/questions/426258/how-do-i-check-a-checkbox-with-jquery
+$(".myCheckbox").prop('checked', true);
+$('.myCheckbox').is(':checked');
+
+Date
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FDate#Example:_Several_ways_to_assign_dates
+https://stackoverflow.com/questions/10211145/getting-current-date-and-time-in-javascript
+	currentdate = new Date();
+	currentdate.getDate() + "/"+(currentdate.getMonth() +1 ) + "/" + currentdate.getFullYear()
+Epoch to human readable
+
+
+For in
+https://stackoverflow.com/questions/500504/why-is-using-for-in-with-array-iteration-such-a-bad-idea#500531
+for(i=0,x=a.length;i<x;i++){
+ document.write(i + ' = ' + a[i]);
+}
+
+Splice
+var removedItem = fruits.splice(pos, 1);
+
+Upload files
+https://www.script-tutorials.com/pure-html5-file-upload/

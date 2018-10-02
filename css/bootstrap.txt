@@ -3,3 +3,5 @@ https://getbootstrap.com/
 
 nav bar
 https://getbootstrap.com/docs/4.1/components/navbar/
+
+https://getbootstrap.com/docs/4.1/components/forms/

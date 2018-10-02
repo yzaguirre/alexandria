@@ -1,0 +1,17 @@
+You may also need Java, but you must figure out what you need. 
+Most users will only need OpenJRE and the Java browser plugin:
+	# apt-get install icedtea-7-plugin openjdk-7-jre
+For development, you'll also want OpenJDK
+	# apt-get install openjdk-7-jdk
+
+If for various reasons, you need Oracle Java (the package includes JDK, JRE and the browser plugin), 
+you can install Oracle Java 7 by using the following commands:
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+
+Create jar file
+	jar c[v0Mmfe] [manifest] [jarfile] [entrypoint] [-C dir] inputfiles [-Joption]
+	$ cd bin
+	$ jar cfe JBubbles.jar gt.dvdyzag.JBubbles acercade gt imagenes 

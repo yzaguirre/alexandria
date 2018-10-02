@@ -1,0 +1,76 @@
+https://asciinema.org/docs/installation
+	sudo -H pip3 install asciinema
+usage
+	asciinema rec recording.cast
+To exit recording, hit CTRL+D or type exit
+Play a recording
+	asciinema play recording.cst
+Playing from HTTP(S) URL:
+	asciinema play https://asciinema.org/a/22124.cast
+Create token
+	asciinema auth
+It's saved at
+	$HOME/.config/asciinema/install-id
+
+asciinema web app
+https://github.com/asciinema/asciinema-server
+https://github.com/asciinema/asciinema-server/blob/master/docs/INSTALL.md
+INSTALL with docker
+	git clone --recursive https://github.com/asciinema/asciinema-server.git
+	cd asciinema-server
+	git checkout master
+	git checkout -b my-company master
+Create .env.production
+	cp .env.production.sample .env.production
+Set URL_HOST and SECRET_KEY_BASE
+Set SECRET_KEY_BASE to long random string. Run
+	docker-compose run --rm phoenix mix phx.gen.secret
+to obtain one.
+
+	vim .env.production
+URL_SCHEME=http
+URL_HOST=asciinema.example.com
+URL_PORT=80
+URL_SCHEME=https
+URL_PORT=443
+
+HTTPS settings
+In the repository root, create a directory named certs.
+	mkdir certs
+Ensure you set the nginx port in the docker-compose.yml file equal to what you specified for URL_PORT.
+	vim docker-compose.yml
+- "443:443"
+- ./certs:/app/priv/certs
+
+	vim docker/nginx/asciinema.conf
+listen 443 ssl;
+ssl_certificate     /app/priv/certs/<my-cert>.crt;
+ssl_certificate_key /app/priv/certs/<my-cert>.key;
+
+Initialize the database
+	docker-compose up -d postgres
+Create database schema and seed it with initial data:
+	docker-compose run --rm phoenix setup
+
+Create containers
+	docker-compose up -d
+Check the status of newly created containers:
+	docker ps -f 'name=asciinema_'
+You should see asciinema_phoenix, asciinema_postgres and a few others listed.
+Point your browser to URL_HOST:URL_PORT and enjoy your own asciinema hosting site!
+
+Upgrade
+	docker-compose stop
+	git fetch origin
+	git merge origin/master
+Upgrade database:
+	docker-compose run --rm phoenix upgrade
+	docker-compose up -d
+	
+Edit the client asciinema
+	vim ~/.config/asciinema/config
+[api]
+url = https://your.asciinema.host
+
+Or use env variable
+	ASCIINEMA_API_URL=https://your.asciinema.host asciinema rec

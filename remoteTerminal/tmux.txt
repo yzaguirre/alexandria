@@ -1,3 +1,5 @@
+https://github.com/tweekmonster/tmux2html
+https://github.com/rothgar/awesome-tmux
 https://leanpub.com/the-tao-of-tmux/read
 https://sourceforge.net/projects/tmux/files/tmux/tmux-2.0/
 http://www.bsdnow.tv/tutorials/ssh-tmux

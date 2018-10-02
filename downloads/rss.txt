@@ -1,3 +1,6 @@
+The Rise and Contentious Fork of RSS (twobithistory.org)
+https://news.ycombinator.com/item?id=18002503
+
 https://news.ycombinator.com/item?id=16721690
 https://newsblur.com/
 https://github.com/samuelclay/NewsBlur

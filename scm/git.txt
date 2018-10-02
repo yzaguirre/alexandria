@@ -172,3 +172,5 @@ http://stackoverflow.com/questions/927358/ddg#927386
 	<< edit files as necessary >>
 	git add ...
 	git commit -c ORIG_HEAD
+Email for git
+https://news.ycombinator.com/item?id=17441060

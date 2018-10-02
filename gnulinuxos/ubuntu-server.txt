@@ -18,12 +18,6 @@ arch=amd64
 	sha1sum ubuntu-16.04-server-$arch.iso
 	sha256sum ubuntu-16.04-server-$arch.iso
 
-Install ONLY security updates
-http://serverfault.com/questions/270260/how-do-you-use-apt-get-to-only-install-critical-security-updates-on-ubuntu#282518
-	cp /etc/apt/sources.list /etc/apt/security.sources.list
-Edit the latter to contain only security repositories, then:
-	apt-get upgrade -o Dir::Etc::SourceList=/etc/apt/security.sources.list
-
 https://help.ubuntu.com/community/Tasksel
 	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock
 	apt install mat
@@ -35,10 +29,10 @@ https://help.ubuntu.com/community/Tasksel
 	apttitude
 	mysql_install_db --user=mysql
 Setup www-data ssh access
-	# mkdir /var/www/.ssh/
-	# vim /var/www/.ssh/.htaccess # (see apache.txt)
-	# cp /home/ubuntu/.ssh/authorized_keys /var/www/.ssh/
-	# chown www-data:www-data -R /var/www/.ssh/
+	mkdir /var/www/.ssh/
+	vim /var/www/.ssh/.htaccess # (see apache.txt)
+	cp /home/ubuntu/.ssh/authorized_keys /var/www/.ssh/
+	chown www-data:www-data -R /var/www/.ssh/
 
 https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-debian-8
 https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04
@@ -56,7 +50,7 @@ Add config files
 DHCP client
 https://help.ubuntu.com/13.04/serverguide/network-configuration.html
 
-	# vim /etc/network/interfaces
+	vim /etc/network/interfaces
 auto eth0
 iface eth0 inet dhcp
 
@@ -81,7 +75,7 @@ and configuration of the resolver should be done in
 /etc/systemd/resolved.conf.
 
 http://askubuntu.com/questions/155424/changing-keyboard-layout-in-ubuntu-12-04-server-command-line-interface
-	# dpkg-reconfigure keyboard-configuration
+	dpkg-reconfigure keyboard-configuration
 
 Static IP address
 
@@ -131,15 +125,23 @@ ifup eth1
 Install winrar
 http://www.winrar.es/soporte/articulo/31
 http://stackoverflow.com/questions/1139127/how-to-trust-a-apt-repository-debian-apt-get-update-error-public-key-is-not-av
-
-	# vim /etc/apt/sources.list.d/rar.list
+	vim /etc/apt/sources.list.d/rar.list
 deb http://ftp.debian.org/debian/ unstable main contrib non-free
-	# vim /etc/apt/preferences.d/
+	vim /etc/apt/preferences.d/
 Package: *
 Pin: release a=unstable
 Pin-Priority: 50
 
-	# apt-get install debian-keyring
-	# gpg --keyserver pgp.mit.edu --recv-keys 1F41B907
-	# gpg --armor --export 1F41B907 | apt-key add -
-	# apt-get update
+	apt install debian-keyring
+	gpg --keyserver pgp.mit.edu --recv-keys 1F41B907
+	gpg --armor --export 1F41B907 | apt-key add -
+	apt-get update
+
+Auto updates
+https://help.ubuntu.com/lts/serverguide/automatic-updates.html
+	apt list unattended-upgrades -a
+Stop upgrading nodejs
+	vim /etc/apt/apt.conf.d/50unattended-upgrades
+Unattended-Upgrade::Package-Blacklist {
+	"nodejs";
+};

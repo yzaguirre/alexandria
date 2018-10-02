@@ -5,3 +5,5 @@ For BSD or GNU grep you can use -B num to set how many lines before the match an
 	$ grep group -d recurse
 Remove comments
 	grep -v '^#' filename | grep -v '^$'
+https://stackoverflow.com/questions/6637882/how-can-i-use-grep-to-show-just-filenames-no-in-line-matches-on-linux
+	grep -ril

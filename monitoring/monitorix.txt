@@ -1,0 +1,8 @@
+https://wiki.archlinux.org/index.php/monitorix
+Edit /etc/monitorix/monitorix.conf
+Set your hostname and title
+Double check the built in httpd port. 8080 is the default. Which is also sabnzbd’s port.
+Set to enabled if you want to use the internal webserver.
+
+Further down you can turn on and off what it graphs.
+http://xmodulo.com/2014/05/web-based-lightweight-system-monitor-linux.html

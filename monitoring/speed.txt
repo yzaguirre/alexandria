@@ -1,0 +1,80 @@
+iptraf
+	iptraf
+dstat
+	apt install dstat
+	dstat
+http://www.cyberciti.biz/tips/linux-find-out-wireless-network-speed-signal-strength.html
+	$ wavemon
+
+http://www.taringa.net/posts/linux/18099934/Nload-monitor-de-red-en-vivo.html
+http://www.cyberciti.biz/networking/nload-linux-command-to-monitor-network-traffic-bandwidth-usage/
+	sudo apt install nload
+	nload device
+	nload wlan0
+	nload [options] device1 device2
+	
+	nload -u M
+
+
+http://www.taringa.net/posts/linux/17780392/Test-de-Velocidad-de-Internet-desde-Consola-2-maneras.html
+	curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip 
+Verificando la velocidad de internet con Speedtest mediante la terminal en Linux.
+Instalar speedtest
+	sudo wget https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py -O /usr/bin/speedtest-cli
+	sudo chmod +x /usr/bin/speedtest-cli 
+Esto automáticamente nos localizará el servidor mas cercano de Speedtest y realizará las funciones de subida/descarga. 
+
+Si deseamos obtener una imágenes para luego compartirla en la web, simplemente añadimos la opción --share despues del comando speedtest-cli. 
+Si deseamos obtener resultados de un servidor distinto, debemos seleccionarlo manualmente, para ello agregamos la opción --list después del comando speedtest-cli (esto nos mostrara varios servidores ubicados geográficamente) 
+Vale destacar que estos servidores tienen un ID, por lo cuál, una vez que hallemos el servidor deseado, simplemente colocamos la opción --server seguido del ID del servidor seleccionado después del comando speedtest-cli
+
+http://lintut.com/slurm-command-line-bandwidth-monitoring-tool-for-linux/
+	apt-get -t wheezy-backports install slurm
+	# slurm -i wlan0
+Slurm supports several different keys for interaction:
+
+    s switch to split graph mode
+    c switch to classic mode
+    l switch to large graph mode
+    L enable TX/RX led
+    m switch between classic, split and large view
+    z zero counters
+    r redraw screen
+    q quit slurm
+
+http://excess.org/speedometer/
+	apt-get -t wheezy-backports install speedometer
+Usage Examples:
+How long it will take for my 38MB transfer to finish?
+	speedometer favorite_episode.rm $((38*1024*1024))
+How quickly is another transfer going?
+	speedometer dl/big.avi
+How fast is this LAN?
+	host-a$ cat /dev/zero | nc -l -p 12345
+	host-b$ nc host-a 12345 > /dev/null 
+	host-b$ speedometer -rx eth0
+How fast is the upstream on this ADSL line? (start an upload first)
+	speedometer -tx ppp0
+How fast can I write data to my filesystem? (with at least 1GB free)
+	dd bs=1000000 count=1000 if=/dev/zero of=big_nothing &
+	speedometer big_nothing
+
+http://www.taringa.net/posts/linux/17827526/Monitoriza-cuanto-ancho-de-banda-consume-cada-aplicacion.html
+	sudo apt-get install nethogs
+	sudo nethogs eth0
+	sudo nethogs wlan0
+https://github.com/defer-/nbwmon
+	git clone https://github.com/defer-/nbwmon.git
+	cd nbwmon
+	make
+	sudo make install
+	nbwmon -i wlan0
+usage
+-----
+usage: nbwmon [options]
+-h             help
+-s             use SI units
+-n             no colors
+-i <interface> network interface
+-d <seconds>   delay
+-l <lines>     graph height

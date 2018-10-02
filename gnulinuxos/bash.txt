@@ -138,3 +138,12 @@ Ctrl+E OR ALT-F end of line
 
 https://beyondgrep.com/feature-comparison/
 https://news.ycombinator.com/item?id=16096824
+
+Writing arguments
+https://stackoverflow.com/questions/16483119/an-example-of-how-to-use-getopts-in-bash#16496491
+
+https://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/
+runuser command
+	runuser -l  userNameHere -c 'command'
+	runuser -l userNameHere -c '/path/to/command arg1 arg2'
+	runuser -l www-data -c 'mkdir ~/html/images'

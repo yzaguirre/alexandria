@@ -1,3 +1,10 @@
+CT tools
+https://scotthelme.co.uk/certificate-transparency-an-introduction/
+https://scotthelme.co.uk/finding-phishing-sites-with-ct/
+
+Distrust of Symantec TLS Certificates
+https://news.ycombinator.com/item?id=17918748
+
 Inspect the key content
 	openssl rsa -text -in certificate.key
 Inspect a certificate

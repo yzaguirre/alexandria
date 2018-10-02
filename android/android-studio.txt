@@ -1,0 +1,39 @@
+https://developer.android.com/sdk/index.html
+Download
+	wget https://dl.google.com/dl/android/studio/ide-zips/2.0.0.20/android-studio-ide-143.2739321-linux.zip
+Verify
+	sha1sum android-studio-ide-143.2739321-linux.zip
+b64070ee4ec4868e9dd942b56f76864634cb0c67
+Install
+	unzip android-studio-ide-141.1903250-linux.zip -d /VMs/opt
+	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /VMs/opt/android-studio/bin/studio.sh'
+
+For W
+https://developer.android.com/studio/#downloads
+	sha256sum sdk-tools-windows-4333796.zip
+7e81d69c303e47a4f0e748a6352d85cd0c8fd90a5a95ae4e076b5e5f960d3c7a
+	sha256sum android-studio-ide-173.4907809-windows.exe
+6d738a91824791abe7d9efa9ad1becaa3a1b7b4e86e84b149cf4ea9984e68441
+Locations
+%LOCALAPPDATA%\Android\Sdk
+%LOCALAPPDATA%\Android\Sdk\platform-tools
+
+Clean previous settings
+	rm -r ~/.AndroidStudio
+	mkdir /VMs/opt/android-sdk
+developer.android.com/tools/devices/emulator.html#vm-linux
+
+Keyboard shotcuts
+	CTRL+SHIFT+SPACE smart complete
+	CTRL+0 Override methods
+	SHIFT+F9 Rename
+	CTRL+N Open any class in the editor quickly
+	CTRL+SPACE code completition
+	ALT+F7 find all places where a particular class, method, variable is used in the whole project by positioning the caret at the symbol's name or its usage in code
+	CTRL+F12 You can quickly navigate in the currently edited file. It shows the list of members of the current class. Select an element you want to navigate to and press the Enter key or the F4 key.
+	CTRL+Q gets quick documentation
+	Ctrl+click / Ctrl+B To navigate to the declaration of a class, method or variable used somewhere in the code, position the caret at the usage 
+Themes
+	File->Settings->Editor->Colors & Fonts->
+
+https://developer.android.com/studio/releases/index.html#3-0-0

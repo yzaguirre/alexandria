@@ -1,0 +1,11 @@
+http://opensource.perlig.de/rcssmin/
+Download
+	wget http://storage.perlig.de/rcssmin/rcssmin-1.0.6.tar.gz
+	wget http://storage.perlig.de/rcssmin/rcssmin-1.0.6.digests
+	md5sum -c rcssmin-1.0.6.digests
+The file is signed by André Malo, Key-ID 0x8103A37E
+	gpg --verify rcssmin-1.0.6.digests
+Install
+	tar xf rcssmin-1.0.6.tar.gz
+Use
+	cat style.css | ./rcssmin.py > new.css

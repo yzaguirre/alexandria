@@ -4,3 +4,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-point-to-point-
 
 https://lwn.net/SubscriberLink/748582/75c743d0eb3aae0f/
 https://news.ycombinator.com/item?id=16541409
+
+https://news.ycombinator.com/item?id=17846387
+https://arstechnica.com/gadgets/2018/08/wireguard-vpn-review-fast-connections-amaze-but-windows-support-needs-to-happen/
+https://www.stavros.io/posts/how-to-configure-wireguard/

@@ -1,0 +1,62 @@
+https://maven.apache.org/guides/getting-started/index.html#How_do_I_compile_my_application_sources
+https://maven.apache.org
+	wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+	wget https://www.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.sha512
+	wget https://www.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.asc
+	sha512sum apache-maven-3.5.4-bin.tar.gz
+	cat apache-maven-3.5.4-bin.tar.gz.sha512
+	wget https://www.apache.org/dist/maven/KEYS
+	gpg --import KEYS
+	gpg --verify apache-maven-3.5.4-bin.tar.gz.asc apache-maven-3.5.4-bin.tar.gz
+http://maven.apache.org/install.html
+	tar xf apache-maven-3.5.4-bin.tar -C /opt
+	mv /opt/{apache-maven-3.5.4,maven}
+Add /opt/maven/bin to $PATH in ~/.profile
+	vim ~/.profile
+export M2_HOME=/opt/maven
+PATH=$PATH:$M2_HOME/bin
+	mkdir -p /opt/m2repository
+Edit
+	vim $M2_HOME/conf/settings.xml
+And edit "localRepository" to /opt/m2repository
+
+Creating a project
+http://www.mkyong.com/maven/how-to-create-a-java-project-with-maven/
+	mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+	cd namaste
+The src/main/java directory contains the project source code,
+the src/test/java directory contains the test source,
+and the pom.xml file is the project's Project Object Model, or POM.
+
+Build the Project
+	mvn package
+Skip test
+	mvn package -DskipTests
+
+You may test the newly compiled and packaged JAR with the following command:
+	java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+	java -cp target/HelloJSON-1.0-SNAPSHOT.jar tech.yzaguirre.App
+	java -cp target/namaste-1.0-SNAPSHOT.jar me.yzaguirre.namaste.App
+https://stackoverflow.com/questions/7908090/downloading-all-maven-dependencies-to-a-directory-not-in-repository
+	mvn dependency:copy-dependencies
+	java -cp "target/dependency/*:target/HelloJSON-1.0-SNAPSHOT.jar" tech.yzaguirre.App
+
+Download dependencies
+	mvn dependency:tree
+Compile
+	mvn compile
+Test
+	mvn clean test
+	mvn clean test -Dtest
+
+Dependency mecanism
+https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html
+https://maven.apache.org/guides/getting-started/index.html#How_do_I_use_external_dependencies
+
+
+
+Compile with dependencies
+http://eureka.ykyuen.info/2013/10/30/maven-package-the-jar-file-with-dependencies/
+maven-assembly-plugin
+
+https://github.com/google/gson/blob/master/UserGuide.md#TOC-Gson-With-Maven

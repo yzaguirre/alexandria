@@ -1,4 +1,4 @@
-https://docs.microsoft.com/en-us/sql/relational-databases/scripting/sqlcmd-use-the-utility?view=sql-server-2017
+https://docs.microsoft.com/en-us/sql/relational-databases/scripting/sqlcmd-use-the-utility?view=sql-server-2017https://docs.microsoft.com/en-us/sql/relational-databases/scripting/sqlcmd-use-the-utility?view=sql-server-2017
 	sqlcmd -?
 	sqlcmd -S '192.168.0.10\MyInstance,5000' -U 'user' -d 'clients' -q "SELECT * FROM log.clients;"
 
@@ -13,3 +13,9 @@ https://serverfault.com/questions/168657/is-there-a-way-to-run-sqlcmd-to-get-que
 set nocount on
 select x, y, z from agent
 set nocount off
+
+
+https://stackoverflow.com/questions/425379/how-to-export-data-as-csv-format-from-sql-server-using-sqlcmd
+sqlcmd -S myServer -d myDB -E -o "MyData.txt" ^
+    -Q "select bar from foo" ^
+    -W -w 999 -s","

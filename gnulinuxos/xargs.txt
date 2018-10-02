@@ -1,0 +1,2 @@
+https://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/
+	find . -iname "*.mp3" -print0 | xargs -0 -I mp3file mplayer mp3file

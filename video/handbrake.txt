@@ -1,0 +1,2 @@
+https://elbinario.net/2018/08/30/handbrake-poniendo-a-dieta-nuestros-videos/
+	HandBrakeCLI --preset-import-file Conver.json -i archivo.avi -o archivo.mkv

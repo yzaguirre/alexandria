@@ -2,47 +2,45 @@ https://news.ycombinator.com/item?id=12093182
 https://www.djangoproject.com/download/#supported-versions
 https://groups.google.com/forum/#!forum/django-users
 	sudo -H pip install Django==2.1
+Create virtual environment
+https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-18-04
+	sudo -H pip3 install venv
+	mkdir myproject
+	cd myproject
+	python3.6 -m venv my_env
+To install packages into the isolated environment, you must activate it by typing:
+	source my_env/bin/activate
+	pip install django
+To leave the virtual environment
+	deactivate
 Verify
+	django-admin --version
 	import django
 	print(django.get_version())
 Start a project
 	django-admin startproject mysite
+	django-admin startproject mysite . # use current directory
+Migrate the database (sqlite is default)
+	python manage.py migrate
+Create administrative user for Django admin interface
+https://www.digitalocean.com/community/tutorials/how-to-enable-and-connect-the-django-admin-interface
+	python manage.py createsuperuser
+To successfully test your application, you will need to modify one of the directives in the Django settings.
+	vim ~/django-test/djangoproject/settings.py
+ALLOWED_HOSTS
+This defines a whitelist of addresses or domain names that may be used to connect to the Django instance.
+
+Deployment guidelines
+https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+
 Run dev server
 	python manage.py runserver
-Direct download
-	# wget https://www.djangoproject.com/download/1.6/tarball/
-	# tar xf Django-1.6.tar.gz
-	# cd Django-1.6
-x	# python setup.py install
+	python manage.py runserver 192.168.0.10:8000
 
-Install with git
-	# git clone https://github.com/django/django.git django
-Now with pip
-x	# pip install -e django/
-	# cd django
-x	# python setup.py install
-Install with subversion (see subversion.txt)
-	# cd
-	# mkdir django && cd django
-	# svn co http://code.djangoproject.com/svn/django/trunk/
-	# cd trunk
-x	# python setup.py install
-Finally, there is one last component required for running the Python FastCGI manager:
-the flup library. This provides the actual FastCGI protocol implementation. For Red
-Hat-based systems and other systems using Yum as the package manager (EPEL
-repositories must be enabled, otherwise you will need to build from source), use:
-	# yum install python-flup
-For Ubuntu, Debian, and other systems that use Apt or Aptitude, use:
-	# apt-get install python-flup
+	
+To access the admin interface, add /admin/ to the end of your URL:
+http://your_server_ip:8000/admin/
 
-Starting the FastCGI process manager:
-You will find a "manage.py" Python script that comes with the default project template.
-Move to the directory of this file, and run the following command:
-	# cd www
-	# python manage.py runfcgi method=prefork host=127.0.0.1 port=9000 pidfile=/var/run/ django.pid
-
-http://losapuntesdetux.blogspot.com.ar/2013/12/django-framework-escrito-en-python-para.html
-http://losapuntesdetux.blogspot.com.ar/2013/12/django-framework-escrito-en-python-para_24.html
 
 Database support
 https://docs.djangoproject.com/en/2.1/topics/install/#database-installation
@@ -56,3 +54,11 @@ https://dev.mysql.com/doc/refman/8.0/en/mysql-tzinfo-to-sql.html
 
 Using timezone
 https://docs.djangoproject.com/en/2.1/topics/i18n/timezones/
+
+https://www.digitalocean.com/community/tutorial_series/django-development
+Admin Interface
+https://www.digitalocean.com/community/tutorial_series/django-development
+Create models
+https://www.digitalocean.com/community/tutorials/how-to-create-django-models
+Create views
+https://www.digitalocean.com/community/tutorials/how-to-create-django-views
