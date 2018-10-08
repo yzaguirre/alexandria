@@ -1,0 +1,14 @@
+ytdl-webserver: 📻 Webserver for downloading youtube videos. Ready for docker.
+https://github.com/Algram/ytdl-webserver
+https://linuxunplugged.com/268
+https://blog.rphl.io/selfhosted-youtube-downloader-with-docker/
+
+git clone https://github.com/Algram/ytdl-webserver.git
+cd ytdl-webserver
+npm install && npm start
+https://stackoverflow.com/questions/36725181/not-compatible-with-your-operating-system-or-architecture-fsevents1-0-11
+https://github.com/sass/node-sass/issues/1579
+	nodejs node_modules/node-sass/scripts/install.js
+	npm rebuild node-sass
+	npm install --no-optional
+	npm start

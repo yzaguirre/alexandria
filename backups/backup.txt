@@ -1,0 +1,28 @@
+Backup strategies are a defense against data loss.
+
+They are made up of multiple different components, like:
+	a pre-defined schedule for backing up information
+	The type of backup to be performed - full backup? incremental? automated?
+	what needs to be backed up - the entire network? Specific drives or data?
+	Backup and archive locations
+Who is in charged that monitoring these backups are executing and who should have access to this data.
+backup locations on type of data or office
+how to secure the transfers
+administer and monitor hardware use for these backups
+who will be responsable for fault tolerence and availability, who will be in charge of replacing fail hardware
+durability, fault tolerence and availability.
+Critical data, understand the services we are using and fine print
+Action plan in case you need backups, how long is an acceptable recovery time, how much data to restore, how much bandwith to use
+
+protecting data in transit
+client side encryption
+encrypt data before we even send it out, to lets say, Amazon S3
+Two options
+	Use AWS KMS-Managed CMK
+		Client gets a unique encryption key for each object
+
+Security
+	securing at rest, at transit
+	server side encryption and access control. Before or after data has been transfered.
+https://www.gliffy.com/support
+https://news.ycombinator.com/item?id=11342968

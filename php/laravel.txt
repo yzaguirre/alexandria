@@ -49,6 +49,7 @@ Help
 	php artisan help make:migration
 
 Define routes in web file routes/web.php
+https://laravel.com/docs/5.7/routing
 Route::get('/', 'MainController@index');
 Route::resource('posts', 'PostsController');
 
@@ -134,11 +135,11 @@ Give it a name that corresponds to what I am doing
 	php artisan make:migration create_tasks_table --create=tasks
 To apply more changes, clear the dump
 	composer dump-autoload
-	php artisan cache:clear 
+	php artisan cache:clear
 	php artisan config:clear
 Migrate the database
 	php artisan migrate
-To modify a schema, edit the migration file and 
+To modify a schema, edit the migration file and
 	php artisan migrate:refresh
 Rollbacks the migration and re-runs it.
 
@@ -157,7 +158,7 @@ Edit database/ListingsTableSeeder.php at the run method:
 	$file = File::get($path);
 	$data = json_decode($file, true);
 	DB::table('listings')->insert($data);
-	
+
 Edit database/DatabaseSeeder.php run method with:
 	$this->call(ListingsTableSeeder::class);
 When we run the seeder, any code in the run method is executed.
@@ -316,6 +317,19 @@ https://laravel.com/docs/5.6/eloquent-relationships
 	return $this->hasMany('App\Comment', 'foreign_key', 'local_key');
 
 Files
-https://laravel.com/docs/5.6/filesystem
+https://laravel.com/docs/5.7/filesystem
+	$file->store('vehicles', 'public');
+Print url
+	Storage::url('file.jpg');
+	asset('storage/file.txt');
+Remember, if you are using the local driver,
+all files that should be publicly accessible should be placed in the storage/app/public directory.
+Furthermore, you should create a symbolic link at  public/storage which points to the storage/app/public directory.
+	cd public
+	ln -s ../app/storage/public storage
+	php artisan storage:link
+Delete file
+	Storage::disk('s3')->delete('folder_path/file_name.jpg');
+
 Upload files
 https://laraveldaily.com/upload-multiple-files-laravel-5-4/

@@ -139,6 +139,7 @@ Pin-Priority: 50
 
 Auto updates
 https://help.ubuntu.com/lts/serverguide/automatic-updates.html
+Logs at /var/log/unattended-upgrades
 	apt list unattended-upgrades -a
 Stop upgrading nodejs
 	vim /etc/apt/apt.conf.d/50unattended-upgrades

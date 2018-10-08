@@ -29,22 +29,22 @@ https://www.fastmail.com/help/receive/domains-setup-mxonly.html?u=5a684150
 https://news.ycombinator.com/item?id=13099650
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-dkim-with-postfix-on-debian-wheezy
 	apt install opendkim opendkim-tools
-	
+
 https://blog.sumptuouscapital.com/2016/01/email-are-you-writing-emails-in-a-proper-etiquette/
 Text-based mail clients can be used to read mail already downloaded by
 other mail clients. For example, you could open your Evolution mail Inbox file by
-typing 
+typing
 	mail -f $HOME/.evolution/mail/loc/Inbox
 
 The oldest command, and easiest to use when you just want a quick check for mes-
 sages in the root user’s mailbox on a remote server, is the mail command (/bin/mail),
 part of the mailutils package.
 
-Install 
-	# apt-get install mailutils
+Install
+	apt install mailutils
 Examples
-	$ mail -s 'My Linux version' chris@localhost < /etc/lsb-release
-	$ ps auwx | mail -s 'My Process List' root@localhost
+	mail -s 'My Linux version' chris@localhost < /etc/lsb-release
+	ps auwx | mail -s 'My Process List' root@localhost
 The subject (-s) is set to 'My Linux Version'.
 Used interactively, by default the mail command opens the mailbox set by your cur	rent shell's $MAIL value.
 
@@ -71,4 +71,4 @@ you have already viewed to the mailbox, type q to exit.
 
 You can open any file that is in MBOX format when you use mail. For example, if you
 are logged in as one user, but want to open the mailbox for the user chris, type this:
-	$ sudo mail -f /var/mail/chris
+	mail -f /var/mail/chris
