@@ -1,0 +1,25 @@
+https://github.com/sferik/t
+http://xmodulo.com/access-twitter-command-line-linux.html
+https://apps.twitter.com/app/new
+https://apps.twitter.com/
+	t authorize
+	t accouts
+	t set active sferik UDfNTpOz5ZDG4a6w7dIWj
+Account information is stored in a YAML-formatted file located at ~/.trc.
+
+	t help
+	t update "I'm tweeting from the command line. Isn't that special?"
+http://twterm.ryota-ka.me/
+	gem install twterm
+	twterm
+https://opensource.com/life/16/10/3-twitter-clients-linux-command-line
+https://jgoerzen.github.io/twidge/twidge-html/twidge.html
+https://github.com/oysttyer/oysttyer
+https://rainbowstream.readthedocs.io/en/latest/
+https://github.com/orakaro/rainbowstream
+
+http://git.ao2.it/tweeper.git/
+	git clone http://git.ao2.it/tweeper.git
+	mv tweeper /usr/share/php
+	ln -s /usr/share/php/tweeper/tweeper /usr/bin
+	tweeper https://twitter.com/dvd_from_earth > feed.rss

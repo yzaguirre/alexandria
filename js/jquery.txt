@@ -1,0 +1,31 @@
+http://jquery.com/
+http://jqueryui.com/
+
+download latest jquery minimal
+	wget http://code.jquery.com/jquery-2.1.1.min.js -O jquery.min.js
+Bower install
+	bower install jquery
+file inside bower_components/jquery/dist
+	bower install http://code.jquery.com/jquery-2.1.0.min.js
+
+Make ajax cross site requests 
+https://stackoverflow.com/questions/1197802/cross-site-ajax-using-jquery
+http://jquery-howto.blogspot.com/2013/09/jquery-cross-domain-ajax-request.html
+
+multiple button click event
+https://stackoverflow.com/questions/20084970/multiple-button-click-events-jquery-on
+
+print content of object
+https://stackoverflow.com/questions/1625208/print-content-of-javascript-object
+alert(JSON.stringify(YOUR_OBJECT_HERE, null, 4));
+
+Change css
+https://stackoverflow.com/questions/9964793/dynamically-change-text-on-twitter-bootstrap-button-whilst-preserving-icon
+$('#myButton i:first-child').attr('class','icon icon-remove');
+
+How to return the data attribute of an option element in select
+http://stackoverflow.com/questions/12844618/ddg#12844658
+$('select').on('change', function(e){ 
+    console.log( $(this).find("option:selected").data('id') ); 
+    e.preventDefault(); 
+}); 

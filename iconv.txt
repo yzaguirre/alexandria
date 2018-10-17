@@ -1,0 +1,2 @@
+https://www.tecmint.com/convert-files-to-utf-8-encoding-in-linux/
+	iconv -f ISO-8859-1 -t UTF-8//TRANSLIT input.file > out.file

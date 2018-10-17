@@ -1,0 +1,3 @@
+https://opensource.com/article/18/10/introduction-tcpdump
+https://danielmiessler.com/study/tcpdump/
+https://jvns.ca/blog/2017/05/14/learn-tcpdump-zine/

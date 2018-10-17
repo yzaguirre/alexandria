@@ -1,3 +1,5 @@
+https://www.digitalocean.com/community/tutorials/how-to-use-git-a-reference-guide
+https://github.com/k88hudson/git-flight-rules#exporting-a-repository-as-a-zip-file
 git contribution workflow
 https://diasp.eu/posts/6508007 and https://diasp.eu/posts/6519103
 https://github.com/mindfulness-at-the-computer/mindfulness-at-the-computer/blob/master/CONTRIBUTING.md#workflow-overview

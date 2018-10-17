@@ -16,3 +16,6 @@ https://doc.wallabag.org/en/admin/upgrade.html#upgrading-from-23x-to-23y
 	cd /var/www/wallabag
 	make update
 	chown www-data:www-data -R /var/www/wallabag
+https://doc.wallabag.org/en/admin/parameters.html
+To apply changes to parameters.yml, you have to clear your cache by deleting everything in var/cache with this command:
+	bin/console cache:clear -e=prod

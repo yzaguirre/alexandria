@@ -1,11 +1,11 @@
 https://wordpress.org/download/
 	cd downloads
-	wget https://wordpress.org/latest.tar.gz -O wordpress-4.9.4.tar.gz
-	wget https://wordpress.org/wordpress-4.9.4.tar.gz.md5
-	wget https://wordpress.org/wordpress-4.9.4.tar.gz.sha1
-	md5sum wordpress-4.9.4.tar.gz
-	sha1sum wordpress-4.9.4.tar.gz
-	tar xf wordpress-4.9.4.tar.gz -C /var/www/html
+	wget https://wordpress.org/latest.tar.gz -O wordpress-4.9.8.tar.gz
+	wget https://wordpress.org/wordpress-4.9.8.tar.gz.md5
+	wget https://wordpress.org/wordpress-4.9.8.tar.gz.sha1
+	md5sum wordpress-4.9.8.tar.gz
+	sha1sum wordpress-4.9.8.tar.gz
+	tar xf wordpress-4.9.8.tar.gz -C /var/www/html
 	chown www-data:www-data -R /var/www/html/wordpress
 
 CREATE DATABASE wp;
@@ -36,3 +36,7 @@ Email capabilities
 https://wordpress.org/plugins/tags/smtp/
 https://wordpress.org/plugins/smtp-mailer/
 https://wordpress.org/plugins/wp-mail-smtp/
+
+https://codex.wordpress.org/Changing_The_Site_URL#Changing_the_URL_directly_in_the_database
+update wp_options set option_value = 'https://new.domain' where option_name = 'home';
+update wp_options set option_value = 'https://new.domain' where option_name = 'siteurl';

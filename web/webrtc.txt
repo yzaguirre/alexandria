@@ -1,0 +1,7 @@
+http://www.simpl.info/getusermedia
+http://apprtc.appspot.com
+http://caniuse.com
+http://www.webrtc.org
+https://github.com/Temasys/skylink-call-button
+http://skylink.io/web/
+https://news.ycombinator.com/item?id=18166753

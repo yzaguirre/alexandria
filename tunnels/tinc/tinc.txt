@@ -1,3 +1,6 @@
+https://romantomjak.com/posts/hetzner-private-networking.html
+https://news.ycombinator.com/item?id=18179958
+
 http://tinc-vpn.org/documentation/Scripts.html#Scripts
 
 Edit /etc/networks

@@ -4,8 +4,8 @@ https://telegram.org/apps#source-code
 
 TDesktop
 https://tdesktop.com/
-	tar xf tsetup.0.8.48.tar.xz -C /VMs/opt
-	ln -s /VMs/opt/Telegram/Telegram /usr/local/bin/Telegram
+	tar xf tsetup.1.3.10.tar.xz -C /opt
+	ln -s /opt/Telegram/Telegram /usr/local/bin/Telegram
 Config file in
 	~/.telegram/
 https://telegram.org/
@@ -29,8 +29,8 @@ Usage
 By default public key is stored in the same folder named tg.pub:
 	./telegram -k tg.pub
 	
-	mv tg-master /VMs/opt
-	echo $'#!/bin/bash\ncd /VMs/opt/tg-master\n./telegram -k tg.pub' > /usr/local/bin/telegram && chmod u+x /usr/local/bin/telegram
+	mv tg-master /opt
+	echo $'#!/bin/bash\ncd /opt/tg-master\n./telegram -k tg.pub' > /usr/local/bin/telegram && chmod u+x /usr/local/bin/telegram
 
 Client support TAB completion and command history.
 Supported commands

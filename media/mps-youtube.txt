@@ -1,0 +1,11 @@
+https://github.com/mps-youtube/mps-youtube
+https://linoxide.com/linux-how-to/mps-youtube-terminal-player-linux/
+https://www.ostechnix.com/mps-youtube-commandline-youtube-player-downloader/
+https://crunchbang.org/forums/viewtopic.php?id=35519
+	pip3 install mps-youtube
+	mpsyt
+	set show_video true
+	set
+	set window_pos top-left
+	set window_size 960x600
+	set search_music false

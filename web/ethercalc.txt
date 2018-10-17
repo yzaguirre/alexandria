@@ -1,0 +1,8 @@
+https://ethercalc.net/
+https://github.com/audreyt/ethercalc
+	apt install make g++
+	./node_modules/ethercalc/bin/ethercalc
+System install
+	npm install -g ethercalc
+	ethercalc
+	ethercalc --keyfile ethercalc-key.pem --certfile ethercalc-cert.pem
