@@ -1,3 +1,6 @@
+https://twitter.com/climagic/status/1051838861335293952
+~C
+~?
 https://infosec.mozilla.org/guidelines/openssh.html
 https://news.ycombinator.com/item?id=16503768
 http://blog.infertux.com/2012/12/20/properly-close-a-frozen-ssh-session/

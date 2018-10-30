@@ -11,3 +11,5 @@ color
 <option value="3">ESCALA 3</option>
 </select>
 ```
+# Upload image
+<file>

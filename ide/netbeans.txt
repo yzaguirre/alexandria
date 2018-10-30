@@ -14,3 +14,10 @@ Or make script
 Run with custom java 
 	vim netbeans-8.2/etc/netbeans.conf
 netbeans_jdkhome="/opt/jdk1.8.0_45"
+
+Netbeans 9
+https://netbeans.apache.org/download/nb90/nb90.html
+	wget https://www.apache.org/dist/incubator/netbeans/incubating-netbeans-java/incubating-9.0/incubating-netbeans-java-9.0-bin.zip.asc
+	wget https://www.apache.org/dist/incubator/netbeans/incubating-netbeans-java/incubating-9.0/incubating-netbeans-java-9.0-bin.zip.sha1
+	sha1sum -c incubating-netbeans-java-9.0-bin.zip.sha1
+	gpg --verify incubating-netbeans-java-9.0-bin.zip.asc

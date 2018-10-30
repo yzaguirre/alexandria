@@ -2,6 +2,7 @@ https://github.com/sferik/t
 http://xmodulo.com/access-twitter-command-line-linux.html
 https://apps.twitter.com/app/new
 https://apps.twitter.com/
+	gem install t
 	t authorize
 	t accouts
 	t set active sferik UDfNTpOz5ZDG4a6w7dIWj

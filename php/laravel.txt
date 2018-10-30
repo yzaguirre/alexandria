@@ -207,6 +207,7 @@ Order 10 factories
 
 Using CSRF field. Add it to a blade view
 	{{ csrf_field() }}
+	@csrf
 
 Email layout testing
 	php artisan make:mail Welcome --markdown=emails.welcome

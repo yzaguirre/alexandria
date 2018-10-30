@@ -1,0 +1,4 @@
+https://superuser.com/questions/272818/how-to-turn-off-word-wrap-in-less#272826
+	less -S
+Git setup
+	git config --global core.pager 'less -RS'

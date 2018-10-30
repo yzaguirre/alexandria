@@ -1,3 +1,5 @@
+https://developer.marvel.com/
+
 https://stackoverflow.com/questions/3521290/logout-get-or-post
 Use POST.
 

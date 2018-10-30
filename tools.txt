@@ -1,4 +1,11 @@
+TLS tools
+https://testssl.sh/
 https://github.com/drwetter/testssl.sh
+https://crt.sh/
+https://groups.google.com/forum/#!msg/crtsh/sUmV0mBz8bQ/K-6Vymd_AAAJ
+https://github.com/tomato42/tlsfuzzer
+https://www.ssllabs.com/ssltest/
+https://github.com/trimstray/htrace.sh
 
 https://www.reddit.com/r/sysadmin/comments/8huyxb/your_top_5_tools_for_sysadmin_productivity/
 https://www.reddit.com/r/commandline/

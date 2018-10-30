@@ -119,3 +119,5 @@ https://www.ericlight.com/using-ecdsa-certificates-with-lets-encrypt
 	openssl ecparam -genkey -name secp384r1 | openssl ec -out ec.key
 	openssl req -new -sha256 -key ec.key -nodes -out ec.csr -outform pem
 	certbot certonly -w /var/www/html/ -d {your_domain} --email "{your_email}" --csr ./ec.csr --agree-tos
+https://stackoverflow.com/questions/44855359/letencrypt-renewal-fails-could-not-bind-to-ipv4-or-ipv6-skipping#45085541
+	

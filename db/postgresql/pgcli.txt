@@ -1,0 +1,10 @@
+https://www.pgcli.com/
+	pgcli --help
+	
+	pgcli local_database
+
+	pgcli postgres://amjith:passw0rd@example.com:5432/app_db
+
+	pgcli -h localhost -p 5432 -U amjith app_db
+
+F3 key will toggle multi-line support.

@@ -1,0 +1,86 @@
+https://medium.com/@sidneyliebrand/how-fzf-and-ripgrep-improved-my-workflow-61c7ca212861
+https://docs.rs/regex/1/regex/#syntax
+https://blog.burntsushi.net/ripgrep/
+https://github.com/BurntSushi/ripgrep/releases
+
+	apt install ripgrep
+	wget https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+	dpkg -i ripgrep_0.10.0_amd64.deb
+	
+By default, hidden files and directories are skipped.
+https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#manual-filtering-file-types
+	rg dbpass -rn -g '*.rs'
+Globs are matched case insensitively.
+	rb dbpass -rn --iglob '*.Rs'
+
+File types
+Print only file with matches
+	rg tbl_clients -lg '*.sql'
+Ignore case
+	-i
+-A, --after-context NUM
+Show NUM lines after each match.
+
+This overrides the --context flag.
+
+-B, --before-context NUM
+Show NUM lines before each match.
+
+This overrides the --context flag.
+
+-C, --context NUM
+Show NUM lines before and after each match.
+This is equivalent to providing both the -B/--before-context and -A/--after-context flags with the same value.
+
+--max-depth NUM
+Limit the depth of directory traversal to NUM levels beyond the paths given. A value of zero only searches the explicitly given paths themselves.
+
+For example, rg --max-depth 0 dir/ is a no-op because dir/ will not be descended into. rg --max-depth 1 dir/ will search only the direct children of dir.
+
+--no-filename
+Never print the file path with the matched lines. This is the default when ripgrep is explicitly instructed to search one file or stdin.
+
+This flag overrides --with-filename.
+
+-N, --no-line-number
+Suppress line numbers. This is enabled by default when not searching in a terminal.
+
+-p, --pretty
+This is a convenience alias for --color always --heading --line-number.
+This flag is useful when you still want pretty output even if you're piping ripgrep to another program or file.
+For example:
+	rg -p foo | less -RS
+
+-t, --type TYPE ...
+Only search files matching TYPE. Multiple type flags may be provided. Use the --type-list flag to list all available types.
+	rg dbpass -t vb txt
+Userful types
+js: *.js, *.jsx, *.vue
+java: *.java, *.jsp
+	rg
+		\ -t txt
+		\ -t md
+		\ -t vb
+		\ -t js
+		\ -t py
+		\ -t md
+		\ -t kotlin
+		\ -t go
+		\ -t c
+Add other type
+	rg
+		\ --type-add 'blade:*.blade.php'
+		\ --type-add 'aspx:*.aspx'
+		\ --type-add 'vbproj:*.vbproj'
+		\ --type-add 'aspx:*.aspx'
+		\ --type-add 'aspxvb:*.aspx.vb'
+		
+Set env variable
+	export RIPGREP_CONFIG_PATH=~/.ripgrep
+Create config file ~/.ripgrep
+--type-add
+blade:*.blade.php
+aspx:*.aspx
+vbproj:*.vbproj
+aspx:*.aspx
+aspxvb:*.aspx.vb

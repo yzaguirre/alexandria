@@ -1,0 +1,3 @@
+https://medium.com/@sidneyliebrand/how-fzf-and-ripgrep-improved-my-workflow-61c7ca212861
+https://github.com/junegunn/fzf
+	apt install fzf

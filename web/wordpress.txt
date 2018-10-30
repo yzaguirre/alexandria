@@ -40,3 +40,9 @@ https://wordpress.org/plugins/wp-mail-smtp/
 https://codex.wordpress.org/Changing_The_Site_URL#Changing_the_URL_directly_in_the_database
 update wp_options set option_value = 'https://new.domain' where option_name = 'home';
 update wp_options set option_value = 'https://new.domain' where option_name = 'siteurl';
+
+
+Themes
+https://demo.athemes.com/themes/?theme=Sydney
+https://athemes.com/theme/sydney/
+https://docs.athemes.com/category/8-sydney

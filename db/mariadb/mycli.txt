@@ -1,0 +1,8 @@
+https://www.mycli.net/
+	mycli --help
+	
+	mycli my_database
+    
+    mycli -u my_user -h my_host.com my_database
+    
+    mycli mysql://my_user@my_host.com:3306/my_database

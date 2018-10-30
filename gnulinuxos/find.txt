@@ -1,0 +1,32 @@
+http://www.cyberciti.biz/faq/linux-unix-how-to-find-and-remove-files/
+	find music/MP3/ -name "Thumbs.db" -exec rm -vrf {} \;
+	find music/MP3/ -name "*.epub" -exec rm -vrf {} \;
+http://www.ozzu.com/unix-linux-forum/delete-files-file-type-recursively-t105614.html
+	find /home -iname "*.mp3" -exec rm {} \;
+http://stackoverflow.com/questions/8642211/remove-all-files-that-does-not-have-the-following-extensions-in-linux
+	find /path/to/files ! -name "*.avi" -type f -exec rm -i {} \;
+	find /path/to/files ! -name "*.avi" -type f -delete
+http://stackoverflow.com/questions/7714900/remove-only-files-in-directory-on-linux-not-directories
+	find /path/to/directory -type f -maxdepth 1 -exec rm -iv {} \;
+echo "This script requires superuser access to install apt packages."
+echo "You will be prompted for your password by sudo."
+
+Move all files with "txt" in name to /home/user:
+	find -iname "*txt*" -exec mv -v {} /home/user \;
+
+http://unix.stackexchange.com/questions/19058/how-to-replace-one-char-with-another-in-all-filenames-of-the-current-directories
+	find /search/path -depth -name '* *' -execdir bash -c 'mv "$1" "${1// /_}"' _ {} \;
+	find . -depth -name '*-*' -execdir bash -c 'mv "$1" "${1//-/_}"' _ {} \;
+	find . -depth -name '* *' -execdir bash -c 'mv "$1" "${1// /-}"' _ {} \;
+
+The exec option to find is very powerful because it lets you act on the files found
+with the find command. The following command finds all the files in /var owned by
+the user chris (must be a valid user) and executes the ls -l command on each one:
+	find /var -user chris -exec ls -l {} \;
+An alternative to find’s exec option is xargs:
+	find /var -user chris -print | xargs ls -l
+
+Finding files by size is a great way to determine what is filling up your hard disks. The
+following command line finds all files that are greater than 10MB (+10M), lists those files
+from largest to smallest (ls -lS), and directs that list to a file (/tmp/bigfiles.txt):
+	find / -xdev -size +10M -print | xargs ls -lS > /tmp/bigfiles.txt

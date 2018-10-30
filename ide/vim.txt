@@ -1,3 +1,7 @@
+Copy past X11 Clipboard
+https://www.youtube.com/watch?v=YdUPkRMuM1o
+http://vim.wikia.com/wiki/GNU/Linux_clipboard_copy/paste_with_xclip
+
 https://kinbiko.com/vim/my-shiniest-vim-gems/
 https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118
 tutors https://news.ycombinator.com/item?id=15693906

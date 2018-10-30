@@ -1,0 +1,4 @@
+fd-find
+https://github.com/sharkdp/fd
+	apt install fd-find
+	alias fd=fdfind

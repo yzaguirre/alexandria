@@ -6,25 +6,25 @@ https://docs.kanboard.org/
 https://github.com/kanboard/kanboard/releases
 
 	cd /var/www
-	wget https://github.com/kanboard/kanboard/archive/v1.2.5.tar.gz
-	tar xf v1.2.5.tar.gz
-	mv kanboard-1.2.5 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.6.tar.gz
+	tar xf v1.2.6.tar.gz
+	mv kanboard-1.2.6 kanboard
 	chown www-data:www-data -R kanboard
 
-# Old instructions
 Make backup
 	cd /var/www
-	tar cfz kanboard.tgz kanboard
-	mv kanboard/data/ .
-	rm -rf kanboard
+	mkdir tmp
+	tar cfz tmp/kanboard.tgz kanboard
+	mv kanboard/data/ kanboard/config* tmp
+	mv kanboard tmp/kanboard-old
 Update
-	wget https://github.com/kanboard/kanboard/archive/v1.2.5.tar.gz
-	tar xf v1.2.5.tar.gz
-	mv kanboard-1.2.5 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.6.tar.gz
+	tar xf v1.2.6.tar.gz
+	mv kanboard-1.2.6 kanboard
 Restore the instance data
-	mv data/db.sqlite kanboard/data
+	mv tmp/data/db.sqlite tmp/data/files kanboard/data
 	chown www-data:www-data -R kanboard
-	rm -rf data
+Delete tmp/ directory
 
 Cron jobs
 https://docs.kanboard.org/en/latest/admin_guide/cronjob.html

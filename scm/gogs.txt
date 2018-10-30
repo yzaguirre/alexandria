@@ -56,3 +56,7 @@ https://twitter.com/joe2010xtmf
 
 LDAP
 https://gogs.io/docs/features/authentication
+
+Create temporary user
+https://gogs.io/docs/intro/faqs
+	./gogs admin create-user --name tmpuser --password tmppassword --admin --email email@example.com
