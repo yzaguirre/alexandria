@@ -1,0 +1,4 @@
+https://news.ycombinator.com/item?id=18342744
+Avoid Optimus like a plague if you are using Linux.
+There are quite decent Thinkpads with Ryzen/Vega APUs these days (like A485) which should work fine with upstream kernel and Mesa.
+But of course it's still Lenovo, so various blobs like UEFI remain.

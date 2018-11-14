@@ -1,0 +1,13 @@
+https://developers.google.com/gmail/api/
+https://developers.google.com/gmail/api/guides/
+https://stackoverflow.com/questions/8179103/read-all-mails-from-gmail-api-using-oauth
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/index.html
+https://github.com/unshift/gmail-cli
+
+https://support.google.com/mail/answer/7190?hl=en
+
+Not working:
+https://github.com/steve970/g7_gmail_capstone
+
+https://developers.google.com/gmail/api/quickstart/python
+	pip3 install --upgrade google-api-python-client oauth2client

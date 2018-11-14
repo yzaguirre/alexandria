@@ -1,0 +1,8 @@
+https://laravel-mix.com/docs/2.1/jquery-ui
+CSS import looks like this:
+	@import '~jquery-ui/themes/base/all.css';
+
+Mind the ~
+
+https://laravel-mix.com/docs/2.1/css-preprocessors
+https://laravel-mix.com/docs/2.1/versioning

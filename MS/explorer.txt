@@ -1,0 +1,12 @@
+https://ss64.com/nt/explorer.html
+Command-line switches that you can use to open the GUI Windows Explorer (Explorer.exe).
+Quotation marks are required if the File/Folder object contains spaces or symbols.
+	explorer data.xlsx
+	explorer 'folder/data.xlsx'
+Open an Explorer window at the 'Computer'
+	explorer ,
+Open an Explorer window at the root of the system drive C:\
+	explorer \
+Open an Explorer window at 'My Documents'
+	explorer \\
+	explorer /

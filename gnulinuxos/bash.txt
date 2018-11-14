@@ -147,3 +147,5 @@ runuser command
 	runuser -l  userNameHere -c 'command'
 	runuser -l userNameHere -c '/path/to/command arg1 arg2'
 	runuser -l www-data -c 'mkdir ~/html/images'
+https://stackoverflow.com/questions/742466/how-can-i-reverse-the-order-of-lines-in-a-file#742485
+	tac a.txt > b.txt

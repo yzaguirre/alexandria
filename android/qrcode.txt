@@ -1,0 +1,7 @@
+https://news.ycombinator.com/item?id=18360847
+Android is terrible.
+The best thing to do is piggy back zebra crossing's open source app
+and integrate it directly into the app. But as for a general use scanner,
+Android still depends on the user to download a external app.
+Motorola has it built into their camera app but I feel users don't
+know and don't reach out for it on reflex.

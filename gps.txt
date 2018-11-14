@@ -1,3 +1,9 @@
+https://owntracks.org/
+https://www.traccar.org/
+https://www.reddit.com/r/selfhosted/comments/9pdx60/phonetrack_is_a_nextcloud_application_agplv3_to/
+https://apps.nextcloud.com/apps/phonetrack
+https://github.com/bfabiszewski/ulogger-server
+
 	apt-get install gpsbabel
 	cat gps.csv
 -110.12345,44.98765,"ACME Show Store","Phone: 555-829-8293"

@@ -12,3 +12,6 @@ https://calibre-ebook.com/download_linux
 
 Uninstall
 	/usr/bin/calibre-uninstall
+E-book viewer shotcuts
+CTRL+M	Toggle between paged and flow mode
+CTRL+ALT+B	Bookmarks

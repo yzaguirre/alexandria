@@ -146,6 +146,9 @@ https://asvd.github.io/microlight
 
 https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/linux/
 
+https://github.com/cullum/dank-selfhosted
+https://news.ycombinator.com/item?id=18372486
+
 https://n0where.net/best-self-hosted-alternatives/
 https://victorhaggqvist.github.io/selfhosted/
 https://github.com/victorhaggqvist/selfhosted

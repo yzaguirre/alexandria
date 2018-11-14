@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/383944/what-is-a-python-equivalent-of-phps-var-dump#2889033
+	pip3 install var_dump
+import var_dump
+var_dump.var_dump(myvar)

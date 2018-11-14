@@ -4,9 +4,13 @@ https://rsync.samba.org/
 	wget https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz.asc
 	gpg2 --verify rsync-3.1.1.tar.gz.asc
 https://www.thegeekstuff.com/2010/09/rsync-command-examples
-	$ rsync --av --delete --rsh=ssh proyecto cb64:~/backup
+	rsync --av --delete --rsh=ssh proyecto cb64:~/backup
 -a is for archieve, recursion
 
 -z is to enable compression
 -v verbose
 -r indicates recursive
+
+Keep ownership
+https://twitter.com/climagic/status/1058375397405011968
+	rsync -aog --rsh=ssh proyecto cb64:~/backup

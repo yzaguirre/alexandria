@@ -55,3 +55,11 @@ Change EnablePostIconOverride to true to see Kanboard icon
 Troubleshooting
 	Enable the debug mode
 	All connection errors with the Mattermost API are recorded in the log files data/debug.log
+
+Themes
+https://www.reddit.com/r/selfhosted/comments/9sjbyj/kanboard_theming/
+https://github.com/aljawaid/KanboardCSS/tree/master/screenshots/v0.0.3
+https://github.com/kenlog/Moon
+https://github.com/kenlog/Nebula
+https://github.com/kenlog/Oxygen
+https://github.com/bgibout/blueboard

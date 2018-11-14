@@ -17,9 +17,9 @@ FastCGI radio button when prompted, and install keeping the rest as default.
 
 Install PHP on OpenSuse
 http://www.howtoforge.com/installing-apache2-with-php5-and-mysql-support-onopensuse-12.3-lamp
-	# sudo zypper install php5 php5-gd php-exif apache2-mod_php5 nginx
+	sudo zypper install php5 php5-gd php-exif apache2-mod_php5 nginx
 Restart Apache
-	# systemctl restart apache2.service
+	systemctl restart apache2.service
 
 Install apc
 	apt-get install php5-apcu
@@ -28,9 +28,9 @@ https://www.digitalocean.com/community/articles/how-to-install-alternative-php-c
 http://naveensnayak.wordpress.com/2013/03/04/simple-php-apc-setup-on-ubuntu-12-04/
 https://rtcamp.com/tutorials/php/apc-cache-with-web-interface/
 http://www.euperia.com/development/php/viewing-the-php-apc-cache-in-ubuntu/437
-	# apt-get install php-pear php5-dev make libpcre3-dev
-	# zypper install php5-pear php5-devel make libpcre3-dev
-	# pecl install apc
+	apt-get install php-pear php5-dev make libpcre3-dev
+	zypper install php5-pear php5-devel make libpcre3-dev
+	pecl install apc
 Build process completed successfully
 Installing '/usr/lib64/php5/extensions/apc.so'
 Installing '/usr/include/php5/ext/apc/apc_serializer.h'
@@ -40,19 +40,19 @@ You should add "extension=apc.so" to php.ini
 
 The next and final step of the installation is also mentioned in the terminal window. 
 You need to edit the php.ini file and add a line at the end. Open and edit the file:
-	# vim /etc/php5/apache2/php.ini
+	vim /etc/php5/apache2/php.ini
 extension = apc.so
 Save, exit the file, and restart Apache:
-	# service apache2 restart
-	# cp /usr/share/php/apc.php /var/www
-	# chown www-data:www-data /var/www/apc.php
+	service apache2 restart
+	cp /usr/share/php/apc.php /var/www
+	chown www-data:www-data /var/www/apc.php
 	
-	# cp /usr/share/php5/apc.php /srv/www/htdocs
-	# chown wwwrun:www /srv/www/htdocs/apc.php
+	cp /usr/share/php5/apc.php /srv/www/htdocs
+	chown wwwrun:www /srv/www/htdocs/apc.php
 Get apc.php from scp
-	$ scp ec2:/usr/share/php/apc.php ~/tmp
-	# mv ~/tmp/apc.php /srv/www/htdocs/
-	# chown wwwrun:www /srv/www/htdocs/apc.php
+	scp ec2:/usr/share/php/apc.php ~/tmp
+	mv ~/tmp/apc.php /srv/www/htdocs/
+	chown wwwrun:www /srv/www/htdocs/apc.php
 
 Comentarios con 
 #

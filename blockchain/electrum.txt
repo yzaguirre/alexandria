@@ -1,0 +1,12 @@
+https://electrum.org/#download
+	sudo apt install python3-setuptools python3-pyqt5 python3-pip
+	wget https://download.electrum.org/3.0.2/Electrum-3.0.2.tar.gz
+	wget https://download.electrum.org/3.0.2/Electrum-3.0.2.tar.gz.asc
+	gpg --verify Electrum-3.0.2.tar.gz.asc
+	sudo pip3 install Electrum-3.0.2.tar.gz
+android
+	wget https://download.electrum.org/3.0.2/Electrum-3.0.2.1-release.apk
+	wget https://download.electrum.org/3.0.2/Electrum-3.0.2.1-release.apk.asc
+	gpg --verify Electrum-3.0.2.1-release.apk.asc
+
+http://docs.electrum.org/en/latest/cmdline.html

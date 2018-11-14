@@ -1,2 +1,7 @@
+https://elixir-lang.org/
+https://coder.show/325
 https://teamgaslight.com/blog/elm-elixir-and-phoenix-reflecting-on-a-functional-full-stack-project
 https://news.ycombinator.com/item?id=16520511
+
+Reitit, Data-Driven Routing with Clojure(Script)
+https://www.metosin.fi/blog/reitit/
