@@ -163,3 +163,6 @@ http://vim.wikia.com/wiki/Forcing_Syntax_Coloring_for_files_with_odd_extensions
 Indentation
 https://stackoverflow.com/questions/506075/how-do-i-fix-the-indentation-of-an-entire-file-in-vi
 	set ai
+Color diff
+https://www.commandlinefu.com/commands/view/2420/colored-svn-diff
+	vimdiff file1 file2

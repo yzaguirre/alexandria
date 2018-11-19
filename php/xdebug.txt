@@ -1,5 +1,5 @@
 Install
-	apt-get install php5-xdebug
+	apt install php-xdebug
 configure xdebug
 https://www.xdebug.org/docs/remote
 	vim + /etc/php5/mods-available/xdebug.ini

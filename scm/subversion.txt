@@ -56,3 +56,5 @@ http://stackoverflow.com/questions/216049/how-do-i-get-a-list-of-all-unversioned
 	svn status --no-ignore
 ihttps://stackoverflow.com/questions/86049/how-do-i-ignore-files-in-subversion
 	svn propset svn:ignore ".git" .
+https://stackoverflow.com/questions/8800578/how-to-colorize-diff-on-the-command-line
+	svn diff | view -
