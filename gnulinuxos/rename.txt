@@ -1,0 +1,6 @@
+Rename
+https://stackoverflow.com/questions/6329505/how-to-rename-all-file-in-a-folder-with-a-suffix-in-a-single-unix-command
+	rename 's/^/Unix_/' *
+
+vidir
+	apt install moreutils

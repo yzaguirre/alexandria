@@ -1,11 +1,15 @@
 https://www.jetbrains.com/idea/download/index.html
-	wget https://download.jetbrains.com/idea/ideaIC-2018.1.6-no-jdk.tar.gz.sha256
-	sha256sum -c ideaIC-2018.1.6-no-jdk.tar.gz.sha256
+	wget https://download-cf.jetbrains.com/idea/ideaIC-2018.3.tar.gz
+or
+	wget https://download-cf.jetbrains.com/idea/ideaIC-2018.3-no-jdk.tar.gz
 https://www.jetbrains.com/help/idea/install-and-set-up-product.html
 	apt install openjdk-8-jdk
-	tar xf ideaIC-2018.1.6-no-jdk.tar.gz -C /opt/
-	cd /opt/idea-IC-181.5540.7/bin
+	tar xf ideaIC-2018.3-no-jdk.tar.gz -C /opt/
+	cd /opt/idea-IC-183.4284.148/bin
 	./idea.sh
-Add /opt/idea-IC-181.5540.7/bin to PATH
+Add /opt/idea-IC-183.4284.148/bin to PATH
 	vim ~/.profile
-export PATH=$PATH:/opt/idea-IC-181.5540.7/bin
+export PATH=$PATH:/opt/idea-IC-183.4284.148/bin
+Look for previous and current config files
+	ls ~/.Idea*
+The firt launch wizards also creates a 'idea' launch script.

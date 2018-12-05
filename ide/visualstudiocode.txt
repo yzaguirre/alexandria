@@ -1,1 +1,41 @@
-https://github.com/VSCodium/vscodium/issues
+https://code.visualstudio.com/
+https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run
+https://github.com/Microsoft/vscode/wiki/Cross-Compiling-for-Debian-Based-Linux
+See ~/js/yarn.txt
+See ~/js/gulp.txt
+Node.JS, 64-bit, >= 8.12.0, < 9.0.0
+	git clone https://github.com/Microsoft/vscode.git
+	apt install make gcc libx11-dev libxkbfile-dev libsecret-1-dev fakeroot rpm
+	cd vscode
+	yarn install
+	yarn run gulp vscode-linux-x64-build-deb
+	yarn run gulp vscode-linux-x64-min
+Build in vscodium_1.29.1-1542386856_amd64.deb
+
+https://github.com/VSCodium/vscodium/releases
+https://news.ycombinator.com/item?id=17850960
+https://news.ycombinator.com/item?id=18209082
+Search them in settings with the keyword "online", you will find them all. 
+
+Install
+	wget https://github.com/VSCodium/vscodium/releases/download/1.29.1/vscodium_1.29.1-1542386856_amd64.deb
+	dpkg -i vscodium_1.29.1-1542386856_amd64.deb
+	code-oss
+Disable telemetry
+https://github.com/VSCodium/vscodium/blob/master/DOCS.md
+@tag:usesOnlineServices
+	cd '.config/Code - OSS/User'
+	vim settings.json
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.showReleaseNotes": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false
+}
+If vscodium
+	cd $HOME/.config/VSCodium/User
+Marketplace
+https://marketplace.visualstudio.com/

@@ -13,6 +13,7 @@ Bower way
 	bower install vue
 
 Install the CLI
+https://cli.vuejs.org/
 https://github.com/vuejs/vue-cli
 	npm install -g vue-cli
 	vue init <template-name> <project-name>

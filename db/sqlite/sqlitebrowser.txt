@@ -1,0 +1,18 @@
+httpw://sqlitebrowser.org/
+https://github.com/sqlitebrowser/sqlitebrowser
+	apt install sqlitebrowser
+Compile
+	apt install libsqlite3-dev build-essential cmake libqt4-dev
+	wget https://github.com/sqlitebrowser/sqlitebrowser/archive/v3.10.1.tar.gz
+	tar xf v3.10.1.tar.gz
+	cd sqlitebrowser-3.10.1
+	mkdir build
+	cd build
+	cmake ..
+	make
+	sudo make install
+-- Install configuration: "Release"
+-- Installing: /usr/local/bin/sqlitebrowser
+-- Installing: /usr/local/share/icons/hicolor/256x256/apps/sqlitebrowser.png
+-- Installing: /usr/local/share/applications/sqlitebrowser.desktop
+-- Installing: /usr/local/share/appdata/sqlitebrowser.desktop.appdata.xml

@@ -3,10 +3,19 @@ https://github.com/nodesource/distributions
 https://nodejs.org/en/download/package-manager/
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
 Ubuntu install
+	wget https://deb.nodesource.com/setup_8.x
+	sudo bash setup_8.x
+	rm setup_8.x
+	apt install nodejs=8.14.0-1nodesource1
+	
 	wget https://deb.nodesource.com/setup_6.x
 	sudo bash setup_6.x
 	rm setup_6.x
 	apt install nodejs=6.14.3-1nodesource1
+
+https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
+	vim ~/.npmrc
+prefix=/opt/npm
 
 	node --inspect --debug-brk server.js
 Print Objects

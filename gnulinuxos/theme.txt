@@ -1,0 +1,18 @@
+Numix
+https://github.com/numixproject/numix-gtk-theme
+Dependencies
+	sudo apt install libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils
+Install
+	wget https://github.com/numixproject/numix-icon-theme-circle/archive/16-09-07.tar.gz
+	tar xf 16-09-07.tar.gz
+	cd numix-gtk-theme-2.6.3
+	make
+	sudo make install
+
+	gsettings set org.gnome.desktop.interface gtk-theme "Numix"
+	gsettings set org.gnome.desktop.wm.preferences theme "Numi
+Tron Legacy UI
+https://news.ycombinator.com/item?id=18509828
+https://github.com/GitSquared/edex-ui
+https://news.ycombinator.com/item?id=14939255
+https://www.robscanlon.com/encom-boardroom/

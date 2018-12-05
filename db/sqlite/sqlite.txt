@@ -1,0 +1,24 @@
+https://www.sqlite.org/
+http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
+https://news.ycombinator.com/item?id=8033210
+https://www.sqlite.org/whentouse.html
+
+https://www.sqlite.org/cli.html
+https://www.sqlite.org/lang.html
+https://www.sqlite.org/lang_createtable.html
+
+Install common tools
+	sudo apt-get install sqlite3 php5-sqlite
+Restart apache2 web server
+	sudo service apache2 restart
+
+Abrir la base de datos (se crea en caso de no existir)
+	sqlite3 parqueo_fi.db
+Cargar un archivo con setencias SQL
+	.read crear_tablas.sql
+Salir
+	.exit
+
+https://alvinalexander.com/android/sqlite-schema-table-database
+https://stackoverflow.com/questions/4654762/how-can-one-see-the-structure-of-a-table-in-sqlite
+.schema '%ers'

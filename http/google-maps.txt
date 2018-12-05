@@ -16,3 +16,12 @@ https://developers.google.com/maps/documentation/geocoding/intro
 	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Maputo,+Mozambique&key=$APIKEY"
 	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Geneva,+Switzerland&key=$APIKEY"
 	curl "https://maps.googleapis.com/maps/api/geocode/json?address=Los+Angeles+California,+USA&key=$APIKEY"
+Places API for Web
+https://developers.google.com/maps/documentation/javascript/places
+In JavaScript, you need to use the Places Library from the Maps API V3
+https://stackoverflow.com/questions/15847623/googles-places-api-and-jquery-request-origin-http-localhost-is-not-allowed
+https://developers.google.com/maps/documentation/javascript/maptypes
+You need to set a size for your map
+https://stackoverflow.com/questions/14946647/google-maps-sample-code-not-running-in-localhost
+<div id="map_canvas" style="height:500px;width:600px;"></div>
+

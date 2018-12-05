@@ -14,5 +14,5 @@ Other examples
 	exa -R
 	exa -T
 	exa -R --level=4
-	exa ‐l -‐sort=size
-	exa ‐lr -‐sort=size
+	exa -l --sort=size
+	exa -lr --sort=size

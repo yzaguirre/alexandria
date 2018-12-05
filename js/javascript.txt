@@ -25,3 +25,9 @@ var removedItem = fruits.splice(pos, 1);
 
 Upload files
 https://www.script-tutorials.com/pure-html5-file-upload/
+
+JavaScript check if variable exists is defined/initialized
+http://stackoverflow.com/questions/5113374/ddg#519157
+if (typeof variable !== 'undefined') {
+    // the variable is defined
+}

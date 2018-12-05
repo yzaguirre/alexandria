@@ -3,18 +3,18 @@ https://developer.android.com/studio/install
 Dependencies
 	apt install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 # lib32z1-dev
-Download
+Download tools
 	wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 	mkdir /opt/android-sdk
-	unzip sdk-tools-linux-4333796.zip -qd /opt/android-sdk
+	unzip -q sdk-tools-linux-4333796.zip -d /opt/android-sdk
 For W
 Env variables
 https://developer.android.com/studio/command-line/variables
 https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-environment-variable
+https://developer.android.com/studio/command-line/variables
 	vim ~/.profile
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export ANDROID_SDK_ROOT=/opt/android-sdk
-export ANDROID_SDK_HOME=~/.android
 export ANDROID_NDK_ROOT=/opt/android-ndk
 PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools/bin
 To download for windows, set the env variable

@@ -1,0 +1,22 @@
+https://flutter.io/docs/get-started/install
+https://flutter.io/docs/get-started/install/linux
+https://github.com/flutter/flutter
+	wget https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.11.13-beta.tar.xz
+	tar xf flutter_linux_v0.11.13-beta.tar.xz -C /opt
+Dart is at /opt/flutter/bin/cache/dart-sdk
+Edit PATH
+export PATH=$PATH:/opt/flutter/bin
+
+Run flutter
+	flutter config --no-analytics
+	flutter config
+	flutter doctor -v
+	flutter doctor --android-licenses
+	flutter devices
+Test app
+	flutter create myapp
+	cd myapp
+	flutter devices
+	flutter run
+Format a file
+	flutter format <filename>
