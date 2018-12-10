@@ -1,0 +1,8 @@
+https://rocket.rs/
+https://news.ycombinator.com/item?id=13245475
+https://github.com/SergioBenitez/rocket
+https://rocket.rs/v0.4/news/2018-12-08-version-0.4/
+https://news.ycombinator.com/item?id=18636113
+
+https://rocket.rs/v0.4/overview/
+https://rocket.rs/v0.4/guide/
