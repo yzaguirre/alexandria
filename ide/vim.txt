@@ -30,6 +30,8 @@ find matching bracket %
 search word under the cursor *
 
 :w !sudo tee %﻿
+Encrypt save
+:w !gpg -aer some_pub_key -o output.txt.gpg
 http://blog.desdelinux.net/viernes-terminal-pensando-vim/
 substitute
 :%s/\s\+/ /g

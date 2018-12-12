@@ -1,0 +1,7 @@
+Configure Blu Life One on windows
+https://developer.android.com/studio/run/win-usb
+https://developer.android.com/studio/run/oem-usb
+https://www.youtube.com/watch?v=T8BMFHlJy6U
+https://www.youtube.com/watch?v=scNxQ6fZ7e0
+https://drive.google.com/file/d/0B9O64whGSSQKYkFzUzVBM0hiZVU/view
+https://en.usb-driver.net/blu-life-one-2015-download-usb-driver/
