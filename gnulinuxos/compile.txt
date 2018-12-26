@@ -1,0 +1,10 @@
+How to Compile Source Code - Linux Terminal 201 - HakTip 174-kMmmvhl_kzo.mp4
+Compile diction
+	wget http://deb.debian.org/debian/pool/main/d/diction/diction_1.11.orig.tar.gz
+	cd diction-1.11
+	./configure
+	make
+
+Make only compiles what changes.
+Istall
+	sudo make install

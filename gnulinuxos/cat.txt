@@ -1,0 +1,9 @@
+How to Use Cat, Sort, and Uniq - Linux Terminal 201 - HakTip 0167-bH1BDBzc3I0.mp4
+	cat > moon.txt
+Print dollar sign at the end.
+	cat -A moon.txt
+Give numbers on non empty rows.
+-b numbering non-blank lines
+-s surpress any repeated empty lines
+	cat -bs moon.txt
+See gnulinuxos/bat.txt

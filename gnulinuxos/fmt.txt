@@ -1,0 +1,6 @@
+How to Use nl, fold, and fmt - Linux Terminal 201 - HakTip 171-BksWPx-C8rg.mp4
+	fmt -w 50 moon.txt
+Split only mode. Won't combine shorter lines
+	fmt -w 50 -s moon.txt
+Only format the comments in a document. Look for the pound sign
+	fmt -w 50 -p '# ' file.txt

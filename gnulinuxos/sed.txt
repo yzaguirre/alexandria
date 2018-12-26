@@ -26,3 +26,15 @@ http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-how-to-write-to-a-file-usi
 
 https://stackoverflow.com/a/7517900
 	sed 's#"http://www.fubar.com"#URL_FUBAR#g'
+How to Use tr, sed, and aspell - Linux Terminal 201 - HakTip 170-F7Brrn-L1Zg.mp4
+	echo "moon" | sed 's/moon/mars/'
+Add line number, also called Address
+	echo "moon" | sed '1s/moon/mars/'
+	echo "this is a Test" | sed 's/t/T/'
+	echo "This is a Test" | sed "s/T/t/"
+	echo "This is a Test" | sed "s/T/t/g"
+	cat moon.txt
+fighting evil by moonlight winning lpve by dsylight
+	sed -i 's/lpve/love/; s/dsylight/daylight/' moon.txt
+	cat moon.txt
+fighting evil by moonlight winning love by daylight

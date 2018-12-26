@@ -1,6 +1,9 @@
 Rename
 https://stackoverflow.com/questions/6329505/how-to-rename-all-file-in-a-folder-with-a-suffix-in-a-single-unix-command
+	apt install rename
 	rename 's/^/Unix_/' *
+	rename 's/m4a/M4A/' *m4a
+	find . -name 'Bon Jovi*.m4a' -exec rename 's/m4a/M4a/' {} \;
 
 vidir
 	apt install moreutils

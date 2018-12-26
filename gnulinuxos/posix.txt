@@ -1,0 +1,6 @@
+What is POSIX in Unix Linux Terminal 201 - HakTip 161-U0GbJtnfqSM.mp4
+Print current language
+	echo $LANG
+	locale
+Change to posix setting
+	export LANG=POSIX

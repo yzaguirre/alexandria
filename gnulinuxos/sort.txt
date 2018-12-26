@@ -1,0 +1,15 @@
+How to Use Cat, Sort, and Uniq - Linux Terminal 201 - HakTip 0167-bH1BDBzc3I0.mp4
+	sort moon.txt
+Reverse sort
+	sort -r moon.txt
+Sort by key fields. Look at second column of data.
+	sort -n -k 2 birthdays.txt
+Sort by second key field, and only that key field. Then sort by third key field
+	sort -n -k 2,2 -k3n birthdays.txt
+Sort by the third key field and then by second character
+	sort -k 3.2nb birthdays.txt
+Sort an csv file by its third key field
+	sort -t ',' -k 3 birthdays.csv
+Sort an csv, and keep only one repeated entry
+	sort -t ',' -k 3 -u birthdays.csv
+See gnulinuxos/sysadmin.txt and gnulinuxos/bash.txt

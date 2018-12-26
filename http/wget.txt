@@ -20,3 +20,5 @@ http://www.linuxbsdos.com/2015/01/12/wget-and-the-user-agent-option/
 	wget -U "" http://www.example.com/image.png
 https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it#273776
 	wget -r -np -R "index.html*" http://example.com/configs/.vim/
+
+https://sourceforge.net/projects/gnuwin32/

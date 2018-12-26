@@ -1,3 +1,4 @@
+https://www.regular-expressions.info
 https://regex101.com/
 https://unix.stackexchange.com/questions/26284/how-can-i-use-sed-to-replace-a-multi-line-string#26290
 https://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
@@ -11,3 +12,8 @@ Lookbehind
 (?<=pattern) consumes zero characters, only if pattern could be matched against the characters preceding the current position (pattern must be of fixed length).
 
 (?<!pattern) consumes zero characters, only if pattern could not be matched against the characters preceding the current position (pattern must be of fixed length).
+
+Basic regular expressions are built into grep
+	^$.[]*
+Extended regular expressions (){}?+
+egrep is deprecated, use grep -E

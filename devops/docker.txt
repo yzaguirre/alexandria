@@ -1,0 +1,13 @@
+	yum install -y docker
+	dockeradd docker
+	usermod -aG docker cloud_user
+	systemctl enable --now docker
+	docker ps
+	docker pull docker.io/hello-world
+	docker images
+	docker run hello-world
+	docker ps -a
+Try other programs
+	docker pull 06Kellyjac/nyancat
+	docker pull jeremy646/doge
+	docker images

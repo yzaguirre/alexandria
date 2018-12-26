@@ -1,0 +1,5 @@
+How to Use pr and printf - Linux Terminal 201 - HakTip 172-aLypSBf1TBY.mp4
+Print format
+	printf "Lets format this: %s\n" sailor moon
+	printf "%d, %f, %o, %s, %x, %X\n" 26 26 26 26 26 26
+	printf "%06d, %05.5f, %o, %s, %#x, %X, %+d, %-d\n" 26 26 26 26 26 26 26 26

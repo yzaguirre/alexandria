@@ -1,3 +1,4 @@
+https://termux.com
 	apt install figlet mutt tcpdump php openssl-tool tty-clock irssi pv mosh wget python jq htop taskwarrior newsbeuter
 	apt install gnupg2 dirmngr curl gnupg-curl
 

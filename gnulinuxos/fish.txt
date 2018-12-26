@@ -1,2 +1,10 @@
 https://fishshell.com/#get_fish_linux
 https://news.ycombinator.com/item?id=15910897
+https://fishshell.com/docs/current/tutorial.html
+Config file
+	vim ~/.config/fish/config.fish
+Functions
+	vim ~/.config/fish/functions/ll.fish
+function ll
+    ls -lh $argv
+end

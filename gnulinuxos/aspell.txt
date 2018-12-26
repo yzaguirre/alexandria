@@ -1,0 +1,6 @@
+Install
+	apt install aspell-es aspell-en 
+How to Use tr, sed, and aspell - Linux Terminal 201 - HakTip 170-F7Brrn-L1Zg.mp4
+	cat moon.txt
+fighting evil by moonlight winning lpve by dsylight
+	aspell check moon.txt

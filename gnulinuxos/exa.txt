@@ -1,5 +1,8 @@
 https://the.exa.website/
 https://github.com/ogham/exa
+Package install
+	apt install exa
+Binary install
 	wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
 	wget https://github.com/ogham/exa/releases/download/v0.8.0/MD5SUMS
 	wget https://github.com/ogham/exa/releases/download/v0.8.0/SHA1SUMS

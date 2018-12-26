@@ -1,0 +1,8 @@
+https://rubyinstaller.org/
+https://www.ruby-lang.org/en/
+https://news.ycombinator.com/item?id=7806329
+https://news.ycombinator.com/item?id=18751823
+Ruby already has the ability to spin up a quick webserver for the current directory. This is supported through the un file in Ruby's stdlib: http://ruby-doc.org/stdlib-2.0.0/libdoc/un/rdoc/Object.html.
+
+    ruby -run -e httpd -- --port=8080 .
+	ruby -run -e httpd . -p 5000

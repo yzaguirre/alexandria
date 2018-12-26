@@ -1,0 +1,8 @@
+http://jonls.dk/redshift/
+https://github.com/jonls/redshift/releases
+https://github.com/jonls/redshift/blob/master/HACKING
+https://www.maketecheasier.com/protect-eyes-redshift-linux/
+	apt install redshift-gtk geoclue-2.0
+Config file
+~/.config/redshift.conf
+	redshift -l geoclue2 -t 6500:5000 -b 1.0:0.8

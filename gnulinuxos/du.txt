@@ -1,0 +1,5 @@
+Monitoring System Resources Pt 2 - Linux Terminal 201 - HakTip 165-fwMTD9ghC3c.mp4
+	du
+	du -h
+With no subdirectorues
+	du -hs

@@ -1,0 +1,8 @@
+Document Formatting with Groff - Linux Terminal 201 - HakTip 173-NW5ZWN2b4zw.mp4
+	zcat /usr/share/man/man1/ls.1.gz | groff -mandoc -T ascii
+-mandoc Macropackage  mandoc to compile the text
+-T ascii Encoding format to ascii
+	zcat /usr/share/man/man1/ls.1.gz | groff -mandoc > ls.ps
+	evince ls.ps
+Print ps to pdf
+	ps2pdf ls.ps ls.pdf

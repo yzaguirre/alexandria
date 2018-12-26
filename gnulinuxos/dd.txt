@@ -1,0 +1,43 @@
+The following command copies an ISO image file from a CD or DVD to your USB
+flash drive (assuming the drive appears as /dev/sdb1):
+	$ sudo dd if=whatever.iso of=/dev/sdb9
+Note that this command is making a binary copy of the bytes in the file, which may
+not be what you want to do.
+
+Make a ISO
+	dd if=/dev/cdrom of=whatever.iso
+Ubuntu also creates /dev/cdrw and /dev/dvd devices files as well as
+/dev/cdrom.
+
+Backup a drive (HDD, SD, USB, etc)
+Backup the whole device (includes all partitions)
+	sudo dd if=/dev/sdb of=mydevice.img 
+Mount an image of a device
+https://major.io/2010/12/14/mounting-a-raw-partition-file-made-with-dd-or-dd_rescue-in-linux/
+Find the offset sector, two ways:
+	file mydevice.img # Look for startsector
+	fdisk -l mydevice.img # Look for Start column
+Multiply the offset sector by 512. Each sector is 512 bytes long
+	mount -o ro,loop,offset=32256 mydevice.img /mnt/any_mount_directory
+Format USB
+https://www.lifewire.com/fix-a-broken-usb-drive-using-linux-4116970
+	sudo fdisk -l
+	sudo fdisk /dev/sdX
+m
+d
+1
+w
+	sudo fdisk /dev/sdX
+n
+p
+1
+enter
+enter
+w
+	sudo partprobe
+	sudo partprobe -s
+Create A FAT Filesystem
+	sudo mkfs.vfat -F 32 /dev/sdX1
+Mount The Drive
+	sudo mkdir /mnt/sdX1
+	sudo mount /dev/sdX1 /mnt/sdX1

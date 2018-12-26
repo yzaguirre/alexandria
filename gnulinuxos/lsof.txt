@@ -1,0 +1,14 @@
+LiSt Open Files
+Linux Terminal 201 - Monitoring System Resources Pt 1 - HakTip 164-xcR_FjAy1HI.mp4
+Monitoring System Resources Pt 2 - Linux Terminal 201 - HakTip 165-fwMTD9ghC3c.mp4
+https://github.com/Distrotech/lsof/blob/master/00QUICKSTART
+https://people.freebsd.org/~abe/
+Lists open files
+	lsof
+Lists open files for user
+	lsof -u david
+	lsof /home
+Information for running software
+	lsof -c lsof
+	lsof -c vim
+	lsof -c tmux

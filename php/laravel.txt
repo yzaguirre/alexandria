@@ -1,5 +1,6 @@
 https://www.laravel.com/
-https://laravel.com/docs/5.6/
+https://laravel.com/docs/5.7/
+https://learninglaravel.net/cheatsheet/
 Debugging with php methods
 var_dump($var)
 dd($var)

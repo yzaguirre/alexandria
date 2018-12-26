@@ -1,0 +1,15 @@
+Bootable USB Drive Using Powershell and Windows 8
+Run as Administrator
+PS C:\> Mount-DiskImage -ImagePath C:\Users\David\Desktop\Windows8.iso
+PS C:\> Get-Disk
+PS C:\> Clear-Disk -Number 1 -RemoveData
+	and hit [A]
+PS C:\> New-Partition -DiskNumber 1 -UseMaximumSize -IsActive:$true
+PS C:\> Format-Volume -FileSystem NTFS -DriveLetter D
+	now we're working with drive letter [D], hit [A]
+PS C:\> bootsect.exe /NT60 D:
+PS C:\> Copy-Item -Recurse E:\* D:\
+PS C:\> Dismount-DiskImage E:\
+
+la otra opcion
+http://www.microsoftstore.com/store/msusa/html/pbPage.Help_Win7_usbdvd_dwnTool

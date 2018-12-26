@@ -1,0 +1,4 @@
+https://www.andrewbennett.com.au/2010/07/command-line-mounting-and-unmounting-drivesvolumes-windows/
+	mountvol E:\ /D
+
+	PS C:\> Dismount-DiskImage E:\

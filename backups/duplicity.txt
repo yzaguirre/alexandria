@@ -2,6 +2,8 @@ http://duplicity.nongnu.org/index.html
 http://duplicity.nongnu.org/duplicity.1.html
 https://www.digitalocean.com/community/tutorials/how-to-use-duplicity-with-gpg-to-back-up-data-to-digitalocean-spaces
 https://www.digitalocean.com/community/tutorials/manage-backups-cloud-duplicacy
+https://www.digitalocean.com/community/tutorials/how-to-automate-backups-digitalocean-spaces
+https://www.digitalocean.com/docs/images/backups/
 Installing Duplicity
 	sudo -H pip install duplicity # Only available for python 2.7
 	apt install haveged

@@ -13,28 +13,16 @@ Bower way
 	bower install vue
 
 Install the CLI
-https://cli.vuejs.org/
+https://cli.vuejs.org/guide/
 https://github.com/vuejs/vue-cli
-	npm install -g vue-cli
-	vue init <template-name> <project-name>
-	vue init webpack my-project
-	vue init webpack-simple my-project
-	vue init browserify my-project
-	vue init browserify-simple my-project
-	vue init simple my-project
-Or use own template
-	vue init username/repo my-project
-	vue init bitbucket:username/repo my-project
-	vue init bitbucket:username/repo#branch my-project
-Use --clone for private git repo
-
-Local template
-	vue init ~/fs/path/to-custom-template my-project
-
+	npm install -g @vue/cli
+	vue create my-project
+	vue ui
+Presets in ~/.vuerc
 Run the project
 	cd my-project
 	npm install
-	npm run dev
+	npm run serve
 
 API Reference
 https://vuejs.org/v2/api/

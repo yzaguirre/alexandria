@@ -1,3 +1,9 @@
 https://stackoverflow.com/a/1252010
 	tr '\n' ' ' < input_filename
 	tr -d '\r\n' < input_filename
+How to Use tr, sed, and aspell - Linux Terminal 201 - HakTip 170-F7Brrn-L1Zg.mp4
+	echo "this is my test" | tr a-z A-Z
+	echo "this is my tEst" | tr [:upper:] A
+Squeez only works on adjourning characters
+	echo "this is my ttest" | tr -s t
+

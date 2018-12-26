@@ -1,0 +1,10 @@
+http://fatrat.dolezel.info/
+https://github.com/LubosD/fatrat
+	git clone https://github.com/LubosD/fatrat.git # or replace 'fatrat' with the name of any plugin
+	cd fatrat
+	apt install libpion-dev libtorrent-rasterbar-dev libboost-date-time1.67-dev
+x	apt install libpion-dev libcurl3
+x	cmake . -DWITH_CURL=ON -DWITH_WEBINTERFACE=ON -DWITH_SFTP=ON -DCMAKE_INSTALL_PREFIX=/usr/local
+	cmake . -DWITH_CURL=ON -DWITH_WEBINTERFACE=ON -DWITH_BITTORRENT=ON -DWITH_SFTP=ON -DCMAKE_INSTALL_PREFIX=/usr/local
+	make
+	make install

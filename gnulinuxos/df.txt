@@ -1,0 +1,6 @@
+Monitoring System Resources Pt 2 - Linux Terminal 201 - HakTip 165-fwMTD9ghC3c.mp4
+	df
+	df -h
+	df -ah 
+you can get information about your
+current mounts including available/used space

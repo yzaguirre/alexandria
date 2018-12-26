@@ -23,10 +23,28 @@ The exec option to find is very powerful because it lets you act on the files fo
 with the find command. The following command finds all the files in /var owned by
 the user chris (must be a valid user) and executes the ls -l command on each one:
 	find /var -user chris -exec ls -l {} \;
-An alternative to find’s exec option is xargs:
+An alternative to find's exec option is xargs:
 	find /var -user chris -print | xargs ls -l
+Using the Find Command! Linux Terminal 201 - HakTip 162-JYR_s4TIWSM.mp4
+Find files not owned by chris
+	find /var ! -user chris
+Find whats not in samba groupd
+	find /var ! -group samba
 
 Finding files by size is a great way to determine what is filling up your hard disks. The
 following command line finds all files that are greater than 10MB (+10M), lists those files
 from largest to smallest (ls -lS), and directs that list to a file (/tmp/bigfiles.txt):
 	find / -xdev -size +10M -print | xargs ls -lS > /tmp/bigfiles.txt
+
+Search by type
+	find . -type f
+	find . -type d | sort
+Linux Terminal 201 - Using the Find Command Pt 2 - HakTip 163-WuZYqiais54.mp4
+Matches TekThink*.txt and over 14 kilobytes in size
+	find . -name "TekThink*.txt" -a -size +14k
+Either matches TekThink*.txt or over 14 kilobytes in size
+	find . -name "TekThink*.txt" -o -size +14k
+Greater or equal than 8 kilobytes in size and not match TekThink*.txt
+	find . \( -size +8k -o -size 8k \) ! -name "TekThing*.txt"
+Rename things
+	find . -name "*.txt" -exec rename 's/txt/TXT/g' {} \;

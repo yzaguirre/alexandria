@@ -1,0 +1,10 @@
+Linux Terminal 201 - Using Brackets with Grep - HakTip 160-sQNvg-zTEvA.mp4
+Metacharacteres, in brackets
+	grep 'Hak[t5]' *.txt
+	grep 'Hak[^5]' *.txt
+	grep '^[HT]' *.txt
+Extended grep
+egrep is deprecated, use grep -E
+	echo "HakTip" | grep -E 'Hak5|HakTip'
+Posix setting, see ~/gnulinux/posix.txt
+	grep -h '[[:upper:]]' *.txt

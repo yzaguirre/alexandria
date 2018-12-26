@@ -1,0 +1,13 @@
+How to Use nl, fold, and fmt - Linux Terminal 201 - HakTip 171-BksWPx-C8rg.mp4
+	nl birthdays
+Multiple documents
+	nl birthdays birthdayssorted
+Add different values through options
+	nl -i 3 birthdays
+Change justification
+	nl -n rz birthdays
+Change number width
+	nl -w 20 birthdays
+It will fold if length exceeds width
+	nl -w 15 birthdays
+	echo "fighting evil by moonlight winning love by daylight" | nl -w 15
