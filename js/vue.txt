@@ -1,8 +1,10 @@
 https://vuepress.vuejs.org/
 https://news.ycombinator.com/item?id=16836394
 https://vuejs.org/v2/guide/computed.html
-https://vuejs.org/guide/
+https://vuejs.org/v2/guide/
 https://vuejs.org/v2/api/
+https://azurelogic.github.io/vue-js-2.x-talk/#/1
+https://github.com/vuejs/awesome-vue
 Download the development version with full warnings and debug mode
 	wget https://vuejs.org/js/vue.js
 Production Version (Warnings stripped, 23.55kb min+gzip)

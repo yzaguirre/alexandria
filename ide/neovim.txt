@@ -1,7 +1,25 @@
-neovim.org
+https://neovim.io
+https://github.com/neovim/neovim
+https://pragprog.com/book/modvim/modern-vim
+Compile
 	wget https://github.com/neovim/neovim/archive/master.zip
 	apt-get install libtool-bin autoconf automake cmake libncurses5-dev g++
 	unzip master.zip
 	cd neovim-master
 	make CMAKE_BUILD_TYPE=Release
 	sudo make install
+https://media.pragprog.com/titles/modvim/intro.pdf
+Install
+	apt install neovim
+	nvim
+https://media.pragprog.com/titles/modvim/switch.pdf
+	vim ~/.bash_aliases
+alias vim=nvim
+alias vi=nvim
+	mkdir -p ~/.config/nvim
+	vim ~/.config/nvim/init.vim
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vim/vimrc
+
+https://media.pragprog.com/titles/modvim/terminal.pdf

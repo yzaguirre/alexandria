@@ -26,3 +26,11 @@ To add all occurrences of the current word to the selection, use Find All: Alt+F
 
 Single Selection
 To go from multiple selections to a single selection, press Escape. 
+
+Themes
+CTRL+SHIFT+P theme
+https://daylerees.github.io
+https://github.com/daylerees/colour-schemes
+Slime
+CTRL+SHIFT+P Install
+CTRL+SHIFT+P dayle rees

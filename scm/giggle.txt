@@ -1,0 +1,2 @@
+https://wiki.gnome.org/Apps/giggle/
+	apt install giggle

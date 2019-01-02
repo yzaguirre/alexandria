@@ -10,13 +10,35 @@ Add the upstream project
 Create a local branch, for a feature or bug fix
 	git branch mytake
 	git checkout mytake
-Push commited changes
+Do it in one command
+	git checkout -b mytake
+Push commited changes. It takes current branch, sends it to remote branch called mytake
 	git push origen mytake
+Set up the local and remote branches as tracking branches
+	git push -u origen mytake
+Send other branches
+	git push origin master # current branch send to master in origin
+	git checkout dev
+	git push origin dev # current branch to dev in origin
+	git checkout qa
+	git push origin qa
 Regularly keep the local branch in sync with upstream
 	git fetch upstream
 	git merge upstream/master # merges the master branch to mytake branch
 Alternatively
 	git pull upstream/master
+
+Commit
+	git commit
+Commit with message
+	git commit -m "New files added"
+Commit files already staged
+	git commit -a
+	git commit -am "Modified this file"
+
+Remove a file
+	git rm Test2.txt
+	git commit -m "Removed a file"
 
 Remove untracked files
 https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree#64966
@@ -43,9 +65,14 @@ https://codewords.recurse.com/issues/two/git-from-the-inside-out
 https://news.ycombinator.com/item?id=12802949
 
 User config
+System config: /etc/gitconfig
+	git config --system core.editor "/bin/vim"
+Global config: ~/.gitconfig
 	git config --global user.name "David Y. Gonzalez"
 	git config --global user.email "dvdyzag@gmail.com"
 	git config --global commit.gpgsign true
+Local config: .git/config
+	git config user.name "user"
 	git config --local user.signingkey 3AA5C34371567BD2
 Push options
 	git config --global push.default simple
@@ -61,8 +88,15 @@ Lists version history for a file, including renames
 	git log --follow [file]
 	git log --author=your-username
 	git log --branches[=<branch>]
+	git log --grep="change"
 	git log --oneline
+	git log -p
+	git log -2
 	git shortlog
+	git log -- test.txt
+	git log --graph
+	git log --graph --decorate
+	man git log
 https://zwischenzugs.com/2018/03/26/git-log-the-good-parts/
 https://news.ycombinator.com/item?id=16677308
 	git log -G 'chef-client' --graph --oneline --stat --pickaxe-all
@@ -123,16 +157,21 @@ Make Release branch
 
 Removes the file from version control but preserves the file locally
 	git rm --cached [file]
+Ignore files
+Excludes files defined globally
+	git config --global core.excludesfile
+	git config --global core.excludesfile '/etc/gitignore'
+	sudo vim /etc/gitignore
+Local gitignore (recommended)
+	vim .gitignore
 Lists all ignored files in this project
 	git ls-files --other --ignored --exclude-standard
 	
 clone via SSH
 	git clone git@github.com:dvdyzag/alec.git
-or
-	git clone github:dvdyzag/alec.git
 
 clone via HTTPS
-git clone https://github.com/dvdyzag/alec.git
+	git clone https://github.com/dvdyzag/alec.git
 
 git proxy
 http://stackoverflow.com/questions/128035/how-do-i-pull-from-a-git-repository-through-an-http-proxy

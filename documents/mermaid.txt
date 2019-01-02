@@ -1,0 +1,12 @@
+https://mermaidjs.github.io
+https://news.ycombinator.com/item?id=18788244
+https://github.com/mermaidjs/mermaid.cli
+	npm install -g mermaid.cli
+	mmdc -h
+	mmdc -i input.mmd -o output.svg
+	mmdc -i input.mmd -o output.png
+	mmdc -i input.mmd -o output.pdf
+	mmdc -i input.mmd -o output.svg -w 1024 -H 768
+	mmdc -i input.mmd -t forest
+	mmdc -i input.mmd -o output.png -b '#FFF000'
+	mmdc -i input.mmd -o output.png -b transparent

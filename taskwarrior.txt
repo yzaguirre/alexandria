@@ -1,0 +1,80 @@
+https://taskwarrior.org/download/
+https://gitpitch.com/GothenburgBitFactory/taskserver-setup#/16/6
+	apt install taskwarrior ptask tasksh
+Usage
+	task add Say Hello due:friday
+	task list
+	task 1 done
+	
+	task projects
+	task project.none: list
+
+http://blog.polettix.it/setup-a-taskwarrior-server/#securing-the-communications
+https://gist.github.com/polettix/e8007a7f2064e7f133d93e060032a880
+https://taskwarrior.org/docs/taskserver/prep.html
+taskwarrior server
+	apt install taskd
+Port tcp 53589
+Create user (debian uses Debian-taskd)
+Configuration
+	export TASKDDATA=/var/taskd
+	mkdir -p $TASKDDATA	
+Initialize the directory
+	taskd init
+Keys & Certificates
+https://taskwarrior.org/docs/taskserver/configure.html
+	cd /usr/share/taskd/pki
+	vim vars
+	./generate
+	cp *.pem $TASKDDATA
+Specify the keys
+	taskd config --force client.cert $TASKDDATA/client.cert.pem
+	taskd config --force client.key $TASKDDATA/client.key.pem
+	
+	taskd config --force server.cert $TASKDDATA/server.cert.pem
+	taskd config --force server.key $TASKDDATA/server.key.pem
+	taskd config --force server.crl $TASKDDATA/server.crl.pem
+	taskd config --force ca.cert $TASKDDATA/ca.cert.pem
+	
+	taskd config --force log $TASKDDATA/taskd.log
+	taskd config --force pid.file $TASKDDATA/taskd.pid
+Specify the port
+	taskd config server localhost:53589
+or
+	taskd config server uncanny.shop:53589
+	
+Print config
+	taskd config
+Launch the server
+https://taskwarrior.org/docs/taskserver/control.html
+	taskdctl start
+	taskdctl stop
+	ps aux | grep taskd
+Daemon
+	taskd server --data $TASKDDATA --daemon
+Add a user
+https://taskwarrior.org/docs/taskserver/user.html
+Create an organization
+	taskd add org Public
+Add users to Public org
+	taskd add user 'Public' 'Steve Woz'
+Save the new user key
+Create a key pair for the User
+	cd /usr/share/taskd/pki
+	./generate.client steve_woz
+This will generate a new key and cert, named first_last.cert.pem and first_last.key.pem
+
+Configure the client
+task config taskd.server      "$DOMAIN:$PORT"
+task config taskd.ca          "$TWCLIENT"/ca.cert.pem
+task config taskd.trust       strict
+task config taskd.credentials "$ORGANIZATION/$USER_NAME/$USER_KEY"
+task config taskd.key         "$TWCLIENT"/client.key.pem
+task config taskd.certificate "$TWCLIENT"/client.cert.pem
+
+Sync a client
+https://taskwarrior.org/docs/taskserver/sync.html
+	task sync init
+	task sync
+
+https://bitbucket.org/kvorobyev/taskwarriorandroid/wiki/Configuration

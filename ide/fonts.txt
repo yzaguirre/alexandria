@@ -1,3 +1,12 @@
 Fira Code
 https://github.com/tonsky/FiraCode/
 https://www.youtube.com/watch?v=Dnq5QhY7lOQ
+
+https://fonts.google.com/specimen/Roboto+Mono
+
+https://github.com/daylerees/colour-schemes
+
+Install fonts on linux
+https://www.youtube.com/watch?v=6ohOB52RpYE
+Place .ttf files at ~/.fonts, then
+	sudo fc-cache -f -v

@@ -335,3 +335,12 @@ Delete file
 
 Upload files
 https://laraveldaily.com/upload-multiple-files-laravel-5-4/
+
+Create an app user
+use App\Users;
+use Illuminate\Support\Facades\Hash;
+$user = new User;
+$user->name = 'Demo';
+$user->email = 'demo@example.com';
+$user->password = Hash::make('demo');
+$user->save();

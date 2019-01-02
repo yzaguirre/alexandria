@@ -1,0 +1,4 @@
+https://github.com/FabriceSalvaire/CodeReview/
+	apt install libgit2-dev
+	pip3 install CodeReview
+CodeReview provides two applications pyqgit and diff-viewer.
