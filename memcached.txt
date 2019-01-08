@@ -1,0 +1,32 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-memcached-on-ubuntu-18-04
+	apt update
+	apt install memcached libmemcached-tools sasl2-bin
+	vim /etc/memcached.conf
+-l 127.0.0.1
+-U 0
+
+	systemctl restart memcached
+Adding Authorized Users
+	memcstat --servers="127.0.0.1"
+	vim /etc/memcached.conf
+-S
+-vv
+
+	systemctl restart memcached
+Look at the logs
+	journalctl -u memcached
+Adding an Authenticated User
+	mkdir /etc/sasl2
+	vim /etc/sasl2/memcached.conf
+mech_list: plain
+log_level: 5
+sasldb_path: /etc/sasl2/memcached-sasldb2
+
+Now we will create a SASL database with our user credentials.
+	saslpasswd2 -a memcached -c -f /etc/sasl2/memcached-sasldb2 sammy
+	chown memcache:memcache /etc/sasl2/memcached-sasldb2
+	systemctl restart memcached
+	memcstat --servers="127.0.0.1" --username=sammy --password=your_password
+
+Limiting IP Access With Firewalls
+	ufw allow from client_server_private_IP/32 to any port 11211

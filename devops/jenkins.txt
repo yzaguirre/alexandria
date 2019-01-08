@@ -1,0 +1,75 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04
+Minimum hardware
+https://jenkins.io/doc/book/hardware-recommendations/
+- 1 GB RAM
+Create user
+	adduser jenkins
+	usermod -aG sudo jenkins
+Add to sudo group
+Install java 8
+	apt install openjdk-8-jdk
+Install Jenkins
+	wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+	sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+	sudo apt update
+	sudo apt install jenkins
+	vim /etc/default/jenkins
+JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT --httpListenAddress=127.0.0.1"
+	sudo systemctl status jenkins
+	sudo systemctl start jenkins
+
+Open firewall
+x	sudo ufw allow 8080
+	sudo ufw allow OpenSSH
+	sudo ufw status
+	sudo ufw enable
+Install Nginx
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+	apt install nginx
+	sudo ufw allow 'Nginx HTTP'
+	sudo ufw status
+	vim /etc/nginx/sites-available/example.com
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/example.com/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name example.com www.example.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+	sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+	sudo nginx -t
+	sudo systemctl restart nginx
+Set up https
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
+	sudo add-apt-repository ppa:certbot/certbot
+	sudo apt install python-certbot-nginx
+	sudo certbot --nginx -d example.com -d www.example.com
+	sudo certbot renew --dry-run
+Set up reverse proxy with Nginx
+https://www.digitalocean.com/community/tutorials/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-18-04
+Edit site config file
+	vim /etc/nginx/sites-available/example.com
+        access_log            /var/log/nginx/jenkins.access.log;
+        error_log             /var/log/nginx/jenkins.error.log;
+location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                # try_files $uri $uri/ =404;
+                include /etc/nginx/proxy_params;
+                proxy_pass          http://localhost:8080;
+                proxy_read_timeout  90s;
+                # Fix potential "It appears that your reverse proxy setup is broken" error.
+                proxy_redirect      http://localhost:8080 https://example.com;
+http://your_server_ip_or_domain:8080
+Find the password
+	sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Clic "Install suggested plugins"
+Create administrative user
+Insert preffered URL instance
+Confirm, save and finish

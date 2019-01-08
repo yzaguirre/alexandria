@@ -1,0 +1,9 @@
+https://rufus.ie
+https://github.com/pbatard/rufus/
+	wget https://github.com/pbatard/rufus/releases/download/v3.4/rufus-3.4.exe
+	wget https://github.com/pbatard/rufus/releases/download/v3.4/rufus-3.4.exe.sig
+https://askubuntu.com/questions/927924/how-to-install-ubuntu-in-uefi-mode
+http://www.rodsbooks.com/efi-bootloaders/csm-good-bad-ugly.html
+	When trying to create the bootable USB, I opted for GPT instead of MBR
+	(you'll see the setting when you'll see the Rufus GUI).
+See ~/gnulinuxos/hardware.txt and ~/gnulinuxos/uefi.txt

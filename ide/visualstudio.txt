@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/12946476/where-is-the-iis-express-configuration-metabase-file-found
+VS2015 has it in
+	$(solutionDir)\.vs\config\applicationhost.config

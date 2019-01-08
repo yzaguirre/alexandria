@@ -1,0 +1,12 @@
+https://facturascripts.com/
+	sudo apt-get install php5 php5-cli php5-mysql php5-memcache mysql-server memcached
+	wget https://github.com/NeoRazorX/facturascripts_2015/archive/master.zip
+	unzip master.zip -d /var/www
+	cd /var/www
+	mv facturascripts_2015-master facturascripts
+	chown www-data:www-data -R facturascripts
+	
+mysql -u root -p
+	CREATE DATABASE facturascripts;
+	GRANT ALL ON facturascripts.* TO facturascripts@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;

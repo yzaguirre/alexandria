@@ -1,0 +1,33 @@
+Intel Skylake/Kaby Lake processors: broken hyper-threading
+https://news.ycombinator.com/item?id=14630183
+https://lists.debian.org/debian-devel/2017/06/msg00308.html
+
+Using Thermal Paste
+https://www.wikihow.com/Clean-Thermal-Paste
+https://www.wikihow.com/Fix-Computer-Overheating-Caused-by-Blocked-Heat-Sink
+https://www.techpowerup.com/forums/threads/does-thermal-paste-expire.211716/
+http://www.overclock.net/t/974796/does-thermal-paste-expire
+https://forums.anandtech.com/threads/does-thermal-paste-expire.2047442/
+
+RNG
+https://news.ycombinator.com/item?id=16080019
+https://shop.fsf.org/storage-devices/neug-usb-true-random-number-generator
+
+ASUS ROG STRIX B360-F GAMING
+1151LGA 8TH GEN 4XDDR4
+https://rog.asus.com/articles/maximus-motherboards/rog-introduces-strix-h370-and-b360-motherboards-for-gaming-rigs-of-all-sizes/
+https://www.asus.com/Motherboards/ROG-STRIX-B360-F-GAMING/
+http://www.linlap.com/asus_rog_strix_gl702vm
+Need UEFI install of linux on this machine. 
+It seems Asus are not fully supporting legacy USB installs any more.
+https://rog.asus.com/forum/showthread.php?81702-Linux-installation-in-ASUS-ROG-GL552VW-DH71
+https://openbenchmarking.org/result/1707131-KH-MATE2104599
+
+LINKSYS AE2500
+https://askubuntu.com/questions/620553/any-drivers-for-cisco-linksys-ae2500-usb-wifi-adapter
+https://linustechtips.com/main/topic/609815-linksys-ae2500-linux-support/
+https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
+Ndiswrapper
+
+SSD SEAGATE BARRACUDA SATA III
+https://github.com/jandelgado/general/wiki/Firmware-update-of-Seagate-harddisk-using-Linux

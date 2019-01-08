@@ -1,0 +1,5 @@
+https://wiki.debian.org/UEFI
+https://www.logilab.org/blogentry/6546148
+https://www.reddit.com/r/debian/comments/2brmp2/installing_debian_jessie_in_uefi_mode/
+https://blog.getreu.net/projects/legacy-to-uefi-boot/
+https://help.ubuntu.com/community/UEFI

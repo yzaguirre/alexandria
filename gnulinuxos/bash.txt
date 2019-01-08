@@ -1,3 +1,5 @@
+Bash-5.0
+https://news.ycombinator.com/item?id=18852523
 Bash alias
 https://stackoverflow.com/questions/6883760/git-for-windows-bashrc-or-equivalent-config-files-for-git-bash-shell#6883798
 

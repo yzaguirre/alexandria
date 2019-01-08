@@ -1,4 +1,5 @@
 https://ansible.com/
+https://www.reddit.com/r/linuxadmin/comments/a95uzi/toying_around_with_ansible_any_exercises_or/
 irc.freenode.net #ansible IRC chat channel
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04#install-ansible-on-ubuntu-1404
 https://www.reddit.com/r/linuxadmin/comments/83vhi2/a_system_administrators_guide_to_getting_started/

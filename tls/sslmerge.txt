@@ -1,0 +1,6 @@
+https://github.com/trimstray/sslmerge
+	git clone https://github.com/trimstray/sslmerge
+	cd sslmerge
+	./setup.sh install
+	sslmerge -i /data/certs -o /data/chain.crt
+

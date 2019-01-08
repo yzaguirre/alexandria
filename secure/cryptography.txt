@@ -1,1 +1,4 @@
 https://stackoverflow.com/questions/42042840/properties-of-a-cryptographic-hash-function
+https://www.crypto101.io/
+https://github.com/crypto101/crypto101.github.io/raw/master/Crypto101.pdf
+https://news.ycombinator.com/item?id=18776369
