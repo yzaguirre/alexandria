@@ -1,6 +1,10 @@
 Most packages
 	apt install php5 php5-pgsql php5-mysql php5-phalcon php5-curl php5-gd php5-gnupg php5-imagick php5-json php5-mcrypt php5-mongo php5-ssh2
 
+Configuration file
+https://stackoverflow.com/questions/51542217/the-openssl-extension-is-required-for-ssl-tls-when-installed-composer-via-scoop#51542218
+	cd %HOMEPATH%\scoop\apps\php\current\cli
+
 Choose a php version
 https://pehapkari.cz/blog/2017/03/27/multiple-php-versions-the-easy-way/
 	update-alternatives --config php

@@ -27,3 +27,11 @@ Install barcode
 	make
 	sudo make install
 	barcode -S -u in -g 1.5x0.5 -e upc-a      -b '035576322436' > albertsons.svg
+zbar
+http://zbar.sourceforge.net/
+https://git.linuxtv.org/zbar.git
+
+https://news.ycombinator.com/item?id=18804767
+https://github.com/divan/txqr
+
+https://github.com/gre/qrloop

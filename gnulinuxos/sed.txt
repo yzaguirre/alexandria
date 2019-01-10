@@ -1,3 +1,9 @@
+Sed breaks symlinks
+https://news.ycombinator.com/item?id=18823391
+sed's in-place editing mode (just like perl -i or the newer awk -i inplace
+that is supported by GNU awk) breaks symlinks,
+on the other hand it can operate on arbitrarily large files.
+
 https://stackoverflow.com/questions/1583219/awk-sed-how-to-do-a-recursive-find-replace-of-a-string
 	cd /home/www
 	find . -type f -print0 | xargs -0 sed -i 's/subdomainA.example.com/subdomainB.example.com/g'

@@ -1,3 +1,8 @@
+https://news.codecademy.com/visual-studio-code-sublime-text/
+Multi-edit: When you press ctrl + d,
+all instances of the word or command you are currently on will be highlighted within the file,
+you can also press ctrl + f to find and replace words.
+
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
 https://www.sublimetext.com/3
@@ -34,3 +39,12 @@ https://github.com/daylerees/colour-schemes
 Slime
 CTRL+SHIFT+P Install
 CTRL+SHIFT+P dayle rees
+
+https://github.com/SublimeText/VBScript
+VBScript syntax
+https://stackoverflow.com/questions/8088475/how-to-customise-file-type-to-syntax-associations-in-sublime-text
+Associate the .vb extension with VBScript
+
+exclude files
+https://stackoverflow.com/questions/30934706/sublime-text-hide-but-not-exclude-files-folders-from-the-project
+Added it to binary_file_patterns in settings

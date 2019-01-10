@@ -1,0 +1,3 @@
+See page 47, LMI_2019-19_Digisub
+	apt install moreutils
+	vidir

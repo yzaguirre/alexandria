@@ -1,8 +1,8 @@
 checkout in another name
 http://svnbook.red-bean.com/en/1.6/svn.ref.svn.c.checkout.html
 
-	# apt-get update
-	# apt-get install subversion
+	apt update
+	apt install subversion
 The next step is to create a location to store the repositories. This can, in theory, be anywhere in the
 system, but a common location is in the var directory within the file system, so you'll be creating a folder
 called svn-repos in there. Feel free to change the name or location of the folder, just be sure to remember

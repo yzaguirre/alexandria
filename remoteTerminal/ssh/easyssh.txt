@@ -1,0 +1,3 @@
+https://github.com/muriloventuroso/easyssh
+	flatpak install flathub com.github.muriloventuroso.easyssh
+	flatpak run com.github.muriloventuroso.easyssh

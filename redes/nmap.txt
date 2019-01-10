@@ -43,7 +43,7 @@ http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-My
 	make
 	cd ../ncat/
 	make
-	apt-get install liblua5.2-0 libc6
+	apt install liblua5.2-0 libc6
 
 Scan a trace for open ports
 	nmap -A localhost
@@ -57,3 +57,9 @@ List scripts
 https://elbinario.net/2018/04/17/testando-la-seguridad-de-nuestros-servidores-i/
 	locate nse | grep script
 	nmap -sS --script default IP 
+Scan the network
+http://www.stevendobbelaere.be/how-to-do-a-network-ip-range-scan-with-nmap/
+https://askubuntu.com/questions/377787/how-to-scan-an-entire-network-using-nmap#377796
+	nmap -sP 192.168.1.0/24
+Scan an IP range
+	nmap -sP 192.168.1.1-200
