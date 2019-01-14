@@ -12,7 +12,7 @@ How do I restrict or modify size of /dev/shm permanently?
 	vim /etc/fstab
 Append or modify /dev/shm entry as follows to set size to 8G
 none      /dev/shm        tmpfs   defaults,size=8G        0 0
-tmpf /mnt/memo tmpfs size=2G 0 0
+tmpfs /mnt/memo tmpfs size=2G 0 0
 
 For the changes to take effect immediately remount /dev/shm:
 	mount -o remount /dev/shm

@@ -9,3 +9,8 @@ https://ubuntu-mate.community/t/install-ubuntu-mate-using-something-else-method/
 
 Software
 	apt install synaptic shutter gparted gpart xsane hplip-gui deluge pepperflashplugin-nonfree bleachbit libreoffice me-tv kaffeine linux-firmware-nonfree devede handbrake libxine2-all-plugins transcode ubuntu-restricted-extras vamps videotrans playonlinux mono-complete p7zip-rar winbind kshisen amarok kontact skype faac flac chameleon-cursor-theme clamtk mate-desktop-environment-extras alien k3b chromium-browser browser-plugin-freshplayer-pepperflash nvidia-352
+# startup scripts
+geany
+terminator
+keepassxc
+guake

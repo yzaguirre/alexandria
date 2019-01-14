@@ -1,0 +1,29 @@
+https://wiki.debian.org/NdisWrapper
+https://help.ubuntu.com/community/WifiDocs/Driver/Ndiswrapper
+https://www.linuxquestions.org/questions/linux-hardware-18/bcm4306-ndiswrapper-windows-driver-couldn%27t-initialize-the-device-344849/
+http://ndiswrapper.sourceforge.net/wiki/index.php/Netgear_WNA3100
+https://askubuntu.com/questions/100090/how-do-i-install-the-driver-for-my-linksys-ae1200-wireless-n-usb-adapter
+Install
+	apt install ndiswrapper ndiswrapper-dkms ndisgtk
+Insert driver
+	ndiswrapper -i bcmwlhigh5.inf
+	sudo modprobe ndiswrapper
+	sudo modprobe -r ndiswrapper | sudo modprobe ndiswrapper
+	echo "ndiswrapper" >> /etc/modules
+https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
+	vim /etc/modprobe.d/blacklist
+blacklist bcm43xx
+blacklist b43
+blacklist b43legacy
+blacklist ssb
+
+blacklist b43
+blacklist b43legacy
+blacklist bcma
+blacklist ndiswrapper
+
+Unload driver
+	ndiswrapper -e bcmwlhigh5
+List drivers
+	ndiswrapper -l
+See ~/gnulinuxos/hardware.txt

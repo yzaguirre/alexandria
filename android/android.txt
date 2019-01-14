@@ -14,7 +14,7 @@ https://developer.android.com/guide/topics/resources/providing-resources.html
 Sign app
 https://developer.android.com/studio/publish/app-signing.html#studio
 
-	apt-get install lib32ncurses5 lib32stdc++6 lib32zlib1g
+	apt install lib32ncurses5 lib32stdc++6 lib32zlib1g
 Busybox
 https://stackoverflow.com/questions/14398543/android-install-apk-silently-by-busybox-command-line
 	

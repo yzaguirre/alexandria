@@ -1,5 +1,5 @@
 https://github.com/notepadqq/notepadqq
-	apt install qttools5-dev-tools qtwebengine5-dev libqt5websockets5-dev libqt5svg5-dev libuchardet-dev
+	apt install qt5-default qttools5-dev-tools qtwebengine5-dev libqt5websockets5-dev libqt5svg5 libqt5svg5-dev libuchardet-dev pkg-config
 	git clone https://github.com/notepadqq/notepadqq.git
 	cd notepadqq
 	./configure --prefix /usr

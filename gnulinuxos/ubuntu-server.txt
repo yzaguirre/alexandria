@@ -21,7 +21,7 @@ arch=amd64
 https://help.ubuntu.com/community/Tasksel
 	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock
 	apt install mat
-	sudo -H pip3 install mycli pgcli youtube-dl mitmproxy httpie livestreamer
+	sudo -H pip3 install mycli pgcli youtube_dl mitmproxy httpie livestreamer
 	pip install socks
 	tasksel install dns-server
 	tasksel install lamp-server

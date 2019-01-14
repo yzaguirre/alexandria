@@ -21,3 +21,6 @@ Test app
 Format a file
 	flutter format <filename>
 https://flutter.io/docs
+Flutter change library location
+	vim .packages
+Substitute the correcto location

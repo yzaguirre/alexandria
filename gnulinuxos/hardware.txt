@@ -28,6 +28,17 @@ https://askubuntu.com/questions/620553/any-drivers-for-cisco-linksys-ae2500-usb-
 https://linustechtips.com/main/topic/609815-linksys-ae2500-linux-support/
 https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
 Ndiswrapper
+https://www.linksys.com/us/support-article?articleNum=148503
+https://askubuntu.com/questions/100090/how-do-i-install-the-driver-for-my-linksys-ae1200-wireless-n-usb-adapter
+https://wikidevi.com/wiki/Linksys_AE1200
+http://ndiswrapper.sourceforge.net/wiki/index.php/Netgear_WNA3100
+https://www.solvusoft.com/en/files/bsod-blue-screen-error/sys/windows/broadcom-corporation/broadcom-802-11-network-adapter-wireless-driver/bcmwlhigh5-sys/
+
+https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
+	apt install b43-fwcutter firmware-b43-installer
+	apt install bcmwl-kernel-source
+	sudo apt-get purge bcmwl-kernel-source
+	sudo update-pciids
 
 SSD SEAGATE BARRACUDA SATA III
 https://github.com/jandelgado/general/wiki/Firmware-update-of-Seagate-harddisk-using-Linux

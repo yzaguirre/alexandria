@@ -1,3 +1,4 @@
+https://gradle.org/
 https://news.ycombinator.com/item?id=16742858
 Groovy 
 Learn X in Y: http://learnxinyminutes.com/docs/groovy/
@@ -7,6 +8,7 @@ Using Gradle bundled with android studio
 Edit ~/.profile
 	export GRADLE_HOME=/opt/android-studio/gradle/gradle-3.5
 	export GRADLE_OPTS="-Dorg.gradle.daemon=true"
+	export GRADLE_USER_HOME="/opt/gradle-home"
 	PATH=$PATH:$GRADLE_HOME/bin
 
 Download latest build

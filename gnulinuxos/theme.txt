@@ -1,18 +1,23 @@
 Numix
 https://github.com/numixproject/numix-gtk-theme
+https://github.com/numixproject/numix-icon-theme-circle
 Dependencies
 	sudo apt install libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils
 Install
-	wget https://github.com/numixproject/numix-icon-theme-circle/archive/16-09-07.tar.gz
-	tar xf 16-09-07.tar.gz
-	cd numix-gtk-theme-2.6.3
-	make
-	sudo make install
+	sudo apt install numix-gtk-theme numix-icon-theme-circle
 
 	gsettings set org.gnome.desktop.interface gtk-theme "Numix"
-	gsettings set org.gnome.desktop.wm.preferences theme "Numi
+	gsettings set org.gnome.desktop.wm.preferences theme "Numix"
 Tron Legacy UI
 https://news.ycombinator.com/item?id=18509828
 https://github.com/GitSquared/edex-ui
 https://news.ycombinator.com/item?id=14939255
 https://www.robscanlon.com/encom-boardroom/
+
+https://stackoverflow.com/questions/47145497/how-to-style-gtk-widgets-individually-with-css-code
+https://developer.gnome.org/gtk3/stable/chap-css-overview.html
+https://developer.gnome.org/gtk3/stable/chap-css-properties.html
+Theme parsing error: gtk-widgets.css:3136:14: 'max-height' is not a valid property name
+	cd /usr/share/themes
+	vim +3135 Ambiant-MATE/gtk-3.0/gtk-widgets.css
+Comment out max-width and max-height
