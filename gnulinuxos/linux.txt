@@ -1,0 +1,59 @@
+For the Love of Pipes (jessfraz.com)
+https://news.ycombinator.com/item?id=18967249
+
+kernel
+https://lwn.net/Kernel/Index/
+http://0xax.gitbooks.io/linux-insides/
+
+http://elblogdeliher.com/como-obtener-informacion-de-la-memoria-ram-en-ubuntu/
+	sudo dmidecode --type memory
+
+minimal stuff
+openbox, tint2, dmenu y slim
+
+stop SELinux
+	# setenforce 0
+
+http://www.cyberciti.biz/tips/gnome-language-encoding-different-than-console.html
+It has only one section called [Desktop] which has two keys: Session and Language. 
+~/.dmrc file - Per-user language support
+
+release files
+/etc/lsb-release
+/etc/debian_version
+/etc/redhat_version
+/etc/lsb-release-crunchbang 
+/etc/os-release
+if [ -f /etc/debian_version ]; then
+
+Disable startup programs
+http://linuxg.net/disable-program-from-running-at-startup-on-linux-systems/
+OpenSuse
+	# chkconfig libvirtd off
+	# chkconfig sshd off
+It deletes: 
+	# rm '/etc/systemd/system/multi-user.target.wants/sshd.service'
+	
+	# chkconfig postfix off
+	# chkconfig bluetooth off
+	# chkconfig cups off
+rm '/etc/systemd/system/sockets.target.wants/cups.socket'
+rm '/etc/systemd/system/cupsd.service'
+rm '/etc/systemd/system/multi-user.target.wants/cups.path'
+rm '/etc/systemd/system/printer.target.wants/cups.service'
+
+Debian
+	# update-rc.d -f libvirtd remove
+
+Graphics card
+http://en.opensuse.org/SDB:Configuring_graphics_cards#6th_thing_to_try_.28proprietary_graphic_driver.29
+graphics releases https://01.org/linuxgraphics/downloads
+intel i915 linux driver alternative
+	 $ /sbin/lspci -nnk | grep VGA -A2
+http://stackoverflow.com/questions/16740101/how-can-i-find-out-my-opengl-version-on-ubuntu-13-04
+Install Glxinfo
+	# apt-get install mesa-utils
+To Check OpenGL Version,
+	$ glxinfo | grep "OpenGL version"
+You will get the output as follows,
+	$ glxinfo | grep "OpenGL version" OpenGL version string: 1.4 (2.1 Mesa 7.7.1)

@@ -1,3 +1,5 @@
+https://secure.php.net/ChangeLog-7.php#7.2.0
+https://secure.php.net/supported-versions.php
 Most packages
 	apt install php5 php5-pgsql php5-mysql php5-phalcon php5-curl php5-gd php5-gnupg php5-imagick php5-json php5-mcrypt php5-mongo php5-ssh2
 

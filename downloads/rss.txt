@@ -11,6 +11,7 @@ Newsboat
 https://www.youtube.com/watch?v=z359lWo3eQA
 https://newsboat.org/
 	apt install newsboat
+See  ~/downloads/newsboat.txt
 
 https://twitrss.me/t
 

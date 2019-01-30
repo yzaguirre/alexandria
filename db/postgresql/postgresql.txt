@@ -1,3 +1,7 @@
+Internals of PostgreSQL
+http://www.interdb.jp/pg/index.html
+https://news.ycombinator.com/item?id=18950460
+
 Why migrate to postgresql? https://news.ycombinator.com/item?id=12489055
 https://pgexercises.com
 http://www.postgresguide.com/

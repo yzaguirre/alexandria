@@ -152,6 +152,8 @@ Install for vim 8
 	git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 	:helptags
 
+Dart syntax
+
 Vue syntax
 https://github.com/posva/vim-vue
 

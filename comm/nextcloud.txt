@@ -53,3 +53,6 @@ https://github.com/nextcloud/client_theming
 https://help.nextcloud.com/t/copy-the-owncloud-sync-client-configuration-when-switching-to-the-nextcloud-client/2537
 
 https://help.nextcloud.com/t/sharing-whole-desktop/27482/9
+Allow dot files
+https://askubuntu.com/questions/942630/how-to-synchronize-hidden-dot-files-in-owncloud-nextcloud
+	vim ~/.config/Nextcloud/nextcloud.cfg

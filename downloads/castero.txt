@@ -1,0 +1,8 @@
+https://xgi.github.io/castero/
+https://github.com/xgi/castero
+https://www.youtube.com/watch?v=VTtbUQa0TH4
+	apt install libmpv-dev
+	sudo -H pip3 install castero
+	castero
+config file at
+	vim ~/.config/castero/castero.conf

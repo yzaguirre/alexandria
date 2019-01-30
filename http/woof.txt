@@ -1,0 +1,24 @@
+http://www.home.unix-ag.org/simon/woof.html
+https://www.tecmint.com/share-files-over-a-local-network-in-linux/
+	apt install woof
+or	sudo -H pip3 install woof
+	woof myfile.txt
+Another computer
+	wget http://ip:8080
+After 3 downloads, shutoff
+	woof -c 3 ./bin/bashscripts/getpubip.sh
+To share a directory, you can create a tarball and compress it by using
+-z for gzip compression, or -j for bzip2 compression, or -Z for ZIP compression. For example:
+	woof -c 2 -z ./bin/
+Upload files
+	woof -U
+Use different port
+	woof -Up 80
+Config files
+	/etc/woofrc
+	~/.woofrc
+[main]
+port = 8008
+count = 2
+ip = 127.0.0.1
+compressed = gz

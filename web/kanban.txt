@@ -6,9 +6,9 @@ https://docs.kanboard.org/
 https://github.com/kanboard/kanboard/releases
 
 	cd /var/www
-	wget https://github.com/kanboard/kanboard/archive/v1.2.6.tar.gz
-	tar xf v1.2.6.tar.gz
-	mv kanboard-1.2.6 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.7.tar.gz
+	tar xf v1.2.7.tar.gz
+	mv kanboard-1.2.7 kanboard
 	chown www-data:www-data -R kanboard
 
 Make backup
@@ -18,9 +18,9 @@ Make backup
 	mv kanboard/data/ kanboard/config* tmp
 	mv kanboard tmp/kanboard-old
 Update
-	wget https://github.com/kanboard/kanboard/archive/v1.2.6.tar.gz
-	tar xf v1.2.6.tar.gz
-	mv kanboard-1.2.6 kanboard
+	wget https://github.com/kanboard/kanboard/archive/v1.2.7.tar.gz
+	tar xf v1.2.7.tar.gz
+	mv kanboard-1.2.7 kanboard
 Restore the instance data
 	mv tmp/data/db.sqlite tmp/data/files kanboard/data
 	chown www-data:www-data -R kanboard

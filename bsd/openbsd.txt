@@ -1,0 +1,163 @@
+http://www.jupiterbroadcasting.com/120797/the-one-true-os-bsd-now-225/
+https://begriffs.com/posts/2017-05-17-linux-workstation-guide.html#backups
+
+http://www.vincentdelft.be/
+http://sohcahtoa.org.uk/openbsd.html
+http://www.openbsdjumpstart.org/
+http://www.tedunangst.com/flak/post/openbsd-laptops
+https://news.ycombinator.com/item?id=10793831
+Poweroff
+	halt -p
+http://technoquarter.blogspot.com/p/series.html	
+http://technoquarter.blogspot.com/2015/02/openbsd-mail-server.html
+http://zacbrown.org/2015/01/18/openbsd-as-a-desktop.html
+http://blog.greduan.com/2015-04-19-mstobfi.html
+
+It uses the .fs file for the USB stick
+
+Try it out
+http://alxjsn.com/unix/openbsd-laptop/
+
+Installing OpenBSD's httpd server, MariaDB, PHP 5.6 on OpenBSD 5.9
+https://www.rootbsd.net/kb/339/Installing-OpenBSDandsharp039s-httpd-server-MariaDB-PHP-56-on-OpenBSD-59.html
+
+NTP
+http://www.bsdnow.tv/tutorials/ntpd
+
+Ports and branches
+http://www.bsdnow.tv/tutorials/ports-obsd
+
+http://www.cyberciti.biz/tips/openbsd-add-package-howto.html
+To upgrade or update links package type command:
+	# pkg_add -u links
+Task: Update all packages
+	# pkg_add
+
+http://www.bsdnow.tv/tutorials/the-desktop-obsd
+Select a mirror from www.openbsd.org/ftp.html
+ftp://mirrors.ucr.ac.cr/OpenBSD/
+mirror http://mirrors.ucr.ac.cr/OpenBSD/5.7/
+	wget http://mirrors.ucr.ac.cr/OpenBSD/5.7/i386/install57.iso
+	wget http://mirrors.ucr.ac.cr/OpenBSD/5.7/i386/install57.fs
+	wget http://mirrors.ucr.ac.cr/OpenBSD/5.7/i386/SHA256.sig
+	wget http://mirrors.ucr.ac.cr/OpenBSD/5.7/i386/SHA256
+	
+verify
+http://www.openbsd.org/faq/faq3.html#Verify
+	gpg --verify SHA256.sig SHA256
+	grep install57.iso SHA256
+	sha256sum install57.iso
+	sha256sum -c SHA256
+	signify -C -p /etc/signify/openbsd-57-base.pub -x SHA256.sig install57.iso
+
+Add your regular user to the wheel group
+	user mod -G wheel david
+	su root
+Set PKG_PATH environment variable
+	export PKG_PATH=ftp://ftp.openbsd.com/pub/OpenBSD/5.7/packages/$(uname -m)
+	export PKG_PATH=http://ftp.usa.openbsd.org/pub/OpenBSD/`uname -r`/packages/`uname -m`/
+	export PKG_PATH=http://mirrors.ucr.ac.cr/OpenBSD/5.7/packages/`uname -m`
+Install text editors
+	pkg_add -Iv nano
+	pkg_add -Iv vim
+	pkg_add -Iv vim-7.4.135p0-no_x11
+Edit .profile and add the PKG_PATH variable
+	vim .profile
+export PKG_PATH=ftp://ftp.openbsd.com/pub/OpenBSD/5.7/packages/$(uname -m)
+	reboot
+	pkg_add -Iv avahi tmux
+	pkg_add -I gnome toad firefox youtube-dl vim irssi scrot gstreamer-plugins-ugly mplayer ubuntu-fonts
+Xfce
+	pkg_add -Iv xfce
+	pkg_add -Iv slim slim-themes
+Open and edit the root user .xinitrc file
+	vim .xinitrc
+exec startxfce4
+And copy .xinitrc to regular user's home directory
+
+Open and edit rc.local
+	vim /etc/rc.local
+/usr/local/bin/slim -d
+
+Open and edit rc.conf.local
+	vim /etc/rc.conf.local
+pkg_scripts="dbus_daemon avahi_daemon"
+dbus_enable=YES
+
+Install some basic applications
+	pkg_add -Iv firefox thunderbird gimp vlc libreoffice zim gnupg-2.1.2 wget
+	reboot
+
+Setup firewall
+	# mv /etc/pf.conf /etc/pf.conf.orig
+	# vim /etc/pf.conf
+You might want something like:
+
+set block-policy drop
+set skip on lo0
+match in all scrub
+antispoof quick for
+block in quick on egress from { no-route urpf-failed } to any
+block in all
+pass out quick inet keep state
+
+
+Install kde
+	pkg_add -Iv kdebaes kdelibs kdeaddons kdeartwork kdeedu kdegames kdegraphics kdemultimedia kdenetwork kdepim kdesdk kdetoys kdeutils kdeaccessibility 
+	pkg_add -I firefox thunderbird gimp vlc libreoffice
+Open and edit the root user .xinitrc file
+	vim .xinitrc
+	exec startkde
+Open and edit the regular user .xinitrc file
+	vim .xinitrc
+	exec startkde
+Open and edit the root user .xsession file
+	vim .xsession
+	exec startkde
+Open and edit the regular user .xsession file
+	vim .xinitrc
+	exec startkde
+Open and edit the rc.conf.local file
+	vim /etc/rc.conf.local
+		pkg_scripts="dbus_daemon avahi_daemon"
+		dbus_enable=YES
+		kde_enable=YES
+Or
+		multicast_host=YES
+		ntpd_flags="-s"
+		hotplugd_flags=""
+		pkg_scripts="${pkg_scripts} dbus_daemon avahi_daemon toad gdm"
+	reboot
+You can login with your regular user
+Start the kde desktop with the command
+	xstart
+Run or skip the kde wizard
+
+Firefox
+If you're going to be using programs like Firefox, you're probably going to need to adjust some values in 
+/etc/login.conf. By default, OpenBSD will kill any process your user runs after it takes up 512MB of RAM.
+Firefox can
+	# vi /etc/login.conf
+		datasize-max=1024M:
+		datasize-cur=1024M:
+I also recommend using soft updates and enabling the "noatime" flag on your root device.
+	# vi /etc/fstab
+For example, if you installed / to /dev/wd0a, change the line to:
+/dev/wd0a / ffs rw,noatime,softdep 1 1
+
+
+Avahi
+http://www.idoru.be/notes/how-to-configure-rendezvousbonjourzeroconf-in-openbsd-with-avahi-deamon/
+Edit /etc/rc.local
+if [ -x /usr/local/sbin/avahi-daemon ]; then
+echo -n 'avahi-daemon'; /usr/local/sbin/avahi-daemon -D
+fi
+if [ -x /usr/local/sbin/avahi-dnsconfd ]; then
+echo -n 'avahi-dnsconfd';/usr/local/sbin/avahi-dnsconfd -D
+fi
+if [ -x /usr/local/bin/dbus-daemon ]; then
+install -d -o _dbus -g _dbus /var/run/dbus
+echo -n 'dbus';/usr/local/bin/dbus-daemon --system
+
+https://man.openbsd.org/pledge
+https://news.ycombinator.com/item?id=18952864

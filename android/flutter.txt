@@ -24,3 +24,6 @@ https://flutter.io/docs
 Flutter change library location
 	vim .packages
 Substitute the correcto location
+
+Update flutter
+	flutter upgrade

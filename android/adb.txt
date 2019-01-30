@@ -61,3 +61,6 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c03", MODE="0600", 
 
 Change storage unit
 	adb shell pm set-install-location 1
+Remove apps
+https://news.ycombinator.com/item?id=18864220
+	pm uninstall -k --user 0 <name of package>

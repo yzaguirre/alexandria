@@ -1,12 +1,13 @@
-https://developer.android.com/sdk/index.html
+https://developer.android.com/studio/?utm_source=android-studio
 Download
-	wget https://dl.google.com/dl/android/studio/ide-zips/2.0.0.20/android-studio-ide-143.2739321-linux.zip
+	wget https://dl.google.com/dl/android/studio/ide-zips/3.3.0.20/android-studio-ide-182.5199772-linux.zip
 Verify
-	sha1sum android-studio-ide-143.2739321-linux.zip
-b64070ee4ec4868e9dd942b56f76864634cb0c67
+	sha256sum android-studio-ide-182.5199772-linux.zip
+5cb29b768a4c316649cccc87334e89b1f2db2dc6625e61aff2d3ae68d5632a37
 Install
-	unzip android-studio-ide-141.1903250-linux.zip -d /VMs/opt
-	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /VMs/opt/android-studio/bin/studio.sh'
+	unzip android-studio-ide-182.5199772-linux.zip -d /opt
+	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /opt/android-studio/bin/studio.sh'
+	touch ~/.android/analytics.settings
 
 For W
 https://developer.android.com/studio/#downloads
@@ -20,7 +21,7 @@ Locations
 
 Clean previous settings
 	rm -r ~/.AndroidStudio
-	mkdir /VMs/opt/android-sdk
+	mkdir /opt/android-sdk
 developer.android.com/tools/devices/emulator.html#vm-linux
 
 Keyboard shotcuts
