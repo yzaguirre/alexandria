@@ -7,6 +7,9 @@ the GUI application), you would enter the command like this:
 	$ mat -b filename.ext
 
 Extraer, crear, borrar y modificar metadatos con Exiftool. 
+https://github.com/exiftool/exiftool
+https://linux.die.net/man/1/exiftool
+https://ninedegreesbelow.com/photography/exiftool-commands.html#examine
 http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-metadatos-con-Exiftool.html
 http://www.avpreserve.com/exiftool-tutorial-series/ 
 	sudo apt-get install libimage-exiftool-perl
@@ -26,3 +29,20 @@ Eliminar los metadatos
 Escribimos el siguiente comando en la terminal:
 exiftool -all= 413511-1920x1080.jpg
 	Dónde -all= significa que vamos a borrar todos los metadatos. 
+
+https://www.pentaxforums.com/forums/32-digital-processing-software-printing/377092-using-exiftool-excel-analyse-my-images.html
+https://www.tjhouston.com/2013/01/exporting-gps-data-from-a-folder-of-images-and-writing-to-a-text-file/
+http://carlibrary.org/ExifTool.htm
+
+Format file: myformat.fmt
+	vim myformat.fmt
+# Extract metadata from image folders and write to CSV file for processing.
+#header
+#[HEAD]FileName,FileModifyDate,FileAccessDate,FileCreateDate
+$Filename,${FileModifyDate#;DateFmt("%Y/%m/%d %H:%M:%S")},${FileAccessDate#;DateFmt("%Y/%m/%d %H:%M:%S")},${FileCreateDate#;DateFmt("%Y/%m/%d %H:%M:%S")}
+
+	exiftool -m -r -ext jpg -ext png -p myformat.fmt /d/ > metadata.csv
+-m: Ignore minor errors and warnings
+-r: Recursive on /d/ drive
+
+https://explainshell.com/explain?cmd=+exiftool+-d+%27%25r+%25a%2C+%25B+%25e%2C+%25Y%27+-DateTimeOriginal+-S+-s+-ext+jpg+%2Fhome%2Fmarcos%2FDCIM%2F347CANON

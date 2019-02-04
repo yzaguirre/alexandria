@@ -39,6 +39,22 @@ https://github.com/daylerees/colour-schemes
 Slime
 CTRL+SHIFT+P Install
 CTRL+SHIFT+P dayle rees
+Packages/Dayle Rees Color Schemes/sublime/earthsong.tmTheme
+Packages/Material Theme/schemes/Material-Theme.tmTheme
+
+Color theme
+Adaptive.sublime-theme
+Material-Theme.sublime-theme
+
+Install Colorsublime
+After, choose Facebook color theme
+
+Install PackageResourceViewer
+CTRL+SHIFT+P Browse Packages
+
+Install AdvancedNewFile
+Super+ALT+N type new file name
+Colon is default alias for "current directory"
 
 https://github.com/SublimeText/VBScript
 VBScript syntax

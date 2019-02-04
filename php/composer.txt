@@ -22,3 +22,10 @@ Update global dependencies
 Disable composer plugins
 https://stackoverflow.com/questions/37955880/composer-fatal-error-declaration-of-fxp-must-be-compatible-with-abstracta#37955910
 	composer global remove fxp/composer-asset-plugin --no-plugins
+Use other config directory
+	composer config -g --list
+Edit
+	composer config -ge
+	mkdir ~/.config/composer
+	vim ~/.config/composer/config.json
+COMPOSER_HOME

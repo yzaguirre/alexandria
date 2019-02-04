@@ -43,7 +43,7 @@ View fingerprint, list the keys in a file without actually importing them:
 gpg --import-options show-only --import FILE
 
 Creating your primary key. Sign Only, 4096 keysize
-	gpg --full-gen-key
+	gpg --expert --full-gen-key
 Add a new identity
 	gpg --edit-key 27703CF0
 	adduid
@@ -52,7 +52,7 @@ Just keep running adduid for each identity you want to add.
 Finally, you want to set the primary UID on your key;
 this is the main one that shows up when there isn't space to list all of the identities,
 but it has no other special meaning - it's purely cosmetic.
-	gpg2 --edit-key 27703CF0
+	gpg --edit-key 27703CF0
 	uid 2
 	primary
 	setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
@@ -61,7 +61,7 @@ The primary key is denoted by the '.' next to the UID number, the '*' is the ide
 Creating your sub-keys
 Use the primary key only for signing other people's keys and our own identities - not for daily signing or encryption use.
 Now create sub-keys for signing, encryption and authentication.
-	gpg2 --expert --edit-key 27703CF0
+	gpg --expert --edit-key 27703CF0
 	addkey
 	8
 take the encrypt action out of the key (f00.bar2)
@@ -94,9 +94,9 @@ Create an authentication-only key (f00.bar4)
 Don't forget to save your key when you have finished.
 	save
 Creating a revocation certificate
-	gpg2 -o /mnt/gpg-key-backup/revoke.asc --gen-revoke 27703CF0
+	gpg -o /mnt/gpg-key-backup/revoke.asc --gen-revoke 27703CF0
 Export public key
-	gpg2 --export 27703CF0 > 27703CF0.gpg
+	gpg --export 27703CF0 > 27703CF0.gpg
 
 http://blog.dasroot.net/2015-gpg-made-a-comeback-in-my-workflow.html
 https://www.apache.org/dev/release-signing#verifying-signature
@@ -112,7 +112,7 @@ http://www.ba.infn.it/~fminafra/Docs/gpg-trustdb.html
 https://www.gnupg.org/gph/en/manual.html#AEN464
 
 
-GPG2 
+gpg 
 https://lists.gnupg.org/pipermail/gnupg-devel/2014-December/029179.html
 
 Discussion
@@ -271,3 +271,7 @@ decrypt file
 		gpg -o file.txt -d
 	from stdin to stdout
 		gpg -d
+Export secret key
+	gpg -o backup-keypair.key --export 0xkeyid
+Delete primary secret key
+	gpg --delete-secret-key 0xkeyid

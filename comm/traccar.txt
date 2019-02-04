@@ -1,0 +1,20 @@
+
+
+http://owntracks.org/
+https://www.traccar.org/server/
+https://www.traccar.org/linux/
+https://github.com/traccar/traccar
+	wget https://github.com/traccar/traccar/releases/download/v4.2/traccar-linux-64-4.2.zip
+	unzip traccar-linux-64-4.2.zip
+
+Run
+	sudo ./traccar.run
+Start daemon
+	sudo /opt/traccar/bin/traccar start
+https://www.traccar.org/manual-installation/
+	java -jar tracker-server.jar conf/traccar.xml
+
+Remove traccar from init
+	sudo /opt/traccar/bin/traccar
+Remove traccar directory
+	sudo rm -rf /opt/traccar

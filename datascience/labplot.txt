@@ -1,0 +1,2 @@
+https://labplot.kde.org/
+	apt install labplot

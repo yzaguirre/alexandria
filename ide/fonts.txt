@@ -10,3 +10,6 @@ Install fonts on linux
 https://www.youtube.com/watch?v=6ohOB52RpYE
 Place .ttf files at ~/.fonts, then
 	sudo fc-cache -f -v
+
+Fira code font
+https://github.com/tonsky/FiraCode

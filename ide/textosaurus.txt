@@ -1,0 +1,9 @@
+https://github.com/martinrotter/textosaurus
+	wget https://github.com/martinrotter/textosaurus/archive/0.9.11.tar.gz
+	tar xf 0.9.11.tar.gz
+	cd textosaurus-0.9.11/
+Compile
+	cd ../build-dir
+	qmake ../build.pro -r "CONFIG+=release" "PREFIX=./usr"
+	make
+	make install

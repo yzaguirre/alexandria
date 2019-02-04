@@ -7,3 +7,9 @@ https://www.sqlshack.com/introduction-mssql-cli-new-interactive-command-line-too
 	pip install mssql-cli
 Config file at
 %LOCALAPPDATA%\dbcli\mssqlcli
+
+Disable telemetry collection by setting environment variable
+	MSSQL_CLI_TELEMETRY_OPTOUT=1
+
+Usage
+	mssql-cli -S <server name> -U <user name> -d <database name>

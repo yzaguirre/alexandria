@@ -1,2 +1,7 @@
 https://virtuallyfun.com/wordpress/2018/10/14/ttyplot-a-real-time-plotting-utility-for-the-terminal/
 https://www.reddit.com/r/linuxadmin/comments/9orsiz/ttyplot_a_real_time_plotting_utility_for_the/
+	git clone https://github.com/tenox7/ttyplot.git
+	cd ttyplot
+	make
+	mv ttyplot /usr/local/bin
+	ping 8.8.8.8 | sed -u 's/^.*time=//g; s/ ms//g' | ttyplot

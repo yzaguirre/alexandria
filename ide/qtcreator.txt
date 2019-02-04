@@ -1,0 +1,5 @@
+http://qt-project.org/downloads#qt-creator
+	# apt-get install qt4-dev-tools
+
+MD5 Hash: 323522e9d1e2bfc6759fede46c9a14ef 
+	# ln -s /VMs/opt/Qt5.2.1/Tools/QtCreator/bin/qtcreator /usr/local/bin

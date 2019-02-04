@@ -1,0 +1,14 @@
+https://helpnet.flexerasoftware.com/installshield21helplib/helplibrary/MSBuild_CmdLine.htm?
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference?view=vs-2017
+
+Time
+https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now?view=netframework-4.7.2
+https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netframework-4.7.2
+https://docs.microsoft.com/en-us/dotnet/api/system.datetime.millisecond?view=netframework-4.7.2#System_DateTime_Millisecond
+Dim iso8601String As String = "20080501T08:30:52Z"
+Dim dateISO8602 As Date = DateTime.ParseExact(iso8601String, "yyyyMMddTHH:mm:ssZ",
+                              System.Globalization.CultureInfo.InvariantCulture)
+								
+Dim date3 As New Date(2008, 1, 1, 0, 30, 45, 125)
+Console.WriteLine("Date with milliseconds: {0:MM/dd/yyy HH:mm:ss.fff}", _
+                  date3)

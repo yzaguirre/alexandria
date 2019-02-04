@@ -100,6 +100,7 @@ IDE
 rednotebook
 leafpad
 notepadqq
+textosaurus
 micro
 geany
 gedit
@@ -366,8 +367,10 @@ https://www.fortrabbit.com/pricing
 https://www.digitalocean.com/features
 https://www.ovh.com/us/
 https://www.linode.com/pricing
+https://www.lunanode.com/pricing
 https://sysdig.com/
 http://www.prq.se
+https://www.scaleway.com/pricing/#anchor_pro
 
 email services
 https://10minutemail.com/
