@@ -1,3 +1,4 @@
+Tsung is a high-performance benchmark framework for various protocols including HTTP, XMPP, LDAP, etc.
 https://www.process-one.net/en/tsung/
 https://github.com/processone/tsung/
 http://tsung.erlang-projects.org/user_manual/

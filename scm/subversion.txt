@@ -63,7 +63,9 @@ https://www.youtube.com/watch?v=6jP6k71qe0c
 Show info
 	svn info file.vb
 Checkout to head
-	svn checkout -r HEAD file.vb
+	
+	svn log -r HEAD file.vb
+	svn checkout -r 123 file.vb
 Checkout to revision 123
 	svn co -r 123 file.vb
 Add new files and commit

@@ -1,3 +1,5 @@
+QIIME 2 is a next-generation microbiome bioinformatics platform that is
+extensible, free, open source, and community developed.
 https://qiime2.org/
 Install (with python2)
 	sudo -H pip install qiime

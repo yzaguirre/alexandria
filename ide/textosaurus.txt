@@ -1,9 +1,16 @@
 https://github.com/martinrotter/textosaurus
+	apt install libqscintilla2-qt5-dev
 	wget https://github.com/martinrotter/textosaurus/archive/0.9.11.tar.gz
 	tar xf 0.9.11.tar.gz
 	cd textosaurus-0.9.11/
+Or clone it
+https://github.com/martinrotter/textosaurus/issues/50
+	git clone https://github.com/martinrotter/textosaurus.git
+	cd textosaurus
+	git submodule update --init --recursive
 Compile
-	cd ../build-dir
+	mkdir build-dir
+	cd build-dir
 	qmake ../build.pro -r "CONFIG+=release" "PREFIX=./usr"
 	make
 	make install

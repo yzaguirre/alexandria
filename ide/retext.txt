@@ -1,1 +1,2 @@
 https://github.com/retext-project/retext
+	apt install retext

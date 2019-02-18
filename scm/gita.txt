@@ -1,0 +1,13 @@
+https://github.com/nosarthur/gita
+https://news.ycombinator.com/item?id=19074170
+	sudo -H pip3 install -U pyyaml gita
+Custom git command aliases can be placed in ~/.gita/cmds.yml.
+And they shadow the default ones in the case of name clashes.
+
+Repo paths are saved in ~/.gita/repo_path
+
+white: local branch has no remote branch
+green: local branch is the same as remote branch
+red: local branch has diverged from remote branch
+purple: local branch is ahead of remote branch (good for push)
+yellow: local branch is behind remote branch (good for merge)

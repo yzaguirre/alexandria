@@ -1,0 +1,4 @@
+BlazingDB is a next gen SQL database on distributed video graphics cards (GPUs).
+
+https://news.ycombinator.com/item?id=15819489
+https://blog.blazingdb.com/blazingdb-origins-oh-and-we-just-raised-2-9m-from-nvidia-and-samsung-99cd581e66c7

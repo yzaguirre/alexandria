@@ -1,3 +1,6 @@
+https://inkscape.org/
+https://inkscape.org/doc/keys.html
+https://inkscape.org/doc/inkscape-man.html
 Boehm-GC
 libsigc++
 glibmm

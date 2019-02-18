@@ -1,3 +1,6 @@
+https://nickjanetakis.com/blog/vim-is-saving-me-hours-of-work-when-writing-books-and-courses
+https://news.ycombinator.com/item?id=19143853
+
 Copy past X11 Clipboard
 https://www.youtube.com/watch?v=YdUPkRMuM1o
 http://vim.wikia.com/wiki/GNU/Linux_clipboard_copy/paste_with_xclip
@@ -170,3 +173,14 @@ https://stackoverflow.com/questions/506075/how-do-i-fix-the-indentation-of-an-en
 Color diff
 https://www.commandlinefu.com/commands/view/2420/colored-svn-diff
 	vimdiff file1 file2
+
+Buffers
+http://blog.obligd.com/posts/bd-bn-bp-ls-w-e-and-me.html
+:e file Open a file to edit
+:ene Open blank new file for editing
+:ls List buffers
+:b1 Jump to buffer 1
+:bn Next buffer
+:bp Previous buffer
+:bd 4 Remove buffer 4
+:bd Remove current buffer

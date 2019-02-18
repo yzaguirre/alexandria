@@ -1,12 +1,13 @@
 http://wiki.znc.in/ZNC
 Download
-	wget https://znc.in/releases/archive/znc-1.7.0.tar.gz
-	wget https://znc.in/releases/archive/znc-1.7.0.tar.gz.sig
+	wget https://znc.in/releases/znc-1.7.2.tar.gz
+	wget https://znc.in/releases/znc-1.7.2.tar.gz.sig
 Verify (0x0209989E)
-	gpg2 --verify znc-1.7.0.tar.gz.sig
+	gpg --verify znc-1.7.2.tar.gz.sig
 Compile
-	tar xf znc-1.7.0.tar.gz
-	cd znc-1.7.0
+	apt install zlib1g-dev libssl-dev libicu-dev
+	tar xf znc-1.7.2.tar.gz
+	cd znc-1.7.2
 	./configure
 	make
 	make install
@@ -49,7 +50,7 @@ so that (even for broken clients) ZNC can figure out which user you are connecti
 SSL
 http://wiki.znc.in/Signed_SSL_certificate
 	cat /etc/letsencrypt/live/example.org/{privkey,cert,chain}.pem > znc.pem
-	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem > znc.pem
+or	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem > znc.pem
 You should also generate the Diffie-Hellman key exchange parameters, also appended to znc.pem:
 	openssl dhparam -out dhparam.pem 2048
 	cat dhparam.pem >> znc.pem

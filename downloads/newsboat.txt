@@ -1,0 +1,16 @@
+https://www.youtube.com/watch?v=z359lWo3eQA
+https://newsboat.org/
+	apt install newsboat
+Compile
+	apt install libsqlite3-dev libcurl4 libxml2-dev libjson-c-dev libncursesw6 libncurses-dev libstfl-dev libcurl4-gnutls-dev
+	wget https://newsboat.org/releases/2.14/newsboat-2.14.tar.xz
+	wget https://newsboat.org/releases/2.14/newsboat-2.14.tar.xz.asc
+	gpg --verify newsboat-2.14.tar.xz.asc
+	tar xf newsboat-2.14.tar.xz
+	cd newsboat-2.14
+	make
+	make install
+https://newsboat.org/releases/2.14/docs/newsboat.html#_format_strings
+https://wiki.archlinux.org/index.php/Newsboat
+	vim ~/.newsboat/config
+macro y set browser "echo -n '%F+%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"

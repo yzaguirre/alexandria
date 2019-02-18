@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=TR9TXyBlL30
+	cat file1 | shuf
+	shuf file1
+Output four lines
+	shuf -n 4 file1
+Randomize list of files
+	ls | shuf
+	shuf -e *
+	shuf -en 3 *

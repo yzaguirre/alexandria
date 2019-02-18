@@ -1,4 +1,5 @@
-https://thelocehiliosan.github.io/
+Yet Another Dotfiles Manager
+https://thelocehiliosan.github.io/yadm/
 https://github.com/TheLocehiliosan/yadm
 	apt -t testing install yadm
 

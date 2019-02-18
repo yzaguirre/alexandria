@@ -4,6 +4,7 @@ http://www.rainydayz.org/node/8
 https://bitbucket.org/skskeyserver/sks-keyserver/wiki/Documentation
 https://lists.nongnu.org/archive/html/sks-devel/2009-03/msg00078.html
 	apt install sks
+	mkdir /var/lib/sks
 	sks build
 	chown debian-sks:debian-sks -R /var/lib/sks/DB
 	vim /etc/default/sks

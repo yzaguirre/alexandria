@@ -275,3 +275,4 @@ Export secret key
 	gpg -o backup-keypair.key --export 0xkeyid
 Delete primary secret key
 	gpg --delete-secret-key 0xkeyid
+https://dev.gnupg.org/T2943

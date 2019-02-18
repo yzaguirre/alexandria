@@ -348,6 +348,9 @@ NGINX
 Apache2
 https://github.com/phanan/htaccess
 
+Benchmarking
+tsung, see ~/web/tsung.txt
+
 https://appthwack.com/
 transcoder
 http://handbrake.fr

@@ -23,3 +23,11 @@ https://wiki.termux.com/wiki/Touch_Keyboard
 https://wiki.termux.com/wiki/Hardware_Keyboard
 https://wiki.termux.com/wiki/User_Interface
 
+https://wiki.termux.com/wiki/Termux:Widget
+	mkdir -p $HOME/.shortcuts
+SSH
+https://wiki.termux.com/wiki/Remote_Access#OpenSSH
+	sshd
+	ssh -p 8022 user@address
+Config file
+	vim $PREFIX/etc/ssh/sshd_config

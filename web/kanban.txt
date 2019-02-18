@@ -63,3 +63,4 @@ https://github.com/kenlog/Moon
 https://github.com/kenlog/Nebula
 https://github.com/kenlog/Oxygen
 https://github.com/bgibout/blueboard
+https://docs.kanboard.org/en/latest/admin_guide/email.html

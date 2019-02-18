@@ -1,0 +1,12 @@
+https://diasp.eu/posts/4942787
+https://gajim.org
+	apt install gajim
+Files
+.cache/gajim
+.local/share/gajim
+.config/gajim
+.cache/gajim/vcards
+.cache/gajim/avatars
+.config/gajim/pluginsconfig
+.local/share/gajim/certs
+.config/gajim/localcerts

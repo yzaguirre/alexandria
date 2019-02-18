@@ -1,3 +1,6 @@
+Config location
+~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+
 https://news.codecademy.com/visual-studio-code-sublime-text/
 Multi-edit: When you press ctrl + d,
 all instances of the word or command you are currently on will be highlighted within the file,
@@ -64,3 +67,28 @@ Associate the .vb extension with VBScript
 exclude files
 https://stackoverflow.com/questions/30934706/sublime-text-hide-but-not-exclude-files-folders-from-the-project
 Added it to binary_file_patterns in settings
+
+# keybindings
+Comment 
+https://stackoverflow.com/questions/17742781/keyboard-shortcut-to-comment-lines-in-sublime-text-3
+{ "keys": ["control+keypad_divide"],"command": "toggle_comment", "args": {"block": false} }, 
+{ "keys": ["shift+control+keypad_divide"],"command": "toggle_comment", "args": {"block": true}}
+Vim splits bindings
+{ "keys": [":", "v", "s"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+{ "keys": [":", "s", "p"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+{ "keys": [":", "b", "d"], "command": "destroy_pane", "args": {"direction": "self"} },
+PHP companion
+{ "keys": ["f9"],"command": "expand_fqcn" }
+{ "keys": ["f10"],"command": "find_use" }
+{ "keys": ["f7"],"command": "insert_php_constructor_property" }
+
+# Plugins
+PHP companion
+	expand_fqcn
+	find_use
+	insert_php_constructor_property
+AdvancedNewFile
+SnippetMaker
+SublimeLinter
+SublimeLinter-phpcs
+	composer global require "squizlabs/php_codesniffer=*"

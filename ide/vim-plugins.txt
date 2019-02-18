@@ -1,0 +1,40 @@
+https://prakashdanish.github.io/2018/06/30/vim-plugins-i-use.html
+https://news.ycombinator.com/item?id=17430546
+
+https://shapeshed.com/vim-packages/
+https://danielmiessler.com/blog/moving-native-configuration-using-vim-8-x/#gs.9T92Pho
+	mkdir -pv ~/.vim/pack/uncanny/{start,opt}
+Packages added in the opt folder may be loaded using
+	:packadd packagename
+https://www.youtube.com/watch?v=6Fn8KS2L7EQ
+Pathogen
+https://github.com/tpope/vim-pathogen
+	mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+.vim file go in autoload
+bundle is for plugins
+Put this at the beggining of .vimrc
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+NerdTree
+https://github.com/scrooloose/nerdtree
+
+Syntastic
+https://github.com/scrooloose/syntastic
+
+Auto-Pairs
+https://github.com/jiangmiao/auto-pairs
+	cd ~/.vim/bundle
+	git clone https://github.com/jiangmiao/auto-pairs.git
+
+https://chr4.org/blog/2017/04/27/sslsecure-dot-vim/
+https://github.com/chr4/sslsecure.vim
+	cd ~/.vim/pack/uncanny/start
+	git clone https://github.com/chr4/sslsecure.vim.git sslsec
+
+https://github.com/dhruvasagar/vim-zoom
+
+Vim wiki
+https://vimwiki.github.io/
