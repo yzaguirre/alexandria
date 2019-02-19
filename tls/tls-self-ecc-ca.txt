@@ -14,6 +14,7 @@ by the CA, each certificate must have a unique serial number, and another file t
 Prepare the configuration file
 See https://jamielinux.com/docs/openssl-certificate-authority/appendix/root-configuration-file.html
 	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/root-config.txt -O openssl.cnf
+	curl https://jamielinux.com/docs/openssl-certificate-authority/_downloads/root-config.txt -o openssl.cnf
 
 Create the cert
 	openssl ecparam -genkey -name prime256v1 | openssl ec -out private/ca.key.pem -aes256
@@ -39,6 +40,7 @@ Add a crlnumber file to the intermediate CA directory tree. crlnumber is used to
 	echo 1000 > crlnumber
 See https://jamielinux.com/docs/openssl-certificate-authority/appendix/intermediate-configuration-file.html
 	wget https://jamielinux.com/docs/openssl-certificate-authority/_downloads/intermediate-config.txt -O openssl.cnf
+	curl https://jamielinux.com/docs/openssl-certificate-authority/_downloads/intermediate-config.txt -o openssl.cnf
 
 Create the intermediate key
 	cd /root/intermediate
@@ -81,7 +83,7 @@ Add to [req] section
 subjectAltName = DNS:www.example.com,DNS:example.com
 
 Create a CSR
-	openssl req -config /root/intermediate/openssl.cnf \
+	openssl req -config intermediate/openssl.cnf \
       -key private/www.example.com.key.pem \
       -new -sha256 -out requests/www.example.com.csr.pem
 Better way (replace appropriate values)
@@ -96,14 +98,14 @@ If the certificate is going to be used for user authentication, use the usr_cert
 	openssl ca -config intermediate/openssl.cnf \
       -extensions server_cert -days 375 -notext -md sha256 \
       -in requests/www.example.com.csr.pem \
-      -out /root/intermediate/certs/www.example.com.cert.pem
-	chmod 444 /root/intermediate/certs/www.example.com.cert.pem
-	cp /root/intermediate/certs/www.example.com.cert.pem certs
+      -out intermediate/certs/www.example.com.cert.pem
+	chmod 444 intermediate/certs/www.example.com.cert.pem
+	cp intermediate/certs/www.example.com.cert.pem certs
 Verify the certificate
 	openssl x509 -noout -text \
-      -in /root/intermediate/certs/www.example.com.cert.pem
+      -in intermediate/certs/www.example.com.cert.pem
 Verify the server certificate against the certificate chain.
-	openssl verify -CAfile /root/intermediate/certs/ca-chain.cert.pem \
+	openssl verify -CAfile intermediate/certs/ca-chain.cert.pem \
       certs/www.example.com.cert.pem
 Make a chain file
 	cat certs/www.example.cert.pem \

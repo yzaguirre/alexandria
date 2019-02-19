@@ -201,3 +201,16 @@ filename="${filename%.*}"
 Alternatively, you can focus on the last '/' of the path instead of the '.' which should work even if you have unpredictable file extensions:
 
 filename="${fullfile##*/}"
+
+Heredoc
+http://stackoverflow.com/questions/2953081/ddg#2954835
+cat << EOF > /tmp/yourfilehere
+These contents will be written to the file.
+        This line is indented.
+EOF
+https://stackoverflow.com/questions/1167746/how-to-assign-a-heredoc-value-to-a-variable-in-bash
+read -r -d '' VAR <<-'EOF'
+    abc'asdf"
+    $(dont-execute-this)
+    foo"bar"''
+    EOF

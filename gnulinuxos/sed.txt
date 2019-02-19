@@ -44,3 +44,7 @@ fighting evil by moonlight winning lpve by dsylight
 	sed -i 's/lpve/love/; s/dsylight/daylight/' moon.txt
 	cat moon.txt
 fighting evil by moonlight winning love by daylight
+
+https://stackoverflow.com/questions/24014915/change-windows-filenames-to-bash-filenames
+	echo 'C:\code\snippets' | sed 's|\\|/|g; s|\(.\):|/\1|g'
+	echo '/c/code/snippets' | sed 's|^/c|C:|; s|/|\\|g'

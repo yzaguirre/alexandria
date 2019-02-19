@@ -27,3 +27,6 @@ Substitute the correcto location
 
 Update flutter
 	flutter upgrade
+
+Download packages
+	flutter packages get

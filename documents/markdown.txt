@@ -23,3 +23,15 @@ https://superuser.com/questions/796565/correctly-sizing-png-images-in-markdown-w
 ![](){ class='meinclass' }
 ![my caption](./figures/myimage.png){ width=250px }
 
+Code blocks
+https://en.support.wordpress.com/markdown-quick-reference/
+~~~~
+This is a 
+piece of code 
+in a block
+~~~~
+```css
+#button {
+    border: none;
+}
+```
