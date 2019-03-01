@@ -2,3 +2,14 @@ fd-find
 https://github.com/sharkdp/fd
 	apt install fd-find
 	alias fd=fdfind
+Search hidden files
+	fd -H
+	fd --hidden
+Search only files
+	fd -t f
+Search only directories
+	fd -t d
+Search empty files
+	fd -t e
+Search executable files
+	fd -t x

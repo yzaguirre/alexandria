@@ -1,0 +1,7 @@
+Example
+	date +'%B %Y'
+febrero 2019
+	date +'%F_%H.%M.%S'
+2019-02-20_15.33.17
+	date +%s # factor current timestamp
+1550698513

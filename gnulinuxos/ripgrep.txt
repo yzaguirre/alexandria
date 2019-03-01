@@ -8,6 +8,7 @@ https://github.com/BurntSushi/ripgrep/releases
 	dpkg -i ripgrep_0.10.0_amd64.deb
 	
 By default, hidden files and directories are skipped.
+	rg --hidden
 https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#manual-filtering-file-types
 	rg dbpass -rn -g '*.rs'
 Globs are matched case insensitively.

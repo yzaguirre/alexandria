@@ -1,0 +1,11 @@
+https://github.com/Canop/broot
+	cargo install broot
+From source
+	git clone https://github.com/Canop/broot.git
+	cd broot
+	git checkout v0.6.3
+	cargo build --release
+Binary download
+	wget https://github.com/Canop/broot/releases/download/v0.6.3/broot
+	chmod u+x broot
+	sudo mv broot /usr/local/bin

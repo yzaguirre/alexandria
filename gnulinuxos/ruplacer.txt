@@ -1,0 +1,16 @@
+https://github.com/TankerHQ/ruplacer
+	wget https://github.com/TankerHQ/ruplacer/releases/download/v0.3.0/ruplacer_0.3.0_amd64.deb
+	sudo dpkg -i ruplacer_0.3.0_amd64.deb
+
+Replace 'LastName, FirstName' with 'FirstName LastName'
+	ruplacer '(\w)+, (\w)+' '$2 $1'
+Ruplacer has a --subvert option which works across a variety of case styles (lower case, snake case, and so on):
+Replace 'FooBar' with 'SpamEggs', 'foo_bar' with 'spam_eggs', ...
+	ruplacer --subvert FooBar SpamEggs
+
+Only python files
+	ruplacer -t py foo bar
+Ignore all js files
+	ruplacer old new -T js
+List file types
+	ruplacer --file-types

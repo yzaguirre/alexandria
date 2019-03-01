@@ -38,3 +38,6 @@ Themes
 	File->Settings->Editor->Colors & Fonts->
 
 https://developer.android.com/studio/releases/index.html#3-0-0
+
+Rename a project
+https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/appendix/appendix-utilities/appendix-utilities.html#copy_project

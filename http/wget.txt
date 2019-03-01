@@ -20,5 +20,8 @@ http://www.linuxbsdos.com/2015/01/12/wget-and-the-user-agent-option/
 	wget -U "" http://www.example.com/image.png
 https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-directory-with-arbitrary-files-in-it#273776
 	wget -r -np -R "index.html*" http://example.com/configs/.vim/
+	wget -r -np -R "index.html*,*.svn*,*.git*" http://example.com/configs/.vim/
+https://serverfault.com/questions/324555/how-to-exclude-certain-directories-while-using-wget#744334
+	wget --exclude-directories=.svn -r ftp://path/to/src
 
 https://sourceforge.net/projects/gnuwin32/

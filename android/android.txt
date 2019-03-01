@@ -26,13 +26,7 @@ APK file so that it can be served correctly. The MIME type for the APK file is
 application/vnd.android.package-archive.
 
 Developer Training
-http://developer.android.com/training/index.html
-
-Api Reference
-http://developer.android.com/reference/packages.html
-
-Distribute your app
-http://developer.android.com/distribute/index.html
+https://developer.android.com/guide
 
 https://developer.android.com/training/connect-devices-wirelessly/nsd.html
 
@@ -43,3 +37,6 @@ HTTPS
 https://developer.android.com/training/articles/security-ssl.html
 Network Security
 https://developer.android.com/training/articles/security-config.html
+
+Fragments
+https://developer.android.com/guide/components/fragments.html

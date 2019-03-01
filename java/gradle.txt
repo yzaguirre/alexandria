@@ -1,4 +1,5 @@
 https://gradle.org/
+https://github.com/gradle/gradle/releases
 https://news.ycombinator.com/item?id=16742858
 Groovy 
 Learn X in Y: http://learnxinyminutes.com/docs/groovy/
@@ -6,20 +7,24 @@ http://groovy-lang.org/documentation.html
 
 Using Gradle bundled with android studio
 Edit ~/.profile
-	export GRADLE_HOME=/opt/android-studio/gradle/gradle-3.5
+	export GRADLE_HOME=/opt/android-studio/gradle/gradle-4.10.1
 	export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 	export GRADLE_USER_HOME="/opt/gradle-home"
 	PATH=$PATH:$GRADLE_HOME/bin
 
 Download latest build
 https://gradle.org/gradle-download/
-	wget https://services.gradle.org/distributions/gradle-3.5-bin.zip
+	wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip
+	wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip.sha256
+	cat gradle-5.2.1-bin.zip.sha256
+	sha256sum gradle-5.2.1-bin.zip
 Installation
 https://docs.gradle.org/current/userguide/installation.html
 Unpacking
-	unzip gradle-3.5-bin.zip -d /opt/
+	unzip gradle-5.2.1-bin.zip -d /opt/
+	mv /opt/gradle{-5.2.1,}
 Edit ~/.profile
-	export GRADLE_HOME=/opt/gradle-3.5
+	export GRADLE_HOME=/opt/gradle
 	PATH=$PATH:$GRADLE_HOME/bin
 	gradle -v
 

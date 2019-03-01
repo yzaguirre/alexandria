@@ -9,6 +9,9 @@ Show file list
 	rar vt file.rar
 Create file
 	rar a -r mybackup.rar file1 file2 
+Exclude files
+https://stackoverflow.com/questions/12062952/excluding-folders-in-winrar
+	rar a -x"*\.git" -x"*\.svn" -r mybackup.rar folder1/ folder2/
 https://diasp.eu/posts/3890839
 	rarcrack file.ext --threads 10 --type zip
 
