@@ -1,0 +1,15 @@
+Disable "metrics" package
+
+Editrconfig
+https://atom.io/packages/editorconfig
+	apm install editorconfig
+Disable "whitespace" plugin
+
+Last session
+disable feature https://github.com/atom/atom/issues/6605
+comment here, main issue https://github.com/atom/atom/issues/6873
+https://github.com/atom/atom/issues/6865
+decision https://github.com/atom/atom/issues/6464
+merge https://github.com/atom/atom/pull/6690
+Disable history
+~/.atom/storage/application.json

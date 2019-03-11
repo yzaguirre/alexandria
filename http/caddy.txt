@@ -109,3 +109,4 @@ fastcgi /foo endpoint [preset] {
     index indexfile
     env   key value
 }
+https://github.com/wille-io/retro-browse

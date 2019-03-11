@@ -119,6 +119,13 @@ DB migrations
 Create the database.
 Edit db credentials in .env
 
+Rollback one migration
+	php artisante migrate:rollback --step=1
+
+Modifying a column
+https://laravel.com/docs/5.8/migrations#modifying-columns
+	composer require doctrine/dbal
+
 Prevent the Schema length error
 https://laracasts.com/discuss/channels/laravel/php-artisan-migrate-errorclass-appprovidersschema-not-found
 https://laracasts.com/discuss/channels/general-discussion/syntax-error-or-access-violation-1071-specified-key-was-too-long

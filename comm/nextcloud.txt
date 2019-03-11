@@ -56,3 +56,15 @@ https://help.nextcloud.com/t/sharing-whole-desktop/27482/9
 Allow dot files
 https://askubuntu.com/questions/942630/how-to-synchronize-hidden-dot-files-in-owncloud-nextcloud
 	vim ~/.config/Nextcloud/nextcloud.cfg
+OCC command line client
+	su www-data -s /bin/bash
+List users
+	php occ user:list
+List apps
+	php occ app:list
+List providers of 2fa from user david
+	php occ twofactorauth:state david
+Remove 2fa for everybody
+	php occ twofactorauth:cleanup totp
+Remove 2fa for david
+	php occ twofactorauth:disable david

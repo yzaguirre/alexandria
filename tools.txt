@@ -391,6 +391,7 @@ www.disroot.org
 
 email as a service
 Mailgun
+https://postmarkapp.com/
 
 email self-hosted
 Postfix, Exim, Cyrus, Dovecot
