@@ -1,0 +1,6 @@
+ColorZilla
+Clear Cache
+Mailvelope
+Selenium IDE
+Vue.js devtools
+Wallabagger

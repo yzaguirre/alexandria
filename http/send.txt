@@ -1,0 +1,6 @@
+https://github.com/mozilla/send
+https://news.ycombinator.com/item?id=19367850
+	git clone https://github.com/mozilla/send.git
+	cd send
+	npm install
+	npm start

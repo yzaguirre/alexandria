@@ -558,3 +558,14 @@ https://news.ycombinator.com/item?id=16965534
 links2
 lynx
 w3m
+
+User Interface, User Experience: UI UX
+https://balsamiq.com/wireframes/desktop/docs/linux/
+https://marvelapp.com/
+https://www.usertesting.com
+https://userinsights.com
+https://fivesecondtest.com
+https://producthabits.com/
+
+Business media aggregator
+https://news.ycombinator.com/item?id=19366093

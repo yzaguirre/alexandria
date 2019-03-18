@@ -1,0 +1,21 @@
+https://balsamiq.com/wireframes/desktop/docs/linux/
+	sudo unzip Downloads/Balsamiq_Mockups_3.5.17_bundled.zip -d /opt
+	sudo mv /opt/Balsamiq_Mockups_3 /opt/balsamiq_3.5.17
+	sudo rm -f /opt/balsamiq && sudo ln -s /opt/balsamiq_3.5.17 /opt/balsamiq
+	sudo mv /opt/balsamiq/Balsamiq\ Mockups\ 3.exe /opt/balsamiq/balsamiq.exe
+
+	wine /opt/balsamiq/balsamiq.exe
+https://www.adobe.com/products/air/tech-specs.html
+Note: Ubuntu Linux requires libhal (Hardware Abstraction Layer). Install hal to play the protected content.
+
+Startup icon
+echo <<- EOF | sudo tee /usr/share/applications/balsamiq.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Name=Balsamiq Mockups
+Icon=/opt/balsamiq/icons/mockups_ico_48.png
+Exec=wine /opt/balsamiq/balsamiq.exe
+Type=Application
+Categories=Graphics;
+MimeType=application/x-xdg-protocol-tg;x-scheme-handler/tg;
+EOF

@@ -9,9 +9,9 @@ you can also press ctrl + f to find and replace words.
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
 https://www.sublimetext.com/3
-	wget https://download.sublimetext.com/sublime_text_3_build_3176_x64.tar.bz2
+	wget https://download.sublimetext.com/sublime_text_3_build_3200_x64.tar.bz2
 
-	tar xf sublime_text_3_build_3176_x64.tar.bz2 -C /opt
+	tar xf sublime_text_3_build_3200_x64.tar.bz2 -C /opt
 	ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl
 Deactivate analytics
 
@@ -92,3 +92,11 @@ SnippetMaker
 SublimeLinter
 SublimeLinter-phpcs
 	composer global require "squizlabs/php_codesniffer=*"
+
+Git
+https://www.sublimetext.com/blog/articles/sublime-text-3-point-2
+https://www.sublimetext.com/docs/3/git_integration.html
+https://www.sublimetext.com/docs/3/incremental_diff.html
+
+https://laravel-news.com/minimalist-sublime-text-3-setup-for-php
+https://laravel-news.com/sublime-phpunit

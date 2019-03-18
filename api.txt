@@ -22,3 +22,7 @@ Version numbers are defined as major.minor.revision which can have any arbitrary
     Major = New features and other large changes
 
 When referring to an API, a major upgrade is usually an interface change that will break users of the API. A minor upgrade is typically a change to the functionality behind API calls but the interface remains the same.
+
+ApproveAPI
+https://approveapi.com/
+https://news.ycombinator.com/item?id=19360844
