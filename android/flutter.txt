@@ -30,3 +30,6 @@ Update flutter
 
 Download packages
 	flutter packages get
+SMS
+https://pub.dartlang.org/packages/sms
+https://pub.dartlang.org/packages/flutter_sms

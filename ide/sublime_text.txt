@@ -81,6 +81,9 @@ PHP companion
 { "keys": ["f9"],"command": "expand_fqcn" }
 { "keys": ["f10"],"command": "find_use" }
 { "keys": ["f7"],"command": "insert_php_constructor_property" }
+Simple PHP Unit
+{ "keys": [",", "p"],"command": "simple_php_unit" }
+{ "keys": [",", "f"],"command": "simple_php_unit", "args": { "test_current_file": true } }
 
 # Plugins
 PHP companion
@@ -88,15 +91,30 @@ PHP companion
 	find_use
 	insert_php_constructor_property
 AdvancedNewFile
+	"rename_default": "<filepath>",
+	"copy_default": "<filepath>",
 SnippetMaker
 SublimeLinter
 SublimeLinter-phpcs
 	composer global require "squizlabs/php_codesniffer=*"
+Simple PHP Unit
+https://packagecontrol.io/packages/SimplePHPUnit
+https://github.com/evgeny-golubev/SimplePHPUnit-for-Sublime-Text
+PHPUnitKit
+sublime-phpunit
+https://laravel-news.com/sublime-phpunit
+https://github.com/gerardroche/sublime-phpunit
 
-Git
+# Build systems
+http://sublimetext.info/docs/en/reference/build_systems.html
+php-cs-fixer
+{
+	"shell_cmd": "php-cs-fixer fix $file --level="psr2""
+}
+
+# Git
 https://www.sublimetext.com/blog/articles/sublime-text-3-point-2
 https://www.sublimetext.com/docs/3/git_integration.html
 https://www.sublimetext.com/docs/3/incremental_diff.html
 
 https://laravel-news.com/minimalist-sublime-text-3-setup-for-php
-https://laravel-news.com/sublime-phpunit

@@ -1,0 +1,7 @@
+Install php-cs-fixer
+https://github.com/fabpot/PHP-CS-Fixer
+	composer global require fabpot/php-cs-fixer
+Print help
+	php-cs-fixer 
+Apply fixer
+	php-cs-fixer fix AppServiceProvider.php --level="psr2"

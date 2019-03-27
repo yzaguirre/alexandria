@@ -2,10 +2,53 @@ https://webpack.js.org/guides/getting-started/
 https://medium.com/front-end-hacking/webpack-by-example-part-3-a4ceaaa6299a
 
 https://webpack.github.io/docs/installation.html
-	npm install webpack -g
-	npm install webpack --save-dev
+	npm install webpack webpack-cli -g
+	npm install webpack webpack-cli --save-dev
 If you want to use dev tools you should install it:
 	npm install webpack-dev-server --save-dev
 
 Build to dist
-./node_modules/.bin/webpack
+	./node_modules/.bin/webpack
+
+	webpack src/main.js --output dist/main.js
+Create an config file
+	vim webpack.config.js
+var webpack = require('webpack');
+module.exports = {
+	entry: './src/main.js',
+	devtool: 'source-map',
+	output: {
+		filename: './dist/main.js'
+	}
+}
+source-map creates "main.js.map" for debugging. Compile:
+	webpack
+Make a build script in package.json
+	vim package.json
+"scripts": {
+	"build": "webpack"
+}
+Make a transformation with buble
+https://www.npmjs.com/package/buble-loader
+https://github.com/sairion/buble-loader
+	npm install buble-loader --save-dev
+Add module attribute to webpack.config.js
+	vim webpack.config.js
+var path = require('path');
+.
+.
+.
+module: {
+  rules: [
+    {
+      test: /\.js$/,
+      loader: 'buble-loader',
+      include: path.join(__dirname, 'src'),
+      options: {
+        objectAssign: 'Object.assign'
+      }
+    }
+  ]
+}
+Run again
+	npm run build

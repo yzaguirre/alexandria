@@ -10,10 +10,11 @@ https://stackoverflow.com/questions/32919589/npm-install-mongoose-causes-gyp-and
 Add /opt/npm/bin directory to PATH, adapt ~/.profile
 	export PATH="$PATH:/opt/npm/bin"
 First project
-	$ vim package.json
-	$ npm install
+	vim package.json
+or	npm init -y
+	npm install
 show modules
-	$ npm ls
+	npm ls
 Add dependency
 http://stackoverflow.com/questions/16564746/how-to-add-browserify-as-a-dependency-of-your-node-js-application
 	npm install --save browserify
@@ -45,3 +46,6 @@ Cleanup
 	rm package-lock.json
 	npm cache clear --force
 	npm install
+"Write after end" Error
+https://github.com/npm/npm/issues/19989#issuecomment-371739104
+	npm install npm -g

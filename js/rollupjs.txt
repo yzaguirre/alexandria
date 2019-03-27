@@ -1,0 +1,19 @@
+https://rollupjs.org/
+	npm install rollup -g
+	rollup -f esm src/main.js
+	rollup -f esm src/main.js > lib/main.dist.js
+Use it with buble
+https://buble.surge.sh/
+https://www.npmjs.com/package/rollup-plugin-buble
+	npm install --save-dev rollup-plugin-buble
+	vim rollup.config.js
+import buble from 'rollup-plugin-buble';
+export default {
+	input: 'src/main.js',
+	plugins: [buble()],
+	output: {
+		file: 'lib/main.bundle.js',
+		format: 'esm',
+	}
+}
+	rollup -c
