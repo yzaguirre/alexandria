@@ -42,3 +42,7 @@ http://voie-example.netlify.com/
 
 Make http calls
 https://gist.github.com/chudaol/d5176b88ba2c5799c0b7b0dd33ac0426
+
+Vue router
+https://router.vuejs.org/installation.html#npm
+	npm install --save-dev vue-router

@@ -24,9 +24,16 @@ https://askubuntu.com/questions/363207/what-is-the-difference-between-the-rsa-ds
 Disable root login
 http://www.howtogeek.com/howto/linux/security-tip-disable-root-ssh-login-on-linux/
 PermitRootLogin no
+
+Allow root login, without password
+PermitRootLogin prohibit-password
+
 Password
 https://stackoverflow.com/questions/20898384/ssh-disable-password-authentication
 PasswordAuthentication no
+
+Allow certain users to login
+AllowUsers foo bar@123.1.2.3 *@1.2.3.4
 
 the following runs the tar command on a remote site
 and uses the ssh command to catch the backup locally
@@ -164,3 +171,13 @@ Delete old ssh host keys
 Debian or Ubuntu Linux Regenerate OpenSSH Host Keys
 	dpkg-reconfigure openssh-server
 	systemctl restart ssh
+Get fingerprint
+	ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+Remove all from the known_hosts on local machine, that belongs to remote host
+	ssh-keygen -R 104.197.227.8
+Logs for ssh connection attempts
+	vim /var/log/auth.log
+	lastlog
+	lastlog -u foo
+View history file
+	vim ~/.bash_history

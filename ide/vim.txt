@@ -184,3 +184,6 @@ http://blog.obligd.com/posts/bd-bn-bp-ls-w-e-and-me.html
 :bp Previous buffer
 :bd 4 Remove buffer 4
 :bd Remove current buffer
+
+Macros
+https://jovicailic.org/2018/06/recursive-macros-in-vim/

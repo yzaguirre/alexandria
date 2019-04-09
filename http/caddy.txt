@@ -109,4 +109,8 @@ fastcgi /foo endpoint [preset] {
     index indexfile
     env   key value
 }
+# Themes
+https://caddyserver.com/docs/browse
 https://github.com/wille-io/retro-browse
+https://github.com/Drakirus/Caddyr
+https://raw.githubusercontent.com/jessfraz/directory-theme/master/.icons/application-vnd.ms-excel.png

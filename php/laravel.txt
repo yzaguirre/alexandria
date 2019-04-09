@@ -352,3 +352,7 @@ $user->name = 'Demo';
 $user->email = 'demo@example.com';
 $user->password = Hash::make('demo');
 $user->save();
+
+Events & listeners
+https://laravel-news.com/laravel-5-8-9
+	artist event:cache
