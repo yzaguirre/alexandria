@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/13314433/batch-file-to-copy-directories-recursively#13314452
+	xcopy a: b: /s /e
+

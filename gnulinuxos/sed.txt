@@ -1,3 +1,4 @@
+https://linuxacademy.com/blog/linux/the-sed-command-bash-basics/
 Sed breaks symlinks
 https://news.ycombinator.com/item?id=18823391
 sed's in-place editing mode (just like perl -i or the newer awk -i inplace

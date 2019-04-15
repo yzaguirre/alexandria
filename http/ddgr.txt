@@ -1,0 +1,3 @@
+https://github.com/jarun/ddgr
+https://news.ycombinator.com/item?id=19606101
+	sudo -H pip3 install ddgr
