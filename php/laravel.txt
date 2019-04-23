@@ -201,6 +201,17 @@ Do some tinkering
 	$task = new App\Task;
 	$task->body = 'Go to the market';
 	$task->save();
+Replicate a model
+$post = Post::find(1);
+$newPost = $post->replicate();
+$newPost->save();
+This grabs the first post, calls replicate and assigns it to a $newPost
+variable, then finally saves it as a new record in the database.
+The replicating event will fire as part of this flow. 
+
+Events
+https://laravel-news.com/laravel-model-events-getting-started
+The replicating event is added for when you want to make a copy of a model.
 
 Make a controller
 	php artisan make:controller TasksController
@@ -317,6 +328,13 @@ Time zone
 https://stackoverflow.com/questions/31475014/how-to-set-local-timezone-in-laravel
 User::find(1)->foobazed_at->timezone(Auth::user()->timezone);
 
+Today
+Calling this gives you a Carbon instance set to today and the timestamp set at 00:00:00
+Basically the start of the day.
+Another helper that pairs well with this is the now() helper which does
+the same thing but sets the time to the current time.
+$today = today(); 
+
 https://stackoverflow.com/questions/17591181/how-to-get-the-current-url-inside-if-statement-blade-in-laravel-4#17591908
 if (Request::is('admin/*'))
 
@@ -356,3 +374,11 @@ $user->save();
 Events & listeners
 https://laravel-news.com/laravel-5-8-9
 	artist event:cache
+
+Laravel search string
+https://laravel-news.com/laravel-search-string
+Article::usingSearchString('title:"My blog article" or not published sort:-created_at');
+
+Blade filters
+https://laravel-news.com/laravel-blade-filters-package
+{{ 'john' | ucfirst }} // John

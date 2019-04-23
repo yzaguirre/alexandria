@@ -1,0 +1,2 @@
+https://www.xda-developers.com/google-restriction-sms-call-log-permissions/
+https://github.com/termux/termux-api/issues/257

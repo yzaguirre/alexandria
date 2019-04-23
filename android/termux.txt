@@ -1,9 +1,13 @@
 https://termux.com
 	apt install figlet mutt tcpdump php openssl-tool tty-clock irssi pv mosh wget python jq htop taskwarrior newsbeuter
 	apt install gnupg2 dirmngr curl gnupg-curl
+	apt install termux-api
+	termux-setup-storage
 
 	pip install youtube_dl httpie mycli haxor-news
 
+Use the ESC key
+	echo "back-key=escape" > .termux/termux.properties
 https://wiki.termux.com/wiki/Development_Environments
 https://wiki.termux.com/wiki/Remote_Accesshttps://wiki.termux.com/wiki/Remote_Access
 https://wiki.termux.com/wiki/Sharing_Data

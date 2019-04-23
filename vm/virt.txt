@@ -1,14 +1,47 @@
 See
 https://www.cyberciti.biz/faq/centos-rhel-linux-kvm-virtulization-tutorial/
 redes/networks.txt
+Check CPU virtualization support
+	egrep -c '(vmx|svm)' /proc/cpuinfo
+Create a storage directory
+	mkdir /vm_storage
+	groupadd kvm
+	chown root:kvm /vm_storage
+	chmod g+w /vm_storage
+	usermod -aG kvm david
+Install server packages
+	apt install bridge-utils libvirt-bin qemu-kvm qemu-system
+Installs the following:
+bridge-utils cpu-checker ibverbs-providers ipxe-qemu ipxe-qemu-256k-compat-efi-roms libcacard0 libfdt1 libibverbs1 libiscsi7 librados2 librbd1 librdmacm1 libspice-server1 libusbredirparser1 libxen-4.9 libxenstore3.0 msr-tools qemu-block-extra qemu-kvm qemu-slof qemu-system qemu-system-arm qemu-system-common qemu-system-data qemu-system-gui qemu-system-mips qemu-system-misc qemu-system-ppc
 
-Install
-	apt install qemu-kvm virt-manager
+Check the daemon service
+	systemctl status libvirtd.service libvirt-guests.service
+
+Edit the server configuration
+First make a copy
+	cp /etc/libvirt/libvirtd.conf /etc/libvirt/libvirtd.conf.orig
+	vim /etc/libvirt/libvirtd.conf
+Change the following line:
+unix_sock_group = "kvm"
+unix_sock_ro_perms = "0770"
+
+Install client packages
+	apt install virt-manager
+Installs the following:
+dmeventd ebtables gir1.2-gtk-vnc-2.0 gir1.2-libosinfo-1.0 gir1.2-libvirt-glib-1.0 gir1.2-spiceclientglib-2.0 gir1.2-spiceclientgtk-3.0 libdevmapper-event1.02.1 libgovirt-common libgovirt2 libgtk-vnc-2.0-0
+  libgvnc-1.0-0 liblvm2app2.2 liblvm2cmd2.02 libosinfo-1.0-0 libphodav-2.0-0 libphodav-2.0-common libspice-client-glib-2.0-8 libspice-client-gtk-3.0-5 libusbredirhost1 libvirt-clients libvirt-daemon
+  libvirt-daemon-driver-storage-rbd libvirt-daemon-system libvirt-glib-1.0-0 libvirt0 lvm2 osinfo-db python-asn1crypto python-certifi python-cffi-backend python-cryptography python-idna python-ipaddr
+  python-ipaddress python-libvirt python-libxml2 python-openssl python-requests python-urllib3 spice-client-glib-usb-acl-helper virt-manager virt-viewer virtinst
+
+Launch the client so it creates the default.xml configuration file
+	virt-manager
+	vim /etc/libvirt/storage/default.xml
+<path>/vm_storage</path>
+
 Disable startup services
 	systemctl disable libvirtd.service libvirt-guests.service
 Start/Stop them on demand
-	systemctl stop libvirtd.service libvirt-guests.service
-	systemctl start libvirtd.service libvirt-guests.service
+	systemctl restart libvirtd.service libvirt-guests.service
 http://ubuntuforums.org/showthread.php?t=1389692
 just ad a symbolic link to the desired target to /var/lib/libvirt/images
 

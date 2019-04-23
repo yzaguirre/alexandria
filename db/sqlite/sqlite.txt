@@ -8,7 +8,7 @@ https://www.sqlite.org/lang.html
 https://www.sqlite.org/lang_createtable.html
 
 Install common tools
-	sudo apt-get install sqlite3 php5-sqlite
+	apt install sqlite3 php-sqlite
 Restart apache2 web server
 	sudo service apache2 restart
 
@@ -22,3 +22,8 @@ Salir
 https://alvinalexander.com/android/sqlite-schema-table-database
 https://stackoverflow.com/questions/4654762/how-can-one-see-the-structure-of-a-table-in-sqlite
 .schema '%ers'
+
+Run DML
+	sqlite3 example2.db "SELECT rowid,fname,lname,phone FROM people"
+Other queries
+	select rowid, * from people

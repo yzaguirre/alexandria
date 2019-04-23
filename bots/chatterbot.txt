@@ -1,0 +1,6 @@
+https://mlwhiz.com/blog/2019/04/15/chatbot/
+https://news.ycombinator.com/item?id=19673324
+https://chatterbot.readthedocs.io/en/stable/training.html
+https://github.com/gunthercox/chatterbot-corpus/tree/master/chatterbot_corpus/data/english
+	sudo -H pip install -U pyyaml
+	sudo -H pip install chatterbot

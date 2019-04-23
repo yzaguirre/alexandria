@@ -1,22 +1,23 @@
+Package mirrors
+https://gist.github.com/nathan-osman/bdf4fc0f9174fdc293cf5ebdf5074102
+
 Download
 http://www.ubuntu.com/download/alternative-downloads
-	wget http://releases.ubuntu.com/16.04/MD5SUMS
-http://releases.ubuntu.com/16.04/ubuntu-16.04-server-i386.iso.torrent
-	wget http://releases.ubuntu.com/16.04/MD5SUMS.gpg
-	wget http://releases.ubuntu.com/16.04/SHA1SUMS
-	wget http://releases.ubuntu.com/16.04/SHA1SUMS.gpg
-	wget http://releases.ubuntu.com/16.04/SHA256SUMS
-	wget http://releases.ubuntu.com/16.04/SHA256SUMS.gpg
+http://releases.ubuntu.com/18.04.2/ubuntu-18.04.2-server-i386.iso.torrent
+	wget http://releases.ubuntu.com/18.04.2/MD5SUMS
+	wget http://releases.ubuntu.com/18.04.2/MD5SUMS.gpg
+	wget http://releases.ubuntu.com/18.04.2/SHA1SUMS
+	wget http://releases.ubuntu.com/18.04.2/SHA1SUMS.gpg
+	wget http://releases.ubuntu.com/18.04.2/SHA256SUMS
+	wget http://releases.ubuntu.com/18.04.2/SHA256SUMS.gpg
 https://help.ubuntu.com/community/VerifyIsoHowto
 	gpg2 --keyserver hkp://keyserver.ubuntu.com --recv-keys 0xFBB75451
 	gpg2 --verify SHA1SUMS.gpg SHA1SUMS
 	gpg2 --verify SHA256SUMS.gpg SHA256SUMS
 	gpg2 --verify MD5SUMS.gpg MD5SUMS
-arch=amd64
-	grep ubuntu-16.04-server-$arch.iso *SUMS
-	md5sum ubuntu-16.04-server-$arch.iso
-	sha1sum ubuntu-16.04-server-$arch.iso
-	sha256sum ubuntu-16.04-server-$arch.iso
+	md5sum --ignore-missing -c MD5SUMS
+	sha1sum --ignore-missing -c SHA1SUMS
+	sha256sum --ignore-missing -c SHA256SUMS
 
 https://help.ubuntu.com/community/Tasksel
 	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock
@@ -35,7 +36,7 @@ Setup www-data ssh access
 	chown www-data:www-data -R /var/www/.ssh/
 
 https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-debian-8
-https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-18-04.2
 Create user
 	adduser sammy
 Root Privileges
@@ -85,9 +86,9 @@ address 10.0.0.100
 netmask 255.255.255.0
 gateway 10.0.0.1
 dns-search example.com
-dns-nameservers 192.168.3.45 192.168.8.10
+dns-nameservers 192.188.3.2.45 192.188.8.2.10
 
-Find the dns servers at 
+Find the dns servers at
 	$ less /etc/resolv.conf
 
 By adding an interface configuration as shown above, you can manually enable the interface through the ifup command.

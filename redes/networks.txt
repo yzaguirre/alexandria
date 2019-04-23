@@ -1,0 +1,68 @@
+El protocolo de red Bonjour envía y recibe paquetes de red a través del puerto UDP 5353. Si tiene activado un sistema de firewall personal, deberá asegurarse de que el puerto UDP 5353 está abierto para que Bonjour funcione correctamente. Algunos firewalls solo bloquean parcialmente el intercambio de paquetes Bonjour, de modo que en caso de interrupciones o anomalías en su funcionamiento, compruebe la configuración del firewall y asegúrese de que Bonjour figura como una excepción y que está permitida la recepción de paquetes entrantes. 
+El programa de instalación de Bonjour configurará adecuadamente el firewall de Windows durante el proceso de instalación en los sistemas compatibles.
+At powershell, make the following function
+function bonjour {
+	param (
+		[switch]$stop
+	)
+	$sh = new-object -com 'Shell.Application'
+	if ( $stop ) {
+		$sh.ShellExecute('powershell', "-NoProfile -Command net stop `'Servicio Bonjour`'", '', 'runas')
+		echo "Success at Stopping Bonjour"
+	} else {
+		$sh.ShellExecute('powershell', "-NoProfile -Command net start `'Servicio Bonjour`'", '', 'runas')
+		echo "Success at Starting Bonjour"
+	}
+}
+/home/david/win7David/Sistemas/2012/Dic12/sopes-lab/practica 1
+Configurar briged br100
+Crear el puente br100
+	# brctl addbr br100
+	# brctl addif br100 eth0
+Comandos para Verificar el Briged
+	$ ip a
+	$ ip link
+	$ ip addr show
+	$ brctl show
+Eliminar el puente br100
+	$ ip link set br100 down
+	$ brctl delbr br100
+Ver los mensajes del sistema
+	# tail -f /var/log/syslog
+	# dmesg | less
+
+http://www.cyberciti.biz/faq/how-to-find-out-what-my-dns-servers-address-is/
+	$ less /etc/resolv.conf
+
+	http://askubuntu.com/questions/1820/can-i-use-networkmanager-without-a-tray-dock-bar
+	$ nm-connection-editor
+
+Remove default gateway
+http://www.oksima.biz/articles/53-linuxtips/212-remove-default-gateway-from-routing-table-in-debian
+The routing table is listed by:
+	$ route -n
+The default gateway is deleted using
+	$ route del default gw <GW_IP_Address>
+
+https://www.cyberciti.biz/faq/how-to-create-bridge-interface-ubuntu-linux/
+https://askubuntu.com/questions/883469/how-to-setup-a-bridge-with-network-manager#895912
+https://www.youtube.com/watch?v=rSxK_08LSZw
+https://www.youtube.com/watch?v=8LnghnDv0LY
+https://www.happyassassin.net/2014/07/23/bridged-networking-for-libvirt-with-networkmanager-2014-fedora-21/
+Create bridge using network-manager gui, then use nmcli
+	nmcli connection show
+	nmcli connection up fcaca251-7425-4a09-af4b-9cdf022d1c8c
+
+Restart network
+	systemctl restart networking.service
+List networks
+	ip ad
+Create a bridge
+https://www.youtube.com/watch?v=Q1PebvpQUvI
+	ip link add name bridge0 type bridge
+	ip link set dev bridge0 up
+	ip link set dev eno1 master bridge0
+Remove the bridge
+	ip link set dev eno1 nomaster
+	ip link delete dev bridge0
+Use the bridge helper

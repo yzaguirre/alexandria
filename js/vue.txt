@@ -49,3 +49,4 @@ https://router.vuejs.org/installation.html#npm
 Vue Rich text editor
 https://www.syncfusion.com/vue-ui-components/
 https://vuejsexamples.com/vue-component-for-froala-wysiwyg-html-rich-text-editor/
+
