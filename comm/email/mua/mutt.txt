@@ -36,7 +36,7 @@ Password safety
 Create a file in a secure environment since it will contain your passwords for a couple of seconds: 
 
 Now encrypt the file
-	gpg -er 'your-name' -o ~/.my-pwds.gpg
+	gpg -aer 'your-name' -o ~/.my-pwds.gpg
 set my_pw_personal = ****
 set my_pw_work = ****
 

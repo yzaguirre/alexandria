@@ -1,0 +1,5 @@
+http://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line
+ %userprofile%\Documents\IISExpress\config
+C:\Users\David\Documents\IISExpress\config
+For example, the following command runs the specified application, "myapp," on http://localhost:9090/ by using .NET 2.0:
+	iisexpress /path:c:\myapp\ /port:9090 /clr:v2.0

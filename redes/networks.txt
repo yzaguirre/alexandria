@@ -58,10 +58,13 @@ Restart network
 List networks
 	ip ad
 Create a bridge
+See nmcli.txt
 https://www.youtube.com/watch?v=Q1PebvpQUvI
+https://www.dedoimedo.com/computers/kvm-bridged.html
 	ip link add name bridge0 type bridge
 	ip link set dev bridge0 up
 	ip link set dev eno1 master bridge0
+	dhclient bridge0
 Remove the bridge
 	ip link set dev eno1 nomaster
 	ip link delete dev bridge0

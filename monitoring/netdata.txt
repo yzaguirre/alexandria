@@ -1,5 +1,5 @@
 https://my-netdata.io/
-https://github.com/firehol/netdata/releases
-https://github.com/firehol/netdata/wiki/Installation
+https://github.com/netdata/netdata/
 https://news.ycombinator.com/item?id=17773874
 https://www.reddit.com/r/linuxadmin/comments/7l9krs/netdata_the_opensource_distributed_realtime/
+https://www.reddit.com/r/linuxadmin/comments/bhdmyy/netdata_the_opensource_realtime_performance_and/

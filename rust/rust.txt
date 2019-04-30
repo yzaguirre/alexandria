@@ -130,3 +130,7 @@ These varialbes could be defined in
 #![crate_type = "lib"] 
 #![crate_name = "mycrate"]
 Posible values for crate_type: bin, lib, rlib, dylib, or staticlib
+
+Embedded Rust
+https://rust-embedded.github.io/book/intro/index.html
+https://news.ycombinator.com/item?id=19766713

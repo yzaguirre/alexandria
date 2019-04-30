@@ -1,0 +1,11 @@
+combine cells value
+http://support.microsoft.com/kb/280388
+= A1 & " " & B1 & " " & C1
+
+http://answers.microsoft.com/en-us/office/forum/office_2003-excel/what-is-the-formula-to-convert-total-accumulated/5e392847-fae4-44f1-95b6-acd59caf55af
+Assuming your total minutes are in B5, I believe this formula will give you total hours:minutes:
+=INT(B5/60) & ":" & MOD(B5,60)
+
+http://www.mrexcel.com/archive/Formulas/28817.html
+Assuming start time is in cell A1 and stop time is in cell B1, this formula will calculate total minutes.
+=HOUR(B1-A1)*60+MINUTE(B1-A1)

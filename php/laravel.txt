@@ -382,3 +382,6 @@ Article::usingSearchString('title:"My blog article" or not published sort:-creat
 Blade filters
 https://laravel-news.com/laravel-blade-filters-package
 {{ 'john' | ucfirst }} // John
+
+https://laravel-news.com/junges-laravel-acl
+https://github.com/mateusjunges/laravel-acl

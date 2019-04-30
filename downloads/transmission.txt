@@ -1,0 +1,31 @@
+http://go.kblog.us/2011/03/using-transmission-cli-to-download.html
+	transmission-cli http://cdimage.debian.org/debian-cd/7.5.0/amd64/bt-cd/debian-7.5.0-amd64-lxde-CD-1.iso.torrent
+	transmission-cli "magnet link here"
+Crear directorio Downloads
+	mkdir Downloads
+	transmission-cli "magnet" -w Downloads
+
+Install transmission daemon
+	apt install transmission-daemon
+	systemctl stop transmission-daemon
+	systemctl disable transmission-daemon
+Run it
+	transmission-daemon
+Config file is in settings.json
+	vim ~/.config/transmission-daemon/settings.json
+	killall -2 transmission-daemon
+
+/var/lib/transmission-daemon/info
+/etc/transmission-daemon
+	transmission-daemon -f -t -u your_username -v your_password -w /path/to/downloaded/torrents -g /etc/transmission-daemon/
+	transmission-daemon -f -t -u debian-transmission -v debian -w 	 -g /etc/transmission-daemon/
+	sudo transmission-daemon -f -t -u david -v dvd -w /home/david/downloads -g /etc/transmission-daemon
+	sudo transmission-daemon -f -t -u pi -v raspberry -w /home/pi/downloads -g /etc/transmission-daemon
+Remove -f for service daemon
+Edit the config file
+	vim /etc/transmission-daemon/settings.json
+Look for "rpc-whitelist":
+and set it to your remote IP or to "*".
+Deactivate auth
+http://ubuntuforums.org/showthread.php?t=1161931
+	Edit /etc/transmission-daemon/config.json (rpc-auth = 0)

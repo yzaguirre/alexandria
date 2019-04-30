@@ -28,6 +28,7 @@ more elaborated
 
 https://stackoverflow.com/questions/10460919/how-to-delete-first-two-lines-and-last-four-lines-from-a-text-file-with-bash
 https://stackoverflow.com/questions/339483/how-can-i-remove-the-first-line-of-a-text-file-using-bash-sed-script
+https://bytefreaks.net/gnulinux/bash/bash-tail-remove-first-n-lines-from-file
 Delete first line
 	tail -n +2 "$FILE"
 Delete from head and tail of file

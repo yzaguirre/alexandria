@@ -1,0 +1,11 @@
+https://www.microsoft.com/net/core#linuxdebian
+https://github.com/dotnet/cli
+	apt install curl libunwind8 gettext
+	curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
+	mkdir -p /DVD/opt/dotnet
+	tar xf dotnet.tar.gz -C /opt/dotnet
+	sudo ln -s /DVD/opt/dotnet/dotnet /usr/local/bin
+Write this in .profile
+	export DOTNET_CLI_TELEMETRY_OPTOUT=1
+Start a new project
+	dotnet new

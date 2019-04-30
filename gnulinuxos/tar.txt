@@ -73,6 +73,8 @@ http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-d
               dictionary size = 32 megabytes
 
        -ms=on solid archive = on
+https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
+	7z a -ttar -so my_files | ncat --send-only ip port
 
 	$ 7z a -sfx archive.exe dir1
               add all files from directory "dir1" to SFX archive  archive.exe

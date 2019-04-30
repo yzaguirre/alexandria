@@ -1,0 +1,48 @@
+Sirius
+https://github.com/jhauswald/sirius
+https://news.ycombinator.com/item?id=9204954
+https://www.youtube.com/channel/UCEiLPIvZiW4jq9ZMonYdhcg
+
+https://github.com/cantino/huginn/blob/master/README.md
+https://news.ycombinator.com/item?id=7585605
+
+https://wit.ai/ for webkit
+http://www.ispeech.org/free.text.to.speech.tts.software
+http://www.davidxia.com/2013/01/setting-up-my-new-home-server/
+Building my own jarvis
+http://cranklin.wordpress.com/2012/01/13/building-my-own-siri-jarvis/
+http://cranklin.wordpress.com/2012/06/28/building-my-own-siri-jarvis-part-2/
+
+Audio converter
+http://libav.org/avconv.html
+
+It breaks down into three major parts:
+1) convert speech to text
+	Record Text, from where?
+	Android Phone
+	From Desktop Mic
+2) query database populated with q&a
+3) convert text to speech
+what it should do:
+	api, soap, restful, encripted
+	handle proxy
+	handle ssh proxy
+	search
+
+In case you don't understand Perl, this is how you use the API:
+
+POST to: https://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&lang=en-US
+
+POST params: Content (which should include the contents of a .flac encoding of your voice recorded in mono 16000hz or 8000hz)
+Content_Type (which should read audio/x-flac; rate=16000? or 8000 depending on your voice recording. This should also be mirrored in the Content-Type section of your header.)
+
+Response: json text
+
+I used ffmpeg to convert my audio into the desired format:
+	ffmpeg -i Memo.m4a -vn -ac 1 -ar 16000 -acodec flac test.flac
+
+So I recorded my voice on my iphone 3gs asking "what day is it today?" and converted it to the appropriate .flac format and posted it to google's API and this is what I got in response:
+
+{"status":0,"id":"008bd1a95c3c2b04bd754da5e82949f4-1","hypotheses":[{"utterance":"what day is it today","confidence":0.91573924}]}
+
+Sweet.

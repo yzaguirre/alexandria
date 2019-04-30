@@ -8,3 +8,19 @@ egrep is deprecated, use grep -E
 	echo "HakTip" | grep -E 'Hak5|HakTip'
 Posix setting, see ~/gnulinux/posix.txt
 	grep -h '[[:upper:]]' *.txt
+
+http://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines
+For BSD or GNU grep you can use -B num to set how many lines before the match and -A num for the number of lines after the match.
+	$ grep -B 3 -A 2 foo README.txt
+
+	$ grep group -d recurse
+Remove comments
+	grep -v '^#' filename | grep -v '^$'
+https://stackoverflow.com/questions/6637882/how-can-i-use-grep-to-show-just-filenames-no-in-line-matches-on-linux
+	grep -ril
+https://stackoverflow.com/questions/9081/grep-a-file-but-show-several-surrounding-lines
+If you want the same number of lines before and after you can use -C num.
+	grep -C 3 foo README.txt
+
+Grep through binary files
+	grep Musk -a example2.db

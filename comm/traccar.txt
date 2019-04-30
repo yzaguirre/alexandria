@@ -1,9 +1,7 @@
-
-
-http://owntracks.org/
 https://www.traccar.org/server/
 https://www.traccar.org/linux/
 https://github.com/traccar/traccar
+https://news.ycombinator.com/item?id=19756216
 	wget https://github.com/traccar/traccar/releases/download/v4.2/traccar-linux-64-4.2.zip
 	unzip traccar-linux-64-4.2.zip
 

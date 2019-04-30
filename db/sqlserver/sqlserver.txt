@@ -1,0 +1,9 @@
+Restore a database
+https://stackoverflow.com/questions/19624189/backup-log-cannot-be-performed-because-there-is-no-current-database-backup
+Right click on Databases > Restore Database > General : Device: [the path of back up file] ---> OK
+
+Before I created a database then restored the back up file to my new empty database. This was wrong. I shouldn't first create database.
+
+Now I follow this:
+
+Right click on Databases > Restore Database > General : Device: [the path of back up file] ---> OK

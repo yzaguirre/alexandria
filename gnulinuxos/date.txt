@@ -1,3 +1,4 @@
+https://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
 Example
 	date +'%B %Y'
 febrero 2019
@@ -5,3 +6,13 @@ febrero 2019
 2019-02-20_15.33.17
 	date +%s # factor current timestamp
 1550698513
+
+https://unix.stackexchange.com/questions/43264/first-and-last-day-of-a-month
+End of month, from current month
+	date -d "`date +%Y%m01` +1 month -1 day" +%Y-%m-%d
+2019-04-30
+
+End of month, form previous month
+	date -d "`date +%Y%m01` -1 day" +%Y_%m_%d
+2019_03_31
+

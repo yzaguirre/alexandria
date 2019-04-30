@@ -1,0 +1,25 @@
+Command-line tool for controlling NetworkManager
+See networks.txt
+List devices
+	nmcli device
+List connections
+	nmcli connection
+Disable connection
+	nmcli connection down "Wired connection 1"
+Enable connection
+	nmcli connection up "Wired connection 1"
+Delete connection
+	nmcli connection delete "Wired connection 1"
+
+Add a bridge
+See networks.txt and gnulinuxos/bridge.txt
+	nmcli connection add type bridge con-name br0 ifname br0
+	nmcli connection modify br0 ipv4.address 192.168.0.12/24
+	nmcli connection modify br0 ipv4.gateway 192.168.0.1
+	nmcli connection modify br0 ipv4.dns 192.168.0.1
+	nmcli connection up br0
+	ip ad
+Create a slave
+	nmcli connection add type bridge-slave con-name "Wired connection 1" ifname "Wired connection 1" master br0
+	nmcli connection up "Wired connection 1"
+	systemctl restart network.service

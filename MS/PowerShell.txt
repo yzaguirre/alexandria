@@ -30,3 +30,8 @@ Eject USB
 Dismount-DiskImage G:\
 
 Expand-ZIPFile 
+
+Shortcuts
+https://superuser.com/questions/392061/how-to-make-a-shortcut-from-cmd
+https://stackoverflow.com/questions/30028709/how-do-i-create-a-shortcut-via-command-line-in-windows
+powershell "\$s=(New-Object -COM WScript.Shell).CreateShortcut('code\Caddyr.lnk');\$s.TargetPath='C:\Users\david\Documents\GitHub\Caddyr';\$s.Save()"

@@ -74,6 +74,7 @@ Global config: ~/.gitconfig
 Local config: .git/config
 	git config user.name "user"
 	git config --local user.signingkey 3AA5C34371567BD2
+	git config core.autocrlf true
 Push options
 	git config --global push.default simple
 

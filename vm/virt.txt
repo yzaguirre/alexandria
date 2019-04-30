@@ -1,6 +1,12 @@
 See
 https://www.cyberciti.biz/faq/centos-rhel-linux-kvm-virtulization-tutorial/
 redes/networks.txt
+
+https://libvirt.org/
+https://virt-manager.org/
+https://news.ycombinator.com/item?id=19736309
+https://www.qemu.org/2019/04/24/qemu-4-0-0/
+
 Check CPU virtualization support
 	egrep -c '(vmx|svm)' /proc/cpuinfo
 Create a storage directory

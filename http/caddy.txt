@@ -25,6 +25,10 @@ Run
 https://caddyserver.com/docs/cli
 https://caddyserver.com/docs
 
+Listen on port 80
+	caddy -port 80
+or	echo "localhost:1234" | caddy -conf stdin
+
 For example, a server that lets you browse files on the default host and port: 
 	caddy browse
 To serve markdown files on-the-fly, instantly, on a custom port: 

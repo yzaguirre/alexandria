@@ -1,3 +1,19 @@
 https://stackoverflow.com/questions/13314433/batch-file-to-copy-directories-recursively#13314452
 	xcopy a: b: /s /e
 
+Eject tray
+https://superuser.com/questions/972447/how-can-i-eject-a-cd-via-the-cmd
+	powershell "(new-object -COM Shell.Application).NameSpace(17).ParseName('E:').InvokeVerb('Eject')"
+
+https://stackoverflow.com/questions/19467792/batch-command-line-to-eject-cd-tray
+
+@echo off
+echo Set oWMP = CreateObject("WMPlayer.OCX.7")  >> %temp%\temp.vbs
+echo Set colCDROMs = oWMP.cdromCollection       >> %temp%\temp.vbs
+echo For i = 0 to colCDROMs.Count-1             >> %temp%\temp.vbs
+echo colCDROMs.Item(i).Eject                    >> %temp%\temp.vbs
+echo next                                       >> %temp%\temp.vbs
+echo oWMP.close                                 >> %temp%\temp.vbs
+%temp%\temp.vbs
+timeout /t 1
+del %temp%\temp.vbs

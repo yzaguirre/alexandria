@@ -1,0 +1,20 @@
+https://stackoverflow.com/questions/43898290/recover-system-password-oracle-xe
+Your user needs to be member of Windows local group "ORA_DBA"
+SQL CLI
+	connect system
+Alter a username
+	alter user SYS identified by <new pass>;
+
+GEO coordinates
+https://www.oreilly.com/library/view/applying-and-extending/9781849686365/
+https://spatialdbadvisor.com/oracle_spatial_tips_tricks/312/applying-and-extending-oracle-spatial-book-released
+https://stackoverflow.com/a/30933158
+https://docs.oracle.com/database/121/SPATL/sdo_geometry-object-type.htm
+https://docs.oracle.com/database/121/SPATL/coordinate-systems-data-structures.htm#SPATL644
+https://gerardnico.com/oracle_spatial/geometry#example_of_use
+dl01	POINT
+dl03	POLYGON
+https://desktop.arcgis.com/es/arcmap/latest/manage-data/gdbs-in-oracle/sdogeometry-feature-classes.htm#ESRI_SECTION1_E9DC47B234A94323A37A09B17925B4C1
+https://desktop.arcgis.com/es/arcmap/10.3/manage-data/gdbs-in-oracle/sdogeometry-feature-classes.htm
+https://desktop.arcgis.com/es/arcmap/10.3/manage-data/using-sql-with-gdbs/what-is-an-srid.htm#ESRI_SECTION1_28B77EC32DA8432DB95EDB15A7E04B06
+https://community.esri.com/thread/172531

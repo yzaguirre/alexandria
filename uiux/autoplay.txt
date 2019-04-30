@@ -1,4 +1,21 @@
 https://www.warriorforum.com/copywriting/319941-autoplay-video-audio-landing-page.html
+- It's intrusive.
+- I instantly close 99% of such pages.
+Say your customer is listening to music and chilling out, surfing for your product niche.
+When they open a page and your voice interrupts their relaxation, it grates.
+I can assure you they won't appreciate it,
+this is one of hundreds of scenarios where autoplaying can throw the customer right out of a mood to buy your product.
+
+The only way to really know, as been stated already, is to split test.
+
 https://unbounce.com/landing-pages/autoplay-landing-page-best-practices/
+- Ultimately, the only way to decide if your video should play
+automatically is to A/B test two versions of your video landing page;
+one with an auto-play video and another that gives users control over
+landing page elements like video.
+
+- Video production company Basetwo Media reminds us that Facebook and
+Twitter often use silent autoplay video
+
 https://ux.stackexchange.com/questions/48961/video-automatically-playing-on-a-home-or-landing-page-studies-and-data
 https://www.slideshare.net/texasanimator/top-10-best-practices-with-video-in-ux/42

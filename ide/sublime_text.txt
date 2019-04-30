@@ -118,3 +118,8 @@ https://www.sublimetext.com/docs/3/git_integration.html
 https://www.sublimetext.com/docs/3/incremental_diff.html
 
 https://laravel-news.com/minimalist-sublime-text-3-setup-for-php
+
+SQL support
+https://github.com/mtxr/SublimeText-SQLTools
+https://code.mteixeira.dev/SublimeText-SQLTools/
+https://packagecontrol.io/packages/SQLTools

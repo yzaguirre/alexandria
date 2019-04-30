@@ -1,0 +1,27 @@
+Package mirrors
+https://gist.github.com/nathan-osman/bdf4fc0f9174fdc293cf5ebdf5074102
+
+Latest kernel
+http://news.softpedia.com/news/linux-lite-s-devs-invite-ubuntu-and-debian-users-to-install-the-latest-kernels-507412.shtml
+http://kernel.ubuntu.com/~kernel-ppa/mainline/
+
+http://askubuntu.com/questions/20725/gpg-error-the-following-signatures-couldnt-be-verified-because-the-public-key
+http://askubuntu.com/questions/127326/how-to-fix-missing-gpg-keys
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3C962022012520A0
+	sudo apt update
+http://askubuntu.com/questions/85226/how-do-i-make-update-manager-stop-opening-automatically
+
+http://fintastical.blogspot.com/2010/11/virtualbox-piix4smbus-error.html
+
+install gnome3 http://www.filiwiese.com/installing-gnome-on-ubuntu-12-04-precise-pangolin/
+	apt install gnome-session-fallback
+
+	apt install terminator geany vim openssh-client synaptic alien nmap tmux mat coreutils ncdu calcurse
+
+Generar una lista de programas instalados en Ubuntu
+    dpkg --get-selections | grep -v deinstall > ubuntu-files
+tips
+Instalar los mismos programas en un nuevo ubuntu
+    sudo apt update
+    sudo apt dist-upgrade
+    dpkg --set-selections < ubuntu-files

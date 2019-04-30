@@ -20,7 +20,7 @@ https://help.ubuntu.com/community/VerifyIsoHowto
 	sha256sum --ignore-missing -c SHA256SUMS
 
 https://help.ubuntu.com/community/Tasksel
-	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock
+	apt install vim tmux tree ncdu openssh-server mosh nmap git tshark slurm nethogs gnupg pinentry-curses wget curl pv python3-pip htop tinc unzip tty-clock calcurse
 	apt install mat
 	sudo -H pip3 install mycli pgcli youtube_dl mitmproxy httpie livestreamer
 	pip install socks

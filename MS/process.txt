@@ -1,1 +1,9 @@
 https://lifehacker.com/find-out-what-windows-program-is-using-your-webcam-on-w-1582372561
+https://answers.microsoft.com/en-us/windows/forum/windows_10-performance/microsoft-telemetry-compatibility/cefa7c8e-49c9-4965-aef6-2d5f01bb38f2
+Hit the Windows key and type Task Scheduler
+Drill down to Task Scheduler Library | Microsoft | Windows | Application Experience
+Disable Microsoft Compatibility Appraiser
+Disable ProgramDataUpdater
+
+Disable superfetch
+https://www.makeuseof.com/tag/what-is-superfetch/

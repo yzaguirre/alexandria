@@ -1,0 +1,104 @@
+https://www.debian.org/doc/manuals/debian-handbook/sect.release-lifecycle.en.html
+Download
+https://www.debian.org/CD/torrent-cd/
+	arch=amd64
+	arch=i386
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/MD5SUMS
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/MD5SUMS.sign
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA1SUMS
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA1SUMS.sign
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA256SUMS
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA256SUMS.sign
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA512SUMS
+	wget http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/SHA512SUMS.sign
+http://cdimage.debian.org/debian-cd/8.1.0/$arch/bt-cd/debian-8.1.0-$arch-netinst.iso.torrent
+Verify
+https://www.debian.org/CD/verify
+	gpg --keyserver  --recv-keys 0x6294BE9B
+	gpg --verify MD5SUMS.sign
+	gpg --verify SHA1SUMS.sign
+	gpg --verify SHA256SUMS.sign
+	gpg --verify SHA512SUMS.sign
+	grep debian-8.1.0-$arch-netinst.iso *SUMS
+	md5sum debian-8.1.0-$arch-netinst.iso
+	sha1sum debian-8.1.0-$arch-netinst.iso
+	sha256sum debian-8.1.0-$arch-netinst.iso
+	sha512sum debian-8.1.0-$arch-netinst.iso
+
+Sid & experimental
+echo $'deb http://ftp.mx.debian.org/debian jessie main' > /etc/apt/sources.list.d/jessie.list
+echo $'deb http://ftp.mx.debian.org/debian sid main' > /etc/apt/sources.list.d/sid.list
+echo $'deb http://ftp.mx.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+apt update
+
+Tools
+	apt -t jessie install git mosh tinc nmap ncdu calcurse unzip coreutils cryptcat pv slurm sudo
+	apt -t sid install tmux vim util-linux
+	apt -t experimental install gnupg2 gnupg pinentry-curses wget
+https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html
+	export VISUAL=vim; visudo
+	echo $'david ALL= /sbin/poweroff' > /etc/sudoers.d/poweroff
+Standard System Utilities
+http://forums.debian.net/viewtopic.php?p=289318
+http://mirrors.ucr.ac.cr/debian/
+
+http://en.kioskea.net/faq/809-debian-apt-get-no-pubkey-gpg-error
+	gpg --keyserver pgpkeys.mit.edu --recv-key  010908312D230C5F
+	gpg -a --export 010908312D230C5F | sudo apt-key add -
+update-rc.d
+http://www.debuntu.org/how-to-managing-services-with-update-rc-d/
+
+GLIBC_2.14 Not Found
+https://oscartux.wordpress.com/2014/05/21/como-solucionar-el-problema-de-glibc_2-14-not-found-en-spotify/
+	apt -t experimental install libc6-dev
+
+Fix i915
+	echo i915 >> /etc/initramfs-tools/modules
+	update-initramfs -uv
+o tambien
+add intel_ips to the blacklist
+	echo blacklist intel_ips >> /etc/modprobe.d/blacklist.conf
+add i915 and intel_ips to /etc/modules
+	echo -e i915/nintel_ips >> /etc/modules
+
+http://packages.debian.org/wheezy/firmware-iwlwifi
+http://packages.debian.org/wheezy/all/firmware-realtek/download
+http://packages.debian.org/wheezy/wicd
+http://ortuno2k.wordpress.com/2011/03/14/remove-cd-rom-from-apt-get-repositories-debian-6/
+apt install libiw30
+edit /etc/apt/sources.list
+add "contrib" on the end of each line
+and add "deb http://ftp.de.debian.org/debian wheezy main "
+apt update && apt upgrade
+
+apt install xorg fluxbox xterm xdm
+sudo init 6
+nano .bashrc
+apt install build-essential module-assistant vim htop conky alsa-utils apache2 mysql-server mysql-client php5 libapache2-mod-php5 php5-mysql php5-curl php5-gd php-pear php5-imap php5-memcache php5-xcache php5-xdebug php5-mcrypt git-core git-gui git-doc ssh ffmpeg exim4 php5-imgick
+http://conky.sourceforge.net/conkyrc-jc
+save as .conkyrc
+vim .fluxbox/startup
+	conky &
+Apache
+	sudo mkdir /home/www
+	sudo vim /etc/apache2/sites-enabled/000-default
+	sudo a2enmod rewrite
+	sudo chown -R david:www-data /home/www
+	ls -a /home
+	cd /home
+	ls -l
+	sudo chmod -R 775 www/
+	ls -l
+	sudo service apache2 restart
+
+Arreglar el interface
+http://key-rukia.blogspot.com/2009/06/el-dispositivo-no-esta-gestionado.html
+nano /etc/network/interfaces
+Solo debe quedar:
+auto lo
+iface lo inet loopback
+~# /etc/init.d/networking restart
+
+https://wiki.debian.org/NetworkManager
+modify /etc/NetworkManager/NetworkManager.conf
+	/etc/init.d/network-manager restart
