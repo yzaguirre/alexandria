@@ -187,3 +187,8 @@ http://blog.obligd.com/posts/bd-bn-bp-ls-w-e-and-me.html
 
 Macros
 https://jovicailic.org/2018/06/recursive-macros-in-vim/
+https://news.ycombinator.com/item?id=19794558
+How macros work: press q x to record and q to end.
+Then repeat with @ x, where x is the name of the macro you want to use (you can have several macros).
+Anything you do will be played back.
+

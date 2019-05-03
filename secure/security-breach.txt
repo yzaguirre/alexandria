@@ -1,0 +1,9 @@
+https://techcrunch.com/2019/04/30/citrix-internal-network-breach/
+https://news.ycombinator.com/item?id=19793750
+You need network sniffer and pattern recognition.
+Otherwise basically you hope some of the unusual activities will affect ids/ips (or touch internet).
+However if it is normal account you need some sort of intelligence to recognise and alert.
+
+Citrix said the hackers "removed files from our systems,
+which may have included files containing information about our current and former employees and,
+in limited cases, information about beneficiaries and/or dependents."

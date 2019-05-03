@@ -13,4 +13,8 @@ Compile
 https://newsboat.org/releases/2.14/docs/newsboat.html#_format_strings
 https://wiki.archlinux.org/index.php/Newsboat
 	vim ~/.newsboat/config
+macro y set browser "echo -n '%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
+macro y set browser "echo -n '%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
 macro y set browser "echo -n '%F+%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
+macro i set MACRO "feh %u"; open-in-browser ; set MACRO "elinks %u"
+macro g set notify-program "getmenotify.sh" ; 

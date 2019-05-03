@@ -2,12 +2,15 @@ see php/php-qrcode.txt js/js-qrcode.txt
 	apt install qrencode
 To stdout
 	echo hello | qrencode -o - -t UTF8
+	echo 'Hello World' | qrencode -t ANSI
 from stdin to stdout
 	qrencode -l L -v 1 -o -
 from stdin to file
 	qrencode -iSv 1 --output=output.png
+	qrencode -t UTF8 'Hello World' -o QR.txt
 from string to stdout
 	qrencode -l L -v 1 -o - 'Hello, world!'
+	qrencode -t ANSI 'Hello World'
 from string to file
 	qrencode -l L -v 1 -o output.png 'Hello, world!'
 
