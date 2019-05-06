@@ -1,0 +1,31 @@
+https://github.com/royhills/arp-scan
+http://www.linux-magazine.com/Online/Features/Using-ARP-for-Network-Recon
+	apt install arp-scan
+	arp-scan --help
+Using arp-scan on a Subnet
+A good place to begin is to run a complete scan of your local network. You must run the arp-scan tool as root.
+	arp-scan --localnet
+Use the -I option to specify which network device with which you're scanning.
+	arp-scan --localnet -I eno1
+Specify the network interface and the subnet.
+	arp-scan -I eth0 192.168.1.0/24
+Unknown devices are not necessarily rogue; they are simply not in the arp-scan vendor databases.
+To identify a device, you can use one of the online MAC finder sites.
+For example, one of Apple, Inc.'s Organizationally Unique Identifiers (OUI) is 10:dd:b1
+
+Alternatively, you can update the arp-scan databases.
+There are two methods for updating the databases. The first method, is:
+	cd /usr/share/arp-scan
+	sudo get-iab -v -u http://standards.ieee.org/develop/regauth/iab/iab.txt
+	sudo get-oui -v -u http://standards.ieee.org/develop/regauth/oui/oui.txt
+This process might fail. If it does, use second method:
+	cd /usr/share/arp-scan
+	sudo wget http://standards.ieee.org/develop/regauth/oui/oui.txt
+	sudo wget http://standards.ieee.org/develop/regauth/iab/iab.txt
+Also, the second method delivers the updates in a format that cannot be used by arp-scan directly.
+You have to convert it:
+	sudo get-iab -u
+	sudo get-oui -u file:///usr/share/arp-scan/oui.txt
+
+The final scenario that I use arp-scan for is in finding duplicate IP addresses.
+	sudo arp-scan -I enp0s3 192.168.1.0/24 | grep -i dup

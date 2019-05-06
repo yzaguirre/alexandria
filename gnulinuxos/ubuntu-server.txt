@@ -29,6 +29,9 @@ https://help.ubuntu.com/community/Tasksel
 	tasksel install openssh-server
 	apttitude
 	mysql_install_db --user=mysql
+Disable timers and auto updates
+https://unix.stackexchange.com/questions/315502/how-to-disable-apt-daily-service-on-ubuntu-cloud-vm-image
+	systemcd disable apt-daily.service apt-daily.timer apt-daily-upgrade.timer
 Setup www-data ssh access
 	mkdir /var/www/.ssh/
 	vim /var/www/.ssh/.htaccess # (see apache.txt)

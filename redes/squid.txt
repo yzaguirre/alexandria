@@ -1,0 +1,39 @@
+http://www.squid-cache.org/
+http://www.squidguard.org/
+https://www.youtube.com/watch?v=IrRjH-ObejI
+	apt install squid squidguard
+	systemctl status squid
+	cd /etc/squid
+	mv squid.conf squid.conf.backup
+	grep -Ev "(^#|^$)" squid.conf.backup > squid.edit
+	cp squid.edit squid.conf
+	vim squid.conf
+	systemctl reload squid
+Check log
+	tail -f /var/log/squid/access.log
+Create squidguard database
+	cat << EOF > /var/lib/squidguard/db/testdomains
+prensalibre.com
+laracasts.com
+EOF
+
+	chown -R proxy:proxy /var/lib/squidguard/db
+	chown -R proxy:proxy /var/log/squidguard
+Apply database
+	vim /etc/squidguard/squidGuard.conf
+dest test {
+	domainlist testdomains
+}
+
+pass !test any
+
+Check if config file works
+	squidGuard -C all
+
+Tell squid to use squidguard
+	vim /etc/squid/squid.conf
+url_rewrite_program /usr/bin/squidGuard
+	systemctl reload squid
+
+Download a blacklist
+	
