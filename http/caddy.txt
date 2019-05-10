@@ -16,6 +16,10 @@ https://caddyserver.com/blog/caddy-0_9-released
 	mkdir /opt/caddy
 	tar xf caddy_v0.10.12_linux_amd64.tar.gz -C /opt/caddy
 	ln -s /opt/caddy/caddy /usr/local/bin
+Newest
+	wget https://github.com/mholt/caddy/releases/download/v1.0.0/caddy_v1.0.0_linux_amd64.tar.gz
+	tar xf caddy_v1.0.0_linux_amd64.tar.gz
+	mv caddy /usr/local/bin
 Configure
 	vim ~/templates/Caddyfile
 matt.life

@@ -1,3 +1,9 @@
+https://launchpad.net/qr-tools
+https://bazaar.launchpad.net/~qr-tools-developers/qr-tools/trunk/view/head:/qtqr.py
+https://bazaar.launchpad.net/~qr-tools-developers/qr-tools/trunk/view/head:/qrtools.py
+	apt install qtqr
+https://fukuchi.org/works/qrencode/#news
+https://superuser.com/questions/1420001/is-it-possible-to-create-a-qr-code-using-text
 see php/php-qrcode.txt js/js-qrcode.txt
 	apt install qrencode
 To stdout
@@ -13,6 +19,7 @@ from string to stdout
 	qrencode -t ANSI 'Hello World'
 from string to file
 	qrencode -l L -v 1 -o output.png 'Hello, world!'
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'Hello, world!'
 
 Serve with netcat
 	echo 'Hello, world!' | qrencode -l L -v 1 -o - | ncat -lp 55556
@@ -29,7 +36,7 @@ Install barcode
 	config
 	make
 	sudo make install
-	barcode -S -u in -g 1.5x0.5 -e upc-a      -b '035576322436' > albertsons.svg
+	barcode -S -u in -g 1.5x0.5 -e upc-a -b '035576322436' > albertsons.svg
 zbar
 http://zbar.sourceforge.net/
 https://git.linuxtv.org/zbar.git
