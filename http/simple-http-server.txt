@@ -1,0 +1,3 @@
+https://github.com/TheWaWaR/simple-http-server/
+	simple-http-server -V
+	simple-http-server -i --nocache -up 80

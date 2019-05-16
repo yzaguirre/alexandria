@@ -7,13 +7,13 @@ http://shutter-project.org/downloads/dependencies/
 	mv /VMs/opt/{shutter-0.93.1,shutter}
 	echo $'#!/bin/bash\n/VMs/opt/shutter/bin/shutter'> /usr/local/bin/shutter && chmod +x /usr/local/bin/shutter
 
-	apt-get install libgtk2-perl libgtk2-imageview-perl libglib-perl libgnome2-perl libgnome2-vfs-perl libgnome2-wnck-perl libgnome2-gconf-perl liblocale-gettext-perl libxml-simple-perl libwww-mechanize-perl libwww-perl libnet-dbus-perl imagemagick perlmagick libx11-protocol-perl librsvg2-common xdg-utils procps librsvg2-2 libproc-processtable-perl libgtk2-unique-perl libpath-class-perl libjson-perl libjson-xs-perl libfile-which-perl libfile-spec-perl libfile-basedir-perl libfile-copy-recursive-perl libproc-simple-perl libsort-naturally-perl
-	apt-get install libnet-dropbox-api-perl
-	apt-get install libimage-exiftool-perl libgoo-canvas-perl
+	apt install libgtk2-perl libgtk2-imageview-perl libglib-perl libgnome2-perl libgnome2-vfs-perl libgnome2-wnck-perl libgnome2-gconf-perl liblocale-gettext-perl libxml-simple-perl libwww-mechanize-perl libwww-perl libnet-dbus-perl imagemagick perlmagick libx11-protocol-perl librsvg2-common xdg-utils procps librsvg2-2 libproc-processtable-perl libgtk2-unique-perl libpath-class-perl libjson-perl libjson-xs-perl libfile-which-perl libfile-spec-perl libfile-basedir-perl libfile-copy-recursive-perl libproc-simple-perl libsort-naturally-perl
+	apt install libnet-dropbox-api-perl
+	apt install libimage-exiftool-perl libgoo-canvas-perl
 
 para unity support
 https://launchpad.net/~0k-hans-f8/+archive/ppa
-# add-apt-repository ppa:0k-hans-f8/ppa
+	add-apt-repository ppa:0k-hans-f8/ppa
 deb http://ppa.launchpad.net/0k-hans-f8/ppa/ubuntu precise main 
 deb-src http://ppa.launchpad.net/0k-hans-f8/ppa/ubuntu precise main 
-# apt-get install libgtk2-appindicator-perl 
+	apt install libgtk2-appindicator-perl 

@@ -1,3 +1,5 @@
+https://ss64.com/nt/cmd.html
+	CMD /C "echo hola"
 https://stackoverflow.com/questions/13314433/batch-file-to-copy-directories-recursively#13314452
 	xcopy a: b: /s /e
 
@@ -17,3 +19,13 @@ echo oWMP.close                                 >> %temp%\temp.vbs
 %temp%\temp.vbs
 timeout /t 1
 del %temp%\temp.vbs
+
+Findstr
+https://ss64.com/nt/findstr.html
+https://en.wikipedia.org/wiki/Findstr
+https://superuser.com/questions/300815/grep-equivalent-for-windows-7#300820
+	C:\> dir /B | findstr /R /C:"[mp]"
+	C:\> type config.vb | findstr /C:"192"
+CMD colors
+https://stackoverflow.com/questions/2048509/how-to-echo-with-different-colors-in-the-windows-command-line
+https://gist.github.com/mlocati/fdabcaeb8071d5c75a2d51712db24011#file-win10colors-cmd

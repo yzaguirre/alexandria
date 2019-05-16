@@ -1,3 +1,15 @@
+Concatenate images
+https://superuser.com/questions/290656/combine-multiple-images-using-imagemagick
+	convert -append in-*.jpg out.jpg
+
+Add a image
+https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one-with-imagemagick-command-line
+	convert k0jbqs.jpg \
+   ( 313386r.png -thumbnail x25 ) -gravity west   -geometry  +0+30 -composite \
+   ( 313386r.png -thumbnail x25 ) -gravity center -geometry +80+30 -composite \
+   ( 313386r.png -thumbnail x25 ) -gravity east   -geometry  +0+30 -composite \
+   output.png
+
 Shrink 200 .png files to 50%
 	for f in *.png; do mogrify -resize 50% $f; done
 Convert those files to another format
@@ -72,7 +84,8 @@ INSERTAR TEXTO
 	convert -font {fuente} -pointsize {tamaño} -gravity {posicion} -fill {color} -draw 'text {horizontal} {vertical} "{texto}"' {entrada} {salida}
 {posicion} puede ser: north, northeast, northwest, south, southeast, southwest, center, east, west,
 	convert -size {ancho}x{alto} xc:{fondo} -font {fuente} -pointsize {tamaño} -gravity {posicion} -fill {color} -draw 'text {horizontal} {vertical} "{texto}"' {salida}
-
+https://stackoverflow.com/questions/23236898/add-text-on-image-at-specific-point-using-imagemagick#23238369
+	convert temp.jpg -gravity North -pointsize 30 -annotate +0+100 'Love you mom' temp1.jpg
 Shapes
 mogrify -fill white -stroke black -draw "rectangle 30,10 200,100" file.png
 

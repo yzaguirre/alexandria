@@ -12,7 +12,7 @@ https://linux.die.net/man/1/exiftool
 https://ninedegreesbelow.com/photography/exiftool-commands.html#examine
 http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-metadatos-con-Exiftool.html
 http://www.avpreserve.com/exiftool-tutorial-series/ 
-	sudo apt-get install libimage-exiftool-perl
+	sudo apt install libimage-exiftool-perl
 	exiftool 413511-1920x1080.jpg 
 
 Crear metadatos

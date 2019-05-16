@@ -1,0 +1,3 @@
+https://notepad-plus-plus.org
+http://docs.notepad-plus-plus.org/index.php/Command_Line_Switches
+	notepad++.exe -n25 file.txt

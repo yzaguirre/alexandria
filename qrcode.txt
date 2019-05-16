@@ -45,3 +45,24 @@ https://news.ycombinator.com/item?id=18804767
 https://github.com/divan/txqr
 
 https://github.com/gre/qrloop
+
+Send an email
+	cat <<- BODY | qrencode -s 10 -m 5 -l L -v 2 -o output.png
+MATMSG:TO:address@email.com;SUB:My subject;BODY:Good evening
+
+This is the smut you ordered.
+
+Greetings
+;;
+BODY
+
+Share a URL
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png "MEBKM:TITLE:Yes it is!;URL:192.168.0.12;;"
+Share a contact
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'MECARD:N:David Smarts;TEL:555555;EMAIL:address@email.com;NOTE:;BDAY:19841217;ADR:;URL:;'
+Share a phone number
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'tel:555555'
+Share wifi
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'WIFI:S:Smarts Family;T:WPA;P:123come_and_get_it;;'
+Share coordinates (latitude, longitude)
+	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'geo:14.90,-90.55'
