@@ -3,10 +3,8 @@ https://f-droid.org/wiki/page/Release_Channels_and_Signing_Keys
 https://f-droid.org/repository/browse/?fdfilter=f-droid&fdid=org.fdroid.fdroid
 Stable
 	wget https://f-droid.org/FDroid.apk
-	wget https://f-droid.org/repo/org.fdroid.fdroid_880.apk.asc -O FDroid.apk.asc
+	wget https://f-droid.org/FDroid.apk.asc
 	gpg --verify FDroid.apk.asc
+Key fingerprint
+37D2 C987 89D8 3119 4839 4E3E 41E7 044E 1DBA 2E89
 	adb push FDroid.apk /sdcard/Download
-Test
-	wget https://f-droid.org/repo/org.fdroid.fdroid_900.apk
-	wget https://f-droid.org/repo/org.fdroid.fdroid_900.apk.asc
-	gpg --verify org.fdroid.fdroid_900.apk.asc

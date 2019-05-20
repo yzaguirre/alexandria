@@ -2,6 +2,8 @@ https://ss64.com/nt/cmd.html
 	CMD /C "echo hola"
 https://stackoverflow.com/questions/13314433/batch-file-to-copy-directories-recursively#13314452
 	xcopy a: b: /s /e
+https://stackoverflow.com/questions/4051294/how-to-overwrite-existing-files-in-batch
+	xcopy /s c:\mmyinbox\test.doc C:\myoutbox
 
 Eject tray
 https://superuser.com/questions/972447/how-can-i-eject-a-cd-via-the-cmd

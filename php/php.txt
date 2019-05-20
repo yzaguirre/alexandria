@@ -1,3 +1,7 @@
+PHP in 2019
+https://stitcher.io/blog/php-in-2019
+https://news.ycombinator.com/item?id=19917655
+
 https://secure.php.net/ChangeLog-7.php#7.2.0
 https://secure.php.net/supported-versions.php
 Most packages

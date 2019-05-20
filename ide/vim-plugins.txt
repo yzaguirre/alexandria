@@ -1,3 +1,13 @@
+https://www.dannyadam.com/blog/2019/05/debugging-in-vim/
+https://news.ycombinator.com/item?id=19895480
+	:packadd Termdebug
+	:Termdebug
+	:!gcc -g factorial.c -o factorial
+Load a program
+	(gdb) file factorial
+Set breakpoints
+	(gdb) b factorial
+	(gdb) b 23
 https://prakashdanish.github.io/2018/06/30/vim-plugins-i-use.html
 https://news.ycombinator.com/item?id=17430546
 
