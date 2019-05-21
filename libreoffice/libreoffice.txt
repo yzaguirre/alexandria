@@ -27,6 +27,8 @@ http://askubuntu.com/questions/382389/how-do-i-install-libreoffice-on-10-04-serv
 http://ask.libreoffice.org/en/question/2641/convert-to-command-line-parameter/
 	libreoffice4.2 --headless --convert-to pdf:writer_pdf_Export result.odt --outdir /path/to/outdir
     libreoffice4.3 --headless --convert-to pdf --outdir "/tmp" file.odg
+To csv
+	libreoffice --headless --convert-to csv people.ods
 
 All available formats
 	pdf:writer_pdf_Export
