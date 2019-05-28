@@ -84,6 +84,9 @@ PHP companion
 Simple PHP Unit
 { "keys": [",", "p"],"command": "simple_php_unit" }
 { "keys": [",", "f"],"command": "simple_php_unit", "args": { "test_current_file": true } }
+Open folder
+https://stackoverflow.com/a/19561427
+{ "keys": ["ctrl+alt+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} }
 
 # Plugins
 PHP companion

@@ -49,3 +49,6 @@ fighting evil by moonlight winning love by daylight
 https://stackoverflow.com/questions/24014915/change-windows-filenames-to-bash-filenames
 	echo 'C:\code\snippets' | sed 's|\\|/|g; s|\(.\):|/\1|g'
 	echo '/c/code/snippets' | sed 's|^/c|C:|; s|/|\\|g'
+http://www.theunixschool.com/2014/08/sed-examples-remove-delete-chars-from-line-file.html
+To remove everything except the 1st n characters in every line:
+	sed -r 's/(.{3}).*/\1/' file

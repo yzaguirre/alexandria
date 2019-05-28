@@ -29,3 +29,16 @@ For der format
 	openssl x509 -inform DER -outform PEM -in foo.crt -out foo.pem
 Other convertions
 https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs#convert-certificate-formats
+
+Make a .deb package
+See /usr/share/doc/ca-certificates/examples/ca-certificates-local/README
+Cert installs in /usr/share/local/ca-certificates
+Copy the example
+	cp -a /usr/share/doc/ca-certificates/examples/ca-certificates-local ~/
+	cd ~/ca-certificates-local/
+Remove the dummy CA certifiacte, copy the specialized root CA certificate(s) and build the package
+	rm local/Local_Root_CA.crt
+	cp /path/to/YourOrg_Root_CA.crt local/
+	dpkg-buildpackage
+Install package
+	dpkg -i ../ca-certificates-local_0.1_all.deb

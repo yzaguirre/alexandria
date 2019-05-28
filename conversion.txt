@@ -1,0 +1,8 @@
+See documents/gnumeric.txt, libreoffice/libreoffice.txt, csvkit.txt, csvtosql.txt
+https://github.com/dilshod/xlsx2csv
+https://www.youtube.com/watch?v=VchqC88djyw
+	apt install xlsx2csv
+	xlsx2csv people.xlsx
+	xlsx2csv people.xlsx > people.csv
+Use | as delimiter. Remember to escape the character
+	xlsx2csv -c\| people.xslx

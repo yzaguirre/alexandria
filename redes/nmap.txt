@@ -63,3 +63,7 @@ https://askubuntu.com/questions/377787/how-to-scan-an-entire-network-using-nmap#
 	nmap -sP 192.168.1.0/24
 Scan an IP range
 	nmap -sP 192.168.1.1-200
+https://www.kalitut.com/2015/12/nmap-command-for-network-admins.html
+https://www.stationx.net/nmap-cheat-sheet/
+	nmap 192.168.1.0/24 --exclude 192.168.1.5,192.168.1.254
+	nmap -iL /tmp/scanlist.txt --excludefile /tmp/exclude.txt

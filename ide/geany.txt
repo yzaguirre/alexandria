@@ -1,2 +1,21 @@
 https://geany.org/
 	apt install geany
+MS Windows install
+	curl -o SHA256SUMS https://download.geany.org/SHA256SUMS
+	curl -o MD5SUMS https://download.geany.org/MD5SUMS
+	curl -o geany-1.35_setup.exe https://download.geany.org/geany-1.35_setup.exe
+	curl -o geany-1.35_setup.exe.sig https://download.geany.org/geany-1.35_setup.exe.sig
+Verify download
+	md5sum.exe -c --ignore-missing MD5SUMS
+	sha256sum.exe -c --ignore-missing SHA256SUMS
+	gpg --verify geany-1.35_setup.exe.sig
+MS Windows plugins
+	curl -o geany-plugins-1.35_setup.exe https://download.geany.org/geany-plugins/geany-plugins-1.35_setup.exe
+	curl -o geany-plugins-1.35_setup.exe.sig https://download.geany.org/geany-plugins/geany-plugins-1.35_setup.exe.sig
+	curl -o SHA256SUMS https://download.geany.org/geany-plugins/SHA256SUMS
+	curl -o MD5SUMS https://download.geany.org/geany-plugins/MD5SUMS
+Verify download
+	md5sum.exe -c --ignore-missing MD5SUMS
+	sha256sum.exe -c --ignore-missing SHA256SUMS
+	gpg --verify geany-plugins-1.35_setup.exe.sig
+Add "C:\Program Files (x86)\Geany\bin" to PATH

@@ -1,13 +1,22 @@
 https://developers.google.com/gmail/api/
 https://developers.google.com/gmail/api/guides/
 https://stackoverflow.com/questions/8179103/read-all-mails-from-gmail-api-using-oauth
+https://developers.google.com/api-client-library/python/
+Gmail specific documentation
+https://developers.google.com/gmail/api/v1/reference/
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/index.html
 https://github.com/unshift/gmail-cli
 
+Search operators you can use with Gmail
 https://support.google.com/mail/answer/7190?hl=en
 
 Not working:
 https://github.com/steve970/g7_gmail_capstone
 
 https://developers.google.com/gmail/api/quickstart/python
-	pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+	sudo -H pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+	sudo -H pip3 install --upgrade google-api-python-client
+
+Check credentials in API dashboard
+https://console.cloud.google.com/apis/dashboard
+https://console.cloud.google.com/apis/credentials

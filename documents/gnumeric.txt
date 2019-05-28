@@ -1,0 +1,4 @@
+Convert Excel Spreadsheets xlsx to csv Gnumeric
+See libreoffice/libreoffice.txt "To csv"
+https://www.youtube.com/watch?v=mviMZnXaXWA
+	ssconvert people.ods people.csv
