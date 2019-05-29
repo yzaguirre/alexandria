@@ -12,3 +12,89 @@ https://www.stavros.io/posts/how-to-configure-wireguard/
 A Mechanised Cryptographic Proof of the WireGuard Virtual Private Network Protocol
 https://hal.inria.fr/hal-02100345
 https://news.ycombinator.com/item?id=19896760
+
+https://github.com/adrianmihalko/wg_config
+	git clone https://github.com/adrianmihalko/wg_config
+add a user
+	./user.sh -a alice
+delete a user
+	./user.sh -d alice
+view a user
+	./user.sh -v alice
+clear all
+	./user.sh -c
+
+Default UDP port 51820
+
+Install
+	sudo add-apt-repository ppa:wireguard/wireguard
+	apt install wireguard-dkms wireguard-tools
+Create a private key
+	(umask 077 && printf "[Interface]\nPrivateKey = " | sudo tee /etc/wireguard/wg0.conf > /dev/null)
+	wg genkey | sudo tee -a /etc/wireguard/wg0.conf | wg pubkey | sudo tee /etc/wireguard/publickey
+We will need to exchange the key in this file (/etc/wireguard/publickey) with the second server as we define our configuration.
+
+Open configuration file
+	sudo vim /etc/wireguard/wg0.conf
+Configuring the Interface Section
+We need to define the VPN IP address this node will use and the port that it will listen on for connections from peers
+[Interface]
+PrivateKey = generated_private_key
+ListenPort = 5555
+SaveConfig = true
+
+We will use the 10.0.0.0/24 subnet as the address space for our VPN.
+For each computer, you will need to pick a unique address within this range (10.0.0.1 to 10.0.0.254)
+and specify the address and subnet using CIDR notation.
+Address = 10.0.0.1/24
+
+/etc/wireguard/wg0.conf on second server
+[Interface]
+PrivateKey = generated_private_key
+ListenPort = 5555
+SaveConfig = true
+Address = 10.0.0.2/24
+
+Add a peer to the server.
+Since we know the specific IP address that the first server is using,
+we can input that directly, ending with /32 to indicate a range that contains single IP value:
+/etc/wireguard/wg0.conf on second server
+[Peer]
+PublicKey = public_key_of_first_server
+AllowedIPs = 10.0.0.1/32
+Endpoint = public_IP_of_first_server:5555
+
+To route to the server LAN:
+AllowedIPs = 192.168.2.1/24, 192.168.1.1/24
+
+To route all traffice to server:
+AllowedIPs = 0.0.0.0/0, ::/0
+
+Add the following to the server config:
+PostUp   = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+Opening the Firewall and Starting the VPN
+	sudo ufw allow 5555
+Now, start the wg-quick service using the wg0 interface file we defined:
+	sudo systemctl start wg-quick@wg0
+This will start of the wg0 network interface on the machine. We can confirm this by typing:
+	ip addr show wg0
+We can use the wg tool to view information about the active configuration of the VPN:
+	sudo wg
+
+To complete the connection, we now need to add the second server's peering information to the first server using the wg command.
+On the first server:
+	sudo wg set wg0 peer public_key_of_second_server endpoint public_IP_of_second_server:5555 allowed-ips 10.0.0.2/32
+You can confirm that the information is now in the active configuration by typing sudo wg again on the first server:
+	sudo wg
+Ping the second server
+	ping -c 3 10.0.0.2
+If everything is working correctly, you can save the configuration on the first server back to the /etc/wireguard/wg0.conf file by restarting the service:
+	sudo systemctl restart wg-quick@wg0
+If you want to start the tunnel at boot, you can enable the service on each machine by typing:
+	sudo systemctl enable wg-quick@wg0
+
+Mobile Client
+Share a configuration file (see ~/qrcode.txt)
+	qrencode -t ansiutf8 < tunner.conf

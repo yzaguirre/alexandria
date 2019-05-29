@@ -1,0 +1,58 @@
+http://www.emoticode.net/python/hadcore-httprequest.html
+http://www.emoticode.net/python/httprequest.html
+
+Install setup tools and pip on Windows
+http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows
+http://stackoverflow.com/questions/2817869/error-unable-to-find-vcvarsall-bat
+	Create new environment variable VS90COMNTOOLS=%VS110COMNTOOLS%
+
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip
+
+Its installed at:
+C:\Python27\Scripts\
+So make that directory to PATH variable.
+
+Install easy tools on *NIX
+	# apt-get install python-setuptools # python3-setuptools for python3
+Install pip on *NIX
+	# apt-get install python-pip # python3-pip for python3
+Later can install thinks like:
+	pip install httpie
+	
+Better install latest version
+	$ wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
+	# python ez_setup.py
+http://www.pip-installer.org/en/latest/installing.html
+	$ wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+	$ python get-pip.py
+	$ wget https://pypi.python.org/packages/source/p/pip/pip-1.4.1.tar.gz
+	$ tar xzf pip-1.4.1.tar.gz -C ~/tmp
+	$ cd ~/tmp/pip-1.4.1
+	# python setup.py install
+
+Upload file via FTP
+http://www.emoticode.net/python/upload-file-via-ftp.html
+
+The Python script language allows a quick httpd service called
+SimpleHTTPServer, and you can share the local directory you're in
+using the command
+
+	$ python -m SimpleHTTPServer
+http://michelanders.blogspot.com/2011/10/implementing-https-server-in-python.html
+http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python
+http://code.activestate.com/recipes/442473-simple-http-server-supporting-ssl-secure-communica/
+
+https://stackoverflow.com/questions/12400256/python-converting-epoch-time-into-the-datetime
+	time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))
+	import datetime
+	datetime.datetime.fromtimestamp(1347517370).strftime('%c')
+'2012-09-13 02:22:50'
+
+Base64
+https://docs.python.org/3/library/base64.html
+	import base64
+	base64.decodestring(s)
+
+Open files
+https://docs.python.org/3/library/functions.html#open

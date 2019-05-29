@@ -107,6 +107,10 @@ PHPUnitKit
 sublime-phpunit
 https://laravel-news.com/sublime-phpunit
 https://github.com/gerardroche/sublime-phpunit
+Format: Javascript
+https://github.com/jdc0589/JsFormat
+https://stackoverflow.com/questions/12866964/sublime-text-2-auto-fix-indentation-for-javascript
+jsFormat
 
 # Build systems
 http://sublimetext.info/docs/en/reference/build_systems.html
@@ -126,3 +130,8 @@ SQL support
 https://github.com/mtxr/SublimeText-SQLTools
 https://code.mteixeira.dev/SublimeText-SQLTools/
 https://packagecontrol.io/packages/SQLTools
+
+# Troubleshoot
+Cut doesn't work
+https://stackoverflow.com/questions/33740545/cut-and-paste-issue-with-sublime-text-st3
+Remove Origami. Or change the key bindings.

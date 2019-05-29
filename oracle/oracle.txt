@@ -1,3 +1,9 @@
+Config file location
+tnsnames.ora
+C:\oraclexe\app\oracle\product\11.2.0\server\network\ADMIN\tnsnames.ora
+C:\oraclexe\app\oracle\product\11.2.0\server\network\ADMIN\sample\tnsnames.oRA
+C:\oraclexe\app\oracle\product\11.2.0\server\hs\admin\tnsnames.ora.sample
+
 https://stackoverflow.com/questions/43898290/recover-system-password-oracle-xe
 Your user needs to be member of Windows local group "ORA_DBA"
 SQL CLI

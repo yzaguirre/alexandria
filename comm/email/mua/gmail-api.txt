@@ -20,3 +20,6 @@ https://developers.google.com/gmail/api/quickstart/python
 Check credentials in API dashboard
 https://console.cloud.google.com/apis/dashboard
 https://console.cloud.google.com/apis/credentials
+
+Save an attachment
+https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/get
