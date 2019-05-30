@@ -56,3 +56,32 @@ https://docs.python.org/3/library/base64.html
 
 Open files
 https://docs.python.org/3/library/functions.html#open
+
+Argument parser
+https://docs.python.org/3/library/argparse.html
+https://stackoverflow.com/questions/1009860/how-to-read-process-command-line-arguments
+from argparse import ArgumentParser
+
+parser = ArgumentParser()
+parser.add_argument("-f", "--file", dest="filename",
+                    help="write report to FILE", metavar="FILE")
+parser.add_argument("-q", "--quiet",
+                    action="store_false", dest="verbose", default=True,
+                    help="don't print status messages to stdout")
+
+args = parser.parse_args()
+
+Reverse a list
+https://stackoverflow.com/questions/529424/traverse-a-list-in-reverse-order-in-python
+a = ["foo", "bar", "baz"]
+for i in reversed(a):
+	print(i)
+
+Make executable
+https://stackoverflow.com/questions/4235834/how-to-make-python-scripts-executable-on-windows
+https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalone-executable-to-run-without-any-dependency
+	pip install pyinstaller
+	pyinstaller youprogram.py
+Check dist/ directory
+https://stackoverflow.com/questions/43124775/why-python-3-6-1-throws-attributeerror-module-enum-has-no-attribute-intflag
+	pip uninstall enum34

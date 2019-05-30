@@ -1,0 +1,2 @@
+https://stedolan.github.io/jq/
+	apt install jq

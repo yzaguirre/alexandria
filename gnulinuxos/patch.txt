@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=-CiLU9-RAGk
+Create a diff
+	diff -u file1.txt file2.txt > file.diff
+Apply a patch
+	patch < file.diff
+Reverse a patch
+	patch -R < file.diff

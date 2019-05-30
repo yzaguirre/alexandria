@@ -1,0 +1,7 @@
+http://www.andre-simon.de/doku/highlight/en/highlight.php
+https://gitlab.com/saalen/highlight
+	apt install highlight
+Scoop
+	scoop install highlight
+	highlight -i mycode.py -o mycode.html --out-format html
+	highlight -i main.cpp -o main.cpp.html --include-style --line-numbers

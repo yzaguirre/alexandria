@@ -1,3 +1,5 @@
+https://rsync.samba.org/download.html
+https://en.wikipedia.org/wiki/Rsync#Connection
 Download
 https://rsync.samba.org/
 	wget https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz
