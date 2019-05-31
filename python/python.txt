@@ -85,3 +85,10 @@ https://stackoverflow.com/questions/5458048/how-to-make-a-python-script-standalo
 Check dist/ directory
 https://stackoverflow.com/questions/43124775/why-python-3-6-1-throws-attributeerror-module-enum-has-no-attribute-intflag
 	pip uninstall enum34
+
+Key exists in dictionary
+https://stackoverflow.com/questions/1602934/check-if-a-given-key-already-exists-in-a-dictionary
+	if key in d:
+        d[key] += 1
+    else:
+        d[key] = 1

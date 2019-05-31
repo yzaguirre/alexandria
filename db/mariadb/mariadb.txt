@@ -1,3 +1,9 @@
+is intended to be, 5 branch, replacement for mysql
+community users development mysql,
+less forthcoming for plans long term for 
+Resposoble forked the last code five branch
+stable and secure
+fedora, ubuntu replaces mysql for latest secure version mariadb
 https://downloads.mariadb.org/
 	apt update
 	apt install mariadb-server
@@ -11,3 +17,19 @@ https://mariadb.com/kb/en/library/alter-table/
 https://mariadb.com/kb/en/library/create-table/#column-and-index-definitions
 https://mariadb.com/kb/en/library/data-definition/
 https://mariadb.com/kb/en/library/data-types/
+
+Instalation
+Runs part of secure_instalation
+
+Add password for root user
+
+./mysql_secure_instalattion
+Disables anonymous lo
+Disables root login
+remotes test user database
+removes remote login
+Tests users, database or its configuration can have exploits associated with them,
+so better safe than sorry for a production environment.
+reload
+	systemctl restart mariadb.service
+	

@@ -5,6 +5,17 @@ https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md
 https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md
 https://www.sqlshack.com/introduction-mssql-cli-new-interactive-command-line-tool-sql-server/
 	pip install mssql-cli
+Compile bug
+https://github.com/termux/termux-packages/issues/136
+	apt install python-dev
+	pip install cython
+	LDFLAGS=" -lm -lcompiler_rt" pip install mssql-cli
+Missing sqlfront.h
+https://github.com/pymssql/pymssql/issues/372
+https://github.com/ramiro/freetds/releases
+https://www.experts-exchange.com/questions/22489865/missing-sqlfront-h-compile-error.html
+Part of the SQL Server SDK. https://www.microsoft.com/en-us/download/details.aspx?id=10070
+
 Config file at
 %LOCALAPPDATA%\dbcli\mssqlcli
 

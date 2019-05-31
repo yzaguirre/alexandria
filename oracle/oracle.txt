@@ -24,3 +24,7 @@ https://desktop.arcgis.com/es/arcmap/latest/manage-data/gdbs-in-oracle/sdogeomet
 https://desktop.arcgis.com/es/arcmap/10.3/manage-data/gdbs-in-oracle/sdogeometry-feature-classes.htm
 https://desktop.arcgis.com/es/arcmap/10.3/manage-data/using-sql-with-gdbs/what-is-an-srid.htm#ESRI_SECTION1_28B77EC32DA8432DB95EDB15A7E04B06
 https://community.esri.com/thread/172531
+
+Proxy user
+https://dba.stackexchange.com/questions/195399/oracle-connecting-as-a-proxy-user-via-connection-string/195410#195410
+SELECT SYS_CONTEXT('USERENV', 'PROXY_USER'), SYS_CONTEXT('USERENV', 'SESSION_USER') FROM dual

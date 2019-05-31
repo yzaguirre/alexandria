@@ -1,3 +1,6 @@
 https://github.com/TheWaWaR/simple-http-server/
 	simple-http-server -V
 	simple-http-server -i --nocache -up 80
+Termux install
+https://github.com/termux/termux-packages/issues/2847
+	cargo install simple-http-server

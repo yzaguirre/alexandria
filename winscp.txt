@@ -18,6 +18,10 @@ Upload file script
 	put d:\examplefile.txt /home/user/
 	# Exit WinSCP
 	exit
+Sync files
+https://winscp.net/eng/docs/guide_synchronize
+https://winscp.net/eng/docs/task_synchronize_full#direction
+
 Commands
 Command
 call
