@@ -1,4 +1,13 @@
-https://www.microsoft.com/net/core#linuxdebian
+https://www.microsoft.com/net/core
+Installation at C:\Program Files\dotnet
+	- .NET Core SDK 2.2.300
+    - .NET Core Runtime 2.2.5
+    - ASP.NET Core Runtime 2.2.5
+Resources
+	- Core Documentation https://aka.ms/dotnet-docs
+	- SDK Documentation https://aka.ms/dotnet-cli-docs
+	- Release Notes https://aka.ms/20-p2-rel-notes
+	- Tutorials https://aka.ms/dotnet-tutorials
 https://github.com/dotnet/cli
 	apt install curl libunwind8 gettext
 	curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
@@ -9,3 +18,4 @@ Write this in .profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 Start a new project
 	dotnet new
+	dotnet new console -o myApp

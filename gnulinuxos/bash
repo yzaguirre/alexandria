@@ -215,3 +215,36 @@ read -r -d '' VAR <<-'EOF'
     $(dont-execute-this)
     foo"bar"''
     EOF
+Check for binary
+https://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
+gnudate() {
+    if hash gdate 2>/dev/null; then
+        gdate "$@"
+    else
+        date "$@"
+    fi
+}
+
+Check regular expresion
+https://stackoverflow.com/questions/9631335/regular-expressions-in-a-bash-case-statement
+if ! echo ${PATH} |grep -q /usr/games
+then
+	PATH=$PATH:/usr/games
+fi
+
+case :$PATH: in
+	*:/usr/games:*);;
+	*) PATH=$PATH:/usr/games ;;
+esac
+
+if echo $1 | rg -q '^\d+$'
+then
+  echo only numbers
+else
+  echo no numbers
+fi
+
+case $1 in
+[0-9]*) echo only numbers ;;
+*) echo anything else;;
+esac

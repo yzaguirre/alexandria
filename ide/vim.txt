@@ -1,4 +1,6 @@
+https://www.hillelwayne.com/post/intermediate-vim/
 https://vimawesome.com/
+https://vim-adventures.com/
 
 https://nickjanetakis.com/blog/vim-is-saving-me-hours-of-work-when-writing-books-and-courses
 https://news.ycombinator.com/item?id=19143853

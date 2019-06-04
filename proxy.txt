@@ -8,6 +8,8 @@ https://news.ycombinator.com/item?id=10726158
 http://blog.sensible.io/2014/05/17/ssh-tunnel-local-and-remote-port-forwarding-explained-with-examples.html
 http://kev.inburke.com/kevin/how-to-use-ec2-as-a-web-proxy/
     ssh ec2 -D 2001
+https://superuser.com/questions/370930/ssh-reverse-socks-tunnel
+
 Configure firefox to use SOCKS host: localhost, Port: 2001
 Make alias
 	$ echo $'\nalias proxyec2=\'ssh ec2proxy\'\n' >> ~/.bash_aliases

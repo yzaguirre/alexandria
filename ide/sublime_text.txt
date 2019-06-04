@@ -78,6 +78,7 @@ Vim splits bindings
 { "keys": [":", "s", "p"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
 { "keys": [":", "b", "d"], "command": "destroy_pane", "args": {"direction": "self"} },
 PHP companion
+https://github.com/erichard/SublimePHPCompanion
 { "keys": ["f9"],"command": "expand_fqcn" }
 { "keys": ["f10"],"command": "find_use" }
 { "keys": ["f7"],"command": "insert_php_constructor_property" }

@@ -85,6 +85,7 @@ subjectAltName = DNS:www.example.com,DNS:example.com
 Create a CSR
 	openssl req -config intermediate/openssl.cnf \
       -key private/www.example.com.key.pem \
+      -reqexts SAN \
       -new -sha256 -out requests/www.example.com.csr.pem
 Better way (replace appropriate values)
 	openssl req -key private/www.example.com.key.pem \

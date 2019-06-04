@@ -13,6 +13,7 @@ Node.JS, 64-bit, >= 8.12.0, < 9.0.0
 Build in vscodium_1.29.1-1542386856_amd64.deb
 
 https://github.com/VSCodium/vscodium/releases
+Install in C:\Program Files\VSCodium
 https://news.ycombinator.com/item?id=17850960
 https://news.ycombinator.com/item?id=18209082
 Search them in settings with the keyword "online", you will find them all. 
