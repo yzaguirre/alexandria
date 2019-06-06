@@ -13,9 +13,52 @@ https://github.com/dotnet/cli
 	curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
 	mkdir -p /DVD/opt/dotnet
 	tar xf dotnet.tar.gz -C /opt/dotnet
-	sudo ln -s /DVD/opt/dotnet/dotnet /usr/local/bin
+	sudo ln -s /opt/dotnet/dotnet /usr/local/bin
+Download for Ubuntu 18.10
+	wget https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
+	sudo dpkg -i packages-microsoft-prod.deb
+	sudo apt update
+	sudo apt install dotnet-sdk-2.2
 Write this in .profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 Start a new project
 	dotnet new
 	dotnet new console -o myApp
+Import assembly reference, like SqlConnection
+https://stackoverflow.com/questions/46815546/how-to-add-external-assembly-dll-to-net-core-2-0-on-visual-studio-code#46815598
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
+	dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
+	dotnet add app/app.csproj reference System.Configuration
+	dotnet add app/app.csproj reference lib/lib.csproj
+	dotnet add package System.Data.SqlClient
+https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files
+https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net-core-via-pocos#43512837
+	dotnet add package System.Configuration.ConfigurationManager
+	dotnet add package Google.Apis.Gmail.v1
+SQL Connection
+https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-string-builders
+https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/establishing-the-connection
+
+Create a exe
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build
+https://blog.jongallant.com/2017/09/dotnet-core-console-app-create-exe-instead-of-dll/
+	dotnet build
+Pass a runtime
+	dotnet build -r win10-x64
+Get your Exe at bin\Debug\netcoreapp2.2\win10-x64\myApp.exe
+	dotnet build -r win10-x64 --configuration Release
+	dotnet build -r win10-x64 -c Release
+For Windows 8.1 / Windows Server 2012 R2
+	dotnet build -r win81-x64 --configuration Release
+	dotnet build -r  --configuration Release
+Build for Ubuntu 18.10
+	dotnet build -c Release --runtime ubuntu.18.04-x64
+Your build is in bin/Release/netcoreapp2.2/ubuntu.18.10-x64/MyApp.dll
+
+Get your Exe at bin\Release\netcoreapp2.2\win10-x64\myApp.exe
+https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
+
+https://www.youtube.com/watch?v=18-NocobSQk
+https://www.thewindowsclub.com/api-ms-win-crt-runtime-l1-1-0-dll-is-missing
+Install the Microsoft Visual C++ 2015 Redistributable 

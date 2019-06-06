@@ -11,13 +11,30 @@ If you're using OpenBSD, tmux is part of the base system.
 For the rest of us, we need to install tmux from ports or pkgsrc or however you'd like to get it. 
 
 Compile
-	apt-get install libevent-dev libncurses5-dev
+	apt install libevent-dev libncurses5-dev
 	tar xf tmux-2.0.tar.gz
 	cd tmux-2.0
 	./configure
 	make
 	sudo make install
-
+Compile in CentOS 6
+Don't install libevent-devel, its too old
+	yum install ncurses-devel
+https://superuser.com/questions/738829/attempting-to-install-tmux-on-centos-6-x-fails-with-error-evbuffer-eol-lf-und
+	wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
+	tar -xvzf libevent-2.0.22-stable.tar.gz
+	./configure
+	make -j 4
+	make install
+	cd ..
+Newer CentOS
+	yum install libevent2-devel.x86_64
+	wget https://github.com/tmux/tmux/releases/download/2.9a/tmux-2.9.tar.gz
+	tar xf tmux-2.9.tar.gz
+	cd tmux-2.9
+	./configure LDFLAGS="-Wl,-rpath,/usr/local/lib"
+	make -j 4
+	make install
 https://news.ycombinator.com/item?id=9505377
 
 Conf

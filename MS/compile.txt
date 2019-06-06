@@ -1,0 +1,19 @@
+Reference
+http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx
+
+https://stackoverflow.com/questions/266308/compiling-a-vbproj-or-csproj-project-file-without-visual-studio
+https://social.msdn.microsoft.com/forums/windowsapps/en-us/23a7dc5d-c337-4eed-8af4-c016def5516e/location-of-msbuildexe
+
+Option 1
+"C:\Program Files (x86)\MSBuild\14.0\Bin\amd64"
+Option 2
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319"
+
+Compile with a Configuration in mind.
+	msbuild /property:Configuration=Release MyFile.vbproj
+	msbuild /property:Configuration=Debug MyFile.vbproj
+
+Add a file to the compile list
+https://stackoverflow.com/questions/14382974/how-can-i-add-a-new-file-to-csproj-file-without-visual-studio
+<Compile Include="{relative path to file}" />
+

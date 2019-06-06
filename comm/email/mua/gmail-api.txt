@@ -5,6 +5,7 @@ https://developers.google.com/api-client-library/python/
 Gmail specific documentation
 https://developers.google.com/gmail/api/v1/reference/
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/index.html
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/
 https://github.com/unshift/gmail-cli
 
 Search operators you can use with Gmail
@@ -23,3 +24,8 @@ https://console.cloud.google.com/apis/credentials
 
 Save an attachment
 https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/get
+
+Send messages
+https://developers.google.com/gmail/api/guides/sending
+https://developers.google.com/gmail/api/v1/reference/users/messages/send
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/classGoogle_1_1Apis_1_1Gmail_1_1v1_1_1Data_1_1Message.html
