@@ -1,0 +1,27 @@
+https://github.com/barryvdh/laravel-dompdf
+https://laracasts.com/discuss/channels/general-discussion/reporting-in-laravel
+	composer require barryvdh/laravel-dompdf
+https://github.com/barryvdh/laravel-dompdf/issues/130
+	composer dump-autoload -o
+
+Edit config/app.php
+Use the facade for shorter code. Add this to your facades:
+'PDF' => Barryvdh\DomPDF\Facade::class,
+
+Test it
+$pdf = \App::make('dompdf.wrapper');
+$pdf->loadHTML('<h1>Test</h1>');
+return $pdf->stream();
+
+Using facade
+$pdf = \PDF::loadView('pdf.invoice', $data);
+return $pdf->download('invoice.pdf');
+
+https://github.com/Jimmy-JS/laravel-report-generator
+https://quickadminpanel.com/blog/reports-and-charts-in-laravel-two-useful-packages/
+	composer require jimmyjs/laravel-report-generator
+Package phpoffice/phpexcel is abandoned, you should avoid using it. Use phpoffice/phpspreadsheet instead.
+Edit the config/app.php
+'PdfReport' => Jimmyjs\ReportGenerator\Facades\PdfReportFacade::class,
+'ExcelReport' => Jimmyjs\ReportGenerator\Facades\ExcelReportFacade::class,
+'CSVReport' => Jimmyjs\ReportGenerator\Facades\CSVReportFacade::class,
