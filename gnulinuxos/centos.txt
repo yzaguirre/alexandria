@@ -1,0 +1,9 @@
+Reboot a CentOS 6 server
+https://webhostinggeeks.com/howto/how-to-properly-reboot-linux-centosrhel-server/
+https://serverfault.com/questions/620595/best-way-to-gracefully-restart-centos
+https://serverfault.com/questions/511614/what-is-the-difference-between-init-6-and-reboot-on-red-hat-rhel-centos?rq=1
+	init 6
+	/sbin/init 6
+init 6 tells the init process to shutdown all of the spawned processes/daemons as
+   written in the init files (in the inverse order they started) and lastly invoke the 
+   shutdown -r now command to reboot the machine

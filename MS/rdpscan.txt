@@ -1,0 +1,4 @@
+https://github.com/robertdavidgraham/rdpscan/
+	wget https://github.com/robertdavidgraham/rdpscan/files/3242730/rdpscan-windows.zip
+	unzip rdpscan-windows.zip
+	./rdpscan.exe IP

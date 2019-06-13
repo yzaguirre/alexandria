@@ -1,0 +1,2 @@
+https://www.clearos.com/resources/documentation/clearos/content:en_us:7_ug_nat_firewall
+https://www.clearos.com/resources/documentation/clearos/content:en_us:7_ug_port_forwarding

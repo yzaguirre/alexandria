@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/113224/what-is-the-largest-tcp-ip-network-port-number-allowable-for-ipv4
+The port number is an unsigned 16-bit integer, so 65535.
