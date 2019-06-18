@@ -167,6 +167,8 @@ Local gitignore (recommended)
 	vim .gitignore
 Lists all ignored files in this project
 	git ls-files --other --ignored --exclude-standard
+https://laravel-news.com/debugging-gitignore
+	git check-ignore -v path/to/ignored/file
 	
 clone via SSH
 	git clone git@github.com:dvdyzag/alec.git
