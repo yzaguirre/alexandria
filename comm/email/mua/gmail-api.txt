@@ -29,3 +29,14 @@ Send messages
 https://developers.google.com/gmail/api/guides/sending
 https://developers.google.com/gmail/api/v1/reference/users/messages/send
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/classGoogle_1_1Apis_1_1Gmail_1_1v1_1_1Data_1_1Message.html
+https://stackoverflow.com/questions/49138836/400-error-recipient-address-required-javascript
+Content for the Raw parameter
+
+From: John Doe <jdoe@machine.example> 
+To: Mary Smith <mary@example.net> 
+Subject: Saying Hello 
+Date: Fri, 21 Nov 1997 09:55:06 -0600 
+Message-ID: <1234@local.machine.example>
+
+This is a message just to say hello. So, "Hello". 
+
