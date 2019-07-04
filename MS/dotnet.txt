@@ -62,3 +62,8 @@ https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
 https://www.youtube.com/watch?v=18-NocobSQk
 https://www.thewindowsclub.com/api-ms-win-crt-runtime-l1-1-0-dll-is-missing
 Install the Microsoft Visual C++ 2015 Redistributable 
+
+Make installer
+https://wixtoolset.org/
+https://nblumhardt.com/2017/04/netcore-msi/
+https://www.youtube.com/watch?v=6Yf-eDsRrnM

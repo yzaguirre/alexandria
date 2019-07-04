@@ -14,7 +14,9 @@ Inspect a certificate (signed from the CSR by a CA)
 	
 
 SSL Generator
-https://mozilla.github.io/server-side-tls/ssl-config-generator/
+https://ssl-config.mozilla.org/
+https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations
+https://news.ycombinator.com/item?id=20311834
 https://sethvargo.com/getting-an-a-plus-on-qualys-ssl-labs-tester/
 https://https.cio.gov/
 https://news.ycombinator.com/item?id=9220001

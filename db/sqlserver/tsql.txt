@@ -19,3 +19,19 @@ from
     table
 where
     condition
+
+Stored procedure definition
+https://stackoverflow.com/questions/7686469/query-the-contents-of-stored-procedures-on-sql-server
+SELECT
+    OBJECT_NAME(OBJECT_ID),
+    definition
+FROM
+    sys.sql_modules
+WHERE
+    objectproperty(OBJECT_ID, 'IsProcedure') = 1
+AND definition LIKE '%Foo%' 
+
+SELECT OBJECT_DEFINITION(OBJECT_ID(N'dbo.myStoredProc'))
+
+SELECT @objname = OBJECT_DEFINITION(OBJECT_ID(N'dbo.myStoredProc'))
+print @objname
