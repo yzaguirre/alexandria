@@ -134,3 +134,60 @@ Posible values for crate_type: bin, lib, rlib, dylib, or staticlib
 Embedded Rust
 https://rust-embedded.github.io/book/intro/index.html
 https://news.ycombinator.com/item?id=19766713
+
+Cross compile
+https://hackernoon.com/compiling-rust-for-the-raspberry-pi-49fdcd7df658
+https://github.com/japaric/rust-cross
+Add the toolchain for Rust:
+	rustup target add arm-unknown-linux-gnueabi
+	rustup target add armv7-unknown-linux-gnueabihf
+	rustup target add armv7-linux-androideabi
+	rustup target add aarch64-linux-android
+	rustup target add aarch64-unknown-linux-gnu
+and the right C compiler:
+	sudo apt install gcc-arm-linux-gnueabihf
+	sudo apt install gcc-arm-linux-gnueabi
+	sudo apt install gcc-aarch64-linux-gnu
+Check
+	/usr/lib/gcc-cross
+We need to add our build target to ~/.cargo/config by adding the following lines, so that rust knows which linker to use.
+	vim ~/.cargo/config
+
+[target.arm-unknown-linux-gnueabi]
+linker = "arm-linux-gnueabi-gcc"
+
+[target.armv7-unknown-linux-gnueabihf]
+linker = "arm-linux-gnueabihf-gcc"
+
+[target.armv7-linux-androideabi]
+linker = "gcc-arm-linux-gnueabi-gcc"
+
+[target.aarch64-linux-android]
+linker = "aarch64-linux-gnu-gcc"
+
+[target.aarch64-unknown-linux-gnu]
+linker = "aarch64-linux-gnu-gcc"
+
+For termux
+https://blog.geemili.xyz/blog/rust-app-on-termux-with-nix/
+https://www.reddit.com/r/rust/comments/c7ernb/compiling_rust_apps_for_termux_with_nixshell/
+[target.armv7-linux-androideabi]
+linker = "armv7a-unknown-linux-androideabi-clang"
+
+Print other targets
+	rustc --print target-list | pr -tw100 --columns 3
+
+Create a project
+	cargo new hello-rpi --bin
+Build a project for RPi
+	cargo build --target=arm-unknown-linux-gnueabi
+	cargo build --target=armv7-unknown-linux-gnueabihf
+Build for termux
+	cargo build --target=armv7-linux-androideabi
+	cargo build --target=aarch64-linux-android
+	cargo build --target=aarch64-unknown-linux-gnu
+Check the binary out
+	file target/armv7-unknown-linux-gnueabihf/debug/hello-rpi
+Push it to Android or ssh server
+	adb push target/armv7-linux-androideabi/debug/cli /storage/self/primary/our-cli-app
+	scp target/armv7-unknown-linux-gnueabihf/debug/hello me@arm:~

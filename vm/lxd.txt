@@ -1,0 +1,112 @@
+https://www.cyberciti.biz/faq/how-to-install-setup-lxd-on-fedora-linux/
+https://www.cyberciti.biz/faq/install-lxd-pure-container-hypervisor-on-ubuntu-18-04-lts/
+https://www.cyberciti.biz/faq/how-to-auto-start-lxd-containers-at-boot-time-in-linux/
+https://www.cyberciti.biz/faq/how-to-rename-lxd-lxc-linux-container/
+	snap version
+	sudo snap install lxd
+Start the service
+	sudo snap start lxd
+	sudo snap services lxd
+Make the service always enabled
+	sudo snap enable lxd
+Add user to the lxd group
+	sudo usermod -a -G lxd david
+	id david
+	newgrp lxd
+	id
+Configure the LXD networking and storage for VM
+	lxd init
+Make sure the lxc client is talking to the LXD daemon:
+	lxc list
+List images
+	lxc image list images:
+Create the first LXD VM, lxc launch images:{distro}/{version}/{arch} {container-name-here}
+Ubuntu Linux LTS 18.04 VM
+	lxc launch images:ubuntu/18.10/amd64 ubuntu-nginx-vm
+	lxc launch ubuntu:18.04
+Debian Linux 10.x VM
+	lxc launch images:debian/10/amd64 debian-10-vm
+How to list all my containers/VMs
+	lxc list
+	lxc list --fast
+
+How to execute a command
+	lxc exec containerName -- command
+	lxc exec containerName -- /path/to/script
+	lxc exec containerName --env EDITOR=/usr/bin/vim -- command
+	### run date, ip a, ip rm and other commands on various containers ###
+	lxc exec cenots-7-vm -- date
+	lxc exec ubuntu-nginx-vm -- ip r
+	lxc exec fedora-30-vm -- dnf update
+	lxc exec debian-nfs-server-vm -- cat /etc/debian_version
+
+Login
+	lxc exec debian-nfs-server-vm bash
+Exit
+	exit
+
+Start/stop/restart
+	lxc stop ubuntu-nginx-vm
+	lxc start ubuntu-nginx-vm
+	lxc restart ubuntu-nginx-vm
+
+How to delete my containers
+	lxc stop ubuntu-nginx-vm && lxc delete ubuntu-nginx-vm
+
+Get information
+	lxc info
+	lxc info ubuntu-nginx-vm
+
+Forward incoming connections to the Linux container VM
+Find the IP address
+	lxc list ubuntu-nginx-vm
+You need to redirect/forward all incoming traffic on port 80 to host OS's public IP address
+say 104.20.187.5 to LXD private IP address 10.75.139.74.
+With firewalld
+	sudo firewall-cmd --get-default-zone
+	sudo firewall-cmd --zone=UbuntuServer --add-service=http --permanent
+	sudo firewall-cmd --permanent --zone=UbuntuServer --add-forward-port=port=80:proto=tcp:toport=80:toaddr=10.75.139.74
+	sudo firewall-cmd --reload
+With ufw
+https://www.cyberciti.biz/faq/how-to-configure-ufw-to-forward-port-80443-to-internal-server-hosted-on-lan/
+	/sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp -d {PUBLIC_IP} --dport 80 -j DNAT --to {INTERNAL_IP}:80
+	/sbin/iptables -t nat -A PREROUTING -i eth0 -p tcp -d {PUBLIC_IP} --dport 443 -j DNAT --to {INTERNAL_IP}:443
+
+To allow LAN nodes with private IP addresses to communicate with external public networks,
+configure the firewall for IP masquerading,
+which masks requests from LAN nodes with the IP address of the firewall's external device such as eth0.
+	/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+or	/sbin/iptables -t nat -A POSTROUTING -s 192.168.1.0/24 ! -d 192.168.1.0/24 -j MASQUERADE
+
+Edit before.rules
+Configure ufw to redirect http traffic to another (LAN) IP:port
+	sudo vim /etc/ufw/before.rules
+*nat
+:PREROUTING ACCEPT [0:0]
+# forward 202.54.1.1  port 80 to 192.168.1.100:80
+# forward 202.54.1.1  port 443 to 192.168.1.100:443
+-A PREROUTING -i eth0 -d 202.54.1.1   -p tcp --dport 80 -j  DNAT --to-destination 192.168.1.100:80
+-A PREROUTING -i eth0 -d 202.54.1.1   -p tcp --dport 443 -j  DNAT --to-destination 192.168.1.100:443
+# setup routing
+-A POSTROUTING -s 192.168.1.0/24 ! -d 192.168.1.0/24 -j MASQUERADE
+COMMIT
+
+Edit sysctrl.conf
+	sudo vim /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+Reload changes
+	sysctl -p
+
+Restart the firewall
+	systemctl restart ufw
+
+Make sure port 80 and 443 is allowed,
+otherwise ufw will block the requests that are redirected to internal 192.168.1.100:{80,443}:
+	sudo ufw allow proto tcp from any to 202.54.1.1 port 80
+	sudo ufw allow proto tcp from any to 202.54.1.1 port 443
+
+Verify
+	sudo ufw status
+	sudo ufw status verbose
+	sudo iptables -t nat -L -n -v

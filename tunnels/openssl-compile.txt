@@ -1,0 +1,55 @@
+https://wiki.openssl.org/index.php/Compilation_and_Installation#Retrieve_source_code
+https://github.com/koute/cargo-web/issues/51
+	apt install libssl-dev
+Download tar balls
+https://www.openssl.org/source/
+	wget https://www.openssl.org/source/openssl-1.1.1c.tar.gz
+	wget https://www.openssl.org/source/openssl-1.1.1c.tar.gz.sha256
+	wget https://www.openssl.org/source/openssl-1.1.1c.tar.gz.asc
+	wget https://www.openssl.org/source/openssl-1.1.1c.tar.gz.sha1
+	gpg --verify openssl-1.1.1c.tar.gz.asc
+	cat openssl-1.1.1c.tar.gz.sha256
+	sha256sum openssl-1.1.1c.tar.gz
+	cat openssl-1.1.1c.tar.gz.sha1
+	sha1sum openssl-1.1.1c.tar.gz
+Compile
+	tar xfv openssl-1.1.1c.tar.gz
+	cd openssl-1.1.1c
+	./config --prefix=/opt/openssl --openssldir=/opt/openssl enable-ec_nistp_64_gcc_128
+	make
+	make install
+
+Compile other software
+https://stackoverflow.com/questions/30330835/openssl-headers-missing-when-building-openssh
+	cd ..
+	tar zxvf openssh-6.7p1.tar.gz
+	cd openssh-6.7p1
+	LD_LIBRARY_PATH=/tmp/ssh/lib ./configure --with-ssl-dir=/opt/openssl --prefix=/tmp/ssh
+or	./config --prefix=/tmp/ssh shared
+
+Cross compile
+https://arstechnica.com/civis/viewtopic.php?t=343243
+https://wiki.openssl.org/index.php/Android
+	sudo apt install gcc-arm-linux-gnueabi
+	./config shared --target arm-linux --host arm-linux no-ssl2 no-ssl3 no-comp no-hw no-engine --openssldir=/opt/openssl-arm --cross-compile-prefix=arm-linux-gnueabi- 
+	./config arm-linux no-ssl2 no-ssl3 no-comp no-hw no-engine --openssldir=/opt/openssl-arm --cross-compile-prefix=arm-linux-gnueabi- 
+	./config --openssldir=/opt/openssl-arm --cross-compile-prefix=arm-linux-gnueabi-
+	make install
+
+https://stackoverflow.com/questions/15539062/cross-compiling-of-openssl-for-linux-arm-v5te-linux-gnueabi-toolchain	
+	./Configure linux-generic32 shared  -DL_ENDIAN --prefix=/opt/openssl-arm --openssldir=/opt/openssl-arm --cross-compile-prefix=arm-linux-gnueabi- 
+	./Configure linux-generic32 shared  -DL_ENDIAN --prefix=/opt/openssl-arm --openssldir=/opt/openssl-arm
+x	make CC=arm-v4t-linux-gnueabi-gcc RANLIB=arm-v4t-linux-gnueabi-ranlib LD=arm-v4t-linux-gnueabi-ld MAKEDEPPROG=arm-v4t-linux-gnueabi-gcc PROCESSOR=ARM
+	make CC=arm-linux-gnueabi-gcc RANLIB=arm-linux-gnueabi-ranlib LD=arm-linux-gnueabi-ld MAKEDEPPROG=arm-linux-gnueabi-gcc PROCESSOR=ARM
+	make CC=arm-linux-gnueabi-gcc AR="arm-linux-gnueabi-ar r" RANLIB=arm-linux-gnueabi-ranlib LD=arm-linux-gnueabi-ld MAKEDEPPROG=arm-linux-gnueabi-gcc PROCESSOR=ARM
+
+https://stackoverflow.com/questions/11841919/cross-compile-openssh-for-arm
+	export cross=arm-linux-gnueabi-
+	cd openssl-1.0.1c
+	./Configure dist --prefix=/tmp/ssh/openssl
+	make CC="${cross}gcc" AR="${cross}ar r" RANLIB="${cross}ranlib"
+	make install
+
+Compile other software
+https://wiki.openssl.org/index.php/Android
+	arm-linux-androideabi-gcc -I /usr/local/ssl/include my_prog.c -o my_prog.exe -L /usr/local/ssl/lib -lssl -lcrypto

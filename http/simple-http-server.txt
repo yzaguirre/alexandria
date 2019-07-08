@@ -4,3 +4,18 @@ https://github.com/TheWaWaR/simple-http-server/
 Termux install
 https://github.com/termux/termux-packages/issues/2847
 	cargo install simple-http-server
+
+Compile simple-http-server
+see ~/rust/rust.txt
+
+For armv6 (Raspberry Pi ARM 6)
+	vim ~/.cargo/config
+[target.arm-unknown-linux-gnueabi]
+linker = "arm-linux-gnueabi-gcc"
+
+	apt install libssl-dev
+	git clone https://github.com/TheWaWaR/simple-http-server.git
+	cd simple-http-server
+	git checkout 108275b
+	PKG_CONFIG_ALLOW_CROSS=1 cargo build --target=arm-unknown-linux-gnueabi
+	scp target/arm-unknown-linux-gnueabi/debug/simple-http-server pi:bin
