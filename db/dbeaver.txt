@@ -1,20 +1,20 @@
 https://github.com/dbeaver/dbeaver
 https://dbeaver.io/
 https://news.ycombinator.com/item?id=18935138
-	wget https://github.com/dbeaver/dbeaver/releases/download/6.0.5/dbeaver-ce_6.0.5_amd64.deb
+	wget https://github.com/dbeaver/dbeaver/releases/download/6.1.2/dbeaver-ce_6.1.2_amd64.deb
 	
-	wget https://dbeaver.io/files/6.0.5/dbeaver-ce_6.0.5_amd64.deb
-	wget https://dbeaver.io/files/6.0.5/checksum/dbeaver-ce_6.0.5_amd64.deb.sha256
-	wget https://dbeaver.io/files/6.0.5/checksum/dbeaver-ce_6.0.5_amd64.deb.sha1
-	wget https://dbeaver.io/files/6.0.5/checksum/dbeaver-ce_6.0.5_amd64.deb.md5
+	wget https://dbeaver.io/files/6.1.2/dbeaver-ce_6.1.2_amd64.deb
+	wget https://dbeaver.io/files/6.1.2/checksum/dbeaver-ce_6.1.2_amd64.deb.sha256
+	wget https://dbeaver.io/files/6.1.2/checksum/dbeaver-ce_6.1.2_amd64.deb.sha1
+	wget https://dbeaver.io/files/6.1.2/checksum/dbeaver-ce_6.1.2_amd64.deb.md5
 	
-	sha256sum dbeaver-ce_6.0.5_amd64.deb
-	cat dbeaver-ce_6.0.5_amd64.deb.sha256
-	sha1sum dbeaver-ce_6.0.5_amd64.deb
-	cat dbeaver-ce_6.0.5_amd64.deb.sha1
-	md5sum dbeaver-ce_6.0.5_amd64.deb
-	cat dbeaver-ce_6.0.5_amd64.deb.md5
-	dpkg -i dbeaver-ce_6.0.5_amd64.deb
+	sha256sum dbeaver-ce_6.1.2_amd64.deb
+	cat dbeaver-ce_6.1.2_amd64.deb.sha256
+	sha1sum dbeaver-ce_6.1.2_amd64.deb
+	cat dbeaver-ce_6.1.2_amd64.deb.sha1
+	md5sum dbeaver-ce_6.1.2_amd64.deb
+	cat dbeaver-ce_6.1.2_amd64.deb.md5
+	dpkg -i dbeaver-ce_6.1.2_amd64.deb
 Line numbers
 https://stackoverflow.com/questions/45236346/the-line-number-on-the-sql-editor-in-dbeaver
 Window / Preferences / General / Editors / Text Editors
