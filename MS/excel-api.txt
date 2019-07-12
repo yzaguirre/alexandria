@@ -1,0 +1,7 @@
+https://thecodebuzz.com/read-excel-file-in-dotnet-core-2-1/
+https://docs.microsoft.com/en-us/office/open-xml/how-to-open-a-spreadsheet-document-from-a-stream
+https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheets?view=openxml-2.8.1
+	dotnet add package Open-XML-SDK
+Once you install this NuGet package,
+you get full API support on Reading, Writing of Excel (.xlsx), Word (.doc) or Powerpoint(.ppt) files.
+

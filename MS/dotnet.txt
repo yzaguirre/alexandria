@@ -36,6 +36,7 @@ https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings
 https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net-core-via-pocos#43512837
 	dotnet add package System.Configuration.ConfigurationManager
 	dotnet add package Google.Apis.Gmail.v1
+	dotnet add package Open-XML-SDK
 SQL Connection
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-string-builders
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/establishing-the-connection
