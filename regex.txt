@@ -1,3 +1,5 @@
+https://twitter.com/brendangregg/status/1149780563005280256
+A regular expression that backtracked enormously and exhausted CPU
 https://www.regular-expressions.info
 https://regex101.com/
 https://unix.stackexchange.com/questions/26284/how-can-i-use-sed-to-replace-a-multi-line-string#26290
