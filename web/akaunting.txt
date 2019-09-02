@@ -1,0 +1,12 @@
+https://akaunting.com/
+https://github.com/akaunting/akaunting
+	mkdir /var/www/akaunting
+	cd /var/www/
+	wget https://github.com/akaunting/akaunting/releases/download/1.3.17/Akaunting_1.3.17-Stable.zip
+	unzip Akaunting_1.3.17-Stable.zip -d akaunting
+	chown -R www-data:www-data akaunting
+Create database
+	mysql -u root -p
+	CREATE DATABASE akaunting;
+	GRANT ALL ON akaunting.* TO akaunting@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;

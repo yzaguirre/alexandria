@@ -1,0 +1,185 @@
+Smartcards
+https://www.reddit.com/r/homelab/comments/cuefc1/anyone_using_smartcards_in_their_lab_for_pkipiv/
+
+https://www.twilio.com/blog/a-http-headers-for-the-responsible-developer
+https://news.ycombinator.com/item?id=19856419
+
+InfoSec InfoGraphics
+https://twitter.com/Guillaume_Lpl/status/1129792625555517445
+
+https://alpinelinux.org/posts/Alpine-3.7.0-released.html
+
+https://emailselgoogsefense.fsf.org/en/workshops.html
+http://training.gbdirect.co.uk/courses/ethical_hacking/email_privacy_encryption_and_security.html
+http://comments.gmane.org/gmane.comp.encryption.gpg.user/41144
+
+adblocking
+https://news.ycombinator.com/item?id=15786887
+https://news.ycombinator.com/item?id=11321528
+http://thankyouforadblocking.com/
+
+git commits https://news.ycombinator.com/item?id=11049993
+
+Security practices
+https://news.ycombinator.com/item?id=11021633
+
+http://tcij.org/resources/handbooks/infosec
+signal
+https://diasp.eu/posts/3892694
+
+http://viapopuli.com/what-is-net-neutrality-and-why-is-it-important-for-a-free-internet-simplified-version
+
+https://www.priv.gc.ca/index_e.asp
+Upload fotos
+https://diasp.eu/posts/3195927
+You shouldn't upload your private photos on a unknown proprietary server
+
+[Standards] OX
+http://mail.jabber.org/pipermail/standards/2016-January/030755.html
+https://news.ycombinator.com/item?id=10857537
+
+Privacy and PGP history
+http://www.techrepublic.com/article/defending-the-last-missing-pixels-phil-zimmermann/
+
+Tutanota free and open source
+https://tutanota.de/blog/posts/open-source-tutanota
+
+https://www.yubico.com/products/yubikey-hardware/yubikey-2/
+https://www.facebook.com/notes/protecting-the-graph/securing-email-communications-from-facebook/1611941762379302
+https://news.ycombinator.com/item?id=9637649
+FB: They encrypt with your key
+https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237
+
+http://www.vitavonni.de/blog/201503/2015031201-the-sad-state-of-sysadmin-in-the-age-of-containers.html
+https://www.fsf.org/campaigns/surveillance/?
+see comm/email.txt
+http://www.datamation.com/open-source/hardening-ubuntu-security.html
+http://serverfault.com/questions/11659/what-steps-do-you-take-to-secure-a-debian-server
+DDoS
+https://news.ycombinator.com/item?id=9233491
+cloudflare
+Incapsula
+GigENet
+Blacklotus
+
+Secure web app requirements
+https://docs.moodle.org/dev/Security#Secure_web_app_requirements
+https://diasp.eu/posts/3028624
+https://iridiumbrowser.de/
+
+https://plugunplug.net/
+Crypto no compromised
+http://www.nationmultimedia.com/breakingnews/NSA-cant-crack-common-encryption-software-top-hack-30251390.html
+
+random password generator
+http://www.redeszone.net/2015/02/17/qey-un-generador-cuantico-de-contrasenas-aleatorias/
+
+Password hashing
+https://blog.lastpass.com/es/2015/06/lastpass-security-notice.html/
+hash both the username and master password on the user's computer with 5,000 rounds of PBKDF2-SHA256, a password strengthening algorithm. That creates a key, on which we perform another round of hashing, to generate the master password authentication hash. 
+
+PEDDS use of sha1
+http://www.dot.state.fl.us/ecso/downloads/software/PEDDS/pedds.shtm
+http://www.dot.state.fl.us/ecso/downloads/software/PEDDS/Documents/IntroductionToPEDDS.pdf
+http://www.dot.state.fl.us/ecso/downloads/presentations/Files/PEDDSDESTIN.pdf
+
+https://www.owasp.org/index.php/HTML5_Security_Cheat_Sheet
+
+TLS
+http://blog.ricardomacas.com/index.php?controller=post&action=view&id_post=4
+https://freakattack.com/
+https://mozilla.github.io/server-side-tls/ssl-config-generator/
+https://wiki.mozilla.org/Security/Server_Side_TLS#Recommended_configurations
+http://blog.commando.io/the-perfect-nginx-ssl-configuration/
+https://tools.keycdn.com/freak
+http://blog.adityapatawari.com/2015/03/how-to-check-for-ssl-freak-vulnerability.html
+
+https://certsimple.com/blog/openssl-csr-command
+https://news.ycombinator.com/item?id=9367298
+
+sites
+https://www.codeandsec.com
+https://minilock.io/
+http://blog.spiderlabs.com
+https://www.sans.org/
+http://perimetergrid.com
+http://www.elladodelmal.com/
+http://blog.elevenpaths.com
+http://research.sensepost.com/
+http://www.secureworks.com/
+http://www.irongeek.com/browserinfo.php
+http://www.spiegel.de/
+https://www.grc.com/securitynow.htm
+http://www.poul.org/
+http://nelenkov.blogspot.com/
+www.ere-security.ca
+Use SHA-256 and SHA-3
+allan jude recommends SHA-512
+Check out encryption/tunnels.txt
+Program Rules - Application Security - Google
+https://www.google.com/about/appsecurity/reward-program/
+http://ipinfo.io/
+https://news.ycombinator.com/item?id=7239333
+https://freegeoip.net/
+http://ip-api.com/
+http://www.moanmyip.com/
+http://www.moanmyos.com/
+
+https://prism-break.org/#es
+
+https://play.google.com/store/apps/details?id=org.telegram.messenger
+
+Polls
+Dudle
+
+share text
+https://www.protectedtext.com/
+https://cryptobin.org/
+
+Plugins
+https://www.eff.org/https-everywhere
+http://noscript.net/
+https://adblockplus.org/es/chrome
+https://addons.mozilla.org/en-us/firefox/addon/adblock-edge/
+http://www.ghostery.com/
+https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/
+https://addons.mozilla.org/en-US/firefox/addon/bluhell-firewall/
+http://www.mailvelope.com/ uses google analytics... can be trusted?
+https://disconnect.me/disconnect amercan company
+https://disconnect.me/tools
+
+Search
+https://duckduckgo.com/
+https://startpage.com/
+https://ixquick.de/
+
+https://news.ycombinator.com/item?id=6913456
+ It's called TextSecure, and it was written by Moxie Marlinspoke and several other big-name cryptographers: https://whispersystems.org/
+... and it's open source: https://github.com/WhisperSystems/TextSecure/
+... and they don't try to roll their own crypto: https://github.com/WhisperSystems/TextSecure/wiki/ProtocolV2
+https://github.com/vysheng/tg
+
+https://whispersystems.org/
+
+VPN
+https://btguard.com/ bitcoin
+http://torguard.net/ bitcoin
+social vpn 
+http://new.ipop-project.org/socialvpn
+avahi http://librevpn.org.ar/
+
+bloquear desde hosts
+http://www.taringa.net/posts/linux/17451282/Bloquear-Publicidad-desde-la-terminal---Navegacion-web.html
+http://www.sendanonymousemail.net/
+https://www.anonymousspeech.com/
+
+voip
+http://www.kamailio.org/w/
+asterisk
+
+Taking care of metadata
+mat
+https://mat.boum.org/
+
+https://news.ycombinator.com/item?id=7235634
+https://keybase.io/

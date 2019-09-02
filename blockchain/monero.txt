@@ -1,3 +1,6 @@
 https://web.getmonero.org/
 mymonero.com
 https://github.com/mymonero/mymonero-app-js/releases
+
+User files in
+~/.config/MyMonero

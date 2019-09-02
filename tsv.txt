@@ -1,0 +1,10 @@
+https://github.com/eBay/tsv-utils
+https://news.ycombinator.com/item?id=20848581
+
+https://github.com/BurntSushi/xsv
+https://github.com/dinedal/textql
+https://github.com/n3mo/data-science
+https://stedolan.github.io/jq/
+https://gitlab.redox-os.org/redox-os/parallel
+https://github.com/willghatch/racket-rash
+https://visidata.org/
