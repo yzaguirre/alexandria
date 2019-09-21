@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/47006906/developing-for-ios-device-in-windows-environment-with-flutter
+https://codemagic.io/

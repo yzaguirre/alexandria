@@ -1,4 +1,7 @@
 https://code.visualstudio.com/
+Install folder at
+C:\Users\Rlemus\AppData\Local\Programs\Microsoft VS Code
+
 https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run
 https://github.com/Microsoft/vscode/wiki/Cross-Compiling-for-Debian-Based-Linux
 See ~/js/yarn.txt

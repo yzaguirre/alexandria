@@ -1,0 +1,16 @@
+https://facebook.github.io/react-native/
+	npm install -g react-native-cli yarn
+	npx react-native init MyTestApp
+Edit .bash_profile or .bashrc
+	vim ~/.bash_profile
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+Create new project.
+	react-native init AwesomeProject
+Run project
+	cd AwesomeProject
+	react-native run-android

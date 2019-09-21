@@ -17,3 +17,6 @@ Add a file to the compile list
 https://stackoverflow.com/questions/14382974/how-can-i-add-a-new-file-to-csproj-file-without-visual-studio
 <Compile Include="{relative path to file}" />
 
+Compile with code documentation
+https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features
+	csc XMLsample.cs /doc:XMLsample.xml

@@ -7,3 +7,8 @@ Before I created a database then restored the back up file to my new empty datab
 Now I follow this:
 
 Right click on Databases > Restore Database > General : Device: [the path of back up file] ---> OK
+
+Dark theme
+https://theflyingmaverick.com/2018/02/14/how-to-enable-dark-theme-for-sql-server-management-studio/
+C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio
+ssms.pkgundef
