@@ -1,4 +1,7 @@
 https://github.com/TheWaWaR/simple-http-server/
+Windows
+	scoop install simple-http-server
+
 	simple-http-server -V
 	simple-http-server -i --nocache -up 80
 Termux install

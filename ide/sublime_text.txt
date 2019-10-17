@@ -112,6 +112,8 @@ Format: Javascript
 https://github.com/jdc0589/JsFormat
 https://stackoverflow.com/questions/12866964/sublime-text-2-auto-fix-indentation-for-javascript
 jsFormat
+prettier.io
+JsPrettier
 
 # Build systems
 http://sublimetext.info/docs/en/reference/build_systems.html

@@ -1,0 +1,59 @@
+https://github.com/codeskyblue/gohttpserver
+Windows
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_windows_amd64.zip
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_checksums.txt
+	sha256sum.exe --ignore-missing -c gohttpserver_1.0.5_checksums.txt
+	unzip gohttpserver_1.0.5_windows_amd64.zip -d ~/bin
+	cd !$
+	rm LICENSE README.md .ghs.yml
+Usage
+	gohttpserver -r ./ --port 8000 --upload
+	gohttpserver --help
+Enable upload
+	gohttpserver --upload
+Enable delete and Create folder
+	gohttpserver --delete
+Enable authentication
+	gohttpserver --auth-type http --auth-http username:password
+Add access rule by creating a .ghs.yml file under a sub-directory. An example:
+---
+upload: false
+delete: false
+users:
+- email: "codeskyblue@codeskyblue.com"
+  delete: true
+  upload: true
+  token: 4567gf8asydhf293r23r
+
+	vim .ghs.yml
+upload: true
+delete: false
+
+	gohttpserver -r code/ --port 80 --upload --delete --title "Casa de David" --theme="green"
+
+	vim .ghs.yml
+upload: true
+delete: true
+port: 80
+title: "Casa de David"
+theme: "green"
+
+	gohttpserver --conf=.ghs.yml
+
+Most secure
+Create self-signed ECC keys (see ~/tls/tls.txt)
+	openssl ecparam -genkey -name secp256r1 > server.key
+	openssl req -new -key server.key -out server.csr
+	openssl x509 -req -days 7 -in server.csr -signkey server.key -out server.crt
+	gohttpserver -r code/ --addr="192.168.0.10:443" --port 443 --upload --delete --title "Casa de David" --theme="green" --auth-type http --auth-http david:123 --cert "server.crt" --key "server.key"
+	vim .ghs.yml
+upload: true
+delete: true
+addr: "192.168.0.10:443"
+port: 443
+title: "Casa de David"
+theme: "green"
+auth-type: "http"
+auth-http: "david:123"
+cert: "server.crt"
+key: "server.key"

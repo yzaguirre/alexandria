@@ -54,8 +54,11 @@ http://stackoverflow.com/questions/1252270/how-do-i-view-all-ignored-patterns-se
 	svn pg -R svn:ignore .
 http://stackoverflow.com/questions/216049/how-do-i-get-a-list-of-all-unversioned-files-from-svn
 	svn status --no-ignore
-ihttps://stackoverflow.com/questions/86049/how-do-i-ignore-files-in-subversion
+https://stackoverflow.com/questions/86049/how-do-i-ignore-files-in-subversion
 	svn propset svn:ignore ".git" .
+Ignore with a complete list inside a file
+	svn status | grep "^\?" | awk "{print \$2}" > ignoring.txt
+	svn propset svn:ignore -F ignoring.txt .
 https://stackoverflow.com/questions/8800578/how-to-colorize-diff-on-the-command-line
 	svn diff | view -
 

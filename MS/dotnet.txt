@@ -1,3 +1,6 @@
+.NET Core 3.0 Release
+https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/?utm_source=Direct
+
 https://www.microsoft.com/net/core
 Installation at C:\Program Files\dotnet
 	- .NET Core SDK 2.2.300
@@ -49,7 +52,7 @@ https://blog.jongallant.com/2017/09/dotnet-core-console-app-create-exe-instead-o
 	dotnet build
 Pass a runtime
 	dotnet build -r win10-x64
-Get your Exe at bin\Debug\netcoreapp2.2\win10-x64\myApp.exe
+Get your Exe at bin\Debug\netcoreapp3.0\win10-x64\myApp.exe
 	dotnet build -r win10-x64 --configuration Release
 	dotnet build -r win10-x64 -c Release
 For Windows 8.1 / Windows Server 2012 R2
@@ -57,9 +60,14 @@ For Windows 8.1 / Windows Server 2012 R2
 	dotnet build -r  --configuration Release
 Build for Ubuntu 18.10
 	dotnet build -c Release --runtime ubuntu.18.10-x64
-Your build is in bin/Release/netcoreapp2.2/ubuntu.18.10-x64/MyApp.dll
+Build for High Sierra 10.13.6
+	dotnet build -c Release --runtime osx.10.13-x64
 
-Get your Exe at bin\Release\netcoreapp2.2\win10-x64\myApp.exe
+Your build is in bin/Release/netcoreapp3.0/ubuntu.18.10-x64/MyApp.dll
+Build for linux ARM64 (since .NET Core 3.0)
+	dotnet build -c Release --runtime linux-arm64
+	
+Get your Exe at bin\Release\netcoreapp3.0\win10-x64\myApp.exe
 https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
 
 https://www.youtube.com/watch?v=18-NocobSQk

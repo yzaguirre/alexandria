@@ -1,3 +1,6 @@
+https://leimao.github.io/blog/Tmux-Tutorial/
+https://news.ycombinator.com/item?id=21055468
+
 https://github.com/tweekmonster/tmux2html
 https://github.com/rothgar/awesome-tmux
 https://leanpub.com/the-tao-of-tmux/read

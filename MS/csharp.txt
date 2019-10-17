@@ -30,3 +30,18 @@ https://www.c-sharpcorner.com/uploadfile/mahesh/working-with-datetime-using-C-Sh
 
 DateTime.Now.ToString("r")
 Sat, 22 Jun 2019 21:40:27 GMT
+
+Read environment variables
+https://stackoverflow.com/questions/185208/how-do-i-get-and-set-environment-variables-in-c
+System.Environment.GetEnvironmentVariable(variable [, Target])
+System.Environment.SetEnvironmentVariable(variable, value [, Target])
+
+Combine directories
+https://docs.microsoft.com/en-us/dotnet/api/system.io.path?view=netframework-4.8
+Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".myfilerc");
+
+Read from app.settings
+https://stackoverflow.com/questions/10864755/adding-and-reading-from-a-config-file
+using System.Configuration;
+ConfigurationManager.AppSettings["keyname"];
+

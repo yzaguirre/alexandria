@@ -1,3 +1,6 @@
+https://bitbucket.org/BitPusher16/dotfiles/raw/49a01d929dcaebcca68bbb1859b4ac1aea93b073/refs/git/git_examples.sh
+https://news.ycombinator.com/item?id=21189256
+
 https://www.digitalocean.com/community/tutorials/how-to-use-git-a-reference-guide
 https://github.com/k88hudson/git-flight-rules#exporting-a-repository-as-a-zip-file
 git contribution workflow

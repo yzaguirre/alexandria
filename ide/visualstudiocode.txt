@@ -48,3 +48,7 @@ If vscodium
 	cd $HOME/.config/VSCodium/User
 Marketplace
 https://marketplace.visualstudio.com/
+
+Debug ReactJS
+https://nealbuerger.com/2017/09/vscode-launch-create-react-app-and-chrome-with-launch-json/
+https://code.visualstudio.com/docs/nodejs/reactjs-tutorial#_debugging-react

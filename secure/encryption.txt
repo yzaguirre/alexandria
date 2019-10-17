@@ -1,3 +1,6 @@
+https://fangpenlin.com/posts/2019/10/07/elliptic-curve-cryptography-explained/
+https://news.ycombinator.com/item?id=21182982
+
 https://access.redhat.com/blogs/766093/posts/3050871
 https://math.berkeley.edu/~kpmann/encryption.pdf
 http://www.jupiterbroadcasting.com/91736/lets-encrypt-a-new-hope-las-396/

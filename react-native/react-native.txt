@@ -1,6 +1,51 @@
 https://facebook.github.io/react-native/
-	npm install -g react-native-cli yarn
-	npx react-native init MyTestApp
+Install xcode, nodejs, watchman
+For mack
+	brew update
+	brew install node
+	brew install watchman
+For new versions
+	brew upgrade node
+
+Install on Windows
+	npm install -g expo-cli
+	expo init --template blank --name AwesomeProject AwesomeProject
+	cd AwesomeProject
+	npm start
+or	expo start
+
+Share app
+https://www.reddit.com/r/reactnative/comments/die05b/sharing_app_in_development_with_client/
+Apple Testflight, Google Play Store Beta and Alpha releases.
+Do not bother with binaries to clients. Especially if they aren't very technical.
+https://medium.com/@jamischarles/easily-share-a-react-native-app-during-development-d40ac27af6ef
+Create an account at:
+https://expo.io/signup
+	export EXPO_CLI_PASSWORD=mypassword # somewhere, maybe .bashrc
+	expo-cli login -u user
+	cd project
+	expo-cli publish
+Share the link
+Any time you need to show another update, you can
+	exp publish
+again, and the same url will work.
+So simple, so useful to show your work in progress.
+
+Watchman on Linux
+https://codeyarns.com/2015/02/10/how-to-install-and-use-watchman/
+https://facebook.github.io/watchman/docs/install.html
+	git clone https://github.com/facebook/watchman.git
+	cd watchman
+Checkout the latest release
+	git checkout v4.6.0
+	./autogen.sh
+	./configure
+	make
+	sudo make install
+The log file can be found in /tmp/.watchman.yourusername.log
+
+Install the cli
+	npm install -g react-native-cli
 Edit .bash_profile or .bashrc
 	vim ~/.bash_profile
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -8,9 +53,17 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+	
+Start a new project
+x	npx react-native init MyTestApp
+	react-native init weekdays --version 0.31.0
 
-Create new project.
-	react-native init AwesomeProject
-Run project
-	cd AwesomeProject
+Running the emulator
+	cd weekdays
+	npm start
+
+Run for Android
 	react-native run-android
+Run for iOS
+	react-native run-ios
+or	xed -b ios

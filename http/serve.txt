@@ -1,0 +1,15 @@
+https://github.com/philippgille/serve
+Windows
+	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Windows_x64.zip
+	unzip serve_v0.3.2_Windows_x64.zip -d ~/bin
+Or use scoop.sh
+	scoop install serve
+Usage
+	serve -h
+	serve -p 80 -d code/
+HTTPS
+	serve -p 443 -s
+Authentication
+	serve -a "david:123"
+Most secure
+	serve -a "david:123" -p 443 -s

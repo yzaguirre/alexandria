@@ -1,0 +1,3 @@
+https://github.com/tobya/DocTo
+	cd ~/bin
+	wget https://github.com/tobya/DocTo/releases/download/V0.9.18/docto.exe

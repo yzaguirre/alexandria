@@ -1,2 +1,15 @@
 http://www.reactenlightenment.com/what-is-react.html
 http://courses.reactjsprogram.com/courses/reactjsfundamentals
+
+React Developer Tools web browser plugin
+
+prettier.io for vsc
+
+Using create-react-app
+	npm install -g create-react-app
+	create-react-app hello-react
+	cd hello-react
+	npm start
+
+Using react router
+	npm install -S react-router-dom

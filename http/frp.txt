@@ -1,0 +1,28 @@
+https://github.com/fatedier/frp
+Windows
+	scoop install frp
+Linux frpc
+	wget https://github.com/fatedier/frp/releases/download/v0.29.0/frp_0.29.0_linux_arm64.tar.gz
+	tar xf frp_0.29.0_linux_arm64.tar.gz
+	cd frp_0.29.0_linux_arm64
+
+Socks5 behind a http proxy. npm can use it.
+Set up server component
+	vim frps.ini
+[common]
+bind_port = 7000
+
+	frps -c frps.ini
+
+Set up client component
+	vim frpc.ini
+[common]
+server_addr = 127.0.0.1
+server_port = 7000
+
+[http_proxy]
+type = tcp
+remote_port = 8080
+plugin = http_proxy
+
+	frpc -c frpc.ini
