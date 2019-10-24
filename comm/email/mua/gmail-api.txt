@@ -26,6 +26,17 @@ Save an attachment
 https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/get
 
 Send messages
+
+
+
+
+
+
+
+
+
+
+
 https://developers.google.com/gmail/api/guides/sending
 https://developers.google.com/gmail/api/v1/reference/users/messages/send
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/classGoogle_1_1Apis_1_1Gmail_1_1v1_1_1Data_1_1Message.html
@@ -40,3 +51,5 @@ Message-ID: <1234@local.machine.example>
 
 This is a message just to say hello. So, "Hello". 
 
+https://www.reddit.com/r/todayilearned/comments/cmrmgr/til_liechtenstein_has_a_100_literacy_rate/
+https://www.reddit.com/r/todayilearned/

@@ -2,3 +2,5 @@ deeplearningbook.org
 https://www.youtube.com/watch?v=ad7SUyN5V7A
 
 https://github.com/lexfridman/mit-deep-learning
+
+https://www.reddit.com/r/learnprogramming/comments/bu6645/cornells_entire_machine_learning_class_cs_4780_is/
