@@ -1,0 +1,13 @@
+https://restic.net/
+https://github.com/restic/restic/
+Linux
+	wget https://github.com/restic/restic/releases/download/v0.9.5/restic_0.9.5_linux_amd64.bz2
+	wget https://github.com/restic/restic/releases/download/v0.9.5/SHA256SUMS
+	wget https://github.com/restic/restic/releases/download/v0.9.5/SHA256SUMS.asc
+	gpg --verify SHA256SUMS.asc SHA256SUMS
+	sha256sum --ignore-missing -c SHA256SUMS
+	bunzip2 -d restic_0.9.5_linux_amd64.bz2
+	chmod u+x restic_0.9.5_linux_amd64
+	mv restic_0.9.5_linux_amd64 /usr/local/bin/restic
+Windows
+	scoop install restic

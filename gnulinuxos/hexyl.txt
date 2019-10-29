@@ -1,0 +1,3 @@
+https://github.com/sharkdp/hexyl
+	wget https://github.com/sharkdp/hexyl/releases/download/v0.6.0/hexyl_0.6.0_amd64.deb
+	dpkg -i hexyl_0.6.0_amd64.deb

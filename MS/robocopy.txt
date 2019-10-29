@@ -1,0 +1,3 @@
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
+robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
+	robocopy files/ E: /e

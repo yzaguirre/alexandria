@@ -67,3 +67,12 @@ Run for Android
 Run for iOS
 	react-native run-ios
 or	xed -b ios
+
+Speed up the opening of android app
+https://blog.bam.tech/developer-news/how-to-speed-up-the-opening-of-your-application-react-native-on-android-using-turbo-modules
+
+Using tensorflow.js
+https://heartbeat.fritz.ai/image-classification-on-react-native-with-tensorflow-js-and-mobilenet-48a39185717c
+
+Enable hot-reload
+	adb shell input keyevent 82

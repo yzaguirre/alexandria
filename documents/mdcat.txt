@@ -1,0 +1,9 @@
+https://github.com/lunaryorn/mdcat
+Windows
+	wget https://github.com/lunaryorn/mdcat/releases/download/mdcat-0.13.0/mdcat-0.13.0-x86_64-pc-windows-msvc.zip
+	unzip mdcat-0.13.0-x86_64-pc-windows-msvc.zip
+	mv mdcat.exe ~/bin
+Linux
+	wget https://github.com/lunaryorn/mdcat/releases/download/mdcat-0.13.0/mdcat-0.13.0-x86_64-unknown-linux-musl.tar.gz
+	tar xf mdcat-0.13.0-x86_64-unknown-linux-musl.tar.gz
+	mv mdcat-0.13.0-x86_64-unknown-linux-musl/mdcat /usr/local/bin

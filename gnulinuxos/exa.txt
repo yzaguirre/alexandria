@@ -3,14 +3,14 @@ https://github.com/ogham/exa
 Package install
 	apt install exa
 Binary install
-	wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
-	wget https://github.com/ogham/exa/releases/download/v0.8.0/MD5SUMS
-	wget https://github.com/ogham/exa/releases/download/v0.8.0/SHA1SUMS
-	unzip exa-linux-x86_64-0.8.0.zip
-	sha1sums -c --ignore-missing exa-linux-x86_64
-	md5sums -c --ignore-missing exa-linux-x86_64
+	wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+	wget https://github.com/ogham/exa/releases/download/v0.9.0/MD5SUMS
+	wget https://github.com/ogham/exa/releases/download/v0.9.0/SHA1SUMS
+	unzip exa-linux-x86_64-0.9.0.zip
+	sha1sum -c --ignore-missing SHA1SUMS
+	md5sum -c --ignore-missing MD5SUMS
 Move binary to a PATH directory (~/bin, /usr/local/bin, other)
-	mv exa-linux-x86_64 ~/bin/exa
+	mv exa-linux-x86_64 /usr/local/bin/exa
 Useful alias
 	alias ll='exa -bghHlS'
 Other examples

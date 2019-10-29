@@ -1,0 +1,13 @@
+https://github.com/bootandy/dust
+	wget https://github.com/bootandy/dust/releases/download/v0.4.0.1/dust-v0.4.0.1-x86_64-unknown-linux-gnu.tar.gz
+	tar xfv dust-v0.4.0.1-x86_64-unknown-linux-gnu.tar.gz
+	chmod u+x dust
+	mv dust /usr/local/bin
+Usage:
+	dust <dir>
+	dust <dir>  <another_dir> <and_more>
+	dust -p <dir>  (full-path - does not shorten the path of the subdirectories)
+	dust -s <dir>  (apparent-size - shows the length of the file as opposed to the amount of disk space it uses)
+	dust -n 30  <dir>  (Shows 30 directories not 20)
+	dust -d 3  <dir>  (Shows 3 levels of subdirectories)
+	dust -r  <dir>  (Reverse order of output, with root at the lowest)
