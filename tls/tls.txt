@@ -1,5 +1,6 @@
 https://knowtechie.com/this-beautiful-website-illustrates-the-full-potential-of-a-tls-connection/
 https://tls.ulfheim.net/
+https://tls13.ulfheim.net/
 
 https://chris408.com/post/certificate-transparency-logs-and-how-they-are-a-gold-mine-to-bug-hunters/
 https://github.com/chris408/ct-exposer

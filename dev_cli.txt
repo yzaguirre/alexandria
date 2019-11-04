@@ -1,0 +1,8 @@
+https://github.com/xowap/dev-cli
+https://dev.to/xowap/dev-cli-0-2-0-33a2
+Install
+	pip install dev-cli
+Please note before using that you should put your API key in the DEV_API_KEY environment variable. If you prefer, when starting the program will also look for a .env file in the working directory.
+
+	python -m dev_cli publish ~/dev/dev-blog/test.md
+	python -m dev_cli publish -k title ~/dev/dev-blog/test.md

@@ -1,2 +1,6 @@
 https://hexchat.github.io
 https://hexchat.readthedocs.io/en/latest/addons.html
+
+Configuration in
+%HOME%/AppData/Roaming/HexChat
+$HOME/.config/hextchat

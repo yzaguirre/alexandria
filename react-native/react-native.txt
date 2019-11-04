@@ -63,6 +63,7 @@ Running the emulator
 	npm start
 
 Run for Android
+	npm start --clean-cache
 	react-native run-android
 Run for iOS
 	react-native run-ios
@@ -76,3 +77,8 @@ https://heartbeat.fritz.ai/image-classification-on-react-native-with-tensorflow-
 
 Enable hot-reload
 	adb shell input keyevent 82
+Video player
+	npm install --save react-native-video
+	react-native link react-native-video
+Unlink, if necesary
+	react-native link react-native-video

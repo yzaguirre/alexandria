@@ -1,3 +1,6 @@
+An Illustrated Guide to Some Useful Command Line Tools
+https://www.wezm.net/technical/2019/10/useful-command-line-tools/#chars
+
 For the Love of Pipes (jessfraz.com)
 https://news.ycombinator.com/item?id=18967249
 
