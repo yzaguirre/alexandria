@@ -1,0 +1,4 @@
+http://setosa.io/ev/markov-chains/
+
+https://0x0f0f0f.github.io/posts/2019/11/really-fast-markov-chains-in-~20-lines-of-sh-grep-cut-and-awk/
+https://news.ycombinator.com/item?id=21493761

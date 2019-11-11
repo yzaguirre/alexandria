@@ -1,3 +1,19 @@
+How Discord achieves native iOS performance with React Native
+https://news.ycombinator.com/item?id=21480493
+https://www.reddit.com/r/reactnative/comments/dr7l0y/best_youtube_channels_where_you_always_tend_to/
+Codedamn
+https://www.youtube.com/watch?v=mFbcTYgwlXo&list=PLYxzS__5yYQlGltx7Vx-VgFpfWS5HEMHO
+Kent C. Dodds
+https://www.youtube.com/user/kentdoddsfamily/videos
+Ben Awad
+https://www.youtube.com/user/99baddawg/videos
+Catalin Miron
+https://www.youtube.com/channel/UCTcH04SRuyedaSuuQVeAcdg/videos
+Unsure Programmer
+https://www.youtube.com/channel/UCiNWv52iO_OAdZ12kslG4Cg/videos
+fun fun function
+https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q
+
 https://facebook.github.io/react-native/
 Install xcode, nodejs, watchman
 For mack
@@ -68,6 +84,20 @@ Run for Android
 Run for iOS
 	react-native run-ios
 or	xed -b ios
+
+Error compiling in windows 10
+https://github.com/kmagiera/react-native-gesture-handler/issues/640
+	npm install --save-dev jetifier
+	npm I jetifier
+	npx jetify
+	vim node_modules/metro-config/src/defaults/blacklist.js
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+	npx react-native run-android
 
 Speed up the opening of android app
 https://blog.bam.tech/developer-news/how-to-speed-up-the-opening-of-your-application-react-native-on-android-using-turbo-modules

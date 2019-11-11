@@ -271,7 +271,7 @@ Clear view cache
 Simulate a login
 	auth()->loginUsingId(1);
 Lumen
-https://lumen.laravel.com/docs/5.4
+https://lumen.laravel.com/docs/6.x
 	composer global require "laravel/lumen-installer"
 	php -S localhost:8080 -t public/
 

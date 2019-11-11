@@ -10,6 +10,9 @@ Most packages
 Configuration file
 https://stackoverflow.com/questions/51542217/the-openssl-extension-is-required-for-ssl-tls-when-installed-composer-via-scoop#51542218
 	cd %HOMEPATH%\scoop\apps\php\current\cli
+https://stackoverflow.com/questions/35249620/the-openssl-extension-is-required-for-ssl-tls-protection
+extension_dir = "ext"
+extension=php_openssl.dll
 
 Choose a php version
 https://pehapkari.cz/blog/2017/03/27/multiple-php-versions-the-easy-way/

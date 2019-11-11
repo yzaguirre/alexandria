@@ -1,0 +1,10 @@
+https://github.com/crazycodeboy/react-native-splash-screen
+https://github.com/crazycodeboy/react-native-splash-screen/tree/master/examples/android/app/src/main/java/com/examples
+	npm i react-native-splash-screen --save
+ImageView
+https://developer.android.com/reference/android/widget/ImageView.html#attr_android:src
+https://stackoverflow.com/questions/2974862/changing-imageview-source
+https://abhiandroid.com/ui/imageview
+With URI
+http://www.java2s.com/Code/Android/UI/SetimageUriforImageView.htm
+https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android

@@ -7,11 +7,11 @@ https://help.github.com/articles/closing-issues-via-commit-messages/
 
 https://gogs.io/docs/installation
 https://github.com/gogits/gogs/releases
-	wget https://github.com/gogs/gogs/releases/download/v0.11.86/linux_amd64.tar.gz -O gogs_0.11.86_linux_amd64.tar.gz
-	wget https://dl.gogs.io/0.11.86/checksum_sha256.txt
+	wget https://github.com/gogs/gogs/releases/download/v0.11.91/linux_amd64.tar.gz -O gogs_0.11.91_linux_amd64.tar.gz
+	wget https://dl.gogs.io/0.11.91/checksum_sha256.txt
 	sha256sum -c --ignore-missing checksum_sha256.txt
 	mkdir -p /home/git/.ssh
-	tar xf gogs_0.11.86_linux_amd64.tar.gz -C /opt
+	tar xf gogs_0.11.91_linux_amd64.tar.gz -C /opt
 	
 Create User to run gogs
 	useradd -d /home/git --uid 1005 -s /bin/bash git
