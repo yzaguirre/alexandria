@@ -1,1 +1,3 @@
 https://lumen.laravel.com/docs/5.5/routing
+	composer global require "laravel/lumen-installer"
+	php -S localhost:8080 -t public/

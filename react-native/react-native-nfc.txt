@@ -1,0 +1,2 @@
+https://www.reddit.com/r/reactnative/comments/duetyv/reading_and_writing_nfc_in_react_native/
+https://medium.com/better-programming/reading-and-writing-nfc-in-react-native-d504a656eb78

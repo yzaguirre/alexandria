@@ -8,8 +8,13 @@ prettier.io for vsc
 Using create-react-app
 	npm install -g create-react-app
 	create-react-app hello-react
+or	npx create-react-app hello-react
 	cd hello-react
 	npm start
+or	yarn start
 
 Using react router
 	npm install -S react-router-dom
+
+Redux
+	npm install -S redux react-redux redux-thunk
