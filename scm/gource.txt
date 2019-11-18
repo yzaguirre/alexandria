@@ -1,0 +1,7 @@
+https://gource.io/
+https://github.com/acaudwell/Gource
+https://news.ycombinator.com/item?id=21558013
+Windows
+	scoop install gource
+Change directory to a git controlled project
+	gource

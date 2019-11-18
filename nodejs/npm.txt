@@ -18,6 +18,11 @@ show modules
 Add dependency
 http://stackoverflow.com/questions/16564746/how-to-add-browserify-as-a-dependency-of-your-node-js-application
 	npm install --save browserify
+Install from github
+https://stackoverflow.com/questions/17509669/how-to-install-an-npm-package-from-github-directly#17509764
+	npm install --save git+https://git@github.com/visionmedia/express.git
+	npm install --save git+https://github.com/visionmedia/express.git
+	npm install git+https://github.com/user/repo.git\#branch
 This not only installs browserify for you, but also adds it as a dependency to your dependencies in your package.json file.
 Remove dependency
 	npm ls

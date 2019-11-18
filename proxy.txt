@@ -47,6 +47,7 @@ http://proxychains.sourceforge.net/howto.html
 
 Chromium proxy
 	chromium --proxy-server="socks5://foobar:66"
+	chromium --proxy-server="http://localhost:8080"
 Web proxy
 https://github.com/Kickball/awesome-selfhosted#proxy
 miniProxy

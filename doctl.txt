@@ -1,0 +1,10 @@
+https://github.com/digitalocean/doctl
+https://www.digitalocean.com/community/tutorials/how-to-use-doctl-the-official-digitalocean-command-line-client
+Windows
+	scoop install doctl
+Linux
+	wget https://github.com/digitalocean/doctl/releases/download/v1.33.1/doctl-1.33.1-linux-amd64.tar.gz
+	wget https://github.com/digitalocean/doctl/releases/download/v1.33.1/doctl-1.33.1-checksums.sha256
+	sha256sum -c --ignore-missing doctl-1.33.1-checksums.sha256
+	tar xfv doctl-1.33.1-linux-amd64.tar.gz
+	mv doctl /usr/local/bin

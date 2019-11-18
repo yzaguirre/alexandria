@@ -1,0 +1,37 @@
+Gitea 1.10.0 Released
+https://news.ycombinator.com/item?id=21537454
+
+https://github.com/go-gitea/gitea
+https://docs.gitea.io/en-us/upgrade-from-gogs/
+	gogs dump
+	wget https://dl.gitea.io/gitea/1.10.0/gitea-1.10.0-linux-amd64.sha256
+	wget https://dl.gitea.io/gitea/1.10.0/gitea-1.10.0-linux-amd64
+	sha256sum -c --ignore-missing gitea-1.10.0-linux-amd64.sha256
+	mkdir gitea
+	mv gitea-1.10.0-linux-amd64 gitea/gitea
+	cp gogs/{data,custom,attachments,gogs.key} gitea -r
+gitignore, label, license, locale, readme goes in gitea/custom/options
+	chown git:git -R /opt/gitea
+	gitea web
+Enter Gitea admin panel on the UI, run Rewrite '.ssh/authorized_keys'
+file (caution: non-Gitea keys will be lost) and Rewrite all update hook of repositories (needed when custom config path is changed). 
+
+RPi3
+	wget https://dl.gitea.io/gitea/1.10.0/gitea-1.10.0-linux-arm-6
+	wget https://dl.gitea.io/gitea/1.10.0/gitea-1.10.0-linux-arm-6.sha256
+	sha256sum -c gitea-1.10.0-linux-arm-6.sha256
+	mkdir -p /home/git/.ssh
+	mkdir /opt/gitea
+	mv gitea-1.10.0-linux-arm-6 /opt/gitea/gitea
+	useradd -d /home/git --uid 1005 -s /bin/bash git
+	chown git:git -R /home/git
+	chown git:git -R /opt/gitea
+	su gitea
+	cd /opt/gitea
+	./gitea web
+
+DB
+	$ mysql -u root -p
+	CREATE DATABASE gitea;
+	GRANT ALL ON gitea.* TO gitea@'localhost' IDENTIFIED BY 'gitea';
+	FLUSH PRIVILEGES;

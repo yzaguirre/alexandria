@@ -1,0 +1,2 @@
+https://github.com/react-native-community/react-native-viewpager
+https://www.reddit.com/r/reactnative/comments/dw6y6d/how_do_i_implement_this_navigation_with_react/

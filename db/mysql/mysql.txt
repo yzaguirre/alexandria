@@ -1,3 +1,6 @@
+SQL Tutorial 2019
+https://www.youtube.com/watch?v=XqIk2PwP0To
+
 https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
 https://stackoverflow.com/questions/213543/how-can-i-check-mysql-engine-type-for-a-specific-table
 	SELECT TABLE_NAME, ENGINE FROM information_schema.TABLES where TABLE_SCHEMA = 'dbname'

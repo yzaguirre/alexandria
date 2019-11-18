@@ -1,0 +1,12 @@
+https://github.com/dennisguse/OpenTracks
+Tracking: track your sport and outdoor activities
+Photos and Markers: mark interesting locations while tracking (also with photos)
+Heart rate: supports bluetooth LE sensors
+Export data: export tracks either as KMZ (incl. photos), KML or GPX
+No Internet access: Internet is not used
+Voice annoucements
+No advertising
+Privacy:
+	does not contain any in-app analytics
+	does not have Google Play Services
+	has no cloud integration

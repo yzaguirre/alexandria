@@ -8,3 +8,20 @@ https://docs.microsoft.com/es-es/dotnet/api/overview/azure/virtualmachines?view=
 Blobs
 https://docs.microsoft.com/es-es/azure/storage/blobs/storage-quickstart-blobs-dotnet?view=azure-dotnet&tabs=windows
 https://azure.microsoft.com/en-us/documentation/articles/storage-encrypt-decrypt-blobs-key-vault/
+
+https://aka.ms/cli
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
+Windows
+	scoop install azure-cli
+	az --version
+Config at ~/.azure
+Login
+	az login
+Listing the available subscriptions in a table
+	az account list -o table
+Setting a subscription to be active
+	az account set -s "subscription"
+Changing configuration options
+	az configure
+Listing all resource groups
+	az group list

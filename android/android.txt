@@ -40,3 +40,18 @@ https://developer.android.com/training/articles/security-config.html
 
 Fragments
 https://developer.android.com/guide/components/fragments.html
+
+Load an image through http get request (URL)
+https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android
+https://stackoverflow.com/questions/6343166/how-do-i-fix-android-os-networkonmainthreadexception#6343299
+
+Async task
+http://www.sgoliver.net/blog/tareas-en-segundo-plano-en-android-i-thread-y-asynctask/
+
+Get Resource Id
+https://stackoverflow.com/questions/3042961/how-do-i-get-the-resource-id-of-an-image-if-i-know-its-name
+https://stackoverflow.com/questions/17203454/how-to-use-getresource-getidentifier-to-get-layout
+	String mDrawableName = "myappicon";
+	int resID = getResources().getIdentifier(mDrawableName , "drawable", getPackageName());
+or
+	myDialog.getContext().getResources().getIdentifier("myImageView", "id", activity.getPackageName())

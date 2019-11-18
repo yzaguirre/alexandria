@@ -1,0 +1,26 @@
+Chatwoot is a customer support tool for instant messaging channels which
+can help businesses provide exceptional customer support through their
+websites or social media channels.
+
+https://www.chatwoot.com/docs
+https://github.com/chatwoot/chatwoot
+https://news.ycombinator.com/item?id=21559139
+Node version >=10.x
+	git clone https://github.com/chatwoot/chatwoot.git
+	cd chatwoot
+	git checkout v0.1.0
+	yarn install
+Install ruby dependencies
+	bundle
+Copy configurations
+	./configure
+Run db migrations
+	bundle exec rake db:create
+	bundle exec rake db:reset
+Fireup the server
+	foreman start -f Procfile.dev
+
+Login with credentials
+http://localhost:3000
+user name: john@acme.inc
+password: 123456
