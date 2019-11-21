@@ -1,3 +1,4 @@
+csvkit
 https://csvkit.readthedocs.io/en/1.0.3/
 	sudo -H pip3 install csvkit
 Convert Excel to CSV:
@@ -8,3 +9,10 @@ Print column names:
 	csvcut -n data.csv
 View csv files
 	csvlook examples/testfixed_converted.csv
+
+csvtosql
+http://csvtosql.sourceforge.net/
+
+xsv
+https://github.com/BurntSushi/xsv
+	scoop install xsv
