@@ -112,3 +112,9 @@ Video player
 	react-native link react-native-video
 Unlink, if necesary
 	react-native link react-native-video
+
+fetch permissions
+https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
+
+redux-persist
+	npm install --save redux-persist @react-native-community/async-storage

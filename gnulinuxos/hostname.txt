@@ -1,0 +1,22 @@
+http://www.cyberciti.biz/faq/linux-change-hostname/
+http://www.ducea.com/2006/08/07/how-to-change-the-hostname-of-a-linux-system/
+
+You need to update two files:
+
+1.) Linux Distribution specific file. Edit appropriate file as per your distribution as follows.
+Debian/Ubuntu:
+	vim /etc/hostname
+OpenSuse:
+	vim /etc/HOSTNAME
+Centos
+	vim /etc/sysconfig/network
+	hostname server2.nixcraft.com
+	hostname
+2.)
+	vim /etc/hosts
+	
+127.0.1.1	osuse64
+
+3.)
+	hostname osuse64
+	hostname

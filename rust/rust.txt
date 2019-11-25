@@ -1,3 +1,6 @@
+https://rust-lang-nursery.github.io/cli-wg/
+https://news.ycombinator.com/item?id=21611379
+
 https://rustup.rs/
 https://ayende.com/blog/185665-A/writing-my-network-protocol-in-rust
 https://zsiciarz.github.io/24daysofrust/book/vol1/day20.html
