@@ -62,5 +62,8 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c03", MODE="0600", 
 Change storage unit
 	adb shell pm set-install-location 1
 Remove apps
+https://stackoverflow.com/questions/25927124/android-studio-how-to-uninstall-apk-or-execute-adb-command-automatically-bef
+https://stackoverflow.com/questions/17556750/how-to-uninstall-an-android-app-from-command-line-on-the-device
 https://news.ycombinator.com/item?id=18864220
+	pm uninstall --user 0 <name of package>
 	pm uninstall -k --user 0 <name of package>

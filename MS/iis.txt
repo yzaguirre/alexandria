@@ -3,3 +3,9 @@ http://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-t
 C:\Users\David\Documents\IISExpress\config
 For example, the following command runs the specified application, "myapp," on http://localhost:9090/ by using .NET 2.0:
 	iisexpress /path:c:\myapp\ /port:9090 /clr:v2.0
+
+https://stackoverflow.com/questions/3313616/how-to-enable-external-request-in-iis-express
+https://docs.microsoft.com/en-us/iis/extensions/using-iis-express/handling-url-binding-failures-in-iis-express
+https://docs.microsoft.com/en-us/iis/extensions/using-iis-express/running-iis-express-without-administrative-privileges
+	netsh http add urlacl url=http://192.168.0.14:8080/ user=everyone
+	netsh http delete urlacl url=http://192.168.0.14:8080/

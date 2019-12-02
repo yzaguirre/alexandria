@@ -31,7 +31,11 @@ https://wiki.termux.com/wiki/Termux:Widget
 	mkdir -p $HOME/.shortcuts
 SSH
 https://wiki.termux.com/wiki/Remote_Access#OpenSSH
+	vim $PREFIX/etc/ssh/sshd_config
+PrintMotd no
+PasswordAuthentication yes
+PubkeyAcceptedKeyTypes +ssh-dss
+Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
+	passwd
 	sshd
 	ssh -p 8022 user@address
-Config file
-	vim $PREFIX/etc/ssh/sshd_config

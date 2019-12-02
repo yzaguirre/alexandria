@@ -116,5 +116,14 @@ Unlink, if necesary
 fetch permissions
 https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
 
+https://github.com/rt2zz/redux-persist
+https://github.com/react-native-community/async-storage
 redux-persist
 	npm install --save redux-persist @react-native-community/async-storage
+https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
+https://stackoverflow.com/questions/53012355/how-to-delay-splashscreen-of-redux-persist-gate
+
+WebView
+https://github.com/react-native-community/react-native-webview
+https://facebook.github.io/react-native/docs/webview.html
+	npm install --save react-native-webview

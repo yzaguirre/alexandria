@@ -1,0 +1,14 @@
+https://aboutreact.com/react-native-tab/
+	npm install react-navigation --save
+	npm install react-native-gesture-handler --save
+	npm install react-navigation-tabs --save
+	npm install react-native-reanimated --save
+	npm install react-navigation-stack --save
+https://github.com/react-native-community/react-native-tab-view
+	npm install --save react-native-tab-view
+or	yarn add react-native-tab-view
+	
+	npm install --save react-native-gesture-handler react-native-reanimated
+or	yarn add --save react-native-gesture-handler react-native-reanimated
+
+https://reactnavigation.org/docs/en/material-top-tab-navigator.html

@@ -3,6 +3,7 @@ https://www.tecmint.com/httpie-http-client-for-linux/
 http://radek.io/2015/10/20/httpie/
 https://news.ycombinator.com/item?id=10418882
 https://github.com/jakubroztocil/httpie
+https://news.ycombinator.com/item?id=21674729
 	sudo -H pip3 install httpie
 Usage
 	http [OPTS] [METHOD] URL [REQUEST_ITEMS...]
