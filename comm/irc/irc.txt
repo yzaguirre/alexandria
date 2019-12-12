@@ -1,0 +1,61 @@
+irc.mozilla.org
+6697
+https://wiki.mozilla.org/IRC
+https://www.youtube.com/user/coolcsn/videos
+http://mind42.com/mindmap/8ba2c910-e4dd-438b-9cdf-76f4b8e3fbb9?rel=pmb
+non-primary channels
+##linux
+primary channel (for legal reasons)
+#freenode
+#freenode-*
+irc.taringa.net
+#linux
+
+https://freenode.net/kb/answer/registration
+Register your nick
+	/msg NickServ REGISTER password youremail@example.com
+
+Add an alternate nick
+	/nick foo_
+	/msg NickServ IDENTIFY foo password
+	/msg NickServ GROUP
+
+How you identify?
+change nick
+	/nick dvdyzag
+confirm it weekend
+	/msg NickServ IDENTIFY yournick password
+
+check if registered
+	/msg NickServ INFO stoyan123
+	/NickServ INFO stoyan123
+if he has not loggedin in more then 10 weeks, you can ask the admin to release it
+join the #freenode channel and ask an admin to drop the nickname
+
+if not registered, register!
+	/msg NickServ REGISTER password your@email.com
+	/NickServ REGISTER password your@email.com
+The confirmation line should look like
+	/msg NickServ VERIFY REGISTER wingman007 jkietcqdmjhw
+
+
+Join a channel
+	/join #a_channel
+	/join #channel_name [CHANNEL PASSWORD]
+if it doesn't exist, you are registering it and become admin of it!
+	/msg chanserv REGISTER [channel name] [password (optional)] [description]
+Set up a guard
+	/msg ChanServ SET #yourchannel GUARD ON
+Info about a channel
+	/msg ChannelServ info #yourchannel
+Start a private message
+/msg [other person's nickname] [initiating message, like 'hi']
+
+
+
+help
+	/msg NickServ help
+
+Operator
+http://askubuntu.com/questions/103185/ircd-hybrid-operator-configuration
+/oper dvdyzag dvd

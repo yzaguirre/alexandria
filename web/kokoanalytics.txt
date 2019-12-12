@@ -1,0 +1,17 @@
+https://www.kokoanalytics.com/
+https://news.ycombinator.com/item?id=21720881
+https://github.com/ibericode/koko-analytics
+Clone repo
+	cd wp-content/plugins/
+	git clone git@github.com:dannyvankooten/koko-analytics.git
+	cd koko-analytics
+	composer install
+	npm install
+	npm run build
+Stats will be collected right away after you install and activate the plugin. You can view your stats on the Dashboard > Analytics page.
+
+1. In your WordPress admin area, go to Plugins > New Plugin, search for Koko Analytics and click Install now.
+2. Alternatively, download the plugin files and upload the contents of koko-analytics.zip to your plugins directory, which usually is /wp-content/plugins/.
+https://downloads.wordpress.org/plugin/koko-analytics.trunk.zip
+3. Activate the plugin. Koko Analytics will start recording stats right away.
+4. Access your analytics by browsing to Dashboard > Analytics in your WordPress admin area.

@@ -10,3 +10,8 @@ Linux
 	dpkg -i stripe_1.0.1_linux_amd64.deb
 https://stripe.com/docs/security/pgp-key
 https://stripe.com/docs/security/pgp-migration-key
+
+Stripe checkout
+https://stripe.com/docs/payments/checkout
+https://dashboard.stripe.com/register
+

@@ -1,3 +1,4 @@
+https://jupyter.org/
 JupyterHub
 https://blog.jupyter.org/announcing-jupyterhub-1-0-8fff78acad7f
 https://news.ycombinator.com/item?id=19826169
@@ -8,6 +9,9 @@ https://news.ycombinator.com/item?id=16420142
 https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
 	sudo -H pip3 install jupyterlab
+Optional libraries
+	sudo -H pip3 install tensorflow pandas scipy
+Check version
 	jupyter notebook --version
 https://jupyter-notebook.readthedocs.io/en/stable/config.html
 	jupyter notebook --generate-config

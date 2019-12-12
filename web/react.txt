@@ -18,3 +18,9 @@ Using react router
 
 Redux
 	npm install -S redux react-redux redux-thunk
+
+Navigation
+https://reactnavigation.org/docs/en/stack-navigator.html
+	npm install --save react-navigation react-native-gesture-handler react-navigation-stack
+With react-redux
+	npm install --save react-navigation react-navigation-redux-helpers

@@ -8,16 +8,16 @@ http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/5.0.2/deb/x86_64/
 Keys
 http://ask.libreoffice.org/en/question/45539/where-is-the-signing-public-gpgpgp-key-the-libreoffice-webpage/
 http://listarchives.libreoffice.org/global/users/msg27065.html
-https://download.documentfoundation.org/libreoffice/stable/6.1.3/deb/x86_64/
+https://download.documentfoundation.org/libreoffice/stable/6.3.3/deb/x86_64/
 	gpg --keyserver hkp://keys.gnupg.net --recv-keys /AFEEAEA3/
 Verify download
-	gpg --verify LibreOffice_6.1.3_Linux_x86-64_deb.tar.gz.asc
-	gpg --verify LibreOffice_6.1.3_Linux_x86-64_deb_langpack_es.tar.gz.asc
-	gpg --verify LibreOffice_6.1.3_Linux_x86-64_deb_helppack_es.tar.gz.asc
+	gpg --verify LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz.asc
+	gpg --verify LibreOffice_6.3.3_Linux_x86-64_deb_langpack_es.tar.gz.asc
+	gpg --verify LibreOffice_6.3.3_Linux_x86-64_deb_helppack_es.tar.gz.asc
 Uncompress
-	tar xf LibreOffice_6.1.3_Linux_x86-64_deb.tar.gz
-	tar xf LibreOffice_6.1.3_Linux_x86-64_deb_langpack_es.tar.gz
-	tar xf LibreOffice_6.1.3_Linux_x86-64_deb_helppack_es.tar.gz
+	tar xf LibreOffice_6.3.3_Linux_x86-64_deb.tar.gz
+	tar xf LibreOffice_6.3.3_Linux_x86-64_deb_langpack_es.tar.gz
+	tar xf LibreOffice_6.3.3_Linux_x86-64_deb_helppack_es.tar.gz
 
 Remember
 	/usr/bin/libreoffice4.3 -> /opt/libreoffice4.3/program/soffice

@@ -1,0 +1,5 @@
+https://github.com/indiespirit/react-native-chart-kit
+https://github.com/indiespirit/react-native-chart-kit-example
+https://aboutreact.com/react-native-chart-kit/
+	npm install --save react-native-chart-kit react-native-svg prop-types
+	babel-polyfill

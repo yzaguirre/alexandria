@@ -85,6 +85,9 @@ Run for iOS
 	react-native run-ios
 or	xed -b ios
 
+Erase cache
+	npm start --reset-cache
+
 Error compiling in windows 10
 https://github.com/kmagiera/react-native-gesture-handler/issues/640
 	npm install --save-dev jetifier
@@ -98,6 +101,47 @@ var sharedBlacklist = [
   /.*\/__tests__\/.*/
 ];
 	npx react-native run-android
+
+Generating Signed APK
+https://facebook.github.io/react-native/docs/signed-apk-android#generating-the-release-apk
+	keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+Copy your keystore in the following directory: android/app
+Edit android/gradle.properties
+	vim android/gradle.properties
+MYAPP_UPLOAD_STORE_FILE=my-upload-key.keystore
+MYAPP_UPLOAD_KEY_ALIAS=my-key-alias
+MYAPP_UPLOAD_STORE_PASSWORD=*****
+MYAPP_UPLOAD_KEY_PASSWORD=*****
+
+Edit android/app/build.gradle
+	vim android/app/build.gradle
+...
+android {
+    ...
+    defaultConfig { ... }
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+    }
+    buildTypes {
+        release {
+            ...
+            signingConfig signingConfigs.release
+        }
+    }
+}
+...
+Generating the release APK
+	cd android && ./gradlew assembleRelease
+APK at android/app/build/outputs/apk/app-release.apk
+Install with
+	react-native run-android --variant=release
 
 Speed up the opening of android app
 https://blog.bam.tech/developer-news/how-to-speed-up-the-opening-of-your-application-react-native-on-android-using-turbo-modules
@@ -127,3 +171,15 @@ WebView
 https://github.com/react-native-community/react-native-webview
 https://facebook.github.io/react-native/docs/webview.html
 	npm install --save react-native-webview
+
+Popover
+https://www.npmjs.com/package/react-native-popover-view
+
+Chart kit
+https://github.com/indiespirit/react-native-chart-kit
+
+Dimensions
+import {
+	Dimensions,
+ } from 'react-native'
+ let { height, width } = Dimensions.get('screen')
