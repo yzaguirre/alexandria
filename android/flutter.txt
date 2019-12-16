@@ -1,8 +1,9 @@
 https://flutter.io/docs/get-started/install
 https://flutter.io/docs/get-started/install/linux
 https://github.com/flutter/flutter
-	wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.2.1-stable.tar.xz
-	tar xf flutter_linux_v1.2.1-stable.tar.xz -C /opt
+Install stable
+	wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
+	tar xf flutter_linux_v1.9.1+hotfix.6-stable.tar.xz -C /opt
 Dart is at /opt/flutter/bin/cache/dart-sdk
 Edit PATH
 export PATH=$PATH:/opt/flutter/bin
@@ -13,6 +14,10 @@ Run flutter
 	flutter doctor -v
 	flutter doctor --android-licenses
 	flutter devices
+Change to stable channel
+	flutter channel
+	flutter channel stable
+	flutter upgrade
 Test app
 	flutter create myapp
 	cd myapp
