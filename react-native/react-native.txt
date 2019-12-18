@@ -93,7 +93,7 @@ https://github.com/kmagiera/react-native-gesture-handler/issues/640
 	npm install --save-dev jetifier
 	npm I jetifier
 	npx jetify
-	vim node_modules/metro-config/src/defaults/blacklist.js
+	vim +14 node_modules/metro-config/src/defaults/blacklist.js
 var sharedBlacklist = [
   /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
   /website\/node_modules\/.*/,
@@ -183,3 +183,20 @@ import {
 	Dimensions,
  } from 'react-native'
  let { height, width } = Dimensions.get('screen')
+
+Draggable modal
+https://www.reddit.com/r/reactnative/comments/e94elf/how_do_you_make_a_draggable_modal/
+https://github.com/osdnk/react-native-reanimated-bottom-sheet
+https://www.youtube.com/watch?v=yQK2oaIN0yA
+
+Clear gradle cache
+https://github.com/react-native-community/cli/issues/591
+Stop gradlew on Windows:
+	gradlew --stop
+Stop gradlew on Mac or Linux:
+	./gradlew --stop
+Clean cache on Windows:
+	gradle cleanBuildCache
+Clean cache on Mac or Linux:
+	./gradlew cleanBuildCache
+https://github.com/software-mansion/react-native-gesture-handler/issues/653

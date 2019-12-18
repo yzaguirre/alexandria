@@ -1,3 +1,6 @@
 https://github.com/containous/traefik
 https://traefik.io/
 traefik, a modern reverse proxy
+
+Windows
+	scoop install traefik
