@@ -1,5 +1,5 @@
-www.dyne.org/software/tomb/
-	apt-get install pinentry-curses zsh gnupg dcfldd cryptsetup
+https://www.dyne.org/software/tomb/
+	apt install pinentry-curses zsh gnupg dcfldd cryptsetup
 Download
 	wget https://github.com/dyne/Tomb/archive/v2.2.tar.gz
 Install

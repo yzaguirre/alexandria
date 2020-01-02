@@ -7,3 +7,6 @@ https://coursera.org
 https://platzi.com
 https://laravel-news.com/
 https://serversforhackers.com/
+
+http://dcernst.github.io/resources/free-and-open-source-textbooks/
+https://news.ycombinator.com/item?id=21851020

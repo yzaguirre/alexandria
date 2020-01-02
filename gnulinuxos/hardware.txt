@@ -42,3 +42,10 @@ https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
 
 SSD SEAGATE BARRACUDA SATA III
 https://github.com/jandelgado/general/wiki/Firmware-update-of-Seagate-harddisk-using-Linux
+
+Mouse
+https://unix.stackexchange.com/questions/210144/synclient-does-not-find-synaptics-properties-despite-synaptics-touchpad-in-xinpu
+https://bbs.archlinux.org/viewtopic.php?id=152719
+	apt install xserver-xorg-input-synaptics
+	mkdir /etc/X11/xorg.conf.d/
+	cp /usr/share/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d

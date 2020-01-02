@@ -63,6 +63,11 @@ Share a contact
 Share a phone number
 	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'tel:555555'
 Share wifi
+https://twitter.com/nixcraft/status/1211231572298321926
 	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'WIFI:S:Smarts Family;T:WPA;P:123come_and_get_it;;'
+For WPA2
+	SSID="Your ssid"
+	SSID_PASS="Your_wifi_pass"
+	qrencode -t SVG -o wifi.svg "WIFI:S:${SSID};T:WPA2;P:${SSID_PASS};;"
 Share coordinates (latitude, longitude)
 	qrencode -s 10 -m 5 -l L -v 2 -o output.png 'geo:14.90,-90.55'

@@ -385,3 +385,10 @@ https://laravel-news.com/laravel-blade-filters-package
 
 https://laravel-news.com/junges-laravel-acl
 https://github.com/mateusjunges/laravel-acl
+
+Lazy Collection
+https://github.com/laravel/framework/pull/29415
+$projects = \App\Project::cursor();
+foreach($projects->take(500) as $project){
+	logger($project->name);
+}

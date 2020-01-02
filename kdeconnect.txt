@@ -7,5 +7,5 @@ https://www.youtube.com/watch?v=Zk8ScqK-xiE
 https://www.dedoimedo.com/computers/kde-connect-windows.html
 
 https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/
-	wget https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-master-205-windows-msvc2017_64-cl.exe
-	wget https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-master-205-windows-msvc2017_64-cl.exe.sha256
+	wget https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-master-236-windows-msvc2017_64-cl.exe
+	wget https://binary-factory.kde.org/job/kdeconnect-kde_Nightly_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-master-236-windows-msvc2017_64-cl.exe.sha256

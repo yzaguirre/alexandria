@@ -15,3 +15,10 @@ http://blog.jpalardy.com/posts/awk-tutorial-part-1/
 http://blog.jpalardy.com/posts/awk-tutorial-part-2/
 http://blog.jpalardy.com/posts/awk-tutorial-part-3/
 
+awk '{printf("%-8s made $%6.2f\n", $1, $2 * $3)}' emp.data | sort
+awk '$2 * $3 > 50 {printf("%s made more than 50 dollars\n", $1)}'
+awk '$1 == "Melvyn" {printf("%s made more than 50 dollars\n", $1)}'
+awk '/Mark/{printf("%s made more than 50 dollars\n", $1)}'
+awk '$1 == "Mark" || $1 == "Beth" {printf("%s made more than 50 dollars\n", $1)}'
+
+awk 'NF > 3' junk.data

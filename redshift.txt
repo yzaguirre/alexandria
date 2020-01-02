@@ -6,3 +6,7 @@ https://www.maketecheasier.com/protect-eyes-redshift-linux/
 Config file
 ~/.config/redshift.conf
 	redshift -l geoclue2 -t 6500:5000 -b 1.0:0.8
+
+https://news.ycombinator.com/item?id=21905138
+	redshift -O 3500 -b 0.7
+	redshift -O 6500 -b 1.0

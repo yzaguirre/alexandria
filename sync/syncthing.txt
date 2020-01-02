@@ -1,0 +1,45 @@
+http://syncthing.net/
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/sha1sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/sha256sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-amd64-v1.3.2.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-386-v1.3.2.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-arm-v1.3.2.tar.gz
+Verify
+https://syncthing.net/security.html
+Release binaries are signed with key D26E6ED000654A3E
+	sha1sum --ignore-missing -c sha1sum.txt.asc
+	sha256sum --ignore-missing -c sha256sum.txt.asc
+	gpg --verify sha1sum.txt.asc
+	gpg --verify sha256sum.txt.asc
+http://discourse.syncthing.net/t/getting-started/46
+Install amd64
+	tar xf syncthing-linux-amd64-v1.3.2.tar.gz -C /opt
+	mv /opt/{syncthing-linux-amd64-v1.3.2,syncthing}
+	ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
+Install raspberry pi
+	mkdir ~/.syncthing
+	tar xf syncthing-linux-arm-v1.3.2.tar.gz -C ~/
+	mv ~/syncthing-linux-arm-v1.3.2 .syncthing
+	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
+Debian repo
+http://apt.syncthing.net/
+	curl -s https://syncthing.net/release-key.txt | apt-key add -
+	echo "deb http://apt.syncthing.net/ syncthing release" >> /etc/apt/sources.list.d/syncthing.list
+	apt update
+	apt install syncthing
+Config at
+~/.config/syncthing/config.xml
+
+F-Droid
+https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid
+	wget https://f-droid.org/repo/com.nutomic.syncthingandroid_67.apk
+	wget https://f-droid.org/repo/com.nutomic.syncthingandroid_67.apk.asc
+	gpg2 --verify com.nutomic.syncthingandroid_67.apk.asc
+	adb push com.nutomic.syncthingandroid_67.apk /sdcard/Download
+Per-user config files, example:
+~/.syncthing/config.xml
+
+	# ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
+
+Android
+https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid

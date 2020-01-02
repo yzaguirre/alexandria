@@ -1,0 +1,19 @@
+https://polrproject.org/
+https://github.com/cydrobolt/polr
+Install
+	wget https://github.com/cydrobolt/polr/archive/2.2.0.tar.gz
+	tar xf 2.2.0.tar.gz
+	mv polr-2.2.0 polr
+x	chmod -R 755 polr
+	chown -R www-data:www-data polr
+	cd polr
+	composer install --no-dev -o
+Configure
+	cp .env.setup .env
+Database:
+	mysql -u root -p
+	CREATE DATABASE polr;
+	GRANT ALL ON polr.* TO polr@'localhost' IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES;
+
+Head to site.com/setup

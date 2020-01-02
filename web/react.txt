@@ -22,6 +22,7 @@ Redux
 Navigation
 https://github.com/react-navigation/redux-helpers
 https://reactnavigation.org/docs/en/stack-navigator.html
+https://reactnavigation.org/docs/en/navigation-prop.html
 	npm install --save react-navigation react-native-gesture-handler react-navigation-stack
 With react-redux
 	npm install --save react-navigation react-navigation-redux-helpers

@@ -1,11 +1,11 @@
 https://developer.android.com/studio/?utm_source=android-studio
 Download
-	wget https://dl.google.com/dl/android/studio/ide-zips/3.3.0.20/android-studio-ide-182.5199772-linux.zip
+	wget https://dl.google.com/dl/android/studio/ide-zips/3.5.3.0/android-studio-ide-191.6010548-linux.tar.gz
 Verify
-	sha256sum android-studio-ide-182.5199772-linux.zip
-5cb29b768a4c316649cccc87334e89b1f2db2dc6625e61aff2d3ae68d5632a37
+	sha256sum android-studio-ide-191.6010548-linux.tar.gz
+af630d40f276b0d169c6ac8c7663a989f562b0ac48a1d3f0d720f5b6472355db
 Install
-	unzip android-studio-ide-182.5199772-linux.zip -d /opt
+	tar xf android-studio-ide-191.6010548-linux.tar.gz -C /opt
 	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /opt/android-studio/bin/studio.sh'
 	touch ~/.android/analytics.settings
 

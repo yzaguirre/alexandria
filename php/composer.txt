@@ -2,7 +2,7 @@ local install
 https://getcomposer.org/download/
 
 https://getcomposer.org/doc/01-basic-usage.md
-http://getcomposer.org/
+https://getcomposer.org/
 	wget https://getcomposer.org/composer.phar
 	chmod 555 composer.phar
 	mv composer.phar /usr/local/bin/composer
