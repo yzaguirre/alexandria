@@ -8,13 +8,13 @@ https://github.com/diafygi/acme-nosudo
 https://github.com/kuba/simp_le
 Remember to use same email
 Get scripts
-	git clone https://github.com/diafygi/acme-nosudo
+	git clone https://github.com/diafygi/acme-nosudo.git
 	cd acme-nosudo
 	chmod u+x sign_csr.py
 	ln -s $PWD/sign_csr.py ~/bin/sign_csr
 Create private key
-	openssl genrsa -aes128 4096 -out user.key
-	openssl rsa -in user.key -pubout -out user.pub
+	openssl genrsa -out user.key
+x	openssl rsa -in user.key -pubout -out user.pub
 	mkdir private certs requests
 
 Generate the domain key:
