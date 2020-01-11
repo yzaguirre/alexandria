@@ -575,3 +575,7 @@ https://news.ycombinator.com/item?id=19366093
 MacOs OSS
 https://github.com/serhii-londar/open-source-mac-os-apps#cryptocurrency
 https://news.ycombinator.com/item?id=21179713
+
+Developer
+https://calver.org/
+https://news.ycombinator.com/item?id=21967879

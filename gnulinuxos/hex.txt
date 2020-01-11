@@ -1,0 +1,22 @@
+https://github.com/sitkevij/hex
+	cargo install hx
+output arrays in rust, c or golang
+hx has a feature which can output the input file bytes as source code arrays.
+
+For example:
+
+rust array: -ar
+	hx -ar -c8 tests/files/tiny.txt
+let ARRAY: [u8; 3] = [
+    0x69, 0x6c, 0x0a
+];
+c array: -ac
+	hx -ac -c8 tests/files/tiny.txt
+unsigned char ARRAY[3] = {
+    0x69, 0x6c, 0x0a
+};
+golang array: -ag
+	hx -ag -c8 tests/files/tiny.txt
+a := [3]byte{
+    0x69, 0x6c, 0x0a,
+}

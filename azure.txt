@@ -25,3 +25,5 @@ Changing configuration options
 	az configure
 Listing all resource groups
 	az group list
+https://adamtheautomator.com/azure-pipelines-tutorial/
+

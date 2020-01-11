@@ -20,6 +20,14 @@ for(i=0,x=a.length;i<x;i++){
  document.write(i + ' = ' + a[i]);
 }
 
+Last element in array
+https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array-in-javascript
+if(loc_array[loc_array.length-1] == 'index.html'){
+ //do something
+}else{
+ //something else.
+}
+
 Splice
 var removedItem = fruits.splice(pos, 1);
 

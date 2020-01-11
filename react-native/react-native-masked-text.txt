@@ -1,0 +1,4 @@
+https://github.com/benhurott/react-native-masked-text
+https://reactnativeexample.com/text-and-textinput-with-mask-for-react-native-applications/
+https://stackoverflow.com/questions/33826632/how-to-change-the-phone-number-format-in-textinput-using-react-native
+	npm install react-native-masked-text --save

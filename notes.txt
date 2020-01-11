@@ -38,3 +38,6 @@ or
 	$ compass watch
 Make it a script
 	$ echo $'#!/bin/bash\ncd /VMs/opt/springseed\ncake -w server' > ~/bin/springseed && chmod u+x ~/bin/springseed
+https://joplinapp.org/
+https://github.com/laurent22/joplin
+https://news.ycombinator.com/item?id=22000791

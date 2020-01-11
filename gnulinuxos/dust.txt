@@ -1,8 +1,10 @@
 https://github.com/bootandy/dust
-	wget https://github.com/bootandy/dust/releases/download/v0.4.0.1/dust-v0.4.0.1-x86_64-unknown-linux-gnu.tar.gz
-	tar xfv dust-v0.4.0.1-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/bootandy/dust/releases/download/v0.4.3/dust-v0.4.3-x86_64-unknown-linux-gnu.tar.gz
+	tar xfv dust-v0.4.3-x86_64-unknown-linux-gnu.tar.gz
 	chmod u+x dust
 	mv dust /usr/local/bin
+Windows
+	cargo install du-dust
 Usage:
 	dust <dir>
 	dust <dir>  <another_dir> <and_more>

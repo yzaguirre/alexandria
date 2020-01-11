@@ -52,3 +52,7 @@ https://marketplace.visualstudio.com/
 Debug ReactJS
 https://nealbuerger.com/2017/09/vscode-launch-create-react-app-and-chrome-with-launch-json/
 https://code.visualstudio.com/docs/nodejs/reactjs-tutorial#_debugging-react
+
+https://code.visualstudio.com/docs/editor/command-line
+-g or --goto	When used with file:line[:character], opens a file at a specific line and optional character position. This argument is provided since some operating systems permit : in a file name.
+

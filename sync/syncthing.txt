@@ -4,6 +4,7 @@ http://syncthing.net/
 	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-amd64-v1.3.2.tar.gz
 	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-386-v1.3.2.tar.gz
 	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-linux-arm-v1.3.2.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.3.2/syncthing-windows-amd64-v1.3.2.zip
 Verify
 https://syncthing.net/security.html
 Release binaries are signed with key D26E6ED000654A3E

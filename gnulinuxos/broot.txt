@@ -3,9 +3,17 @@ https://github.com/Canop/broot
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v0.6.3
+	git checkout v0.11.5
 	cargo build --release
 Binary download
-	wget https://github.com/Canop/broot/releases/download/v0.6.3/broot
+Windows
+	wget https://github.com/Canop/broot/releases/download/v0.11.5/broot.exe
+	mv broot.exe ~/bin
+Configuration file
+%HOME%\AppData\Roaming\dystroy\broot\config\conf.toml
+Linux
+	wget https://github.com/Canop/broot/releases/download/v0.11.5/broot
 	chmod u+x broot
 	sudo mv broot /usr/local/bin
+Check the $EDITOR environment variable (all OS platform)
+
