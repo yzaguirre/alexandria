@@ -11,6 +11,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://stackoverflow.com/questions/10211145/getting-current-date-and-time-in-javascript
 	currentdate = new Date();
 	currentdate.getDate() + "/"+(currentdate.getMonth() +1 ) + "/" + currentdate.getFullYear()
+https://codehandbook.org/javascript-date-format/
+	let current_datetime = new Date()
+	let formatted_date = current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate()
 Epoch to human readable
 
 
@@ -39,3 +42,15 @@ http://stackoverflow.com/questions/5113374/ddg#519157
 if (typeof variable !== 'undefined') {
     // the variable is defined
 }
+
+exports
+https://stackoverflow.com/questions/40121317/async-function-or-async-when-exporting-default
+https://stackoverflow.com/questions/38402025/how-to-create-helper-file-full-of-functions-in-react-native
+https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default#31853887
+https://stackoverflow.com/questions/50804207/using-async-and-await-with-export-const/50804268
+
+Asynchronous
+https://stackoverflow.com/questions/43431550/async-await-class-constructor
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+https://medium.com/programmers-developers/synchronous-fetch-with-async-await-b45d87a16177
+https://dev.to/johnpaulada/synchronous-fetch-with-asyncawait

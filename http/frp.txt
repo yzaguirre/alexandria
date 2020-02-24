@@ -2,9 +2,9 @@ https://github.com/fatedier/frp
 Windows
 	scoop install frp
 Linux frpc
-	wget https://github.com/fatedier/frp/releases/download/v0.29.0/frp_0.29.0_linux_arm64.tar.gz
-	tar xf frp_0.29.0_linux_arm64.tar.gz
-	cd frp_0.29.0_linux_arm64
+	wget https://github.com/fatedier/frp/releases/download/v0.31.1/frp_0.31.1_linux_arm64.tar.gz
+	tar xf frp_0.31.1_linux_arm64.tar.gz
+	cd frp_0.31.1_linux_arm64
 
 Socks5 behind a http proxy. npm can use it.
 Set up server component

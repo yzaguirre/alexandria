@@ -1,3 +1,6 @@
+https://github.blog/2020-01-13-highlights-from-git-2-25/
+https://news.ycombinator.com/item?id=22038007
+
 https://bitbucket.org/BitPusher16/dotfiles/raw/49a01d929dcaebcca68bbb1859b4ac1aea93b073/refs/git/git_examples.sh
 https://news.ycombinator.com/item?id=21189256
 
@@ -221,3 +224,14 @@ http://stackoverflow.com/questions/927358/ddg#927386
 	git commit -c ORIG_HEAD
 Email for git
 https://news.ycombinator.com/item?id=17441060
+
+List files in a commit
+https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
+	git show --pretty="" --name-only <SHA, tag>
+	git diff-tree --no-commit-id --name-only <SHA, tag>
+Use --name-status instead, if you want to see what happened to each file (Deleted, Modified, Added)
+Files changed between commit
+https://coderwall.com/p/lz0uva/find-all-files-modified-between-commits-in-git
+	git diff --name-only <SHA, tag start> <SHA, tag end>
+Get the names of all the files that have changed in the last 3 commits:
+	git diff --name-only HEAD HEAD~3

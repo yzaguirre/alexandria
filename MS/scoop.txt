@@ -1,0 +1,6 @@
+https://scoop.sh/
+https://github.com/ScoopInstaller/Main/tree/master/bucket
+https://spin.atomicobject.com/2017/12/20/windows-command-line-installer/
+Install
+	Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+	iwr -useb get.scoop.sh | iex

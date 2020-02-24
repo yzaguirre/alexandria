@@ -1,0 +1,8 @@
+https://formidable.com/open-source/victory/
+https://formidable.com/open-source/victory/docs/native/
+https://github.com/FormidableLabs/victory-native
+Victory is a set of modular charting components for React and React Native. Victory makes it easy to get started without sacrificing flexibility. Create one of a kind data visualizations with fully customizable styles and behaviors. Victory uses the same API for web and React Native applications for easy cross-platform charting.
+
+Install
+	npm install victory-native --save
+	npm install react-native-svg --save

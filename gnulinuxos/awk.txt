@@ -8,6 +8,8 @@ d) Manipulate the string and print the 5th and 9th parameters
 
 ls -la | awk '{print $9}' > output.txt
 
+http://www.skeeve.com/awk-sys-prog.html
+https://news.ycombinator.com/item?id=22304017
 https://news.ycombinator.com/item?id=15549318
 https://github.com/learnbyexample/Command-line-text-processing/blob/master/gnu_awk.md
 http://blog.jpalardy.com/posts/why-learn-awk/

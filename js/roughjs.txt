@@ -1,2 +1,6 @@
 https://roughjs.com/
+https://roughjs.com/posts/release-4.0/
+https://news.ycombinator.com/item?id=22141526
 https://github.com/pshihn/rough
+https://excalidraw.com/
+If you like this, be sure to check out Wired Elements - a set of 20+ fully working, wire-frame style web components built with Rough.js (by the author of Rough.js): https://wiredjs.com/
