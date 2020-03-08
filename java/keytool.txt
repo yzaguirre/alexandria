@@ -69,6 +69,3 @@ Rename alias
         -alias domain \
         -destalias newdomain \
         -keystore keystore.jks
-
-
-

@@ -226,6 +226,10 @@ if (Platform.OS === 'ios') {
 } else {
 	RNFetchBlob.android.actionViewIntent('file://' + resp.path(), 'image/jpg');
 }
+https://github.com/joltup/rn-fetch-blob/issues/441
+https://stackoverflow.com/questions/44746099/download-files-on-ios-with-react-native/57252077#57252077
+https://stackoverflow.com/questions/42584718/how-to-download-and-retrieve-local-files-on-ios-with-react-native-and-react-nati/42590248#42590248
+
 HTTP connection
 https://stackoverflow.com/questions/55398536/react-native-fetch-network-request-failed-on-android
 https://stackoverflow.com/questions/51902629/how-to-allow-all-network-connection-types-http-and-https-in-android-9-pie
@@ -286,3 +290,8 @@ https://news.ycombinator.com/item?id=22307270
 
 Frameworks
 https://www.reddit.com/r/reactnative/comments/f6g31h/what_are_the_best_ui_toolkits_right_now/
+
+Modal Selector
+https://github.com/peacechen/react-native-modal-selector
+https://github.com/facebook/react-native/issues/25866
+https://stackoverflow.com/questions/41181683/react-native-ios-picker-is-always-open

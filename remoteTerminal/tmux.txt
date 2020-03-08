@@ -1,3 +1,8 @@
+https://www.arp242.net/tmux.html
+https://news.ycombinator.com/item?id=21951679
+https://stackoverflow.com/questions/58739867/how-to-target-a-particular-tmux-session
+https://stackoverflow.com/questions/19313807/tmux-send-keys-syntax
+https://leanpub.com/the-tao-of-tmux/read#capture-pane
 https://leimao.github.io/blog/Tmux-Tutorial/
 https://news.ycombinator.com/item?id=21055468
 
