@@ -1,4 +1,6 @@
 https://stedolan.github.io/jq/
+https://mosermichael.github.io/jq-illustrated/dir/content.html
+https://news.ycombinator.com/item?id=22626080
 	apt install jq
 Example JSON
 "parents": [

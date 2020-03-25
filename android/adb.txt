@@ -67,3 +67,4 @@ https://stackoverflow.com/questions/17556750/how-to-uninstall-an-android-app-fro
 https://news.ycombinator.com/item?id=18864220
 	pm uninstall --user 0 <name of package>
 	pm uninstall -k --user 0 <name of package>
+	adb shell pm uninstall --user 0 com.2020app

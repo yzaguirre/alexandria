@@ -48,6 +48,7 @@ Remove a file
 
 Remove untracked files
 https://stackoverflow.com/questions/61212/how-to-remove-local-untracked-files-from-the-current-git-working-tree#64966
+https://superuser.com/questions/335496/git-how-to-delete-all-untracked-files
 	git clean -n
 	git clean -f # will DELETE files permanently
 	git clean -X # Remove files listed in .gitignore

@@ -295,3 +295,9 @@ Modal Selector
 https://github.com/peacechen/react-native-modal-selector
 https://github.com/facebook/react-native/issues/25866
 https://stackoverflow.com/questions/41181683/react-native-ios-picker-is-always-open
+
+Change app name
+https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd92161c35
+https://stackoverflow.com/questions/38580858/how-to-change-display-name-of-an-app-in-react-native
+https://saumya.github.io/ray/articles/72/
+https://stackoverflow.com/questions/32830046/renaming-a-react-native-project

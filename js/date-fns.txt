@@ -1,0 +1,2 @@
+https://date-fns.org/
+https://stackoverflow.com/questions/34590369/formatting-a-date-string-in-react-native

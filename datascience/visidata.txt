@@ -1,2 +1,3 @@
+https://www.visidata.org/
 https://github.com/saulpw/visidata
 	pip3 install visidata

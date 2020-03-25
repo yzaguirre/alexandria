@@ -75,3 +75,7 @@ Now on /releases page
 
 Verifying Tags
 	git tag -v v5.9.1
+
+https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls#commit-shas
+https://stackoverflow.com/questions/8910271/how-can-i-reference-a-commit-in-an-issue-comment-on-github
+Username/Repository@SHA	

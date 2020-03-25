@@ -50,6 +50,7 @@ Cleanup
 	rm -rf node_modules
 	rm package-lock.json
 	npm cache clear --force
+	npm cache clean --force
 	npm install
 "Write after end" Error
 https://github.com/npm/npm/issues/19989#issuecomment-371739104
