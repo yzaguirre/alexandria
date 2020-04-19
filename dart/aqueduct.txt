@@ -1,0 +1,14 @@
+https://aqueduct.io/
+https://github.com/stablekernel/aqueduct
+https://www.youtube.com/playlist?list=PL3UwowPBo8XEDvDDY7fpurOLt7hhYMBlx
+	pub global activate aqueduct
+	aqueduct --version
+Edit the PATH environment variable
+	vim ~/.profile
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+Create a new project
+	aqueduct create my_project
+Start
+	aqueduct serve
+https://stackoverflow.com/questions/61155016/error-getter-not-found-defaulttype-aqueduct-dart-vscode
+or	pub run aqueduct serve

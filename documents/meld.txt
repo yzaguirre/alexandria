@@ -1,0 +1,22 @@
+https://meldmerge.org/
+https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git
+	apt install meld
+Windows 10 use version 3.18.3
+	wget https://download.gnome.org/binaries/win32/meld/3.18/Meld-3.18.3-win32.msi
+Make an alias in ~/.bashrc
+alias meld="/c/Program\ Files\ \(x86\)/Meld/Meld.exe"
+
+Add it to ~/.gitconfig
+[merge]
+	tool = meld
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = '/c/Program Files (x86)/Meld/Meld.exe' "$LOCAL" "$REMOTE"
+
+Available commands
+	git difftool
+	git difftool --staged
+	git mergetool

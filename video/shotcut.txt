@@ -1,0 +1,13 @@
+https://shotcut.org
+Windows
+	scoop bucket add extras
+	scoop install shotcut
+http://www.shotcut.org/bin/view/Shotcut/Download
+https://www.shotcut.org/download/
+https://news.ycombinator.com/item?id=10009472
+	wget https://github.com/mltframework/shotcut/releases/download/v16.07/shotcut-debian8-x86_64-160701.tar.bz2
+	tar xf shotcut-debian8-x86_64-160701.tar.bz2 -C /opt
+	ln -s /opt/Shotcut/Shotcut.desktop /usr/local/share/applications/
+	ln -s /opt/Shotcut/Shotcut.app/shotcut /usr/local/bin
+
+	

@@ -1,0 +1,4 @@
+https://www.darktable.org/
+	apt install darktable
+Windows
+	scoop install darktable

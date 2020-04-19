@@ -1,0 +1,3 @@
+https://github.com/solo-io/gloo
+https://www.solo.io/blog/announcing-gloo-1-3-developer-portal-extensibility-performance-and-usability/
+https://news.ycombinator.com/item?id=22878146

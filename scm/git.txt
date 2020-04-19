@@ -144,6 +144,8 @@ delete branch
 	git branch -d hello-england
 delete branch at github
 	git push origin --delete hello-england
+rename a branch
+	git branch -m oldname newname
 Show current branch
 	git branch
 Diff Against the Previous Commit
@@ -236,3 +238,21 @@ https://coderwall.com/p/lz0uva/find-all-files-modified-between-commits-in-git
 	git diff --name-only <SHA, tag start> <SHA, tag end>
 Get the names of all the files that have changed in the last 3 commits:
 	git diff --name-only HEAD HEAD~3
+
+Patch
+	git diff > patch.diff
+https://stackoverflow.com/questions/3368590/show-diff-between-commits
+	git diff k73ud^..dj374
+Restore a patch
+https://stackoverflow.com/questions/15993861/git-create-patch-with-diff#15994287
+	git apply patch.diff
+
+Identities
+https://www.micah.soy/posts/setting-up-git-identities/
+https://news.ycombinator.com/item?id=22672491
+
+Apply .gitignore
+https://stackoverflow.com/questions/19663093/apply-gitignore-on-an-existing-repository-already-tracking-large-number-of-file
+	git ls-tree --name-only --full-tree -r HEAD
+	git rm -r --cached cache/
+	git commit -m ".gitignore is now working"

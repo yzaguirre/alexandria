@@ -1,0 +1,18 @@
+https://github.com/rtrox/mssqlcli
+https://stackoverflow.com/questions/54355320/how-do-i-send-query-output-from-mssql-cli-on-a-linux-machine-to-a-text-file-on-t
+	pip3 install mssqlcli
+	vim ~/.config/mssqlcli.yml
+keyring_app_name: another_app # Optional, defaults to mssqlcli
+username: USE_KEYRING("global:LDAPUser")
+password: USE_KEYRING("global:LDAP")
+# OR
+# username: my_plaintext_username
+# password: my_plaintext_password
+server: MY_MSSQL.example.com
+
+# The below is optional, and should be used if
+# Windows Auth will be used instead of MSSQL Auth.
+windows_authentication: true
+domain: MY_DOMAIN
+
+	mssqlcli -o csv query {path to query}.sql

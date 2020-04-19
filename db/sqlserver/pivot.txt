@@ -1,0 +1,4 @@
+https://docs.microsoft.com/en-us/sql/t-sql/queries/from-using-pivot-and-unpivot?view=sql-server-ver15
+https://www.sqlservertutorial.net/sql-server-basics/sql-server-pivot/
+http://www.blackwasp.co.uk/SQLSelectInsert.aspx
+https://stackoverflow.com/questions/2334712/how-do-i-update-from-a-select-in-sql-server

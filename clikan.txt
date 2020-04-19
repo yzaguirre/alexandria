@@ -1,0 +1,10 @@
+https://github.com/kitplummer/clikan
+https://news.ycombinator.com/item?id=22890955
+	sudo -H pip3 install clikan
+	clikan configure
+	vim ~/.clikan.yaml
+clikan_data: /Users/david/.clikan.dat
+limits:
+  todo: 10
+  wip: 3
+  done: 10

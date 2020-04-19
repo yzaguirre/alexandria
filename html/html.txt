@@ -21,3 +21,9 @@ Your browser does not support the video tag.
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+<div id="electric-cars" data-columns="3"></div>
+
+const article = document.querySelector('#electric-cars');
+article.dataset.columns // "3"

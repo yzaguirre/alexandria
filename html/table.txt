@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/35553568/how-to-disable-td-selection-with-specific-class-with-js-css
+
+<table>
+    <tr>
+        <th class='weekday'>Mon</th>
+        <th class='weekday'>Tue</th>
+        <th class='weekday'>Wed</th>
+    </tr>
+    <tr class='selectable'> 
+        <td>1</td>
+    </tr>    
+    <tr class='selectable'> 
+        <td>2</td>
+    </tr>    
+    <tr class='unselectable'>
+        <td>3</td>
+    </tr>
+</table>
+
+.unselectable{
+     background-color: #ddd;
+     cursor: not-allowed;
+}
+
+https://www.w3.org/WAI/tutorials/tables/irregular/

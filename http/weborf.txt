@@ -1,0 +1,5 @@
+http://ltworf.github.io/weborf/
+https://github.com/ltworf/weborf
+	wget https://github.com/ltworf/weborf/releases/download/0.16/weborf_0.16.orig.tar.gz
+	wget https://github.com/ltworf/weborf/releases/download/0.16/weborf_0.16.orig.tar.gz.asc
+	gpg --verify weborf_0.16.orig.tar.gz weborf_0.16.orig.tar.gz.asc

@@ -1,17 +1,64 @@
+Install
+	apt install postgresql postgresql-contrib
+Windows
+	scoop install postgresql
+Start instance
+	pg_ctl start
+Stop instance
+	pg_ctl stop
+Register as a service
+	pg_ctl register -N PostgreSQL
 Internals of PostgreSQL
 http://www.interdb.jp/pg/index.html
 https://news.ycombinator.com/item?id=18950460
 
+https://github.com/xzilla/pagila
+
 Why migrate to postgresql? https://news.ycombinator.com/item?id=12489055
 https://pgexercises.com
 http://www.postgresguide.com/
+	which psql
+	which initdb
+	cd /usr/psql-10/bin
+Make a new cluster: initdb
+Run a cluster: postgres
+Interact with a cluster: psql, pg_ctl, pg_dump
+
 Client conexion
+	psql -h localhost -d postgres -p 5432 -U postgres
 	psql -h localhost -d postgres -p 5432
 	psql -U myuser -W -d mydb
 	psql -h myhost -U myuser -W -d mydb
 	-o output_file.txt
 	-f script.sql
 	< script.sql
+Interact with a cluster, with default host (localhost), default port (5452), current system user (postgres)
+https://postgrescourse.com/
+https://www.youtube.com/watch?v=V3mA1UCkHS8
+	sudo su - postgres
+	psql
+	\?
+	\l
+	\q
+# Default databases:
+postgres: a place for a client to connect.
+template0: a blank and unusable database. Used for restore purposes
+template1: place common configuration for new databases.
+
+Create a cluster
+	sudo su -
+	mkdir /opt/clusterA
+	chown -R postgres:postgres /opt/clusterA/
+	sudo su - postgres
+	initdb -D /opt/clusterA/
+postgresql.conf: replication, backups and other configurations.
+pg_hba.conf: host based authentication. Configure which client can connect and how they connect. Also how to deny. Also directory service.
+base/: one directory per database.
+Change the defualt port
+	vim /opt/clusterA/postgresql.conf
+port = 5433
+Start the cluster
+	pg_ctl -D /opt/clusterA/ start
 
 A user is a login role that is allowed to log in to the PostgreSQL server.
 http://jazstudios.blogspot.com/2010/06/postgresql-login-commands.html
@@ -39,6 +86,7 @@ managed, and updated.
 Create Database
 	CREATE DATABASE hrdb WITH ENCODING='UTF8' OWNER=hr CONNECTION LIMIT=25;
 	createdb -h localhost -p 5432 -U postgres testdb1
+Made a copy of template1.
 A template database is, as the name suggests, a database that serves as a model for other
 databases.
 	CREATE DATABASE my_db TEMPLATE my_template_db;
@@ -49,6 +97,8 @@ Connect to database within admin login shell:
 	\c db_name;
 	\connect databasename
 	\connect mediawiki
+Print tables
+	\d
 Drop database
 	DROP DATABASE hrdb;
 	dropdb hrdb;
@@ -57,7 +107,9 @@ View Database Connections, Identify connections
 	SELECT * from pg_stat_activity where datname='testdb1';
 Terminate all of the active connections to the database.
 	SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'testdb1';
-
+Import data
+	\i /home/admin/data/baltimore_employees.sql
+	\d
 A schema is a named collection of tables.
 http://www.postgresql.org/docs/current/static/ddl-schemas.html
 A schema may also contain views, indexes, sequences, data types,
@@ -86,13 +138,19 @@ https://stackoverflow.com/questions/1517635/save-postgres-sql-output-to-csv-file
 http://pookey.co.uk/wordpress/archives/51-outputting-from-postgres-to-csv
 
 HTML print
-psql -d postgresql_book -H -c "SELECT category, count(*) As num_per_cat FROM pg_settings WHERE category LIKE '%Query%' GROUP BY category ORDER BY category;" -o test.html
+	psql -d postgresql_book -H -c "SELECT category, count(*) As num_per_cat FROM pg_settings WHERE category LIKE '%Query%' GROUP BY category ORDER BY category;" -o test.html
 
 Turn off line pager pagination in psql:
-\pset pager
+	\pset pager
 
 Quit psql:
-\q
+	\q
+Turn off whitespace
+	\a
+Turn off timing and headers
+	\t
+Send output to a file
+	\o /tmp/out.txt
 
 Increment a sequence:
 SELECT nextval('my_id_seq');

@@ -1,0 +1,5 @@
+https://photoflare.io/
+https://github.com/PhotoFlare/photoflare
+Windows
+	scoop bucket add extras
+	scoop install photoflare
