@@ -1,0 +1,9 @@
+https://www.reddit.com/r/learnmachinelearning/comments/g7409a/if_you_people_are_looking_for_datasets_to_play/
+This UCI website is the dataset repository. You can find a lot of datasets here.
+http://archive.ics.uci.edu/ml/datasets
+For books and articles : https://z-lib.org/
+For papers : https://sci-hub.tw/
+kaggle.com
+
+https://www.reddit.com/r/learnmachinelearning/comments/g6jyes/stanford_release_andrew_ngs_machine_learning/
+https://www.youtube.com/watch?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&v=jGwO_UgTS7I&feature=emb_title

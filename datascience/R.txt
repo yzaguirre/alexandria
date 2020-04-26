@@ -1,3 +1,5 @@
+http://www.r-project.org/
+https://news.ycombinator.com/item?id=22966332
 http://www.studytrails.com/blog/15-page-tutorial-for-r/
 http://www.r-project.org/
 see datascience/rstudio.txt
@@ -6,6 +8,11 @@ http://cyclismo.org/tutorial/R/index.html
 https://www.datacamp.com/community/tutorials/15-questions-about-r-plots
 https://news.ycombinator.com/item?id=9795377
 	apt install r-base
+Windows
+	scoop install r
+You'll need to type 'r.ps1' or 'r.cmd' to run R, because in Powershell 'r' runs the last command.
+	scoop bucket add extras
+	scoop install rstudio
 Instalar librerias
 	install.package (c('devtools'))
 	install.packages("plyr")

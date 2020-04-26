@@ -1,0 +1,94 @@
+youtube user babarehner
+~/videos/PI/RemoteService/Explore Remote Desktop Connection from Ubuntu 12 to MS Windows.mp4
+~/videos/PI/RemoteService/Remote Desktop Connection from Windows 7 to Ubuntu 12.04.mp4
+
+Remote Desktop Connection from Windows 7 to Ubuntu 12.04 
+http://www.youtube.com/watch?v=KY3V79t5tKA
+Demonstrates how to complete a remote desktop connection from a Windows 7 desktop to an Ubuntu 12.04 desktop. A software package xrdp is installed from Ubuntu Software Center to an Ubuntu 12.04 desktop making the Ubuntu desktop a Remote Desktop Protocol Server.
+To turn off xrdp Remote Desktop Protocol Server use "sudo service xrdp stop" and to turn it back on use "sudo service xrdp start" from the command line.
+
+To check out an Ubuntu Remote Desktop client see "Explore Remote Desktop Connection from Ubuntu 12 to MS Windows."- http://youtu.be/ZCyRBoZ_eGM
+To check out how to connect to an Ubuntu 13.04 desktop or an Ubuntu 12.10 desktop with Windows 7 or 8 see "Remote Desktop Connection from Windows 8 to Ubuntu 13.04"- http://youtu.be/XgMJI8cvXOg
+
+Added 5-14-2013. If after installing xrdp you have trouble with the "d" key when using rdp see "ubuntuforums.org/showthread.php?t=15958­7"
+
+Explore Remote Desktop Connection from Ubuntu 12 to MS Windows 
+http://www.youtube.com/watch?v=ZCyRBoZ_eGM
+ Publicado el 15/11/2012
+
+Have you ever wanted to remotely connect your Ubuntu desktop to a windows computer. This video demonstrates the use of the Remmina (Remote Desktop Protocol) client in an Ubuntu 12.04 desktop connecting to a set of Microsoft desktop operating systems including Windows 7, Vista and XP. Microsoft Remote Desktop Protocol is enabled on Windows 7, Vista and XP computers. Remmina is installed in Ubuntu 12.04 by default so no additional software has to be installed on either Ubuntu or any of the Windows machines. Virtual desktops are used in this video though what is presented here works equally well with hardware computers.
+To view an RDP server in Ubuntu check out "Remote Desktop Connection from Windows 7 to Ubuntu 12.04"- http://youtu.be/KY3V79t5tKA
+
+Protocolo RDP
+Ahora Microsoft lo llama Remote Desktop Services (RDS) es un protocolo desarrollado por MS que permite a una computadora logearse y administrar otra computadora
+a través de la una red.
+
+Servidor para Windows
+	Windows XP, Vista, 7 y 8, cualquiera de sus versiones menos la de Home Editions.
+	Puerto por defecto es el 3389
+	Inicio Sesión Remoto debe tener privilegios de Administrador y contraseña en el Remote Desktop Server. 
+Ir a Propiedades de Equipo-> Remote Settings
+Para que una máquina GNU/Linux pueda iniciar sesión, se elige la less secure
+Reiniciar la PC, Modifica el Firewall de Windows
+
+Servidor para GNU/Linux
+xrdp utiliza el protocolo RDP para presentar un logeo gráfico a un cliente remoto.
+	apt install xrdp
+Remover su autoarranque
+	# update-rc.d -f xrdp remove
+Puede conectarse a un servidor VNC u otro servidor RDP
+Clientes Windows pueden conectarse a un sistema con xrdp sin instalar software adicional
+
+https://www.remmina.org/
+Cliente para GNU/Linux es Remmina, soporta protocolos RDP (Remote Desktop Protocol), VNC (Virtual Network Computing), NX, XDMCP y SSH
+Instalado por defecto en Ubuntu
+	apt install remmina
+Buscamos Remmina
+Crear una conexión por cada servidor
+high color 16bpp
+
+Disable passwordless login
+https://superuser.com/questions/106917/remote-desktop-without-a-password
+You can disable blank password restrictions by using a policy. To locate and change this policy:
+Click Start, point to Run, type gpedit.msc, and then click OK to start the Group Policy Editor.
+Open Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Accounts: Limit local account use of blank passwords to console logon only.
+Double-click Limit local account use of blank passwords to consol logon only.
+Click Disabled, and then click OK.
+Quit Group Policy Editor.
+
+Cliente para Windows
+Windows home tiene el cliente
+Trae preinstalado, Programas->Accesorios->Remote Desktop Connections
+
+VNC http://en.wikipedia.org/wiki/Vnc
+Virtual Network Computing, utiliza el protocolo RFB (Remote Frame Buffer). Transmite eventos de teclado y ratón
+Puerto por defecto es el 5900
+Habilita un servidor HTTP en puerto TCP 5800, donde un cliente se conecta desde el navegador web utilizando un Java applet
+
+Cliente VNC GNU/Linux
+Este cilente está optimizado para conexiones bajas de banda ancha
+	apt install xtightvncviewer
+
+tightvnc.com
+
+Servidor VNC para GNU/Linux
+es vino, el servidor VNC para Gnome
+	apt install vino
+
+
+Cliente VNC para Windows es
+	vncviewer de RealVNC
+Utilizan la tecla F8 para su menú
+
+http://www.realvnc.com
+
+Servidor para Windows
+es VNC de RealVNC
+
+
+Viewer VNC para Android
+	Remote Ripple de RealVNC
+
+rdesktop
+	rdesktop -u root p password -n hostname -f
+-f for full screen. Ctrl-Alt-Enter

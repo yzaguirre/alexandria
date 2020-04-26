@@ -246,6 +246,24 @@ https://stackoverflow.com/questions/3368590/show-diff-between-commits
 Restore a patch
 https://stackoverflow.com/questions/15993861/git-create-patch-with-diff#15994287
 	git apply patch.diff
+Generate a patch file for the most recent five commit
+Git will generate a patch file for each commit
+	git format-patch HEAD^^^^^
+It can also generate a cover letter, with stats, to describe the patch series
+Make sure to edit the cover letter before sending
+	git format-patch --cover -letter HEAD^^^^^
+To send a patch series
+	git send-email
+To accept a set of patch files into your repositoyr, use git am
+This will append the set of patches into your commit history on your current branch
+git am preserves the author names present in the patches
+	git am *.patch
+
+Stashing
+Git maintains the stash list (a stack) of stashed diffs.
+	git stash list
+View an individual stash diff
+	git stash show
 
 Identities
 https://www.micah.soy/posts/setting-up-git-identities/

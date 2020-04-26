@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/43680226/how-can-i-uninstall-an-appimage
+Since an AppImage is not "installed", you don't need to "uninstall" it.
+Just delete the AppImage file and the application is gone. Additionally you may want to remove menu entry by deleting the desktop file from $HOME/.local/share/applications/.
+
+

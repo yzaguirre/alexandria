@@ -1,0 +1,25 @@
+https://www.phoenixframework.org/
+https://www.phoenixframework.org/blog/build-a-real-time-twitter-clone-in-15-minutes-with-live-view-and-phoenix-1-5
+https://news.ycombinator.com/item?id=22947341
+https://hexdocs.pm/phoenix/installation.html
+https://hexdocs.pm/phoenix/community.html#screencasts-courses
+Install Hex
+	mix local.hex
+Install Phoenix
+	mix archive.install hex phx_new 1.5.0
+
+Phoenix LiveView generator
+	mix phx.new chirp --live
+Install dependencies
+	mix deps.get
+	cd assets && npm install && node node_modules/webpack/bin/webpack.js --mode development
+Configure database in config/dev.exs
+	cd chirp
+	mix ecto.create
+	mix ecto.migrate
+Start the server
+	mix phx.server
+Start the server in interactive mode
+	iex -S mix phx.server
+Bootstrap a live view
+	mix phx.gen.live Timeline Post posts username body likes_count:integer reposts_count:integer

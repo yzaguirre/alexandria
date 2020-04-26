@@ -9,7 +9,8 @@ http://www.cyberciti.biz/faq/debian-ubuntu-linux-install-libpcre3-dev/
 	./configure
 	make
 	# make install
-
+Windows
+	scoop install octave
 Docs
 https://www.gnu.org/software/octave/octave.pdf
 https://www.gnu.org/software/octave/doc/interpreter/index.html
