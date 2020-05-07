@@ -350,6 +350,9 @@ NGINX
 Apache2
 https://github.com/phanan/htaccess
 
+https://www.endpoints.dev/
+https://news.ycombinator.com/item?id=23079121
+
 Benchmarking
 tsung, see ~/web/tsung.txt
 

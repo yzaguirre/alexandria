@@ -11,3 +11,6 @@ open source project that makes it easy to consume machine learning (ML) stacks
 with Kubernetes.
 
 https://danrl.com/blog/2017/google-kubernetes-engine-and-lets-encrypt/
+
+https://blog.levine.sh/14058/wireguard-on-k8s-road-warrior-style-vpn-server
+https://news.ycombinator.com/item?id=23003138

@@ -1,0 +1,3 @@
+https://pi-hole.net/
+https://cri.dev/posts/2020-05-03-Ad-blocking-with-Raspberry-Pi-and-Pi-hole/
+https://news.ycombinator.com/item?id=23073109

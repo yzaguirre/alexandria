@@ -1,4 +1,20 @@
 https://www.pgcli.com/
+https://github.com/dbcli/pgcli
+Install
+	sudo -H pip3 install pgcli
+Windows
+	pip install --upgrade setuptools
+Visual Studio Installer:
+https://stackoverflow.com/questions/48541801/microsoft-visual-c-14-0-is-required-get-it-with-microsoft-visual-c-build-t
+https://www.scivision.dev/python-windows-visual-c-14-required/
+MSVC v140 - VS 2015 C++ Build Tools (v14.00)
+C++/CLI
+
+Or
+Herramientas de CMake en C++ para Windows
+SDK de Windows 10 (10.0.17134.0)
+Herramientas de compilación de MSVC v142 - VS 2019 C++ para x64/x86 (v14.25)
+
 	pgcli --help
 	
 	pgcli local_database

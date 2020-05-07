@@ -1,3 +1,4 @@
+https://www.libreoffice.org/
 https://mierda.tv/2016/09/23/convertir-a-png-una-presentacion-creada-con-libreoffice-impress/
 	libreoffice6.4 --headless --convert-to pdf 7_vidas_extra_tiene_un_juanker.odp 
 	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png

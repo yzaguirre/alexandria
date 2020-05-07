@@ -1,0 +1,6 @@
+https://github.com/caddyserver/caddy
+https://news.ycombinator.com/item?id=23070567
+	echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+    apt update && apt install caddy
+Systemd config file 
+https://github.com/caddyserver/dist/tree/master/init

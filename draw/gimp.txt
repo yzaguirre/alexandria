@@ -1,3 +1,14 @@
+https://www.gimp.org/
+Install
+	apt install gimp
+Windows
+	scoop bucket add extras
+	scoop install gimp
+Or
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.18-setup-2.exe
+	sha256sum gimp-2.10.18-setup-2.exe
+bf6ce59587e63e1e8bab923e7dfdaa0f2c8bd3ac4d0ced602f3c063f9e32465c
+	explorer gimp-2.10.18-setup-2.exe
 http://www.taringa.net/post/linux/18441277/Usando-los-efectos-de-Instagram-en-GIMP.html
 http://www.wikihow.com/Adjust-Brightness-in-GIMP
 Invert colors https://www.youtube.com/watch?v=GDvqTW0WyYs

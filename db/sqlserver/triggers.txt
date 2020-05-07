@@ -1,0 +1,13 @@
+https://docs.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15
+https://www.mssqltips.com/sqlservertip/5950/how-do-sql-server-triggers-work-for-insert-update-delete-and-truncate/
+https://stackoverflow.com/questions/20205639/insert-delete-update-trigger-in-sql-server
+
+Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)
+
+CREATE TRIGGER [ schema_name . ]trigger_name 
+ON { table | view } 
+[ WITH <dml_trigger_option> [ ,...n ] ]
+{ FOR | AFTER | INSTEAD OF } 
+{ [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] } 
+[ NOT FOR REPLICATION ] 
+AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }

@@ -1,6 +1,7 @@
 https://inkscape.org/
 https://inkscape.org/doc/keys.html
 https://inkscape.org/doc/inkscape-man.html
+https://news.ycombinator.com/item?id=23089820
 Boehm-GC
 libsigc++
 glibmm
@@ -18,6 +19,9 @@ Building the package
 	dpkg-buildpackage -uc -us -rfakeroot
 	dpkg-buildpackage -uc -us -b -j4
 https://packages.debian.org/experimental/amd64/inkscape/download
+Windows
+	scoop bucket add extras
+	scoop install inkscape
 
 Kees Cook - GPG#17063e6d
 	http://outflux.net/public_key.asc

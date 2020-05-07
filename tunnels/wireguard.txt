@@ -98,3 +98,5 @@ If you want to start the tunnel at boot, you can enable the service on each mach
 Mobile Client
 Share a configuration file (see ~/qrcode.txt)
 	qrencode -t ansiutf8 < tunner.conf
+
+https://genneko.github.io/playing-with-bsd/networking/freebsd-wireguard-jail/

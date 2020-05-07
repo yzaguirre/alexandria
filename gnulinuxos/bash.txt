@@ -154,3 +154,11 @@ runuser command
 	runuser -l www-data -c 'mkdir ~/html/images'
 https://stackoverflow.com/questions/742466/how-can-i-reverse-the-order-of-lines-in-a-file#742485
 	tac a.txt > b.txt
+Security
+	set -euo
+-e: Ends script if any command return other then 0
+-u: Protects against use of unasigned variables
+
+https://www.shellcheck.net/
+https://github.com/koalaman/shellcheck
+Parses bash scripts

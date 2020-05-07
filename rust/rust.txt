@@ -203,3 +203,7 @@ Check the binary out
 Push it to Android or ssh server
 	adb push target/armv7-linux-androideabi/debug/cli /storage/self/primary/our-cli-app
 	scp target/armv7-unknown-linux-gnueabihf/debug/hello me@arm:~
+
+Rust analizer
+https://rust-analyzer.github.io/blog/2020/04/20/first-release.html
+https://news.ycombinator.com/item?id=22995466

@@ -25,3 +25,6 @@ You need to set a size for your map
 https://stackoverflow.com/questions/14946647/google-maps-sample-code-not-running-in-localhost
 <div id="map_canvas" style="height:500px;width:600px;"></div>
 
+http://logicify.github.io/jquery-locationpicker-plugin/
+<script src="js/locationpicker.jquery.js"></script>
+$('#somecomponent').locationpicker();

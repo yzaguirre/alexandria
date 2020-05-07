@@ -29,3 +29,13 @@ $('select').on('change', function(e){
     console.log( $(this).find("option:selected").data('id') ); 
     e.preventDefault(); 
 }); 
+
+https://stackoverflow.com/questions/6533138/javascript-selected-radio
+$('input[name=u_type]:checked').val();
+
+https://stackoverflow.com/questions/45072708/contenteditable-allow-numbers-only-for-editing
+https://stackoverflow.com/questions/2867479/limiting-number-of-characters-in-a-contenteditable-div
+https://stackoverflow.com/questions/11235622/jquery-disable-form-submit-on-enter#11235672
+$("#myeditablediv").keypress(function(e) {
+    if (isNaN(String.fromCharCode(e.which))) e.preventDefault();
+});

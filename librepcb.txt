@@ -1,0 +1,4 @@
+https://librepcb.org/
+	wget https://download.librepcb.org/releases/0.1.4/librepcb-installer-0.1.4-linux-x86_64.run
+	chmod u+x librepcb-installer-0.1.4-linux-x86_64.run
+	./librepcb-installer-0.1.4-linux-x86_64.run

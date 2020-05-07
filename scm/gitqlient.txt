@@ -1,0 +1,4 @@
+https://francescmm.github.io/GitQlient/
+https://github.com/francescmm/GitQlient
+https://news.ycombinator.com/item?id=22995682
+Installs in C:\Program Files (x86)\CescSoftware\GitQlient\

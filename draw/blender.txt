@@ -1,0 +1,5 @@
+https://www.blender.org/
+	apt install blender
+Windows
+	scoop bucket add extras
+	scoop install blender
