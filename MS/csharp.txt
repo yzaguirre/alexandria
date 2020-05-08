@@ -45,3 +45,7 @@ https://stackoverflow.com/questions/10864755/adding-and-reading-from-a-config-fi
 using System.Configuration;
 ConfigurationManager.AppSettings["keyname"];
 
+https://stackoverflow.com/questions/8411184/can-i-pass-a-dbnull-to-integer-type-variable
+private void BindGridView(String Fromdate, String Todate, int? IsPending) {
+cmd.Parameters.AddWithValue("@intParam", 
+                 IsPending.HasValue ? (object)IsPending.Value : DBNull.Value);
