@@ -1,0 +1,3 @@
+https://httptoolkit.tech/
+	scoop bucket add extras
+	scoop install httptoolkit

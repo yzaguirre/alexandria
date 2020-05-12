@@ -1,0 +1,9 @@
+https://markdownmonster.west-wind.com/
+https://github.com/rickstrahl/MarkdownMonster
+	scoop bucket add extras
+	scoop install markdown-monster
+https://markdownmonster.west-wind.com/docs/_5fp0xp68p.htm#cli-commands
+Convert markdown to html
+	mmcli markdowntohtml -i "c:\temp\doc.md" -o "c:\temp\doc.html" --theme Dharkan --rendermode packagedhtml
+Converts a Markdown document to a PDF file.
+	mmcli markdowntopdf -i "c:\temp\doc.md" -o "c:\temp\doc.pdf" --theme Github --page-size A4

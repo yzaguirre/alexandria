@@ -31,3 +31,9 @@ https://reactnavigation.org/docs/en/drawer-navigator.html
 https://reactnavigation.org/docs/en/drawer-based-navigation.html
 https://stackoverflow.com/questions/53394982/react-navigation-swipe-on-drawer-does-not-work-in-android
 	npm install --save react-navigation-drawer
+
+Firebase
+https://dev.to/kartiknair/learn-how-to-build-a-fast-responsive-markdown-editor-with-react-firebase-swr-5h03
+	npx create-react-app markdown-editor
+	cd markdown-editor
+	yarn add firebase react-with-firebase-auth rich-markdown-editor @reach/router

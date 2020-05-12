@@ -1,0 +1,3 @@
+https://aralroca.com/blog/opencv-in-the-web
+https://news.ycombinator.com/item?id=23114141
+https://huningxin.github.io/opencv.js/samples/video-processing/index-wasm.html

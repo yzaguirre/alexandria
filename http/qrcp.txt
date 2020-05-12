@@ -1,0 +1,6 @@
+https://claudiodangelis.com/qrcp/
+https://github.com/claudiodangelis/qrcp
+	wget https://github.com/claudiodangelis/qrcp/releases/download/0.6.2/qrcp_0.6.2_linux_x86_64.deb
+	dpkg -i qrcp_0.6.2_linux_x86_64.deb
+Windows
+	scoop install qrcp
