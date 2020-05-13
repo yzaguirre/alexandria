@@ -552,6 +552,7 @@ http://homebank.free.fr/
 Books
 Competitive Programmer's Handbook https://cses.fi/book.html
 No bullshit linear algebra v2 release https://minireference.com/blog/no-bullshit-linear-algebra-v2-release/
+https://news.ycombinator.com/item?id=23151144
 
 mail lists
 https://news.ycombinator.com/item?id=14086259

@@ -1,0 +1,7 @@
+https://reactnativepaper.com/
+https://callstack.github.io/react-native-paper/
+https://callstack.github.io/react-native-paper/getting-started.html
+https://github.com/callstack/react-native-paper
+	yarn add react-native-paper
+If you're on a vanilla React Native project, you also need to install and link react-native-vector-icons.
+	yarn add react-native-vector-icons

@@ -1,4 +1,4 @@
-https://facebook.github.io/react-native/
+https://reactnative.dev/
 How Discord achieves native iOS performance with React Native
 https://news.ycombinator.com/item?id=21480493
 https://www.reddit.com/r/reactnative/comments/dr7l0y/best_youtube_channels_where_you_always_tend_to/
@@ -71,8 +71,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 	
 Start a new project
-x	npx react-native init MyTestApp
-	react-native init weekdays --version 0.31.0
+	npx react-native init MyTestApp
+	npx react-native init weekdays --version 0.31.0
 
 Running the emulator
 	cd weekdays

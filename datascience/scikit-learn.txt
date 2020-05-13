@@ -1,0 +1,5 @@
+https://scikit-learn.org/
+https://github.com/scikit-learn/scikit-learn
+https://heartbeat.fritz.ai/understand-the-fundamentals-of-the-k-nearest-neighbors-knn-algorithm-533dc0c2f45a
+Install
+	sudo -H pip3 install scikit-learn matplotlib
