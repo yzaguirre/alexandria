@@ -8,3 +8,6 @@ void main(){
 
 Run
 	dart main.dart
+
+Dart and PostgreSQL Tutorial
+https://www.youtube.com/watch?v=pG06Ml5C58E

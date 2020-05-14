@@ -2,3 +2,19 @@ https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-
 	apt install mariadb-server
 	mysql_secure_installation
 	mysqladmin -p -u root version
+Windows
+	scoop install mariadb
+Database has been initialized (username: root, password: <blank>)
+Default data directory is C:\Users\User\scoop\apps\mariadb\current\data
+Run to start the Database:
+	mysqld --standalone
+or
+	mysqld --console
+or run following command as administrator to register MariaDB as a service. See: https://mariadb.com/kb/en/library/mysql_install_dbexe/
+
+	mysql_install_db --service=MariaDB --password=NewRootPassword
+
+To stop and/or delete the Service run
+	sc stop MariaDB
+and
+	sc delete MariaDB

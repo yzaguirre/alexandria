@@ -1,0 +1,14 @@
+https://github.com/naoufal/react-native-touch-id
+https://github.com/oblador/react-native-keychain
+https://medium.com/react-native-training/integrate-touch-id-and-face-id-to-your-react-native-app-707e7db17edc
+https://www.folio3.com/mobile/blog/fingerprint-login-react-native/
+https://blog.theodo.com/2018/04/add-touch-id-react-native-app/
+
+	yarn add react-native-touch-id
+
+https://stackoverflow.com/questions/38107311/react-native-fingerprint-authentication-in-android
+https://github.com/hiteshsahu/FingerPrint-Authentication-With-React-Native-Android
+
+https://reactnativeexample.com/a-react-native-library-for-authenticating-users-with-fingerprint/
+
+https://github.com/SelfLender/react-native-biometrics

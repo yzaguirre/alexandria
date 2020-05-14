@@ -73,6 +73,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 Start a new project
 	npx react-native init MyTestApp
 	npx react-native init weekdays --version 0.31.0
+	npx react-native init MyTestApp --titile "My Test"
 
 Running the emulator
 	cd weekdays
@@ -173,10 +174,13 @@ https://github.com/react-native-community/async-storage
 https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
 https://stackoverflow.com/questions/53012355/how-to-delay-splashscreen-of-redux-persist-gate
 https://stackoverflow.com/questions/49695027/redux-persist-v5-state-not-persisted-in-asyncstorage
+https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage
+
 Store
 https://redux.js.org/introduction/getting-started
 https://redux.js.org/basics/store/
 https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage
+https://www.digitalocean.com/community/tutorials/react-react-native-redux
 
 WebView
 https://github.com/react-native-community/react-native-webview

@@ -1,4 +1,12 @@
+https://reactnavigation.org/
 React navigation 5
 https://www.youtube.com/watch?v=54aPIdfClY8&t=197s
 https://www.youtube.com/watch?v=z7wZSA176kE
 https://www.youtube.com/watch?v=4qq0GQPkfjI&feature=emb_title
+
+https://reactnavigation.org/docs/getting-started
+	yarn add @react-navigation/native
+	yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+https://reactnavigation.org/docs/stack-navigator
+	yarn add @react-navigation/stack

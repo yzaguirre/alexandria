@@ -1,3 +1,7 @@
+https://showcase.metamate.io/hackernews-trends
+https://news.ycombinator.com/item?id=23166442
+https://news.ycombinator.com/item?id=23141148
+
 system tray
 https://news.ycombinator.com/item?id=6819042
 https://github.com/captn3m0/hackertray/
