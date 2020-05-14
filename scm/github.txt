@@ -79,3 +79,19 @@ Verifying Tags
 https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls#commit-shas
 https://stackoverflow.com/questions/8910271/how-can-i-reference-a-commit-in-an-issue-comment-on-github
 Username/Repository@SHA	
+
+https://github.com/cli/cli/
+https://github.com/cli/cli/releases/tag/v0.8.0
+https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
+https://news.ycombinator.com/item?id=23161684
+	wget https://github.com/cli/cli/releases/download/v0.8.0/gh_0.8.0_linux_amd64.deb
+	dpkg -i gh_0.8.0_linux_amd64.deb
+Windows
+	scoop bucket add github-gh https://github.com/cli/scoop-gh.git
+	scoop install gh
+Update
+	scoop update gh
+https://cli.github.com/manual/
+Create repository
+	gh repo create my-cool-project -d "My description" -t "my_team" -h "https://homepage.com"
+Add collaboratos
