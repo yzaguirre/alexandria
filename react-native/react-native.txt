@@ -305,3 +305,23 @@ https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd921
 https://stackoverflow.com/questions/38580858/how-to-change-display-name-of-an-app-in-react-native
 https://saumya.github.io/ray/articles/72/
 https://stackoverflow.com/questions/32830046/renaming-a-react-native-project
+
+Override Native SDK Versions
+https://rnfirebase.io/#overriding-native-sdk-versions
+https://developer.android.com/studio/releases/build-tools
+https://developer.android.com/about/versions/10/features
+https://developer.android.com/about/versions/marshmallow/android-6.0
+https://stackoverflow.com/questions/26694108/what-is-the-difference-between-compilesdkversion-and-targetsdkversion
+https://stackoverflow.com/questions/28295933/difference-between-build-gradleproject-and-build-gradlemodule
+Check with $ANDROID_HOME/build-tools
+Android: android/app/build.gradle and android/build.gradle
+buildToolsVersion = "29.0.3"
+minSdkVersion = 23
+compileSdkVersion = 29
+targetSdkVersion = 28
+
+Make sure to clean the android directory
+	.\gradlew clean
+
+build.gradle
+https://stackoverflow.com/questions/28295933/difference-between-build-gradleproject-and-build-gradlemodule

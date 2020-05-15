@@ -1,5 +1,30 @@
 https://firebase.google.com/
 https://firebase.google.com/docs
 https://console.firebase.google.com/u/0/?pli=1
+
 https://dev.to/kartiknair/learn-how-to-build-a-fast-responsive-markdown-editor-with-react-firebase-swr-5h03
+https://github.com/armand1m/react-with-firebase-auth#readme
 	yarn add firebase react-with-firebase-auth
+
+https://rnfirebase.io/
+https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497
+Version 6 of this library wants you to only install those dependencies based on Firebase features that you want to use. For example, in the current app, to support the email authentication feature, you'll to install the auth and core app packages.
+	yarn add @react-native-firebase/app @react-native-firebase/auth
+Add Firebase credentials to your iOS app
+
+Firebase provides a file called GoogleService-Info.plist that contains all the API keys as well as other authentication credentials for iOS devices.
+
+Android Setup
+Search the manifest tag in android/app/src/main/AndroidManifest.xml
+
+Download the google-services.json file and place it inside of your project at the following location: android/app/google-services.json.
+
+Configure Firebase with Android credentials
+https://stackoverflow.com/questions/40232312/could-not-find-method-classpath-for-arguments-com-google-gmsgoogle-services
+Add google-service plugin as a dependency inside of your android/build.gradle
+classpath("com.google.gms:google-services:4.2.0")
+Or latest based on firebase console:
+classpath("com.google.gms:google-services:4.3.3")
+
+Lastly, execute the plugin by adding the following to the very bottom of your android/app/build.gradle file:
+apply plugin: "com.google.gms.google-services"

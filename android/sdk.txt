@@ -52,3 +52,6 @@ http://stackoverflow.com/questions/4454107/how-to-convert-an-eclipse-android-pro
 	$ android update project -p .
 
 http://developer.android.com/tools/building/building-cmdline.html
+
+https://stackoverflow.com/questions/26694108/what-is-the-difference-between-compilesdkversion-and-targetsdkversion
+Check with $ANDROID_HOME/build-tools
