@@ -1,3 +1,8 @@
+https://www.python.org/
+5 Python tricks that will improve your life
+Aaron Jack
+https://www.youtube.com/watch?v=5tcs2qXP3Pg
+
 http://www.emoticode.net/python/hadcore-httprequest.html
 http://www.emoticode.net/python/httprequest.html
 

@@ -1,0 +1,3 @@
+https://pandas.pydata.org/
+	sudo -H pip3 install pandas
+See ~/Libros/Quick Reference Guide/Pandas_Cheat_Sheet.pdf

@@ -1,4 +1,5 @@
 https://matplotlib.org/
+	sudo -H pip3 install matplotlib
 
 Parwiz Forogh
 Python For Data Science
