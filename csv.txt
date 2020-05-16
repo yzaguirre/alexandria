@@ -16,3 +16,6 @@ http://csvtosql.sourceforge.net/
 xsv
 https://github.com/BurntSushi/xsv
 	scoop install xsv
+
+http://thomasburette.com/blog/2014/05/25/so-you-want-to-write-your-own-CSV-code/
+https://news.ycombinator.com/item?id=23190517
