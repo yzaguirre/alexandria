@@ -1,0 +1,9 @@
+https://processing.org/download/
+https://github.com/processing
+	wget https://download.processing.org/processing-3.5.4-linux64.tgz
+	tar xf processing-3.5.4-linux64.tgz -C /opt
+	mv /opt/processing{-3.5.4,}
+	/opt/processing/install.sh
+Windows
+	scoop bucket add extras
+	scoop install processing

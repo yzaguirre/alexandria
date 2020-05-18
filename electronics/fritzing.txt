@@ -1,0 +1,12 @@
+https://fritzing.org
+	wget https://github.com/fritzing/fritzing-app/releases/download/CD-498/fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2
+	wget https://github.com/fritzing/fritzing-app/releases/download/CD-498/fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2.md5
+Edit the md5 file
+	md5sum -c --ignore-missing fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2.md5
+	tar xf fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2 -C /opt
+	mv /opt/fritzing* /opt/fritzing
+	/opt/fritzing/install_fritzing.sh
+It creates ~/.mime.types
+Windows
+	scoop bucket add extras
+	scoop install fritzing
