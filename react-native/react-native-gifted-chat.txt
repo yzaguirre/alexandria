@@ -1,0 +1,4 @@
+https://gifted.chat/
+https://github.com/FaridSafi/react-native-gifted-chat
+https://github.com/amandeepmittal/react-native-examples/tree/master/ChatApp
+	yarn add react-native-gifted-chat

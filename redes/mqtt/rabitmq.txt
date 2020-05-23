@@ -1,0 +1,3 @@
+https://www.rabbitmq.com/
+https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html
+https://news.ycombinator.com/item?id=23258301

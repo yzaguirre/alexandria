@@ -2,9 +2,12 @@ https://reactnativepaper.com/
 https://callstack.github.io/react-native-paper/
 https://callstack.github.io/react-native-paper/getting-started.html
 https://github.com/callstack/react-native-paper
+https://github.com/oblador/react-native-vector-icons
 	yarn add react-native-paper
 If you're on a vanilla React Native project, you also need to install and link react-native-vector-icons.
 	yarn add react-native-vector-icons
+Android part, open android/app/build.gradle to include the following line:
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
 https://callstack.github.io/react-native-paper/icon-button.html
 

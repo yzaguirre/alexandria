@@ -21,3 +21,7 @@ Make a "better" quality
 	convert 1.jpg -resize 1000 1.tif
 	convert 1.jpg -resize 5000 1.tif
 And run tesseract again
+
+https://news.ycombinator.com/item?id=23270970
+https://tesseract-ocr.github.io/
+https://github.com/tesseract-ocr/tessdata

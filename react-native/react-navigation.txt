@@ -1,5 +1,6 @@
 https://reactnavigation.org/
 React navigation 5
+https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1
 https://www.youtube.com/watch?v=54aPIdfClY8&t=197s
 https://www.youtube.com/watch?v=z7wZSA176kE
 https://www.youtube.com/watch?v=4qq0GQPkfjI&feature=emb_title

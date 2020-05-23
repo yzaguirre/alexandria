@@ -1,0 +1,2 @@
+#207 Why most Arduino Soil Moisture Sensors suck (incl. solution)
+https://www.youtube.com/watch?v=udmJyncDvw0

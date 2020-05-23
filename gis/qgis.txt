@@ -1,1 +1,22 @@
 https://www.qgis.org/
+	vim /etc/apt/sources.list.d/qgis.list
+deb     https://qgis.org/debian unstable main
+deb-src https://qgis.org/debian unstable main
+
+Get the key
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
+or
+	wget -O - https://qgis.org/downloads/qgis-2019.gpg.key | gpg --import
+	gpg --fingerprint 51F523511C7028C3
+8D5A 5B20 3548 E500 4487  DD19 51F5 2351 1C70 28C3
+	gpg --export --armor 51F523511C7028C3 | sudo apt-key add -
+
+	apt update
+	apt install qgis qgis-plugin-grass
+For the server
+	apt install qgis-server
+Windows
+	wget https://qgis.org/downloads/QGIS-OSGeo4W-3.12.3-1-Setup-x86_64.exe
+	wget https://qgis.org/downloads/QGIS-OSGeo4W-3.12.3-1-Setup-x86_64.exe.sha256sum
+	sha256sum -c QGIS-OSGeo4W-3.12.3-1-Setup-x86_64.exe.sha256sum
+	explorer QGIS-OSGeo4W-3.12.3-1-Setup-x86_64.exe

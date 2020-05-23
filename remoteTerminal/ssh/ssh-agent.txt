@@ -1,6 +1,9 @@
 SSH Agents
 https://linux.die.net/man/1/ssh-agent
 
+https://smallstep.com/blog/ssh-agent-explained/
+https://news.ycombinator.com/item?id=23241934
+
 http://unixwiz.net/techtips/ssh-agent-forwarding.html
 
 https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login

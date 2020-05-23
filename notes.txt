@@ -1,6 +1,6 @@
 http://basket.kde.org/index.php
 
-http://www.zim-wiki.org/downloads/
+https://www.zim-wiki.org/downloads.html
 https://addons.mozilla.org/fr/firefox/addon/zim-clip/
 	# dpkg -i zim_0.60_all.deb
 

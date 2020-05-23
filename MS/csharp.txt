@@ -1,3 +1,6 @@
+https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/
+https://news.ycombinator.com/item?id=23249171
+
 Encode a string
 https://stackoverflow.com/questions/11743160/how-do-i-encode-and-decode-a-base64-string
 Encode

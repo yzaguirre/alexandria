@@ -1,0 +1,6 @@
+https://codewith.mu/
+	sudo -H pip3 install mu-editor
+	mu-editor
+Windows
+	scoop bucket add extras
+	scoop install mu-editor

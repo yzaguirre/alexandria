@@ -1,5 +1,10 @@
 https://elixir-lang.org/
 https://github.com/elixir-lang/elixir
+https://elixirschool.com/en/
+https://elixir-lang.slack.com/
+
+https://www.ramblingcode.dev/posts/lovely_week_with_elixir/
+https://news.ycombinator.com/item?id=23249824
 https://coder.show/325
 https://teamgaslight.com/blog/elm-elixir-and-phoenix-reflecting-on-a-functional-full-stack-project
 https://news.ycombinator.com/item?id=16520511

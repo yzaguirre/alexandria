@@ -1,0 +1,4 @@
+https://nixos.org/
+https://engineering.shopify.com/blogs/engineering/what-is-nix
+https://news.ycombinator.com/item?id=23251754
+https://www.youtube.com/playlist?list=PLRGI9KQ3_HP_OFRG6R-p4iFgMSK1t5BHs
