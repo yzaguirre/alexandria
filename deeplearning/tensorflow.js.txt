@@ -1,7 +1,23 @@
-https://js.tensorflow.org/
+https://www.tensorflow.org/js/
+https://www.tensorflow.org/js/models
+https://github.com/tensorflow/tfjs
+https://github.com/tensorflow/tfjs-examples
+https://glitch.com/@TensorFlowJS
+#MadeWithTFJS
 Data never leaves the client
 
+Models
+Layers API
+Core / Ops API (Eager)
+
+Client
+
+Browser / WeChat / React Native
+
+CPU WebGL WASM
+
+https://codepen.io/topic/tensorflow
 https://github.com/llSourcell/tensorflow.js_explained
-https://github.com/tensorflow/tfjs-examples
+
 https://www.youtube.com/watch?v=Y_XM3Bu-4yc
 https://www.youtube.com/watch?v=YB-kfeNIPCE
