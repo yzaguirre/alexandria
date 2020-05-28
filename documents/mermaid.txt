@@ -1,6 +1,6 @@
-https://mermaidjs.github.io
+https://mermaid-js.github.io/mermaid/#/
 https://news.ycombinator.com/item?id=18788244
-https://github.com/mermaidjs/mermaid.cli
+https://github.com/mermaid-js/mermaid
 	npm install -g mermaid.cli
 	mmdc -h
 	mmdc -i input.mmd -o output.svg

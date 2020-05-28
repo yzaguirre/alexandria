@@ -1,0 +1,6 @@
+https://graphviz.org/
+https://www.guyrutenberg.com/2008/11/09/drawing-finite-automata-and-state-machines/
+
+https://news.ycombinator.com/item?id=16077158
+http://www.webgraphviz.com/
+http://viz-js.com/
