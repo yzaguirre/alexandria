@@ -9,18 +9,24 @@ https://metrics.torproject.org/networksize.html
 Tunnels
 https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts
 
-https://www.torproject.org/projects/torbrowser.html.en#downloads
+https://www.torproject.org/download/#downloads
+https://support.torproject.org/tbb/how-to-verify-signature/
 Verify download
-https://www.torproject.org/docs/verifying-signatures.html.en
 https://www.torproject.org/docs/debian.html.en
-xerinn	gpg --keyserver keys.gnupg.net --recv F65C2036
-x	gpg --keyserver x-hkp://pool.sks-keyservers.net --recv-keys 0x416F061063FEE659
-	gpg --keyserver keys.gnupg.net --recv 0x4E2C6E8793298290
-	gpg --verify tor-browser-linux64-5.0.7_en-US.tar.xz.asc
+	gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
+	wget https://www.torproject.org/dist/torbrowser/9.0.10/tor-browser-linux64-9.0.10_en-US.tar.xz
+	wget https://www.torproject.org/dist/torbrowser/9.0.10/tor-browser-linux64-9.0.10_en-US.tar.xz.asc
+	gpg --verify tor-browser-linux64-9.0.10_en-US.tar.xz.asc
 	rm -r /VMs/opt/tor
 	tar xf tor-browser-linux* -C /VMs/opt/
 	mv /VMs/opt/{tor-browser_*,tor}
 	ln -s /VMs/opt/tor/Browser/start-tor-browser /usr/local/bin/tor
+Windows
+	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe
+	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe.asc
+	gpg --verify torbrowser-install-win64-9.0.10_en-US.exe.asc
+	explorer torbrowser-install-win64-9.0.10_en-US.exe
+Installs in "~/Desktop/Tor Browser"
 
 As a service
 https://www.torproject.org/docs/debian.html.en

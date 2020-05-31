@@ -42,3 +42,14 @@ SELECT
   name, recovery_model_desc
 FROM sys.databases 
 WHERE database_id < 5;
+
+Padding
+https://stackoverflow.com/questions/16760900/pad-a-string-with-leading-zeros-so-its-3-characters-long-in-sql-server-2008
+If the field is already a string, this will work
+	SELECT RIGHT('000'+ISNULL(field,''),3)
+
+If you want nulls to show as '000'
+
+It might be an integer -- then you would want
+
+	SELECT RIGHT('000'+CAST(field AS VARCHAR(3)),3)

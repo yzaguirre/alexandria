@@ -1,5 +1,7 @@
+https://micro-editor.github.io/
 https://github.com/zyedidia/micro
-	wget https://github.com/zyedidia/micro/releases/download/v1.0.3/micro-1.0.3-linux64.tar.gz
-	tar xf micro-1.0.3-linux64.tar.gz
+https://news.ycombinator.com/item?id=23334190
+	wget https://github.com/zyedidia/micro/releases/download/v2.0.4/micro-2.0.4-linux64.tar.gz
+	tar xf micro-2.0.4-linux64.tar.gz
 Or
 	go get -u github.com/zyedidia/micro/...
