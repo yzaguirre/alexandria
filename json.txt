@@ -18,3 +18,10 @@ Example JSON
 
 We want to pull out all of the "html_url" fields inside that array of parent commits and make a simple list of strings to go along with the "message" and "author" fields we already have.
 	jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
+
+https://github.com/fiatjaf/jqview
+simplest possible native GUI for inspecting JSON objects with jq
+https://news.ycombinator.com/item?id=23433290
+	wget https://github.com/fiatjaf/jqview/releases/download/v1/jqview_linux_amd64
+	chmod u+x jqview_linux_amd64
+	mv jqview_linux_amd64 /usr/local/bin/jqview
