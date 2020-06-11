@@ -1,0 +1,3 @@
+https://github.com/pfalcon/pycopy
+Pycopy - a minimalist and memory-efficient Python implementation. Good for desktop, cloud, constrained systems, microcontrollers, and just everything. http://pycopy.readthedocs.io
+https://news.ycombinator.com/item?id=23446721

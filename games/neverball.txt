@@ -1,0 +1,5 @@
+https://neverball.org
+https://github.com/Neverball
+Windows
+	scoop bucket add games
+	scoop install neverball

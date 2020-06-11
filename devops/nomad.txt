@@ -1,0 +1,4 @@
+https://www.nomadproject.io/
+https://github.com/hashicorp/nomad
+https://blog.cloudflare.com/how-we-use-hashicorp-nomad/
+https://news.ycombinator.com/item?id=23439788

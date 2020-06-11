@@ -1,0 +1,2 @@
+https://snir.dev/blog/apartments-bot/
+https://github.com/snird/apartments_bot

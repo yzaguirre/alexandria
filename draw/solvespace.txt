@@ -1,0 +1,3 @@
+http://solvespace.com/index.pl
+https://github.com/solvespace/solvespace/
+https://www.farwire.net/SolveSpace-LearningGuide.htm
