@@ -13,6 +13,6 @@ https://github.com/genymobile/scrcpy/
 scrcpy with scoop
 	scoop install scrcpy
 Directory: ~\scoop\apps\scrcpy\current
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9/guiscrcpy.exe
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9.3/guiscrcpy.exe
 Save it at C:\Program Files\guiscrpy
 Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Menu

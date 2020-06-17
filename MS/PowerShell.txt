@@ -1,3 +1,22 @@
+https://github.com/powershell/powershell
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1804
+	wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+Register the Microsoft repository GPG keys
+	sudo dpkg -i packages-microsoft-prod.deb
+Update the list of products
+	sudo apt update
+Enable the "universe" repositories
+	sudo add-apt-repository universe
+Install PowerShell
+	sudo apt install powershell
+Start PowerShell
+	pwsh
+
+Manual install
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.2/powershell_7.0.2-1.ubuntu.18.04_amd64.deb
+	dpkg -i powershell_7.0.2-1.ubuntu.18.04_amd64.deb
+	apt install -f
+
 http://blogs.technet.com/b/heyscriptingguy/archive/2013/06/02/weekend-scripter-install-powershell-3-0-on-windows-7.aspx
 $psversiontable
 Make shortcut to Desktop

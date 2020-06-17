@@ -1,5 +1,7 @@
 https://excalidraw.com/
 https://github.com/excalidraw/excalidraw
+https://blog.excalidraw.com/building-excalidraw-p2p-collaboration-feature/
+https://news.ycombinator.com/item?id=23525648
 	git clone https://github.com/excalidraw/excalidraw.git
 	npm install
 	npm start

@@ -1,6 +1,18 @@
 https://graphviz.org/
 https://www.guyrutenberg.com/2008/11/09/drawing-finite-automata-and-state-machines/
+https://smusamashah.github.io/text-to-diagram
 
 https://news.ycombinator.com/item?id=16077158
 http://www.webgraphviz.com/
 http://viz-js.com/
+
+http://magjac.com/graphviz-visual-editor/
+
+https://ncona.com/2020/06/create-diagrams-with-code-using-graphviz/
+https://www.reddit.com/r/programming/comments/h0l2c5/create_diagrams_with_code_using_graphviz/
+https://news.ycombinator.com/item?id=23475225
+
+https://edotor.net/
+
+https://sketchviz.com/new
+

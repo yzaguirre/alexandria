@@ -1,4 +1,5 @@
 https://geany.org/
+https://news.ycombinator.com/item?id=23524336
 	apt install geany
 MS Windows install
 	curl -o SHA256SUMS https://download.geany.org/SHA256SUMS
