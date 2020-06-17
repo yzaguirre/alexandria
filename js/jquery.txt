@@ -30,6 +30,10 @@ $('select').on('change', function(e){
     e.preventDefault(); 
 }); 
 
+Select the first option
+https://stackoverflow.com/questions/1394550/how-to-select-the-first-element-in-the-dropdown-using-jquery
+$("select").prop("selectedIndex",0);
+
 https://stackoverflow.com/questions/6533138/javascript-selected-radio
 $('input[name=u_type]:checked').val();
 

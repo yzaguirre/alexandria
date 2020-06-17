@@ -43,3 +43,6 @@ https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s
 	certbot --apache -d example.com -d www.example.com
 	certbot --apache certonly -d example.com -d www.example.com
 Cronjob installed at /etc/cron.d
+
+Lets encrypt mod
+https://github.com/icing/mod_md

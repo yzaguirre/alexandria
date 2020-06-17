@@ -1,9 +1,10 @@
 https://guiscrcpy.github.io/
 https://github.com/srevinsaju/guiscrcpy
 https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9/guiscrcpy-x86_64.AppImage
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9.3/guiscrcpy-x86_64.AppImage
 	chmod u+x guiscrcpy-x86_64.AppImage
-	./guiscrcpy-x86_64.AppImage
+	mv guiscrcpy-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/guiscrcpy-x86_64.AppImage /usr/local/bin/guiscrcpy
 Windows
 Install scrcpy
 https://github.com/genymobile/scrcpy/
