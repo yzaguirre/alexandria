@@ -54,3 +54,17 @@ https://stackoverflow.com/questions/43431550/async-await-class-constructor
 https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 https://medium.com/programmers-developers/synchronous-fetch-with-async-await-b45d87a16177
 https://dev.to/johnpaulada/synchronous-fetch-with-asyncawait
+
+Float
+https://stackoverflow.com/questions/34057595/allow-2-decimal-places-in-input-type-number
+Step 1: Hook your HTML number input box to an onchange event
+
+myHTMLNumberInput.onchange = setTwoNumberDecimal;
+or in the HTML code
+
+<input type="number" onchange="setTwoNumberDecimal" min="0" max="10" step="0.25" value="0.00" />
+Step 2: Write the setTwoDecimalPlace method
+
+function setTwoNumberDecimal(event) {
+    this.value = parseFloat(this.value).toFixed(2);
+}
