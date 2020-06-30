@@ -104,7 +104,7 @@ var sharedBlacklist = [
 	npx react-native run-android
 
 Generating Signed APK
-https://facebook.github.io/react-native/docs/signed-apk-android#generating-the-release-apk
+https://reactnative.dev/docs/signed-apk-android#generating-the-release-apk
 	keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 Copy your keystore in the following directory: android/app
 Edit android/gradle.properties

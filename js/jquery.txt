@@ -43,3 +43,7 @@ https://stackoverflow.com/questions/11235622/jquery-disable-form-submit-on-enter
 $("#myeditablediv").keypress(function(e) {
     if (isNaN(String.fromCharCode(e.which))) e.preventDefault();
 });
+
+Ajax file upload
+https://codepedia.info/generic-handler-ashx-file-post-send-json-data-parameters-in-asp-net-c-jquery/
+https://codepedia.info/upload-image-using-jquery-ajax-asp-net-c-sharp/#add_Generic_handler_serverside

@@ -1,0 +1,11 @@
+https://github.com/uxsolutions/bootstrap-datepicker
+https://bootstrap-datepicker.readthedocs.io/en/latest/options.html
+https://stackoverflow.com/questions/11933173/how-to-restrict-the-selectable-date-ranges-in-bootstrap-datepicker
+Use ISO dates
+
+	let year = 2008
+	let startOfYear = new Date(year, 0, 1);
+	let endOfYear = new Date(year, 11, 31);
+
+	document.getElementById("datefilter").setAttribute("min", startOfYear.toISOString().split('T')[0]);
+	document.getElementById("datefilter").setAttribute("max", endOfYear.toISOString().split('T')[0]);

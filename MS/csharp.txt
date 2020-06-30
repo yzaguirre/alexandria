@@ -52,3 +52,6 @@ https://stackoverflow.com/questions/8411184/can-i-pass-a-dbnull-to-integer-type-
 private void BindGridView(String Fromdate, String Todate, int? IsPending) {
 cmd.Parameters.AddWithValue("@intParam", 
                  IsPending.HasValue ? (object)IsPending.Value : DBNull.Value);
+
+https://stackoverflow.com/questions/4657974/how-to-generate-unique-file-names-in-c-sharp
+https://docs.microsoft.com/en-us/dotnet/api/system.io.path.gettempfilename?redirectedfrom=MSDN&view=netcore-3.1#System_IO_Path_GetTempFileName

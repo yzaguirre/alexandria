@@ -68,3 +68,7 @@ Step 2: Write the setTwoDecimalPlace method
 function setTwoNumberDecimal(event) {
     this.value = parseFloat(this.value).toFixed(2);
 }
+
+File extension validation
+https://stackoverflow.com/questions/8231058/file-type-validation-with-javascript
+
