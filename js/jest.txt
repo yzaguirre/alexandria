@@ -1,0 +1,93 @@
+https://jestjs.io/
+	mkdir jsbase
+	cd jsbase
+	git init
+	npm init
+	mkdir -p src/__test__
+	touch src/index.js src/__test__/global.test.js
+Using NPM
+	npm install jest --save-dev
+	npm install -g jest
+Using yarn
+	yarn add --dev jest
+	yarn global add jest
+
+	jest --init
+
+Other installs
+https://airbnb.io/projects/enzyme/
+	npm install jest enzyme enzyme-adapter-react-16 --save-dev
+	npm install react-test-renderer --save-dev
+
+	vim src/__test__/global.test.js
+const text = "Hola Mundo";
+const fruits = ['manzana', 'melon', 'banana'];
+
+test('Debe contener un texto', () => {
+	expect(text).toMatch(/Mundo/);
+});
+test('¿Tenemos una banana?', () => {
+	expect(fruits).toContain('banana');
+	//expect(fruits).toContain('bananas');
+})
+
+test('Mayor que', () => {
+	expect(10).toBeGreaterThan(9);
+})
+
+test('Verdadero', () => {
+	expect(true).toBeTruthy();
+})
+
+const reverseString = (str, callback) => {
+	callback(str.split("").reverse().join(""))
+}
+
+test("Probar un Callback", () => {
+	reverseString('Hola', (str) => {
+		expect(str).toBe('aloH');
+	})
+})
+
+const reverseString2 = str => {
+	return new Promise((resolve, reject) => {
+		if (!str) {
+			reject(Error('Error'));
+		}
+		resolve(str.split("").reverse().join(""))
+	})
+}
+
+test("Probar una promesa", () => {
+	return reverseString2('Hola')
+		.then(string => {
+			expect(string).toBe("aloH");
+		});
+})
+
+test('Probar async/await', async () => {
+	const string = await reverseString2('hola');
+	expect(string).toBe('aloH');
+})
+
+afterEach(() => console.log('Despues de cada prueba'));
+afterAll(() => console.log('Despues de todas las pruebas'));
+
+beforeEach(() => console.log('Antes de cada prueba'));
+beforeAll(() => console.log('Antes de todas las pruebas'));
+
+	vim package.json
+"test": "jest",
+"test:watch": "jest --watch"
+
+	npm run test
+or	npm test
+	npm run test:watch
+
+Reporte
+	jest --coverage
+Checkout coverage/lcov-report/index.html
+
+Update snapshots
+	jest --updateSnapshot
+
