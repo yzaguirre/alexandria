@@ -1,0 +1,3 @@
+https://www.selenium.dev/
+https://medium.com/ml-book/web-scraping-using-selenium-python-3be7b8762747
+	sudo -H pip3 install selenium

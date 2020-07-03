@@ -1,0 +1,3 @@
+https://github.com/kotartemiy/pygooglenews
+https://news.ycombinator.com/item?id=23701343
+	sudo -H pip3 install pygooglenews

@@ -62,3 +62,5 @@ Create models
 https://www.digitalocean.com/community/tutorials/how-to-create-django-models
 Create views
 https://www.digitalocean.com/community/tutorials/how-to-create-django-views
+
+https://www.digitalocean.com/community/tutorials/django-authentication-with-facebook-instagram-and-linkedin

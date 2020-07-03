@@ -1,0 +1,5 @@
+https://docs.scrapy.org/en/latest/
+https://docs.scrapy.org/en/latest/intro/overview.html
+https://doc.scrapy.org/en/latest/topics/commands.html
+https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3
+	sudo -H pip3 install Scrapy

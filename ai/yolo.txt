@@ -1,0 +1,2 @@
+yolo or You Only Look Once is a Object Detection model. Check darkflow on Github
+​BTW darknet is TF implementation of YOLO

@@ -1,0 +1,3 @@
+https://wttr.in/
+https://github.com/chubin/wttr.in
+https://news.ycombinator.com/item?id=23646953

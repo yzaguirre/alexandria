@@ -210,6 +210,9 @@ https://www.traccar.org/
 
 saas
 firebase
+https://linear.app
+https://news.ycombinator.com/item?id=23693029
+https://medium.com/linear-app/practices-for-building-linear-is-now-open-for-all-234f7cf9a3d0
 
 Feeds
 canto
