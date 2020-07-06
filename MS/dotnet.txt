@@ -11,17 +11,15 @@ Resources
 	- SDK Documentation https://aka.ms/dotnet-cli-docs
 	- Release Notes https://aka.ms/20-p2-rel-notes
 	- Tutorials https://aka.ms/dotnet-tutorials
-https://github.com/dotnet/cli
-	apt install curl libunwind8 gettext
-	curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
-	mkdir -p /DVD/opt/dotnet
-	tar xf dotnet.tar.gz -C /opt/dotnet
-	sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-Download for Ubuntu 18.10
-	wget https://packages.microsoft.com/config/ubuntu/18.10/packages-microsoft-prod.deb
-	sudo dpkg -i packages-microsoft-prod.deb
-	sudo apt update
-	sudo apt install dotnet-sdk-2.2
+https://github.com/dotnet/sdk
+	wget https://download.visualstudio.microsoft.com/download/pr/8db2b522-7fa2-4903-97ec-d6d04d297a01/f467006b9098c2de256e40d2e2f36fea/dotnet-sdk-3.1.301-linux-x64.tar.gz
+	sha512sum dotnet-sdk-3.1.301-linux-x64.tar.gz
+dd39931df438b8c1561f9a3bdb50f72372e29e5706d3fb4c490692f04a3d55f5acc0b46b8049bc7ea34dedba63c71b4c64c57032740cbea81eef1dce41929b4e
+	mkdir /opt/dotnet
+	tar xf dotnet-sdk-3.1.301-linux-x64.tar.gz -C /opt/dotnet
+export DOTNET_ROOT=/opt/dotnet
+export PATH=$PATH:/opt/dotnet
+
 Write this in .profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 Start a new project
