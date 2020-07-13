@@ -1,8 +1,8 @@
 https://nextcloud.com
 Desktop client
 https://download.nextcloud.com/desktop/releases/Linux/latest
-	chmod u+x Nextcloud-2.6.4-x86_64.AppImage
-	./Nextcloud-2.6.4-x86_64.AppImage
+	chmod u+x Nextcloud-2.6.5-x86_64.AppImage
+	./Nextcloud-2.6.5-x86_64.AppImage
 
 Off maintenance mode
 	php occ maintenance:mode --off

@@ -1,4 +1,5 @@
 https://code.visualstudio.com/
+https://code.visualstudio.com/updates/
 Install folder at
 C:\Users\Rlemus\AppData\Local\Programs\Microsoft VS Code
 

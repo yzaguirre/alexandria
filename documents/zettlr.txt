@@ -1,0 +1,14 @@
+https://www.zettlr.com/
+https://github.com/Zettlr/Zettlr
+https://news.ycombinator.com/item?id=23723775
+Windows
+	scoop bucket add extras
+	scoop install zettlr
+App Image
+	wget https://github.com/Zettlr/Zettlr/releases/download/v1.7.0/Zettlr-1.7.0-x86_64.AppImage
+	chmod u+x Zettlr-1.7.0-x86_64.AppImage
+	mv Zettlr-1.7.0-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/Zettlr-1.7.0-x86_64.AppImage /usr/local/bin/zettlr
+Debian
+	wget https://github.com/Zettlr/Zettlr/releases/download/v1.7.0/Zettlr-1.7.0-amd64.deb
+	sudo dpkg -i Zettlr-1.7.0-amd64.deb

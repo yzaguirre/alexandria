@@ -35,3 +35,54 @@ dotnet add package Microsoft.EntityFrameworkCore.SQLite
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+Add a database context class
+	code Data/RazorPagesMovieContext.cs
+using Microsoft.EntityFrameworkCore;
+
+namespace RazorPagesMovie.Data
+{
+    public class RazorPagesMovieContext : DbContext
+    {
+        public RazorPagesMovieContext (
+            DbContextOptions<RazorPagesMovieContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<RazorPagesMovie.Models.Movie> Movie { get; set; }
+    }
+}
+
+Add a database connection string
+	code appsettings.json
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "MovieContext": "Data Source=MvcMovie.db"
+  }
+
+Register the database context
+using RazorPagesMovie.Data;
+using Microsoft.EntityFrameworkCore;
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddRazorPages();
+
+    services.AddDbContext<RazorPagesMovieContext>(options =>
+        options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
+}
+
+
+Scaffold the movie model
+Windows
+	dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages\Movies --referenceScriptLibraries
+Linux
+	dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries
+
+Use SQLite for development, SQL Server for production
+See Startup.cs
+
+Initial migration
+	dotnet ef migrations add InitialCreate
+	dotnet ef database update

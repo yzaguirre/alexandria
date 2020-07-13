@@ -1,0 +1,17 @@
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=linux
+https://docs.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-3.1&tabs=linux
+	dotnet new webapp -o aspnetcoreapp
+Run the app
+	cd aspnetcoreapp
+	dotnet watch run
+https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1#recommended-learning-path
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-3.1
+Global install
+	dotnet tool install -g dotnet-aspnet-codegenerator
+
+Global update
+	dotnet tool update -g dotnet-aspnet-codegenerator
+Synopsis
+	dotnet aspnet-codegenerator [arguments] [-p|--project] [-n|--nuget-package-dir] [-c|--configuration] [-tfm|--target-framework] [-b|--build-base-path] [--no-build] 
+
+https://thecodebuzz.com/return-download-file-asp-net-core-webapi/

@@ -41,6 +41,9 @@ Commit with message
 Commit files already staged
 	git commit -a
 	git commit -am "Modified this file"
+https://www.stefanjudis.com/today-i-learned/git-commit-accepts-several-message-flags-m-to-allow-multiline-commits/
+https://news.ycombinator.com/item?id=23767866
+	git commit -m "Fix issue" -m "Lorem ipsum..." -e
 
 Remove a file
 	git rm Test2.txt

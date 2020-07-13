@@ -38,6 +38,7 @@ https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net
 	dotnet add package System.Configuration.ConfigurationManager
 	dotnet add package Google.Apis.Gmail.v1
 	dotnet add package Open-XML-SDK
+	dotnet add package Newtonsoft.Json
 SQL Connection
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-string-builders
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/establishing-the-connection
@@ -76,3 +77,19 @@ Make installer
 https://wixtoolset.org/
 https://nblumhardt.com/2017/04/netcore-msi/
 https://www.youtube.com/watch?v=6Yf-eDsRrnM
+
+Excel
+https://thecodebuzz.com/read-excel-file-in-dotnet-core-2-1/
+	dotnet add package Open-XML-SDK
+https://stackoverflow.com/questions/18784697/how-to-import-jsonconvert-in-c-sharp-application
+	dotnet add package Newtonsoft.Json
+Is there a way to set the width of a cell when i append it to the row? My header data is quite wide.
+You can use Cell 'Column' properties to define the required width of your header. Hope this helps.
+
+HTTPClient
+https://derekarends.com/how-to-create-http-request-asp-dotnet-core/
+https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.getasync?view=netcore-3.1#System_Net_Http_HttpClient_GetAsync_System_Uri_
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client
+https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netcore-3.1
+https://csharp.hotexamples.com/examples/-/HttpRequestMessage/-/php-httprequestmessage-class-examples.html
+https://stackoverflow.com/questions/10679214/how-do-you-set-the-content-type-header-for-an-httpclient-request

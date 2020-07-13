@@ -1,0 +1,6 @@
+Icdiff: Side-by-side highlighted command line diffs
+https://www.jefftk.com/icdiff
+https://github.com/jeffkaufman/icdiff
+https://news.ycombinator.com/item?id=23744381
+	sudo -H pip3 install icdiff
+	icdiff [options] left_file right_file
