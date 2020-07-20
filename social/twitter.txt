@@ -24,3 +24,6 @@ http://git.ao2.it/tweeper.git/
 	mv tweeper /usr/share/php
 	ln -s /usr/share/php/tweeper/tweeper /usr/bin
 	tweeper https://twitter.com/dvd_from_earth > feed.rss
+
+https://github.com/lschmelzeisen/nasty/
+	sudo -H pip3 install nasty

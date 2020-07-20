@@ -1,0 +1,7 @@
+https://github.com/vikas0sharma/ScrumPoker
+https://medium.com/swlh/creating-real-time-app-with-asp-net-core-signalr-and-react-in-typescript-90aad9c1170b
+
+# Steps to run
+1 Run API project in Visual Studio 2019.
+2 Restore packages by running yarn command from clientapp folder.
+3 Run yarn start command to run clientapp.

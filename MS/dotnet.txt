@@ -39,6 +39,8 @@ https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net
 	dotnet add package Google.Apis.Gmail.v1
 	dotnet add package Open-XML-SDK
 	dotnet add package Newtonsoft.Json
+	dotnet add package Microsoft.AspNet.WebApi.Client
+	dotnet add package System.Net.Http.Json
 SQL Connection
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-string-builders
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/establishing-the-connection
