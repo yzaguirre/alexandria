@@ -1,8 +1,10 @@
 https://nextcloud.com
 Desktop client
 https://download.nextcloud.com/desktop/releases/Linux/latest
-	chmod u+x Nextcloud-2.6.5-x86_64.AppImage
-	./Nextcloud-2.6.5-x86_64.AppImage
+	chmod u+x Nextcloud-3.0.2-x86_64.AppImage
+x	./Nextcloud-3.0.2-x86_64.AppImage
+	mv Nextcloud-3.0.2-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/Nextcloud-3.0.2-x86_64.AppImage /usr/local/bin/nextcloud
 
 Off maintenance mode
 	php occ maintenance:mode --off
@@ -27,7 +29,7 @@ Change nextcloud folders name for future reference
 	
 Download the latest nc build
 	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.asc
+	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.ascm
 	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.md5
 	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.sha256
 	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.sha512

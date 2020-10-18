@@ -43,3 +43,7 @@ You can scan a directory and export the results for later viewing:
 	ncdu -1xo- / | gzip >export.gz
 ...some time later
 	zcat export.gz | ncdu -f-
+
+https://news.ycombinator.com/item?id=24604800
+Pretty colors
+	ncdu --color dark

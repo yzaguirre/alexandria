@@ -1,0 +1,2 @@
+https://smallhacks.wordpress.com/2020/09/26/esp32-based-old-clock-controller-with-ntp-sync/
+https://news.ycombinator.com/item?id=24601692

@@ -1,0 +1,3 @@
+https://nicolargo.github.io/glances/
+https://news.ycombinator.com/item?id=24604800
+	sudo -H pip3 install glances

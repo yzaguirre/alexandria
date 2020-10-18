@@ -1,3 +1,6 @@
+https://github.blog/2020-07-27-highlights-from-git-2-28/
+https://news.ycombinator.com/item?id=23966948
+
 https://github.blog/2020-01-13-highlights-from-git-2-25/
 https://news.ycombinator.com/item?id=22038007
 
@@ -279,3 +282,10 @@ https://stackoverflow.com/questions/19663093/apply-gitignore-on-an-existing-repo
 	git ls-tree --name-only --full-tree -r HEAD
 	git rm -r --cached cache/
 	git commit -m ".gitignore is now working"
+
+Erase from git history
+https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
+	git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
+	git filter-branch --tree-filter 'rm -f <path_to_file>' HEAD
+	git push origin --force --all
+

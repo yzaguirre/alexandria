@@ -15,3 +15,9 @@ Synopsis
 	dotnet aspnet-codegenerator [arguments] [-p|--project] [-n|--nuget-package-dir] [-c|--configuration] [-tfm|--target-framework] [-b|--build-base-path] [--no-build] 
 
 https://thecodebuzz.com/return-download-file-asp-net-core-webapi/
+
+A blazor application is composed of razor components
+A razor page is a server side only page
+
+Add a razor component
+	dotnet new razorcomponent -n WeatherData

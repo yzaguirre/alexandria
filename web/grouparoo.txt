@@ -1,0 +1,17 @@
+https://www.grouparoo.com/
+https://news.ycombinator.com/item?id=24472061
+
+https://www.grouparoo.com/docs/deployment
+# Install NVM
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+	nvm install v12 # install v12 of node.js
+	nvm use v12 # use v12 of node.js
+
+	sudo apt install redis-server # Install Redis
+
+	sudo apt install postgresql postgresql-contrib # Install Postgres
+	createdb grouparoo_development # Create a database for Grouparoo
+Step 2: Generate package.json and .env
+	npx grouparoo generate
+	npm start
+This will create a package.json and .env

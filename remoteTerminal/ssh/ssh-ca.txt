@@ -1,3 +1,6 @@
+https://www.paepper.com/blog/posts/how-to-properly-manage-ssh-keys-for-server-access/
+https://news.ycombinator.com/item?id=24599837
+
 https://www.reddit.com/r/linuxadmin/comments/8bh7v3/ssh_key_management/
 https://github.com/mikesmitty/curse
 

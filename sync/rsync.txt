@@ -2,10 +2,19 @@ https://rsync.samba.org/download.html
 https://en.wikipedia.org/wiki/Rsync#Connection
 Download
 https://rsync.samba.org/
-	wget https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz
-	wget https://download.samba.org/pub/rsync/src/rsync-3.1.1.tar.gz.asc
-	gpg2 --verify rsync-3.1.1.tar.gz.asc
+	wget https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz
+	wget https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz.asc
+	gpg2 --verify rsync-3.2.3.tar.gz.asc
+Windows
+https://github.com/lukesampson/scoop/issues/2295
+https://blog.tiger-workshop.com/add-rsync-to-git-bash-for-windows/
+	scoop install zstd
+	wget http://repo.msys2.org/msys/x86_64/rsync-3.1.3-1-x86_64.pkg.tar.xz
+	wget http://repo.msys2.org/msys/x86_64/rsync-3.1.3-1-x86_64.pkg.tar.xz.sig
+	gpg --verify rsync-3.1.3-1-x86_64.pkg.tar.xz.sig
 https://www.thegeekstuff.com/2010/09/rsync-command-examples
+https://www.cyberciti.biz/faq/use-rsync-to-backup-directory/
+https://www.cyberciti.biz/tips/linux-use-rsync-transfer-mirror-files-directories.html
 	rsync --av --delete --rsh=ssh proyecto cb64:~/backup
 -a is for archieve, recursion
 

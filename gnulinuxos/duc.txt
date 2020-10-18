@@ -1,0 +1,3 @@
+https://duc.zevv.nl
+	apt install duc
+	duc

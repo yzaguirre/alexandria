@@ -1,3 +1,5 @@
+https://calibre-ebook.com
+https://news.ycombinator.com/item?id=24586455
 https://www.youtube.com/watch?v=N1hwEfa9W1s
 https://manual.calibre-ebook.com/cli/calibre-server.html
 Disable calibre as default PDF viewer
@@ -15,3 +17,6 @@ Uninstall
 E-book viewer shotcuts
 CTRL+M	Toggle between paged and flow mode
 CTRL+ALT+B	Bookmarks
+
+https://github.com/janeczku/calibre-web
+

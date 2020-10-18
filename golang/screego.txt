@@ -1,0 +1,7 @@
+https://github.com/screego/server
+https://news.ycombinator.com/item?id=24696582
+https://screego.net/#/install?id=binary
+Windows
+	wget https://github.com/screego/server/releases/download/v1.0.1/screego_1.0.1_windows_amd64.zip
+	unzip screego_1.0.1_windows_amd64.zip
+	mv screego.exe ~/bin

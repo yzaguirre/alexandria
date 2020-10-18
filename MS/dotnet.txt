@@ -25,6 +25,8 @@ Write this in .profile
 Start a new project
 	dotnet new
 	dotnet new console -o myApp
+With Blazor
+	dotnet new blazorserver -n myApp
 Import assembly reference, like SqlConnection
 https://stackoverflow.com/questions/46815546/how-to-add-external-assembly-dll-to-net-core-2-0-on-visual-studio-code#46815598
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
@@ -95,3 +97,13 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-
 https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netcore-3.1
 https://csharp.hotexamples.com/examples/-/HttpRequestMessage/-/php-httprequestmessage-class-examples.html
 https://stackoverflow.com/questions/10679214/how-do-you-set-the-content-type-header-for-an-httpclient-request
+
+https://stackoverflow.com/questions/51778267/the-specified-sdk-microsoft-net-sdk-was-not-found
+
+Using HttpClient in .NET Core to Connect to APIs in C#
+https://www.youtube.com/watch?v=cwgck1k0YKU
+A blazor application is composed of razor components
+A razor page is a server side only page
+
+Add a razor component
+	dotnet new razorcomponent -n WeatherData

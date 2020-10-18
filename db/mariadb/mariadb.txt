@@ -32,4 +32,3 @@ Tests users, database or its configuration can have exploits associated with the
 so better safe than sorry for a production environment.
 reload
 	systemctl restart mariadb.service
-	

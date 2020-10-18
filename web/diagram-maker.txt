@@ -1,0 +1,3 @@
+https://aws.amazon.com/es/blogs/opensource/diagram-maker-open-sourcing-iot-visualization/
+https://news.ycombinator.com/item?id=24688860
+https://github.com/awslabs/diagram-maker

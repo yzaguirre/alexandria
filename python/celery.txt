@@ -1,0 +1,2 @@
+https://docs.celeryproject.org/en/latest/whatsnew-5.0.html
+https://news.ycombinator.com/item?id=24694374

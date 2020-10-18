@@ -1,7 +1,17 @@
-https://thecodebuzz.com/read-excel-file-in-dotnet-core-2-1/
+https://github.com/OfficeDev/Open-XML-SDK
+https://docs.microsoft.com/en-us/office/open-xml/how-to-create-a-spreadsheet-document-by-providing-a-file-name
 https://docs.microsoft.com/en-us/office/open-xml/how-to-open-a-spreadsheet-document-from-a-stream
 https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.sheets?view=openxml-2.8.1
 	dotnet add package Open-XML-SDK
 Once you install this NuGet package,
 you get full API support on Reading, Writing of Excel (.xlsx), Word (.doc) or Powerpoint(.ppt) files.
 
+https://thecodebuzz.com/read-excel-file-in-dotnet-core-2-1/
+https://www.c-sharpcorner.com/article/creating-excel-file-using-openxml/
+http://www.dispatchertimer.com/tutorial/how-to-create-an-excel-file-in-net-using-openxml-part-1-basics/
+
+Charts
+https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.charts.barchart?view=openxml-2.8.1
+https://www.codeproject.com/questions/428784/open-xml-excel-create-barchart
+https://stackoverflow.com/questions/42402225/how-to-add-a-barchart-to-a-openxml-created-document
+https://docs.microsoft.com/en-us/office/open-xml/how-to-insert-a-chart-into-a-spreadsheet

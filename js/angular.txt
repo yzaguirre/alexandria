@@ -1,0 +1,11 @@
+https://angular.io/
+https://angular.io/cli
+	npm install -g @angular/cli
+	npm update -g @angular/cli
+Create a workspace and initial application
+	ng new my-app
+Run
+	cd my-app
+	ng serve --open
+Visit  http://localhost:4200/
+

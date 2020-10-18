@@ -1,0 +1,3 @@
+CLI plain-text notes & bookmarks with Git, sync, encryption, and more
+https://github.com/xwmx/nb
+https://news.ycombinator.com/item?id=24709393

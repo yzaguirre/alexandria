@@ -1,0 +1,19 @@
+https://heartbeat.fritz.ai/handling-location-data-in-android-84d7905febc6
+	vim build.gradle
+implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+Setup location provider
+GPS PROVIDER
+This provider determines location using satellites. Depending on conditions such as connectivity, climatic conditions, etc., this provider may take a while to return a fixed location. It requires the permission android.permission.ACCESS_FINE_LOCATION.
+
+NETWORK_PROVIDER
+This provider determines location based on the availability of cell tower and Wi-Fi access points. Results are retrieved by means of a network lookup. Requires either of the permissions android.permission.ACCESS_COARSE_LOCATION or android.permission.ACCESS_FINE_LOCATION.
+
+The permission you choose determines the accuracy of the location returned by the FusedLocationProviderClient API.
+
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+Create location services client
+In your activity's onCreate() method, create an instance of the FusedLocationProviderClient, which is the main component that interacts with the fused location provider.
+
+Get the last known location

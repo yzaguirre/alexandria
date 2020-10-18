@@ -84,14 +84,47 @@ https://github.com/cli/cli/
 https://github.com/cli/cli/releases/tag/v0.8.0
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
-	wget https://github.com/cli/cli/releases/download/v0.8.0/gh_0.8.0_linux_amd64.deb
-	dpkg -i gh_0.8.0_linux_amd64.deb
+https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
+	wget https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_checksums.txt
+	sha256sum --ignore-missing -c gh_1.0.0_checksums.txt
+	dpkg -i gh_1.0.0_linux_amd64.deb
+Termux
+	apt install gh
+ARM64
+	wget https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_arm64.tar.gz
+	wget https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_checksums.txt
+	sha256sum --ignore-missing -c gh_1.0.0_checksums.txt
+	tar xf gh_1.0.0_linux_arm64.tar.gz
+	cd gh_1.0.0_linux_arm64/bin
+	./gh
 Windows
 	scoop bucket add github-gh https://github.com/cli/scoop-gh.git
 	scoop install gh
 Update
 	scoop update gh
 https://cli.github.com/manual/
+	gh auth login
+Use SSH
+	gh config set git_protocol ssh
 Create repository
+	gh repo --help
 	gh repo create my-cool-project -d "My description" -t "my_team" -h "https://homepage.com"
-Add collaboratos
+	gh repo create company/my-cool-project --private
+Add collaborator from command line
+https://gist.github.com/marchampson/4655798
+https://developer.github.com/changes/2020-02-14-deprecating-password-auth/
+https://docs.github.com/en/rest/reference/repos
+	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+https://github.com/my_gh_userid/my_repo/invitations
+Remove a collaborator
+	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+Check if user is a collaborator
+	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+Check if user permissions as collaborator
+	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id/permission'
+List collaborators
+	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators'
+
+Delete a repo
+	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo'

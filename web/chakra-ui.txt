@@ -1,2 +1,5 @@
 https://chakra-ui.com/
 https://github.com/chakra-ui/chakra-ui
+	npm install @chakra-ui/core @emotion/core @emotion/styled emotion-theming
+Using yarn
+	yarn @chakra-ui/core @emotion/core @emotion/styled emotion-theming

@@ -13,6 +13,9 @@ or	npx create-react-app hello-react
 	npm start
 or	yarn start
 
+Update tool
+	npm update -g create-react-app
+
 Using react router
 	npm install -S react-router-dom
 
