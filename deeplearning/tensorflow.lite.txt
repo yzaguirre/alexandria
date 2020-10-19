@@ -18,3 +18,7 @@ https://www.youtube.com/watch?v=nyZX1p2ipUU
 https://github.com/tensorflow/examples/blob/master/lite/examples/object_detection/android/README.md#model-used
 
 https://blog.tensorflow.org/2019/08/track-human-poses-in-real-time-on-android-tensorflow-lite.html
+
+https://www.tensorflow.org/lite/convert/metadata
+Tensorflow hub
+https://tfhub.dev/android-studio/collections/ml-model-binding/1

@@ -59,3 +59,5 @@ https://stackoverflow.com/questions/17203454/how-to-use-getresource-getidentifie
 	int resID = getResources().getIdentifier(mDrawableName , "drawable", getPackageName());
 or
 	myDialog.getContext().getResources().getIdentifier("myImageView", "id", activity.getPackageName())
+
+https://developer.android.com/studio/releases?utm_source=android-studio&utm_medium=studio-assistant#4-1-0
