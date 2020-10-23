@@ -325,3 +325,17 @@ Make sure to clean the android directory
 
 build.gradle
 https://stackoverflow.com/questions/28295933/difference-between-build-gradleproject-and-build-gradlemodule
+
+Take picture
+https://react-native-camera.github.io/react-native-camera/
+https://react-native-camera.github.io/react-native-camera/docs/installation.html
+https://github.com/react-native-camera/react-native-camera
+https://github.com/zsajjad/react-native-text-detector
+https://heartbeat.fritz.ai/building-text-detection-apps-for-ios-and-android-using-react-native-42fe3c7e339
+	yarn add react-native-camera
+
+Geolocation
+https://github.com/react-native-geolocation/react-native-geolocation
+https://github.com/Agontuk/react-native-geolocation-service
+https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c
+https://github.com/Agontuk/react-native-geolocation-service
