@@ -2,7 +2,7 @@
 	sudo -H pip3 install tensorflow
 
 Manual install with CPU support
-https://www.tensorflow.org/install/install_sources
+https://www.tensorflow.org/install/source
 Install bazel
 https://docs.bazel.build/versions/master/install.html
 	apt install openjdk-8-jdk

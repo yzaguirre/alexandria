@@ -4,21 +4,21 @@ https://mierda.tv/2016/09/23/convertir-a-png-una-presentacion-creada-con-libreof
 	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png
 
 Mirror
-http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/6.4.3/deb/x86_64/
+http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/7.0.2/deb/x86_64/
 
 Keys
 http://ask.libreoffice.org/en/question/45539/where-is-the-signing-public-gpgpgp-key-the-libreoffice-webpage/
 http://listarchives.libreoffice.org/global/users/msg27065.html
-https://download.documentfoundation.org/libreoffice/stable/6.4.3/deb/x86_64/
+https://download.documentfoundation.org/libreoffice/stable/7.0.2/deb/x86_64/
 	gpg --keyserver hkps://keys.gnupg.net --recv-keys AFEEAEA3
 Verify download
-	gpg --verify LibreOffice_6.4.3_Linux_x86-64_deb.tar.gz.asc
-	gpg --verify LibreOffice_6.4.3_Linux_x86-64_deb_langpack_es.tar.gz.asc
-	gpg --verify LibreOffice_6.4.3_Linux_x86-64_deb_helppack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.0.2_Linux_x86-64_deb.tar.gz.asc
+	gpg --verify LibreOffice_7.0.2_Linux_x86-64_deb_langpack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.0.2_Linux_x86-64_deb_helppack_es.tar.gz.asc
 Uncompress
-	tar xf LibreOffice_6.4.3_Linux_x86-64_deb.tar.gz
-	tar xf LibreOffice_6.4.3_Linux_x86-64_deb_langpack_es.tar.gz
-	tar xf LibreOffice_6.4.3_Linux_x86-64_deb_helppack_es.tar.gz
+	tar xf LibreOffice_7.0.2_Linux_x86-64_deb.tar.gz
+	tar xf LibreOffice_7.0.2_Linux_x86-64_deb_langpack_es.tar.gz
+	tar xf LibreOffice_7.0.2_Linux_x86-64_deb_helppack_es.tar.gz
 
 Remember
 	/usr/bin/libreoffice6.4 -> /opt/libreoffice6.4/program/soffice
