@@ -22,3 +22,9 @@ https://blog.tensorflow.org/2019/08/track-human-poses-in-real-time-on-android-te
 https://www.tensorflow.org/lite/convert/metadata
 Tensorflow hub
 https://tfhub.dev/android-studio/collections/ml-model-binding/1
+
+Build an Android app to recognize flowers
+https://www.youtube.com/watch?v=s_XOVkjXQbU
+TensorFlow Model Maker
+https://www.tensorflow.org/lite/tutorials/model_maker_image_classification
+	sudo -H pip3 install tflite-model-maker
