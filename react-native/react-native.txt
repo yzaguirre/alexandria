@@ -73,7 +73,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 Start a new project
 	npx react-native init MyTestApp
 	npx react-native init weekdays --version 0.31.0
-	npx react-native init MyTestApp --titile "My Test"
+	npx react-native init MyTestApp --title "My Test"
 
 Running the emulator
 	cd weekdays

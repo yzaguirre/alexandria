@@ -1,0 +1,7 @@
+https://fbflipper.com/
+https://github.com/facebook/flipper
+	wget https://github.com/facebook/flipper/releases/download/v0.63.0/Flipper-linux.zip
+	mkdir flipper
+	unzip Flipper-linux.zip -d flipper
+	mv flipper /opt
+	ln -s /opt/flipper/flipper /usr/local/bin/flipper

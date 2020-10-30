@@ -2,8 +2,9 @@ https://guiscrcpy.github.io/
 https://github.com/srevinsaju/guiscrcpy
 https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
 	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9.3/guiscrcpy-x86_64.AppImage
-	chmod u+x guiscrcpy-x86_64.AppImage
-	mv guiscrcpy-x86_64.AppImage ~/appimage
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.7.2/guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage
+	chmod u+x guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage
+	mv guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
 	ln -s ~/appimage/guiscrcpy-x86_64.AppImage /usr/local/bin/guiscrcpy
 Windows
 Install scrcpy

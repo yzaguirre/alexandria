@@ -1,3 +1,10 @@
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+	echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+	apt update
+	apt install mongodb-org
+If you installed via the package manager, the data directory /var/lib/mongodb and the log directory /var/log/mongodb are created during the installation.
+
+
 Mongo shell 
 https://docs.mongodb.org/manual/reference/mongo-shell/
 	show databases

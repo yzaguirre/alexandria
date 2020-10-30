@@ -11,3 +11,5 @@ https://reactnavigation.org/docs/getting-started
 
 https://reactnavigation.org/docs/stack-navigator
 	yarn add @react-navigation/stack
+https://reactnavigation.org/docs/drawer-navigator/
+	yarn add @react-navigation/drawer
