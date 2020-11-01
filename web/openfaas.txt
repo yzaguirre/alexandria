@@ -1,0 +1,3 @@
+https://www.openfaas.com/
+https://www.openfaas.com/blog/puppeteer-scraping/
+https://news.ycombinator.com/item?id=24951594

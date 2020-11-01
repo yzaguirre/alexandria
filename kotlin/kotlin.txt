@@ -1,8 +1,9 @@
 https://kotlinlang.org/
+https://github.com/JetBrains/kotlin
 https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt
 https://kotlinlang.org/docs/tutorials/command-line.html
-	wget https://github.com/JetBrains/kotlin/releases/download/v1.2.51/kotlin-compiler-1.2.51.zip
-	unzip kotlin-compiler-1.2.51.zip -d /opt
+	wget https://github.com/JetBrains/kotlin/releases/download/v1.4.10/kotlin-compiler-1.4.10.zip
+	unzip kotlin-compiler-1.4.10.zip -d /opt
 Compile
 	kotlinc HelloWorld.kt -include-runtime -d HelloWorld.jar
 Run
