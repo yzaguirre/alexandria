@@ -1,0 +1,7 @@
+https://github.com/bastienwirtz/homer
+https://www.reddit.com/r/selfhosted/comments/jm9b2h/android_app_for_homer_dashboard/
+A dead simple static HOMepage for your servER to keep your services on hand, from a simple `yaml` configuration file.
+	wget https://github.com/bastienwirtz/homer/releases/download/v20.09.1/homer.zip
+	unzip homer.zip
+	cp assets/config.yml.dist assets/config.yml
+	caddy

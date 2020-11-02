@@ -1,0 +1,2 @@
+https://github.com/eneskarpuz/react-native-drag-text-editor
+https://www.reddit.com/r/reactnative/comments/ix512b/unfold_apps_text_editor_was_the_inspiration/

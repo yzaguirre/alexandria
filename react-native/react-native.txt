@@ -15,6 +15,9 @@ https://www.youtube.com/channel/UCiNWv52iO_OAdZ12kslG4Cg/videos
 fun fun function
 https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q
 
+https://www.reddit.com/r/reactnative/comments/jlk9jf/react_native_code_review/
+https://github.com/macaetano/trivia-game
+
 Install xcode, nodejs, watchman
 For mack
 	brew update
