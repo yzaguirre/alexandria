@@ -29,7 +29,7 @@ For new versions
 Install on Windows
 	npm install -g expo-cli
 	expo init --template blank --name AwesomeProject AwesomeProject
-	cd AwesomeProject
+	cd AwesomeProjectn
 	npm start
 or	expo start
 

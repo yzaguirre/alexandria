@@ -1,6 +1,10 @@
 http://www.reactenlightenment.com/what-is-react.html
 http://courses.reactjsprogram.com/courses/reactjsfundamentals
 
+React Fundamentals: What I'm Learning (buaiscia.github.io)
+https://buaiscia.github.io/posts/learning-on-epic-react-fundamentals
+https://news.ycombinator.com/item?id=24979103
+
 React Developer Tools web browser plugin
 
 prettier.io for vsc
