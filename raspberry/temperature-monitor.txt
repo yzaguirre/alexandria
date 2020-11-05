@@ -1,0 +1,2 @@
+https://www.jeffgeerling.com/project/temperature-monitoring-app
+https://github.com/geerlingguy/temperature-monitor

@@ -4,3 +4,8 @@ Mailvelope
 Selenium IDE
 Vue.js devtools
 Wallabagger
+
+Lighthouse
+https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=es
+https://developers.google.com/web/tools/lighthouse/
+

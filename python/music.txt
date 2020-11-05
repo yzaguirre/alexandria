@@ -1,0 +1,4 @@
+https://github.com/synestematic/kord
+https://news.ycombinator.com/item?id=24978255
+Kord - Python tool for displaying guitar chords/scales on your terminal (github.com/synestematic)
+	pip3 install kord
