@@ -1,3 +1,5 @@
 https://www.tadviewer.com
 https://github.com/antonycourtney/tad
 https://news.ycombinator.com/item?id=24983603
+	wget https://github.com/antonycourtney/tad/releases/download/v0.9.0/tad_0.9.0_amd64.deb
+	dpkg -i tad_0.9.0_amd64.deb

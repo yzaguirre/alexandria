@@ -1,2 +1,7 @@
 https://www.brow.sh/
 https://news.ycombinator.com/item?id=17487552
+	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_amd64.deb
+	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_arm64.deb
+	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_checksums.txt
+	sha256sum -c --ignore-missing browsh_1.6.4_checksums.txt
+	dpkg -i browsh_1.6.4_linux_amd64.deb

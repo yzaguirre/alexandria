@@ -1,4 +1,5 @@
 https://termux.com
+https://news.ycombinator.com/item?id=24979258
 	apt install figlet mutt tcpdump php openssl-tool tty-clock irssi pv mosh wget python jq htop taskwarrior newsbeuter
 	apt install gnupg2 dirmngr curl gnupg-curl
 	apt install termux-api

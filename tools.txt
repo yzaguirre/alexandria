@@ -589,3 +589,7 @@ https://calver.org/
 https://news.ycombinator.com/item?id=21967879
 
 Payment
+
+Pair programming
+https://paircast.io
+https://news.ycombinator.com/item?id=24984210
