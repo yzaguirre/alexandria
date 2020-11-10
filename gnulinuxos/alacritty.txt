@@ -1,1 +1,6 @@
 https://github.com/alacritty/alacritty
+	apt install alacritty
+Windows
+	scoop bucket add extras
+	scoop install alacritty
+

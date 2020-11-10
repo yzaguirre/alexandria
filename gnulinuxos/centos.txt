@@ -7,3 +7,21 @@ https://serverfault.com/questions/511614/what-is-the-difference-between-init-6-a
 init 6 tells the init process to shutdown all of the spawned processes/daemons as
    written in the init files (in the inverse order they started) and lastly invoke the 
    shutdown -r now command to reboot the machine
+
+Network check
+https://www.cyberciti.biz/faq/how-to-find-gateway-ip-address/
+https://www.sysadmit.com/2018/09/linux-como-saber-gateway-puerta-de-enlace.html
+	ip r
+	ip r | grep default
+Change gateway route
+https://www.cyberciti.biz/faq/linux-setup-default-gateway-with-route-command/
+https://linuxadmin.io/configure-default-gateway/
+https://serverfault.com/questions/49650/setting-a-temporary-ip-address-and-gateway-on-linux-server
+	route add default gw {IP-ADDRESS} {INTERFACE-NAME}
+
+https://linuxconfig.org/configuring-default-gateway-on-redhat-enterprise-linux
+https://forums.centos.org/viewtopic.php?t=11747
+	vim /etc/sysconfig/network
+	vim /etc/sysconfig/network-scripts/ifcfg-eth0
+	/etc/resolv.conf
+	service network restart

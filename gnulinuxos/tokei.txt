@@ -1,0 +1,5 @@
+https://github.com/XAMPPRocky/tokei
+	wget https://github.com/XAMPPRocky/tokei/releases/download/v12.0.4/tokei-x86_64-unknown-linux-gnu.tar.gz
+	tar xf tokei-x86_64-unknown-linux-gnu.tar.gz
+Windows
+	scoop install tokei

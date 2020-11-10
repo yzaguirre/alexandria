@@ -1,0 +1,4 @@
+https://github.com/kellyjonbrazil/jc
+This tool converts the output of popular command-line tools and file-types to JSON.
+This allows piping of output to tools like jq.
+	sudo -H pip3 install jc

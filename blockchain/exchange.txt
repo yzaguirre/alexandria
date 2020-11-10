@@ -1,0 +1,4 @@
+https://localbitcoins.net
+https://localbitcoins.net/api-docs/
+https://github.com/LocalBitcoins/lbcapi
+	sudo -H pip3 install lbcapi

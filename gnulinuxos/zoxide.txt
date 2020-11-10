@@ -1,0 +1,7 @@
+https://github.com/ajeetdsouza/zoxide
+A faster way to navigate your filesystem
+	apt install zoxide
+Windows
+	scoop install zoxide
+add ~/.bashrc
+eval "$(zoxide init bash)"

@@ -1,0 +1,10 @@
+https://github.com/ameshkov/dnslookup
+	wget https://github.com/ameshkov/dnslookup/releases/download/v1.4.4/dnslookup-linux-amd64-v1.4.4.tar.gz
+	tar xf dnslookup-linux-amd64-v1.4.4.tar.gz
+	mv linux-amd64/dnslookup /usr/local/bin
+Windows
+	wget https://github.com/ameshkov/dnslookup/releases/download/v1.4.4/dnslookup-windows-amd64-v1.4.4.zip
+	unzip dnslookup-windows-amd64-v1.4.4.zip
+	mv windows-amd64/dnslookup.exe ~/bin
+
+See dog.txt

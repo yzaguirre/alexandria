@@ -52,3 +52,7 @@ http://api.libreoffice.org/examples/examples.html#python_examples
 http://api.libreoffice.org/docs/tools.html#unoexe
 http://api.libreoffice.org/docs/idl/ref/namespacecom_1_1sun_1_1star_1_1bridge.html
 https://wiki.openoffice.org/wiki/Documentation/DevGuide/OpenOffice.org_Developers_Guide
+
+Templates
+https://dohliam.github.io/libreoffice-impress-templates/
+
