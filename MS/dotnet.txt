@@ -1,3 +1,7 @@
+Announcing .NET 5.0
+https://devblogs.microsoft.com/dotnet/announcing-net-5-0/
+https://news.ycombinator.com/item?id=25047409
+
 .NET Core 3.0 Release
 https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/?utm_source=Direct
 

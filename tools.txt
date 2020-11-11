@@ -273,6 +273,9 @@ https://manageacloud.com/
 http://instantcloud.io/
 https://manageacloud.com/terminal
 
+Proxy
+frp
+
 VPN
 tinc
 OpenVPN

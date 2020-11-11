@@ -1,3 +1,4 @@
-CLI plain-text notes & bookmarks with Git, sync, encryption, and more
 https://github.com/xwmx/nb
 https://news.ycombinator.com/item?id=24709393
+CLI plain-text note-taking, bookmarking, and archiving with encryption, filtering and search, Git-backed versioning and syncing, Pandoc-backed conversion, and more in a single portable script.
+
