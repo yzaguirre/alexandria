@@ -1,0 +1,5 @@
+https://amithm.ca/2020/10/kubernetes-raspberrypi-homelab/
+https://news.ycombinator.com/item?id=25061097
+
+https://k3s.io/
+https://blog.alexellis.io/test-drive-k3s-on-raspberry-pi/

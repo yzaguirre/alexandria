@@ -1,0 +1,10 @@
+API design is stuck in the past
+https://buf.build/blog/api-design-is-stuck-in-the-past
+https://news.ycombinator.com/item?id=25085276
+
+https://stackoverflow.com/questions/898321/standard-methods-for-documenting-a-restful-api
+
+https://medium.com/raml-api
+https://medium.com/raml-api/modeling-a-jwt-token-bf9e82e2a0ba
+RAML Tutorial
+https://www.youtube.com/watch?v=rWLJFkKkVHY

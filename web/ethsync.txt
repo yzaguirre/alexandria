@@ -1,0 +1,5 @@
+https://www.etebase.com/
+Etebase is an end-to-end encrypted backend as a service.
+Think Firebase, but encrypted in a way that only your users can access their data.
+https://news.ycombinator.com/item?id=25059133
+https://docs.etebase.com/

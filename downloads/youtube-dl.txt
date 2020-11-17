@@ -3,6 +3,10 @@ https://rg3.github.io/youtube-dl/
 https://github.com/rg3/youtube-dl
 https://pypi.org/project/youtube_dl/
 
+Origins of the youtube-dl project
+https://rg3.name/202011071352.html
+https://news.ycombinator.com/item?id=25047818
+
 New youtube-dl release: v2020.11.01.1
 https://news.ycombinator.com/item?id=24959947
 
@@ -43,6 +47,8 @@ or
 Lyrics
 	youtube-dl --list-subs http://www.youtube.com/watch?v=
 	youtube-dl --write-sub --sub-format "srt" --sub-lang "es-ES" http://www.youtube.com/watch?v=
+Automatic subs
+	youtube-dl --write-auto-sub --sub-format best --sub-lang "es" http://www.youtube.com/watch?v=
 
 Download mp3 and keep video
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -k http://www.youtube.com/watch?v=

@@ -183,3 +183,12 @@ https://mat.boum.org/
 
 https://news.ycombinator.com/item?id=7235634
 https://keybase.io/
+
+A new skimmer uses WebSockets and a fake credit card form
+https://blogs.akamai.com/2020/11/a-new-skimmer-uses-websockets-and-a-fake-credit-card-form-to-steal-sensitive-data.html
+https://news.ycombinator.com/item?id=25047141
+
+Swiss report reveals new details on CIA spying operation
+https://www.washingtonpost.com/national-security/swiss-report-reveals-new-details-on-cia-spying-operation/2020/11/10/c93ca7fc-2386-11eb-8672-c281c7a2c96e_story.html
+https://news.ycombinator.com/item?id=25058783
+

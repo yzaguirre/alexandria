@@ -9,6 +9,21 @@ https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one
    ( 313386r.png -thumbnail x25 ) -gravity center -geometry +80+30 -composite \
    ( 313386r.png -thumbnail x25 ) -gravity east   -geometry  +0+30 -composite \
    output.png
+Watermark
+https://www.burnsland.com/steves-photography-tips-adding-watermark-imagemagick/
+https://www.imagemagick.org/discourse-server/viewtopic.php?t=19177
+https://www.the-art-of-web.com/system/imagemagick-watermark/
+Make text
+	convert -size 400x200 xc:none -font Arial -pointsize 25 -kerning 1 -gravity center -fill black -annotate 330x330+0+0 "Tequipment.net" -fill white -annotate 330x330+2+2  "Tequipment.net" WATERMARK_FILE.png
+Make Watermark
+	mogrify -gravity southwest -draw "image over 0,10 0,0 bl-logo.png" *.jpg
+	convert mainPhoto.jpeg -draw "image over 0,0 0,0 bl-logo.png" output.jpeg
+	composite -dissolve 50% -gravity southwest WATERMARK_FILE.png INPUT_IMAGE OUTPUT_IMAGE
+	composite -dissolve 50% -gravity southwest -gravity 0,100 WATERMARK_FILE.png INPUT_IMAGE OUTPUT_IMAGE
+Available fonts
+	convert -list font
+or
+	convert -list type
 
 Shrink 200 .png files to 50%
 	for f in *.png; do mogrify -resize 50% $f; done

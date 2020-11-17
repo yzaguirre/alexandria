@@ -1,2 +1,3 @@
+No More Free Work from Marak: Pay Me or Fork This
 https://github.com/Marak/faker.js/issues/1046
 https://news.ycombinator.com/item?id=25032105

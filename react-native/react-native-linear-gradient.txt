@@ -1,0 +1,2 @@
+https://github.com/react-native-linear-gradient/react-native-linear-gradient
+	yarn add react-native-linear-gradient

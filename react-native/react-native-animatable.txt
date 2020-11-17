@@ -1,0 +1,3 @@
+https://github.com/oblador/react-native-animatable
+https://dev-yakuza.posstree.com/en/react-native/react-native-animatable/
+	yarn add react-native-animatable

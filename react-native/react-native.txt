@@ -1,4 +1,5 @@
 https://reactnative.dev/
+https://reactnative.directory/
 How Discord achieves native iOS performance with React Native
 https://news.ycombinator.com/item?id=21480493
 https://www.reddit.com/r/reactnative/comments/dr7l0y/best_youtube_channels_where_you_always_tend_to/
