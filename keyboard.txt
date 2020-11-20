@@ -9,3 +9,6 @@ or
 
 Virtual Keyboard
 https://github.com/mwilliams03/matchbox-keyboard
+https://wiki.archlinux.org/index.php/Xorg_(Espa%C3%B1ol)/Keyboard_configuration_(Espa%C3%B1ol)
+	localectl list-x11-keymap-layouts
+	setxkbmap latam

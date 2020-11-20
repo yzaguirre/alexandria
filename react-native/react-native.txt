@@ -170,6 +170,7 @@ https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-
 
 https://github.com/rt2zz/redux-persist
 https://github.com/react-native-community/async-storage
+https://react-native-async-storage.github.io/async-storage/docs/install/
 https://aboutreact.com/react-native-asyncstorage/
 https://stackoverflow.com/questions/57781527/how-to-solve-console-error-redux-persist-failed-to-create-sync-storage-falli
 redux-persist
@@ -343,3 +344,18 @@ https://github.com/react-native-geolocation/react-native-geolocation
 https://github.com/Agontuk/react-native-geolocation-service
 https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c
 https://github.com/Agontuk/react-native-geolocation-service
+
+
+https://www.obytes.com/blog/how-to-structure-a-react-native-project
+	npx react-native init MyApp --template https://github.com/obytes/react-native-template-obytes
+	see ~/code/react-native/AuthRN
+
+Security
+https://www.obytes.com/blog/authentication-in-react-native-easy-secure-and-reusable-solution
+https://reactnative.dev/docs/security
+
+https://mcodex.dev/react-native-sensitive-info/
+	yarn add react-native-sensitive-info@next
+
+https://github.com/osdnk/react-native-reanimated-bottom-sheet
+	yarn add reanimated-bottom-sheet

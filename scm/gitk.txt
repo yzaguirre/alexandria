@@ -1,0 +1,4 @@
+https://git-scm.com/docs/gitk
+https://www.atlassian.com/git/tutorials/gitk
+https://riptutorial.com/git/example/18336/gitk-and-git-gui
+	gitk --all

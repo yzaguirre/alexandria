@@ -12,6 +12,22 @@ iOS permissions
 	vim ios/geoWeatherApp/info.plist
 <key>NSLocationAlwaysUsageDescription</key>
 
-Maps
+# Maps
+https://github.com/react-native-maps/react-native-maps
+https://github.com/react-native-maps/react-native-maps/blob/master/docs/installation.md
+https://github.com/xDemon200/react-native-maps
+https://github.com/react-native-maps/react-native-maps/issues/3352
+https://github.com/xDemon200/react-native-maps
+
 https://heartbeat.fritz.ai/building-a-react-native-location-tracking-app-6007035a3297
+
+#1 React Native Maps Tutorial | Add Custom Marker & Callout | Dark Mode
+https://www.youtube.com/watch?v=4N-8RTeQ1fA
+
+https://console.developers.google.com/apis/library/maps-android-backend.googleapis.com
+https://console.developers.google.com/apis/library/maps-ios-backend.googleapis.com
 	yarn add react-native-maps
+	yarn add https://github.com/xDemon200/react-native-maps
+Dark theme
+https://mapstyle.withgoogle.com/
+https://console.cloud.google.com/google/maps-apis/client-styles
