@@ -1,0 +1,1 @@
+https://github.com/wKovacs64/react-native-responsive-image-view

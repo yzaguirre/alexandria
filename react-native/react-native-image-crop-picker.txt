@@ -1,0 +1,16 @@
+https://github.com/ivpusic/react-native-image-crop-picker
+	yarn add react-native-image-crop-picker
+https://www.youtube.com/watch?v=3_ldEVWlL18
+Use gradle 4.0.1
+https://stackoverflow.com/a/36786721/1905092
+	vim android/app/build.gradle
+android {
+
+    defaultConfig {
+        ...
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    ...
+}
