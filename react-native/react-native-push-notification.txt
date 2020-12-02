@@ -1,0 +1,3 @@
+React Native Local and Remote Notifications for iOS and Android
+https://github.com/zo0r/react-native-push-notification
+	yarn add react-native-push-notification

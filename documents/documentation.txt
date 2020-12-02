@@ -3,3 +3,15 @@ https://clearbridgemobile.com/how-to-build-a-mobile-app-requirements-document/
 https://plan.io/blog/technical-documentation/
 https://medium.com/@Intersog/how-to-create-a-mobile-app-dev-specification-that-any-provider-will-understand-5d765a31f778
 https://www.wikihow.com/Write-Software-Documentation
+
+1. DESCRIBE YOUR IDEA INTELLIGIBLY
+2. BASIC NAVIGATION PATTERNS
+3. FOCUS ON THE FEATURES
+4. FUNCTIONAL SPECIFICATION
+5. PROVIDE WIREFRAMES TO COMPLIMENT TEXT
+
+How to guide for your
+users,
+new hires,
+administrators,
+and anyone else who needs to know how your product works.

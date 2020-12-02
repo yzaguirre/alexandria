@@ -1,0 +1,7 @@
+https://llamalife.co/
+https://www.reddit.com/r/Entrepreneur/comments/k34jbl/taught_myself_to_code_a_year_ago_just_released_my/
+javascript (React)
+express
+bootstrap
+Stripe for payments
+Firebase for db

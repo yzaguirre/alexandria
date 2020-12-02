@@ -27,3 +27,5 @@ http://git.ao2.it/tweeper.git/
 
 https://github.com/lschmelzeisen/nasty/
 	sudo -H pip3 install nasty
+
+https://developer.twitter.com/en

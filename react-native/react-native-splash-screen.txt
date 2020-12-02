@@ -8,3 +8,8 @@ https://abhiandroid.com/ui/imageview
 With URI
 http://www.java2s.com/Code/Android/UI/SetimageUriforImageView.htm
 https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android
+
+https://github.com/lottie-react-native/lottie-react-native
+	yarn add lottie-react-native
+	yarn add lottie-ios@3.1.8
+https://lottiefiles.com/

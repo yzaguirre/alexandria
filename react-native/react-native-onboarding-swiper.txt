@@ -1,0 +1,3 @@
+Delightful onboarding for your React-Native app
+https://github.com/jfilter/react-native-onboarding-swiper
+	yarn add react-native-onboarding-swiper

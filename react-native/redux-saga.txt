@@ -1,2 +1,18 @@
 https://redux-saga.js.org/
 https://github.com/redux-saga/redux-saga
+
+https://www.youtube.com/watch?v=Z4Ug7NL2VAk
+Saga Design Pattern for managing Distributed Transactions (An Introduction)
+
+Redux-Saga Explicado | Introduccion | Conceptos
+https://www.youtube.com/watch?v=FVP8fpFDarI
+
+Learn Redux Saga
+What the JavaScript
+https://www.youtube.com/playlist?list=PLMV09mSPNaQlWvqEwF6TfHM-CVM6lXv39
+
+Saga Pattern for Microservices || What is Saga pattern? || Database Patterns for Microservices
+https://www.youtube.com/watch?v=69kqVIvp4p8
+
+Saga Design Pattern | MicroServices Architecture Patterns
+https://www.youtube.com/watch?v=Z6y_b-zbM7c

@@ -3,6 +3,8 @@ http://www.mutt.org/relnotes/1.9/
 http://www.mutt.org/relnotes/1.10/
 http://www.mutt.org/relnotes/2.0/
 https://news.ycombinator.com/item?id=25019901
+https://lwn.net/SubscriberLink/837960/f3bcafeaed37425d/
+https://news.ycombinator.com/item?id=25222166
 https://gitlab.com/muttmua/mutt/raw/master/UPDATING
 http://www.mutt.org/doc/manual/
 https://github.com/gotbletu/shownotes/blob/master/mutt.md

@@ -15,3 +15,7 @@ Stripe checkout
 https://stripe.com/docs/payments/checkout
 https://dashboard.stripe.com/register
 
+Stripe Capital
+A complete lending program through a single integration
+https://twitter.com/patrickc/status/1333834822330896384
+https://stripe.com/capital/platforms

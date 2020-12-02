@@ -1,0 +1,17 @@
+https://github.com/react-native-share/react-native-share
+https://react-native-share.github.io/react-native-share/
+	yarn add react-native-share
+
+import Share from 'react-native-share';
+
+Share.open(options)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    err && console.log(err);
+  });
+
+ShareResponse
+{"app":"com.whatsapp/com.whatsapp.ContactPicker","message":"com.whatsapp/com.whatsapp.ContactPicker"}
+{"app":"com.twitter.android/com.twitter.composer.ComposerActivity","message":"com.twitter.android/com.twitter.composer.ComposerActivity"}
