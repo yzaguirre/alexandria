@@ -26,10 +26,13 @@ https://stackoverflow.com/questions/40232312/could-not-find-method-classpath-for
 Add google-service plugin as a dependency inside of your android/build.gradle
 classpath("com.google.gms:google-services:4.2.0")
 Or latest based on firebase console:
-classpath("com.google.gms:google-services:4.3.3")
+classpath("com.google.gms:google-services:4.3.4")
 
-Lastly, execute the plugin by adding the following to the very bottom of your android/app/build.gradle file:
+Execute the plugin by adding the following to the very bottom of your android/app/build.gradle file:
 apply plugin: "com.google.gms.google-services"
+Lastly, add dependencies
+implementation platform("com.google.firebase:firebase-bom:26.1.0")
+See for more dependencies https://firebase.google.com/docs/android/setup#available-libraries
 
 Firestore data storage service from Firebase
 	yarn add @react-native-firebase/firestore

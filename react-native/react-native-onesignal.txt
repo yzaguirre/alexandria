@@ -1,0 +1,2 @@
+React Native Library for OneSignal Push Notifications Service
+https://github.com/OneSignal/react-native-onesignal

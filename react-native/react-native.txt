@@ -169,13 +169,13 @@ fetch permissions
 https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
 
 https://github.com/rt2zz/redux-persist
-https://github.com/react-native-community/async-storage
+An asynchronous, persistent, key-value storage system for React Native
+https://github.com/react-native-async-storage/async-storage
 https://react-native-async-storage.github.io/async-storage/docs/install/
 https://aboutreact.com/react-native-asyncstorage/
 https://stackoverflow.com/questions/57781527/how-to-solve-console-error-redux-persist-failed-to-create-sync-storage-falli
 redux-persist
-https://github.com/react-native-community/async-storage
-	npm install --save redux-persist @react-native-community/async-storage
+	yarn add @react-native-async-storage/async-storage redux-persist
 https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
 https://stackoverflow.com/questions/53012355/how-to-delay-splashscreen-of-redux-persist-gate
 https://stackoverflow.com/questions/49695027/redux-persist-v5-state-not-persisted-in-asyncstorage
@@ -255,6 +255,8 @@ https://stackoverflow.com/questions/47570998/implement-pull-to-refresh-flatlist#
 FlatList keyExtractor
 https://stackoverflow.com/questions/47953662/react-native-use-a-keyextractor-with-flatlist
 	keyExtractor={(item, index) => 'key'+index}
+Many items in list
+https://www.reddit.com/r/reactnative/comments/k57uw2/flatlist_with_tabmenu_help/
 
 Redirect 401
 https://stackoverflow.com/questions/50309033/react-native-fetch-with-authorization-header-sometime-return-401
