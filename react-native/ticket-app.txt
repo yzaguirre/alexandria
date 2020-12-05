@@ -1,0 +1,3 @@
+https://github.com/victorbalssa/expo-ticket-app
+https://www.reddit.com/r/reactnative/comments/k6qvi0/i_finally_released_my_boilerplate_on_githubcom/
+	git clone https://github.com/victorbalssa/expo-ticket-app.git

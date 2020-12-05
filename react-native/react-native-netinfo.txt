@@ -1,0 +1,13 @@
+React Native Network Info API for Android & iOS
+https://github.com/react-native-netinfo/react-native-netinfo
+
+Handy toolbelt to deal nicely with offline/online connectivity in a React Native app. Smooth redux integration airplane
+https://github.com/rgommezz/react-native-offline#networkprovider
+
+https://www.reddit.com/r/reactnative/comments/k6ls82/check_connectivity/
+
+	yarn add react-native-offline
+	yarn add @react-native-community/netinfo
+
+Edit AndroidManifest.xml
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

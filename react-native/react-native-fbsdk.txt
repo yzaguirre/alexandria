@@ -1,0 +1,5 @@
+A React Native wrapper around the Facebook SDKs for Android and iOS. Provides access to Facebook login, sharing, graph requests, app events etc.
+https://github.com/facebook/react-native-fbsdk
+https://rnfirebase.io/auth/social-auth
+https://developers.facebook.com/docs/android/getting-started
+	yarn add react-native-fbsdk

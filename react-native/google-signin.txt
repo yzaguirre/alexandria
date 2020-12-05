@@ -1,0 +1,5 @@
+Google Sign-in for your React Native applications
+https://github.com/react-native-google-signin/google-signin
+	yarn add @react-native-community/google-signin
+https://github.com/react-native-google-signin/google-signin/blob/master/docs/android-guide.md
+https://github.com/react-native-google-signin/google-signin/blob/master/docs/get-config-file.md
