@@ -1,3 +1,10 @@
 Delightful onboarding for your React-Native app
 https://github.com/jfilter/react-native-onboarding-swiper
 	yarn add react-native-onboarding-swiper
+
+Simple and configurable app introduction slider for react native
+https://github.com/jacse/react-native-app-intro-slider
+	yarn add react-native-app-intro-slider
+
+Onboarding UI | App Intro Slider in React Native || Cab Booking App #1
+https://www.youtube.com/watch?v=f0RepUfPcco

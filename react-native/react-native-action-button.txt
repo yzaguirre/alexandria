@@ -1,0 +1,3 @@
+Customizable multi-action-button component for react-native
+https://github.com/mastermoo/react-native-action-button
+	yarn add react-native-action-button

@@ -91,3 +91,8 @@ Checkout coverage/lcov-report/index.html
 Update snapshots
 	jest --updateSnapshot
 
+React Native
+React Native - Testing with Jest and React Test Renderer
+https://www.youtube.com/watch?v=6kM1Z5dDF-Q
+React-native jest tutorial
+https://www.youtube.com/playlist?list=PL8p2I9GklV46mGMh5X1pzuDWidnRrlHyp

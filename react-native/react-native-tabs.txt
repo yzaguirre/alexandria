@@ -12,4 +12,5 @@ or	yarn add react-native-tab-view
 or	yarn add --save react-native-gesture-handler react-native-reanimated
 
 https://reactnavigation.org/docs/en/bottom-tab-navigator.html
+	yarn add @react-navigation/bottom-tabs
 https://reactnavigation.org/docs/en/material-top-tab-navigator.html

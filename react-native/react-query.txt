@@ -1,0 +1,2 @@
+https://react-query.tanstack.com/overview
+	yarn add react-query

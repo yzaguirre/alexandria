@@ -1,3 +1,5 @@
+https://community.hetzner.com/tutorials/simple-ca-for-ssh
+
 https://www.paepper.com/blog/posts/how-to-properly-manage-ssh-keys-for-server-access/
 https://news.ycombinator.com/item?id=24599837
 

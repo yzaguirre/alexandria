@@ -1,0 +1,8 @@
+https://www.reddit.com/r/reactnative/comments/k9wmu7/help_usefocuseffect_from_reactnavigation/
+This makes sure the useFocusEffect only gets called when anything in the dependency changes or when the view comes into focus
+useFocusEffect(React.useCallback(() => {
+}, [])
+);
+
+Redux vs Context API- Cuál usar?
+https://www.youtube.com/watch?v=BYoZ5oNLhc8

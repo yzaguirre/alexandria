@@ -1,0 +1,3 @@
+Material design action button for React Native
+https://github.com/santomegonzalo/react-native-floating-action
+	yarn add react-native-floating-action

@@ -1,0 +1,4 @@
+REACT JS HOOK useMemo
+https://www.youtube.com/watch?v=htRYR9wDDRE
+Learn useMemo In 10 Minutes
+https://www.youtube.com/watch?v=THL1OPn72vo

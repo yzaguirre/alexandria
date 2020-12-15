@@ -1,0 +1,4 @@
+https://zpao.github.io/qrcode.react/
+https://github.com/zpao/qrcode.react
+https://www.reddit.com/r/startups/comments/kc7ymf/how_to_generate_qr_code_coupons/gfpirll?utm_source=share&utm_medium=web2x&context=3
+	yarn add qrcode.react

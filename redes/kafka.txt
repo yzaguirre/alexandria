@@ -1,0 +1,2 @@
+https://kafka.apache.org/
+https://materialize.com/kafka-is-not-a-database/
