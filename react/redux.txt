@@ -1,0 +1,15 @@
+https://redux.js.org/introduction/getting-started
+https://redux.js.org/basics/store/
+
+React Redux Hooks Tutorial for Beginners
+https://www.youtube.com/watch?v=5X7oyxAQ9n4
+https://github.com/ewong/stc-22-react-redux-basics/
+
+React Redux with Hooks
+https://www.youtube.com/watch?v=_oK9Jd8LH1E
+import { useSelector, useActions } from 'react-redux'
+
+const todos = useSelector((state) => state.todos)
+
+https://github.com/hidjou/classsed-redux-hooks/tree/redux-connect
+https://github.com/hidjou/classsed-redux-hooks/tree/redux-hooks

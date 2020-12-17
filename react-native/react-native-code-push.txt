@@ -1,0 +1,7 @@
+React Native module for CodePush
+https://github.com/Microsoft/react-native-code-push
+https://appcenter.ms/
+	yarn add react-native-code-push
+
+React Native Codepush Tutorial
+https://www.youtube.com/playlist?list=PLucG_ap4OxzhOGhcO4pJxm-ojSV5LMHWi

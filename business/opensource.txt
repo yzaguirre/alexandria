@@ -1,3 +1,6 @@
 No More Free Work from Marak: Pay Me or Fork This
 https://github.com/Marak/faker.js/issues/1046
 https://news.ycombinator.com/item?id=25032105
+
+https://cognitect.com/blog/2020/12/15/sponsoring-open-source-developers
+https://news.ycombinator.com/item?id=25432248

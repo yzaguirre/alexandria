@@ -1,0 +1,7 @@
+Show HN: Keytap2 - acoustic keyboard eavesdropping based on n-gram frequencies
+https://news.ycombinator.com/item?id=25417022
+
+https://github.com/ggerganov/kbd-audio/discussions/31
+https://ggerganov.github.io/keytap
+
+https://unix4lyfe.org/dct-1d/
