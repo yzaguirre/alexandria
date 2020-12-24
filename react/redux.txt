@@ -1,10 +1,17 @@
 https://redux.js.org/introduction/getting-started
 https://redux.js.org/basics/store/
+	yarn add react-redux redux redux-thunk
 
 React Redux Hooks Tutorial for Beginners
 https://www.youtube.com/watch?v=5X7oyxAQ9n4
 https://github.com/ewong/stc-22-react-redux-basics/
 
+Here's How to Use React Hooks with Redux
+https://www.youtube.com/watch?v=8xoEpnmhxnk
+const { count, name } = useSelector(state => ({
+	...state.counterReducer,
+	...state.nameReducer,
+}))
 React Redux with Hooks
 https://www.youtube.com/watch?v=_oK9Jd8LH1E
 import { useSelector, useActions } from 'react-redux'
@@ -13,3 +20,23 @@ const todos = useSelector((state) => state.todos)
 
 https://github.com/hidjou/classsed-redux-hooks/tree/redux-connect
 https://github.com/hidjou/classsed-redux-hooks/tree/redux-hooks
+
+How to use Redux in React Native
+https://www.youtube.com/watch?v=qdAzeYAfQlY
+
+Access state in action
+https://react-redux.js.org/api/hooks
+See ~/react-native/hooks.txt
+https://stackoverflow.com/questions/35667249/accessing-redux-state-in-an-action-creator
+import store from '../store';
+
+export const SOME_ACTION = 'SOME_ACTION';
+export function someAction() {
+  return {
+    type: SOME_ACTION,
+    items: store.getState().otherReducer.items,
+  }
+}
+
+How to use Redux and Redux Thunk with React Tutorial
+https://www.youtube.com/watch?v=WRk0nT8ps6w

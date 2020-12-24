@@ -1,1 +1,25 @@
 https://www.reddit.com/r/reactnative/comments/k3ulcc/is_there_any_way_to_expand_sqlite_storage_i_dont/
+https://brucelefebvre.com/blog/2020/05/03/react-native-offline-first-db-with-sqlite-hooks/
+https://github.com/blefebvre/react-native-sqlite-demo/blob/master/src/database/DatabaseInitialization.ts
+https://github.com/andpor/react-native-sqlite-storage
+	yarn add react-native-sqlite-storage
+Android
+	vim react-native.config.js
+module.exports = {
+  ...,
+  dependencies: {
+    ...,
+    "react-native-sqlite-storage": {
+      platforms: {
+        android: {
+          sourceDir:
+            "../node_modules/react-native-sqlite-storage/platforms/android-native",
+          packageImportPath: "import io.liteglue.SQLitePluginPackage;",
+          packageInstance: "new SQLitePluginPackage()"
+        }
+      }
+    }
+    ...
+  }
+  ...
+};

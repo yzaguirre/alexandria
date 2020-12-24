@@ -38,3 +38,8 @@ https://stackoverflow.com/questions/46052783/check-the-render-method
 
 https://reactnavigation.org/blog/2020/01/29/using-react-navigation-5-with-react-native-paper
 https://github.com/Trancever/twitterClone/tree/master/src
+
+Theming and colors
+https://callstack.github.io/react-native-paper/theming.html
+https://github.com/callstack/react-native-paper/blob/master/src/styles/DefaultTheme.tsx
+https://reactnavigation.org/docs/themes

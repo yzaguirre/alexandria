@@ -1,0 +1,3 @@
+https://discord.com/open-source
+How Discord achieves native iOS performance with React Native
+https://blog.discord.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502

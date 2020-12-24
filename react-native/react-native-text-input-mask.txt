@@ -1,0 +1,14 @@
+https://blog.cloudboost.io/text-input-mask-for-react-native-3c04e82843a6?gi=86daf4f21800
+https://github.com/react-native-text-input-mask/react-native-text-input-mask
+https://callstack.github.io/react-native-paper/text-input.html
+	yarn add react-native-text-input-mask
+import TextInputMask from 'react-native-text-input-mask'
+...
+<TextInputMask
+  refInput={ref => { this.input = ref }}
+  onChangeText={(formatted, extracted) => {
+    console.log(formatted) // +1 (123) 456-78-90
+    console.log(extracted) // 1234567890
+  }}
+  mask={"+1 ([000]) [000] [00] [00]"}
+/>

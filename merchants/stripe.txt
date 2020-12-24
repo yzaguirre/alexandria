@@ -19,3 +19,7 @@ Stripe Capital
 A complete lending program through a single integration
 https://twitter.com/patrickc/status/1333834822330896384
 https://stripe.com/capital/platforms
+
+Stripe's payments APIs: the first ten years
+https://stripe.com/blog/payment-api-design
+https://news.ycombinator.com/item?id=25455638

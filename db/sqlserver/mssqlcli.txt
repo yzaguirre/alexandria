@@ -1,3 +1,4 @@
+Python CLI for Microsoft SQL
 https://github.com/rtrox/mssqlcli
 https://stackoverflow.com/questions/54355320/how-do-i-send-query-output-from-mssql-cli-on-a-linux-machine-to-a-text-file-on-t
 	pip3 install mssqlcli

@@ -1,0 +1,7 @@
+https://github.com/IjzerenHein/react-native-shared-element
+	yarn add react-native-shared-element
+
+React Native Shared Element Transition
+https://www.youtube.com/watch?v=iejTIn9zi0U
+Airbnb Shared Transition - "Can it be done in React Native?"
+https://www.youtube.com/watch?v=83GNiMp-qq0

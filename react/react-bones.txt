@@ -1,0 +1,12 @@
+Dead simple loading components for React and React-Native. 
+https://github.com/jottenlips/react-bones
+https://jottenlips.github.io/react-bones/?path=/docs/bones--bones-custom-duration
+https://www.reddit.com/r/reactnative/comments/kfec6j/made_a_cross_platform_skeleton_loading_component/
+see ~/react-native/skeleton-component.txt
+	yarn add react-bones
+
+React
+import { Bones } from "react-bones/lib";
+
+React Native
+import { Bones } from "react-bones/native";

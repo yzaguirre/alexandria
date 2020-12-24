@@ -1,0 +1,6 @@
+https://formik.org/
+https://github.com/formium/formik
+https://github.com/bamlab/react-native-formik
+React Native EU 2019: Jared Palmer - Forms In React Native
+https://www.youtube.com/watch?v=C1dHjIFjl6k
+	yarn add formik

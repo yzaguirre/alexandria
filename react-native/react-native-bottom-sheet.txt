@@ -1,0 +1,22 @@
+A performant interactive bottom sheet with fully configurable options
+https://gorhom.github.io/react-native-bottom-sheet/
+https://github.com/gorhom/react-native-bottom-sheet
+https://www.reddit.com/r/reactnative/comments/kej2i4/bottom_sheet_v2_is_out_with_lots_of_features/
+Accessibility support
+Reactive/Dynamic snap points
+BottomSheetModal becomes a declarative component
+Custom Backdrop & Background support
+onAnimate, onDismiss callbacks
+	yarn add @gorhom/bottom-sheet
+	yarn add react-native-reanimated react-native-gesture-handler
+
+
+Draggable modal
+https://www.reddit.com/r/reactnative/comments/e94elf/how_do_you_make_a_draggable_modal/
+https://github.com/osdnk/react-native-reanimated-bottom-sheet
+https://www.youtube.com/watch?v=yQK2oaIN0yA
+	yarn add reanimated-bottom-sheet
+
+https://jeremybarbet.github.io/react-native-modalize/
+https://github.com/jeremybarbet/react-native-modalize
+	yarn add react-native-modalize react-native-gesture-handler

@@ -16,3 +16,10 @@ https://www.youtube.com/watch?v=69kqVIvp4p8
 
 Saga Design Pattern | MicroServices Architecture Patterns
 https://www.youtube.com/watch?v=Z6y_b-zbM7c
+
+https://www.reddit.com/r/reactnative/comments/ker2qp/free_learning_courses_for_redux_saga/
+https://www.loginradius.com/blog/async/introduction-to-redux-saga/
+https://flaviocopes.com/redux-saga/
+
+Redux Saga Example - React Notes Taking App. Redux Saga vs Thunks
+https://www.youtube.com/watch?v=_TwzWUUTPpk

@@ -1,0 +1,31 @@
+https://github.com/luggit/react-native-config#usage
+https://medium.com/differential/managing-configuration-in-react-native-cd2dfb5e6f7b
+
+https://github.com/facebook/flipper/issues/976
+react-native-config.js
+
+module.exports = {
+  project: {
+    ios: {},
+    android: {}, // grouped into "project"
+  },
+  dependencies: {
+    '@react-native-community/google-signin': {
+      platforms: {
+        ios: null,
+      },
+    },
+    'react-native-fbsdk': {
+      platforms: {
+        ios: null,
+      },
+    },
+    'react-native-flipper': {
+      platforms: {
+        ios: null,
+      },
+    },
+  },
+  assets: ['./assets/fonts/'], // stays the same
+};
+

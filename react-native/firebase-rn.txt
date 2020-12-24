@@ -45,3 +45,6 @@ allow read, write: if request.auth.uid != null;
 Cloud storage
 https://rnfirebase.io/storage/usage
 	yarn add @react-native-firebase/storage
+
+Push notification
+https://rnfirebase.io/messaging/usage

@@ -3,7 +3,6 @@ https://github.com/react-native-netinfo/react-native-netinfo
 
 Handy toolbelt to deal nicely with offline/online connectivity in a React Native app. Smooth redux integration airplane
 https://github.com/rgommezz/react-native-offline#networkprovider
-
 https://www.reddit.com/r/reactnative/comments/k6ls82/check_connectivity/
 
 	yarn add react-native-offline

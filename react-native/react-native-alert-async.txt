@@ -1,0 +1,4 @@
+https://github.com/slorber/react-native-alert-async
+https://reactnative.dev/docs/alert
+https://stackoverflow.com/questions/48809762/how-to-await-for-the-response-of-alert-dialog-in-react-native
+	yarn add react-native-alert-async

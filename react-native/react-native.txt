@@ -205,11 +205,6 @@ import {
  } from 'react-native'
  let { height, width } = Dimensions.get('screen')
 
-Draggable modal
-https://www.reddit.com/r/reactnative/comments/e94elf/how_do_you_make_a_draggable_modal/
-https://github.com/osdnk/react-native-reanimated-bottom-sheet
-https://www.youtube.com/watch?v=yQK2oaIN0yA
-
 Clear gradle cache
 https://github.com/react-native-community/cli/issues/591
 Stop gradlew on Windows:
@@ -359,5 +354,5 @@ https://reactnative.dev/docs/security
 https://mcodex.dev/react-native-sensitive-info/
 	yarn add react-native-sensitive-info@next
 
-https://github.com/osdnk/react-native-reanimated-bottom-sheet
-	yarn add reanimated-bottom-sheet
+How Discord achieves native iOS performance with React Native
+https://blog.discord.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502

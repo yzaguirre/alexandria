@@ -71,3 +71,14 @@ https://news.ycombinator.com/item?id=18864220
 Clear data cache
 https://stackoverflow.com/questions/10934304/clear-android-application-user-data#26400275
 	adb shell pm clear com.2020App
+
+Install apk
+https://www.smartphones.how/internet/install-an-apk-file-from-computer-using-adb-command
+	adb install example.apk
+Logcat
+https://developer.android.com/studio/command-line/logcat
+	adb logcat
+For package space
+https://stackoverflow.com/questions/39297951/adb-logcat-filter-by-package-name
+	adb shell ps | grep com.example.package
+	adb logcat --pid=<pid>

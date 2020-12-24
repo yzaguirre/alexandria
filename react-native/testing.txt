@@ -1,1 +1,11 @@
 https://jestjs.io/docs/en/tutorial-react-native
+
+The React Native Show Podcast
+https://www.youtube.com/playlist?list=PLZ3MwD-soTTHLUonsfIOUbmAl3B73EGXg
+
+Simple and complete React Native testing utilities that encourage good testing practices
+https://callstack.github.io/react-native-testing-library/
+https://github.com/callstack/react-native-testing-library
+	yarn add --dev @testing-library/react-native
+	yarn add --dev react-test-renderer react
+	yarn add --dev @testing-library/jest-native

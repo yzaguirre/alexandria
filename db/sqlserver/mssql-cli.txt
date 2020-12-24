@@ -1,10 +1,11 @@
+A command-line client for SQL Server with auto-completion and syntax highlighting
 https://cloudblogs.microsoft.com/sqlserver/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/
 https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-2017
 https://github.com/dbcli/mssql-cli
 https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md
 https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md
 https://www.sqlshack.com/introduction-mssql-cli-new-interactive-command-line-tool-sql-server/
-	pip install mssql-cli
+	sudo -H pip3 install mssql-cli
 Compile bug
 https://github.com/termux/termux-packages/issues/136
 	apt install python-dev
@@ -17,10 +18,20 @@ https://www.experts-exchange.com/questions/22489865/missing-sqlfront-h-compile-e
 Part of the SQL Server SDK. https://www.microsoft.com/en-us/download/details.aspx?id=10070
 
 Config file at
+https://github.com/dbcli/mssql-cli/blob/master/mssqlcli/mssqlclirc
 %LOCALAPPDATA%\dbcli\mssqlcli
+~/.config/mssqlcli/config
 
 Disable telemetry collection by setting environment variable
-	MSSQL_CLI_TELEMETRY_OPTOUT=1
+	MSSQL_CLI_TELEMETRY_OPTOUT=True
 
 Usage
-	mssql-cli -S <server name> -U <user name> -d <database name>
+	mssql-cli -S <server URL> -d <database name> -U <username> -P <password>
+	mssql-cli --help
+
+Environment Variables
+MSSQL_CLI_SERVER - Set Default Server
+MSSQL_CLI_DATABASE - Set Default Database
+MSSQL_CLI_USER - Set Default User
+MSSQL_CLI_PASSWORD - Set Default Password
+MSSQL_CLI_ROW_LIMIT - Set Default Row Limit

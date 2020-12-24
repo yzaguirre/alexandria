@@ -1,0 +1,8 @@
+https://github.com/react-native-device-info/react-native-device-info
+	yarn add react-native-device-info
+
+import DeviceInfo from 'react-native-device-info';
+
+// or ES6+ destructured imports
+
+import { getUniqueId, getManufacturer } from 'react-native-device-info';

@@ -1,0 +1,17 @@
+https://github.com/markuswind/react-native-select-input-ios
+	yarn add react-native-select-input-ios
+import React from 'react'
+import { View } from 'react-native'
+import SelectInput from 'react-native-select-input-ios'
+
+class Component extends React.Component {
+  render() {
+    const options = [{ value: 0, label: '0' }]
+    
+    return (
+      <View>
+        <SelectInput value={0} options={options} />
+      </View>
+    )
+  }
+}

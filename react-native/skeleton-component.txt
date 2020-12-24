@@ -1,0 +1,4 @@
+see ~/react/react-bones.txt
+
+Skeleton UI Tutorial | React Native Animated
+https://www.youtube.com/watch?v=zM3l9jpt5PU

@@ -1,0 +1,11 @@
+https://storybook.js.org/
+Intro to Storybook for React with Figma - [React Storybook Tutorial]
+https://www.youtube.com/watch?v=p2sZKAPOQXs
+Run this at the top level of your app
+	npx -p @storybook/cli sb init
+Generates .storybook folder with two files:
+	addons.js
+	config.js
+Start the storybook server
+	yarn storybook
+See localhost:9009

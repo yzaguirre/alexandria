@@ -1,3 +1,6 @@
+Get previous state
+setDarkMode(prevMode => !prevMode)
+
 https://www.reddit.com/r/reactnative/comments/k9wmu7/help_usefocuseffect_from_reactnavigation/
 This makes sure the useFocusEffect only gets called when anything in the dependency changes or when the view comes into focus
 useFocusEffect(React.useCallback(() => {
@@ -6,3 +9,27 @@ useFocusEffect(React.useCallback(() => {
 
 Redux vs Context API- Cuál usar?
 https://www.youtube.com/watch?v=BYoZ5oNLhc8
+
+Redux hooks - calling action and useDispatch
+https://react-redux.js.org/api/hooks
+
+Codevolution
+React Redux Tutorials - 21 - useDispatch Hook
+https://www.youtube.com/watch?v=a3iV5d8Q2-8
+https://github.com/gopinav/React-Redux-Tutorials/blob/master/react-redux-demo/src/redux/cake/cakeActions.js
+
+React.js - How to Fetch Data (feat. React Hooks, Render Props)
+https://www.youtube.com/watch?v=Ur6MNStwXlQ
+
+https://blog.webdevsimplified.com/2020-05/memoization-in-react/
+
+Learn useCallback in 8 Minutes
+https://www.youtube.com/watch?v=_AyFP5s69N4&t=321s
+
+React Hooks Tutorial | Learn useState in 8 Minutes
+https://www.youtube.com/watch?v=Zqq6VnqnA0Q
+
+How React Hooks Change The Way We Build Forms
+https://www.youtube.com/watch?v=8yo44xN7-nQ
+useFormValidation.js
+https://codesandbox.io/embed/vn5v04484y?file=/src/useFormValidation.js&codemirror=1

@@ -13,3 +13,5 @@ https://reactnavigation.org/docs/stack-navigator
 	yarn add @react-navigation/stack
 https://reactnavigation.org/docs/drawer-navigator/
 	yarn add @react-navigation/drawer
+
+https://www.robinwieruch.de/react-native-navigation
