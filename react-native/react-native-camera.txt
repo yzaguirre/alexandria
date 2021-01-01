@@ -1,0 +1,17 @@
+Take picture
+https://react-native-camera.github.io/react-native-camera/
+https://react-native-camera.github.io/react-native-camera/docs/installation.html
+https://github.com/react-native-camera/react-native-camera
+https://github.com/zsajjad/react-native-text-detector
+https://heartbeat.fritz.ai/building-text-detection-apps-for-ios-and-android-using-react-native-42fe3c7e339
+	yarn add react-native-camera
+
+https://github.com/teslamotors/react-native-camera-kit
+	yarn add react-native-camera-kit
+import { Camera } from 'react-native-camera-kit';
+
+Gallery
+https://github.com/teslamotors/react-native-camera-kit/pull/329
+https://github.com/react-native-cameraroll/react-native-cameraroll
+
+Ver ~/react-native/react-native-image-crop-picker.txt

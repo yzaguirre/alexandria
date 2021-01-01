@@ -1,7 +1,7 @@
 https://guiscrcpy.github.io/
 https://github.com/srevinsaju/guiscrcpy
 https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9.3/guiscrcpy-x86_64.AppImage
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.7.7/guiscrcpy-4.7.7.dev.r.glibc2.27-x86_64.AppImage
 	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.7.2/guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage
 	chmod u+x guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage
 	mv guiscrcpy-4.7.2.r.glibc2.27-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
@@ -15,6 +15,6 @@ https://github.com/genymobile/scrcpy/
 scrcpy with scoop
 	scoop install scrcpy
 Directory: ~\scoop\apps\scrcpy\current
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/3.9.3/guiscrcpy.exe
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/4.7.7/guiscrcpy.exe
 Save it at C:\Program Files\guiscrpy
 Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Menu

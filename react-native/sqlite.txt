@@ -1,7 +1,15 @@
-https://www.reddit.com/r/reactnative/comments/k3ulcc/is_there_any_way_to_expand_sqlite_storage_i_dont/
-https://brucelefebvre.com/blog/2020/05/03/react-native-offline-first-db-with-sqlite-hooks/
-https://github.com/blefebvre/react-native-sqlite-demo/blob/master/src/database/DatabaseInitialization.ts
+Full featured SQLite3 Native Plugin for React Native (Android and iOS)
 https://github.com/andpor/react-native-sqlite-storage
+https://github.com/storesafe/cordova-sqlite-storage
+https://brucelefebvre.com/blog/2020/05/03/react-native-offline-first-db-with-sqlite-hooks/
+https://github.com/blefebvre/react-native-sqlite-demo
+https://dev-yakuza.posstree.com/en/react-native/react-native-sqlite-storage/
+https://www.android-doc.com/reference/android/database/sqlite/SQLiteDatabase.html#delete(java.lang.String,%20java.lang.String,%20java.lang.String[])
+
+Tutorial SQLite Database in React Native
+https://youtu.be/VCN5Th19hZM?t=213
+https://github.com/walidabazo/React-JS-Native-Mobile-Application---SQLite-Database
+
 	yarn add react-native-sqlite-storage
 Android
 	vim react-native.config.js

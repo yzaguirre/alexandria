@@ -40,3 +40,10 @@ export function someAction() {
 
 How to use Redux and Redux Thunk with React Tutorial
 https://www.youtube.com/watch?v=WRk0nT8ps6w
+
+https://soshace.com/how-to-use-the-redux-dev-tools-to-speed-up-development-and-debugging/
+
+Restart state
+https://stackoverflow.com/questions/35622588/how-to-reset-the-state-of-a-redux-store
+case "RESET":
+	return INITIAL_STATE; // Always return the initial state

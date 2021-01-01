@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=4Pw4du1IrDs
+Medium mobile article - Sticky footer - React Native with Animated API

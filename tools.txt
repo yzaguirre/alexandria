@@ -608,3 +608,31 @@ Payment
 Pair programming
 https://paircast.io
 https://news.ycombinator.com/item?id=24984210
+
+Utils
+ripgrep
+fd-find
+ruplacer
+duc
+exa
+duf
+aha
+bat
+jq
+ttyplot
+tokei
+skim
+rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
+ranger
+nnn
+neofetch
+ncdu
+cowsay
+lolcat
+jc
+hexyl
+hex (hx)
+fzf
+dust
+dog
+broot

@@ -1,0 +1,21 @@
+https://react-native-async-storage.github.io/async-storage/
+https://github.com/react-native-async-storage/async-storage
+An asynchronous, persistent, key-value storage system for React Native
+https://aboutreact.com/react-native-asyncstorage/
+AsyncStorage can only be used to store small values in the form of
+a key and value pair because it has some limitations to store the data.
+You can store your value with respect to any key and then can access
+the value using the key again. It works perfectly on
+both platforms (Android and IOS).
+
+	yarn add @react-native-async-storage/async-storage
+
+Persist
+https://github.com/rt2zz/redux-persist
+https://stackoverflow.com/questions/57781527/how-to-solve-console-error-redux-persist-failed-to-create-sync-storage-falli
+redux-persist
+	yarn add @react-native-async-storage/async-storage redux-persist
+https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
+https://stackoverflow.com/questions/53012355/how-to-delay-splashscreen-of-redux-persist-gate
+https://stackoverflow.com/questions/49695027/redux-persist-v5-state-not-persisted-in-asyncstorage
+https://egghead.io/lessons/javascript-redux-persisting-the-state-to-the-local-storage

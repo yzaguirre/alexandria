@@ -33,3 +33,5 @@ https://stackoverflow.com/questions/11643611/execute-sqlite-script#11643691
 Concatenate strings
 https://stackoverflow.com/questions/6134415/how-to-concatenate-strings-with-padding-in-sqlite
 The || operator is "concatenate" - it joins together the two strings of its operands.
+
+https://www.sqlitetutorial.net/sqlite-primary-key/

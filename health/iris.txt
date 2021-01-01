@@ -1,0 +1,5 @@
+https://iristech.co/iris/
+Freemium. Customizable. The original Iris. Awesome for Health freaks.
+	mkdir /opt/iris
+	unzip Iris-0.9.9-Linux-64bit.zip -d /opt/iris
+	alias iris=/opt/iris/Iris.sh

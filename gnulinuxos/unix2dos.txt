@@ -1,0 +1,8 @@
+http://kb.iu.edu/data/acux.html
+To convert a Windows file to a Unix file, enter:
+	dos2unix winfile.txt unixfile.txt
+
+To convert a Unix file to Windows, enter:
+	unix2dos unixfile.txt winfile.txt
+
+See ~/iconv.txt

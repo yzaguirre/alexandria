@@ -14,3 +14,10 @@ android {
     }
     ...
 }
+
+React Native #11: Image Picker from Camera, Gallary | React Native
+https://www.youtube.com/watch?v=q9kMlcn8Pm8
+React Native: IMAGE PICKER use new version, run on Android, IOS
+https://www.youtube.com/watch?v=J0emr9pI9V4
+
+Ver ~/react-native/react-native-camera.txt

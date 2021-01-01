@@ -13,3 +13,9 @@ https://github.com/lottie-react-native/lottie-react-native
 	yarn add lottie-react-native
 	yarn add lottie-ios@3.1.8
 https://lottiefiles.com/
+
+How to Make Native Splash Screen in React Native | Solving the White Screen Problem in Launching App
+https://www.youtube.com/watch?v=1oQgy-fCEBM
+
+React Native #26: Make A Splash Screen
+https://www.youtube.com/watch?v=9_KDgsFGLY8

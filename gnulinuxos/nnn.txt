@@ -1,2 +1,9 @@
+The unorthodox terminal file manager.
 https://github.com/jarun/nnn
 https://news.ycombinator.com/item?id=18520898
+	wget https://github.com/jarun/nnn/releases/download/v3.5/nnn_3.5-1_ubuntu18.04.amd64.deb
+	dpkg -i nnn_3.5-1_ubuntu18.04.amd64.deb
+Termux
+	apt update
+	apt install nnn
+

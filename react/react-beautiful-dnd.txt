@@ -1,0 +1,4 @@
+https://react-beautiful-dnd.netlify.app/
+https://github.com/atlassian/react-beautiful-dnd
+https://www.reddit.com/r/webdev/comments/kmx493/first_fullstack_reactnextjs_project_for_my/
+	yarn add react-beautiful-dnd

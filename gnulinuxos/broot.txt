@@ -1,19 +1,18 @@
 https://github.com/Canop/broot
+https://dystroy.org/broot/
 	cargo install broot
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v0.13.2
+	git checkout v1.0.9
 		cargo build --release
 Binary download
+Linux
+	wget https://github.com/Canop/broot/releases/download/v1.0.9/broot_1.0.9.zip
+	unzip broot_1.0.9.zip
+	sudo mv build/x86_64-linux/broot /usr/local/bin
+Check the $EDITOR environment variable (all OS platform)
 Windows
-	wget https://github.com/Canop/broot/releases/download/v0.13.2/broot.exe
-	mv broot.exe ~/bin
+	mv build/x86_64-pc-windows-gnu/broot.exe ~/bin
 Configuration file
 %HOME%\AppData\Roaming\dystroy\broot\config\conf.toml
-Linux
-	wget https://github.com/Canop/broot/releases/download/v0.13.2/broot
-	chmod u+x broot
-	sudo mv broot /usr/local/bin
-Check the $EDITOR environment variable (all OS platform)
-

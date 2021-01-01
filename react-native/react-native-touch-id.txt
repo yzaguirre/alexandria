@@ -1,5 +1,6 @@
 https://github.com/naoufal/react-native-touch-id
 https://github.com/oblador/react-native-keychain
+https://medium.com/react-native-training/securing-your-react-native-app-using-keychain-6de10850d203
 https://medium.com/react-native-training/integrate-touch-id-and-face-id-to-your-react-native-app-707e7db17edc
 https://www.folio3.com/mobile/blog/fingerprint-login-react-native/
 https://blog.theodo.com/2018/04/add-touch-id-react-native-app/
