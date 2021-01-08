@@ -87,3 +87,7 @@ https://core.telegram.org/bots/api
 https://core.telegram.org/bots/samples/hellobot
 See telegram-hellobot.php
 	sudo -H pip3 install python-telegram-bot
+
+API
+https://core.telegram.org/api
+https://my.telegram.org/apps

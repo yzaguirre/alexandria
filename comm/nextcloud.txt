@@ -1,10 +1,11 @@
 https://nextcloud.com
 Desktop client
-https://download.nextcloud.com/desktop/releases/Linux/latest
-	chmod u+x Nextcloud-3.0.2-x86_64.AppImage
-x	./Nextcloud-3.0.2-x86_64.AppImage
-	mv Nextcloud-3.0.2-x86_64.AppImage ~/appimage
-	ln -s ~/appimage/Nextcloud-3.0.2-x86_64.AppImage /usr/local/bin/nextcloud
+https://nextcloud.com/install/?pk_campaign=clientupdate#install-clients
+	wget https://github.com/nextcloud/desktop/releases/download/v3.1.1/Nextcloud-3.1.1-x86_64.AppImage
+	chmod u+x Nextcloud-3.1.1-x86_64.AppImage
+x	./Nextcloud-3.1.1-x86_64.AppImage
+	mv Nextcloud-3.1.1-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 
 Off maintenance mode
 	php occ maintenance:mode --off
@@ -79,3 +80,5 @@ Remove 2fa for everybody
 	php occ twofactorauth:cleanup totp
 Remove 2fa for david
 	php occ twofactorauth:disable david
+API
+https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/basic.html#

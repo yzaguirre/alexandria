@@ -7,3 +7,6 @@ This icon should be 196x196 pixels in size to cover all devices that may use thi
 
 Management Consulting Presentations - How to use Icons for Slide Presentations
 https://www.youtube.com/watch?v=5l6HcKWPxu8
+
+https://remixicon.com/
+	npm install remixicon --save

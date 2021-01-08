@@ -35,3 +35,14 @@ https://stackoverflow.com/questions/6134415/how-to-concatenate-strings-with-padd
 The || operator is "concatenate" - it joins together the two strings of its operands.
 
 https://www.sqlitetutorial.net/sqlite-primary-key/
+
+Dates
+https://sqlite.org/lang_datefunc.html
+https://www.sqlitetutorial.net/sqlite-date/
+https://www.sqlitetutorial.net/tryit/query/sqlite-date/#11
+	date(time-value, modifier, modifier, ...)
+	time(time-value, modifier, modifier, ...)
+	datetime(time-value, modifier, modifier, ...)
+	julianday(time-value, modifier, modifier, ...)
+	strftime(format, time-value, modifier, modifier, ...)
+	strftime('%Y-%m-%d', ...)

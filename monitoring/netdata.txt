@@ -1,5 +1,6 @@
-https://my-netdata.io/
+https://www.netdata.cloud/
 https://github.com/netdata/netdata/
 https://news.ycombinator.com/item?id=17773874
 https://www.reddit.com/r/linuxadmin/comments/7l9krs/netdata_the_opensource_distributed_realtime/
+
 https://www.reddit.com/r/linuxadmin/comments/bhdmyy/netdata_the_opensource_realtime_performance_and/

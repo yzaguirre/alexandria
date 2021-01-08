@@ -1,8 +1,8 @@
 https://github.com/isacikgoz/gitin/
-	wget https://github.com/isacikgoz/gitin/releases/download/v0.1.5/gitin_0.1.5_linux_amd64.tar.gz
-	wget https://github.com/isacikgoz/gitin/releases/download/v0.1.5/checksums_gitin_0.1.5.txt
-	sha256sum --ignore-missing -c checksums_gitin_0.1.5.txt
-	tar xf gitin_0.1.5_linux_amd64.tar.gz
+	wget https://github.com/isacikgoz/gitin/releases/download/v0.2.5/gitin_v0.2.5_linux_amd64.tar.gz
+	wget https://github.com/isacikgoz/gitin/releases/download/v0.2.5/checksums_gitin_0.2.5.txt
+	sha256sum --ignore-missing -c checksums_gitin_0.2.5.txt
+	tar xf gitin_0.2.5_linux_amd64.tar.gz
 	mv gitin /usr/local/bin
 	gitin --help
 	gitin log --help
