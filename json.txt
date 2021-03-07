@@ -1,4 +1,5 @@
 https://stedolan.github.io/jq/
+https://github.com/stedolan/jq
 https://mosermichael.github.io/jq-illustrated/dir/content.html
 https://news.ycombinator.com/item?id=22626080
 	apt install jq
@@ -21,9 +22,30 @@ We want to pull out all of the "html_url" fields inside that array of parent com
 Reading a JSON from GitHub API
 	jq '.[]|{full_name,created_at}' repositories.json
 
+How to process JSON using curl and jq?
+https://www.youtube.com/playlist?list=PLKaiHc24qCTSOGkkEpeIMupEmnInqHbbV
+
+Linux Shell Parsing JSON with jq
+https://www.youtube.com/watch?v=NOlRKZF2JRo
+
+JQ for JSON processing and GROUP BY
+https://www.youtube.com/watch?v=X8ofFIC004o
+
+JSON: Like a Boss
+https://www.youtube.com/watch?v=_ZTibHotSew
+	curl ... | jq -C . | less -R
+
+Format JSON in VIM - Using jq
+https://www.youtube.com/watch?v=PdC-zWfx73Q
+:.!jq .
+
+JSON JQ Linux Tool, Quick Tutorial
+https://www.youtube.com/watch?v=CQuRAIN9nJk
+
 https://github.com/fiatjaf/jqview
 simplest possible native GUI for inspecting JSON objects with jq
 https://news.ycombinator.com/item?id=23433290
 	wget https://github.com/fiatjaf/jqview/releases/download/v1/jqview_linux_amd64
 	chmod u+x jqview_linux_amd64
+
 	mv jqview_linux_amd64 /usr/local/bin/jqview

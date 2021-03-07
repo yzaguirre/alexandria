@@ -20,6 +20,8 @@ https://askubuntu.com/questions/199057/mutt-not-working-due-to-gnutls-handshake-
 	cd mutt
 	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --enable-smtp --with-ssl --with-sasl --enable-hcache --with-gss --enable-debug --enable-gpgme
 	sudo make install
+MacOS
+	brew install mutt
 Install PGP support
 	cd contrib
 	mv gpg.rc ~/documents/.gpg.rc

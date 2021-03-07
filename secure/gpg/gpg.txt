@@ -276,3 +276,6 @@ Export secret key
 Delete primary secret key
 	gpg --delete-secret-key 0xkeyid
 https://dev.gnupg.org/T2943
+
+https://superuser.com/questions/167095/how-to-force-gpg2-to-use-expired-key
+	gpg --faked-system-time 20100101T000000 -e -r keyid

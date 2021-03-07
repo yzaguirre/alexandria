@@ -1,0 +1,18 @@
+https://github.com/visit1985/mdp
+
+$ git clone https://github.com/visit1985/mdp.git
+$ cd mdp
+
+	wget https://github.com/visit1985/mdp/archive/master.zip 
+	unzip master.zip
+	cd mdp-master
+$ make
+# make install
+$ mdp sample.md
+
+Controls:
+    h, j, k, l, Cursor keys, Space, Enter, Backspace - next/previous slide
+    Home - go to first slide
+    End - go to last slide
+    1-9 - go to slide n
+    q - exit

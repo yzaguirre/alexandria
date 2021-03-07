@@ -1,0 +1,20 @@
+https://reactnative.dev/docs/textinput
+https://callstack.github.io/react-native-paper/text-input.html
+https://stackoverflow.com/questions/40935381/how-can-i-put-an-icon-inside-a-textinput-in-react-native
+https://github.com/callstack/react-native-paper/issues/2239
+function TextInput_() {
+    const [text, setText] = React.useState('');
+    return (
+        <TextInput
+            label="No. Handphone"
+            value={text}
+            onChangeText={text => setText(text)}
+            left={
+                <TextInput.Icon
+                    name="heart"
+                />
+            }
+        />
+
+    )
+}

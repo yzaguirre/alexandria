@@ -1,0 +1,25 @@
+Gray box end-to-end testing and automation framework for mobile apps
+see ~/ios/applesimulatorutils.txt
+https://github.com/wix/Detox
+https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md
+https://github.com/wix/Detox/blob/master/docs/Introduction.iOS.md
+https://github.com/wix/Detox/blob/master/docs/Introduction.Android.md
+Install
+	npm install -g detox-cli
+Update
+	npm update -g detox-cli
+Install dev dependency with your project
+	npm install detox --save-dev
+	yarn add --dev detox
+Initialize
+	detox init -r jest
+It creates
+e2e/config.json
+e2e/environment.js
+e2e/firstTest.e2e.js
+.detoxrc.json
+
+Build app
+	detox build -c ios
+Run test
+	detox test -c ios

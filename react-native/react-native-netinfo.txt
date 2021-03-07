@@ -7,6 +7,8 @@ https://www.reddit.com/r/reactnative/comments/k6ls82/check_connectivity/
 
 	yarn add react-native-offline
 	yarn add @react-native-community/netinfo
+MacOS
+	npx pod-install ios
 
 Edit AndroidManifest.xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

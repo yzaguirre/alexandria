@@ -1,0 +1,9 @@
+http://remotepresentation.blogspot.com/2013/04/download.html
+https://play.google.com/store/apps/details?id=rp.reproductor
+https://play.google.com/store/apps/details?id=remotep.reproductor
+
+mv RemotePresentationLatest.jar /VMs/opt
+cat <<EOF > ~/bin/RemotePresentation && chmod u+x ~/bin/RemotePresentation
+#!/bin/bash
+java -jar /VMs/opt/RemotePresentationLatest.jar
+EOF

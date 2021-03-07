@@ -2,7 +2,7 @@ Autogeneration (it's unanswered)
 http://www.linuxine.com/story/how-generate-automatically-odt-documents-libreoffice-using-variables
 
 Make libreoffice listen for clients
-http://www.maketecheasier.com/batch-convert-documents-at-the-command-line/
+https://www.maketecheasier.com/batch-convert-documents-at-the-command-line/
 	libreoffice4.3 --headless --accept="socket,host=127.0.0.1,port=8100;urp;"
 
 https://github.com/mirkonasato/jodconverter

@@ -1,1 +1,13 @@
 https://www.youtube.com/watch?v=u4md32GMX28
+
+DE10-Nano Kit
+https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=167&No=1046
+
+FireBeetle Board-328P with BLE4.1
+https://www.dfrobot.com/product-1646.html
+
+TCD1304 driver board
+https://tcd1304.wordpress.com/
+https://www.pcbway.com/project/shareproject/TCD1304_driver_board_1.html
+
+https://erik.dev/

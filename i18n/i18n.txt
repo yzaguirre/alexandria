@@ -1,0 +1,2 @@
+How to serve an html page with content in multiple languages? internationalization and localization
+https://www.youtube.com/watch?v=9wJPOPywU3w

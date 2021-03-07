@@ -10,3 +10,11 @@ https://www.youtube.com/watch?v=5l6HcKWPxu8
 
 https://remixicon.com/
 	npm install remixicon --save
+
+Show HN: Iconduck - 100k open source icons, downloadable and searchable
+https://iconduck.com/
+https://news.ycombinator.com/item?id=25872922
+
+Icons - Google Fonts
+https://fonts.google.com/icons
+https://news.ycombinator.com/item?id=26326599

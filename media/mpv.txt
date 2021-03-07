@@ -1,0 +1,27 @@
+https://mpv.io/installation/
+https://github.com/mpv-player/mpv
+	apt install rst2pdf
+	apt install libgnutls28-dev libopus-dev libsmbclient-dev
+MacOS
+	brew install mpv
+https://github.com/mpv-player/mpv-build
+	git clone https://github.com/mpv-player/mpv-build.git
+	cd mpv-build
+	./update
+	apt install devscripts equivs
+	rm -f mpv-build-deps_*_*.deb
+	mk-build-deps -s sudo -i
+You can build a full mpv Debian package with the following command:
+	dpkg-buildpackage -uc -us -b -j4
+	sudo dpkg -i ../mpv_<version>_<architecture>.deb
+Or
+Get the ffmpeg, libass and mpv sources and build them with:
+	./rebuild -j4
+You can do incremental builds by explicitly calling
+	./build
+Install mpv with:
+	sudo ./install
+
+https://www.reddit.com/r/LinuxActionShow/comments/4o2230/you_can_use_mpv_to_make_a_picture_in_picture/
+	mpv --ontop --no-border --autofit=384x216 --geometry=99%:2% [file]
+	mpv --ontop --no-border --on-all-workspaces --autofit=384x216 --geometry=99%:2% [file]

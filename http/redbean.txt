@@ -1,0 +1,13 @@
+Redbean - Single-file distributable web server
+https://justine.lol/redbean/index.html
+https://news.ycombinator.com/item?id=26271117
+Installation
+	curl https://justine.lol/redbean/redbean-latest.com >redbean.com
+	chmod +x redbean.com
+	bash -c './redbean.com -vv'
+
+Usage
+	echo '<b>hello</b>' >index.html
+	zip redbean.com index.html
+	./redbean.com -vv
+	curl -v http://127.0.0.1:8080/index.html

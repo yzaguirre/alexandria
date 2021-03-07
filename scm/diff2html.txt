@@ -1,0 +1,5 @@
+https://diff2html.xyz/
+https://github.com/rtfpessoa/diff2html
+https://github.com/rtfpessoa/diff2html-cli
+	npm install -g diff2html-cli
+	diff2html

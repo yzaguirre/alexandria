@@ -1,5 +1,45 @@
 https://rubyinstaller.org/
 https://www.ruby-lang.org/en/
+
+Install via rbenv
+https://stackoverflow.com/questions/37720892/you-dont-have-write-permissions-for-the-var-lib-gems-2-3-0-directory#37956249
+https://github.com/rbenv/rbenv#using-package-managers
+https://github.com/rbenv/ruby-build
+https://github.com/rbenv/rbenv-installer#rbenv-installer
+	wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer -O- | bash
+Or
+	git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+	git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+	echo 'export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+Run rbenv-doctor
+	wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor -O- | bash
+
+MacOS
+	brew install rbenv ruby-build
+
+Install a ruby version
+	rbenv install 3.0.0
+	rbenv install 2.7.2
+Installs shims for all Ruby executables known
+to rbenv (i.e., ~/.rbenv/versions/*/bin/*).
+Run this command after you install a new version of Ruby,
+or install a gem that provides commands.
+	rbenv rehash
+	echo $GEM_HOME
+Ruby versions at ~/.rbenv/versions
+	rbenv versions
+Display current version
+	rbenv version
+Lists all available versions of Ruby
+	ruby-build --definitions
+
+Choose a ruby version in your scripts file (.zshrc, .zprofile, .bashrc, .profile)
+	export RBENV_VERSION=2.7.2
+Or
+	rbenv shell 2.7.2
+Unset it
+	rbenv shell --unset
+
 https://news.ycombinator.com/item?id=7806329
 https://news.ycombinator.com/item?id=18751823
 Ruby already has the ability to spin up a quick webserver for the current directory. This is supported through the un file in Ruby's stdlib: http://ruby-doc.org/stdlib-2.0.0/libdoc/un/rdoc/Object.html.

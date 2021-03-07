@@ -1,1 +1,11 @@
 https://github.com/pipxproject/pipx
+	sudo -H pip3 install -U pipx
+	pipx ensurepath
+	pipx install guake
+	pipx list
+On Mac
+	brew install pipx
+	pipx install guake
+Update Software
+	brew update
+	brew upgrade pipx

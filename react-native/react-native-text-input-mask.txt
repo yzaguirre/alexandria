@@ -12,3 +12,7 @@ import TextInputMask from 'react-native-text-input-mask'
   }}
   mask={"+1 ([000]) [000] [00] [00]"}
 />
+
+iOS trouble
+https://github.com/react-native-text-input-mask/react-native-text-input-mask/issues/153
+[...] this plugin has fatal ios issue, and they cannot fix it yet.

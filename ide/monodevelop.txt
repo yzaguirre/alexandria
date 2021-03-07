@@ -1,0 +1,19 @@
+http://www.monodevelop.com/
+http://flatpak.org/getting.html
+	apt install flatpak
+Next, you'll need a minimal FlatPak repository to provide our dependencies:
+	flatpak remote-add --user --from gnome https://sdk.gnome.org/gnome.flatpakrepo
+Finally, install MonoDevelop with:
+	flatpak install --user --from https://download.mono-project.com/repo/monodevelop.flatpakref
+You can run newly installed MonoDevelop from shell using 
+	flatpak run com.xamarin.MonoDevelop
+	
+Compile
+http://www.monodevelop.com/developers/building-monodevelop/#linux
+	apt install mono-complete fsharp libglade2.0-cil-dev
+	wget https://github.com/mono/monodevelop/archive/monodevelop-6.2.0.1515.tar.gz
+	tar xf monodevelop-6.2.0.1515.tar.gz
+	cd monodevelop-monodevelop-6.2.0.1515
+	./configure
+	./make
+	./make install

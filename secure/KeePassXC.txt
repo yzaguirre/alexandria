@@ -15,14 +15,14 @@ https://news.ycombinator.com/item?id=20164051
 Install in /usr/local/share/keepassxc/
 AppImage
 https://news.ycombinator.com/item?id=23768819
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.0/KeePassXC-2.6.0-x86_64.AppImage
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.0/KeePassXC-2.6.0-x86_64.AppImage.DIGEST
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.0/KeePassXC-2.6.0-x86_64.AppImage.sig
-	gpg --verify KeePassXC-2.6.0-x86_64.AppImage.sig KeePassXC-2.6.0-x86_64.AppImage
-	sha256sum -c KeePassXC-2.6.0-x86_64.AppImage.DIGEST
-	chmod u+x KeePassXC-2.6.0-x86_64.AppImage
-	mv KeePassXC-2.6.0-x86_64.AppImage ~/appimage
-	ln -s ~/appimage/KeePassXC-2.6.0-x86_64.AppImage /usr/local/bin/keepassxc
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.3/KeePassXC-2.6.3-x86_64.AppImage
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.3/KeePassXC-2.6.3-x86_64.AppImage.DIGEST
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.3/KeePassXC-2.6.3-x86_64.AppImage.sig
+	gpg --verify KeePassXC-2.6.3-x86_64.AppImage.sig KeePassXC-2.6.3-x86_64.AppImage
+	sha256sum -c KeePassXC-2.6.3-x86_64.AppImage.DIGEST
+	chmod u+x KeePassXC-2.6.3-x86_64.AppImage
+	mv KeePassXC-2.6.3-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/KeePassXC-2.6.3-x86_64.AppImage /usr/local/bin/keepassxc
 MS Windows install
 	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.5.4/KeePassXC-2.5.4-Win64.msi
 	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.5.4/KeePassXC-2.5.4-Win64.msi.sig

@@ -1,0 +1,4 @@
+https://react-bootstrap.github.io/
+	yarn add react-bootstrap bootstrap
+https://create-react-app.dev/docs/adding-bootstrap/#using-a-custom-theme
+	yarn add node-sass

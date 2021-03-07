@@ -1,0 +1,3 @@
+https://github.com/microsoft/MS-DOS/blob/master/v2.0/source/XENIX.ASM
+https://web.archive.org/web/20100612035120/http://blogs.msdn.com/b/larryosterman/archive/2005/06/24/432386.aspx
+https://news.ycombinator.com/item?id=26272492

@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/1846266/how-to-set-the-video-recording-time-limit-in-iphone
+picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
+let MAX_VIDEO_DURATION = 30.0 // note the .0, must be double, move this at the top of your class preferrebly
+picker.videoMaximumDuration = NSTimeInterval(MAX_VIDEO_DURATION)

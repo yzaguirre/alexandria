@@ -1,0 +1,14 @@
+https://brew.sh/
+Xcode command line tools (macOS)
+	xcode-select --install
+Install
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew install wget
+Homebrew installs packages to their own directory and then symlinks their files into /usr/local.
+
+Make a dump
+	brew bundle dump --describe
+Install from a dump
+	brew bundle --file ~/Brewfile
+or move to the directory first
+	brew bundle

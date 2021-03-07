@@ -1,0 +1,6 @@
+https://github.com/react-native-clipboard/clipboard
+	yarn add @react-native-community/clipboard
+MacOS
+	npx pod-install ios
+import Clipboard from '@react-native-community/clipboard'
+Clipboard.setString('hello world')

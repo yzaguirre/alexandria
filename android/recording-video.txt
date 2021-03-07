@@ -1,0 +1,24 @@
+https://stackoverflow.com/questions/52849527/android-record-video-for-30-second-and-after-30-second-record-audio-only#52849612
+https://stackoverflow.com/questions/16013182/how-to-capture-video-duration-programmatically
+
+For recording video up to 30 sec.
+Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 30);
+intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
+intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri); // set the image file
+startActivityForResult(intent, CAMERA_CAPTURE_VIDEO_REQUEST_CODE);
+
+https://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_VIDEO_QUALITY
+The name of the Intent-extra used to control the quality of a recorded video.
+This is an integer property.
+Currently value 0 means low quality, suitable for MMS messages,
+and value 1 means high quality.
+In the future other quality levels may be added.
+
+https://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_DURATION_LIMIT
+Specify the maximum allowed recording duration in seconds.
+
+https://developer.android.com/reference/android/provider/MediaStore.html#EXTRA_SIZE_LIMIT
+https://stackoverflow.com/questions/17652627/extra-video-quality-is-ignored
+Specify the maximum allowed size.
+i.putExtra(MediaStore.EXTRA_SIZE_LIMIT, 5491520L); //5*1048*1048=5MB

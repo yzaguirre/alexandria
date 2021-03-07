@@ -1,8 +1,12 @@
 https://github.com/ivpusic/react-native-image-crop-picker
 	yarn add react-native-image-crop-picker
+MacOS
+	npx pod-install ios
 https://www.youtube.com/watch?v=3_ldEVWlL18
 Use gradle 4.0.1
+https://developer.android.com/studio/build/multidex
 https://stackoverflow.com/a/36786721/1905092
+https://stackoverflow.com/questions/36785014/the-number-of-method-references-in-a-dex-file-cannot-exceed-64k-api-17
 	vim android/app/build.gradle
 android {
 
@@ -15,9 +19,42 @@ android {
     ...
 }
 
+React Native Image Picker Tutorial | Pick from Camera, Gallery | Crop Photo
+https://www.youtube.com/watch?v=3_ldEVWlL18
+
+	code ios/project/Info.plist
+<key>NSCameraUsageDescription</key>
+<string>Permitir</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Permitir</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Permitir</string>
+
+	code android/build.gradle
+allprojects {
+	maven { url 'https://maven.google.com' }
+}
+
+https://stackoverflow.com/questions/41407811/android-vectordrawables-usesupportlibrary-true-is-stopping-app
+	code android/app/build.gradle
+android {
+	defaultConfig {
+		vectorDrawables.useSupportLibrary = true
+	}
+}
+
+https://stackoverflow.com/questions/36016369/system-alert-window-how-to-get-this-permission-automatically-on-android-6-0-an#36019034
+	code app/src/main/AndroidManifest.xml
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
 React Native #11: Image Picker from Camera, Gallary | React Native
 https://www.youtube.com/watch?v=q9kMlcn8Pm8
 React Native: IMAGE PICKER use new version, run on Android, IOS
 https://www.youtube.com/watch?v=J0emr9pI9V4
+
+React Native image crop picker , Full Example
+https://www.youtube.com/watch?v=wzNcB5iCXE4
 
 Ver ~/react-native/react-native-camera.txt

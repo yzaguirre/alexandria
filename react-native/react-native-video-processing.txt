@@ -1,2 +1,40 @@
 https://shahen94.github.io/react-native-video-processing/
 https://github.com/shahen94/react-native-video-processing
+https://stackoverflow.com/questions/40466889/react-native-trim-video
+	yarn add react-native-video-processing
+
+getPreviewImageForSecond(second) {
+	const maximumSize = { width: 640, height: 1024 }; // default is { width: 1080, height: 1080 } iOS only
+	this.videoPlayerRef.getPreviewForSecond(second, maximumSize) // maximumSize is iOS only
+	.then((base64String) => console.log('This is BASE64 of image', base64String))
+	.catch(console.warn);
+}
+const maximumSize = { width: 100, height: 200 }
+ProcessingManager.getPreviewForSecond(source, forSecond, maximumSize)
+  .then((data) => console.log(data))
+
+react-native-video-trim-picker
+A React Native module that allows you to use native UI to select video from the device library and trim it.
+https://www.npmjs.com/package/react-native-video-trim-picker
+https://developer.aliyun.com/mirror/npm/package/react-native-video-trim-picker
+https://github.com/gilons/react-native-video-trim-picker
+	yarn add react-native-video-trim-picker
+
+https://github.com/fishkingsin/react-native-video-trimmer
+
+https://github.com/classapp/react-native-video-helper
+https://github.com/zi6xuan/react-native-video-helper
+React Native video helper library, to compress and trim videos using AVFoundation in iOS and MediaCodec in Android
+	yarn add react-native-video-helper 
+
+https://account.photoeditorsdk.com/pricing
+https://blog.photoeditorsdk.com/a-photo-and-video-editor-for-your-react-native-apps/
+How to integrate a photo and video editor into your React Native app in 15 minutes
+https://www.youtube.com/watch?v=e9JiCMQKrJY
+
+React Native module for VideoEditor SDK
+https://github.com/imgly/vesdk-react-native
+https://github.com/imgly/vesdk-react-native-demo
+
+https://github.com/imgly/pesdk-react-native
+https://github.com/imgly/pesdk-react-native-demo

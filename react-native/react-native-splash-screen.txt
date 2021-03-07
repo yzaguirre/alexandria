@@ -1,6 +1,15 @@
+See ~/react-native/app-icons.txt
 https://github.com/crazycodeboy/react-native-splash-screen
+https://soshace.com/build-real-world-react-native-app-1-splash-screen-and-app-icon/
+
+How to Make Native Splash Screen in React Native | Solving the White Screen Problem in Launching App
+https://www.youtube.com/watch?v=1oQgy-fCEBM
+
 https://github.com/crazycodeboy/react-native-splash-screen/tree/master/examples/android/app/src/main/java/com/examples
-	npm i react-native-splash-screen --save
+	yarn add react-native-splash-screen
+MacOS
+	npx pod-install ios
+
 ImageView
 https://developer.android.com/reference/android/widget/ImageView.html#attr_android:src
 https://stackoverflow.com/questions/2974862/changing-imageview-source
@@ -19,3 +28,6 @@ https://www.youtube.com/watch?v=1oQgy-fCEBM
 
 React Native #26: Make A Splash Screen
 https://www.youtube.com/watch?v=9_KDgsFGLY8
+
+https://github.com/HwangTaehyun/react-native-lottie-splash-screen
+https://www.reddit.com/r/reactnative/comments/l4yq4s/lottie_splash_screen_issue_how_to_detect_when/

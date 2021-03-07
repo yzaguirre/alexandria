@@ -10,7 +10,7 @@ you can also press ctrl + f to find and replace words.
 
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
-https://www.sublimetext.com/3
+	https://www.sublimetext.com/3
 	wget https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
 
 	tar xf sublime_text_3_build_3211_x64.tar.bz2 -C /opt

@@ -1,3 +1,6 @@
+https://mikkel.ca/blog/git-is-my-buddy-effective-solo-developer/
+https://news.ycombinator.com/item?id=26239068
+
 https://github.blog/2020-07-27-highlights-from-git-2-28/
 https://news.ycombinator.com/item?id=23966948
 

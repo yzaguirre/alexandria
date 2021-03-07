@@ -47,3 +47,7 @@ Restart state
 https://stackoverflow.com/questions/35622588/how-to-reset-the-state-of-a-redux-store
 case "RESET":
 	return INITIAL_STATE; // Always return the initial state
+
+React Redux Hooks Tutorial for Beginners
+https://www.youtube.com/watch?v=5X7oyxAQ9n4
+	yarn add @reduxjs/toolkit react-redux

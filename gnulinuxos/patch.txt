@@ -5,3 +5,10 @@ Apply a patch
 	patch < file.diff
 Reverse a patch
 	patch -R < file.diff
+https://www.howtogeek.com/415442/how-to-apply-a-patch-to-a-file-and-create-patches-in-linux/
+	patch -u working.slang.c -i slang.patch
+
+https://www.shellhacks.com/create-patch-diff-command-linux/
+	diff -ruN OriginalDir UpdatedDir > PatchFile
+	diff -ru OriginalDir UpdatedDir > PatchFile
+	patch -p0 < PatchFile

@@ -1,0 +1,8 @@
+https://www.jetbrains.com/phpstorm/
+	wget http://download.jetbrains.com/webide/PhpStorm-8.0.2.tar.gz
+	tar xf PhpStorm-8.0.2.tar.gz -C /opt
+	rm PhpStorm-8.0.2.tar.gz
+	ln -s /opt/PhpStorm/bin/phpstorm.sh /usr/local/bin/phpstorm
+Xdebug
+https://www.jetbrains.com/phpstorm/help/configuring-xdebug.html
+https://www.jetbrains.com/phpstorm/marklets/

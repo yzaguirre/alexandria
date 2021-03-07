@@ -1,0 +1,3 @@
+https://nicolargo.github.io/glances/
+https://github.com/nicolargo/glances
+	sudo -H pip3 install glances

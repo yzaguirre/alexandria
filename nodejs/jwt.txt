@@ -58,3 +58,23 @@ const parseJwt = (token) => {
     return null;
   }
 };
+
+Refresh token
+What is a Refresh Token and why your REST API needs it?
+https://www.youtube.com/watch?v=-Z57Ss_uiuc
+JWT Refresh tokens explained
+https://www.youtube.com/watch?v=GXGQv6dHQ0k
+JWT Refresh Token in ASP.Net Core (a deep dive)
+https://www.youtube.com/watch?v=7JP7V59X1sk
+JWT Authentication Tutorial - Node.js
+https://www.youtube.com/watch?v=mbsmsi7l3r4
+JWT Authentication using Refresh, Access Tokens - NodeJS
+https://www.youtube.com/watch?v=h7oVLne3J8Y
+14. Generating Refresh Tokens | Node JS API Authentication
+https://www.youtube.com/watch?v=tI_k0wQufKc
+15. Using Refresh Tokens to generate New tokens | Node JS API Authentication
+https://www.youtube.com/watch?v=e5arKkbhEyE
+OAuth 2.0 - Refresh Token
+https://www.youtube.com/watch?v=3Po7SOF9jkA
+JWT - JSON Web Token Crash Course (NodeJS & Postgres)
+https://www.youtube.com/watch?v=T0k-3Ze4NLo

@@ -1,5 +1,7 @@
 https://reactnative.dev/
 https://reactnative.directory/
+What are the norms that you follow for RN development?
+https://www.reddit.com/r/reactnative/comments/kzp1ob/what_are_the_norms_that_you_follow_for_rn/
 How Discord achieves native iOS performance with React Native
 https://news.ycombinator.com/item?id=21480493
 https://www.reddit.com/r/reactnative/comments/dr7l0y/best_youtube_channels_where_you_always_tend_to/
@@ -20,12 +22,19 @@ https://www.reddit.com/r/reactnative/comments/jlk9jf/react_native_code_review/
 https://github.com/macaetano/trivia-game
 
 Install xcode, nodejs, watchman
-For mack
+https://reactnative.dev/docs/environment-setup
+https://medium.com/@pabasarajayawardhana/react-native-environment-set-up-on-mac-os-with-xcode-and-android-studio-324e64c8552e
+https://reactnativecode.com/install-react-native-on-mac/
+For MacOS
 	brew update
 	brew install node
 	brew install watchman
+	brew install cocoapods
 For new versions
 	brew upgrade node
+https://stackoverflow.com/questions/59410402/webpacker-error-while-creating-ruby-on-rails-app
+	gem uninstall yarn
+	brew install yarn
 
 Install on Windows
 	npm install -g expo-cli
@@ -65,6 +74,7 @@ Checkout the latest release
 The log file can be found in /tmp/.watchman.yourusername.log
 
 Install the cli
+https://github.com/react-native-community/cli
 	npm install -g react-native-cli
 Edit .bash_profile or .bashrc
 	vim ~/.bash_profile
@@ -88,7 +98,8 @@ Run for Android
 	react-native run-android
 Run for iOS
 	react-native run-ios
-or	xed -b ios
+	react-native run-ios --simultator "iPhone X"
+	react-native run-ios --device "Kris101"
 
 Erase cache
 	npm start --reset-cache
@@ -209,7 +220,9 @@ https://facebook.github.io/react-native/docs/permissionsandroid.html
 
 Download files
 https://github.com/joltup/rn-fetch-blob
-	npm install --save rn-fetch-blob
+	yarn add rn-fetch-blob
+MacOS
+	npx pod-install ios
 https://stackoverflow.com/questions/54099610/how-can-i-download-file-from-a-url-in-react-native-for-ios
 https://github.com/wkh237/react-native-fetch-blob/issues/474
 if (Platform.OS === 'ios') {
@@ -226,33 +239,12 @@ https://stackoverflow.com/questions/55398536/react-native-fetch-network-request-
 https://stackoverflow.com/questions/51902629/how-to-allow-all-network-connection-types-http-and-https-in-android-9-pie
 android:usesCleartextTraffic="true"
 
-Loading and pagination
-https://aboutreact.com/react-native-flatlist-pagination-to-load-more-data-dynamically-infinite-list/
-https://reactnativecode.com/infinite-list-flatlist-pagination-load-more-data/
-
-Pull to refresh
-https://tutorialsha.com/flatlist-pull-to-refresh-with-example-react-native/
-https://stackoverflow.com/questions/47570998/implement-pull-to-refresh-flatlist#51306168
-
-FlatList keyExtractor
-https://stackoverflow.com/questions/47953662/react-native-use-a-keyextractor-with-flatlist
-	keyExtractor={(item, index) => 'key'+index}
-Many items in list
-https://www.reddit.com/r/reactnative/comments/k57uw2/flatlist_with_tabmenu_help/
-
 Redirect 401
 https://stackoverflow.com/questions/50309033/react-native-fetch-with-authorization-header-sometime-return-401
 
 Twitter
 https://stackoverflow.com/questions/38610431/twitter-widget-inside-webview-in-react-native?rq=1
 https://help.twitter.com/en/using-twitter/embed-twitter-feed
-
-Make icons
-https://github.com/bamlab/react-native-make
-https://stackoverflow.com/questions/34329715/how-to-add-icons-to-react-native-app/41090194
-https://medium.com/react-native-training/how-to-easily-configure-launch-icons-in-react-native-android-ios-2e1f351496ed
-	yarn add @bam.tech/react-native-make
-	react-native set-icon --path <path_to_png> --background <icon_background_color> --platform <android|ios>
 
 Scrollup
 https://snack.expo.io/HJcgiI8kb
@@ -271,24 +263,12 @@ Rename app
 https://stackoverflow.com/questions/32830046/renaming-a-react-native-project
 https://github.com/2MR/renaming-a-react-native-project
 
-Picker
-http://facebook.github.io/react-native/docs/picker.html
-https://stackoverflow.com/questions/30137100/how-to-use-react-native-select-box
-
-https://github.com/sohobloo/react-native-modal-dropdown
-https://github.com/n4kz/react-native-material-dropdown
-
 OpenChakra
 https://openchakra.app/
 https://news.ycombinator.com/item?id=22307270
 
 Frameworks
 https://www.reddit.com/r/reactnative/comments/f6g31h/what_are_the_best_ui_toolkits_right_now/
-
-Modal Selector
-https://github.com/peacechen/react-native-modal-selector
-https://github.com/facebook/react-native/issues/25866
-https://stackoverflow.com/questions/41181683/react-native-ios-picker-is-always-open
 
 Change app name
 https://medium.com/the-react-native-log/how-to-rename-a-react-native-app-dafd92161c35
@@ -331,10 +311,45 @@ Security
 https://www.obytes.com/blog/authentication-in-react-native-easy-secure-and-reusable-solution
 https://reactnative.dev/docs/security
 
-https://mcodex.dev/react-native-sensitive-info/
-	yarn add react-native-sensitive-info@next
-
 How Discord achieves native iOS performance with React Native
 https://blog.discord.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502
 
 https://reactnativecode.com/highlight-some-text-within-text-string-yellow-color/
+
+https://www.reddit.com/r/reactnative/comments/kv2sty/my_first_react_native_app_without_expo/
+
+https://react-native.toys/project/decent-gallery.html
+https://www.reddit.com/r/reactnative/comments/kw766u/lets_show_you_how_to_make_an_awesome_ticket/
+
+View
+https://stackoverflow.com/questions/48258084/borderstyle-not-working-in-android-react-native
+You must have the borderRadius: 1
+style = {{ 
+   flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    borderColor: 'red',
+    borderStyle: 'dotted',
+    borderWidth: 2,
+    borderRadius: 1,
+    position: 'relative',
+}}
+
+Unmounted component
+https://stackoverflow.com/questions/39767482/is-there-a-way-to-check-if-the-react-component-is-unmounted
+
+function MyComponent(props: Props) {
+  const isMounted = useRef(false)
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => (isMounted.current = false)
+  }, []);
+
+  return (...);
+}
+
+export default MyComponent;
+
+Criando sua própria template no React Native | Claudio Orlandi
+https://youtu.be/p6d3RzhgQbA

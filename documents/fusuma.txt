@@ -1,0 +1,8 @@
+Fusuma makes slides with Markdown easily.
+https://github.com/hiroppy/fusuma
+https://news.ycombinator.com/item?id=26024541
+https://hiroppy.github.io/fusuma/docs/getting-started/preparation.html
+	yarn add fusuma --dev
+	mkdir slides
+	echo '# Hello😄' > slides/title.md
+	npx fusuma init

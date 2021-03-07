@@ -1,0 +1,9 @@
+See ~/react-native/linking.txt
+https://github.com/zoontek/react-native-permissions
+https://github.com/levelasquez/react-native-android-open-settings
+https://github.com/lunarmayor/react-native-open-settings#readme
+
+https://reactnative.dev/docs/linking#opensettings
+https://stackoverflow.com/questions/60690479/how-to-open-app-settings-page-in-react-native-android
+import { Linking, } from 'react-native'
+Linking.openSettings()

@@ -86,7 +86,12 @@ https://core.telegram.org/bots/payments
 https://core.telegram.org/bots/api
 https://core.telegram.org/bots/samples/hellobot
 See telegram-hellobot.php
+https://github.com/jg-fisher/python-telegram-bot
 	sudo -H pip3 install python-telegram-bot
+Gansta
+https://github.com/SouravJohar/gangsta
+Gangsta: A Telegram Chatbot with Python from scratch
+https://www.youtube.com/watch?v=5nhdxpoicW4
 
 API
 https://core.telegram.org/api

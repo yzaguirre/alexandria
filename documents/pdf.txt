@@ -12,3 +12,5 @@ Merge / Combine / Join Multiple PDF Files - Linux CLI
 https://www.youtube.com/watch?v=eQoOk5Xbt3M
 https://github.com/gotbletu/shownotes/blob/master/combine_pdf.txt
 combine-pdf() { gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=combinedpdf_`date +'%F_%Hh%M'`.pdf -f "$@" ;}
+
+https://osxdaily.com/2021/01/05/how-combine-pdf-files-mac/

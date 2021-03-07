@@ -1,0 +1,43 @@
+https://avahi.org/
+	apt install avahi-discover
+http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi-rpi-windows/
+	apt install libnss-mdns avahi-utils
+
+Install in centos
+http://theengguy.blogspot.com/2013/02/mdns-centos-63.html
+	# rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
+for 64 bits
+	# rpm -ivh http://dl.atrpms.net/all/atrpms-repo-6-6.el6.x86_64.rpm
+for 32 bits
+	# rpm -ivh http://dl.atrpms.net/all/atrpms-repo-6-6.el6.i686.rpm
+http://dl.atrpms.net/el6-i386/atrpms/stable/atrpms-repo-6-6.el6.i686.rpm
+
+Fix repo file so it only uses the repo when we want it to: 
+	# cd /etc/yum.repos.d
+	# sed -i 's/enabled=0/enabled=1/g' atrpms.repo
+Install nss-mdns: 
+	# yum --enablerepo=atrpms install nss-mdns
+Restart message bus
+	# service messagebus restart
+
+
+Bonjour64
+http://opensource.apple.com/tarballs/mDNSResponder/
+dropbox direct link http://db.tt/LKonLUwJ
+
+http://stackoverflow.com/questions/6160647/differences-between-bonjour-avahi-people-nearby-protocol
+
+services
+http://holyarmy.org/2008/01/advertising-linux-services-via-avahibonjour/
+
+http://www.gnuton.org/blog/2009/03/using-avahi/
+To make discoverable the ssh service you have to:
+copy the config ssh service file in the avahi configuration directory with:
+	# cp /usr/share/doc/avahi-daemon/examples/ssh.service /etc/avahi/services/
+and then you have to restart the avahi service with
+	# service avahi-daemon restart
+Then you can check that everything goes okay with avahi-browse-domain utility:
+	$ avahi-browse-domains -a
+
+templates
+http://wiki.xbmc.org/index.php?title=Avahi_Zeroconf

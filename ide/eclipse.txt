@@ -1,0 +1,13 @@
+http://www.eclipse.org/downloads/
+eclipse luna 4.4.1
+	# tar xf eclipse-java-kepler-R-linux-gtk-x86_64.tar.gz -C /VMs/opt
+	# ln -s /VMs/opt/eclipse/eclipse /usr/local/bin/eclipse
+
+Eclipse Indigo
+http://www.eclipse.org/downloads/packages/release/indigo/sr2
+	mkdir /VMs/opt/in
+	tar xf eclipse-jee-indigo-SR2-linux-gtk-x86_64.tar.gz -C /VMs/opt/in
+	mv /VMs/opt/{in/eclipse,indigo}
+	rmdir /VMs/opt/in
+	ln -s /VMs/opt/indigo/eclipse /usr/local/bin/indigo
+	mkdir ~/workspace_indigo

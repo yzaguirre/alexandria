@@ -1,8 +1,13 @@
+https://github.com/react-native-geolocation/react-native-geolocation
 https://github.com/Agontuk/react-native-geolocation-service
+https://dzone.com/articles/how-to-use-geo-location-geo-coding-in-react-native
 https://github.com/facebook/react-native/issues/7495
 https://heartbeat.fritz.ai/how-to-use-the-geolocation-api-in-a-react-native-app-b5e611b00a0c#4813
 https://heartbeat.fritz.ai/handling-location-data-in-android-84d7905febc6
-	yarn add react-native-geolocation-service
+x	yarn add react-native-geolocation-service
+	yarn add @react-native-community/geolocation
+MacOS
+	npx pod-install ios
 Android permissions
 	vim AndroidManifest.xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -17,7 +22,6 @@ https://github.com/react-native-maps/react-native-maps
 https://github.com/react-native-maps/react-native-maps/blob/master/docs/installation.md
 https://github.com/xDemon200/react-native-maps
 https://github.com/react-native-maps/react-native-maps/issues/3352
-https://github.com/xDemon200/react-native-maps
 
 https://heartbeat.fritz.ai/building-a-react-native-location-tracking-app-6007035a3297
 
@@ -28,6 +32,11 @@ https://console.developers.google.com /apis/library/maps-android-backend.googlea
 https://console.developers.google.com/apis/library/maps-ios-backend.googleapis.com
 	yarn add react-native-maps
 	yarn add https://github.com/xDemon200/react-native-maps
+MacOS
+	npx pod-install ios
 Dark theme
 https://mapstyle.withgoogle.com/
 https://console.cloud.google.com/google/maps-apis/client-styles
+
+https://www.reddit.com/r/reactnative/comments/l94xy9/struggled_for_2_days_to_fetch_location_of_the/
+https://sourav-bz.medium.com/react-native-background-location-tracking-without-timeout-and-with-app-killed-3dbfbc80ad01

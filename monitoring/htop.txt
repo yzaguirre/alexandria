@@ -1,0 +1,5 @@
+https://htop.dev/
+https://twitter.com/nixcraft/status/1365755965807628288
+	apt install htop
+MacOS
+	brew install htop

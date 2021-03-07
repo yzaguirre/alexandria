@@ -71,11 +71,11 @@ Open files
 block facebook
 https://diasp.eu/posts/2740828
 
-set locale
+Set locale. See ~/i18n/locale.txt
 http://perlgeek.de/en/article/set-up-a-clean-utf8-environment
 http://www.thomas-krenn.com/en/wiki/Perl_warning_Setting_locale_failed_in_Debian
-	# locale-gen es_GT.UTF-8
-	# dpkg-reconfigure locales
+	locale-gen es_GT.UTF-8
+	dpkg-reconfigure locales
 mounts
 	mount | column -t 
 swap

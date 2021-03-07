@@ -1,2 +1,10 @@
 https://github.com/danielwinkler/rn-sentence-ordering
 https://www.reddit.com/r/reactnative/comments/keygv6/reanimated_2_example_for_ordering_sentences/
+
+https://www.reddit.com/r/reactnative/comments/l76htv/music_app/
+Another sample animation that could be achieved with React Native + Reanimated2,
+as you can see the frame drops almost never goes down 60 in both threads!
+
+https://www.reddit.com/r/reactnative/comments/latzsv/animations_bezier_curves_with_reanimated_2/
+
+https://www.reddit.com/r/reactnative/comments/lua5p6/animation_config_visualizer_for_reanimated/

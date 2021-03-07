@@ -1,0 +1,41 @@
+When your last name is "True" and that broke Apple's iCloud service.
+The wonders of programming ;)
+https://twitter.com/nixcraft/status/1368169769459998723
+
+see ~/ide/xcode.txt ~/devops/bitrise.txt
+Compile
+https://developer.apple.com/library/archive/technotes/tn2339/_index.html
+https://medium.com/xcblog/xcodebuild-deploy-ios-app-from-command-line-c6defff0d8b8
+https://stackoverflow.com/questions/61522218/unrecognized-module-map-file-release-iphonesimulator-yogakit-yogakit-modulemap
+	xcodebuild clean archive
+		-scheme releaseScheme
+		-configuration Release
+		-archivePath ../builds/<AppName>.xcarchive
+		-allowProvisioningUpdates
+		-workspace <AppName>.xcworkspace
+		DEVELOPMENT_TEAM=<TeamId>
+
+https://suelan.github.io/2020/02/05/iOS-Simulator-from-the-Command-Line/
+List devices
+	xcrun simctl list | less -S
+	applesimutils --list
+Filter
+	xcrun simctl list devices "iPhone X"
+Erase simulator cache
+	xcrun simctl erase all
+
+Platform
+https://stackoverflow.com/questions/52040910/please-specify-a-platform-for-this-target-in-your-podfile
+Edit Podfile
+platform :ios, '9.0'
+
+Record screen
+https://stackoverflow.com/questions/25797990/capture-ios-simulator-video-for-app-preview
+	xcrun simctl io booted recordVideo --codec=hevc app-preview.mov
+	xcrun simctl io booted recordVideo --codec=h264 app-preview.mp4
+
+Screenshot
+	xcrun simctl io booted screenshot myScreenshot.png
+
+More flags
+	xcrun simctl io --help

@@ -1,7 +1,14 @@
 https://code.visualstudio.com/
 https://code.visualstudio.com/updates/
+https://code.visualstudio.com/Docs/supporting/FAQ
 Install folder at
 C:\Users\Rlemus\AppData\Local\Programs\Microsoft VS Code
+
+https://github.com/Microsoft/vscode
+Install
+MacOS
+	wget "https://code.visualstudio.com/sha/download?build=stable&os=darwin" -O VSCode-darwin.zip
+	unzip VSCode-darwin.zip -d /Applications/
 
 https://github.com/Microsoft/vscode/wiki/How-to-Contribute#build-and-run
 https://github.com/Microsoft/vscode/wiki/Cross-Compiling-for-Debian-Based-Linux
@@ -57,3 +64,70 @@ https://code.visualstudio.com/docs/nodejs/reactjs-tutorial#_debugging-react
 https://code.visualstudio.com/docs/editor/command-line
 -g or --goto	When used with file:line[:character], opens a file at a specific line and optional character position. This argument is provided since some operating systems permit : in a file name.
 
+Plugins
+Bracket Pair Colorizer 2
+https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
+https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2
+
+Color Highlight
+https://github.com/egonyans/vscode-ext-color-highlight
+https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight
+
+Community Material Theme
+https://github.com/material-theme/vsc-community-material-theme
+https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-community-material-theme
+
+ES7 React/Redux/GraphQL/React-Native snippets
+https://github.com/dsznajder/vscode-es7-javascript-react-snippets
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+
+GitLens - Git supercharged
+https://github.com/eamodio/vscode-gitlens
+https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+
+indent-rainbow
+https://github.com/oderwat/vscode-indent-rainbow
+https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+
+Material Icon Theme
+https://github.com/PKief/vscode-material-icon-theme
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+
+Material Theme
+https://github.com/material-theme/vsc-material-theme
+https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme
+
+Material Theme Icons
+https://github.com/material-theme/vsc-material-theme-icons
+https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons
+
+Palenight Theme
+https://github.com/whizkydee/vscode-palenight-theme
+https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme
+
+Prettier - Code formatter
+https://github.com/prettier/prettier-vscode
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+Rainbow Brackets
+https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets
+
+REST Client
+https://github.com/Huachao/vscode-restclient
+https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+Sort JS object keys
+https://github.com/SBeator/sort-js-object-keys
+https://marketplace.visualstudio.com/items?itemName=zengxingxin.sort-js-object-keys
+
+SynthWave '84
+https://github.com/robb0wen/synthwave-vscode
+https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode
+https://github.com/robb0wen/synthwave-vscode/issues/138
+	whereis code
+	chown -R david /usr/share/code
+	chown -R root /usr/share/code
+
+DotENV
+https://github.com/mikestead/vscode-dotenv
+https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv

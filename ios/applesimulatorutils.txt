@@ -1,0 +1,6 @@
+A collection of command-line utils for Apple simulators.
+https://github.com/wix/AppleSimulatorUtils
+	brew tap wix/brew
+	brew install applesimutils
+Display available simulators
+	applesimutils --list | less -S

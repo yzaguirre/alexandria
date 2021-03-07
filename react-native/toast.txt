@@ -1,0 +1,20 @@
+https://github.com/jeanverster/react-native-styled-toast
+https://www.reddit.com/r/reactnative/comments/kvrh6v/react_native_styled_toast/
+https://reactnative.dev/docs/toastandroid
+	yarn add react-native-styled-toast
+import { ThemeProvider } from 'styled-components'
+import { ToastProvider } from 'react-native-styled-toast'
+
+return (
+  <ThemeProvider theme={theme}>
+    <ToastProvider>
+      <App />
+    </ToastProvider>
+  </ThemeProvider>
+)
+
+import { useToast } from 'react-native-styled-toast'
+
+const { toast } = useToast()
+
+return <Button onPress={() => toast({ message: 'Check me out!', ...config })} />

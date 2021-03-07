@@ -1,10 +1,14 @@
 https://nextcloud.com
+https://nextcloud.com/blog/nextcloud-hub-21-out-with-up-to-10x-better-performance-whiteboard-and-more-collaboration-features/
+https://news.ycombinator.com/item?id=26236770
 Desktop client
+https://nextcloud.com/install/#install-clients
 https://nextcloud.com/install/?pk_campaign=clientupdate#install-clients
-	wget https://github.com/nextcloud/desktop/releases/download/v3.1.1/Nextcloud-3.1.1-x86_64.AppImage
-	chmod u+x Nextcloud-3.1.1-x86_64.AppImage
-x	./Nextcloud-3.1.1-x86_64.AppImage
-	mv Nextcloud-3.1.1-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.1.3/Nextcloud-3.1.3-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.1.3/Nextcloud-3.1.3-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.1.3-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.1.3-x86_64.AppImage
+	mv Nextcloud-3.1.3-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 
 Off maintenance mode

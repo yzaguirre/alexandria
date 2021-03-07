@@ -11,6 +11,8 @@ https://youtu.be/VCN5Th19hZM?t=213
 https://github.com/walidabazo/React-JS-Native-Mobile-Application---SQLite-Database
 
 	yarn add react-native-sqlite-storage
+MacOS
+	npx pod-install ios
 Android
 	vim react-native.config.js
 module.exports = {

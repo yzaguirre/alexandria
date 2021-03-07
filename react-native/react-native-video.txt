@@ -1,2 +1,12 @@
 https://github.com/react-native-video/react-native-video
 	yarn add react-native-video
+
+https://medium.com/better-programming/add-video-to-your-react-native-app-using-react-native-video-f020e90059de
+https://stackoverflow.com/questions/65706981/video-is-still-playing-when-i-navigate-to-another-screen
+https://stackoverflow.com/questions/64703340/react-native-video-poster-not-working-in-ios
+https://github.com/react-native-video/react-native-video/issues/1509
+
+https://medium.com/better-programming/react-native-video-component-68262bcbc21f
+
+Video controls
+https://github.com/ScreamZ/react-native-true-sight

@@ -1,0 +1,37 @@
+https://fastlane.tools
+https://github.com/fastlane/fastlane
+
+https://docs.fastlane.tools/getting-started/android/setup/
+https://docs.fastlane.tools/getting-started/ios/setup/
+Install via bundler for Linux/macOS/Windows. See ~/ruby/bundler.txt and ~/ruby/ruby.txt
+Check ruby version between 2.4 through 2.7
+	rbenv shell 2.7.2
+	ruby --version
+Create a ./Gemfile in the root directory of your project with the content
+	vim ./Gemfile
+source "https://rubygems.org"
+
+gem "fastlane"
+
+Then
+	bundle update
+	git add Gemfile Gemfile.lock
+Every time you run fastlane, use
+	bundle exec fastlane [lane]
+On your CI, add
+	bundle install
+as your first build step
+
+MacOS. See ~/macos/homebrew.txt
+	brew install fastlane
+
+Setting up fastlane
+Navigate your terminal to your project's directory and run
+	fastlane init
+To have your Fastfile configuration written in Swift (Beta)
+	fastlane init swift
+
+Download frames with a fastlane action
+	fastlane frameit download_frames
+	cd fastlane/screenshots
+	fastlane frameit

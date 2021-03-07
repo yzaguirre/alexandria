@@ -1,0 +1,14 @@
+https://fastlane.tools/
+https://circleci.com/
+https://medium.com/@tjkangs/react-native-with-fastlane-and-crashlytics-beta-aa0d6ca630fd
+https://medium.com/@tjkangs/travisci-circleci-2-0-with-fastlane-for-react-native-both-ios-and-android-3f99b71b8691
+React Native Fastlane Release Automation - Jimmy Cook
+https://www.youtube.com/playlist?list=PLrw-z7lfJTHetXKnHBYIThqoMZWfaMdz1
+Delivery Automation for React Native using Fastlane and CircleCI
+https://www.youtube.com/watch?v=fN2fV0mdJ14
+Philippe Trepanier - Automate your React Native world with fastlane
+https://www.youtube.com/watch?v=1K5OLv3moFg
+How to setup fastlane for build & release React Native apps
+https://www.youtube.com/watch?v=1c4KQJeNE1o
+Implementing fastlane from nothing to App Store, Josh Holtz (English)
+https://www.youtube.com/watch?v=6Jz-Ywxki0U

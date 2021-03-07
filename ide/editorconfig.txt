@@ -1,0 +1,3 @@
+http://editorconfig.org/
+https://github.com/editorconfig/
+rules in .editorconfig file

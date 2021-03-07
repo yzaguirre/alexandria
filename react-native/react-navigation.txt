@@ -8,6 +8,10 @@ https://www.youtube.com/watch?v=4qq0GQPkfjI&feature=emb_title
 https://reactnavigation.org/docs/getting-started
 	yarn add @react-navigation/native
 	yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+MacOS
+	npx pod-install ios
+Add to index.js
+	import 'react-native-gesture-handler';
 
 https://reactnavigation.org/docs/stack-navigator
 	yarn add @react-navigation/stack
@@ -15,3 +19,14 @@ https://reactnavigation.org/docs/drawer-navigator/
 	yarn add @react-navigation/drawer
 
 https://www.robinwieruch.de/react-native-navigation
+
+React Navigation 5 in React Native (Part 3) - Deep Linking Between Apps
+https://www.youtube.com/watch?v=UwIzDBzaO3Q
+How to implement deep linking in React Native with React Navigation v5 in 2021
+https://www.youtube.com/watch?v=s8YaclRknYw
+	npx uri-scheme open demo://app/profile/1000 --ios
+	npx uri-scheme open demo://app/profile/1000 --android
+	npx uri-scheme open demo://app/home --android
+	npx uri-scheme open demo://app/notification --ios
+	npx uri-scheme open demo://app/notification --android
+	npx uri-scheme open demo://app/settings --android

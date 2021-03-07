@@ -1,0 +1,4 @@
+https://github.com/oblador/react-native-collapsible
+https://github.com/marouanekadiri/Accordion-Collapse-react-native
+https://reactnative.dev/docs/sectionlist
+https://callstack.github.io/react-native-paper/list-item.html

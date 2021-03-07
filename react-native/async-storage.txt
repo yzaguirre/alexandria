@@ -9,6 +9,8 @@ the value using the key again. It works perfectly on
 both platforms (Android and IOS).
 
 	yarn add @react-native-async-storage/async-storage
+iOS
+	npx pod-install
 
 Persist
 https://github.com/rt2zz/redux-persist

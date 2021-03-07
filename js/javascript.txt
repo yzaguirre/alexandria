@@ -69,6 +69,37 @@ function setTwoNumberDecimal(event) {
     this.value = parseFloat(this.value).toFixed(2);
 }
 
+https://stackoverflow.com/questions/5490687/broken-tofixed-implementation
+https://stackoverflow.com/questions/33429136/round-to-3-decimal-points-in-javascript-jquery
+
 File extension validation
 https://stackoverflow.com/questions/8231058/file-type-validation-with-javascript
 
+Currency / Money format
+https://stackoverflow.com/questions/55556221/how-do-you-format-a-number-to-currency-when-using-react-native-expo
+See ~/react/react-number-format.txt
+function currencyFormat(num) {
+   return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+console.log(currencyFormat(2665)); // $2,665.00
+
+Functions
+https://dmitripavlutin.com/javascript-function-parameters/
+function multiplyAndSumArgs(multiplier, ...numbers) {
+  console.log(multiplier); // 2
+  console.log(numbers);    // [5, 6]
+  const sumArgs = numbers.reduce((sum, number) => sum + number);
+  return multiplier * sumArgs;
+}
+
+multiplyAndSumArgs(2, 5, 6); // => 22
+
+Miliseconds to time
+https://stackoverflow.com/questions/19700283/how-to-convert-time-milliseconds-to-hours-min-sec-format-in-javascript
+
+Validate Number
+https://stackoverflow.com/questions/20169217/how-to-write-isnumber-in-javascript
+var isNumber = function isNumber(value) 
+{
+   return typeof value === 'number' && isFinite(value);
+}

@@ -17,6 +17,8 @@ Ubuntu
 	add-apt-repository ppa:pi-rho/dev
 If you're using OpenBSD, tmux is part of the base system. 
 For the rest of us, we need to install tmux from ports or pkgsrc or however you'd like to get it. 
+MacOS
+	brew install tmux
 
 Compile
 	apt install libevent-dev libncurses5-dev

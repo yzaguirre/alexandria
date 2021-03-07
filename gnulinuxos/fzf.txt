@@ -2,3 +2,7 @@ https://medium.com/@sidneyliebrand/how-fzf-and-ripgrep-improved-my-workflow-61c7
 https://github.com/junegunn/fzf
 https://www.youtube.com/watch?v=DBGvWyQNYY0
 	apt install fzf
+Download binary
+	wget https://github.com/junegunn/fzf/releases/download/0.25.0/fzf-0.25.0-linux_amd64.tar.gz
+	tar xf fzf-0.25.0-linux_amd64.tar.gz
+	mv fzf /usr/local/bin

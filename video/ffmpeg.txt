@@ -15,8 +15,29 @@ libpostproc is a library containing video postprocessing routines.
 libswscale is a library containing video image scaling and colorspace/pixelformat conversion routines.
 libavfilter is the substitute for vhook which allows the video/audio to be modified or examined between the decoder and the encoder.
 
-Tool
-http://rodrigopolo.com/ffmpeg/
+See RickMates below
+Installing FFmpeg on macOS Big Sur (on Intel)
+https://www.youtube.com/watch?v=zl4vo0dhLRk
+Download the following: ffmpeg, ffprobe, ffplay
+	wget https://evermeet.cx/ffmpeg/ffmpeg-4.3.1.zip
+	wget https://evermeet.cx/ffmpeg/ffmpeg-4.3.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffprobe-4.3.1.zip
+	wget https://evermeet.cx/ffmpeg/ffprobe-4.3.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffplay-4.3.1.zip
+	wget https://evermeet.cx/ffmpeg/ffplay-4.3.1.zip.sig
+	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
+	gpg --verify ffmpeg-4.3.1.zip.sig
+	gpg --verify ffprobe-4.3.1.zip.sig
+	gpg --verify ffplay-4.3.1.zip.sig
+	unzip ffmpeg-4.3.1.zip -d /usr/local/bin
+	unzip ffprobe-4.3.1.zip -d /usr/local/bin
+	unzip ffplay-4.3.1.zip -d /usr/local/bin
+Remove from quarantine
+	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
+Add the /usr/local/bin to PATH
+	vim ~/.zshrc
+PATH+=/usr/local/bin
+	source ~/.zshrc
 
 Custom compilation with FDK AAC encoder and such, see:
 https://trac.ffmpeg.org/wiki/CompilationGuide
@@ -53,7 +74,7 @@ https://sandilands.info/sgordon/multimedia-on-linux-command-line
 
 Change libvo_aacenc to libfaac
 
-COncat
+Concat
 https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg
 https://trac.ffmpeg.org/wiki/Concatenate
 mylist.txt
@@ -81,3 +102,42 @@ https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-wi
 	ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv
 	ffmpeg -i input.mkv -vf "scale=iw/3:ih/3" a_third_the_frame_size.mkv
 	ffmpeg -i input.mkv -vf "scale=iw/4:ih/4" a_fourth_the_frame_size.mkv
+
+https://www.rickmakes.com/ffmpeg-notes/
+https://www.youtube.com/playlist?list=PLErU2HjQZ_ZOPDZ71Khzt5PX4X4j6flkg
+Stream a Mac Screen to a Raspberry Pi
+	#This lists audio/video sources on the Mac:
+	ffmpeg -f avfoundation -list_devices true -i ""
+	#Run this on the Mac:
+	ffmpeg -f avfoundation -i "1" -vcodec h264_videotoolbox -realtime 1 -pix_fmt nv12 -b:v 5000k -f mpegts udp://ip_address_of_pi:1234
+	#Run this on the Raspberry Pi:
+	omxplayer --timeout 60 ip_address_of_mac:1234
+
+Make H.265 File Compatible with Quicktime
+	ffmpeg -i input.mp4 -codec copy -tag:v hvc1 output.mp4
+
+Convert JPEG Image Sequence to MKV (with MJPEG encoding)
+	ffmpeg -framerate 30 -pattern_type glob -i 'timelapse/*.JPG' -codec copy out.mkv
+
+Convert MKV (with MJPEG encoding) to JPEG Image Sequence
+	ffmpeg -i out.mkv -vcodec copy timelapse/pic%d.jpg
+
+Extract Single JPEG Image from MKV (with MJPEG encoding)
+	ffmpeg -ss 00:00:00.03 -i out.mkv -vframes 1 -codec copy output.jpg
+
+Add Background Image to an Audio File
+	ffmpeg -loop 1 -f image2 -i airplane.jpg -i train_whistle_audio.aac \
+	-vf crop=in_w:in_w*9/16,scale=1920:1080,fps=fps=30 \
+	-pix_fmt yuv420p -vcodec libx264 -shortest train_whistle_airplane.mp4
+
+Add Solid Color Background to an Audio File
+	ffmpeg -i train_whistle_audio.m4a -f lavfi -i color=c=blue:s=640x480:r=15 -acodec copy -shortest train_whistle_blue_background.mp4
+
+Extract Audio/Remove Video from a Video File
+	ffmpeg -i train_whistle.mp4 -vn -acodec copy train_whistle_audio.m4a
+
+Extract Video/Remove Audio from a Video File
+	ffmpeg -i train_whistle.mp4 -vcodec copy -an train_whistle_no_audio.mp4
+
+Add Silent Audio Track to a Video File
+	ffmpeg -i video_without_audio.mp4 -f lavfi -i anullsrc -vcodec copy -acodec aac -shortest video_with_silence.mp4

@@ -3,6 +3,13 @@ http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
 https://news.ycombinator.com/item?id=8033210
 https://www.sqlite.org/whentouse.html
 
+IFNULL
+https://www.sqlite.org/lang_corefunc.html#ifnull
+https://stackoverflow.com/questions/799375/sqlite-equivalent-to-isnull-nvl-ifnull-or-coalesce
+
+SUM
+https://www.sqlitetutorial.net/sqlite-sum/
+
 https://www.sqlite.org/cli.html
 https://www.sqlite.org/lang.html
 https://www.sqlite.org/lang_createtable.html

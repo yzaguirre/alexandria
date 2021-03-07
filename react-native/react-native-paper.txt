@@ -3,9 +3,22 @@ https://callstack.github.io/react-native-paper/
 https://callstack.github.io/react-native-paper/getting-started.html
 https://github.com/callstack/react-native-paper
 https://github.com/oblador/react-native-vector-icons
+https://soshace.com/build-real-world-react-native-app-2-react-navigation-and-react-native-vector-icons/
+Do a commit on ios/ before adding RN Paper
 	yarn add react-native-paper
-If you're on a vanilla React Native project, you also need to install and link react-native-vector-icons.
+If you're on a vanilla React Native project, you also need to install react-native-vector-icons
 	yarn add react-native-vector-icons
+	react-native link react-native-vector-icons --platforms android
+MacOS
+Edit ios/PROJECT_NAME/info.plist with every font in node_modules/react-native-vector-icons/Fonts
+<key>UIAppFonts</key>
+<array>
+  <string>AntDesign.ttf</string>
+  <string>Entypo.ttf</string>
+</array>
+
+Run the pod!
+	npx pod-install ios
 Add babel plugin
 	vim babel.config.js
 module.exports = {

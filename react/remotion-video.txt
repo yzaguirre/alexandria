@@ -1,0 +1,7 @@
+https://www.remotion.dev/
+https://github.com/JonnyBurger/remotion
+https://www.reddit.com/r/reactnative/comments/lg5jnq/remotion_create_videos_programmatically_in_react/
+Remotion - Create videos programmatically in React
+https://www.youtube.com/watch?v=gwlDorikqgY
+You can initialize a new Remotion video using
+	yarn create video

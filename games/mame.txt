@@ -1,0 +1,31 @@
+https://www.mamedev.org/
+https://wiki.mamedev.org/index.php/SDL_Supported_Platforms
+https://github.com/mamedev/mame/releases
+Mame64 setup guide
+https://www.youtube.com/watch?v=OrFRAlBvm-4
+How to Get Started with MAME in Linux - Hak5 2020
+https://www.youtube.com/watch?v=Q37p6xJawI0
+https://forums.bannister.org/ubbthreads.php?ubb=showflat&Number=35138
+	apt-get install build-essential subversion libsdl1.2-dev libgtk2.0-dev libgconf2-dev libsdl-ttf2.0-dev gcc-4.6 g++-4.6
+	apt-get install libqt4-*
+	wget https://github.com/mamedev/mame/archive/mame0164.tar.gz
+	tar xf mame0164.tar.gz
+	cd mame-mame0164
+	make
+x	make SUBTARGET=arcade
+x	make SUBTARGET=mess
+https://thelinuxcode.com/install-mame-games-linux-ubuntu-16-04-16-10-17/
+	add-apt-repository ppa:c.falco/mame
+	apt install mame
+	mkdir -p ~/mame/roms
+Config file
+~/.mame/mame.ini
+Roms at
+https://www.retrostic.com/
+https://coolrom.com.au/
+
+https://forums.launchbox-app.com/topic/47435-mame-dl-1425bin-not-found-help/
+https://edgeemu.net/details-190664.htm
+
+Screen
+https://forums.gameex.com/forums/topic/7958-running-mame-on-secondary-monitor/

@@ -1,4 +1,5 @@
 https://github.com/luggit/react-native-config#usage
+https://medium.com/@mehrankhandev/ultimate-guide-to-use-custom-fonts-in-react-native-77fcdf859cf4
 https://medium.com/differential/managing-configuration-in-react-native-cd2dfb5e6f7b
 
 https://github.com/facebook/flipper/issues/976
@@ -28,7 +29,8 @@ module.exports = {
   },
   assets: ['./assets/fonts/'], // stays the same
 };
-
+Do
+	npx react-native link
 Install fonts
 How to Add Custom Google Fonts to React Native App on Android and iOS
 https://www.youtube.com/watch?v=QVEc3F8pPMs

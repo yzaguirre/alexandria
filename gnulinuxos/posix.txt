@@ -1,3 +1,4 @@
+See ~/i18n/locale.txt
 What is POSIX in Unix Linux Terminal 201 - HakTip 161-U0GbJtnfqSM.mp4
 Print current language
 	echo $LANG

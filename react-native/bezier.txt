@@ -1,0 +1,2 @@
+https://github.com/4TWIGGERS/react-native-curved-translate
+https://www.reddit.com/r/reactnative/comments/l45l6j/curved_bezier_path_translate_animation_with/

@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/40043238/is-it-possible-to-open-settings-app-using-url-deep-link-on-android
+https://developer.android.com/reference/android/provider/Settings.html
+startActivity(new Intent(Settings.ACTION_SETTINGS));

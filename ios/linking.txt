@@ -1,0 +1,9 @@
+See ~/react-native/linking.txt
+https://medium.com/rakutenready/requesting-location-permissions-in-ios-9e5a3b814a8b
+https://stackoverflow.com/questions/8246070/ios-launching-settings-restrictions-url-scheme
+https://stackoverflow.com/questions/5655674/opening-the-settings-app-from-another-app
+	App-prefs:root=MOBILE_DATA_SETTINGS_ID
+	App-Prefs:LOCATION_SERVICES
+	App-prefs:General
+https://stackoverflow.com/questions/37654132/how-to-open-location-services-screen-from-setting-screen
+	UIApplication.sharedApplication().openURL(NSURL(string: "App-prefs:root=LOCATION_SERVICES")!)

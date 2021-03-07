@@ -1,0 +1,27 @@
+Picker
+https://stackoverflow.com/questions/30137100/how-to-use-react-native-select-box
+The Picker component will give you a tumbler thing on iOS and a dropdown on Android
+https://github.com/react-native-picker/picker
+	yarn add @react-native-picker/picker
+
+Modal Selector
+https://github.com/peacechen/react-native-modal-selector
+https://github.com/facebook/react-native/issues/25866
+https://stackoverflow.com/questions/41181683/react-native-ios-picker-is-always-open
+	yarn add react-native-modal-selector
+
+Inactive
+https://github.com/sohobloo/react-native-modal-dropdown
+https://github.com/n4kz/react-native-material-dropdown
+https://github.com/beefe/react-native-actionsheet
+https://github.com/root-two/react-native-drawer
+https://github.com/bulenttastan/react-native-list-popover
+
+Expo
+https://github.com/expo/react-native-action-sheet
+	yarn add @expo/react-native-action-sheet
+
+See
+~/react-native/react-native-bottom-sheet.txt
+~/react-native/react-native-floating-action.txt
+~/react-native/react-native-action-button.txt

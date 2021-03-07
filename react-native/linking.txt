@@ -1,0 +1,14 @@
+https://reactnativecode.com/send-whatsapp-message-from-react-native/
+https://stackoverflow.com/questions/51545064/how-to-make-phone-call-in-react-native
+import {Linking} from 'react-native'
+Linking.openURL(`tel:${phoneNumber}`)
+Linking.openURL(`whatsapp://send?phone=502${t}`)
+
+https://medium.com/@guanshanliu/lsapplicationqueriesschemes-4f5fa9c7d240
+And don't forget added to Info.plist -> <key>LSApplicationQueriesSchemes</key> <array> <string>tel</string> <string>telprompt</string> </array>
+
+Settings
+See ~/ios/linking.txt
+https://stackoverflow.com/questions/44582694/react-native-open-settings-through-linking-openurl-in-ios
+https://stackoverflow.com/questions/39081688/open-settings-app-from-another-app-in-ios-react-native
+	Linking.openURL("App-Prefs:root=WIFI")

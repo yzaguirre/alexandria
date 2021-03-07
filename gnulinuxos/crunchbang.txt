@@ -1,0 +1,76 @@
+slim
+http://bbs.archbang.org/viewtopic.php?id=956
+Themes in /usr/share/slim/themes/
+edit /etc/slim.conf
+
+md5sum 6d5897245803ef8813674affd499a381
+webcam
+camorama
+xawtv
+http://foro.powers.cl/viewtopic.php?f=1&t=149541
+xawtv -c /dev/video0 
+http://www.ubuntu-es.org/node/162271
+
+setxkbmap us &
+setxkbmap es &
+# apt-get install nmap vim filezilla filezilla-common
+
+http://debianhelp.wordpress.com/2012/10/02/crunchbang-11-waldorf-debian-wheezy-os/
+Settings >> Openbox >> Edit autostart
+## Display
+xrandr -s 1280x720 &
+xrandr --dpi 96 &
+http://www.forge.org/blog/?p=460
+export all_proxy="http://192.168.1.14:3128"
+
+use backports
+http://backports.debian.org/Instructions/
+	# vim /etc/apt/sources.list.d/backports.list
+deb http://YOURMIRROR.debian.org/debian wheezy-backports main
+deb http://ftp.mx.debian.org/debian wheezy-backports main
+
+	# apt-get update
+
+	# apt-get -t wheezy-backports install "package"
+for testing
+	# vim /etc/apt/sources.list.d/testing.list
+deb http://ftp.mx.debian.org/debian testing main
+https://unix.stackexchange.com/questions/85505/need-to-install-glibc-2-14-on-wheezy
+https://superuser.com/questions/537683/how-to-fix-lib-x86-64-linux-gnu-libc-so-6-version-glibc-2-14-not-found
+	# apt-get -t testing install libc6-dev
+
+From SID
+deb http://ftp.mx.debian.org/debian sid main
+	apt -t sid install "package"
+
+	$ cat <<EOF>>~/.profile
+repeat() { while :; do $@ && return; sleep 30; done }
+EOF
+
+Locale. See ~/i18n/locale.txt
+	locale -a
+es_GT.utf8
+
+escritorio calidad
+http://crunchbang.org/forums/viewtopic.php?pid=288040
+
+Font config. See ~/fonts.txt
+https://crunchbang.org/forums/viewtopic.php?id=27738
+https://bbs.archlinux.org/viewtopic.php?pid=1157954
+	sudo dpkg-reconfigure fontconfig
+	sudo fc-cache -fv
+http://ubuntuforums.org/archive/index.php/t-2046558.html
+http://ubuntuforums.org/showthread.php?t=2038324&page=2&p=12159762#post12159762
+you edit the affected file
+
+Fontconfig warning: FcPattern object size does not accept value "0"
+
+Fix gtk-3
+	
+http://crunchbang.org/forums/viewtopic.php?pid=319091
+	# apt-get -f install libgtk-3-common/stable
+Extract it when downloaded. Rename the folder to waldorf2(that way it will not overwrite your current waldorf-theme) 
+and AS ROOT, copy it to  /usr/share/themes, and select it with lxappearance. 
+To make it work for gtk3 -root-apps, you also need to choose it as root. 
+Just run "sudo lxappearance" to do this.
+http://crunchbang.org/forums/viewtopic.php?pid=310832#p310832

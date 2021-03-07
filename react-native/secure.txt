@@ -1,0 +1,7 @@
+https://mcodex.dev/react-native-sensitive-info/
+	yarn add react-native-sensitive-info@next
+MacOS
+x	pod install
+	npx pod-install ios
+
+https://github.com/talut/rn-secure-storage

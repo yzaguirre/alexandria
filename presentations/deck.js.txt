@@ -1,0 +1,4 @@
+http://imakewebthings.com/deck.js/
+https://github.com/imakewebthings/deck.js/
+
+Download https://github.com/imakewebthings/deck.js/zipball/stable

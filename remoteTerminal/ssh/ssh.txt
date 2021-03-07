@@ -13,6 +13,11 @@ http://blog.infertux.com/2012/12/20/properly-close-a-frozen-ssh-session/
     .
 http://sandrinodimattia.net/posting-successful-ssh-logins-to-slack/
 
+Activate SSH Server on MacOS. See ~/macos/macos.txt
+Mac: Turning on and Connecting to the SSH Server
+https://www.youtube.com/watch?v=OBWgpUmRhPY
+System Preferences -> Sharing -> Remote Login
+
 Secure SSH
 https://stribika.github.io/2015/01/04/secure-secure-shell.html
 http://sysconfig.org.uk/two-factor-authentication-with-ssh.html

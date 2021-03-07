@@ -1,3 +1,9 @@
+https://imagemagick.org
+	apt install imagemagick
+MacOs
+	brew install ghostscript
+	brew install imagemagick
+
 Concatenate images
 https://superuser.com/questions/290656/combine-multiple-images-using-imagemagick
 	convert -append in-*.jpg out.jpg

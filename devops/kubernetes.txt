@@ -1,3 +1,9 @@
+Google admits Kubernetes container tech is too complex
+https://www.theregister.com/2021/02/25/google_kubernetes_autopilot/
+https://news.ycombinator.com/item?id=26271470
+
+https://k8slens.dev/
+
 https://news.ycombinator.com/item?id=18179958
 https://github.com/hobby-kube/guide#wireguard-setup
 

@@ -1,0 +1,5 @@
+https://github.com/mwh/dragon
+	git clone https://github.com/mwh/dragon.git
+	cd dragon
+	make
+	make install

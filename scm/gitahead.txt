@@ -1,2 +1,8 @@
 https://gitahead.github.io/gitahead.com/
 https://github.com/gitahead/gitahead
+	wget https://github.com/gitahead/gitahead/releases/download/v2.6.3/GitAhead-2.6.3.sh
+	chmod u+x GitAhead-2.6.3.sh
+	mkdir /opt/GitAhead
+	chown -R david:david /opt/GitAhead
+	./GitAhead-2.6.3.sh --prefix=/opt/GitAhead
+	ln -s /opt/GitAhead/GitAhead /usr/local/bin/

@@ -1,0 +1,12 @@
+Get IMEI in React Native apps
+IMEI (International Mobile Equipment Identity) 
+https://github.com/SimenCodes/react-native-imei
+https://stackoverflow.com/questions/47196866/retrieving-imei-in-react-native
+https://medium.com/alturasoluciones/getting-imei-from-an-android-device-using-react-native-5fd03cb3a261
+https://play.google.com/about/developer-content-policy/
+	yarn add react-native-imei
+
+const IMEI = require('react-native-imei')
+IMEI.getImei().then(imeiList => {
+	console.log(imeiList) // prints ["AABBBBBBCCCCCCD"]
+})

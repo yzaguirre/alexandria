@@ -1,0 +1,32 @@
+https://slid.es/dvdyzag/deck/edit
+http://lab.hakim.se/reveal-js/
+https://github.com/hakimel/reveal.js/
+
+jedi gestures
+https://www.youtube.com/watch?v=bXF68hNPuNo
+https://github.com/willy-vvu/reveal.js
+fork https://github.com/BennSandoval/reveal.js
+
+download from https://github.com/hakimel/reveal.js/releases
+	$ cd ~/documents
+	$ wget https://github.com/hakimel/reveal.js/archive/2.6.1.tar.gz
+	$ tar xf 2.6.1.tar.gz
+	$ mv reveal.js-2.6.1 reveal.js
+install grunt
+http://gruntjs.com/getting-started#installing-the-cli
+	# npm install -g grunt-cli
+clone repository
+	$ git clone https://github.com/hakimel/reveal.js.git
+	$ cd reveal.js
+Install dependencies
+	$ npm install
+Serve the presentation and monitor source files for changes
+	# grunt serve --port 80
+change hostname
+https://stackoverflow.com/questions/18422697/gruntjs-fatal-error-getaddrinfo-enotfound
+
+background img
+http://www.raymondcamden.com/index.cfm/2012/7/23/Adding-a-background-image-to-a-revealjs-presentation
+data-background="rgb color or file"
+
+	npm install

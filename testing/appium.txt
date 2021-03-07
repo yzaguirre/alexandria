@@ -1,0 +1,4 @@
+https://appium.io/
+https://github.com/appium/appium
+See ~/ios/applesimulatorutils.txt
+https://github.com/appium/appium/issues/13343

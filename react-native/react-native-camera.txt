@@ -7,6 +7,7 @@ https://heartbeat.fritz.ai/building-text-detection-apps-for-ios-and-android-usin
 	yarn add react-native-camera
 
 https://github.com/teslamotors/react-native-camera-kit
+https://www.reddit.com/r/reactnative/comments/lt32p1/react_native_qr_code_scan/
 	yarn add react-native-camera-kit
 import { Camera } from 'react-native-camera-kit';
 
@@ -15,3 +16,10 @@ https://github.com/teslamotors/react-native-camera-kit/pull/329
 https://github.com/react-native-cameraroll/react-native-cameraroll
 
 Ver ~/react-native/react-native-image-crop-picker.txt
+
+https://github.com/cuvent/react-native-vision-camera
+https://twitter.com/mrousavy/status/1364909128817254404?s=21
+https://www.reddit.com/r/reactnative/comments/ls5566/ive_released_the_reactnative_camera_library/
+	yarn add react-native-vision-camera
+iOS
+	npx pod-install ios

@@ -1,0 +1,59 @@
+See ~/gnulinuxos/posix.txt
+
+https://stackoverflow.com/questions/7165108/in-os-x-lion-lang-is-not-set-to-utf-8-how-to-fix-it
+https://www.cyberciti.biz/faq/how-to-set-locales-i18n-on-a-linux-unix/
+https://gist.github.com/specialunderwear/1218856
+
+Language files in
+/usr/share/locales
+
+And in file
+	vim /usr/share/i18n/SUPPORTED
+
+Info on all keywords and options
+	man 5 locale
+Print current language
+	echo $LANG
+	locale
+How can I set global locale for one user?
+Run directly or save in ~/.bash_profile
+	LANG="en_US.utf8"
+	export LANG
+OR create a new .i18n file to user's $HOME directory:
+	vim $HOME/.i18n
+LANG="en_US.UTF-8"
+SUPPORTED="en_IN.utf8:en_IN:en_US.UTF-8:en_US:en"
+SYSFONT="latarcyrheb-sun16"
+
+Print available locale
+	locale -a
+	localectl list-locales
+Print numeric description
+	locale -c -k LC_NUMERIC
+	locale -c -k LC_MONETARY
+To set the locales for all users, set spanish GT
+and update /etc/default/locale
+https://stackoverflow.com/questions/2499794/how-to-fix-a-locale-setting-warning-from-perl#7413863
+	vim /etc/locale.gen
+	locale-gen es_GT es_GT.UTF-8
+	sudo update-locale
+
+Another option is to run dpkg-reconfigure locales command
+and select the locale(s) you want to generate. At the end,
+you'll be asked which one should be the default.
+If you have users who access the system through ssh,
+it is recommended that you choose None as your default locale:
+	dpkg-reconfigure locales
+
+https://stackoverflow.com/questions/7165108/in-os-x-lion-lang-is-not-set-to-utf-8-how-to-fix-it
+Add to .zshrc, .bashrc or .profile
+	vim ~/.zshrc
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+Or to
+	vim ~/.zprofile
+if [[ -z "$LC_ALL" ]]; then
+  export LC_ALL='en_US.UTF-8'
+fi

@@ -1,0 +1,5 @@
+phpstorm
+	tar xf PhpStorm-8.0.1.tar.gz -C /VMs/opt/
+	cd /VMs/opt
+	mv PhpStorm{-138.2001.2328,}
+	ln -s /VMs/opt/PhpStorm/bin/phpstorm.sh /usr/local/bin/phpstorm

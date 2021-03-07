@@ -66,3 +66,11 @@ Connection to gitserver closed.
 
 Shorcut command:
 	# usermod git --shell /usr/bin/git-shell
+
+https://bryanbrattlof.com/cgit-nginx-gitolite-a-personal-git-server/
+https://news.ycombinator.com/item?id=25856071
+	pacman -S git
+	useradd -m -G wheel -s /usr/bin/git-shell git
+	systemctl enable sshd
+repos are in ~/git/foo.git and ~/git/bar.git, ~/.ssh/authorized_keys for the hosts I give automated access to, password for others.
+	git clone git@gitmachine:git/foo.git

@@ -1,0 +1,11 @@
+Launch xcode as sudo for downloading files
+Xcode command line tools (macOS)
+	xcode-select --install
+https://developer.apple.com/forums/thread/75285
+	sudo /Applications/Xcode.app/Contents/MacOS/Xcode
+Open a project or workspace
+	xed ios/kriss.xcodeproj
+	xed ios/kriss.xcodeworkspace
+
+24 Xcode Tips in 15 Minutes
+https://www.youtube.com/watch?v=8kiR_QsQNPc

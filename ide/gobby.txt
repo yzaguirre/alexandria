@@ -1,0 +1,22 @@
+text editor
+https://gobby.github.io/
+https://github.com/gobby/gobby
+http://gobby.0x539.de/trac/wiki/Download
+	apt-get install gobby
+Server
+https://github.com/gobby/gobby/wiki/Dedicated%20Server
+http://techmonks.net/working-together-on-text-and-source-code-with-gobby-and-infinoted/
+	apt-get install infinoted
+-r, --root-directory=DIRECTORY
+-p, --port-number=PORT
+-P, --password=PASSWORD
+-d, --daemonize
+-D, --kill-daemon
+-c, --config-file
+--security-policy=no-tls|allow-tls|require-tls
+
+Run service without key
+	infinoted -p 55509 -r /media/folder --security-policy no-tls
+Create key
+	infinoted --create-key --create-certificate
+	vim /etc/xdg/infinoted.conf

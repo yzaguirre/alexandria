@@ -3,7 +3,11 @@ linuxacademy.com
 laracasts.com
 https://shop.itsfoss.com/collections/online-courses
 https://edx.org
+
 https://coursera.org
+Coursera S-1 IPO
+https://news.ycombinator.com/item?id=26362443
+
 https://platzi.com
 https://laravel-news.com/
 https://serversforhackers.com/

@@ -1,0 +1,33 @@
+See ~/video/ffmpeg.txt, ~/terminal/iterm.txt, ~/ide/xcode.txt
+How To Access Mac OS Remotely From Ubuntu
+https://www.youtube.com/watch?v=_bPb_NsM-Ps
+
+https://osxdaily.com/2009/12/09/access-the-clipboard-from-the-command-line/
+	ls -lha | pbcopy
+	pbpaste > clipboard.txt
+	pbpaste | ssh username@host 'cat > ~/myclipboard.txt'
+
+Basics Of Mac OS X - For Developers & Programmers
+https://www.youtube.com/watch?v=SjLe8xeJzR4
+Remove Smart Quotes and Dashes
+System Preferences -> Keyboard -> Text
+
+Activate SSH Server on MacOS. See ~/remoteTerminal/ssh/ssh.txt
+Mac: Turning on and Connecting to the SSH Server
+https://www.youtube.com/watch?v=OBWgpUmRhPY
+System Preferences -> Sharing -> Remote Login
+
+Mac Terminal: open Command
+https://www.rickmakes.com/mac-terminal-open-command/
+https://www.youtube.com/watch?v=kP5a5IHxzeQ
+Open a file with text editor (TextEdit)
+	open -e file.txt
+Open with a specific application
+	open -a /Applications/Affinity\ Photo.app/ reflections.jpg
+	open -a /Applications/LibreOffice.app/ list_of_people.csv
+Open a system application
+	open -a /System/Application/Preview.app
+Open a URL
+	open "https://www.davidyzaguirre.com"
+Send standard input to default editor
+	ls | open -f

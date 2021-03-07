@@ -1,0 +1,11 @@
+https://github.com/react-native-datetimepicker/datetimepicker
+	yarn add @react-native-community/datetimepicker
+
+https://github.com/wix/react-native-calendars
+	yarn add react-native-calendars
+
+https://www.reactnativepaperdates.com/
+https://github.com/web-ridge/react-native-paper-dates
+	yarn add react-native-paper-dates
+
+https://github.com/henninghall/react-native-date-picker

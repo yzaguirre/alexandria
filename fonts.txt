@@ -1,1 +1,23 @@
+See ~/ide/fonts.txt ~/react-native/configure.txt ~/react-native/react-native-paper.txt
 https://fontawesome.com/?from=io
+https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html
+	fc-list -V
+	fc-list -h
+	fc-list | grep -i UbuntuMono
+Drop fonts at any of the following directories
+~/.fonts
+/usr/share/fonts/
+
+and then
+	fc-cache -fv
+
+Install MS fonts
+	cabextract *.exe -L -F *.ttf -d /usr/share/fonts/msttcorefonts
+	fc-cache -fv
+
+Remove font cache
+https://forum.manjaro.org/t/remmina-no-characters-only-rectangles/5465
+	fc-cache -r
+	rm ~/.cache/fontconfig/*
+	rm /var/cache/fontconfig/*
+	fc-cache -fv

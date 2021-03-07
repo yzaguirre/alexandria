@@ -1,0 +1,10 @@
+https://code.visualstudio.com/
+https://github.com/Microsoft/vscode
+https://code.visualstudio.com/Docs/supporting/FAQ
+Plugins
+C#
+Debugger for Chrome
+Python
+vscode-icons
+C/C++
+ESLint

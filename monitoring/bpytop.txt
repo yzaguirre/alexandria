@@ -1,0 +1,5 @@
+https://github.com/aristocratos/bpytop
+	sudo apt install bpytop
+	sudo -H pip3 install bpytop --upgrade
+MacOS
+	brew install bpytop

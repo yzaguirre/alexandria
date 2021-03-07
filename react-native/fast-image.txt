@@ -1,0 +1,2 @@
+https://github.com/DylanVann/react-native-fast-image
+	yarn add react-native-fast-image

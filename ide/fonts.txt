@@ -1,15 +1,23 @@
-Fira Code
+Powerline font
+https://github.com/powerline/fonts
+	apt install fonts-powerline
+Manual install linux and macos
+	wget https://github.com/powerline/fonts/archive/master.zip
+	unzip master.zip && rm master.zip
+	cd fonts-master
+	./install.sh
+
+Fira Code font
 https://github.com/tonsky/FiraCode/
 https://www.youtube.com/watch?v=Dnq5QhY7lOQ
+	wget https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
+	unzip Fira_Code_v5.2.zip -d ~/.fonts
 
 https://fonts.google.com/specimen/Roboto+Mono
 
 https://github.com/daylerees/colour-schemes
 
-Install fonts on linux
+Install fonts on linux. See ~/fonts.txt
 https://www.youtube.com/watch?v=6ohOB52RpYE
 Place .ttf files at ~/.fonts, then
-	sudo fc-cache -f -v
-
-Fira code font
-https://github.com/tonsky/FiraCode
+	sudo fc-cache -fv

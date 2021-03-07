@@ -1,0 +1,17 @@
+Loading and pagination
+https://aboutreact.com/react-native-flatlist-pagination-to-load-more-data-dynamically-infinite-list/
+https://reactnativecode.com/infinite-list-flatlist-pagination-load-more-data/
+
+Pull to refresh
+https://tutorialsha.com/flatlist-pull-to-refresh-with-example-react-native/
+https://stackoverflow.com/questions/47570998/implement-pull-to-refresh-flatlist#51306168
+
+FlatList keyExtractor
+https://stackoverflow.com/questions/47953662/react-native-use-a-keyextractor-with-flatlist
+	keyExtractor={(item, index) => 'key'+index}
+Many items in list
+https://www.reddit.com/r/reactnative/comments/k57uw2/flatlist_with_tabmenu_help/
+
+https://www.youtube.com/watch?v=D2wsGs72KvM
+React Native - Problem 12 - Scroll to item seleted in Horizontal Flatlist
+https://github.com/HoangNgocThang/Scroll-to-item-seleted-in-Horizontal-Flatlist

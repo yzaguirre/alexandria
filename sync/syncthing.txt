@@ -1,10 +1,11 @@
 http://syncthing.net/
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/sha1sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/sha256sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/syncthing-linux-amd64-v1.4.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/syncthing-linux-386-v1.4.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/syncthing-linux-arm-v1.4.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.4.2/syncthing-windows-amd64-v1.4.2.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/sha1sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/sha256sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/syncthing-linux-amd64-v1.13.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/syncthing-linux-386-v1.13.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/syncthing-linux-arm-v1.13.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/syncthing-windows-amd64-v1.13.1.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.13.1/syncthing-macos-universal-v1.13.1.zip
 Verify
 https://syncthing.net/security.html
 Release binaries are signed with key D26E6ED000654A3E
@@ -14,13 +15,13 @@ Release binaries are signed with key D26E6ED000654A3E
 	gpg --verify sha256sum.txt.asc
 http://discourse.syncthing.net/t/getting-started/46
 Install amd64
-	tar xf syncthing-linux-amd64-v1.4.2.tar.gz -C /opt
-	mv /opt/{syncthing-linux-amd64-v1.4.2,syncthing}
+	tar xf syncthing-linux-amd64-v1.13.1.tar.gz -C /opt
+	mv /opt/{syncthing-linux-amd64-v1.13.1,syncthing}
 	ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
 Install raspberry pi
 	mkdir ~/.syncthing
-	tar xf syncthing-linux-arm-v1.4.2.tar.gz -C ~/
-	mv ~/syncthing-linux-arm-v1.4.2 .syncthing
+	tar xf syncthing-linux-arm-v1.13.1.tar.gz -C ~/
+	mv ~/syncthing-linux-arm-v1.13.1 .syncthing
 	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
 Debian repo
 http://apt.syncthing.net/
@@ -30,6 +31,17 @@ http://apt.syncthing.net/
 	apt install syncthing
 Config at
 ~/.config/syncthing/config.xml
+Install MacOS
+	unzip syncthing-macos-universal-v1.13.1.zip
+	cd syncthing-macos-universal-v1.13.1
+	ruplacer "/USERNAME" "/david" etc/macos-launchd/syncthing.plist
+	mv etc/macos-launchd/syncthing.plist ~/Library/LaunchAgents/syncthing.plist
+	mv syncthing ~/bin
+Stop syncthing
+https://forum.syncthing.net/t/keeping-syncthing-running-mac-os-x-launchdaemon/407/29
+	launchctl unload ~/Library/LaunchAgents/syncthing.plist
+Start syncthing
+	launchctl load ~/Library/LaunchAgents/syncthing.plist
 
 F-Droid
 https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid
