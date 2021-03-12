@@ -9,3 +9,33 @@ Open a project or workspace
 
 24 Xcode Tips in 15 Minutes
 https://www.youtube.com/watch?v=8kiR_QsQNPc
+
+Compile with xcodebuild
+
+Devices
+See ~/ios/destinations.txt
+	instruments -s devices
+List schemes
+	xcodebuild -workspace app.xcworkspace -list
+
+https://developer.apple.com/library/archive/technotes/tn2339/_index.html
+https://medium.com/xcblog/xcodebuild-deploy-ios-app-from-command-line-c6defff0d8b8
+https://stackoverflow.com/questions/61522218/unrecognized-module-map-file-release-iphonesimulator-yogakit-yogakit-modulemap
+https://mokacoding.com/blog/xcodebuild-destination-options/
+	xcodebuild clean archive
+		-scheme releaseScheme
+		-configuration Release
+		-archivePath ../builds/<AppName>.xcarchive
+		-allowProvisioningUpdates
+		-workspace <AppName>.xcworkspace
+		DEVELOPMENT_TEAM=<TeamId>
+	xcodebuild \
+	  -workspace MyApp.xcworkspace \
+	  -scheme MyApp \
+	  -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' \
+	  clean test
+
+Use IPHONEOS_DEPLOYMENT_TARGET 11.0 or 12.0
+https://github.com/facebook/react-native/issues/29605
+https://www.reddit.com/r/reactnative/comments/i7lw40/yogakit_modulemap_missing/
+	xcodebuild -workspace ios/SICOP.xcworkspace -scheme SICOP -configuration Release -sdk iphonesimulator -derivedDataPath ios/build

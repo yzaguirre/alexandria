@@ -1,2 +1,0 @@
-https://github.com/leecade/react-native-swiper
-	yarn add react-native-swiper

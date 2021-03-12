@@ -11,3 +11,10 @@ https://www.reddit.com/r/reactnative/comments/lie8oa/i_with_some_friends_recentl
 https://www.reddit.com/r/reactnative/comments/ljlyhv/youtube_muusic_in_reactnative_60fps/
 https://www.reddit.com/r/reactnative/comments/ljt4s3/facebook_stories_scroll_animation_made_with/
 https://www.reddit.com/r/reactnative/comments/lj7xow/rubber_slider_implementation_with_reanimated_2/
+
+Pico Clock
+https://medium.com/picovoice/add-voice-recognition-to-react-native-without-adding-the-cloud-af9e299336e4
+https://www.reddit.com/r/reactnative/comments/m2rsbs/clock_app_controlled_with_offline_voice/
+React Native Clock App with Offline Voice Recognition
+https://www.youtube.com/watch?v=Eal9vRYUBuk
+See ~/react-native/picovoice.txt

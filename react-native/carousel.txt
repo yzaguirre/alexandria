@@ -1,3 +1,9 @@
 https://github.com/yuanfux/react-native-x-carousel
 https://www.reddit.com/r/reactnative/comments/lemmzx/i_build_a_carousel_library_that_runs_on_ios/
 	yarn add react-native-x-carousel
+
+Swiper/carousel component for React Native featuring previews,
+multiple layouts, parallax images,
+performant handling of huge numbers of items, and more
+https://github.com/meliorence/react-native-snap-carousel
+	yarn add react-native-snap-carousel

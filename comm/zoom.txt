@@ -2,3 +2,5 @@ https://zoom.us
 https://askubuntu.com/questions/1218844/unmet-dependencies-when-installing-zoom-depends-libxcb-xtest0-but-it-is-not-in
 Version 5.4.9 (57862.0110)
 	wget https://zoom.us/client/latest/zoom_amd64.deb
+STUDYSTREAM
+https://www.studystream.live/

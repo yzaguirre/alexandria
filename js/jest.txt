@@ -1,4 +1,5 @@
 https://jestjs.io/
+https://github.com/wix/Detox/blob/master/docs/Guide.Jest.md
 	mkdir jsbase
 	cd jsbase
 	git init

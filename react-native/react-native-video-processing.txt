@@ -38,3 +38,32 @@ https://github.com/imgly/vesdk-react-native-demo
 
 https://github.com/imgly/pesdk-react-native
 https://github.com/imgly/pesdk-react-native-demo
+
+iOS/Android thumbnail generator with support for both local and
+remote videos.
+react-native-create-thumbnail is a wrapper
+round AVAssetImageGenerator (iOS) and MediaMetadataRetriever (Android)
+See ~/react-native/react-native-video.txt
+https://github.com/souvik-ghosh/react-native-create-thumbnail
+https://stackoverflow.com/questions/40905141/react-native-generate-thumbnail-for-video-url
+	yarn add react-native-create-thumbnail
+import { createThumbnail } from "react-native-create-thumbnail"
+
+createThumbnail({
+  url: '<path to video file>',
+  timeStamp: 10000,
+})
+  .then(response => console.log({ response }))
+  .catch(err => console.log({ err }))
+
+Response object
+path, width, height
+
+Android permissions
+READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
+
+Other libraries
+https://github.com/phuochau/react-native-thumbnail#readme
+https://github.com/lucasbento/react-native-thumbnail-video
+https://github.com/chadsmith/react-native-video-preview
+

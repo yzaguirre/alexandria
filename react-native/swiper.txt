@@ -1,3 +1,9 @@
+https://github.com/leecade/react-native-swiper
+	yarn add react-native-swiper
+
+https://github.com/jemise111/react-native-swipe-list-view
+	yarn add react-native-swipe-list-view
+
 Delightful onboarding for your React-Native app
 https://github.com/jfilter/react-native-onboarding-swiper
 	yarn add react-native-onboarding-swiper
@@ -8,3 +14,7 @@ https://github.com/jacse/react-native-app-intro-slider
 
 Onboarding UI | App Intro Slider in React Native || Cab Booking App #1
 https://www.youtube.com/watch?v=f0RepUfPcco
+
+tinder like react-native deck swiper
+https://github.com/alexbrillant/react-native-deck-swiper
+	yarn add react-native-deck-swiper

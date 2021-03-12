@@ -8,3 +8,12 @@ as you can see the frame drops almost never goes down 60 in both threads!
 https://www.reddit.com/r/reactnative/comments/latzsv/animations_bezier_curves_with_reanimated_2/
 
 https://www.reddit.com/r/reactnative/comments/lua5p6/animation_config_visualizer_for_reanimated/
+
+Among Us - Admin Swipe Card in React Native ⚛️
+https://www.youtube.com/watch?v=jp5BHQz2CP8
+https://github.com/funcsio/react-native-among-us-card-swipe-tutorial
+https://www.reddit.com/r/reactnative/comments/ltowlj/recreating_among_us_admin_swipe_card_in_react/
+
+Animated Swipe Button - Reanimated v2 | React Native Tutorial ⚛️
+https://www.youtube.com/watch?v=rseiP75qn0Y
+https://github.com/funcsio/react-native-swipe-button-tutorial

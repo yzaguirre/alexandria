@@ -223,6 +223,23 @@ https://github.com/joltup/rn-fetch-blob
 	yarn add rn-fetch-blob
 MacOS
 	npx pod-install ios
+
+Reset cache
+	npx react-native start --reset-cache
+
+Compile iOS without flipper
+See ~/ide/xcode.txt ~/ios/ios.txt
+https://github.com/facebook/react-native/issues/29605
+https://github.com/facebook/flipper/issues/976
+https://github.com/facebook/react-native/commit/e5497ca8f6e3b240948fdbeef0ac2a710f25bb56
+https://github.com/facebook/flipper/issues/1275#issuecomment-659386608
+https://github.com/facebook/react-native/blob/0.63-stable/template/ios/Podfile#L20-L23
+
+https://stackoverflow.com/questions/45779591/failed-to-emit-precompiled-header-for-bridging-header/56183691#56183691
+
+About use_frameworks
+https://stackoverflow.com/questions/41210249/why-do-we-use-use-frameworks-in-cocoapods
+
 https://stackoverflow.com/questions/54099610/how-can-i-download-file-from-a-url-in-react-native-for-ios
 https://github.com/wkh237/react-native-fetch-blob/issues/474
 if (Platform.OS === 'ios') {

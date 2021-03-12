@@ -1,0 +1,59 @@
+        Available destinations for the "SICOP" scheme:
+                { platform:iOS Simulator, id:37FE7EC7-43F3-4484-B383-7217FDAC27FB, OS:12.0, name:iPad (5th generation) }
+                { platform:iOS Simulator, id:B903809F-929C-47B6-BCD2-991A5CC3F937, OS:12.0, name:iPad (6th generation) }
+                { platform:iOS Simulator, id:606750C7-E524-4EBE-8B77-0AC51712AC73, OS:14.2, name:iPad (8th generation) }
+                { platform:iOS Simulator, id:BDD55613-3C28-4269-9D0F-44F8568B029E, OS:14.4, name:iPad (8th generation) }
+                { platform:iOS Simulator, id:2087DC06-C2D3-41C0-B8C8-1263170ADCCF, OS:12.0, name:iPad Air }
+                { platform:iOS Simulator, id:15C0F58C-B014-4909-A7F4-FC30415D96B9, OS:14.2, name:iPad Air (4th generation) }
+                { platform:iOS Simulator, id:DC9A4D74-C56E-489B-BC7B-CFD535C0846B, OS:14.4, name:iPad Air (4th generation) }
+                { platform:iOS Simulator, id:EF2D32A3-B6CA-4244-B2BD-4208582A0817, OS:12.0, name:iPad Air 2 }
+                { platform:iOS Simulator, id:6E6DB48C-E47B-475B-8057-AF7E084C2551, OS:12.0, name:iPad Pro (9.7-inch) }
+                { platform:iOS Simulator, id:BCA137F9-CBE2-46AB-9279-EB5AA9CBA9F2, OS:14.2, name:iPad Pro (9.7-inch) }
+                { platform:iOS Simulator, id:9ACD483C-4F9F-4A91-8033-5596596BD660, OS:14.4, name:iPad Pro (9.7-inch) }
+                { platform:iOS Simulator, id:837F9359-A859-44F6-ACDB-8118B48CBFD4, OS:12.0, name:iPad Pro (10.5-inch) }
+                { platform:iOS Simulator, id:48C522B6-36E8-4135-BF77-387B616B18FB, OS:14.2, name:iPad Pro (11-inch) (2nd generation) }
+                { platform:iOS Simulator, id:A70E686C-6344-4E0C-A42A-10A9832DBDED, OS:14.4, name:iPad Pro (11-inch) (2nd generation) }
+                { platform:iOS Simulator, id:A8F3099A-4390-4072-B6AB-7D40D57B7CF9, OS:12.0, name:iPad Pro (12.9-inch) (1st generation) }
+                { platform:iOS Simulator, id:8D275D9A-703D-407B-BC9F-9FEE43DBE9DF, OS:12.0, name:iPad Pro (12.9-inch) (2nd generation) }
+                { platform:iOS Simulator, id:734A41BA-1481-47F2-A7F7-DF34F378BE92, OS:14.2, name:iPad Pro (12.9-inch) (4th generation) }
+                { platform:iOS Simulator, id:64BCFFAC-4422-4288-B5B2-6F22605AD3BD, OS:14.4, name:iPad Pro (12.9-inch) (4th generation) }
+                { platform:iOS Simulator, id:E650C9AF-BCE4-4568-9B03-C81B0816B185, OS:12.0, name:iPhone 5s }
+                { platform:iOS Simulator, id:C39DF581-0E61-4B8B-8E56-340344E00379, OS:12.0, name:iPhone 6 }
+                { platform:iOS Simulator, id:8FE146A8-9A07-4CF9-AC7D-467FDF6FD413, OS:12.0, name:iPhone 6 Plus }
+                { platform:iOS Simulator, id:1E50DD52-3955-4A8C-89E2-CE9CF4219AB0, OS:12.0, name:iPhone 6s }
+                { platform:iOS Simulator, id:1726F688-9E19-4A99-83EC-5253C37A3F59, OS:12.0, name:iPhone 6s Plus }
+                { platform:iOS Simulator, id:540A6CEF-1CBE-417C-8D0F-5313BA09972B, OS:12.0, name:iPhone 7 }
+                { platform:iOS Simulator, id:3B50C5C1-9A7D-4503-A554-4F4BDBD668E1, OS:12.0, name:iPhone 7 Plus }
+                { platform:iOS Simulator, id:1DD18031-7855-4691-82BA-AC5F40B97A70, OS:12.0, name:iPhone 8 }
+                { platform:iOS Simulator, id:D5FD5730-3979-449C-B1B4-FE2976ADA710, OS:14.2, name:iPhone 8 }
+                { platform:iOS Simulator, id:8F9DC813-035C-4987-A3D1-A638BE9A3CA7, OS:14.4, name:iPhone 8 }
+                { platform:iOS Simulator, id:DD614AB2-62F2-48F9-AA1D-FEC653B6C86B, OS:12.0, name:iPhone 8 Plus }
+                { platform:iOS Simulator, id:4B41AF18-8B70-43FE-AA71-E08A546D6148, OS:14.2, name:iPhone 8 Plus }
+                { platform:iOS Simulator, id:DE017568-EFE7-4887-B277-7415B2E5F498, OS:14.4, name:iPhone 8 Plus }
+                { platform:iOS Simulator, id:BB61E4FB-FD52-4064-99F2-B7D50F70B743, OS:14.2, name:iPhone 11 }
+                { platform:iOS Simulator, id:24DC725C-2FEE-4553-AA4A-72D7388B7740, OS:14.4, name:iPhone 11 }
+                { platform:iOS Simulator, id:94E40AF5-59E8-4F84-A155-E06B086878DF, OS:14.2, name:iPhone 11 Pro }
+                { platform:iOS Simulator, id:094EC0FC-83C1-48D3-8511-3CCB9F9ECA81, OS:14.4, name:iPhone 11 Pro }
+                { platform:iOS Simulator, id:B8E3C570-0211-4320-AEBA-AA3F59AA70BE, OS:14.2, name:iPhone 11 Pro Max }
+                { platform:iOS Simulator, id:340A87D6-C2F3-4081-81B4-B26E6F010D08, OS:14.4, name:iPhone 11 Pro Max }
+                { platform:iOS Simulator, id:B160DA7B-2CBC-4DF6-BA3C-96C1C2AC87AB, OS:14.2, name:iPhone 12 }
+                { platform:iOS Simulator, id:18B3CB24-5F50-42F3-BEA2-1EB51B902791, OS:14.4, name:iPhone 12 }
+                { platform:iOS Simulator, id:DA6AC4E6-660C-4CA8-A913-4C360425E42A, OS:14.2, name:iPhone 12 Pro }
+                { platform:iOS Simulator, id:D9B75E58-64FD-4B94-8F6E-F7172B4A5666, OS:14.4, name:iPhone 12 Pro }
+                { platform:iOS Simulator, id:CD9DCF9B-2579-4CA3-B2FA-0C946E3DB615, OS:14.2, name:iPhone 12 Pro Max }
+                { platform:iOS Simulator, id:12A28FF1-D379-478E-956C-398373102A0B, OS:14.4, name:iPhone 12 Pro Max }
+                { platform:iOS Simulator, id:D609033B-F110-40F8-A082-4600DE50DBDE, OS:14.2, name:iPhone 12 mini }
+                { platform:iOS Simulator, id:4D6E4D8E-BF78-4F05-B380-D26D819D0266, OS:14.4, name:iPhone 12 mini }
+                { platform:iOS Simulator, id:6FC33279-783B-4361-B99A-EF69ADD42C40, OS:12.0, name:iPhone SE (1st generation) }
+                { platform:iOS Simulator, id:261C908C-5012-489B-8F74-506F383E7BA0, OS:14.2, name:iPhone SE (2nd generation) }
+                { platform:iOS Simulator, id:8A2731B9-DF3A-48EF-8E27-DBF8877F7A91, OS:14.4, name:iPhone SE (2nd generation) }
+                { platform:iOS Simulator, id:0D11F2D2-9623-4ABC-8AC8-8614C62A0016, OS:12.0, name:iPhone X }
+                { platform:iOS Simulator, id:2703579B-AF8B-4FF5-8603-857FB6D4FE07, OS:12.0, name:iPhone Xs }
+                { platform:iOS Simulator, id:0F153104-4D68-4139-9163-7CC60A0D4204, OS:12.0, name:iPhone Xs Max }
+                { platform:iOS Simulator, id:13DF2F51-B815-4EFC-A65E-4CD9DFD4B32E, OS:12.0, name:iPhone Xʀ }
+                { platform:iOS Simulator, id:ABC1A180-45CA-455C-9DFC-9709839B049B, OS:14.2, name:iPod touch (7th generation) }
+                { platform:iOS Simulator, id:026A0E06-4EE9-4707-822D-6809F6FCC04F, OS:14.4, name:iPod touch (7th generation) }
+
+        Ineligible destinations for the "SICOP" scheme:
+                { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+                { platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }

@@ -10,3 +10,10 @@ https://medium.com/better-programming/react-native-video-component-68262bcbc21f
 
 Video controls
 https://github.com/ScreamZ/react-native-true-sight
+
+https://medium.com/swlh/video-encoding-in-react-native-ad97050f90de
+
+FFMPEG
+
+https://github.com/tanersener/mobile-ffmpeg
+https://github.com/tanersener/react-native-ffmpeg

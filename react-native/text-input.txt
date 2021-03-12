@@ -18,3 +18,8 @@ function TextInput_() {
 
     )
 }
+
+
+https://github.com/swushi/react-native-input-outline
+https://www.reddit.com/r/reactnative/comments/m0ww60/reanimated_v2_textinput_library/
+	yarn add react-native-reanimated@2.0.0-rc.0 react-native-input-outline

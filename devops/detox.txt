@@ -4,13 +4,25 @@ https://github.com/wix/Detox
 https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md
 https://github.com/wix/Detox/blob/master/docs/Introduction.iOS.md
 https://github.com/wix/Detox/blob/master/docs/Introduction.Android.md
+https://github.com/wix/Detox/blob/master/docs/APIRef.Configuration.md
+https://github.com/wix/Detox/blob/master/docs/Guide.Jest.md
+https://github.com/wix/Detox/blob/master/examples/demo-react-native-jest/e2e/app-hello.e2e.ts
+
+React Native End-to-end testing using Detox
+https://www.youtube.com/watch?v=i2KqXuADMCY
+
+React Native EU 2019: Vojtech Novak - Real World e2e Testing With Detox
+https://www.youtube.com/watch?v=_neMz2_6u20
+
 Install
+See ~/js/jest.txt
 	npm install -g detox-cli
 Update
 	npm update -g detox-cli
 Install dev dependency with your project
-	npm install detox --save-dev
-	yarn add --dev detox
+	npm install detox jest --save-dev
+	npm install jest jest-circus --save-dev
+	yarn add --dev detox jest jest-circus
 Initialize
 	detox init -r jest
 It creates
@@ -19,7 +31,19 @@ e2e/environment.js
 e2e/firstTest.e2e.js
 .detoxrc.json
 
+Compile see ~/ide/xcode.txt
+
 Build app
 	detox build -c ios
+	detox build -c android
+
+https://stackoverflow.com/questions/47208618/execution-of-compression-failed-error-when-building-project-in-android-studio
+Check if more memory is needed
+
+https://stackoverflow.com/questions/39703644/how-to-build-a-release-test-apk-for-android-with-gradle#50739545
+https://github.com/wix/detox/issues/613
+Don't forget to add testBuildType "release" to app/build.gradle
+
 Run test
 	detox test -c ios
+	detox test -c android
