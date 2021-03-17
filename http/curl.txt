@@ -1,4 +1,4 @@
-https://curl.trillworks.com/#python
+https://curl.trillworks.com/
 https://github.com/NickCarneiro/curlconverter
 https://news.ycombinator.com/item?id=21224687
 

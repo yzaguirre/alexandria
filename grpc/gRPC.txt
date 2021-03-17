@@ -2,6 +2,11 @@ https://grpc.io/
 https://docs.microsoft.com/es-es/aspnet/core/grpc/?view=aspnetcore-5.0
 https://github.com/grpc/grpc-dotnet/tree/master/examples
 
+REST vs GraphQL vs gRPC
+https://www.danhacks.com/software/grpc-rest-graphql.html
+https://news.ycombinator.com/item?id=26466592
+
+
 API design is stuck in the past
 https://buf.build/blog/api-design-is-stuck-in-the-past
 https://news.ycombinator.com/item?id=25085276
