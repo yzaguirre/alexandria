@@ -1,0 +1,5 @@
+https://github.com/amazingCoding/react-native-signature-board
+https://www.reddit.com/r/reactnative/comments/ltp8qk/signatureboard/
+	yarn add signature-board
+iOS
+	npx pod-install ios

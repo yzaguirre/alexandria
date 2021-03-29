@@ -3,6 +3,9 @@ http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
 https://news.ycombinator.com/item?id=8033210
 https://www.sqlite.org/whentouse.html
 
+https://antonz.org/sqlite-is-not-a-toy-database/
+https://news.ycombinator.com/item?id=26580614
+
 IFNULL
 https://www.sqlite.org/lang_corefunc.html#ifnull
 https://stackoverflow.com/questions/799375/sqlite-equivalent-to-isnull-nvl-ifnull-or-coalesce

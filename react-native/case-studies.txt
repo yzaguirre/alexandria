@@ -18,3 +18,9 @@ https://www.reddit.com/r/reactnative/comments/m2rsbs/clock_app_controlled_with_o
 React Native Clock App with Offline Voice Recognition
 https://www.youtube.com/watch?v=Eal9vRYUBuk
 See ~/react-native/picovoice.txt
+
+Hey, how did handled "KeyboardAvoiding" issue when focusing on inputs? (Like the one in the animation)
+Usually done with an empty View with a height of 10
+https://www.reddit.com/r/reactnative/comments/m72may/i_want_to_share_my_little_react_native_app_that/
+
+https://www.reddit.com/r/reactnative/comments/mbe8nx/my_first_rn_app_ever_for_guys_who_love_kaomoji/

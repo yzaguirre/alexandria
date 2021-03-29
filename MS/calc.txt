@@ -1,0 +1,3 @@
+Calc.exe is now open source; there's surprising depth in its ancient code
+https://arstechnica.com/gadgets/2019/03/calc-exe-is-now-open-source-theres-surprising-depth-in-its-ancient-code/
+https://news.ycombinator.com/item?id=26579481

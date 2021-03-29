@@ -15,3 +15,7 @@ https://www.reddit.com/r/reactnative/comments/k57uw2/flatlist_with_tabmenu_help/
 https://www.youtube.com/watch?v=D2wsGs72KvM
 React Native - Problem 12 - Scroll to item seleted in Horizontal Flatlist
 https://github.com/HoangNgocThang/Scroll-to-item-seleted-in-Horizontal-Flatlist
+
+Using memo
+https://stackoverflow.com/questions/63522331/react-native-why-does-flatlist-re-render-completely-on-data-changes
+"On Favorate" example

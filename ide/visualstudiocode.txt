@@ -131,3 +131,8 @@ https://github.com/robb0wen/synthwave-vscode/issues/138
 DotENV
 https://github.com/mikestead/vscode-dotenv
 https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv
+
+VS Code extension that allows you to record and playback guided tours
+of codebases, directly within the editor.
+https://github.com/microsoft/codetour
+https://news.ycombinator.com/item?id=26488610

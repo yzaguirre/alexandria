@@ -1,0 +1,12 @@
+
+Picovoice is the end-to-end platform for adding voice to anything
+https://picovoice.ai/
+https://github.com/Picovoice/picovoice/tree/master/sdk/react-native
+	yarn add @picovoice/react-native-voice-processor
+	yarn add @picovoice/porcupine-react-native
+	yarn add @picovoice/rhino-react-native
+	yarn add @picovoice/picovoice-react-native
+
+https://medium.com/picovoice/add-voice-recognition-to-react-native-without-adding-the-cloud-af9e299336e4
+React Native Clock App with Offline Voice Recognition
+https://www.youtube.com/watch?v=Eal9vRYUBuk

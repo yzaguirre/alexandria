@@ -1,0 +1,5 @@
+https://www.reddit.com/r/reactnative/comments/me9l5m/how_do_i_make_a_whiteboard_in_reactnative_from/
+
+[Deprecated]
+A React Native component for drawing by touching on both iOS and Android.
+https://github.com/terrylinla/react-native-sketch-canvas

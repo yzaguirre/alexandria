@@ -1,3 +1,6 @@
+AskHN: How much is Chrome and how much is Chromium?
+https://news.ycombinator.com/item?id=26570511
+
 Use specified user profile
 https://www.chromium.org/developers/creating-and-using-profiles
 https://superuser.com/questions/377186/how-do-i-start-chrome-using-a-specified-user-profile

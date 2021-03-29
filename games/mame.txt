@@ -29,3 +29,7 @@ https://edgeemu.net/details-190664.htm
 
 Screen
 https://forums.gameex.com/forums/topic/7958-running-mame-on-secondary-monitor/
+
+https://www.reddit.com/r/MAME/comments/f96bei/missing_rom_or_chd_images/
+https://archive.org/download/MAME216RomsOnlyMerged
+neogeo.zip

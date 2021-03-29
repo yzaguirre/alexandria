@@ -59,3 +59,6 @@ https://wiki.openoffice.org/wiki/Documentation/DevGuide/OpenOffice.org_Developer
 Templates
 https://dohliam.github.io/libreoffice-impress-templates/
 
+Collabora Office: The enterprise-ready edition of LibreOffice
+https://www.collaboraoffice.com/solutions/collabora-office/
+https://news.ycombinator.com/item?id=26614654

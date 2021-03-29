@@ -1,0 +1,3 @@
+Mautic: Open Source Marketing Automation Software.
+https://github.com/mautic/mautic
+https://www.mautic.org/

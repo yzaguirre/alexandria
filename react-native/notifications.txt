@@ -1,7 +1,15 @@
 https://www.reddit.com/r/reactnative/comments/m5hgff/how_can_i_implement_local_notifications_without/
+https://www.reddit.com/r/reactnative/comments/m6tajo/whats_the_best_way_for_creating_a_realtime_inapp/
+
+https://github.com/emekalites/react-native-alarm-notification
+
+https://github.com/EkaanshArora/Agora-RN-RTM-Quickstart
 
 https://github.com/wix/react-native-notifications
 
 React Native Local and Remote Notifications for iOS and Android
 https://github.com/zo0r/react-native-push-notification
 	yarn add react-native-push-notification
+
+https://onesignal.com/mobile-push
+https://github.com/OneSignal/react-native-onesignal

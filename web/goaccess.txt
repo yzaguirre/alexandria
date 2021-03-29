@@ -1,8 +1,11 @@
 https://goaccess.io/
 	apt install libncursesw5-dev libssl-dev
-	wget https://github.com/allinurl/goaccess/archive/v1.1.1.tar.gz
-	tar xf v1.1.1.tar.gz
-	cd goaccess-1.1.1/
+	wget https://github.com/allinurl/goaccess/archive/v1.4.6.tar.gz
+	tar xf v1.4.6.tar.gz
+	cd goaccess-1.4.6/
 	./configure --enable-geoip --enable-utf8
 	make
 	make install
+
+https://blog.bitgate.cz/static-site-analytics-with-nginx-goaccess-no-js/
+https://news.ycombinator.com/item?id=26496816

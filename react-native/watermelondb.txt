@@ -1,0 +1,3 @@
+Reactive & asynchronous database for powerful React and React Native apps
+https://nozbe.github.io/WatermelonDB/
+https://github.com/Nozbe/WatermelonDB

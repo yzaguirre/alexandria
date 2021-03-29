@@ -64,6 +64,10 @@ https://superuser.com/questions/335496/git-how-to-delete-all-untracked-files
 Remove all files and directories that git does not track
 	git clean -fdx
 
+Restore a single file
+https://stackoverflow.com/questions/6624036/restore-file-from-old-commit-in-git
+	git checkout 'master@{7 days ago}' -- path/to/file.txt
+
 http://ohshitgit.com/
 https://news.ycombinator.com/item?id=15951825
 

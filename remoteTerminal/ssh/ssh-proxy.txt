@@ -24,3 +24,10 @@ ProxyCommand connect -4 -S localhost:9050 $(tor-resolve %h localhost:9050) %p
 
 ProxyChains
 http://proxychains.sourceforge.net/howto.html
+
+VPN over SSH? The Socks Proxy
+https://news.ycombinator.com/item?id=26623117
+# Temporary Firefox session commands.
+alias socks-proxy="ssh -D 50000 -N me@some-server"
+alias firefox-proxy="firefox -P \"Proxy\""
+alias firefox-throwaway="firefox -no-remote -profile $(mktemp -d)"

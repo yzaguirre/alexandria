@@ -31,3 +31,7 @@ Open a URL
 	open "https://www.davidyzaguirre.com"
 Send standard input to default editor
 	ls | open -f
+
+Sensible macOS Defaults
+https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+https://news.ycombinator.com/item?id=26513528

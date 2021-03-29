@@ -1,3 +1,6 @@
+https://github.com/Hopding/react-native-pdf-lib
+https://github.com/christopherdro/react-native-html-to-pdf
+
 https://github.com/wonday/react-native-pdf
 /**
  * Copyright (c) 2017-present, Wonday (@wonday.org)

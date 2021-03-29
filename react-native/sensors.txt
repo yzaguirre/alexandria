@@ -1,0 +1,8 @@
+https://react-native-sensors.github.io/
+https://react-native-sensors.github.io/docs/Installation.html
+https://github.com/react-native-sensors/react-native-sensors
+	yarn addreact-native-sensors --save
+iOS
+	npx pod-install ios
+Perspective Animation using Gyroscope in React Native ⚛️
+https://www.youtube.com/watch?v=UpcsleaPDr8

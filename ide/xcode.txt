@@ -39,3 +39,11 @@ Use IPHONEOS_DEPLOYMENT_TARGET 11.0 or 12.0
 https://github.com/facebook/react-native/issues/29605
 https://www.reddit.com/r/reactnative/comments/i7lw40/yogakit_modulemap_missing/
 	xcodebuild -workspace ios/SICOP.xcworkspace -scheme SICOP -configuration Release -sdk iphonesimulator -derivedDataPath ios/build
+
+For M1
+https://www.reddit.com/r/reactnative/comments/m8d1ya/some_tips_for_working_on_reactnative_with_the/
+arch -x86_64 xcodebuild \
+  -exportArchive \
+  -archivePath MyApp.xcarchive \
+  -exportPath MyAppExported \
+  -exportOptionsPlist ExportOptions.plist

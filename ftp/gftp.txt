@@ -1,0 +1,3 @@
+gFTP is a free multithreaded file transfer client for *NIX based
+machines. 56 language translations available.
+https://github.com/masneyb/gftp

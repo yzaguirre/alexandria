@@ -1,5 +1,6 @@
 https://reactnative.dev/
 https://reactnative.directory/
+https://www.reddit.com/r/reactnative/comments/ma8jqx/flutter_vs_react_native_a_principal_engineers/
 What are the norms that you follow for RN development?
 https://www.reddit.com/r/reactnative/comments/kzp1ob/what_are_the_norms_that_you_follow_for_rn/
 How Discord achieves native iOS performance with React Native

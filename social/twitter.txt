@@ -29,3 +29,9 @@ https://github.com/lschmelzeisen/nasty/
 	sudo -H pip3 install nasty
 
 https://developer.twitter.com/en
+Get started with Twitter API
+https://www.youtube.com/watch?v=i9RiABNFwks
+https://github.com/FeedHive/twitter-api-client
+	npm i -g twitter-api-client
+https://github.com/draftbit/twitter-lite
+	npm i -g twitter-lite
