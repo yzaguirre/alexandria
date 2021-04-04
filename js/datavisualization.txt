@@ -1,0 +1,5 @@
+http://jsdatav.is/chap01.html
+
+Which color scale to use when visualizing data 
+https://blog.datawrapper.de/which-color-scale-to-use-in-data-vis/
+https://news.ycombinator.com/item?id=26489887

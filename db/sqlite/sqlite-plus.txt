@@ -1,0 +1,3 @@
+All the missing SQLite functions
+https://github.com/nalgeon/sqlite-plus/
+https://news.ycombinator.com/item?id=26683832

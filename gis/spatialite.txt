@@ -1,0 +1,3 @@
+SpatiaLite: A Spatial Extension to SQLite
+https://www.gaia-gis.it/fossil/libspatialite/index
+https://news.ycombinator.com/item?id=26685156

@@ -6,6 +6,14 @@ https://news.ycombinator.com/item?id=18852523
 Bash alias
 https://stackoverflow.com/questions/6883760/git-for-windows-bashrc-or-equivalent-config-files-for-git-bash-shell#6883798
 
+Safe ways to do things in bash
+https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md
+https://news.ycombinator.com/item?id=26681672
+
+Do not use redirection characters in your shell prompt
+https://tanelpoder.com/posts/how-to-stay-safe-in-shell/
+https://news.ycombinator.com/item?id=26491858
+
 https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/
 https://www.gnu.org/software/bash/manual/html_node/Miscellaneous-Commands.html
 http://mywiki.wooledge.org/BashFAQ

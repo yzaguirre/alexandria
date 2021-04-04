@@ -1,0 +1,6 @@
+When you need a web server in a hurry
+https://unix4lyfe.org/darkhttpd/
+https://github.com/emikulic/darkhttpd
+Install
+	wget https://raw.githubusercontent.com/emikulic/darkhttpd/master/darkhttpd.c
+	git clone https://github.com/emikulic/darkhttpd

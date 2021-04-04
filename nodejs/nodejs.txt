@@ -2,6 +2,9 @@ I finally escaped Node
 https://acco.io/i-escaped-node
 https://news.ycombinator.com/item?id=26561847
 
+Remove modules
+	npx npkill
+
 https://github.com/nodejs/Release#release-schedule
 Install
 https://github.com/nodesource/distributions

@@ -1,0 +1,26 @@
+http://www.workrave.org/
+
+See taskwarrior.txt
+
+https://github.com/lharding/tasknc
+	git clone https://github.com/lharding/tasknc.git
+	cd tasknc
+	make
+	sudo make install
+
+Theca
+https://news.ycombinator.com/item?id=12035431
+https://github.com/rolandshoemaker/theca#installation
+
+Todolist
+https://github.com/gammons/todolist
+
+Orgmode
+http://orgmode.org/
+
+Devtodo
+https://github.com/alecthomas/devtodo2
+
+https://github.com/climech/grit
+A multitree-based personal task manager
+https://news.ycombinator.com/item?id=26673221

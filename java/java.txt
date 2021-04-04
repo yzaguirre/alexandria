@@ -19,3 +19,6 @@ Create jar file
 	jar c[v0Mmfe] [manifest] [jarfile] [entrypoint] [-C dir] inputfiles [-Joption]
 	$ cd bin
 	$ jar cfe JBubbles.jar gt.dvdyzag.JBubbles acercade gt imagenes 
+
+https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-16/
+https://www.reddit.com/r/programming/comments/mhurew/a_categorized_list_of_all_java_and_jvm_features/

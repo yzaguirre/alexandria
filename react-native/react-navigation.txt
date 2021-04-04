@@ -17,6 +17,8 @@ https://reactnavigation.org/docs/stack-navigator
 	yarn add @react-navigation/stack
 https://reactnavigation.org/docs/drawer-navigator/
 	yarn add @react-navigation/drawer
+React Native Code Snippets - Drawer Menu UI Example with React Navigation v5 & Styled Components
+https://www.youtube.com/watch?v=Or6xF65W6Ss
 
 https://www.robinwieruch.de/react-native-navigation
 

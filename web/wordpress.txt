@@ -49,3 +49,7 @@ Themes
 https://demo.athemes.com/themes/?theme=Sydney
 https://athemes.com/theme/sydney/
 https://docs.athemes.com/category/8-sydney
+
+Lokl - WordPress local development environment for Mac, Win and Linux
+https://lokl.dev/
+https://news.ycombinator.com/item?id=26681667

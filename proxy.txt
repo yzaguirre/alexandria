@@ -60,3 +60,7 @@ https://swiperproxy.github.io/
 
 https://github.com/fatedier/frp
 see ~/http/frp.txt
+
+Migrating Millions of Concurrent WebSockets to Envoy
+https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/
+https://news.ycombinator.com/item?id=26476894

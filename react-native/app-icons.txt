@@ -9,3 +9,9 @@ https://stackoverflow.com/questions/34329715/how-to-add-icons-to-react-native-ap
 https://medium.com/react-native-training/how-to-easily-configure-launch-icons-in-react-native-android-ios-2e1f351496ed
 	yarn add -D @bam.tech/react-native-make
 	react-native set-icon --path <path_to_png> --background <icon_background_color> --platform <android|ios>
+
+React Native Splash Screen on Android. React Native Beginner Project Course.#49
+https://www.youtube.com/watch?v=zfPptHzKJtE
+
+React Native Splash Screen IOS. React Native Beginner Project Course.#51
+https://www.youtube.com/watch?v=5_M8eoMuXaE
