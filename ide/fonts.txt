@@ -17,6 +17,8 @@ https://fonts.google.com/specimen/Roboto+Mono
 
 https://github.com/daylerees/colour-schemes
 
+https://github.com/ryanoasis/nerd-fonts
+
 Install fonts on linux. See ~/fonts.txt
 https://www.youtube.com/watch?v=6ohOB52RpYE
 Place .ttf files at ~/.fonts, then

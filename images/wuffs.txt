@@ -1,0 +1,4 @@
+Wuffs' PNG image decoder 
+Wrangling Untrusted File Formats Safely
+https://nigeltao.github.io/blog/2021/fastest-safest-png-decoder.html
+https://news.ycombinator.com/item?id=26714831

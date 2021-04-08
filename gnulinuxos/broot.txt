@@ -4,15 +4,39 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.0.9
-		cargo build --release
+	git checkout v1.2.9
+	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.0.9/broot_1.0.9.zip
-	unzip broot_1.0.9.zip
+	wget https://github.com/Canop/broot/releases/download/v1.2.9/broot_1.2.9.zip
+	unzip broot_1.2.9.zip
 	sudo mv build/x86_64-linux/broot /usr/local/bin
+	cd /usr/local/bin
+	sudo ln -s broot br
+Terminal completions
+	sudo mv build/completion/*.bash /usr/share/bash-completion/completions
+	sudo mv build/completion/*.fish /usr/share/fish/completions
+
+Termux
+	scp build/aarch64-linux-android/broot phone:bin
+	scp build/completion/*.bash phone:/data/data/com.termux/files/usr/share/bash-completion/completions
+
 Check the $EDITOR environment variable (all OS platform)
 Windows
 	mv build/x86_64-pc-windows-gnu/broot.exe ~/bin
 Configuration file
 %HOME%\AppData\Roaming\dystroy\broot\config\conf.toml
+
+MacOS
+	brew install broot
+
+https://dystroy.org/broot/tricks/
+Git status
+	br -ghc :gs
+
+If you want to display sizes, dates and permissions, do
+	br -sdp
+
+You may also toggle options with a few keystrokes while inside broot.
+For example hitting a space, a d then enter shows you the dates.
+Or a space, then h then enter and you see hidden files.

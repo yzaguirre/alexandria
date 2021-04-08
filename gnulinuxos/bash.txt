@@ -170,3 +170,7 @@ Security
 https://www.shellcheck.net/
 https://github.com/koalaman/shellcheck
 Parses bash scripts
+
+Completions
+https://github.com/scop/bash-completion/blob/master/README.md
+https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts

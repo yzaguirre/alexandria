@@ -1,0 +1,24 @@
+Xplr - A hackable, minimal, fast TUI file explorer,
+stealing ideas from nnn and fzf.
+Written in Rust
+https://github.com/sayanarijit/xplr
+https://github.com/sayanarijit/xplr/wiki/Alternatives
+https://news.ycombinator.com/item?id=26708089
+Install
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.3.6/xplr-linux.tar.gz
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.3.6/xplr-linux.sha256
+	sha256sum -c xplr-linux.sha256
+	sudo tar xf xplr-linux.tar.gz -C /usr/local/bin
+MacOS
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.3.6/xplr-macos.tar.gz
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.3.6/xplr-macos.sha256
+	shasum -a 256 -c xplr-macos.sha256
+	tar xf xplr-macos.tar.gz -C ~/bin
+
+Configuration. See ~/documents/yaml.txt
+	mkdir -p ~/.config/xplr
+	xplr | yq ".config" -y | tee ~/.config/xplr/config.yml
+Or
+	mkdir ~/.config/xplr/
+	cd ~/.config/xplr/
+	wget https://github.com/sayanarijit/.files/raw/Linux/nixpkgs/files/xplr/config.yml

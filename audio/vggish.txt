@@ -1,0 +1,3 @@
+Build Audio Search with Vggish
+https://github.com/jina-ai/examples/tree/master/audio-search
+https://news.ycombinator.com/item?id=26698492

@@ -1,0 +1,37 @@
+Friendly and fast tool for sending HTTP requests
+https://github.com/ducaale/xh
+https://docs.rs/crate/ht/0.3.5
+Install
+	cargo install ht
+	wget https://github.com/ducaale/xh/releases/download/v0.9.2/xh-v0.9.2-x86_64-unknown-linux-musl.tar.gz
+	tar xf xh-v0.9.2-x86_64-unknown-linux-musl.tar.gz
+	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/xh /usr/local/bin
+	cd /usr/local/bin
+	sudo ln -s ./xh ./xhs
+Terminal completions
+	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/completions/xh.bash /usr/share/bash-completion/completions
+	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/completions/xh.fish /usr/share/fish/completions
+Windows
+	scoop install xh
+MacOS
+	brew install xh
+Uninstall previous project, if applicable
+	brew uninstall ht-rs
+	brew untap ducaale/homebrew-ht-rs
+Send a GET request
+	ht httpbin.org/json
+
+Send a POST request with body {"name": "ahmed", "age": 24}
+	ht httpbin.org/post name=ahmed age:=24
+
+Send a GET request with querystring id=5&sort=true
+	ht get httpbin.org/json id==5 sort==true
+
+Send a GET request and include a header named x-api-key with value 12345
+	ht get httpbin.org/json x-api-key:12345
+
+Send a PUT request and pipe the result to less
+	ht put httpbin.org/put id:=49 age:=25 | less
+
+Download and save to res.json
+	ht -d httpbin.org/json -o res.json

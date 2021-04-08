@@ -9,3 +9,4 @@ Retiro de Flipper
 https://www.reddit.com/r/reactnative/comments/m8369q/i_significantly_reduced_my_ci_build_times_by/
 https://fbflipper.com/docs/troubleshooting/#opting-out-from-flipper-ios
 https://github.com/react-native-community/discussions-and-proposals/issues/312
+https://github.com/facebook/flipper/issues/1326

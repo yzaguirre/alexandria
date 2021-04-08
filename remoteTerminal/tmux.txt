@@ -76,6 +76,8 @@ The last argument allows you to attach a chosen session if you have more than on
 http://danielmiessler.com/study/tmux/
 Create new session named dvdnet
 	tmux new -s dvdnet
+Create new session named dvdnet, window name dvd, and start directory /tmp
+	tmux new -s dvdnet -n dvd -c /tmp
 List sessions
 	tmux list-sessions
 	tmux ls

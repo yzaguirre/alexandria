@@ -1,5 +1,5 @@
 csvkit
-https://csvkit.readthedocs.io/en/1.0.3/
+https://csvkit.readthedocs.io/en/latest/
 	sudo -H pip3 install csvkit
 Convert Excel to CSV:
 	in2csv data.xls > data.csv
@@ -9,6 +9,19 @@ Print column names:
 	csvcut -n data.csv
 View csv files
 	csvlook examples/testfixed_converted.csv
+Convert to JSON:
+	csvjson data.csv > data.json
+	csvjson -i 4 data.csv > data.json
+JQ converts the decimal numbers, not recommended
+	csvjson data.csv | jq --indent 4 . > data2.json
+Query with SQL:
+	csvsql --query "select name from data where age > 30" data.csv > new.csv
+
+xlsx2csv
+https://github.com/dilshod/xlsx2csv
+Convert excel to csv
+	xlsx2csv "data.xlsx" > "data.csv"
+	xlsx2csv -q all "data.xlsx" > "data.csv"
 
 csvtosql
 http://csvtosql.sourceforge.net/
