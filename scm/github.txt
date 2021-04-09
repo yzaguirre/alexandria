@@ -85,28 +85,29 @@ https://github.com/cli/cli/releases/tag/v0.8.0
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
 https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
-	wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_linux_amd64.deb
-	wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_checksums.txt
-	sha256sum --ignore-missing -c gh_1.5.0_checksums.txt
-	dpkg -i gh_1.5.0_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_checksums.txt
+	sha256sum --ignore-missing -c gh_1.8.1_checksums.txt
+	dpkg -i gh_1.8.1_linux_amd64.deb
 Termux
 	apt install gh
 ARM64
-	wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_linux_arm64.tar.gz
-	wget https://github.com/cli/cli/releases/download/v1.5.0/gh_1.5.0_checksums.txt
-	sha256sum --ignore-missing -c gh_1.5.0_checksums.txt
-	tar xf gh_1.5.0_linux_arm64.tar.gz
-	cd gh_1.5.0_linux_arm64/bin
+	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_arm64.tar.gz
+	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_checksums.txt
+	sha256sum --ignore-missing -c gh_1.8.1_checksums.txt
+	tar xf gh_1.8.1_linux_arm64.tar.gz
+	cd gh_1.8.1_linux_arm64/bin
 	./gh
 MacOS
 	brew install gh
 Update
-	brew update gh
+	brew upgrade gh
 Windows
 	scoop bucket add github-gh https://github.com/cli/scoop-gh.git
 	scoop install gh
 Update
 	scoop update gh
+Config file at ~/.config/gh/
 https://cli.github.com/manual/
 	gh auth login
 Use SSH

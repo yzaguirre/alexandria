@@ -1,0 +1,3 @@
+Modern CI is too complex and misdirected 
+https://gregoryszorc.com/blog/2021/04/07/modern-ci-is-too-complex-and-misdirected/
+https://news.ycombinator.com/item?id=26727790

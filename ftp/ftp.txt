@@ -52,6 +52,7 @@ Descomentar DefaultRoot
 
 lftp
 https://lftp.yar.ru/
+https://lftp.yar.ru/lftp-man.html
 http://www.russbrooks.com/2010/11/19/lftp-cheetsheet
 https://www.commandlinefu.com/commands/using/lftp
 https://linoxide.com/linux-how-to/lftp-commands/

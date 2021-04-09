@@ -1,6 +1,8 @@
 https://signal.org/
 Signal's Double Ratchet
-https://github.com/WhisperSystems/Signal-Android
+https://github.com/signalapp/Signal-Android
+https://github.com/signalapp/Signal-Server
+https://news.ycombinator.com/item?id=26725915
 
 	curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
 	echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list

@@ -3,16 +3,18 @@ https://github.com/ogham/exa
 Package install
 	apt install exa
 Binary install
-	wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
-	wget https://github.com/ogham/exa/releases/download/v0.9.0/MD5SUMS
-	wget https://github.com/ogham/exa/releases/download/v0.9.0/SHA1SUMS
-	unzip exa-linux-x86_64-0.9.0.zip
-	sha1sum -c --ignore-missing SHA1SUMS
-	md5sum -c --ignore-missing MD5SUMS
+	wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+	unzip exa-linux-x86_64-v0.10.0.zip
 Move binary to a PATH directory (~/bin, /usr/local/bin, other)
-	mv exa-linux-x86_64 /usr/local/bin/exa
+	mv bin/exa /usr/local/bin/exa
 Useful alias
 	alias ll='exa -bghHlS'
+Terminal completions
+	sudo mv -v completions/*.bash /usr/share/bash-completion/completions
+	sudo mv -v completions/*.fish /usr/share/fish/completions
+	sudo mv -v completions/*.zsh /usr/share/zsh/vendor-completions
+MacOS
+	brew install exa
 Other examples
 	exa -R
 	exa -T
