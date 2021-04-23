@@ -2,6 +2,9 @@ https://curl.trillworks.com/
 https://github.com/NickCarneiro/curlconverter
 https://news.ycombinator.com/item?id=21224687
 
+https://daniel.haxx.se/blog/2021/04/19/curl-those-funny-ipv4-addresses/
+https://news.ycombinator.com/item?id=26859893
+
 https://github.com/spulec/uncurl
 https://stackoverflow.com/questions/53114352/how-to-install-win32clipboard
 	pip install pywin32 # on windows

@@ -1,0 +1,16 @@
+Python Progress Bars in 9 minutes
+https://www.youtube.com/watch?v=AntTxtOWyAI
+tqdm
+A Fast, Extensible Progress Bar for Python and CLI
+https://tqdm.github.io/
+https://github.com/tqdm/tqdm
+
+
+A new kind of Progress Bar, with real time throughput, eta and very cool animations!
+https://github.com/rsalmei/alive-progress
+
+Easy to use progress bars for Python
+https://github.com/verigak/progress/
+
+Progressbar 2 - A progress bar for Python 2 and Python 3 - "pip install progressbar2"
+https://github.com/WoLpH/python-progressbar

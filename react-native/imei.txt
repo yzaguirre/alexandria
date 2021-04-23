@@ -10,3 +10,6 @@ const IMEI = require('react-native-imei')
 IMEI.getImei().then(imeiList => {
 	console.log(imeiList) // prints ["AABBBBBBCCCCCCD"]
 })
+
+https://github.com/SimenCodes/react-native-imei/issues/20
+https://developer.android.com/about/versions/10/privacy/changes#non-resettable-device-ids

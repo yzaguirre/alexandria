@@ -1,3 +1,5 @@
+https://www.reddit.com/r/reactnative/comments/modu8f/testing_in_react_native/
+
 https://jestjs.io/docs/en/tutorial-react-native
 
 The React Native Show Podcast

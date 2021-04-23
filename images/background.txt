@@ -1,0 +1,3 @@
+Remove background from image using machine learning
+https://removebackground.app/
+https://news.ycombinator.com/item?id=26764766

@@ -1,0 +1,6 @@
+React Native horizontal scroll view component as seen on Clubhouse tags
+https://github.com/tsdmrfth/react-native-steve
+https://www.reddit.com/r/reactnative/comments/mgl0q0/published_this_as_a_component_on_npm/
+	yarn add react-native-steve
+This component uses react-native-reanimated v2 so in order to use
+this component your app must be configured for reanimated v2

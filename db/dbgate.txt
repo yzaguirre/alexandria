@@ -1,0 +1,12 @@
+DbGate
+The smartest (no)SQL database client
+https://dbgate.org/
+https://github.com/dbgate/dbgate
+https://news.ycombinator.com/item?id=26899100
+	cd ~/appimage
+	wget https://github.com/dbgate/dbgate/releases/latest/download/dbgate-latest.AppImage
+	chmod u+x dbgate-latest.AppImage
+	sudo ln -s ~/appimage/dbgate-latest.AppImage /usr/local/bin/dbgate
+DEB
+	wget https://github.com/dbgate/dbgate/releases/download/v4.1.9/dbgate-linux-4.1.9.deb
+	sudo dpkg -i dbgate-linux-4.1.9.deb

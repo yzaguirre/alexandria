@@ -24,3 +24,10 @@ Usually done with an empty View with a height of 10
 https://www.reddit.com/r/reactnative/comments/m72may/i_want_to_share_my_little_react_native_app_that/
 
 https://www.reddit.com/r/reactnative/comments/mbe8nx/my_first_rn_app_ever_for_guys_who_love_kaomoji/
+
+https://www.reddit.com/r/reactnative/comments/mor4s5/i_made_a_clubhouse_client_using_react_native_with/
+https://www.reddit.com/r/reactnative/comments/mm7cgf/my_first_project_that_i_am_sharing_with_anyone_i/
+https://www.reddit.com/r/reactnative/comments/mmsaf0/humit_an_app_that_lets_you_snip_out_your/
+
+https://www.reddit.com/r/reactnative/comments/mqpzzc/an_year_ago_i_started_this_project_when_my/
+https://github.com/sarthakpranesh/Covid19

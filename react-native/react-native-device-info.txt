@@ -1,4 +1,7 @@
 https://github.com/react-native-device-info/react-native-device-info
+https://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID
+https://www.skptricks.com/2019/08/react-native-get-android-or-ios-device-unique-id.html
+https://www.reddit.com/r/reactnative/comments/mvbylg/reactnativedeviceinfo/
 	yarn add react-native-device-info
 
 import DeviceInfo from 'react-native-device-info';
@@ -6,3 +9,23 @@ import DeviceInfo from 'react-native-device-info';
 // or ES6+ destructured imports
 
 import { getUniqueId, getManufacturer } from 'react-native-device-info';
+
+https://stackoverflow.com/questions/37782429/how-to-get-device-id-in-react-native-android
+import DeviceInfo from 'react-native-device-info'
+const uniqueId = DeviceInfo.getUniqueID()
+
+https://android.stackexchange.com/questions/35659/where-can-i-find-the-android-id-on-my-device
+	adb shell
+	settings get secure android_id
+or	content query --uri content://settings/secure --projection value --where "name='android_id'"
+Bash script
+	adb shell content query --uri content://settings/secure --projection value --where "name=\'android_id\'"
+
+	adb shell
+$ su
+# cd /data/data/com.android.providers.settings/databases
+# sqlite3 settings.db
+sql> select * from secure where name='android_id';
+
+IMEI:
+*#06#

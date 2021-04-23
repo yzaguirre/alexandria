@@ -9,6 +9,7 @@ https://github.com/wix/react-native-notifications
 
 React Native Local and Remote Notifications for iOS and Android
 https://github.com/zo0r/react-native-push-notification
+https://dev.to/edmondso006/react-native-local-ios-and-android-notifications-2c58
 	yarn add react-native-push-notification
 
 https://onesignal.com/mobile-push

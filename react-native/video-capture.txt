@@ -1,0 +1,3 @@
+https://github.com/ds300/android-capture
+	npx android-capture image --copy
+	npx android-capture video new-scroll-behavior

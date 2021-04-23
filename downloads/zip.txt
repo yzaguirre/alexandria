@@ -1,0 +1,2 @@
+https://rhardih.io/2021/04/listing-the-contents-of-a-remote-zip-archive-without-downloading-the-entire-file/
+https://www.reddit.com/r/programming/comments/mtfph7/listing_the_contents_of_a_remote_zip_archive/

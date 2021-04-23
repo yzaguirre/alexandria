@@ -32,12 +32,15 @@ Para que una máquina GNU/Linux pueda iniciar sesión, se elige la less secure
 Reiniciar la PC, Modifica el Firewall de Windows
 
 Servidor para GNU/Linux
+http://xrdp.org/
 xrdp utiliza el protocolo RDP para presentar un logeo gráfico a un cliente remoto.
 	apt install xrdp
 Remover su autoarranque
 	# update-rc.d -f xrdp remove
 Puede conectarse a un servidor VNC u otro servidor RDP
 Clientes Windows pueden conectarse a un sistema con xrdp sin instalar software adicional
+	wget https://github.com/neutrinolabs/xrdp/releases/download/v0.9.15/xrdp-0.9.15.tar.gz
+	wget https://github.com/neutrinolabs/xrdp/releases/download/v0.9.15/xrdp-0.9.15.tar.gz.asc
 
 https://www.remmina.org/
 Cliente para GNU/Linux es Remmina, soporta protocolos RDP (Remote Desktop Protocol), VNC (Virtual Network Computing), NX, XDMCP y SSH

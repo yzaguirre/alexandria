@@ -3,3 +3,7 @@ How Discord achieves native iOS performance with React Native
 https://blog.discord.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502
 
 https://www.reddit.com/r/reactnative/comments/l8z1i3/discord_for_react_native_developers/
+https://www.reddit.com/r/reactnative/comments/l3kj3g/discord_fastlist_gist/
+
+https://gist.github.com/vishnevskiy/f4ba74adf5cf1d269b860fab86e8feef
+https://twitter.com/svishnevskiy/status/1192698931370528768?lang=en

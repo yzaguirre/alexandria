@@ -1,2 +1,6 @@
 https://www.freecadweb.org/
 https://github.com/FreeCAD/FreeCAD
+	wget https://github.com/FreeCAD/FreeCAD/releases/download/0.19.1/FreeCAD_0.19-24276-Linux-Conda_glibc2.12-x86_64.AppImage
+	mv FreeCAD_0.19-24276-Linux-Conda_glibc2.12-x86_64.AppImage ~/appimage/freecad.AppImage
+	chmod u+x ~/appimage/freecad.AppImage
+	ln -s ~/appimage/freecad.AppImage /usr/local/bin/freecad

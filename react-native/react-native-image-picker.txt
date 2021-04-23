@@ -1,1 +1,3 @@
 https://github.com/react-native-image-picker/react-native-image-picker
+Rivals ./react-native-image-crop-picker
+	yarn add react-native-image-picker

@@ -77,7 +77,7 @@ https://www.computerhope.com/unix/zip.htm
 https://www.7-zip.org/
 https://www.bleepingcomputer.com/news/software/7-zip-developer-releases-the-first-official-linux-version/
 https://news.ycombinator.com/item?id=26438921
-	wget https://7-zip.org/a/7z2101-linux-x64.tar.xz
+	wget https://www.7-zip.org/a/7z2101-linux-x64.tar.xz
 	tar xf 7z2101-linux-x64.tar.xz
 	mv 7zz /usr/local/bin
 	$ tar cf - directory  |  7za  a  -si  directory.tar.7z

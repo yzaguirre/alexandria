@@ -47,3 +47,5 @@ Lists existing targets
 	avdmanager list target
 Lists existing devices
 	avdmanager list device
+MacOS
+https://www.stkent.com/2017/08/10/update-your-path-for-the-new-android-emulator-location.html

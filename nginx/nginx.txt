@@ -1,3 +1,5 @@
+https://www.reddit.com/r/programming/comments/mt8mrn/nginx_cheatsheet/
+
 https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 https://www.digitalocean.com/community/tutorials/nginx-essentials-installation-and-configuration-troubleshootingSSL
 https://nginx.org/

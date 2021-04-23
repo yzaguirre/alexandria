@@ -1,2 +1,9 @@
 https://smallhacks.wordpress.com/2020/09/26/esp32-based-old-clock-controller-with-ntp-sync/
 https://news.ycombinator.com/item?id=24601692
+	
+ESP32-C6, a Wi-Fi 6 and Bluetooth 5 (LE) SoC
+https://www.espressif.com/en/news/ESP32_C6
+https://news.ycombinator.com/item?id=26758050
+ESP32-C6 is Espressif's first low-power
+and cost-effective Wi-Fi 6 + Bluetooth 5 (LE) SoC,
+with a 32-bit RISC-V core, for securely connected devices.

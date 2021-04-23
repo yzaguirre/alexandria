@@ -1,0 +1,7 @@
+https://amp.rs/
+https://github.com/jmacdonald/amp
+https://news.ycombinator.com/item?id=26779949
+Install
+	cargo install amp
+MacOS
+	brew install amp

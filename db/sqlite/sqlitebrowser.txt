@@ -1,4 +1,4 @@
-httpw://sqlitebrowser.org/
+https://sqlitebrowser.org/
 https://github.com/sqlitebrowser/sqlitebrowser
 	apt install sqlitebrowser
 Compile

@@ -1,3 +1,5 @@
 https://www.cloudflare.com/plans/
 https://www.reddit.com/r/programming/comments/lfa1il/why_you_should_never_use_cloudflare_free_plan/
 Why you should never use $freeService in your business critical stack.
+
+https://blog.cloudflare.com/cloudflare-pages-ga/

@@ -1,2 +1,7 @@
 https://github.com/DylanVann/react-native-fast-image
 	yarn add react-native-fast-image
+
+https://www.reddit.com/r/reactnative/comments/mllvra/best_way_to_savecache_images_in_app/
+I am fetching several arrays of objects (id, title, image url),
+and need to download and save the image when the app is first opened.
+What would be the best way to approach this?

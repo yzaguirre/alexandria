@@ -4,8 +4,8 @@ https://blog.burntsushi.net/ripgrep/
 https://github.com/BurntSushi/ripgrep/releases
 
 	apt install ripgrep
-	wget https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep_12.0.1_amd64.deb
-	dpkg -i ripgrep_12.0.1_amd64.deb
+	wget https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+	dpkg -i ripgrep_12.1.1_amd64.deb
 	
 By default, hidden files and directories are skipped.
 	rg --hidden

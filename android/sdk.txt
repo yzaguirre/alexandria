@@ -36,6 +36,12 @@ https://developer.android.com/studio/releases/build-tools
 More stuff
 	sdkmanager --install "add-ons;addon-google_apis-google-19"
 
+MacOS
+JDK
+/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home
+Android SDK location
+/Users/$USER/Library/Android/sdk
+
 Building your first app
 http://developer.android.com/training/basics/firstapp/index.html
 

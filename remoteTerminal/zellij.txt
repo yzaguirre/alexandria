@@ -1,0 +1,3 @@
+Zellij - A Terminal Workspace and Multiplexer Written in Rust 
+https://zellij.dev/news/beta/#
+https://news.ycombinator.com/item?id=26902430
