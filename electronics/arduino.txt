@@ -2,3 +2,36 @@ https://www.arduino.cc
 Windows
 	scoop bucket add extras
 	scoop install arduino
+
+CLI
+https://arduino.github.io/arduino-cli/latest/
+https://github.com/arduino/arduino-cli
+x	wget https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_64bit.tar.gz
+wget https://github.com/arduino/arduino-cli/releases/download/0.18.2/arduino-cli_0.18.2_Linux_64bit.tar.gz
+	wget https://github.com/arduino/arduino-cli/releases/download/0.18.2/0.18.2-checksums.txt
+	sha256sum -c --ignore-missing 0.18.2-checksums.txt
+	mkdir /opt/arduino
+	tar xf arduino-cli_0.18.2_Linux_64bit.tar.gz -C /opt/arduino
+	ln -s /opt/arduino/arduino-cli /usr/local/bin
+Completions
+https://arduino.github.io/arduino-cli/latest/command-line-completion/
+	arduino-cli completion bash > arduino-cli
+	mv arduino-cli /usr/share/bash-completion/completions/
+	arduino-cli completion zsh > _arduino-cli
+	mv _arduino-cli /usr/share/zsh/vendor-completions
+	arduino-cli completion fish > arduino-cli.fish
+	mv arduino-cli.fish /usr/share/fish/completions
+MacOS
+	brew update
+	brew install arduino-cli
+
+Announcing the Arduino IDE 2.0 (beta)
+https://github.com/arduino/arduino-ide
+https://blog.arduino.cc/2021/03/01/announcing-the-arduino-ide-2-0-beta/
+https://news.ycombinator.com/item?id=27123410
+	wget https://downloads.arduino.cc/arduino-ide/nightly/arduino-ide_nightly-latest_Linux_64bit.zip
+	unzip arduino-ide_nightly-latest_Linux_64bit.zip -o /opt
+	mv /opt/arduino-ide_nightly-20210511_Linux_64bit /opt/arduino-ide
+	ln -s /opt/arduino-ide/arduino-ide /usr/local/bin/
+
+https://store.arduino.cc/digital/create

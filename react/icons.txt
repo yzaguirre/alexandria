@@ -1,0 +1,2 @@
+https://github.com/JP1016/react-icon-blur
+https://www.reddit.com/r/webdev/comments/n36exc/i_made_a_tiny_react_library_to_created_frosted/

@@ -1,0 +1,20 @@
+https://www.zsh.org/
+http://ohmyz.sh/
+https://github.com/robbyrussell/oh-my-zsh
+	apt install zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Git plugin
+https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+
+See ~/ide/fonts.txt for Powerline fonts
+
+Color scheme
+Make terminal awesome looking !!! How to customize your terminal with ZSH and custom color scheme
+https://www.youtube.com/watch?v=s-9wo2v3tsk
+https://github.com/mbadolato/iTerm2-Color-Schemes
+	wget https://github.com/mbadolato/iTerm2-Color-Schemes/archive/master.zip
+	cd iTerm2-Color-Schemes-master
+
+Completions at
+/usr/share/zsh/vendor-completions

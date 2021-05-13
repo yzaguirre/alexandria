@@ -46,6 +46,5 @@ https://github.com/fiatjaf/jqview
 simplest possible native GUI for inspecting JSON objects with jq
 https://news.ycombinator.com/item?id=23433290
 	wget https://github.com/fiatjaf/jqview/releases/download/v1/jqview_linux_amd64
-	chmod u+x jqview_linux_amd64
-
-	mv jqview_linux_amd64 /usr/local/bin/jqview
+	wget https://github.com/fiatjaf/jqview/releases/download/v2/jqview_linux.tar.gz
+	mv jqview /usr/local/bin/jqview

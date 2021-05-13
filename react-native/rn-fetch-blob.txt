@@ -2,3 +2,6 @@ https://github.com/joltup/rn-fetch-blob
 	yarn add rn-fetch-blob
 
 https://github.com/joltup/rn-fetch-blob/issues/183
+
+https://stackoverflow.com/questions/64561719/problem-upload-image-with-rn-fetch-blob-in-ios
+data:RNFetchBlob.wrap(this.state.file.uri.replace("file://", ""))

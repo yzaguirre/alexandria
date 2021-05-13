@@ -1,2 +1,6 @@
 https://www.eugdpr.org/
 https://www.infoq.com/articles/gdpr-for-operations?utm_source=infoqEmail&utm_medium=editorial&utm_campaign=ArchitectNL&utm_content=03302018
+
+Using GDPR to obtain one's data as JSON
+https://mazzo.li/posts/gdpr-success-story.html
+https://news.ycombinator.com/item?id=27104587

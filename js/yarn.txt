@@ -1,4 +1,6 @@
-https://yarnpkg.com/en/docs/install#debian-stable
+https://yarnpkg.com/en/docs/install
+	npm install --global yarn
+Debian/Ubuntu
 	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 	apt update

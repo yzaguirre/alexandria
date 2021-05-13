@@ -33,3 +33,6 @@ module.exports = {
   }
   ...
 };
+
+SQLite3 Native Plugin for React Native for iOS, Android, Windows and macOS.
+https://github.com/craftzdog/react-native-sqlite-2

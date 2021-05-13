@@ -19,3 +19,6 @@ https://github.com/HoangNgocThang/Scroll-to-item-seleted-in-Horizontal-Flatlist
 Using memo
 https://stackoverflow.com/questions/63522331/react-native-why-does-flatlist-re-render-completely-on-data-changes
 "On Favorate" example
+
+React Native Flat list with Animated Api | Data Fetching | with source code
+https://www.youtube.com/watch?v=obIBWgBCsAQ

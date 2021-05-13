@@ -15,3 +15,7 @@ https://inquisitivedeveloper.com
 
 Windows
 	scoop install elixir
+
+Elixir GenServer Explained
+https://papercups.io/blog/genserver
+https://news.ycombinator.com/item?id=26958772

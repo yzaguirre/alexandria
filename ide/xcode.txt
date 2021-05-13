@@ -1,3 +1,7 @@
+The joys of creating Xcode project files
+https://nibblestew.blogspot.com/2021/04/the-joys-of-creating-xcode-project-files.html
+https://news.ycombinator.com/item?id=26932240
+
 Launch xcode as sudo for downloading files
 Xcode command line tools (macOS)
 	xcode-select --install

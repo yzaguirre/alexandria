@@ -5,3 +5,5 @@ x	pod install
 	npx pod-install ios
 
 https://github.com/talut/rn-secure-storage
+
+See ~/ios/keychain.txt

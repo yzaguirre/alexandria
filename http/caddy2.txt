@@ -1,6 +1,27 @@
+https://caddyserver.com/
 https://github.com/caddyserver/caddy
 https://news.ycombinator.com/item?id=23070567
 	echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
     apt update && apt install caddy
 Systemd config file 
 https://github.com/caddyserver/dist/tree/master/init
+
+Install
+	wget https://github.com/caddyserver/caddy/releases/download/v2.3.0/caddy_2.3.0_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.3.0/caddy_2.3.0_checksums.txt
+	sha512sum -c --ignore-missing caddy_2.3.0_checksums.txt
+	dpkg -i caddy_2.3.0_linux_amd64.deb
+MacOS
+	brew install caddy
+
+Set up a custom local HTTPS URL for Next.js/React using @caddyserver to
+get a callback URL that Twitter authentication wouldn't complain about
+https://twitter.com/joostschuur/status/1389167762191360005
+	vim Caddyfile
+weather.local {
+	reverse_proxy localhost:3000
+}
+	vim package.json
+"dev": "caddy stop; caddy start && next dev"
+	vim /etc/hosts
+127.0.0.1 weather.local

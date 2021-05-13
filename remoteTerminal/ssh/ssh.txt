@@ -190,3 +190,7 @@ Logs for ssh connection attempts
 	lastlog -u foo
 View history file
 	vim ~/.bash_history
+
+SCP
+https://stackoverflow.com/questions/16886179/scp-or-sftp-copy-multiple-files-with-single-command
+	scp your_username@remote.edu:/some/remote/directory/\{a,b,c\} ./

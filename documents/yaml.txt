@@ -1,0 +1,9 @@
+yq is a portable command-line YAML processor
+https://mikefarah.gitbook.io/yq/
+https://github.com/mikefarah/yq
+Install
+	wget https://github.com/mikefarah/yq/releases/download/v4.6.3/yq_linux_amd64.tar.gz
+	tar xf yq_linux_amd64.tar.gz
+	sudo mv yq_linux_amd64 /usr/bin/yq
+MacOS
+	brew install yq

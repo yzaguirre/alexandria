@@ -1,0 +1,6 @@
+React Native library to generate a dashboard.
+https://github.com/gaetanozappi/react-native-dashboard
+https://www.reddit.com/r/reactnative/comments/n6w97r/reactnativedashboard/
+	yarn add react-native-dashboard
+Uses react-native-super-grid
+https://github.com/saleel/react-native-super-grid

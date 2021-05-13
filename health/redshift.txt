@@ -10,3 +10,10 @@ Config file
 https://news.ycombinator.com/item?id=21905138
 	redshift -O 3500 -b 0.7
 	redshift -O 6500 -b 1.0
+
+https://wiki.archlinux.org/title/Redshift
+https://bbs.archlinux.org/viewtopic.php?id=177473
+Service file in:
+/etc/systemd/system
+/usr/lib/systemd/system
+/lib/systemd/system

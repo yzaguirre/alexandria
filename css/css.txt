@@ -4,3 +4,9 @@ http://www.tutorialrepublic.com/css-tutorial/css-dimension.php
 max-width
 
 https://mediaqueri.es/
+
+padding-top trick
+https://stackoverflow.com/questions/22673008/css-make-div-width-proportional-to-height#22673157
+width: 50%;
+height: 0;
+padding-bottom: 50%;

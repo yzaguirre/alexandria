@@ -5,3 +5,13 @@ https://www.reddit.com/r/linuxadmin/comments/a6fjco/xargs/
 	find . -type f -print0 | xargs -0 sha256sum
 	find . -type f -exec sha256sum {} \;
 
+Print 2 tokens at a time
+	cat testfile1 | xargs -t -n 2
+ls
+	cat grouped | xargs -t ls
+	ls | xargs cat
+All my input mark off as squirly braces
+	ls | xargs -I {} echo 'hello {}'
+	ls | xargs -I @@ echo 'hello @@'
+	ls | grep -v .md | xargs -I {} mv {} {}.c
+	echo "a b c d" | xargs -n 1 -P 1 bash -c 'sleep 1; echo $0'

@@ -1,0 +1,6 @@
+https://github.com/marudy/react-native-responsive-screen
+https://www.reddit.com/r/reactnative/comments/n1b0rn/how_to_make_apps_responsive_in_react_native/
+
+Responsive Layout Design and fonts. React Native Size Matters.#52
+https://www.youtube.com/watch?v=513szMcIqAw
+https://www.reddit.com/r/reactnative/comments/nae7e7/iosandroid_responsive/

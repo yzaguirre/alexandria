@@ -1,0 +1,45 @@
+Bitcoin Blockchain Visualization
+https://symphony.iohk.io/en/
+https://news.ycombinator.com/item?id=26859895
+
+https://github.com/McFrankline/Blockchain-stuff
+https://news.ycombinator.com/item?id=12754772
+
+https://monokh.com/posts/bitcoin-from-scratch-part-1
+https://news.ycombinator.com/item?id=23728228
+
+Download
+	wget https://bitcoin.org/bin/bitcoin-core-0.11.1/bitcoin-0.11.1-linux64.tar.gz
+	wget https://bitcoin.org/bin/bitcoin-core-0.11.1/SHA256SUMS.asc
+	wget https://bitcoin.org/laanwj-releases.asc
+Verify
+	gpg2 --verify SHA256SUMS.asc
+	sha256sum bitcoin-0.11.1-linux64.tar.gz
+
+Electrum
+https://electrum.org/#download
+	wget https://download.electrum.org/Electrum-2.5.1.tar.gz
+	wget https://download.electrum.org/Electrum-2.5.1.tar.gz.asc
+	
+http://bitcoinrichlist.com/top100
+https://blockchain.info/tx/1c12443203a48f42cdf7b1acee5b4b1c1fedc144cb909a3bf5edbffafb0cd204
+
+https://litecoin.org/
+http://litecoin.info/
+
+http://www.bitcointax.info/
+
+overstock
+https://news.ycombinator.com/item?id=7032394
+taxes
+http://www.reddit.com/r/Bitcoin/comments/1uccfz/i_am_a_tax_attorney_here_are_my_answers_to_the/
+
+mining
+http://startbitcoin.com/
+http://www.weusecoins.com/en/
+http://www.bitcoin.org/
+
+online miner
+https://www.bitcoinplus.com/
+
+exodus.io

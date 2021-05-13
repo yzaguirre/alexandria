@@ -1,4 +1,4 @@
 https://github.com/gorhill/uBlock/
-	wget https://github.com/gorhill/uBlock/releases/download/1.32.2/uBlock0_1.32.2.chromium.zip
-	unzip uBlock0_1.32.2.chromium.zip -d /opt
-	/opt/uBlock0.chromium /opt/ublock
+	wget https://github.com/gorhill/uBlock/releases/download/1.35.2/uBlock0_1.35.2.chromium.zip
+	unzip uBlock0_1.35.2.chromium.zip -d ~/opt
+	mv ~/opt/uBlock0.chromium ~/opt/ublock

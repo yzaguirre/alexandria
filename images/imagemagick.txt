@@ -41,6 +41,11 @@ Convertion
 http://www.taringa.net/post/linux/18482317/Herramientas-Tratando-imagenes-con-ImageMagick.html
 Recortar
 	convert -crop 250x100+20+40 image.png image.jpg
+Recortar las partes vacias
+https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=15675
+	convert partial-trans.png -flatten -fuzz 1% -trim +repage trimmed.jpg
+Keep the transparency
+	convert partial-trans.png -fuzz 1% -trim +repage trimmed.jpg
 In order to modify and not save a new file, use mogrify
 Redimensionar
 	convert -resize {dimensión} {entrada} {salida}

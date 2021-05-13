@@ -1,0 +1,3 @@
+Pyre: A performant type-checker for Python 3 
+https://pyre-check.org/
+https://news.ycombinator.com/item?id=27107647

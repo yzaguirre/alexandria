@@ -31,3 +31,35 @@ https://www.reddit.com/r/reactnative/comments/mmsaf0/humit_an_app_that_lets_you_
 
 https://www.reddit.com/r/reactnative/comments/mqpzzc/an_year_ago_i_started_this_project_when_my/
 https://github.com/sarthakpranesh/Covid19
+
+Animated Twitter Profile in React Native
+https://www.youtube.com/watch?v=NC2ufImL_aM
+https://www.reddit.com/r/reactnative/comments/n0aj1i/clean_twitter_profile_done_with_plain_animated/
+
+Drinkd let's you and your friends decide on where to spend a night out by using a "Tinder" style card system to vote on nearby eateries.
+https://www.reddit.com/r/reactnative/comments/n076g4/ive_been_learning_react_native_for_4_months_now/
+https://github.com/EnzoH8321/DRINKD
+
+https://webstrong.pl/
+https://github.com/webstrongteam/save-food
+https://www.reddit.com/r/reactnative/comments/my6cca/save_food_my_react_native_app/
+
+https://wewatchapp.xyz/
+https://www.reddit.com/r/reactnative/comments/mvvrtv/i_made_an_app_where_you_can_swipe_right_on_movies/
+
+https://www.reddit.com/r/reactnative/comments/mv5ths/were_making_a_social_networking_app_in_react/
+
+https://www.reddit.com/r/reactnative/comments/mumy6b/ive_been_working_on_a_notes_app_with_a_social/
+https://github.com/meo-app/meo
+
+https://www.reddit.com/r/reactnative/comments/mu21ci/i_made_a_small_game_in_react_native/
+
+https://www.reddit.com/r/reactnative/comments/n4nwt4/i_made_an_app_where_one_can_do_simple_breathing/
+
+https://getcatalist.com/
+https://www.reddit.com/r/reactnative/comments/n5tpgi/i_made_an_app_where_you_can_curate_lists_of/
+
+https://www.reddit.com/r/reactnative/comments/n6tvy6/focused_on_design_implementation_please_review/
+
+https://www.reddit.com/r/reactnative/comments/n8zold/some_play_around_with_awesome_react_native/
+

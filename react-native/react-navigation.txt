@@ -32,3 +32,9 @@ https://www.youtube.com/watch?v=s8YaclRknYw
 	npx uri-scheme open demo://app/notification --ios
 	npx uri-scheme open demo://app/notification --android
 	npx uri-scheme open demo://app/settings --android
+
+Header height
+https://reactnavigation.org/docs/stack-navigator/
+https://stackoverflow.com/questions/45734664/react-navigation-get-stack-header-height
+import { useHeaderHeight, } from '@react-navigation/stack'
+const headerHeight = useHeaderHeight()

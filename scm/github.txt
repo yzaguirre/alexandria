@@ -85,18 +85,18 @@ https://github.com/cli/cli/releases/tag/v0.8.0
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
 https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
-	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_amd64.deb
-	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_checksums.txt
-	sha256sum --ignore-missing -c gh_1.8.1_checksums.txt
-	dpkg -i gh_1.8.1_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v1.9.2/gh_1.9.2_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v1.9.2/gh_1.9.2_checksums.txt
+	sha256sum --ignore-missing -c gh_1.9.2_checksums.txt
+	dpkg -i gh_1.9.2_linux_amd64.deb
 Termux
 	apt install gh
 ARM64
-	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_arm64.tar.gz
-	wget https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_checksums.txt
-	sha256sum --ignore-missing -c gh_1.8.1_checksums.txt
-	tar xf gh_1.8.1_linux_arm64.tar.gz
-	cd gh_1.8.1_linux_arm64/bin
+	wget https://github.com/cli/cli/releases/download/v1.9.2/gh_1.9.2_linux_arm64.tar.gz
+	wget https://github.com/cli/cli/releases/download/v1.9.2/gh_1.9.2_checksums.txt
+	sha256sum --ignore-missing -c gh_1.9.2_checksums.txt
+	tar xf gh_1.9.2_linux_arm64.tar.gz
+	cd gh_1.9.2_linux_arm64/bin
 	./gh
 MacOS
 	brew install gh
@@ -119,7 +119,7 @@ Create repository
 Add collaborator from command line
 https://gist.github.com/marchampson/4655798
 https://developer.github.com/changes/2020-02-14-deprecating-password-auth/
-https://docs.github.com/en/rest/reference/repos
+https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
 	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
 https://github.com/my_gh_userid/my_repo/invitations
 Remove a collaborator
@@ -142,3 +142,7 @@ Work with GitHub Actions in Your Terminal with GitHub CLI
 https://github.blog/2021-04-15-work-with-github-actions-in-your-terminal-with-github-cli/
 https://twitter.com/natfriedman/status/1382740586562691072
 https://news.ycombinator.com/item?id=26822169
+
+"Private" branches
+https://stackoverflow.com/questions/7983204/having-a-private-branch-of-a-public-repo-on-github
+https://github.community/t/project-setup-question-with-public-and-private-branches/2198

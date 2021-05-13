@@ -1,2 +1,7 @@
+Headless Chrome Node.js API
+https://github.com/puppeteer/puppeteer
+Alternative
+https://github.com/atroche/rust-headless-chrome
+
 https://snir.dev/blog/apartments-bot/
 https://github.com/snird/apartments_bot

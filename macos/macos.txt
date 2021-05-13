@@ -39,3 +39,15 @@ https://news.ycombinator.com/item?id=26513528
 SHA Hash Sum
 https://dyclassroom.com/howto-mac/how-to-verify-checksum-on-a-mac-md5-sha1-sha256-etc
 	shasum -a 256 /path/to/file
+
+macOS gatekeeper and file quarantine bypass
+https://objective-see.com/blog/blog_0x64.html
+https://news.ycombinator.com/item?id=26945680
+Turn off gatekeeper
+	sudo spctl --master-disable
+
+My Favorite One Liners
+https://muhammadraza.me/2021/Oneliners/
+https://news.ycombinator.com/item?id=27023572
+https://www.techjunkie.com/make-your-mac-talk-say-command/
+	say -v Karen -f /Users/Tanous/Desktop/text.txt

@@ -1,5 +1,6 @@
 https://github.com/Hopding/react-native-pdf-lib
 https://github.com/christopherdro/react-native-html-to-pdf
+	yarn add react-native-html-to-pdf
 
 https://github.com/wonday/react-native-pdf
 /**

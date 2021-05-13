@@ -2,21 +2,43 @@ https://developer.android.com/studio/#downloads
 https://developer.android.com/studio/install
 Dependencies
 	apt install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+or	apt install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
 # lib32z1-dev
-Download tools
+Download old sdk tools
 	wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 	mkdir /opt/android-sdk
 	unzip -q sdk-tools-linux-4333796.zip -d /opt/android-sdk
-For W
+Download tools
+	wget https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip
+	sha256sum commandlinetools-linux-7302050_latest.zip
+7a00faadc0864f78edd8f4908a629a46d622375cbe2e5814e82934aebecdb622
+Setup
+https://android.tutorials24x7.com/blog/how-to-install-android-sdk-tools-on-ubuntu
+https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se
+https://groups.google.com/g/kivy-users/c/2C7mzjZyj2M?pli=1
+	mkdir -p /opt/android-sdk/cmdline-tools
+	unzip commandlinetools-linux-7302050_latest.zip -d /opt/android-sdk/cmdline-tools
+	mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-sdk/cmdline-tools/tools
+	vim ~/.profile
+PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
+
+Download platform tools. Usually installed using sdkmanager.
+	wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
+	unzip platform-tools-latest-linux.zip -d /opt/android-sdk
+	PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+Android Studio
+	wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/4.2.0.24/android-studio-ide-202.7322048-linux.tar.gz
+	sha256sum android-studio-ide-202.7322048-linux.tar.gz
+9f3132d181bfe4d46aca667fddf2557f3c428b6c6c726e0ac5be9f5d91fb21c6
+	tar xf android-studio-ide-202.7322048-linux.tar.gz -C /opt
 Env variables
 https://developer.android.com/studio/command-line/variables
 https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-environment-variable
-https://developer.android.com/studio/command-line/variables
 	vim ~/.profile
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+#export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/opt/android-studio/jre
 export ANDROID_SDK_ROOT=/opt/android-sdk
-export ANDROID_NDK_ROOT=/opt/android-ndk
-PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools/bin
+PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 To download for windows, set the env variable
 export REPO_OS_OVERRIDE=windows
 Windows locations
@@ -29,12 +51,22 @@ https://developer.android.com/studio/command-line/sdkmanager
 
 Platforms
 https://en.wikipedia.org/wiki/Android_(operating_system)#Platform_usage
+https://en.wikipedia.org/wiki/Android_version_history#Overview
+	sdkmanager "platforms;android-30"
+	sdkmanager "platforms;android-29"
+	sdkmanager --install "platform-tools" "platforms;android-23" "platforms;android-24" "platforms;android-25" "platforms;android-26" "platforms;android-27" "platforms;android-28"
 	sdkmanager --install "platform-tools" "platforms;android-19" "platforms;android-21" "platforms;android-26" "platforms;android-27" "platforms;android-28"
+	sdkmanager "cmdline-tools;latest"
 Build tools
 https://developer.android.com/studio/releases/build-tools
-	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2"
+	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2" "build-tools;30.0.3"
+Print tools versions
+	cat cmdline-tools/latest/source.properties cmdline-tools/tools/source.properties tools/source.properties
 More stuff
 	sdkmanager --install "add-ons;addon-google_apis-google-19"
+In case java isn't working
+https://stackoverflow.com/questions/47150410/failed-to-run-sdkmanager-list-with-java-9
+https://www.dev2qa.com/how-to-fix-java-lang-noclassdeffounderror-javax-xml-bind-annotation-xmlschema-when-install-android-sdk/
 
 MacOS
 JDK
@@ -50,14 +82,11 @@ List devices
 Run a device
 	emulator -avd <Virtual Device Name>
 
-	# apt-get install android-tools-adb android-tools-fastboot
-	# ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
-	# ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
+	apt install android-tools-adb android-tools-fastboot
+	ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
+	ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
 
-http://stackoverflow.com/questions/4454107/how-to-convert-an-eclipse-android-project-to-use-ant-for-build
-	$ android update project -p .
-
-http://developer.android.com/tools/building/building-cmdline.html
+https://developer.android.com/studio/build/building-cmdline
 
 https://stackoverflow.com/questions/26694108/what-is-the-difference-between-compilesdkversion-and-targetsdkversion
 Check with $ANDROID_HOME/build-tools

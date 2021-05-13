@@ -11,3 +11,12 @@ function ll
     ls -lh $argv
 end
 
+	vim ~/.config/fish/functions/fd.fish
+function fd
+    fdfind $argv
+end
+
+	vim ~/.config/fish/functions/t.fish
+function t
+    xdg-open $argv
+end

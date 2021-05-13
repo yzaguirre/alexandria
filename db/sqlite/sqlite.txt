@@ -59,3 +59,10 @@ https://www.sqlitetutorial.net/tryit/query/sqlite-date/#11
 	julianday(time-value, modifier, modifier, ...)
 	strftime(format, time-value, modifier, modifier, ...)
 	strftime('%Y-%m-%d', ...)
+
+CSV
+Practical SQL for Data Analysis
+https://hakibenita.com/sql-for-data-analysis
+https://news.ycombinator.com/item?id=27025829
+	.format csv
+	.import <path to csv file> <table name>

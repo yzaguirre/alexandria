@@ -1,0 +1,3 @@
+Script CAD for righteous programmers
+https://mirmik.github.io/zencad/en/
+	sudo -H pip3 install zencad

@@ -1,0 +1,9 @@
+https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used
+	echo $XDG_SESSION_TYPE
+	loginctl 
+SESSION  UID USER  SEAT  TTY
+     c2 1000 david seat0 
+
+1 sessions listed.
+
+	loginctl show-session c2 -p Type

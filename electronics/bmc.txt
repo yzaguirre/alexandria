@@ -1,0 +1,5 @@
+Baseboard management controllers (BMCs)
+
+OpenPOWER Foundation announces LibreBMC, a POWER-based, fully open-source BMC
+https://openpowerfoundation.org/openpower-foundation-announces-librebmc-a-power-based-fully-open-source-bmc/
+https://news.ycombinator.com/item?id=27105813

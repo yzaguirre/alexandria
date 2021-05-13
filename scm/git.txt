@@ -298,3 +298,7 @@ https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
 	git filter-branch --tree-filter 'rm -f <path_to_file>' HEAD
 	git push origin --force --all
 
+Zip file
+https://stackoverflow.com/questions/3423540/zip-latest-committed-changes-only
+	git archive -o ../latest.zip some-commit
+	git archive -o ../latest.zip some-commit $(git diff --name-only earlier-commit some-commit)

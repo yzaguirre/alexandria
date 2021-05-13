@@ -1,0 +1,6 @@
+https://github.com/cuvent/react-native-vision-camera
+https://cuvent.github.io/react-native-vision-camera/docs/guides/frame-processors/
+https://www.reddit.com/r/reactnative/comments/n64kk8/i_built_a_game_changer_the_fastest_way_to_do_ai/
+
+https://github.com/Sanket758/RN-Blink-Smile-Detection
+https://www.reddit.com/r/reactnative/comments/n70itd/eye_blinksmile_detection_with_rncamera/

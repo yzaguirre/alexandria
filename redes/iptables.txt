@@ -1,0 +1,43 @@
+Config file in /etc/sysconfig/iptables
+Restart firewall
+	systemctl restart firewalld
+Print existing rules
+	/sbin/iptables -L -v -n --line-number
+http://www.philchen.com/2011/06/21/how-to-port-forward-using-netfilteriptables
+http://www.fclose.com/816/port-forwarding-using-iptables/
+If you are using a different src and dst IP you will want to enable ip forwarding:
+	echo 1 > /proc/sys/net/ipv4/ip_forward
+Make sure the iptables service is started, then run the script
+	/sbin/iptables -F
+	/sbin/iptables -t nat -A PREROUTING -p tcp -i eth0 -d 10.40.30.123 --dport 80 -j DNAT --to 10.40.30.123:123
+	/sbin/iptables -t nat -A PREROUTING -p tcp -i eth0 -d 10.40.30.123 --dport 443 -j DNAT --to 10.40.30.123:123
+	/sbin/iptables -A FORWARD -p tcp -i eth0 -d 10.40.30.123 --dport 123 -j ACCEPT
+
+http://www.cyberciti.biz/tips/linux-iptables-18-allow-mysql-server-incoming-request.html
+	iptables -A INPUT -p tcp -s 202.54.1.50 --sport 1024:65535 -d 202.54.1.20 --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+	iptables -A OUTPUT -p tcp -s 202.54.1.20 --sport 3306 -d 202.54.1.50 --dport 1024:65535 -m state --state ESTABLISHED -j ACCEPT
+
+http://www.cyberciti.biz/tips/linux-iptables-examples.html
+
+Change a policy on the FORWARD chain
+	iptables -P FORWARD DROP
+Flush the IPTABLES ruleset
+	iptables --flush
+	iptables -P FORWARD ACCEPT
+Add a rule to filter out ping between IP addreses in client and server environment
+	iptables -A INPUT --protocol icmp --in-interface enp0s3 -j DROP
+Add for INPUT section, apply to protocol icmp, to interface enp0s3, the policy DROP
+	iptables --flush
+	iptables -A INPUT --protocol icmp --in-interface enp0s3 -j DROP
+REJECT a policy, the client gets an error message
+DROP doesn't reply with anything
+
+BLOCK http
+	iptables -A INPUT -p tcp -s 0/0 --sport 1024:65535 --dport 80 -j REJECT
+	iptables -A OUTPUT -p tcp --dport 80 --sport 1024:655535 -j REJECT
+
+
+Save rules
+	iptables-save > /etc/sysconfig/iptables
+Restore rules
+	iptables-restore < /etc/systemconfig/iptables

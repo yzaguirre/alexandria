@@ -40,3 +40,6 @@ https://console.cloud.google.com/google/maps-apis/client-styles
 
 https://www.reddit.com/r/reactnative/comments/l94xy9/struggled_for_2_days_to_fetch_location_of_the/
 https://sourav-bz.medium.com/react-native-background-location-tracking-without-timeout-and-with-app-killed-3dbfbc80ad01
+
+Callout or infowindow
+https://stackoverflow.com/questions/52738421/custom-info-window-for-mapview

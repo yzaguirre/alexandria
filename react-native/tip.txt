@@ -1,0 +1,2 @@
+https://github.com/MaiconGilton/react-native-tip#readme
+https://www.reddit.com/r/reactnative/comments/n52uqs/a_simple_tip_library_inspired_by_materialui_for/

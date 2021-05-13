@@ -15,3 +15,6 @@ Share.open(options)
 ShareResponse
 {"app":"com.whatsapp/com.whatsapp.ContactPicker","message":"com.whatsapp/com.whatsapp.ContactPicker"}
 {"app":"com.twitter.android/com.twitter.composer.ComposerActivity","message":"com.twitter.android/com.twitter.composer.ComposerActivity"}
+
+Create an image from a React Native component and share it on social media
+https://www.youtube.com/watch?v=3HkHDjLkqRo

@@ -2,7 +2,7 @@ Numix
 https://github.com/numixproject/numix-gtk-theme
 https://github.com/numixproject/numix-icon-theme-circle
 Dependencies
-	sudo apt install libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils
+	sudo apt install sassc libglib2.0-dev libgdk-pixbuf2.0-dev libxml2-utils
 Install
 	sudo apt install numix-gtk-theme numix-icon-theme-circle
 

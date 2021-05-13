@@ -1,0 +1,4 @@
+iOS CallKit framework and Android ConnectionService for React Native
+https://github.com/react-native-webrtc/react-native-callkeep
+https://www.reddit.com/r/reactnative/comments/n2yuv5/is_there_a_way_to_open_a_screen_automatically/
+	yarn add react-native-callkeep

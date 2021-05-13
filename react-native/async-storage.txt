@@ -1,3 +1,4 @@
+See ./storage.txt
 https://react-native-async-storage.github.io/async-storage/
 https://github.com/react-native-async-storage/async-storage
 An asynchronous, persistent, key-value storage system for React Native

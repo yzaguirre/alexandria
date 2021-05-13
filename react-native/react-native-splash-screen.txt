@@ -1,4 +1,12 @@
 See ~/react-native/app-icons.txt
+
+2000 width 3000 height
+launch_screen.png
+ios asset: LaunchScreen
+
+https://appicon.co/
+https://www.img-bak.in/
+
 https://github.com/crazycodeboy/react-native-splash-screen
 https://soshace.com/build-real-world-react-native-app-1-splash-screen-and-app-icon/
 
@@ -31,3 +39,18 @@ https://www.youtube.com/watch?v=9_KDgsFGLY8
 
 https://github.com/HwangTaehyun/react-native-lottie-splash-screen
 https://www.reddit.com/r/reactnative/comments/l4yq4s/lottie_splash_screen_issue_how_to_detect_when/
+
+LCRN EP10 - Cryptocurrency App - React Native UI
+https://www.youtube.com/watch?v=xBmx2eaozck&list=PLqgS9Z5eKI86JDNbF048HD3tKR0j6kCuM&index=36&t=609s
+
+React Native Splash Screen IOS. React Native Beginner Project Course.#51
+https://www.youtube.com/watch?v=5_M8eoMuXaE
+
+Show a bootsplash during app startup. Hide it when you are ready.
+https://github.com/zoontek/react-native-bootsplash
+	yarn add react-native-bootsplash
+	yarn react-native generate-bootsplash assets/bootsplash_logo_original.png \
+	  --background-color=F5FCFF \
+	  --logo-width=100 \
+	  --assets-path=assets \
+	  --flavor=main

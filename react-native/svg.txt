@@ -1,0 +1,10 @@
+SVG library for React Native, React Native Web,
+and plain React web projects.
+https://github.com/react-native-svg/react-native-svg
+
+High performance Node.js image processing, the fastest module to
+resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library.
+https://github.com/lovell/sharp
+
+CLI for sharp.
+https://github.com/vseventer/sharp-cli

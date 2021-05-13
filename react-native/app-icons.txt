@@ -1,6 +1,8 @@
 Make icons.
 Best results with images at 1536x1536 pixels. Minimum 1024x1024
 
+https://appicon.co/
+
 https://soshace.com/build-real-world-react-native-app-1-splash-screen-and-app-icon/
 See ~/react-native/react-native-splash-screen.txt
 
@@ -15,3 +17,6 @@ https://www.youtube.com/watch?v=zfPptHzKJtE
 
 React Native Splash Screen IOS. React Native Beginner Project Course.#51
 https://www.youtube.com/watch?v=5_M8eoMuXaE
+
+Custom Launcher Icons/Change App Icon. React Native Beginner Project Course.#35
+https://www.youtube.com/watch?v=jn1vIZx4DEA

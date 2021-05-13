@@ -1,3 +1,37 @@
+https://ubuntuhandbook.org/index.php/2020/11/chromium-browser-deb-available-linux-mint-20/
+http://packages.linuxmint.com/pool/upstream/c/chromium/
+https://fosspost.org/chromium-deb-package-ubuntu-20-04/
+Remove snap versions
+	sudo apt remove chromium-browser
+	sudo snap remove chromium
+Install Mint repo
+	sudo sh -c 'echo "deb http://packages.linuxmint.com debbie upstream" >> /etc/apt/sources.list.d/mint.list'
+	wget http://packages.linuxmint.com/pool/main/l/linuxmint-keyring/linuxmint-keyring_2016.05.26_all.deb
+	sudo dpkg -i linuxmint-keyring_2016.05.26_all.deb
+	sudo vim /etc/apt/preferences.d/mint-ulyssa-pin
+# Allow upgrading only chromium from Ulyssa repository
+Package: chromium
+Pin: origin packages.linuxmint.com
+Pin-Priority: 500
+
+# Never prefer other packages from the Ulyssa repository
+Package: *
+Pin: origin packages.linuxmint.com
+Pin-Priority: 1
+
+	apt update
+	apt install chromium
+	
+Download .deb
+	wget http://packages.linuxmint.com/pool/upstream/c/chromium/chromium_90.0.4430.93~linuxmint1%2bdebbie_amd64.deb -O chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
+	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
+
+	
+
+https://askubuntu.com/questions/1184357/why-cant-chromium-suddenly-access-any-partition-except-for-home
+If installed with snap
+	snap connect chromium:removable-media
+
 AskHN: How much is Chrome and how much is Chromium?
 https://news.ycombinator.com/item?id=26570511
 
@@ -12,3 +46,25 @@ Start chromium
 	chromium --user-data-dir=$HOME/.config/chromium/Jail
 Make an alias
 	alias chromiumjails='chromium --user-data-dir=$HOME/.config/chromium/Jail'
+
+https://discourse.ubuntu.com/t/chromium-updates-on-trusty/5905
+
+Sessions
+https://superuser.com/questions/662329/how-do-i-recover-tab-session-information-from-chrome-chromium
+
+Recover profile from previous versions
+https://askubuntu.com/questions/880956/how-to-install-old-version-of-chromium
+https://vikyd.github.io/download-chromium-history-version/#/
+Chromium 79
+	wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/706915/ -O chrome-mac.zip
+Chromium 66
+	wget "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F539001%2Fchrome-mac.zip?generation=1519458513634751&alt=media" -O chrome-mac.zip
+Chromium 44
+	wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Mac/330231/ -O chrome-mac.zip
+Run
+	unzip chrome-mac.zip
+	cd chrome-mac/Chromium.app
+	open .
+Find profile directory with
+	chrome://version
+$HOME/Library/ApplicationSupport/Chromium/Default

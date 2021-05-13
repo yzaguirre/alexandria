@@ -1,3 +1,11 @@
+How to learn Unix tools
+https://blog.nindalf.com/posts/how-to-learn-unix-tools/
+https://news.ycombinator.com/item?id=26940445
+
+https://github.com/vivekweb2013/commandhunt
+https://commandhunt.com/
+https://www.reddit.com/r/webdev/comments/n40o0c/open_source_self_hosted_webapp_to_find_build_copy/
+
 An Illustrated Guide to Some Useful Command Line Tools
 https://www.wezm.net/technical/2019/10/useful-command-line-tools/#chars
 
@@ -60,3 +68,7 @@ To Check OpenGL Version,
 	$ glxinfo | grep "OpenGL version"
 You will get the output as follows,
 	$ glxinfo | grep "OpenGL version" OpenGL version string: 1.4 (2.1 Mesa 7.7.1)
+
+What process is using a file or directory
+https://stackoverflow.com/questions/24554614/how-find-out-which-process-is-using-a-file-in-linux
+	lsof | grep passwd

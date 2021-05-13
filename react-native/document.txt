@@ -1,0 +1,7 @@
+Open documents using native components on Android & iOS
+https://github.com/rpander93/react-native-document-opener
+https://www.reddit.com/r/reactnative/comments/n1pob3/release_first_version_of_reactnativedocumentopener/
+	yarn add react-native-document-opener
+
+Document Picker for React Native using Document Providers
+https://github.com/rnmods/react-native-document-picker

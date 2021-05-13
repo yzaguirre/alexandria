@@ -10,3 +10,5 @@ https://www.reddit.com/r/reactnative/comments/m8369q/i_significantly_reduced_my_
 https://fbflipper.com/docs/troubleshooting/#opting-out-from-flipper-ios
 https://github.com/react-native-community/discussions-and-proposals/issues/312
 https://github.com/facebook/flipper/issues/1326
+https://www.reddit.com/r/reactnative/comments/n0vb7b/do_i_need_flipper/
+https://github.com/facebook/folly/issues/1527

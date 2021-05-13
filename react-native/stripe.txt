@@ -2,3 +2,6 @@ React Native Stripe binding for iOS/Android platforms
 https://github.com/tipsi/tipsi-stripe
 https://app.smartsheet.com/b/form/b1a1053eaac7496eb0ae7892ebd68973
 https://www.reddit.com/r/reactnative/comments/kncmmm/experiences_implementing_stripe_in_your_rn_app/
+
+https://stripe.dev/stripe-react-native/api-reference/index.html
+https://github.com/stripe/stripe-react-native

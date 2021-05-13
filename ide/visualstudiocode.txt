@@ -128,6 +128,14 @@ https://github.com/robb0wen/synthwave-vscode/issues/138
 	chown -R david /usr/share/code
 	chown -R root /usr/share/code
 
+Import Cost
+https://github.com/wix/import-cost
+https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+
+Luna Paint
+https://github.com/lunapaint/vscode-luna-paint
+https://marketplace.visualstudio.com/items?itemName=Tyriar.luna-paint
+
 DotENV
 https://github.com/mikestead/vscode-dotenv
 https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv

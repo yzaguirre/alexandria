@@ -1,0 +1,10 @@
+https://rnmmkv.vercel.app/
+https://github.com/ammarahm-ed/react-native-mmkv-storage
+https://www.reddit.com/r/reactnative/comments/mz0an7/jsicthe_fastest_encrypted_storage_for_react/
+An Efficient (0.0002s read/write), small & encrypted mobile
+key-value storage framework for React Native written in C++ using JSI
+https://github.com/ammarahm-ed/react-native-mmkv-storage
+
+https://github.com/mrousavy/react-native-mmkv
+An extremely fast key/value storage library for React Native. ~30x faster than AsyncStorage!
+MMKV is an efficient, small mobile key-value storage framework developed by WeChat.

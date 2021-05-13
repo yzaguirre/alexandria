@@ -3,16 +3,19 @@ https://github.com/ogham/exa
 Package install
 	apt install exa
 Binary install
-	wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
-	unzip exa-linux-x86_64-v0.10.0.zip
+	wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
+	unzip exa-linux-x86_64-v0.10.1.zip
 Move binary to a PATH directory (~/bin, /usr/local/bin, other)
 	mv bin/exa /usr/local/bin/exa
 Useful alias
 	alias ll='exa -bghHlS'
 Terminal completions
-	sudo mv -v completions/*.bash /usr/share/bash-completion/completions
-	sudo mv -v completions/*.fish /usr/share/fish/completions
-	sudo mv -v completions/*.zsh /usr/share/zsh/vendor-completions
+	sudo mv -v completions/exa.bash /usr/share/bash-completion/completions/exa
+	sudo mv -v completions/exa.fish /usr/share/fish/completions
+	sudo mv -v completions/exa.zsh /usr/share/zsh/vendor-completions/_exa
+Instruction manual
+	sudo mv exa.1 /usr/share/man/man1
+	sudo mv exa_colors.5 /usr/share/man/man5
 MacOS
 	brew install exa
 Other examples
