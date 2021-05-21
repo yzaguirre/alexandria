@@ -21,3 +21,6 @@ https://www.reddit.com/r/reactnative/comments/ltowlj/recreating_among_us_admin_s
 Animated Swipe Button - Reanimated v2 | React Native Tutorial ⚛️
 https://www.youtube.com/watch?v=rseiP75qn0Y
 https://github.com/funcsio/react-native-swipe-button-tutorial
+
+https://github.com/uragirii/react-native-spotify-lyrics
+https://www.reddit.com/r/reactnative/comments/ndxsyj/a_made_spotifys_lyrics_screen_using_reanimated_2/

@@ -1,0 +1,5 @@
+react-native chart library that not using svg or ART but only using react native pure components.
+https://github.com/oksktank/react-native-pure-chart
+	yarn add react-native-pure-chart
+
+import PureChart from 'react-native-pure-chart'

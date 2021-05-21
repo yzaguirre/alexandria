@@ -1,3 +1,4 @@
+See ./pure-chart.txt
 Victory is a set of modular charting components for React and React Native.
 Victory makes it easy to get started without sacrificing flexibility.
 Create one of a kind data visualizations with fully customizable styles and behaviors.
@@ -12,5 +13,14 @@ LCRN EP10 - Cryptocurrency App - React Native UI
 https://youtu.be/xBmx2eaozck?t=5005
 https://dribbble.com/shots/14896748-Cryptocoin-App-concept
 
+Charts in React Native - Bar chart multiple series
+https://www.youtube.com/watch?v=O_6GVQ1EwfY
+
 Themes
 https://github.com/FormidableLabs/victory/tree/main/packages/victory-core/src/victory-theme
+
+Pie Chart click events
+https://formidable.com/open-source/victory/docs/victory-pie#events
+https://formidable.com/open-source/victory/guides/events/
+https://github.com/FormidableLabs/victory-native/issues/96
+https://github.com/FormidableLabs/victory-native/issues/350

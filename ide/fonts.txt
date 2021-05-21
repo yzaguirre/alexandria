@@ -8,7 +8,7 @@ Manual install linux and macos
 	./install.sh
 
 Fira Code font
-https://github.com/tonsky/FiraCode/
+https://github.com/tonsky/FiraCode
 https://www.youtube.com/watch?v=Dnq5QhY7lOQ
 	wget https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
 	unzip Fira_Code_v5.2.zip -d ~/.fonts

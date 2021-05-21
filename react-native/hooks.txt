@@ -7,6 +7,10 @@ useFocusEffect(React.useCallback(() => {
 }, [])
 );
 
+useFocusEffect alternative
+https://www.reddit.com/r/reactnative/comments/neksjd/how_to_rerender_previous_screen_after_form_submit/
+https://lifesaver.codes/answer/navigate-back-re-render
+
 Redux vs Context API- Cuál usar?
 https://www.youtube.com/watch?v=BYoZ5oNLhc8
 

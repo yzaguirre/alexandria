@@ -63,3 +63,16 @@ https://www.reddit.com/r/reactnative/comments/n6tvy6/focused_on_design_implement
 
 https://www.reddit.com/r/reactnative/comments/n8zold/some_play_around_with_awesome_react_native/
 
+https://www.reddit.com/r/reactnative/comments/nd79ir/im_building_a_clone_of_the_coinbase_app_code_in/
+https://github.com/arjun-dureja/coinbase-clone
+
+https://www.reddit.com/r/reactnative/comments/ne1lv2/i_made_an_app_that_teaches_you_how_to_live_a_more/
+
+https://www.reddit.com/r/reactnative/comments/nfbfmh/ive_used_react_native_graphql_mongo_tensorflow_to/
+
+https://www.reddit.com/r/reactnative/comments/ng5qsm/i_built_an_ai_simulator_game_using_react_native/
+
+https://www.reddit.com/r/reactnative/comments/nfzu5o/inside_the_packagejson_of_coinbase/
+https://twitter.com/jnybgr/status/1394570691421278208
+
+https://www.reddit.com/r/reactnative/comments/ngn5sw/i_developed_a_mental_health_related_app_using/

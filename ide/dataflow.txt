@@ -1,0 +1,8 @@
+Dataflow, a self-hosted Observable notebook editor
+https://github.com/asg017/dataflow
+https://alexgarcia.xyz/dataflow/
+https://observablehq.com/@asg017/introducing-dataflow
+https://news.ycombinator.com/item?id=27145515
+	npm i -g @alex.garcia/dataflow
+	dataflow --help
+	dataflow run ./my-notebook.ojs

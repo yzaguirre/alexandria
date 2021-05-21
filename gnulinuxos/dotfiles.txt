@@ -1,0 +1,6 @@
+A Way to Manage Dotfiles
+https://github.com/kalkayan/dotfiles
+https://news.ycombinator.com/item?id=27134249
+
+https://yadm.io/
+See ~/secure/yadm.txt

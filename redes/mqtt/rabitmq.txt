@@ -1,3 +1,8 @@
 https://www.rabbitmq.com/
 https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html
 https://news.ycombinator.com/item?id=23258301
+
+How to use RabbitMQ in service integration 
+https://www.erlang-solutions.com/blog/how-to-use-rabbitmq-in-service-integration/
+https://news.ycombinator.com/item?id=27182060
+

@@ -1,0 +1,4 @@
+Zulip 4.0: Threaded open source team chat
+https://github.com/zulip
+https://blog.zulip.com/2021/05/13/zulip-4-0-released/
+https://news.ycombinator.com/item?id=27149123

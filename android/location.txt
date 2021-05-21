@@ -17,3 +17,7 @@ Create location services client
 In your activity's onCreate() method, create an instance of the FusedLocationProviderClient, which is the main component that interacts with the fused location provider.
 
 Get the last known location
+
+https://www.reddit.com/r/reactnative/comments/nam8d2/is_it_possible_to_make_pop_upalert_before/
+Prominent Disclosure - Background Location Permission
+https://www.youtube.com/watch?v=1QrytVLPQQY

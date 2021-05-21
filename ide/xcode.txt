@@ -51,3 +51,11 @@ arch -x86_64 xcodebuild \
   -archivePath MyApp.xcarchive \
   -exportPath MyAppExported \
   -exportOptionsPlist ExportOptions.plist
+
+xcodebuild - Signing & exporting iOS Apps from CLI
+https://www.youtube.com/watch?v=HVtkttrg5rU
+xcodebuild archive
+		-project TestBuildApp.xcodeproj
+		-scheme TestBuildAppDebug
+		-archivePath Archive/TestBuildApp.xcarchive
+xcodebuild -exportArchive -archivePath Archive/TestBuidApp.xcarchive -exportPath Output -exportOptionsPlist TestBuildApp/Config/export.plist

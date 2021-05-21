@@ -18,3 +18,14 @@ https://github.com/mbadolato/iTerm2-Color-Schemes
 
 Completions at
 /usr/share/zsh/vendor-completions
+
+https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm
+	cd ~/.oh-my-zsh/custom/plugins
+	git clone https://github.com/zsh-users/zsh-autosuggestions.git
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+	vim ~/.zshrc
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)

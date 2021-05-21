@@ -1,8 +1,12 @@
 https://github.com/sharkdp/bat
 A cat(1) clone with wings.
-	scoop install bat
-Termux
+Install
 	apt install bat
+Windows
+	scoop install bat
+Alias
+	mkdir -p ~/.local/bin
+	ln -s /usr/bin/batcat ~/.local/bin/bat
 https://github.com/sharkdp/bat/releases
 	wget https://github.com/sharkdp/bat/releases/download/v0.12.1/bat_0.12.1_amd64.deb
 	dpkg -i bat_0.12.1_amd64.deb

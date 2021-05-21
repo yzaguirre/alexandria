@@ -1,0 +1,4 @@
+Zstandard - Fast real-time compression algorithm
+https://github.com/facebook/zstd
+https://github.com/facebook/zstd/releases/tag/v1.5.0
+https://news.ycombinator.com/item?id=27155857

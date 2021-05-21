@@ -1,0 +1,3 @@
+A visual programming language for machine learning (in beta)
+https://kobra.dev/
+https://news.ycombinator.com/item?id=27135573

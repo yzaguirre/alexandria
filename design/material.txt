@@ -1,0 +1,8 @@
+Material You - Google's new design language 
+https://material.io/blog/announcing-material-you
+https://news.ycombinator.com/item?id=27204720
+
+Material Design for Android Developers | Udacity
+https://www.youtube.com/watch?list=PLAwxTw4SYaPkdAyQ6F5dWmwxCee8TDpdo&index=40
+Using color
+https://www.youtube.com/watch?v=jyVfyqQe-gE&list=PLAwxTw4SYaPkdAyQ6F5dWmwxCee8TDpdo&index=40

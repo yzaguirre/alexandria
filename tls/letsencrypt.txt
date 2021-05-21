@@ -1,3 +1,7 @@
+Let's Encrypt DST Root CA X3 Expiration – September 2021
+https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/
+https://news.ycombinator.com/item?id=27181374
+
 https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579
 https://letsencrypt.org/docs/client-options/
 

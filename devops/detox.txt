@@ -8,6 +8,9 @@ https://github.com/wix/Detox/blob/master/docs/APIRef.Configuration.md
 https://github.com/wix/Detox/blob/master/docs/Guide.Jest.md
 https://github.com/wix/Detox/blob/master/examples/demo-react-native-jest/e2e/app-hello.e2e.ts
 
+Detox: tackling the flakiness of mobile automation - Viktorija Sujetaitė
+https://www.youtube.com/watch?v=4rU0IGEt6OQ
+
 React Native End-to-end testing using Detox
 https://www.youtube.com/watch?v=i2KqXuADMCY
 

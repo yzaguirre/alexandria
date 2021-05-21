@@ -1,4 +1,5 @@
 http://syncthing.net/
+https://github.com/syncthing/syncthing
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/sha1sum.txt.asc
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/sha256sum.txt.asc
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/syncthing-linux-amd64-v1.16.1.tar.gz
@@ -55,4 +56,5 @@ Per-user config files, example:
 	# ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
 
 Android
+https://github.com/syncthing/syncthing-android
 https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid

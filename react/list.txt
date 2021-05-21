@@ -1,0 +1,4 @@
+Harness the power of Intersection Observers for simple list virtualization in React
+https://github.com/NightCafeStudio/react-render-if-visible
+https://dev.to/angus_russell/super-simple-list-virtualization-in-react-with-intersectionobserver-3o6g
+https://www.reddit.com/r/webdev/comments/ncjl5s/showoff_saturday_ive_been_using_this_super_simple/

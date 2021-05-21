@@ -1,3 +1,11 @@
+Freenode now belongs to Andrew Lee, and I'm leaving for a new network
+https://news.ycombinator.com/item?id=27207440
+Welcome to Libera Chat 
+https://libera.chat/news/welcome-to-libera-chat
+https://news.ycombinator.com/item?id=27207734
+
+You can connect to the new network at `irc.libera.chat`, ssl port 6697 (and the usual clearnet port).
+
 irc.mozilla.org
 6697
 https://wiki.mozilla.org/IRC

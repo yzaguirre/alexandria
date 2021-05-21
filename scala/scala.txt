@@ -1,0 +1,10 @@
+Scala 3.0
+https://www.scala-lang.org/blog/2021/05/14/scala3-is-here.html
+https://github.com/lampepfl/dotty/releases/tag/3.0.0
+https://news.ycombinator.com/item?id=27151732
+
+Compiler
+https://dotty.epfl.ch/#getting-started
+https://github.com/lampepfl/dotty
+MacOS
+	brew install lampepfl/brew/dotty

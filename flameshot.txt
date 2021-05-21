@@ -1,0 +1,23 @@
+Powerful yet simple to use screenshot software.
+https://flameshot.org/
+https://flameshot.org/command-line-options/?id=cli-configuration
+	apt install flameshot
+DEB installer
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot-0.9.0-1.ubuntu-20.04.amd64.deb
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot-0.9.0-1.ubuntu-20.04.amd64.deb.sha256sum
+	sha256sum -c --ignore-missing flameshot-0.9.0-1.ubuntu-20.04.amd64.deb.sha256sum
+	dpkg -i flameshot-0.9.0-1.ubuntu-20.04.amd64.deb 
+AppImage
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage.sha256sum
+	sha256sum -c --ignore-missing Flameshot-0.9.0.x86_64.AppImage.sha256sum
+	chmod u+x Flameshot-0.9.0.x86_64.AppImage
+	mv Flameshot-0.9.0.x86_64.AppImage ~/appimage/
+	ln -s ~/appimage/Flameshot-0.9.0.x86_64.AppImage /usr/local/bin/flameshot
+MacOS
+	brew install flameshot
+Manual install
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot.dmg
+	open flameshot.dmg
+Capture with GUI with custom save path:
+	flameshot gui -p ~/myStuff/captures

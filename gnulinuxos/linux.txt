@@ -72,3 +72,8 @@ You will get the output as follows,
 What process is using a file or directory
 https://stackoverflow.com/questions/24554614/how-find-out-which-process-is-using-a-file-in-linux
 	lsof | grep passwd
+
+A website that finds random Linux distribution
+https://www.fmald.net/
+https://github.com/KripC2160/findmealinuxdistro
+https://www.reddit.com/r/webdev/comments/ncnxfr/i_made_a_website_that_takes_you_to_a_random_linux/

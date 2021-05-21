@@ -3,7 +3,7 @@ https://invent.kde.org/network/kdeconnect-kde
 https://github.com/KDE/kdeconnect-kde
 https://community.kde.org/KDEConnect
 Android
-
+https://invent.kde.org/network/kdeconnect-android
 Windows
 https://www.youtube.com/watch?v=Zk8ScqK-xiE
 https://www.dedoimedo.com/computers/kde-connect-windows.html

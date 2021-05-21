@@ -132,3 +132,9 @@ Show messages
 Rezise pane
 	:resize-pane -t 0 -U 5
 	:resize-pane -t 0 -D 5
+
+Status bar
+	tmux show-options -g | grep status
+	tmux show-option -g status-right
+	tmux set-option -g status-right #{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,}"#{=21:pane_title}" %H:%M %A %Y-%m-%d
+	tmux set-option -g status-right "#{?window_bigger,[#{window_offset_x}#,#{window_offset_y}] ,}\"#{=21:pane_title}\" %H:%M %A %d-%b-%y"

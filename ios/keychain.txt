@@ -1,3 +1,6 @@
 Keychain values persist after an uninstall, but not after a system restore.
 https://stackoverflow.com/questions/30421968/how-to-detect-whether-user-had-installed-this-app-before#30422056
 https://stackoverflow.com/questions/22118943/how-to-detect-an-ios-app-installed-or-upgraded
+
+GitHub Keychain and Apple Secure Enclave
+https://www.youtube.com/watch?v=E2Z8BBARlvs

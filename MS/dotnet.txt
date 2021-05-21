@@ -1,3 +1,5 @@
+https://dotnet.microsoft.com/download
+
 Announcing .NET 5.0
 https://devblogs.microsoft.com/dotnet/announcing-net-5-0/
 https://news.ycombinator.com/item?id=25047409
@@ -16,13 +18,26 @@ Resources
 	- Release Notes https://aka.ms/20-p2-rel-notes
 	- Tutorials https://aka.ms/dotnet-tutorials
 https://github.com/dotnet/sdk
-	wget https://download.visualstudio.microsoft.com/download/pr/8db2b522-7fa2-4903-97ec-d6d04d297a01/f467006b9098c2de256e40d2e2f36fea/dotnet-sdk-3.1.301-linux-x64.tar.gz
-	sha512sum dotnet-sdk-3.1.301-linux-x64.tar.gz
-dd39931df438b8c1561f9a3bdb50f72372e29e5706d3fb4c490692f04a3d55f5acc0b46b8049bc7ea34dedba63c71b4c64c57032740cbea81eef1dce41929b4e
+	wget https://download.visualstudio.microsoft.com/download/pr/ef13f9da-46dc-4de9-a05e-5a4c20574189/be95913ebf1fb6c66833ca40060d3f65/dotnet-sdk-5.0.203-linux-x64.tar.gz
+	sha512sum dotnet-sdk-5.0.203-linux-x64.tar.gz
+49d8f0414806a9c938192ed13e7707ac2609ca6c2dc408d616e56e98fc0a954b1aa3f569858f7ba38fb79b2ee36dc1920c7f08d1ba4f93da501542b1c8a1320f
 	mkdir /opt/dotnet
-	tar xf dotnet-sdk-3.1.301-linux-x64.tar.gz -C /opt/dotnet
+	tar xf dotnet-sdk-5.0.203-linux-x64.tar.gz -C /opt/dotnet
 export DOTNET_ROOT=/opt/dotnet
 export PATH=$PATH:/opt/dotnet
+
+Package manager
+https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
+	wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+	sudo dpkg -i packages-microsoft-prod.deb
+	sudo apt update
+	sudo apt install apt-transport-https
+	sudo apt install dotnet-sdk-5.0
+As an alternative to the ASP.NET Core Runtime,
+you can install the .NET Runtime, which doesn't include
+ASP.NET Core support: replace aspnetcore-runtime-5.0
+in the previous command with dotnet-runtime-5.0:
+	sudo apt install dotnet-runtime-5.0
 
 Write this in .profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1

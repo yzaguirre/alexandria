@@ -1,6 +1,8 @@
 http://www.reactenlightenment.com/what-is-react.html
 http://courses.reactjsprogram.com/courses/reactjsfundamentals
 
+https://dev.to/ayeprahman/how-i-build-crypto-tracker-chart-with-react-4k9h
+
 React Fundamentals: What I'm Learning (buaiscia.github.io)
 https://buaiscia.github.io/posts/learning-on-epic-react-fundamentals
 https://news.ycombinator.com/item?id=24979103

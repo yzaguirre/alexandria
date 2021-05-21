@@ -2,6 +2,10 @@ Things I Hate About PostgreSQL (2020)
 https://rbranson.medium.com/10-things-i-hate-about-postgresql-20dbab8c2791
 https://news.ycombinator.com/item?id=26709019
 
+Using PostgreSQL as a Data Warehouse
+https://www.narrator.ai/blog/using-postgresql-as-a-data-warehouse/
+https://news.ycombinator.com/item?id=27109960
+
 Install
 	apt install postgresql postgresql-contrib
 Windows

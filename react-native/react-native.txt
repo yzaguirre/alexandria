@@ -1,9 +1,11 @@
 https://reactnative.dev/
 https://reactnative.directory/
 
+A Guide to React Native Optimisation
+https://www.youtube.com/watch?v=NDe3kjHBIWY
+https://callstack.com/blog/download-the-ultimate-guide-to-react-native-optimization-ebook/
+
 https://www.reddit.com/r/reactnative/comments/nadzmz/is_it_worth_to_dive_deep/
-"Why founders should NOT use React Native"
-https://twitter.com/ricburton/status/1378891194776739842
 "A team of ~8 engineers built this app from scratch using React Native in 2020"
 https://twitter.com/dan_coff/status/1392159275070365703
 

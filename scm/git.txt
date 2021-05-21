@@ -281,6 +281,15 @@ Git maintains the stash list (a stack) of stashed diffs.
 	git stash list
 View an individual stash diff
 	git stash show
+https://dev.to/yuvgeek/learn-the-hidden-feature-in-git-stash-k7b
+	git stash push -m "Feature 2 in progress"
+Recover a stash
+	git stash apply stash@{0}
+	git stash pop 0
+Remove a stash
+	git stash drop stash@{0}
+Remove all the stash
+	git stash clear
 
 Identities
 https://www.micah.soy/posts/setting-up-git-identities/

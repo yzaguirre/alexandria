@@ -1,3 +1,4 @@
+See ~/compression/zip.txt
 http://gnuwin32.sourceforge.net/packages.html
 
 For use in other languajes, see java/jtar.txt and js/js-tar.txt
@@ -55,23 +56,6 @@ on unix
 
 rar
 	$ unrar x file.rar
-
-zip
-http://infozip.sourceforge.net/
-http://infozip.sourceforge.net/mans/
-	wget https://r15ch13.keybase.pub/scoop/zip/zip300xn-x64.zip
-	wget https://r15ch13.keybase.pub/scoop/unzip/unz600xn.exe#/dl.7z
-http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-directory-via-terminal-without-hidden
-	zip -r file.zip file1.txt files/
-	unzip file.zip -d exdir
-https://www.computerhope.com/unix/unzip.htm
-Extract only those files that already exist on disk and that are newer than the disk copies.
-	unzip -f file
-	unzip -u file
-https://www.computerhope.com/unix/zip.htm
-	zip -@ foo
-	find . -name "*.[ch]" -print | zip source -@
-	fd -e xlsx -e md | zip myfiles -@
 
 7z
 https://www.7-zip.org/

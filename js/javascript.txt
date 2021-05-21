@@ -109,3 +109,7 @@ https://gregraiz.com/i-made-an-eink-newspaper/
 https://news.ycombinator.com/item?id=26611371
 Bookmark
 javascript: link=today=new Date();dd=today.getDate();mm=today.getMonth()+1;window.location="https://static01.nyt.com/images/"+today.getFullYear()+'/'+((mm<10)?'0'+mm:mm)+'/'+((dd<10)?'0'+dd:dd)+"/nytfrontpage/scan.pdf";
+
+https://dev.to/suprabhasupi/use-javascript-console-like-pro-3j1h
+let info = [["Suprabha"], ["Frontend Dev"], ["Javascript"]]
+console.table(info)

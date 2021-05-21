@@ -178,3 +178,10 @@ Parses bash scripts
 Completions
 https://github.com/scop/bash-completion/blob/master/README.md
 https://serverfault.com/questions/506612/standard-place-for-user-defined-bash-completion-d-scripts
+
+man directory for manuals
+https://superuser.com/questions/318555/where-are-man-pages-stored-in-ubuntu
+	/bin/mkdir -p '/usr/local/share/man/man1'
+	/usr/local/share/man/man1
+	/usr/share/man/man1
+	/usr/share/man/man5

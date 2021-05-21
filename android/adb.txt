@@ -87,3 +87,7 @@ For package space
 https://stackoverflow.com/questions/39297951/adb-logcat-filter-by-package-name
 	adb shell ps | grep com.example.package
 	adb logcat --pid=<pid>
+
+Open deep-link URLs
+https://varunbarad.com/blog/testing-deep-link-urls-using-adb
+	adb shell am start -a android.intent.action.VIEW -d "https://varunbarad.com/blog"

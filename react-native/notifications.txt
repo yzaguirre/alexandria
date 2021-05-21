@@ -1,5 +1,6 @@
-https://www.reddit.com/r/reactnative/comments/m5hgff/how_can_i_implement_local_notifications_without/
+fhttps://www.reddit.com/r/reactnative/comments/m5hgff/how_can_i_implement_local_notifications_without/
 https://www.reddit.com/r/reactnative/comments/m6tajo/whats_the_best_way_for_creating_a_realtime_inapp/
+https://www.reddit.com/r/reactnative/comments/ndyipv/notifications_react_native/
 
 https://github.com/emekalites/react-native-alarm-notification
 
@@ -19,3 +20,7 @@ https://github.com/OneSignal/react-native-onesignal
 
 https://notifee.app/
 https://notifee.app/react-native/docs/android/progress-indicators
+
+React Native Push Notification API for iOS.
+https://github.com/react-native-push-notification-ios/push-notification-ios
+	yarn add @react-native-community/push-notification-ios

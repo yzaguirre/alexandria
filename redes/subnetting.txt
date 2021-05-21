@@ -1,0 +1,2 @@
+https://www.taringa.net/posts/offtopic/18043808/Practica-de-subnetting-2.html
+http://jodies.de/ipcalc?host=10.0.0.1&mask1=30&mask2

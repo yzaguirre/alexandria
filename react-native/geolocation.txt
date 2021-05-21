@@ -1,3 +1,4 @@
+See ~/android/location.txt
 https://github.com/react-native-geolocation/react-native-geolocation
 https://github.com/Agontuk/react-native-geolocation-service
 https://dzone.com/articles/how-to-use-geo-location-geo-coding-in-react-native
