@@ -13,6 +13,10 @@ Install
 	dpkg -i caddy_2.3.0_linux_amd64.deb
 MacOS
 	brew install caddy
+To have launchd start caddy now and restart at login:
+	brew services start caddy
+Or, if you don't want/need a background service you can just run:
+	caddy run --config /usr/local/etc/Caddyfile
 
 Set up a custom local HTTPS URL for Next.js/React using @caddyserver to
 get a callback URL that Twitter authentication wouldn't complain about

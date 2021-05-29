@@ -32,3 +32,15 @@ https://github.com/BurntSushi/xsv
 
 http://thomasburette.com/blog/2014/05/25/so-you-want-to-write-your-own-CSV-code/
 https://news.ycombinator.com/item?id=23190517
+
+Sublime Text plugin
+https://packagecontrol.io/packages/rainbow_csv
+
+https://github.com/harelba/q
+http://harelba.github.io/q/
+	wget https://github.com/harelba/q/releases/download/2.0.19/q-text-as-data_2.0.19-2_amd64.deb
+	dpkg -i q-text-as-data_2.0.19-2_amd64.deb
+MacOS
+	brew install q
+Usage
+	q <flags> "<query>"

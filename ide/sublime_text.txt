@@ -1,3 +1,7 @@
+Sublime Text 4
+https://www.sublimetext.com/blog/articles/sublime-text-4
+https://news.ycombinator.com/item?id=27230042
+
 Config location
 Compare preferences with meld
 ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
@@ -10,12 +14,21 @@ you can also press ctrl + f to find and replace words.
 
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
-	https://www.sublimetext.com/3
-	wget https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
+https://www.sublimetext.com/
+	wget https://download.sublimetext.com/sublime_text_build_4107_x64.tar.xz
+	wget https://download.sublimetext.com/sublime_text_build_4107_x64.tar.xz.asc
+	gpg --verify sublime_text_build_4107_x64.tar.xz.asc
 
-	tar xf sublime_text_3_build_3211_x64.tar.bz2 -C /opt
-	ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl
-Deactivate analytics
+	tar xf sublime_text_build_4107_x64.tar.xz -C /opt
+	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+MacOS
+	wget https://download.sublimetext.com/sublime_text_build_4107_mac.zip
+	unzip https://download.sublimetext.com/sublime_text_build_4107_mac.zip -d /Applications
+
+Cache directory
+~/.cache
+MacOS
+~/Library/Caches
 
 https://www.sublimetext.com/docs/3/multiple_selection_with_the_keyboard.html
 
@@ -116,6 +129,8 @@ https://stackoverflow.com/questions/12866964/sublime-text-2-auto-fix-indentation
 jsFormat
 prettier.io
 JsPrettier
+rainbow_csv
+https://packagecontrol.io/packages/rainbow_csv
 
 # Build systems
 http://sublimetext.info/docs/en/reference/build_systems.html

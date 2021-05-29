@@ -10,3 +10,8 @@ import { Bones } from "react-bones/lib";
 
 React Native
 import { Bones } from "react-bones/native";
+
+SkeletonPlaceholder is a React Native library to easily create an amazing loading effect.
+https://github.com/chramos/react-native-skeleton-placeholder
+	yarn add @react-native-masked-view/masked-view
+	yarn add react-native-skeleton-placeholder

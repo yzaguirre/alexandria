@@ -1,0 +1,12 @@
+An open source remote desktop client software
+Paid server software
+https://rustdesk.com/
+https://github.com/rustdesk/rustdesk
+	wget https://github.com/rustdesk/rustdesk/releases/download/1.1.5/rustdesk-1.1.5.deb
+	sudo dpkg -i rustdesk-1.1.5.deb
+	sudo systemctl status rustdesk.service
+	sudo systemctl disable rustdesk.service
+	sudo systemctl stop rustdesk.service
+MacOS
+	wget https://github.com/rustdesk/rustdesk/releases/download/1.1.5/rustdesk-1.1.5.dmg
+	open rustdesk-1.1.5.dmg

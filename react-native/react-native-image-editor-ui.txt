@@ -1,0 +1,4 @@
+Crops images using minimal native dependencies
+https://github.com/rpander93/react-native-image-editor-ui
+https://github.com/rpander93/react-native-image-editor-ui/blob/master/assets/cropscreen_example.png
+https://www.reddit.com/r/reactnative/comments/nlkp67/published_reactnativeimageeditorui/

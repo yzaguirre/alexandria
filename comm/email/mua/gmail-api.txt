@@ -27,16 +27,6 @@ https://developers.google.com/gmail/api/v1/reference/users/messages/attachments/
 
 Send messages
 
-
-
-
-
-
-
-
-
-
-
 https://developers.google.com/gmail/api/guides/sending
 https://developers.google.com/gmail/api/v1/reference/users/messages/send
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/classGoogle_1_1Apis_1_1Gmail_1_1v1_1_1Data_1_1Message.html

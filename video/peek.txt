@@ -1,7 +1,28 @@
 https://github.com/phw/peek
-Combine with key-mon
+	apt install peek key-mon
+	peek
+Alt+Ctrl+R to start/stop record
+
+Combine with key-mon (need python 2)
 https://pypi.org/project/key-mon/
 https://code.google.com/p/key-mon
-	apt install peek key-mon
+https://askubuntu.com/questions/1236194/key-mon-on-lubuntu-20-04
+	sudo -H pip3 install key-mon
+	apt install python3-xlib
 	key-mon --visible_click
-	peek
+
+Combine with screenkey
+https://www.thregr.org/~wavexx/software/screenkey/
+https://gitlab.com/screenkey/screenkey
+	apt install screenkey slop
+	screenkey -g $(slop -n -f '%g')
+	screenkey -p fixed -g $(slop -n -f '%g')
+
+Combine with kmcaster
+https://github.com/DaveJarvis/kmcaster/
+
+Gifski gif encoder
+See ~/draw/gif.txt
+https://gif.ski/
+https://github.com/ImageOptim/gifski
+	cargo install gifski

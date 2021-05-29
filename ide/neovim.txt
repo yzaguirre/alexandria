@@ -1,6 +1,11 @@
 https://neovim.io
 https://github.com/neovim/neovim
 https://pragprog.com/book/modvim/modern-vim
+
+Neovim 0.5 Is Overpowering 
+https://crispgm.com/page/neovim-is-overpowering.html
+https://news.ycombinator.com/item?id=27291302
+
 Compile
 	wget https://github.com/neovim/neovim/archive/master.zip
 	apt-get install libtool-bin autoconf automake cmake libncurses5-dev g++

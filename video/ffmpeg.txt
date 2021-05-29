@@ -65,14 +65,14 @@ Very minimal FFmpeg installation:
 
 Trim video
 https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
+https://stackoverflow.com/questions/19774975/unknown-encoder-libfaac
 	ffmpeg -i "Path\do you want him.flv"        \
        -ss 00:00:05.240 -to 00:00:08.360    \
-       -vcodec libx264 -acodec libvo_aacenc \
+       -vcodec libx264 -acodec aac \
        "Path\Do you want him1.flv"
-	ffmpeg -i "Path\do you want him.flv" -ss 00:00:05.240 -to 00:00:08.360 -vcodec libx264 -acodec libvo_aacenc "Path\Do you want him1.flv"
+	ffmpeg -i "Path\do you want him.flv" -ss 00:00:05.240 -to 00:00:08.360 -vcodec libx264 -acodec aac "Path\Do you want him1.flv"
 https://sandilands.info/sgordon/multimedia-on-linux-command-line
 
-Change libvo_aacenc to libfaac
 
 Concat
 https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg

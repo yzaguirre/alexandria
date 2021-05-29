@@ -22,3 +22,7 @@ https://stackoverflow.com/questions/63522331/react-native-why-does-flatlist-re-r
 
 React Native Flat list with Animated Api | Data Fetching | with source code
 https://www.youtube.com/watch?v=obIBWgBCsAQ
+
+Lazy loading
+https://www.reddit.com/r/reactnative/comments/nkqk4m/rn_lazy_loading/
+https://levelup.gitconnected.com/react-native-firebase-cloud-firestore-implementing-infinite-scroll-lazy-loading-with-flatlist-a9e942cf66c6

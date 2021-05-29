@@ -25,3 +25,6 @@ Shortcut at ~/.local/share/applications/
 Windows
 	scoop bucket add extras
 	scoop install sqlitebrowser
+
+MacOS
+	brew install --cask db-browser-for-sqlite

@@ -1,3 +1,7 @@
 https://fifteen.ai/
 https://speech.microsoft.com/customvoice
 https://news.ycombinator.com/item?id=23490115
+
+Voice2json: Offline speech and intent recognition on Linux
+https://voice2json.org/
+https://news.ycombinator.com/item?id=27235970

@@ -1,7 +1,39 @@
+MacOS
+	Command+shift+5
 peek
+See ~/video/peek.txt
 https://github.com/phw/peek
+	apt install peek
 
-Screen Record
+https://webcamoid.github.io/
+https://github.com/webcamoid/webcamoid
+https://github.com/webcamoid/webcamoid/wiki
+https://stackoverflow.com/questions/38309120/ffmpeg-mov-to-mp4-error-could-not-write-header-for-output-file-0-incorrect-co#38309522
+	apt install webcamoid
+Portable
+	wget https://github.com/webcamoid/webcamoid/releases/download/8.8.0/webcamoid-portable-8.8.0-x86_64.tar.xz
+	wget https://github.com/webcamoid/webcamoid/releases/download/8.8.0/sha256sum.txt
+	sha256sum -c --ignore-missing sha256sum.txt
+	tar xf webcamoid-portable-8.8.0-x86_64.tar.xz -C /opt
+	ln -s /opt/webcamoid/webcamoid.sh /usr/local/bin/webcamoid
+MacOS
+https://www.lifewire.com/fix-developer-cannot-be-verified-error-5183898
+	brew install webcamoid
+	cd /Applications/webcamoid.app/Contents/MacOS/
+	open webcamoid
+x	ln -s /Applications/webcamoid.app/Contents/MacOS/webcamoid /usr/local/bin/webcamoid
+
+recordMyDesktop
+https://enselic.github.io/recordmydesktop/
+https://github.com/Enselic/recordmydesktop
+http://recordmydesktop.sourceforge.net/rug/toc.php
+	apt install recordmydesktop
+Get window id
+	xwininfo
+	xwininfo | awk '/Window id:/ {print $4}
+	recordmydesktop --windowid $(xwininfo | awk '/Window id:/ {print $4}')
+	recordmydesktop --windowid 0x7400016 --fps 24 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
+	recordmydesktop --windowid 0x7400016 -x 5 --width 575 --fps 24 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
 
 clear;recordmydesktop -x 0 -y 0 --width 800 --height 600 --follow-mouse --fps 15 --delay 3 --no-frame -o grabaciones/03_qt_.ogv
 
@@ -50,3 +82,11 @@ A list of compiled-in TV input drivers
 	mpv --tv=driver=help
 
 https://news.ycombinator.com/item?id=9753537
+
+https://gitlab.gnome.org/Archive/byzanz
+Grabar el escritorio en un gif con bizanz
+	apt install byzanz
+    byzanz-record -d 10 -x 0 -y 0 -w 1024 -h 768 ejemplo.GIF
+-d = El tiempo (en segundos) que deberá grabar. En el ejemplo son 10 segundos.
+-x -y = Las coordenanas a grabar. Poniendo 0 grabará todo el escritorio.
+-w y -h = Ancho y alto del GIF, debe ir acorde a la resolución de tu pantalla. 

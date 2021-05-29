@@ -1,0 +1,4 @@
+See ./rn-fetch-blob.txt
+Native filesystem access for react-native
+https://github.com/itinance/react-native-fs/
+	yarn add react-native-fs

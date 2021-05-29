@@ -1,3 +1,6 @@
+How to get started with audio programming?
+https://news.ycombinator.com/item?id=27273706
+
 PipeWire: The Linux audio/video bus
 https://lwn.net/SubscriberLink/847412/d7826b1353e33734/
 https://news.ycombinator.com/item?id=26327779

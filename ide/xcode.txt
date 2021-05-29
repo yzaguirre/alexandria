@@ -5,6 +5,9 @@ https://news.ycombinator.com/item?id=26932240
 Launch xcode as sudo for downloading files
 Xcode command line tools (macOS)
 	xcode-select --install
+After any xcode update
+https://kazucocoa.wordpress.com/2019/05/08/iosxcode-returns-authorization-error/
+	xcodebuild -runFirstLaunch
 https://developer.apple.com/forums/thread/75285
 	sudo /Applications/Xcode.app/Contents/MacOS/Xcode
 Open a project or workspace

@@ -58,3 +58,13 @@ Per-user config files, example:
 Android
 https://github.com/syncthing/syncthing-android
 https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid
+
+SystemD
+https://github.com/syncthing/syncthing/blob/main/etc/linux-systemd/system/syncthing%40.service
+	wget https://raw.githubusercontent.com/syncthing/syncthing/main/etc/linux-systemd/system/syncthing%40.service
+	sudo chown root: syncthing@.service
+	sudo mv syncthing@.service /etc/systemd/system
+	sudo systemctl daemon-reload
+	sudo systemctl status syncthing@david
+	suso systemctl enable syncthing@david
+	suso systemctl start syncthing@david

@@ -44,3 +44,13 @@ https://sourav-bz.medium.com/react-native-background-location-tracking-without-t
 
 Callout or infowindow
 https://stackoverflow.com/questions/52738421/custom-info-window-for-mapview
+
+Maximum number of Markers in a map
+https://groups.google.com/g/google-maps-js-api-v3/c/0AeNhGpdJoc
+https://stackoverflow.com/questions/6676979/is-there-a-limit-on-how-many-markers-i-can-put-on-a-google-maps-route
+https://stackoverflow.com/questions/17177390/is-there-any-limit-to-number-of-markers-that-can-be-placed-on-google-static-maps
+https://stackoverflow.com/questions/5413122/showing-many-markers-in-google-maps
+
+React Native map clustering both for Android and iOS.
+https://github.com/venits/react-native-map-clustering
+	yarn add react-native-map-clustering react-native-maps

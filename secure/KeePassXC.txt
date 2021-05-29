@@ -46,5 +46,12 @@ MacOS
 Homebrew
 	brew install --cask keepassxc
 CLI
-	keepassxc-cli list database.kdbx path
+	keepassxc-cli ls database.kdbx path
+	keepassxc-cli locate -k ~/mykey.key ~/mysafe.kdbx gmail
+	keepassxc-cli show ~/mysafe.kdbx "/Email/Gmail WORK"
 	keepassxc-cli generate
+Attachments
+https://github.com/keepassxreboot/keepassxc/pull/5538
+
+KeePassXC Browser Extension
+https://github.com/keepassxreboot/keepassxc-browser

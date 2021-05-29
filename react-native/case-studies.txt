@@ -76,3 +76,8 @@ https://www.reddit.com/r/reactnative/comments/nfzu5o/inside_the_packagejson_of_c
 https://twitter.com/jnybgr/status/1394570691421278208
 
 https://www.reddit.com/r/reactnative/comments/ngn5sw/i_developed_a_mental_health_related_app_using/
+
+https://play.google.com/store/apps/details?id=com.msbasketball
+https://www.reddit.com/r/reactnative/comments/nlah29/published_my_first_app/
+
+https://www.reddit.com/r/reactnative/comments/nl17ke/anyone_tried_making_anything_for_tvos_macos/

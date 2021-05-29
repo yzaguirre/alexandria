@@ -24,3 +24,7 @@ https://formidable.com/open-source/victory/docs/victory-pie#events
 https://formidable.com/open-source/victory/guides/events/
 https://github.com/FormidableLabs/victory-native/issues/96
 https://github.com/FormidableLabs/victory-native/issues/350
+
+https://formidable.com/open-source/victory/docs/faq/#my-axis-labels-are-cut-off-how-can-i-fix-them
+
+https://stackoverflow.com/questions/57890002/how-to-control-victory-x-axis-ticks-labels

@@ -209,6 +209,7 @@ http://owntracks.org/
 https://www.traccar.org/
 
 saas
+https://www.reddit.com/r/commandline/comments/ngip8f/im_tired_of_typing_command_line_at_work_so_i/
 firebase
 https://linear.app
 https://news.ycombinator.com/item?id=23693029

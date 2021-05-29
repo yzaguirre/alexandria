@@ -1,0 +1,4 @@
+Fast and easy multithreading for React Native using JSI
+https://github.com/mrousavy/react-native-multithreading
+	yarn add react-native-multithreading
+	npx pod-install

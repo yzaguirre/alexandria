@@ -1,6 +1,9 @@
 https://reactnative.dev/
 https://reactnative.directory/
 
+https://github.com/hayanisaid/React-Native-developer-roadmap
+https://www.reddit.com/r/reactnative/comments/nhzve4/reactnativedeveloperroadmap/
+
 A Guide to React Native Optimisation
 https://www.youtube.com/watch?v=NDe3kjHBIWY
 https://callstack.com/blog/download-the-ultimate-guide-to-react-native-optimization-ebook/

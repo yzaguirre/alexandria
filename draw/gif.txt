@@ -1,0 +1,20 @@
+Gifski gif encoder
+https://gif.ski/
+https://github.com/ImageOptim/gifski
+Install
+	wget https://github.com/ImageOptim/gifski/releases/download/1.4.0/gifski_1.4.0_amd64.deb
+	dpkg -i gifski_1.4.0_amd64.deb
+Termux
+	apt install gifski
+Rust
+	cargo install gifski
+MacOS
+	brew install gifski
+Export to png
+	ffmpeg -i video.webm frame%04d.png
+Make gif from the frames
+	gifski -o anim.gif frame*.png
+Resize frames (with -W <width in pixels> option)
+	gifski -W 50 -o anim.gif frame*.png
+Decode video directly
+	gifski -o out.gif video.mp4

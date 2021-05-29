@@ -1,1 +1,8 @@
 https://hybridheroes.de/blog/2021-03-25-formatjs/
+
+I18n-js
+https://i18njs.com/
+https://github.com/fnando/i18n-js
+
+https://react.i18next.com/
+https://github.com/i18next/react-i18next

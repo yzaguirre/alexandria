@@ -1,0 +1,52 @@
+https://videolan.org/vlc/download-debian.html
+https://www.taringa.net/posts/linux/17438046/Conociendo-a-fondo-VLC.html
+	apt install vlc
+MacOS
+https://www.videolan.org/vlc/download-macosx.html
+	wget https://get.videolan.org/vlc/3.0.14/macosx/vlc-3.0.14-intel64.dmg
+	wget https://get.videolan.org/vlc/3.0.14/macosx/vlc-3.0.14-intel64.dmg.asc
+	wget https://get.videolan.org/vlc/3.0.14/macosx/vlc-3.0.14-intel64.dmg.md5
+	wget https://get.videolan.org/vlc/3.0.14/macosx/vlc-3.0.14-intel64.dmg.sha1
+	wget https://get.videolan.org/vlc/3.0.14/macosx/vlc-3.0.14-intel64.dmg.sha256
+	md5sum -c --ignore-missing vlc-3.0.14-intel64.dmg.md5
+	sha1sum -c --ignore-missing vlc-3.0.14-intel64.dmg.sha1
+	sha256sum -c --ignore-missing vlc-3.0.14-intel64.dmg.sha256
+	gpg --verify vlc-3.0.14-intel64.dmg.asc
+	open vlc-3.0.14-intel64.dmg
+	ln -s /Applications/VLC.app/Contents/MacOS/VLC bin/vlc
+Homebrew
+	brew install vlc
+
+TUI mode
+	cvlc --extraintf ncurses
+	vlc -I ncurses --no-video
+
+Make alias
+	echo $'\nalias vlcplayer=\'cvlc --extraintf ncurses \'\n' >> ~/.bash_aliases
+
+https://wiki.videolan.org/Documentation:Modules/ncurses/
+https://www.videolan.org/doc/play-howto/en/ch04.html
+
+http
+https://wiki.videolan.org/Documentation:Alternative_Interfaces/
+	vlc -I http [--http-src /directory/] [--http-host host:port]
+	vlc -I http --http-password 555 --http-host cb64:8881 *mp3
+
+http://blog.desdelinux.net/como-controlar-vlc-desde-tu-android/
+https://play.google.com/store/apps/details?id=org.peterbaldwin.client.android.vlcremote&hl=es
+	vlc --extraintf=luahttp --fullscreen --qt-start-minimized
+	echo $'\nalias vlcandroid=\'vlc --extraintf=luahttp --fullscreen --qt-start-minimized\'\n' >> ~/.bash_aliases
+	vim ~/.config/vlc/vlcrc
+	vim /usr/share/vlc/lua/http/.hosts
+http://developers.coversal.com/projects/coversal/wiki/VLC
+	vim /etc/vlc/lua/http/.hosts # extinct in opensuse
+192.168.0.0/24
+10.42.0.0/24
+Port to open: 8080, 49152
+
+http://blog.desdelinux.net/como-convertir-videos-a-formato-webm-y-subirlos-a-youtube/
+
+Compile
+https://www.videolan.org/press/vlc-2.2.0.html
+ftp://ftp.videolan.org/pub/videolan/
+	wget http://www.gtlib.gatech.edu/pub/videolan/vlc/2.2.0/vlc-2.2.0.tar.xz

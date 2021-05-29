@@ -144,3 +144,8 @@ VS Code extension that allows you to record and playback guided tours
 of codebases, directly within the editor.
 https://github.com/microsoft/codetour
 https://news.ycombinator.com/item?id=26488610
+
+Mariana Pro
+Sublime Text theme
+https://github.com/n0rmand0/Mariana-Pro-color-theme
+https://marketplace.visualstudio.com/items?itemName=rickynormandeau.mariana-pro

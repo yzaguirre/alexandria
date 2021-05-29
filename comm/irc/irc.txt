@@ -1,3 +1,16 @@
+An open letter from Atheme's developers and community
+https://atheme.github.io/atheme-open-letter/
+https://news.ycombinator.com/item?id=27290420
+
+Upheaval at freenode
+https://lwn.net/Articles/857252/
+https://news.ycombinator.com/item?id=27289071
+
+Gentoo Freenode channels have been hijacked
+https://www.gentoo.org/news/2021/05/26/gentoo-freenode-channels-hijacked.html
+https://news.ycombinator.com/item?id=27287750
+https://news.ycombinator.com/item?id=27288630
+
 Freenode now belongs to Andrew Lee, and I'm leaving for a new network
 https://news.ycombinator.com/item?id=27207440
 Welcome to Libera Chat 
@@ -5,6 +18,9 @@ https://libera.chat/news/welcome-to-libera-chat
 https://news.ycombinator.com/item?id=27207734
 
 You can connect to the new network at `irc.libera.chat`, ssl port 6697 (and the usual clearnet port).
+
+OFTC
+https://www.oftc.net/
 
 irc.mozilla.org
 6697
