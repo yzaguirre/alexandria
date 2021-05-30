@@ -1,0 +1,2 @@
+How to enable self-signed certificates for WebSockets
+https://blog.marcon.me/post/24874118286/secure-websockets-safari

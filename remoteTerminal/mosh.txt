@@ -1,4 +1,6 @@
+https://mosh.org/
 http://mosh.mit.edu/
+https://github.com/mobile-shell/mosh
 https://github.com/keithw/mosh
 	apt-get install protobuf-compiler protobuf-c-compiler libncursesw5-dev
 https://en.wikipedia.org/wiki/Mosh_%28software%29

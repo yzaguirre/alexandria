@@ -68,3 +68,9 @@ https://muhammadraza.me/2021/Oneliners/
 https://news.ycombinator.com/item?id=27023572
 https://www.techjunkie.com/make-your-mac-talk-say-command/
 	say -v Karen -f /Users/Tanous/Desktop/text.txt
+
+Launchd and Agents
+https://github.com/tjluoma/launchd-keepalive
+~/Library/LaunchAgents
+	launchctl load ~/Library/LaunchAgents/syncthing.plist
+	launchctl unload ~/Library/LaunchAgents/syncthing.plist

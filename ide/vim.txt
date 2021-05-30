@@ -200,3 +200,7 @@ Anything you do will be played back.
 
 VimRC 2021 (Jan): How to setup your Vim RC
 https://www.youtube.com/watch?v=DogKdiRx7ls
+
+Auto indent
+https://linuxdigest.com/howto/how-to-autoindent-in-vim/
+:set noautoindent

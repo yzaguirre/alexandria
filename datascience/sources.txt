@@ -1,3 +1,15 @@
 https://www.gdeltproject.org/
 https://en.wikipedia.org/wiki/GDELT_Project
 https://news.ycombinator.com/item?id=24846335
+
+Collection of public datasets packaged as SQLite databases
+http://2016.padjo.org/tutorials/sqlite-data-starterpacks/
+https://news.ycombinator.com/item?id=27324669
+
+https://datasette.io/examples
+
+https://github.com/collections/open-data
+
+Awesome datasets curated. By topic and for core data
+https://datahub.io/docs/core-data
+https://github.com/datasets/awesome-data

@@ -13,3 +13,15 @@ Install from a dump
 	brew bundle --file ~/Brewfile
 or move to the directory first
 	brew bundle
+
+Edit formulae
+https://stackoverflow.com/questions/3939651/how-do-i-modify-a-homebrew-formula
+Set up editor
+	export HOMEBREW_EDITOR=vim
+Remove the existing version
+	brew rm imagemagick
+Edit the formula
+	brew edit imagemagick
+
+Remove cache
+	brew --cache

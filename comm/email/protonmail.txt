@@ -4,3 +4,7 @@ https://news.ycombinator.com/item?id=17610127
 hkps://api.protonmail.ch
 Grab a key
 	wget -O this_key.asc "https://api.protonmail.ch/pks/lookup?op=get&search=username@protonmail.com"
+
+ProtonMail includes Google Recaptcha for Login, every single time
+https://github.com/ProtonMail/WebClient/issues/242
+https://news.ycombinator.com/item?id=27326243

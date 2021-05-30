@@ -1,8 +1,15 @@
-https://github.com/TankerHQ/ruplacer
-	wget https://github.com/TankerHQ/ruplacer/releases/download/v0.3.0/ruplacer_0.3.0_amd64.deb
-	sudo dpkg -i ruplacer_0.3.0_amd64.deb
+https://github.com/dmerejkowsky/ruplacer
+.deb installer not available form https://github.com/TankerHQ/ruplacer
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.0/ruplacer-linux
+	chmod u+x ruplacer-linux
+	mv ruplacer-linux /usr/local/bin/ruplacer
 MacOS
-	brew install TankerHQ/homebrew-repo/ruplacer
+Use formula
+	brew install yzaguirre/homebrew-repo/ruplacer
+	export HOMEBREW_EDITOR=vim
+	brew edit yzaguirre/repo/ruplacer
+See https://github.com/yzaguirre/homebrew-repo/commit/863190eec331269645a1ca4e1ea21198d58e3b23
+	brew install yzaguirre/repo/ruplacer
 
 Replace 'LastName, FirstName' with 'FirstName LastName'
 	ruplacer '(\w)+, (\w)+' '$2 $1'

@@ -1,0 +1,43 @@
+https://www.tecmint.com/remove-unwanted-services-from-linux/
+Red Hat
+	chkconfig httpd off
+	chkconfig httpd --del
+debian/crunchbang
+	sudo update-rc.d -f apache2 remove
+	sudo update-rc.d -f mysql remove
+	sudo update-rc.d -f gdm3 remove
+	sudo dpkg-reconfigure gdm3
+fedora
+sudo chkconfig postgresql-9.2 off
+
+vga=788
+http://pierre.baudu.in/other/grub.vga.modes.html
+http://www.pendrivelinux.com/vga-boot-modes-to-set-screen-resolution/
+
+http://followthegeeks.com/how-to-mount-partitions-through-the-terminal/
+mount ntfs automatically 
+	sudo fdisk -l
+	cd /media
+	sudo mkdir C
+	sudo mount -t ntfs dev/sdaN /media/C
+
+https://help.ubuntu.com/community/Fstab
+To list your devices by UUID use blkid
+	blkid
+	mkdir /media/3AB6DF05B6DEC115
+este no /dev/sda2 /media/3AB6DF05B6DEC115 ntfs-3g defaults,locale=es_GT.utf8 0 0
+basado en http://www.osopinion.com/f35/mount-ntfs-volume-boot-grant-access-normal-users-138/
+/dev/sda2 /media/3AB6DF05B6DEC115 ntfs-3g auto,users,ro,umask=0222,locale=es_GT.utf8 0 0
+
+este es otro http://forum.vectorlinux.com/index.php?topic=3127.0
+https://wiki.archlinux.org/index.php/NTFS-3G_(Espa%C3%B1ol)#Editar_fstab
+	id -u david
+/dev/sda1  /mnt/windows  ntfs-3g  users,noauto,gid=users,umask=0022  0 0
+/dev/sda5  /mnt/backup   ntfs-3g  users,uid=1000,gid=users,umask=0022        0 0
+
+segun http://articles.slicehost.com/2010/7/17/umask-and-unusual-file-permissions-and-types
+/dev/sda2 /media/3AB6DF05B6DEC115 ntfs-3g auto,users,uid=1000,gid=1000,rw,umask=0077,locale=es_GT.utf8 0 0
+	sudo mkdir /media/3AB6DF05B6DEC115
+	sudo chown david:david /media/3AB6DF05B6DEC115
+tutorial umask http://linuxzoo.net/page/sec_umask.html
+this is another one http://linuxexpresso.wordpress.com/2010/03/14/mount-partitions-in-terminal-fstab/

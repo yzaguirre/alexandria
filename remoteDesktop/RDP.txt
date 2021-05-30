@@ -36,7 +36,7 @@ http://xrdp.org/
 xrdp utiliza el protocolo RDP para presentar un logeo gráfico a un cliente remoto.
 	apt install xrdp
 Remover su autoarranque
-	# update-rc.d -f xrdp remove
+	sudo systemctl disable xrdp
 Puede conectarse a un servidor VNC u otro servidor RDP
 Clientes Windows pueden conectarse a un sistema con xrdp sin instalar software adicional
 	wget https://github.com/neutrinolabs/xrdp/releases/download/v0.9.15/xrdp-0.9.15.tar.gz

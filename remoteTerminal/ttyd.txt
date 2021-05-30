@@ -1,0 +1,38 @@
+Share your terminal over the web
+https://tsl0922.github.io/ttyd
+https://github.com/tsl0922/ttyd
+	apt install ttyd libev4
+	sudo systemctl status ttyd.service
+	sudo systemctl stop ttyd.service
+	sudo systemctl disable ttyd.service
+Termux
+	apt install ttyd libwebsockets json-c libuv
+Homebrew
+	brew install ttyd
+Website at
+127.0.0.1:7681
+
+Usage
+https://github.com/tsl0922/ttyd/wiki/Example-Usage
+https://github.com/tsl0922/ttyd/wiki/Client-Options
+	ttyd -p 8080 bash
+	ttyd -p 8080 vim
+Visit http://localhost:8080/
+
+Sharing single process with multiple clients:
+	ttyd tmux new -A -s ttyd vim
+To connect to the tmux session from terminal:
+	ttyd tmux new -A -s ttyd
+
+TLS
+https://github.com/tsl0922/ttyd/wiki/SSL-Usage
+See ~/tls/tls.txt
+	ttyd --ssl --ssl-cert server.crt --ssl-key server.key --ssl-ca ca.crt bash
+
+Lets Encrypt
+https://github.com/tsl0922/ttyd/wiki/Let's-Encrypt
+	certbot certonly -d <your domain>
+	ttyd --ssl --ssl-cert /etc/letsencrypt/live/<your domain>/fullchain.pem --ssl-key /etc/letsencrypt/live/<your domain>/privkey.pem <command>
+	
+Chromium
+	chromium --app=https://www.example.com/ttyd

@@ -7,6 +7,7 @@ https://github.com/syncthing/syncthing
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/syncthing-linux-arm-v1.16.1.tar.gz
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/syncthing-windows-amd64-v1.16.1.zip
 	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/syncthing-macos-universal-v1.16.1.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.16.1/syncthing-macos-amd64-v1.16.1.zip
 Verify
 https://syncthing.net/security.html
 Release binaries are signed with key D26E6ED000654A3E
@@ -26,10 +27,20 @@ Install raspberry pi
 	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
 Debian repo
 http://apt.syncthing.net/
-	curl -s https://syncthing.net/release-key.txt | apt-key add -
-	echo "deb http://apt.syncthing.net/ syncthing release" >> /etc/apt/sources.list.d/syncthing.list
+	sudo apt install apt-transport-https
+	sudo curl -s -o /usr/share/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
+	echo "deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+	printf "Package: *\nPin: origin apt.syncthing.net\nPin-Priority: 990\n" | sudo tee /etc/apt/preferences.d/syncthing
 	apt update
 	apt install syncthing
+Edit user systemd service
+	vim /usr/lib/systemd/user/syncthing.service
+	vim /usr/lib/systemd/system/syncthing@.service
+Start service
+	systemctl daemon-reload
+	systemctl start syncthing@david.service
+	systemctl status syncthing@david.service
+
 Config at
 ~/.config/syncthing/config.xml
 Install MacOS
@@ -43,6 +54,19 @@ https://forum.syncthing.net/t/keeping-syncthing-running-mac-os-x-launchdaemon/40
 	launchctl unload ~/Library/LaunchAgents/syncthing.plist
 Start syncthing
 	launchctl load ~/Library/LaunchAgents/syncthing.plist
+Replace KeepAlive like the following:
+		<key>KeepAlive</key>
+		<dict>
+			<key>SuccessfulExit</key>
+			<false/>
+		</dict>
+Homebrew
+NOTE: More control with manual install method
+	brew install syncthing
+To have launchd start syncthing now and restart at login:
+	brew services start syncthing
+Or, if you don't want/need a background service you can just run:
+  syncthing
 
 F-Droid
 https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid

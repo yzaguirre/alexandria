@@ -85,3 +85,7 @@ aspx:*.aspx
 vbproj:*.vbproj
 aspx:*.aspx
 aspxvb:*.aspx.vb
+
+Finding CSV files that start with a BOM using ripgrep
+https://til.simonwillison.net/bash/finding-bom-csv-files-with-ripgrep
+https://news.ycombinator.com/item?id=27324265
