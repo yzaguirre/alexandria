@@ -1,6 +1,10 @@
 https://reactnative.dev/
 https://reactnative.directory/
 
+Wireless adb
+https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
+https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
+
 https://github.com/hayanisaid/React-Native-developer-roadmap
 https://www.reddit.com/r/reactnative/comments/nhzve4/reactnativedeveloperroadmap/
 
@@ -346,6 +350,8 @@ https://github.com/Agontuk/react-native-geolocation-service
 https://www.obytes.com/blog/how-to-structure-a-react-native-project
 	npx react-native init MyApp --template https://github.com/obytes/react-native-template-obytes
 	see ~/code/react-native/AuthRN
+https://www.reddit.com/r/reactjs/comments/femz4f/folder_structure_best_practice/
+https://www.reddit.com/r/reactnative/comments/np00kv/sharing_the_structure_of_my_inproduction_app/
 
 Security
 https://www.obytes.com/blog/authentication-in-react-native-easy-secure-and-reusable-solution
@@ -398,3 +404,6 @@ Upgrading to 0.64
 https://www.reddit.com/r/reactnative/comments/mueez9/is_rn_064_bugged_in_react_navigation/
 https://github.com/react-navigation/react-navigation/issues/9426
 https://github.com/react-native-community/upgrade-support/issues/138
+xcode issues
+https://www.reddit.com/r/reactnative/comments/no6uem/react_native_versions/
+https://github.com/facebook/react-native/releases

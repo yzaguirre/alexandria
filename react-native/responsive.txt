@@ -4,3 +4,7 @@ https://www.reddit.com/r/reactnative/comments/n1b0rn/how_to_make_apps_responsive
 Responsive Layout Design and fonts. React Native Size Matters.#52
 https://www.youtube.com/watch?v=513szMcIqAw
 https://www.reddit.com/r/reactnative/comments/nae7e7/iosandroid_responsive/
+
+https://github.com/idibidiart/react-native-responsive-grid
+Bringing the Web's Responsive Design to React Native
+	yarn add react-native-responsive-grid

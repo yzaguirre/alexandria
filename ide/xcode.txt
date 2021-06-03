@@ -62,3 +62,6 @@ xcodebuild archive
 		-scheme TestBuildAppDebug
 		-archivePath Archive/TestBuildApp.xcarchive
 xcodebuild -exportArchive -archivePath Archive/TestBuidApp.xcarchive -exportPath Output -exportOptionsPlist TestBuildApp/Config/export.plist
+
+Install and update your Xcodes
+https://github.com/xcpretty/xcode-install

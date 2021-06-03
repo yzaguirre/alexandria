@@ -1,0 +1,5 @@
+https://www.veracrypt.fr/en/Home.html
+Homebrew
+	brew install veracrypt
+Dependencies
+	macfuse

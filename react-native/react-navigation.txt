@@ -52,3 +52,6 @@ function Albums() {
 
   return <ScrollView ref={ref}>{/* content */}</ScrollView>;
 }
+
+Custom header
+https://reactnavigation.org/docs/header-buttons/#adding-a-button-to-the-header

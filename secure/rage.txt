@@ -1,0 +1,11 @@
+A simple file encryption tool & format
+rage: Rust implementation of age
+https://age-encryption.org/v1
+https://github.com/str4d/rage
+	wget https://github.com/str4d/rage/releases/download/v0.6.0/rage_0.6.0_amd64.deb
+	dpkg -i rage_0.6.0_amd64.deb
+Rust
+	cargo install rage
+Homebrew
+	brew tap str4d.xyz/rage https://str4d.xyz/rage
+	brew install rage

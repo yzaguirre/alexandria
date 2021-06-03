@@ -1,3 +1,7 @@
 PostGIS - Spatial and Geographic Objects for PostgreSQL
 https://postgis.net
 https://news.ycombinator.com/item?id=26686926
+
+PostGIS at 20, the Beginning
+http://blog.cleverelephant.ca/2021/05/postgis-20-years.html
+https://news.ycombinator.com/item?id=27344639

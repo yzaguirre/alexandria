@@ -1,0 +1,6 @@
+Cydia is an alternative to Apple's App Store for "jailbroken" devices,
+at this time including iPhones, iPads, and iPod Touches,
+specializing in the distribution of all that is not an "app".
+https://cydia.saurik.com/
+https://gitlab.com/opensource-saurik/cydia
+http://www.saurik.com/id/1

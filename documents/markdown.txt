@@ -1,3 +1,5 @@
+See ~/documents/grip.txt
+
 http://www.tablesgenerator.com/markdown_tables#
 https://help.github.com/articles/markdown-basics
 https://help.github.com/articles/github-flavored-markdown

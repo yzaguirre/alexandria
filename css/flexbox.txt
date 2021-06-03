@@ -2,3 +2,10 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 https://www.reddit.com/r/webdev/comments/lhtdqq/master_flexbox_2021_build_5_responsive_layouts/
 Master Flexbox 2021 🔥 - Build 5 Responsive Layouts 🎖️ || CSS 2021
 https://www.youtube.com/watch?v=m8BSEUUB5so
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
+https://css-tricks.com/making-width-and-flexible-items-play-nice-together/
+Making width and flexible items play nice together
+The short answer: flex-shrink and flex-basis are probably what you're lookin' for.
+
+https://flexboxfroggy.com/

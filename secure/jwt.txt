@@ -78,3 +78,7 @@ OAuth 2.0 - Refresh Token
 https://www.youtube.com/watch?v=3Po7SOF9jkA
 JWT - JSON Web Token Crash Course (NodeJS & Postgres)
 https://www.youtube.com/watch?v=T0k-3Ze4NLo
+
+Digging into Quebec's electronic proof of vaccination
+https://mikkel.ca/blog/digging-into-quebecs-proof-of-vaccination/
+https://news.ycombinator.com/item?id=27354815

@@ -3,6 +3,11 @@ http://jordi.inversethought.com/blog/advent-of-d/
 https://news.ycombinator.com/item?id=16562456
 Folders
 	~/.dub
+
+Driving with D
+https://dlang.org/blog/2021/06/01/driving-with-d/
+https://news.ycombinator.com/item?id=27354761
+
 Compiler
 https://dlang.org/download.html
 	wget https://dlang.org/dlangspec.pdf

@@ -2,3 +2,10 @@ https://uxtools.co/challenges/
 https://news.ycombinator.com/item?id=26710548
 
 https://www.reddit.com/r/webdev/comments/ncmxer/ive_been_tweeting_one_uiux_lesson_every_day_for/
+
+Google Pay UX
+https://twitter.com/bradfitz/status/1399888721332170755
+
+Firefox Release 89.0
+https://www.mozilla.org/en-US/firefox/89.0/releasenotes/
+https://news.ycombinator.com/item?id=27353684

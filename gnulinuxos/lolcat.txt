@@ -1,1 +1,8 @@
+https://github.com/busyloop/lolcat
+https://twitter.com/bobbybobson4888/status/1399249162420559872
+	apt install lolcat
+Homebrew
+	brew install lolcat cowsay fortune
+Usage
 	git status | cowsay | lolcat
+	fortune | cowsay | lolcat

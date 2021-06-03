@@ -1,0 +1,75 @@
+get things from one computer to another, safely
+https://github.com/magic-wormhole/magic-wormhole
+https://magic-wormhole.readthedocs.io/en/latest/
+https://magic-wormhole.readthedocs.io/en/latest/welcome.html#installation
+	apt install magic-wormhole
+Installs
+cython3 geoip-database libgeoip1 python3-attr python3-autobahn python3-automat python3-cbor python3-constantly python3-geoip python3-hamcrest python3-hkdf
+python3-humanize python3-hyperlink python3-incremental python3-lz4 python3-openssl python3-png python3-pyasn1 python3-pyasn1-modules python3-pyqrcode
+python3-service-identity python3-snappy python3-spake2 python3-tqdm python3-trie python3-twisted python3-twisted-bin python3-txaio python3-txtorcon
+python3-u-msgpack python3-ubjson python3-wsaccel python3-zope.interface
+Termux
+Not recommended, use wormhole-william
+	apt install rust
+	pip install magic-wormhole
+Homebrew
+	brew install magic-wormhole
+Usage
+	wormhole send [args] --text TEXT
+	wormhole send [args] FILENAME
+	wormhole send [args] DIRNAME
+	wormhole receive [args]
+Both commands accept additional arguments to influence their behavior:
+	--code-length WORDS: use more or fewer than 2 words for the code
+	--verify : print (and ask user to compare) extra verification string
+
+wormhole-william
+https://github.com/psanford/wormhole-william
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-amd64
+	chmod u+x wormhole-william-linux-amd64
+	mkdir /opt/wormhole-william/
+	mv wormhole-william-linux-amd64 /opt/wormhole-william/
+	ln -s /opt/wormhole-william/wormhole-william-linux-amd64 /usr/local/bin/wormhole-william
+Termux
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-arm64
+	chmod u+x wormhole-william-linux-arm64
+	mv wormhole-william-linux-arm64 /data/data/com.termux/files/usr/bin/wormhole-william
+Raspberry Pi
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-arm6
+	chmod u+x wormhole-william-linux-arm6
+	mkdir /opt/wormhole-william/
+	mv wormhole-william-linux-arm6 /opt/wormhole-william/
+	ln -s /opt/wormhole-william/wormhole-william-linux-arm6 /usr/local/bin/wormhole-william
+MacOS
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-darwin-amd64
+	chmod u+x wormhole-william-darwin-amd64
+	mv wormhole-william-darwin-amd64 ~/bin/wormhole-william
+
+mobile-wormhole
+mobile client for the magic wormhole protocol
+https://github.com/pavelsof/mobile-wormhole
+
+wormhole-william-mobile
+End-to-end encrypted file transfer for Android. An Android Magic Wormhole client.
+https://github.com/psanford/wormhole-william-mobile
+Termux
+	wget https://github.com/psanford/wormhole-william-mobile/releases/download/v1.0.3/wormhole-william.release.apk
+	xdg-open wormhole-william.release.apk
+x	apk install wormhole-william.release.apk
+or	adb install wormhole-william.release.apk
+
+Wormhole-Gui
+Cross-platform application for easy encrypted sharing of files,
+folders, and text between devices.
+https://github.com/Jacalz/wormhole-gui
+https://news.ycombinator.com/item?id=26465854
+	mkdir tmp && cd tmp
+	wget https://github.com/Jacalz/wormhole-gui/releases/download/v2.2.2/wormhole-gui-v2.2.2-linux-amd64.tar.gz
+	tar xf wormhole-gui-v2.2.2-linux-amd64.tar.gz
+	sudo make install
+Uninstall
+	sudo make uninstall
+MacOS
+	wget https://github.com/Jacalz/wormhole-gui/releases/download/v2.2.2/wormhole-gui-v2.2.2-darwin-amd64.zip
+	unzip wormhole-gui-v2.2.2-darwin-amd64.zip -d /Applications
+	ln -s /Applications/wormhole-gui.app/Contents/MacOS/wormhole-gui /usr/local/bin/wormhole-gui

@@ -1,0 +1,17 @@
+https://github.com/Fushko/gammy
+	sudo apt install build-essential libgl1-mesa-dev libxxf86vm-dev libxext-dev qt5-qmake qtbase5-dev # qt5-default
+	git clone https://github.com/Fushko/gammy.git
+	cd gammy
+	qmake
+	make
+	sudo make install
+/usr/lib/qt5/bin/qmake -install qinstall -exe gammy /usr/bin/gammy
+/usr/lib/qt5/bin/qmake -install qinstall /mnt/memo/gammy/data/gammy.desktop /usr/share/applications/gammy.desktop
+/usr/lib/qt5/bin/qmake -install qinstall /mnt/memo/gammy/data/icons/gammy.png /usr/share/pixmaps/gammy.png
+
+Uninstall
+	sudo make uninstall
+On GNOME, the Qt5 Configuration Tool is recommended to improve UI integration:
+	sudo apt install qt5ct
+Configuration file
+~/.config/gammyconf

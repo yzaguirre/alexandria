@@ -22,3 +22,10 @@ Check out list at http://wiki.cacert.org/PdfSigning
 CAcert PDF Signer
 Command-line tool only for Linux, OSX, and Windows
 http://svn.cacert.org/CAcert/Software/PdfSigner/
+
+Sign a PDF document client-side with no data leaving the computer
+https://observablehq.com/@tomlarkworthy/sign-a-pdf
+https://news.ycombinator.com/item?id=27344069
+Adobe allows super-imposing an image of your signature on a PDF.
+You can also do this using Mac Preview, see Tools > Annotate > Signature
+https://support.apple.com/en-gb/guide/preview/prvw35725/mac

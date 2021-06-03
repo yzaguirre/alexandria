@@ -1,6 +1,6 @@
 https://youtube-dl.org/
-https://rg3.github.io/youtube-dl/
-https://github.com/rg3/youtube-dl
+https://ytdl-org.github.io/youtube-dl 
+https://github.com/ytdl-org/youtube-dl
 https://pypi.org/project/youtube_dl/
 
 Origins of the youtube-dl project
@@ -59,3 +59,7 @@ https://github.com/JannikHv/gydl
 	git clone https://github.com/JannikHv/gydl.git
 	chmod u+x /opt/gydl/src/gydl.py
 	ln -s /opt/gydl/src/gydl.py /usr/local/bin/gydl
+
+YouTube-dl can no longer download age-restricted videos
+https://github.com/ytdl-org/youtube-dl/issues/28578
+https://news.ycombinator.com/item?id=27353917

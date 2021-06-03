@@ -1,0 +1,8 @@
+NOTE: has not been tested at all
+https://salad.com/
+The Salad desktop and web applications
+https://github.com/SaladTechnologies/salad-applications
+Salad CLI+
+Salad CLI+ uses your AUTH code to view your balance, lifetime balance,
+xp and referral code using the Salad API. Devs can not see your code.
+https://github.com/WalkxCode/SaladCLI_Plus

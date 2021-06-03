@@ -26,11 +26,16 @@ Download .deb
 	wget http://packages.linuxmint.com/pool/upstream/c/chromium/chromium_90.0.4430.93~linuxmint1%2bdebbie_amd64.deb -O chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 
-	
-
 https://askubuntu.com/questions/1184357/why-cant-chromium-suddenly-access-any-partition-except-for-home
 If installed with snap
 	snap connect chromium:removable-media
+
+Screenshots
+https://swimburger.net/blog/web/hidden-gem-take-screenshots-using-built-in-commands-in-chrome-edge
+https://blog.browsernative.com/full-page-screenshots-chrome-and-edge-browsers-5111/
+Take screenshots using built-in commands in Chrome/Edge (Chromium)
+https://www.youtube.com/watch?v=E7l-uCAUFEo
+https://www.howtogeek.com/423558/how-to-take-full-page-screenshots-in-google-chrome-without-using-an-extension/
 
 AskHN: How much is Chrome and how much is Chromium?
 https://news.ycombinator.com/item?id=26570511

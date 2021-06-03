@@ -90,5 +90,5 @@ https://github.com/syncthing/syncthing/blob/main/etc/linux-systemd/system/syncth
 	sudo mv syncthing@.service /etc/systemd/system
 	sudo systemctl daemon-reload
 	sudo systemctl status syncthing@david
-	suso systemctl enable syncthing@david
-	suso systemctl start syncthing@david
+	sudo systemctl enable syncthing@david
+	sudo systemctl start syncthing@david

@@ -1,0 +1,11 @@
+Open-source e-paper development board
+paperd.ink is a 4.2" e-paper display coupled with an ESP32 microcontroller.
+It's open-source, fully hackable and all the PCB and 3D printing files
+are available on our Github repo.
+It's low power so you can run it for a month on a single charge.
+Update wirelessly using WiFi, Bluetooth.
+Display your calendar, to-do list, weather, custom images, whatever you want.
+Code using micropython, Arduino, or ESP-IDF.
+https://paperd.ink/
+https://www.indiegogo.com/projects/paperd-ink--2#/
+https://news.ycombinator.com/item?id=27331311

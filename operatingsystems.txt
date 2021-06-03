@@ -1,3 +1,7 @@
 https://s-matyukevich.github.io/raspberry-pi-os/
 https://www.arm.com/resources/education/books/operating-systems
 https://news.ycombinator.com/item?id=23611081
+
+http://www.brendangregg.com/blog/2020-07-15/systems-performance-2nd-edition.html
+http://www.brendangregg.com/systems-performance-2nd-edition-book.html
+https://news.ycombinator.com/item?id=27350049

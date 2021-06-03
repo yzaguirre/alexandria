@@ -1,0 +1,5 @@
+A size-optimized, customizable full-scale 32-bit RISC-V soft-core CPU
+and SoC written in platform-independent VHDL.
+Open-source soft-core RISC-V SoC with gdb support.
+https://github.com/stnolting/neorv32
+https://news.ycombinator.com/item?id=27343948

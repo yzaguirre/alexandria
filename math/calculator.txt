@@ -1,0 +1,1 @@
+See ~/ide/notecalc.txt ~/math/bc.txt ~/math/kalk.txt

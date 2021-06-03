@@ -1,0 +1,10 @@
+A desktop app for inspecting your React JS and React Native projects
+https://infinite.red/reactotron
+https://github.com/infinitered/reactotron
+	wget https://github.com/infinitered/reactotron/releases/download/v2.17.1/reactotron-app_2.17.1_amd64.deb
+	dpkg -i reactotron-app_2.17.1_amd64.deb
+Homebrew
+	brew install reactotron
+
+Add to dev dependencies
+	yarn add --save-dev reactotron-react-native

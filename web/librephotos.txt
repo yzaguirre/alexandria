@@ -1,0 +1,2 @@
+A self-hosted open source photo management service
+https://github.com/LibrePhotos/librephotos

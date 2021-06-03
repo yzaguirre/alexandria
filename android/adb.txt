@@ -91,3 +91,20 @@ https://stackoverflow.com/questions/39297951/adb-logcat-filter-by-package-name
 Open deep-link URLs
 https://varunbarad.com/blog/testing-deep-link-urls-using-adb
 	adb shell am start -a android.intent.action.VIEW -d "https://varunbarad.com/blog"
+
+Screenshots
+https://developer.android.com/studio/command-line/adb#screencap
+https://medium.com/mobile-app-development-publication/capture-picture-and-record-video-using-adb-5f4c582acb3c
+	adb shell screencap /storage/emulated/0/DCIM/Screenshots/filename.png
+	adb shell screencap -p > myfile.jpg
+	alias capture="adb shell screencap -p > $@"
+	capture myfile.jpg
+
+Record Screen
+https://developer.android.com/studio/command-line/adb#screenrecord
+https://adbshell.com/commands/adb-shell-screenrecord
+https://stackoverflow.com/questions/28217333/how-to-record-android-devices-screen-on-android-version-below-4-4-kitkat
+https://programmer.group/adb-screen-capture-and-recording-commands.html
+	adb shell screenrecord /mnt/sdcard/Download/test.mp4
+	adb shell screenrecord /storage/emulated/0/DCIM/Screenshots/filename.mp4
+	adb pull /sdcard/DCIM/Screenshots/filename.mp4

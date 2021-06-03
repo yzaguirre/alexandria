@@ -1,0 +1,8 @@
+Age: A simple, modern and secure file encryption tool
+https://github.com/FiloSottile/age
+https://news.ycombinator.com/item?id=21895671
+https://age-encryption.org/v1
+	apt install age
+Homebrew
+	brew tap filippo.io/age https://filippo.io/age
+	brew install age

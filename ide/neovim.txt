@@ -17,6 +17,9 @@ https://media.pragprog.com/titles/modvim/intro.pdf
 Install
 	apt install neovim
 	nvim
+Homebrew
+	brew install neovim
+
 https://media.pragprog.com/titles/modvim/switch.pdf
 	vim ~/.bash_aliases
 alias vim=nvim
