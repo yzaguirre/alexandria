@@ -82,3 +82,6 @@ https://www.youtube.com/watch?v=T0k-3Ze4NLo
 Digging into Quebec's electronic proof of vaccination
 https://mikkel.ca/blog/digging-into-quebecs-proof-of-vaccination/
 https://news.ycombinator.com/item?id=27354815
+
+https://cyberpolygon.com/materials/security-of-json-web-tokens-jwt/
+https://www.reddit.com/r/webdev/comments/nrb807/session_management/

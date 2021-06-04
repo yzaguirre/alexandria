@@ -24,7 +24,7 @@ https://www.lifewire.com/fix-developer-cannot-be-verified-error-5183898
 x	ln -s /Applications/webcamoid.app/Contents/MacOS/webcamoid /usr/local/bin/webcamoid
 
 recordMyDesktop
-https://enselic.github.io/recordmydesktop/
+https://enselic.github.io/recordmydesktop
 https://github.com/Enselic/recordmydesktop
 http://recordmydesktop.sourceforge.net/rug/toc.php
 	apt install recordmydesktop
@@ -85,8 +85,16 @@ https://news.ycombinator.com/item?id=9753537
 
 https://gitlab.gnome.org/Archive/byzanz
 Grabar el escritorio en un gif con bizanz
+https://seegatesite.com/how-to-record-screen-with-gif-format-on-ubuntu/
 	apt install byzanz
     byzanz-record -d 10 -x 0 -y 0 -w 1024 -h 768 ejemplo.GIF
+    byzanz-record --duration=25 --x=300 --y=300 --width=600 --height=400 your-gif-name.gif
 -d = El tiempo (en segundos) que deberá grabar. En el ejemplo son 10 segundos.
 -x -y = Las coordenanas a grabar. Poniendo 0 grabará todo el escritorio.
 -w y -h = Ancho y alto del GIF, debe ir acorde a la resolución de tu pantalla. 
+Combine with xwininfo
+
+https://www.screentogif.com/
+https://github.com/NickeManarin/ScreenToGif
+	wget https://github.com/NickeManarin/ScreenToGif/releases/download/2.31/ScreenToGif.2.31.Setup.msi
+	explorer ScreenToGif.2.31.Setup.msi

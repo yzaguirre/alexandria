@@ -63,3 +63,9 @@ https://github.com/JannikHv/gydl
 YouTube-dl can no longer download age-restricted videos
 https://github.com/ytdl-org/youtube-dl/issues/28578
 https://news.ycombinator.com/item?id=27353917
+
+Cookies
+https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid/related
+https://github.com/ytdl-org/youtube-dl/blob/master/README.md#how-do-i-pass-cookies-to-youtube-dl
+https://github.com/ytdl-org/youtube-dl/issues/28387
+https://stackoverflow.com/questions/67810146/youtube-dl-facebook-video-asks-login-details-in-remote-server
