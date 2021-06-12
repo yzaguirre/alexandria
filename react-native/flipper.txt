@@ -12,6 +12,7 @@ https://github.com/react-native-community/discussions-and-proposals/issues/312
 https://github.com/facebook/flipper/issues/1326
 https://www.reddit.com/r/reactnative/comments/n0vb7b/do_i_need_flipper/
 https://github.com/facebook/folly/issues/1527
+https://medium.com/salt-pepper/reduce-appcenter-ios-build-by-the-time-50-667ac0eef0e4 
 
 React Navigation 6 now has a Flipper plugin
 https://reactnavigation.org/docs/6.x/devtools/#useflipper

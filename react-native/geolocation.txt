@@ -29,7 +29,7 @@ https://heartbeat.fritz.ai/building-a-react-native-location-tracking-app-6007035
 #1 React Native Maps Tutorial | Add Custom Marker & Callout | Dark Mode
 https://www.youtube.com/watch?v=4N-8RTeQ1fA
 
-https://console.developers.google.com /apis/library/maps-android-backend.googleapis.com
+https://console.developers.google.com/apis/library/maps-android-backend.googleapis.com
 https://console.developers.google.com/apis/library/maps-ios-backend.googleapis.com
 	yarn add react-native-maps
 	yarn add https://github.com/xDemon200/react-native-maps
@@ -54,3 +54,7 @@ https://stackoverflow.com/questions/5413122/showing-many-markers-in-google-maps
 React Native map clustering both for Android and iOS.
 https://github.com/venits/react-native-map-clustering
 	yarn add react-native-map-clustering react-native-maps
+
+#10 ReactNative: Showing multiple marker on Map | Snapchat Map | onchangeregion || By Gulsher Khan
+https://www.youtube.com/watch?v=NAEqHr7o1g8
+https://github.com/gulsher7/SnapChat-Clone-React-native/blob/main/src/utils/helperFunctions.js

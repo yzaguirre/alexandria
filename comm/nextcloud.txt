@@ -12,19 +12,19 @@ After adding the PPA to your system as described below, the client can be instal
 - Ubuntu MATE with Caja: sudo apt install caja-nextcloud
 - Ubuntu Mint with Nemo: sudo apt install nemo-nextcloud
 - Other, or if you don't want/need the file manager integration:
-	apt install nextcloud-desktop
+	apt install nextcloud-desktop nextcloud-desktop-cmd
 AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.1/Nextcloud-3.2.1-x86_64.AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.1/Nextcloud-3.2.1-x86_64.AppImage.asc
-	gpg --verify Nextcloud-3.2.1-x86_64.AppImage.asc
-	chmod u+x Nextcloud-3.2.1-x86_64.AppImage
-	mv Nextcloud-3.2.1-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.2.2-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.2.2-x86_64.AppImage
+	mv Nextcloud-3.2.2-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 MacOS
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.1/Nextcloud-3.2.1.pkg
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.1/Nextcloud-3.2.1.pkg.asc
-	gpg --verify Nextcloud-3.2.1.pkg.asc
-	open Nextcloud-3.2.1.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2.pkg.asc
+	gpg --verify Nextcloud-3.2.2.pkg.asc
+	open Nextcloud-3.2.2.pkg
 	ln -s /Applications/nextcloud.app/Contents/MacOS/nextcloudcmd /usr/local/bin/nextcloudcmd
 Homebrew
 	brew install nextcloud

@@ -45,3 +45,15 @@ Screenshot
 
 More flags
 	xcrun simctl io --help
+
+xcode compatibilityVersion in MYAPP.xcodeproj/project.pbxproj
+https://stackoverflow.com/questions/49622341/failed-to-load-project-incompatible-project-version-pop-up-appears-when-i-op
+Click to your Project File in xcode and change it
+For Xcode 10.0
+
+compatibilityVersion: "Xcode 10.0"
+objectVersion :51
+
+Constraints on Image View
+How to scale a view based on device size using Auto Layout in Interface Builder
+https://www.youtube.com/watch?v=vegamwo6SvU

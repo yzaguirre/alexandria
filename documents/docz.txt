@@ -1,0 +1,14 @@
+docz
+It's never been easier to document your things!
+https://www.docz.site/
+https://github.com/pedronauck/docz
+
+Start a New Project
+	npx create-docz-app my-docz-app
+or	yarn create docz-app my-docz-app --example typescript
+
+Add Docz to an Existing Project
+Note: react and react-dom will not be installed automatically. You'll have to install them yourself.
+	yarn add docz # react react-dom
+or	npm install docz # react react-dom
+Then, add .mdx files anywhere in your project:

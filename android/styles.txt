@@ -1,0 +1,35 @@
+https://developer.android.com/guide/topics/ui/look-and-feel/themes
+https://stackoverflow.com/questions/30812606/how-to-hide-navigation-bar-in-android-app
+https://stackoverflow.com/questions/58198699/how-to-hide-status-bar-and-navigation-bar-using-theme-materialcomponents
+
+<style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <item name="android:windowBackground">@color/white</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="windowNoTitle">true</item>
+</style>
+<activity
+    android:name=".SearchActivity"
+    android:label="Text"
+    android:theme="@style/AppTheme.NoActionBar" />
+    
+https://stackoverflow.com/questions/36355753/whats-the-difference-between-windowactionbar-and-androidwindowactionbar
+windowActionBar is an attribute provided in AppCompat library,
+where as android:windowActionBar is provided in Material theme.
+23 and up
+
+https://www.nickagas.com/android-activitys-launchmode-standard-singletop-singletask-and-singleinstance/
+
+android:windowTranslucentStatus
+android:windowDrawsSystemBarBackgrounds
+https://stackoverflow.com/questions/45260288/when-i-should-use-windowdrawssystembarbackgrounds-attribute
+android:windowDrawsSystemBarBackgrounds set to true results that
+everything may be drawn under status bar on API level 21 and above.
+
+223 Android Status Bar Customization Part 1
+https://www.youtube.com/watch?v=byUM4vJdUMo
+
+WindowNoTitle
+https://youtu.be/T2eR-181EkQ?t=1160

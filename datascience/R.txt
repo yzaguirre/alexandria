@@ -3,6 +3,11 @@ https://news.ycombinator.com/item?id=22966332
 http://www.studytrails.com/blog/15-page-tutorial-for-r/
 http://www.r-project.org/
 see datascience/rstudio.txt
+
+Learn R Through Examples (2020)
+https://gexijin.github.io/learnR/index.html
+https://news.ycombinator.com/item?id=27404103
+
 https://www.digitalocean.com/community/tutorials/how-to-set-up-r-on-ubuntu-14-04
 http://cyclismo.org/tutorial/R/index.html
 https://www.datacamp.com/community/tutorials/15-questions-about-r-plots

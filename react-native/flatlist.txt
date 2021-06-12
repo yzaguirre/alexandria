@@ -26,3 +26,10 @@ https://www.youtube.com/watch?v=obIBWgBCsAQ
 Lazy loading
 https://www.reddit.com/r/reactnative/comments/nkqk4m/rn_lazy_loading/
 https://levelup.gitconnected.com/react-native-firebase-cloud-firestore-implementing-infinite-scroll-lazy-loading-with-flatlist-a9e942cf66c6
+
+https://stackoverflow.com/questions/48674848/flatlist-not-scrolling
+Take out the flex: 1 in your styles.cardcontainer, that should let you scroll.
+The FlatList/ScrollView contentContainerStyle prop wraps all the
+child components-what's "inside" the FlatList if you will-and should
+never have a defined height or flex value. If you need to set a
+flex: 1 for the FlatList itself use style={{flex: 1}} instead. Cheers!

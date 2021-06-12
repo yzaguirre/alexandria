@@ -149,3 +149,12 @@ Resize image if height greater than 1000 pixels
 	then
 		mogrify -resize 40% $line
 	fi
+
+Convert to PDF
+https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+	apt install pdftk
+The following NEW packages will be installed:
+ca-certificates-java default-jre-headless java-common libapache-pom-java libbcprov-java libcommons-lang3-java libcommons-parent-java
+openjdk-11-jre-headless pdftk pdftk-java
+	convert img1.jpg -resize 50% -quality 50 -density 200 img1.pdf
+	pdftk img?.pdf cat output documento.pdf

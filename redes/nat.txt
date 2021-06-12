@@ -1,0 +1,5 @@
+Show HN: A tool to self host game servers with a free static IP 
+https://playit.gg/
+https://news.ycombinator.com/item?id=27449888
+https://blog.tonari.no/introducing-innernet
+See ~/http/frp.txt

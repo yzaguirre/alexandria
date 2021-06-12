@@ -108,3 +108,8 @@ https://programmer.group/adb-screen-capture-and-recording-commands.html
 	adb shell screenrecord /mnt/sdcard/Download/test.mp4
 	adb shell screenrecord /storage/emulated/0/DCIM/Screenshots/filename.mp4
 	adb pull /sdcard/DCIM/Screenshots/filename.mp4
+
+Wireless adb
+https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
+https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
+https://stackoverflow.com/questions/50211010/android-wifi-adb-plugin-not-working-with-some-android-real-device#50211408

@@ -7,11 +7,12 @@ https://github.com/emekalites/react-native-alarm-notification
 https://github.com/EkaanshArora/Agora-RN-RTM-Quickstart
 
 https://github.com/wix/react-native-notifications
+https://www.reddit.com/r/reactnative/comments/nskrih/how_to_send_push_notifications_to_a_reactnative/
 	yarn add react-native-notifications
 	yarn pod
 
 React Native Local and Remote Notifications for iOS and Android
-https://github.com/zo0r/react-native-push-notificatio n
+https://github.com/zo0r/react-native-push-notification
 https://dev.to/edmondso006/react-native-local-ios-and-android-notifications-2c58
 	yarn add react-native-push-notification
 

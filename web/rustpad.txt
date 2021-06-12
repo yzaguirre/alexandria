@@ -1,0 +1,3 @@
+Efficient and minimal collaborative text editor, self-hosted, no database required
+https://github.com/ekzhang/rustpad
+https://news.ycombinator.com/item?id=27408326

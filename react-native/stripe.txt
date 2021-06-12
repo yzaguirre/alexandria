@@ -5,3 +5,5 @@ https://www.reddit.com/r/reactnative/comments/kncmmm/experiences_implementing_st
 
 https://stripe.dev/stripe-react-native/api-reference/index.html
 https://github.com/stripe/stripe-react-native
+
+https://www.reddit.com/r/reactnative/comments/nrvmzr/payment_solution/

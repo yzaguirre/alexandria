@@ -4,6 +4,9 @@ https://reactnative.directory/
 Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
 https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
+https://stackoverflow.com/questions/44079272/debugging-react-native-application-using-wifi
+https://stackoverflow.com/questions/50211010/android-wifi-adb-plugin-not-working-with-some-android-real-device#50211408
+Shake device, go to Settings -> Debug server host & port for device
 
 https://github.com/hayanisaid/React-Native-developer-roadmap
 https://www.reddit.com/r/reactnative/comments/nhzve4/reactnativedeveloperroadmap/
@@ -203,6 +206,9 @@ fetch permissions
 https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
 https://developer.android.com/guide/topics/manifest/application-element#usesCleartextTraffic
 https://guides.codepath.com/ios/App-Transport-Security
+
+Upload image page in React Native
+https://www.youtube.com/watch?v=79WtnkL_XsM
 
 Store
 https://redux.js.org/introduction/getting-started
@@ -407,3 +413,19 @@ https://github.com/react-native-community/upgrade-support/issues/138
 xcode issues
 https://www.reddit.com/r/reactnative/comments/no6uem/react_native_versions/
 https://github.com/facebook/react-native/releases
+
+React Native 0.64.2 released!
+https://github.com/facebook/react-native/releases/tag/v0.64.2
+https://www.reddit.com/r/reactnative/comments/nrv3cm/react_native_0642_released/
+
+Monterrey and iOS15 Support? I had almost no issues!
+https://www.reddit.com/r/reactnative/comments/nvelv2/monterrey_and_ios15_support_i_had_almost_no_issues/
+
+https://www.pixelcrayons.com/blog/react-native-0-64-2-released-discovering-and-upgrading-whats-new
+https://www.reddit.com/r/reactnative/comments/nwk922/react_native_0642_released_discovering_and/
+
+https://github.com/facebook/hermes/issues/499
+App size with hermes_enabled => false: 113.4mb
+App size with hermes_enabled => true: 540.19mb
+https://github.com/FormidableLabs/victory-native/issues/653
+Victory needs a resolution for d3-array for RN 0.64.2 upgrade

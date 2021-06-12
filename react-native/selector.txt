@@ -1,3 +1,12 @@
+A single / multiple, categorizable, customizable, localizable and
+searchable item picker (drop-down) component for react native
+which supports both Android & iOS.
+https://github.com/hossein-zare/react-native-dropdown-picker
+https://hossein-zare.github.io/react-native-dropdown-picker-website/
+https://openbase.com/js/react-native-dropdown-picker
+https://www.reddit.com/r/reactnative/comments/nvqzoa/why_is_the_outcome_different_but_its_the_same_code/
+	yarn add react-native-dropdown-picker
+
 Picker
 https://stackoverflow.com/questions/30137100/how-to-use-react-native-select-box
 The Picker component will give you a tumbler thing on iOS and a dropdown on Android

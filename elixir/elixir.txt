@@ -23,3 +23,11 @@ Windows
 Elixir GenServer Explained
 https://papercups.io/blog/genserver
 https://news.ycombinator.com/item?id=26958772
+
+Bakeware: Compile any Elixir application into a single binary
+https://github.com/bake-bake-bake/bakeware
+https://news.ycombinator.com/item?id=27430806
+
+Good and Bad Elixir
+https://keathley.io/blog/good-and-bad-elixir.html
+https://news.ycombinator.com/item?id=27463725

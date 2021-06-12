@@ -185,3 +185,9 @@ https://superuser.com/questions/318555/where-are-man-pages-stored-in-ubuntu
 	/usr/local/share/man/man1
 	/usr/share/man/man1
 	/usr/share/man/man5
+
+Wireless adb
+	adb pair phone_ip:port pair_code
+	adb connect phone_ip:port
+	adb devices
+	adb -s DEVICE_ID shell

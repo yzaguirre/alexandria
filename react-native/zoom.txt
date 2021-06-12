@@ -1,0 +1,26 @@
+A view component for react-native with pinch to zoom,
+tap to move and double tap to zoom capability.
+https://github.com/DuDigital/react-native-zoomable-view
+	yarn add @dudigital/react-native-zoomable-view
+
+import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src'
+<ReactNativeZoomableView
+   maxZoom={1.5}
+   minZoom={0.5}
+   zoomStep={0.5}
+   initialZoom={1}
+   bindToBorders={true}
+   captureEvent={true}
+   // onZoomAfter={this.logOutZoomState}
+   style={{
+      padding: 10,
+      backgroundColor: 'red',
+   }}
+>
+   <Image style={{ flex: 1, width: null, height: '100%' }}
+                 source={require('./image.jpg')}
+                 resizeMode="contain" />
+</ReactNativeZoomableView>
+
+How to create a zoomable view (image zoom/pan) in React Native
+https://www.youtube.com/watch?v=Nw-vTpUPk6s

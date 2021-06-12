@@ -6,6 +6,7 @@ ios asset: LaunchScreen
 
 https://appicon.co/
 https://www.img-bak.in/
+https://apetools.webprofusion.com/#/
 
 https://github.com/crazycodeboy/react-native-splash-screen
 https://soshace.com/build-real-world-react-native-app-1-splash-screen-and-app-icon/
@@ -17,6 +18,9 @@ https://github.com/crazycodeboy/react-native-splash-screen/tree/master/examples/
 	yarn add react-native-splash-screen
 MacOS
 	npx pod-install ios
+
+https://stackoverflow.com/questions/24970646/how-to-overcome-android-studio-cannot-resolve-symbol-for-android-classes
+You can do "File" -> "Invalidate Caches...", and select "Invalidate and Restart" option to fix this.
 
 ImageView
 https://developer.android.com/reference/android/widget/ImageView.html#attr_android:src
@@ -54,3 +58,7 @@ https://github.com/zoontek/react-native-bootsplash
 	  --logo-width=100 \
 	  --assets-path=assets \
 	  --flavor=main
+
+https://www.netguru.com/codestories/react-native-splash-screen
+https://blog.logrocket.com/building-a-splash-screen-in-react-native/
+https://medium.com/@appstud/add-a-splash-screen-to-a-react-native-app-810492e773f9

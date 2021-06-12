@@ -1,0 +1,4 @@
+Infinite Red's cutting edge React Native project boilerplate,
+along with a CLI, component/model generators, and more!
+https://github.com/infinitered/ignite
+https://shift.infinite.red/making-ignite-a-multi-platform-react-native-boilerplate-76afb59bddde

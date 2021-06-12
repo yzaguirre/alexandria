@@ -1,0 +1,16 @@
+http://xmodulo.com/2012/06/how-to-convert-tiff-files-to-pdf-format.html
+TIFF (Tagged Image File Format) is a popular image file format. Unlike other types of image files, a tiff file can contain multiple images (e.g., multi-page document scan) in it. Tiff editor software such as GIMP is able to support such multi-page tiff files. If you would like to convert a tiff file to pdf format on Linux, you can follow the instructions below.
+
+A simple way to convert a tiff image to a pdf document is to use a command-line utility called tiff2pdf.
+In order to install tiff2pdf on Debian or Ubuntu:
+	apt install ghostscript libtiff-tools
+In order to install tiff2pdf on CentOS or RedHat:
+	yum install ghostscript libtiff
+
+In order to install tiff2pdf on Fedora:
+	yum install ghostscript libtiff-tools
+
+If you have installed tiff2pdf, you can convert a tiff image to pdf format as follows.
+	tiff2pdf -o output.pdf input.tiff
+
+If you would like to extract specific pages from a tiff image and convert them into a pdf file, what you can do is to convert the whole tiff file into a pdf using the above method, and then edit the pdf file to your needs.

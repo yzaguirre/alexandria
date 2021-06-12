@@ -2,6 +2,10 @@ Let's Encrypt DST Root CA X3 Expiration – September 2021
 https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/
 https://news.ycombinator.com/item?id=27181374
 
+2021.06.08 Certificate Lifetime Incident (valid for an extra one second)
+https://community.letsencrypt.org/t/2021-06-08-certificate-lifetime-incident-valid-for-an-extra-one-second/153426
+https://news.ycombinator.com/item?id=27450364
+
 https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579
 https://letsencrypt.org/docs/client-options/
 

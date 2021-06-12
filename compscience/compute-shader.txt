@@ -1,0 +1,5 @@
+Compute Shader 101
+https://www.youtube.com/watch?v=DZRn_jNZjbw
+https://news.ycombinator.com/item?id=27396634
+Coding Adventure: Ant and Slime Simulations
+https://www.youtube.com/watch?v=X-iSQQgOd1A

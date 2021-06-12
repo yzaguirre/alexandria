@@ -126,3 +126,21 @@ A razor page is a server side only page
 
 Add a razor component
 	dotnet new razorcomponent -n WeatherData
+
+Image, exif or metadata manipulation
+https://devblogs.microsoft.com/dotnet/net-core-image-processing/
+
+The .NET library for ImageMagick
+https://github.com/dlemstra/Magick.NET
+https://github.com/dlemstra/Magick.NET/blob/main/docs/Readme.md
+https://www.nuget.org/packages/Magick.NET.Core-Q8/
+https://www.codeproject.com/articles/17852/imagemagick-in-vb-net
+	dotnet add package Magick.NET.Core-Q8 --version 7.0.5.900
+
+https://www.codeproject.com/Articles/36342/ExifLib-A-Fast-Exif-Data-Extractor-for-NET
+https://www.nuget.org/packages/ExifLib/
+	dotnet add package ExifLib --version 1.7.0
+C# Extracting metadata from Images | video | Exif Lib
+https://www.youtube.com/watch?v=xVHGHxdPfv8
+
+https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imagemetadata?view=net-5.0

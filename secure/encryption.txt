@@ -1,3 +1,8 @@
+How I Learned Symmetric-Key Cryptanalysis
+https://akircanski.github.io/cryptanalysis/2021/04/27/symmetric-key-cryptanalysis-howto.html
+https://news.ycombinator.com/item?id=27406888
+See ~/Libros/Progra/nuEncryption/heys.pdf
+
 https://fangpenlin.com/posts/2019/10/07/elliptic-curve-cryptography-explained/
 https://news.ycombinator.com/item?id=21182982
 

@@ -1,11 +1,14 @@
 see python/pdfminer.txt
 
-http://poppler.freedesktop.org/
-	apt-get install poppler
+https://poppler.freedesktop.org/
 
-pdftotext http://www.foolabs.com/xpdf/home.html
+pdftotext
+https://www.xpdfreader.com/
+https://offog.org/code/xpopple/
 https://www.howtogeek.com/228531/how-to-convert-a-pdf-file-to-editable-text-using-the-command-line-in-linux/
 	apt install xpdf
+The following NEW packages will be installed:
+gsfonts-x11 libmotif-common libxm4 xpdf
 	pdftotext /home/lori/Documents/Sample.pdf /home/lori/Documents/Sample.txt
 	pdftotext -layout /home/lori/Documents/Sample.pdf /home/lori/Documents/Sample.txt
 	pdftohtml file.pdf

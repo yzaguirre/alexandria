@@ -1,3 +1,5 @@
+https://bakkenbaeck.github.io/a-random-walk-through-git/
+
 https://akrabat.com/a-few-git-tips/
 
 https://mikkel.ca/blog/git-is-my-buddy-effective-solo-developer/

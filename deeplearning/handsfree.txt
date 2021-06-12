@@ -1,0 +1,4 @@
+Quickly integrate face, hand, and/or pose tracking to your frontend projects in a snap
+https://handsfree.dev/
+https://github.com/midiblocks/handsfree
+https://news.ycombinator.com/item?id=27404196

@@ -1,5 +1,6 @@
 https://redux.js.org/introduction/getting-started
 https://redux.js.org/basics/store/
+https://www.reddit.com/r/reactnative/comments/nslljz/whats_your_favorite_state_manager/ 
 	yarn add react-redux redux redux-thunk
 
 React Redux Hooks Tutorial for Beginners

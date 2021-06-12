@@ -24,6 +24,7 @@ Popular IDEs
 * Abricotine
 * Marp
 * Ghostwriter (https://github.com/wereturtle/ghostwriter)
+* Typora
 
 markdown css class
 https://superuser.com/questions/796565/correctly-sizing-png-images-in-markdown-with-pandoc-for-html-pdf-docx

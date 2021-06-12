@@ -1,0 +1,4 @@
+http://strlen.com/treesheets/
+	apt install treesheets
+The following NEW packages will be installed:
+libwxbase3.0-0v5 libwxgtk3.0-gtk3-0v5 treesheets

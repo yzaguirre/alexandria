@@ -1,24 +1,23 @@
 https://www.libreoffice.org/
-https://mierda.tv/2016/09/23/convertir-a-png-una-presentacion-creada-con-libreoffice-impress/
-	libreoffice6.4 --headless --convert-to pdf 7_vidas_extra_tiene_un_juanker.odp 
+	libreoffice --headless --convert-to pdf 7_vidas_extra_tiene_un_juanker.odp
 	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png
 
 Mirror
-http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/7.1.2/deb/x86_64/
+http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/7.1.3/deb/x86_64/
 
 Keys
 http://ask.libreoffice.org/en/question/45539/where-is-the-signing-public-gpgpgp-key-the-libreoffice-webpage/
 http://listarchives.libreoffice.org/global/users/msg27065.html
-https://download.documentfoundation.org/libreoffice/stable/7.1.2/deb/x86_64/
+https://download.documentfoundation.org/libreoffice/stable/7.1.3/deb/x86_64/
 	gpg --keyserver hkps://keys.gnupg.net --recv-keys AFEEAEA3
 Verify download
-	gpg --verify LibreOffice_7.1.2_Linux_x86-64_deb.tar.gz.asc
-	gpg --verify LibreOffice_7.1.2_Linux_x86-64_deb_langpack_es.tar.gz.asc
-	gpg --verify LibreOffice_7.1.2_Linux_x86-64_deb_helppack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb.tar.gz.asc
+	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb_langpack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb_helppack_es.tar.gz.asc
 Uncompress
-	tar xf LibreOffice_7.1.2_Linux_x86-64_deb.tar.gz
-	tar xf LibreOffice_7.1.2_Linux_x86-64_deb_langpack_es.tar.gz
-	tar xf LibreOffice_7.1.2_Linux_x86-64_deb_helppack_es.tar.gz
+	tar xf LibreOffice_7.1.3_Linux_x86-64_deb.tar.gz
+	tar xf LibreOffice_7.1.3_Linux_x86-64_deb_langpack_es.tar.gz
+	tar xf LibreOffice_7.1.3_Linux_x86-64_deb_helppack_es.tar.gz
 
 Remember
 	/usr/bin/libreoffice6.4 -> /opt/libreoffice6.4/program/soffice
@@ -26,8 +25,8 @@ Print as pdf
 	--convert-to output_file_extension[:output_filter_name[:output_filter_options]] [--outdir output_dir] files
 http://askubuntu.com/questions/382389/how-do-i-install-libreoffice-on-10-04-server
 http://ask.libreoffice.org/en/question/2641/convert-to-command-line-parameter/
-	libreoffice6.4 --headless --convert-to pdf:writer_pdf_Export result.odt --outdir /path/to/outdir
-    libreoffice6.4 --headless --convert-to pdf --outdir "/tmp" file.odg
+	libreoffice --headless --convert-to pdf:writer_pdf_Export result.odt --outdir /path/to/outdir
+    libreoffice --headless --convert-to pdf --outdir "/tmp" file.odg
 To csv
 https://ask.libreoffice.org/en/question/50035/convert-to-csv-via-command-line-with-all-text-fields-quoted/
 https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options

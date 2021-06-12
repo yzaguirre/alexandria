@@ -1,3 +1,4 @@
+https://www.jsonwebtoken.io/
 https://github.com/auth0/node-jsonwebtoken
 https://github.com/ryanfitz/hapi-auth-jwt
 http://hapijs.com/api#serverauthstrategyname-scheme-mode-options

@@ -1,0 +1,24 @@
+https://stackoverflow.com/questions/16200914/alertdialog-styling-how-to-change-style-color-of-title-message-etc
+https://web.archive.org/web/20200214041924/http://blog.supenta.com/2014/07/02/how-to-style-alertdialogs-like-a-pro/
+
+You need to define a Theme for your AlertDialog and reference it
+in your Activity's theme. The attribute is alertDialogTheme and
+not alertDialogStyle. Like this:
+
+<style name="Theme.YourTheme" parent="@android:style/Theme.Holo">
+    ...
+    <item name="android:alertDialogTheme">@style/YourAlertDialogTheme</item>
+</style>
+
+<style name="YourAlertDialogTheme">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+    <item name="android:windowTitleStyle">...</item>
+    <item name="android:textAppearanceMedium">...</item>
+    <item name="android:borderlessButtonStyle">...</item>
+    <item name="android:buttonBarStyle">...</item>
+</style>

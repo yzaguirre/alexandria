@@ -1,0 +1,15 @@
+Apple, Mozilla, Google, Microsoft form group to standardize browser plug-ins
+https://appleinsider.com/articles/21/06/04/apple-mozilla-google-microsoft-form-group-to-standardize-browser-plug-ins
+https://news.ycombinator.com/item?id=27404017
+
+- Consumer web browsers (1993-)
+- Plug-ins (1995-2015ish)
+- User Style Sheets (1998-2019)
+- Bookmarklets (1998-)
+- Browser Extensions (1999-)
+- Mozilla XUL (1997-2017)
+- Alternative Browser Distributions (2004-)
+- Userscripts (2005-)
+- Converging on the WebExtensions API (2017-)
+- Manifest V3 (2021-)
+- No/Low-Code Browser Extension Builders (2021-)

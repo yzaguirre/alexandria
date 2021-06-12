@@ -5,6 +5,8 @@ https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
 	chmod u+x guiscrcpy-.dev.r.glibc2.27-x86_64.AppImage
 	mv guiscrcpy-.dev.r.glibc2.27-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
 	ln -s ~/appimage/guiscrcpy-x86_64.AppImage /usr/local/bin/guiscrcpy
+Pip
+	sudo -H pip3 install -U guiscrcpy
 Windows
 Install scrcpy
 https://github.com/genymobile/scrcpy/

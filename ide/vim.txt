@@ -1,3 +1,7 @@
+Vim can edit files inside zip files
+https://twitter.com/climagic/status/1402272919363936268
+	vim stranger-things.zip
+
 https://blog.inkdrop.info/my-dev-workflow-using-tmux-vim-video-e30e78a9acce
 
 https://www.hillelwayne.com/post/intermediate-vim/

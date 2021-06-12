@@ -19,9 +19,17 @@ Building the package
 	dpkg-buildpackage -uc -us -rfakeroot
 	dpkg-buildpackage -uc -us -b -j4
 https://packages.debian.org/experimental/amd64/inkscape/download
+Ubuntu
+	add-apt-repository ppa:inkscape.dev/stable
+	apt install inkscape
+The following NEW packages will be installed:
+adwaita-icon-theme-full inkscape libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-8 libpotrace0 libwmf-bin perlmagick python3-bs4
+python3-cssselect python3-html5lib python3-lxml python3-numpy python3-scour python3-soupsieve python3-webencodings
 Windows
 	scoop bucket add extras
 	scoop install inkscape
+Homebrew
+	brew install inkscape
 
 Kees Cook - GPG#17063e6d
 	http://outflux.net/public_key.asc
@@ -31,7 +39,8 @@ Bryce Harrington - GPG#E0E67611
 	http://www.bryceharrington.org/bryceharrington.asc
 
 https://stackoverflow.com/questions/9853325/how-to-convert-a-svg-to-a-png-with-image-magick
-	inkscape -z -e test.png -w 1024 -h 1024 test.svg
+	inkscape -o test.png -w 1024 -h 1024 test.svg
+	inkscape --export-filename=filename.png -w 600 -h 400 filename.svg
 For favicon:
 https://stackoverflow.com/a/14174624
-	inkscape -z -e favicon-196x196.png -w 196 -h 196 icon.svg
+	inkscape -o favicon-196x196.png -w 196 -h 196 icon.svg

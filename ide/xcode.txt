@@ -8,6 +8,9 @@ Xcode command line tools (macOS)
 After any xcode update
 https://kazucocoa.wordpress.com/2019/05/08/iosxcode-returns-authorization-error/
 	xcodebuild -runFirstLaunch
+Pick different xcode
+https://www.reddit.com/r/reactnative/comments/nvelv2/monterrey_and_ios15_support_i_had_almost_no_issues/
+	sudo xcode-select --switch /Applications/Xcode-beta.app
 https://developer.apple.com/forums/thread/75285
 	sudo /Applications/Xcode.app/Contents/MacOS/Xcode
 Open a project or workspace

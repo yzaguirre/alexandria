@@ -1,3 +1,12 @@
 https://notepad-plus-plus.org
+Notepad++ v8 release
+https://notepad-plus-plus.org/downloads/v8/
+https://news.ycombinator.com/item?id=27420726
+
 http://docs.notepad-plus-plus.org/index.php/Command_Line_Switches
 	notepad++.exe -n25 file.txt
+
+Return to previous editing buffer
+CTRL+TAB does that, if it's enabled and configured to do so in the
+settings (Settings -> Misc -> Document Switcher;
+check "Enable" and "Enable MRU behaviour").

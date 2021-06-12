@@ -1,6 +1,6 @@
 Powerful yet simple to use screenshot software.
 https://flameshot.org/
-https://flameshot.org/command-line-options/?id=cli-configuration
+https://flameshot.org/advanced/command-line-options/
 	apt install flameshot
 DEB installer
 	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot-0.9.0-1.ubuntu-20.04.amd64.deb

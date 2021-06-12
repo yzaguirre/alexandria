@@ -1,0 +1,14 @@
+Budibase is an open-source low code platform that helps you
+build and self-host internal tools in minutes
+https://www.budibase.com/
+https://github.com/Budibase/budibase
+https://news.ycombinator.com/item?id=27421408
+https://docs.budibase.com/getting-started
+	npm i -g @budibase/cli 
+Setup Budibase (select where to store Budibase,
+and the port to run it on)
+	budi hosting --init 
+Run Budibase
+	budi hosting --start 
+Create your admin user
+Enter the email and password for the new admin user.
