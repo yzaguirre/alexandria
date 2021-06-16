@@ -1,1 +1,4 @@
 https://github.com/astrand/xclip
+
+dead simple program that generates qr codes from your clipboard
+https://github.com/toasterrepairman/qlip

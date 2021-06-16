@@ -1,4 +1,17 @@
+http://dag.wiee.rs/home-made/unoconv/
 https://github.com/dagwieers/unoconv
 https://api.libreoffice.org/
 https://wiki.openoffice.org/wiki/API/Tutorials/PDF_export
+	apt install unoconv
+Homebrew
+	brew install unoconv
+Usage
+https://linuxconfig.org/how-to-convert-documents-between-libreoffice-and-microsoft-office-file-formats-on-linux
+	unoconv --show
 	unoconv [FILE].EXTENSION
+Many csv files
+	unoconv -f xlsx -o ready *csv
+To PNG
+	unoconv -f png -o drawing drawing.svg
+To SVG
+	unoconv -f svg -o drawing drawing.ai

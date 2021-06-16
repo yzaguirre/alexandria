@@ -11,3 +11,5 @@ Try other programs
 	docker pull 06Kellyjac/nyancat
 	docker pull jeremy646/doge
 	docker images
+See all of the environment variables for any running container
+	docker inspect

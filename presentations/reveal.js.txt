@@ -30,3 +30,7 @@ http://www.raymondcamden.com/index.cfm/2012/7/23/Adding-a-background-image-to-a-
 data-background="rgb color or file"
 
 	npm install
+
+https://mark.show/#/4
+https://news.ycombinator.com/item?id=27484263
+See ~/presentations/mark.txt

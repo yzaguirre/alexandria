@@ -1,12 +1,19 @@
 https://imagemagick.org
+https://github.com/ImageMagick/ImageMagick
 	apt install imagemagick
 MacOs
 	brew install ghostscript
 	brew install imagemagick
 
 Concatenate images
+Join current images vertically or horizontally
+https://imagemagick.org/script/command-line-options.php#append
 https://superuser.com/questions/290656/combine-multiple-images-using-imagemagick
+https://superuser.com/questions/316132/appending-images-vertically-in-imagemagick
+Vertical
 	convert -append in-*.jpg out.jpg
+Horizontal
+	convert +append in-*.jpg out.jpg
 
 Add a image
 https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one-with-imagemagick-command-line

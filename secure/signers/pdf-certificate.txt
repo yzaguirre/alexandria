@@ -29,3 +29,11 @@ https://news.ycombinator.com/item?id=27344069
 Adobe allows super-imposing an image of your signature on a PDF.
 You can also do this using Mac Preview, see Tools > Annotate > Signature
 https://support.apple.com/en-gb/guide/preview/prvw35725/mac
+
+https://news.ycombinator.com/item?id=27515396
+Just print to pdf, copy to remarkable, sign, email back to sender.
+Way easier than printing, signing, scanning, and then emailing back.
+
+In those cases I usually take the PDF, open it with LibreOffice
+and paste over my signature, scanned once upon a time.
+Never got any complaints, but it could be easily discovered for sure.

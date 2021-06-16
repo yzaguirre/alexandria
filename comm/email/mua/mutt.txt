@@ -9,17 +9,52 @@ https://gitlab.com/muttmua/mutt/raw/master/UPDATING
 http://www.mutt.org/doc/manual/
 https://github.com/gotbletu/shownotes/blob/master/mutt.md
 https://twitter.com/climagic/status/1015270839829385216
+
+https://wiki.archlinux.org/title/Mutt
+
 Compile
 https://askubuntu.com/questions/199057/mutt-not-working-due-to-gnutls-handshake-a-tls-packet-with-unexpected-length-w#202105
-	wget https://bitbucket.org/mutt/mutt/downloads/mutt-1.10.0.tar.gz
-	wget ftp://ftp.mutt.org/pub/mutt/mutt-1.10.0.tar.gz.asc
+http://www.mutt.org/download.html
+You need Kyoto Cabinet, Tokyo Cabinet, LMDB, QDBM, GDBM, or BDB for hcache
+See ~/db/tokyocabinet.txt
+	apt install libgpgme-dev libsasl2-dev libgnutls28-dev libtokyocabinet-dev
+or use libgsasl-dev
+https://github.com/termux/termux-packages/issues/1582
+https://www.linuxquestions.org/questions/linux-software-2/ubuntu-mutt-sasl-trouble-finding-and-installing-sasl-for-mutt-in-ubuntu-4175665457/
+
+The following NEW packages will be installed:
+libassuan-dev libgpg-error-dev libgpgme-dev libsasl2-dev
+libgmp-dev libgmpxx4ldbl libgnutls-dane0 libgnutls-openssl27 libgnutls28-dev libgnutlsxx28 libidn2-dev libp11-kit-dev libtasn1-6-dev libtasn1-doc
+libunbound8 nettle-dev
+libkyotocabinet-dev libkyotocabinet16v5 liblzma-dev liblzo2-dev
+
+	wget https://bitbucket.org/mutt/mutt/downloads/mutt-2.1.0.tar.gz
+	wget ftp://ftp.mutt.org/pub/mutt/mutt-2.1.0.tar.gz.asc
 	wget http://www.mutt.org/keys/kevin.key
 	gpg --import kevin.key
-	gpg --verify mutt-1.10.0.tar.gz
-	tar xf mutt-1.10.0.tar.gz
+	gpg --verify mutt-2.1.0.tar.gz.asc
+	tar xf mutt-2.1.0.tar.gz
 	cd mutt
-	./configure --with-mailpath=/home/david/Mailbox --enable-pop --enable-imap --enable-smtp --with-ssl --with-sasl --enable-hcache --with-gss --enable-debug --enable-gpgme
+	./configure --with-mailpath=/home/david/documents/Mailbox --enable-pop --enable-imap --enable-smtp --with-ssl --with-gnutls --with-sasl --enable-hcache --with-kyotocabinet --with-gss --enable-gpgme --enable-debug --with-docdir=/usr/share/doc/mutt-2.1.0
+Without gss
+https://bugs.archlinux.org/task/23415
+	./configure --with-mailpath=/home/david/documents/Mailbox --enable-pop --enable-imap --enable-smtp --with-ssl --with-gnutls --with-sasl --enable-hcache --with-kyotocabinet --enable-gpgme --enable-debug --with-docdir=/usr/share/doc/mutt-2.1.0
+	make
 	sudo make install
+/usr/local/share/locale/bg/LC_MESSAGES/mutt.mo
+/usr/local/share/man/man1/mutt.1
+/usr/local/share/man/man1/smime_keys.1
+/usr/local/share/man/man1/pgpewrap.1
+/usr/local/share/man/man1/mutt_pgpring.1
+/usr/local/share/man/man5/muttrc.5
+/usr/local/share/man/man5/mbox.5
+/usr/local/share/man/man5/mmdf.5
+/usr/share/doc/mutt-2.1.0
+/usr/local/etc/Muttrc
+/usr/local/etc/Muttrc.dist
+/usr/local/share/info
+/usr/local/etc/mime.types
+/usr/local/etc/mime.types.dist
 MacOS
 	brew install mutt
 Install PGP support

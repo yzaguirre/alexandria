@@ -1,0 +1,13 @@
+Google Chromium, sans integration with Google
+https://github.com/Eloston/ungoogled-chromium
+https://ungoogled-software.github.io/ungoogled-chromium-binaries/
+Portable
+	wget https://github.com/mdedonno1337/ungoogled-chromium-binaries/releases/download/91.0.4472.77-1.1/ungoogled-chromium_91.0.4472.77-1.1_linux.tar.xz
+MD5: 8646d60c1fff460e6a7a9024e519ec7f
+SHA1: f0783d74e4728a786fb1b5b18ef95b6e67562b91
+SHA256: 30ca9a0789f1a928edf7c3d606bb04792bea95f6c2fa0c53bf3ea14c36612885
+	md5sum ungoogled-chromium_91.0.4472.77-1.1_linux.tar.xz
+	sha1sum ungoogled-chromium_91.0.4472.77-1.1_linux.tar.xz
+	sha256sum ungoogled-chromium_91.0.4472.77-1.1_linux.tar.xz
+Homebrew
+	brew install --cask eloston-chromium

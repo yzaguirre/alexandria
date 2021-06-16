@@ -1,7 +1,13 @@
 https://mermaid-js.github.io/mermaid/#/
-https://news.ycombinator.com/item?id=18788244
 https://github.com/mermaid-js/mermaid
-	npm install -g mermaid.cli
+https://news.ycombinator.com/item?id=18788244
+
+CLI
+https://github.com/mermaid-js/mermaid-cli
+	npm install -g @mermaid-js/mermaid-cli
+Homebrew
+	brew install mermaid-cli
+Usage
 	mmdc -h
 	mmdc -i input.mmd -o output.svg
 	mmdc -i input.mmd -o output.png
@@ -10,3 +16,14 @@ https://github.com/mermaid-js/mermaid
 	mmdc -i input.mmd -t forest
 	mmdc -i input.mmd -o output.png -b '#FFF000'
 	mmdc -i input.mmd -o output.png -b transparent
+Create A PNG With A Dark Theme And Transparent Background
+	mmdc -i input.mmd -o output.png -t dark -b transparent
+Piping from stdin
+	cat << EOF  | mmdc
+    graph TD
+    A[Client] --> B[Load Balancer]
+EOF
+
+Live Editor
+https://mermaid-js.github.io/mermaid-live-editor/edit
+https://github.com/mermaid-js/mermaid-live-editor

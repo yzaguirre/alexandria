@@ -1,3 +1,4 @@
+https://ibug.io/blog/2019/12/manage-servers-with-ssh-ca/
 https://community.hetzner.com/tutorials/simple-ca-for-ssh
 
 https://www.paepper.com/blog/posts/how-to-properly-manage-ssh-keys-for-server-access/

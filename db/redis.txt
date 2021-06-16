@@ -1,0 +1,55 @@
+Do you really need Redis? How to get away with just PostgreSQL
+https://spin.atomicobject.com/2021/02/04/redis-postgresql/
+https://news.ycombinator.com/item?id=27482243
+
+https://redislabs.com/pricing
+https://redistogo.com/
+http://redis.io/
+Networked, in-memory, key-value data store with optional durability.
+redis-server
+	# apt-get installl redis-server
+Download, extract and compile Redis with:
+	$ wget http://download.redis.io/releases/redis-2.8.12.tar.gz
+	$ tar xzf redis-2.8.12.tar.gz
+	$ cd redis-2.8.12
+	$ make
+The binaries that are now compiled are available in the src directory. Run Redis with:
+	src/redis-server
+You can interact with Redis using the built-in client:
+	src/redis-cli
+	redis-cli -h 192.168.1.10
+	redis> set foo bar
+OK
+	redis> get foo
+"bar"
+Create monitor
+	redis> monitor
+List keys
+	redis> keys *
+
+Clients
+https://redis.io/clients
+PHP client, composer file
+	vim composer.json
+{
+	"require": {
+		"predis/predis": "1.0.1"
+	}
+}
+
+Configuration
+http://redis.io/topics/config
+
+http://redis.io/topics/replication
+Replication: What you need to know in order to set up master-slave replication.
+
+High Availability:
+Redis Sentinel is the official high availability solution for Redis. Currently work in progress (beta stage, active development), already usable.
+http://redis.io/topics/sentinel
+
+Redis Cluster
+http://redis.io/topics/cluster-tutorial
+Redis Cluster tutorial: a gentle introduction and setup guide to Redis Cluster (currently not production ready, but usable).
+
+http://redis.io/topics/cluster-spec
+Redis Cluster specification: the more formal description of the behavior and algorithms used in Redis Cluster.

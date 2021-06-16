@@ -3,6 +3,9 @@ https://csvkit.readthedocs.io/en/latest/
 	sudo -H pip3 install csvkit
 Convert Excel to CSV:
 	in2csv data.xls > data.csv
+All sheets
+	in2csv --write-sheets - data.xlsx > last_sheet.csv
+See ~/MS/excel.txt
 Convert JSON to CSV:
 	in2csv data.json > data.csv
 Print column names:
@@ -19,9 +22,12 @@ Query with SQL:
 
 xlsx2csv
 https://github.com/dilshod/xlsx2csv
+	sudo -H pip3 install xlsx2csv
 Convert excel to csv
 	xlsx2csv "data.xlsx" > "data.csv"
 	xlsx2csv -q all "data.xlsx" > "data.csv"
+All the sheets
+	xlsx2csv -s 0 data.xlsx > data.csv
 
 csvtosql
 http://csvtosql.sourceforge.net/
@@ -36,6 +42,7 @@ https://news.ycombinator.com/item?id=23190517
 Sublime Text plugin
 https://packagecontrol.io/packages/rainbow_csv
 
+q - Run SQL directly on CSV or TSV files
 https://github.com/harelba/q
 http://harelba.github.io/q/
 	wget https://github.com/harelba/q/releases/download/2.0.19/q-text-as-data_2.0.19-2_amd64.deb
@@ -44,3 +51,7 @@ MacOS
 	brew install q
 Usage
 	q <flags> "<query>"
+
+sqhead
+https://news.ycombinator.com/item?id=27485672
+alias sqhead='python /home/user/Coding/Py-Code/sqlHead.py'

@@ -1,3 +1,4 @@
+https://tmux.github.io/
 https://www.arp242.net/tmux.html
 https://news.ycombinator.com/item?id=21951679
 https://stackoverflow.com/questions/58739867/how-to-target-a-particular-tmux-session
@@ -13,20 +14,27 @@ https://sourceforge.net/projects/tmux/files/tmux/tmux-2.0/
 http://www.bsdnow.tv/tutorials/ssh-tmux
 Install
 	apt install tmux
-Ubuntu
-	add-apt-repository ppa:pi-rho/dev
-If you're using OpenBSD, tmux is part of the base system. 
-For the rest of us, we need to install tmux from ports or pkgsrc or however you'd like to get it. 
 MacOS
 	brew install tmux
 
 Compile
 	apt install libevent-dev libncurses5-dev
-	tar xf tmux-2.0.tar.gz
-	cd tmux-2.0
+The following NEW packages will be installed:
+libevent-core-2.1-7 libevent-dev libevent-extra-2.1-7 libevent-openssl-2.1-7 libevent-pthreads-2.1-7 libncurses-dev libncurses5-dev
+	git clone https://github.com/tmux/tmux.git
+	cd tmux
+or	wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
+	tar xf tmux-3.2a.tar.gz
+	cd tmux-3.2a
+	
+x	sh autogen.sh
 	./configure
 	make
 	sudo make install
+/usr/local/bin/tmux
+/usr/local/share/man/man1/tmux.1
+	tmux -V
+
 Compile in CentOS 6
 Don't install libevent-devel, its too old
 	yum install ncurses-devel

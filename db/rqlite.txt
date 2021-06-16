@@ -1,0 +1,21 @@
+The lightweight, distributed relational database built on SQLite
+Forming a cluster is very straightforward,
+it gracefully handles leader elections,
+and tolerates failures of machines, including the leader
+https://github.com/rqlite/rqlite
+https://www.philipotoole.com/tag/rqlite/
+
+RQLITE 6.0: THE EVOLUTION OF A DISTRIBUTED DATABASE DESIGN
+https://www.philipotoole.com/rqlite-6-0-0-building-for-the-future
+https://news.ycombinator.com/item?id=27460022
+
+Install
+	wget https://github.com/rqlite/rqlite/releases/download/v6.0.0/rqlite-v6.0.0-linux-amd64.tar.gz
+	tar xf rqlite-v6.0.0-linux-amd64.tar.gz
+	cd rqlite-v6.0.0-linux-amd64
+	./rqlited ~/node.1
+MacOS
+	wget https://github.com/rqlite/rqlite/releases/download/v6.0.0/rqlite-v6.0.0-darwin-amd64.tar.gz
+	tar xf rqlite-v6.0.0-darwin-amd64.tar.gz
+	cd rqlite-v6.0.0-darwin-amd64
+	./rqlited ~/node.1

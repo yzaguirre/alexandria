@@ -1,4 +1,8 @@
 zip
+https://zlib.net/
+https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
+https://manpages.ubuntu.com/manpages/bionic/man3/zlib.3tcl.html
+	apt install zlib1g
 http://infozip.sourceforge.net/
 http://infozip.sourceforge.net/mans/
 	wget https://r15ch13.keybase.pub/scoop/zip/zip300xn-x64.zip
@@ -17,3 +21,7 @@ https://www.computerhope.com/unix/zip.htm
 
 https://rhardih.io/2021/04/listing-the-contents-of-a-remote-zip-archive-without-downloading-the-entire-file/
 https://www.reddit.com/r/programming/comments/mtfph7/listing_the_contents_of_a_remote_zip_archive/
+
+https://github.com/gdraheim/zziplib
+	apt install libzzip-0-13
+Dev: libzzip-dev

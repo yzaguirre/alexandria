@@ -1,0 +1,34 @@
+https://krita.org/en/
+https://invent.kde.org/graphics/krita
+	apt install krita
+The following NEW packages will be installed:
+gdal-data krita krita-data krita-gmic libaec0 libarmadillo10 libarpack2 libcfitsio9 libcharls2 libdap27 libdapclient6v5 libepsilon1 libfreexl1
+libfyba0 libgdal28 libgdcm3.0 libgeos-3.9.0 libgeos-c1v5 libgeotiff5 libgmic1 libgraphicsmagick++-q16-12 libgraphicsmagick-q16-3 libhdf4-0-alt
+libhdf5-103-1 libhdf5-hl-100 libkmlbase1 libkmldom1 libkmlengine1 libmysqlclient21 libnetcdf18 libodbc1 libogdi4.1 libopencolorio1v5
+libopencv-core4.5 libopencv-imgcodecs4.5 libopencv-imgproc4.5 libopencv-videoio4.5 libpoppler-qt5-1 libpq5 libproj19 libqhull8.0 librttopo1
+libsocket++1 libspatialite7 libsuperlu5 libsz2 libtbb2 libtinyxml2.6.2v5 liburiparser1 libxerces-c3.2 libyaml-cpp0.6 mysql-common odbcinst
+odbcinst1debian2 proj-bin proj-data python3-sip
+Ubuntu
+https://launchpad.net/~kritalime/+archive/ubuntu/ppa
+	sudo add-apt-repository ppa:kritalime/ppa
+	apt install krita krita-l10n
+Homebrew
+	brew install krita
+	ln -s /Applications/krita.app/Contents/MacOS/krita /usr/local/bin/
+Android
+https://stackoverflow.com/questions/56824557/what-is-the-difference-between-armeabi-v7a-arm64-v8a-x86
+	wget https://download.kde.org/stable/krita/4.4.5/krita-arm64-v8a-4.4.5-release.apk
+	wget https://download.kde.org/stable/krita/4.4.5/md5sum.txt
+	md5sum -c --ignore-missing md5sum.txt
+	adb install krita-arm64-v8a-4.4.5-release.apk
+On termux
+	xgd-open krita-arm64-v8a-4.4.5-release.apk
+
+Linux Command Line
+https://docs.krita.org/en/reference_manual/linux_command_line.html?highlight=command%20line#linux-command-line
+Export
+	krita importfilename --export --export-filename exportfilename
+	krita file.png --export --export-filename final.jpg
+	krita file.svg --export --export-filename final.png
+PDF export
+	krita file.png --export-pdf --export-filename final.pdf

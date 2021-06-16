@@ -41,3 +41,5 @@ Make it a script
 https://joplinapp.org/
 https://github.com/laurent22/joplin
 https://news.ycombinator.com/item?id=22000791
+
+https://www.reddit.com/r/linux/comments/nypc56/the_most_simple_way_to_take_notes/

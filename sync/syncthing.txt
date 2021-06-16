@@ -25,6 +25,9 @@ Install raspberry pi
 	tar xf syncthing-linux-arm-v1.16.1.tar.gz -C ~/
 	mv ~/syncthing-linux-arm-v1.16.1 .syncthing
 	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
+Remarkable
+https://github.com/Evidlo/remarkable_syncthing
+
 Debian repo
 http://apt.syncthing.net/
 	sudo apt install apt-transport-https

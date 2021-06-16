@@ -1,0 +1,7 @@
+Simple image editor for the Linux desktop(s)
+https://maoschanz.github.io/drawing/
+https://github.com/maoschanz/drawing
+https://launchpad.net/~cartes/+archive/ubuntu/drawing/
+https://www.reddit.com/r/linux/comments/nxj1xt/image_roll_my_new_simple_and_fast_gtk_image/
+	sudo add-apt-repository ppa:cartes/drawing
+	sudo apt install drawing

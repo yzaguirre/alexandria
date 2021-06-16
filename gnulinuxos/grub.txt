@@ -1,0 +1,27 @@
+Instalar en MBR
+
+http://guiadelcamaleon.blogspot.com/2012/09/como-reinstalar-el-menu-de-arranque-de.html
+	grub2-mkconfig -o /boot/grub2/grub.cfg
+
+http://victorhckinthefreeworld.wordpress.com/2013/12/14/recuperando-el-grub-de-arranque-en-opensuse-13-1/
+	grub2-install --recheck /dev/sda
+http://forums.opensuse.org/showthread.php/494677-SUCCESS-Fixed-Grub2-on-Windows-8-1-OpenSUSE-13-1-dual-boot-system
+https://help.ubuntu.com/community/Grub2/Installing#Fixing_a_Broken_System
+	grub-install /dev/sda
+
+Configuración Grub (probably outdated, dave)
+Ubuntu
+At file /etc/default/grub modify:
+	
+	GRUB_DEFAULT=saved
+	GRUB_SAVEDEFAULT=true
+
+then run
+	sudo update-grub
+
+sudo geany /etc/default/grub 
+sudo update-grub
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+sudo gedit /boot/grub2/grub.cfg
+sudo cat /etc/grub2.cfg 

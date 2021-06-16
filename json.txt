@@ -48,3 +48,40 @@ https://news.ycombinator.com/item?id=23433290
 	wget https://github.com/fiatjaf/jqview/releases/download/v1/jqview_linux_amd64
 	wget https://github.com/fiatjaf/jqview/releases/download/v2/jqview_linux.tar.gz
 	mv jqview /usr/local/bin/jqview
+
+Make JSON greppable!
+https://github.com/tomnomnom/gron
+gron
+	wget https://github.com/tomnomnom/gron/releases/download/v0.6.1/gron-linux-amd64-0.6.1.tgz
+	tar xzf gron-linux-amd64-0.6.1.tgz
+	mv gron /usr/local/bin/
+Termux
+	wget https://github.com/tomnomnom/gron/releases/download/v0.6.1/gron-linux-arm64-0.6.1.tgz
+	tar xzf gron-linux-arm64-0.6.1.tgz
+	mv gron ~/bin/
+Homebrew
+	brew install gron
+
+Jello
+CLI tool to filter JSON and JSON Lines data with Python syntax. (Similar to jq)
+https://github.com/kellyjonbrazil/jello
+https://www.reddit.com/r/linux/comments/nvz5b0/jello_v13_now_supports_dot_notation_commandline/
+	sudo -H pip3 install jello
+	cat data.json | jello _.foo
+	cat data.json | jello '_["foo"]'
+
+CLI tool and python library that converts the output of popular
+command-line tools and file-types to JSON or Dictionaries.
+This allows piping of output to tools like jq and simplifying
+automation scripts.
+https://github.com/kellyjonbrazil/jc
+	dig example.com | jc --dig
+	sudo -H pip3 install jc
+Homebrew
+	brew install jc
+
+A simple CLI tool to print JSON and JSON Lines data
+as a table in the terminal.
+https://github.com/kellyjonbrazil/jtbl
+	sudo -H pip3 install jtbl
+	cat cities.json | jtbl

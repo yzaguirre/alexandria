@@ -1,3 +1,7 @@
+Goodbye Freenode
+https://nedbatchelder.com/blog/202106/goodbye_freenode.html
+https://news.ycombinator.com/item?id=27491967
+
 An open letter from Atheme's developers and community
 https://atheme.github.io/atheme-open-letter/
 https://news.ycombinator.com/item?id=27290420

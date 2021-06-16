@@ -6,4 +6,6 @@ How to Use tr, sed, and aspell - Linux Terminal 201 - HakTip 170-F7Brrn-L1Zg.mp4
 	echo "this is my tEst" | tr [:upper:] A
 Squeez only works on adjourning characters
 	echo "this is my ttest" | tr -s t
-
+Convert to lowercase
+https://www.cyberciti.biz/faq/linux-unix-shell-programming-converting-lowercase-uppercase/
+	tr '[:upper:]' '[:lower:]'

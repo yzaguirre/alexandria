@@ -10,6 +10,10 @@ https://docs.swift.org/swift-book/
 https://swiftui-lab.com/
 https://useyourloaf.com/
 
+iOS 15, Humane 
+https://potential.app/ios-15-humane
+https://news.ycombinator.com/item?id=27456500
+
 https://www.reddit.com/r/Entrepreneur/comments/m1t0p6/the_time_the_apple_review_team_saved_my_a/
 When your last name is "True" and that broke Apple's iCloud service.
 The wonders of programming ;)

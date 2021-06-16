@@ -1,0 +1,2 @@
+https://wiki.debian.org/XDGBaseDirectorySpecification
+https://www.reddit.com/r/linux/comments/ny34vs/new_xdg_state_home_in_xdg_base_directory_spec/

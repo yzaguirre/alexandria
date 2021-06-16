@@ -1,0 +1,17 @@
+Image Roll - simple and fast GTK image viewer with
+basic image manipulation tools. Written in Rust.
+https://github.com/weclaw1/image-roll
+https://www.reddit.com/r/linux/comments/nxj1xt/image_roll_my_new_simple_and_fast_gtk_image/
+For this application you are required to have at least GTK 3.22.
+	apt install libgtk-3-dev
+The following NEW packages will be installed:
+icu-devtools libatk-bridge2.0-dev libatk1.0-dev libatspi2.0-dev libbrotli-dev libcairo-script-interpreter2 libcairo2-dev libdatrie-dev libdbus-1-dev
+libegl1-mesa-dev libepoxy-dev libfontconfig-dev libfontconfig1-dev libfreetype-dev libfreetype6-dev libfribidi-dev libgraphite2-dev libgtk-3-dev
+libharfbuzz-dev libharfbuzz-gobject0 libicu-dev libpango1.0-dev libpixman-1-dev libthai-dev libwayland-bin libwayland-dev libxcb-render0-dev
+libxcb-shm0-dev libxcomposite-dev libxcursor-dev libxdamage-dev libxfixes-dev libxft-dev libxi-dev libxinerama-dev libxkbcommon-dev libxrandr-dev
+libxrender-dev libxtst-dev pango1.0-tools wayland-protocols x11proto-input-dev x11proto-randr-dev x11proto-record-dev x11proto-xinerama-dev
+
+	wget https://github.com/weclaw1/image-roll/releases/download/1.1.0/image-roll_1.1.0_amd64.deb
+	dpkg -i image-roll_1.1.0_amd64.deb
+Rust
+	cargo install image-roll

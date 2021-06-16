@@ -1,0 +1,14 @@
+https://mark.show/#/4
+https://mark.show/https://mark.show/demo.md#
+
+How to upload
+https://mark.show/5eeb54a4381f5#/
+
+Publish from command line
+	curl -F file=@filename.md https://mark.show
+or
+	cat filename.md | curl -F 'data=<-' https://mark.show
+or
+	echo "# Slide md text" | curl -F 'data=<-' https://mark.show
+
+You will get a link to slideshow

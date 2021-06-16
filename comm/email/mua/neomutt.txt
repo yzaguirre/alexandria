@@ -1,0 +1,32 @@
+Teaching an Old Dog New Tricks -- IRC: #neomutt on irc.libera.chat
+https://neomutt.org/
+https://github.com/neomutt/neomutt
+	wget https://github.com/neomutt/neomutt/releases/download/20210205/20210205-CHECKSUM
+	wget https://github.com/neomutt/neomutt/releases/download/20210205/20210205.tar.gz.sig
+	wget https://github.com/neomutt/neomutt/archive/refs/tags/20210205.tar.gz
+	sha256sum -c --ignore-missing 20210205-CHECKSUM
+	gpg --verify 20210205.tar.gz.sig
+	tar xf 20210205.tar.gz
+https://neomutt.org/dev/build
+Compile
+	apt install xsltproc libnotmuch-dev libidn11-dev liblua5.3-dev
+See ~/comm/email/mua/notmuch.txt
+The following NEW packages will be installed:
+xsltproc libgmime-3.0-0 libnotmuch-dev libnotmuch5
+autoconf automake autotools-dev libltdl-dev liblua5.3-dev libreadline-dev libsigsegv2 libtool libtool-bin m4
+	cd neomutt-20210205
+	./configure --with-mailpath=/home/david/documents/Mailbox --notmuch --with-notmuch=/usr/local/lib/notmuch --gnutls --sasl --kyotocabinet --gpgme --lua --mixmaster --disable-doc
+Using distribution notmuch
+	./configure --with-mailpath=/home/david/documents/Mailbox --notmuch --gnutls --sasl --kyotocabinet --gpgme --lua --mixmaster --disable-doc
+https://github.com/neomutt/neomutt/issues/828
+	make
+	sudo make install
+/usr/bin/neomutt
+/usr/share/locale/bg/LC_MESSAGES/neomutt.mo
+/etc/neomuttrc
+/usr/share/doc/neomutt/
+/usr/share/doc/neomutt
+/usr/libexec/neomutt
+
+Homebrew
+	brew install neomutt

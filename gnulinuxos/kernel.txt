@@ -1,0 +1,177 @@
+https://www.kernel.org/
+Compiling The Linux Kernel On Ubuntu & Debian
+https://www.youtube.com/watch?v=E4yRcmQqvWM
+Dependencies
+	sudo apt install build-essential rsync gcc bison flex libssl-dev libncurses5-dev libelf-dev
+The following NEW packages will be installed:
+bison flex libelf-dev libfl-dev libfl2
+
+Install current linux-headers and build-essential
+	apt -t stable install linux-headers-amd64
+5.12.10
+	wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.12.10.tar.xz
+	wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.12.10.tar.sign
+	wget https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.10.xz
+	wget https://cdn.kernel.org/pub/linux/kernel/v5.x/patch-5.12.10.sign
+	wget https://cdn.kernel.org/pub/linux/kernel/v5.x/incr/patch-5.12.9-10.xz
+	wget https://www.kernel.org/pub/linux/kernel/v5.x/incr/patch-5.12.9-10.sign
+Verify
+	gpg --keyserver hkp://keys.gnupg.net --recv-keys 6092693E
+	unxz linux-5.12.10.tar.xz
+	unxz patch-5.12.10.xz
+	unxz patch-5.12.9-10.xz
+	gpg --verify linux-5.12.10.tar.sign
+	gpg --verify patch-5.12.10.sign
+	gpg --verify patch-5.12.9-10.sign
+Unpack in /usr/src
+	tar xf linux-5.12.10.tar -C /usr/src
+	cd /usr/src/linux-5.12.10
+Apply a patch
+http://www.cyberciti.biz/faq/appy-patch-file-using-patch-command/
+https://www.kernel.org/doc/Documentation/applying-patches.txt
+	patch -p1 --dry-run patch-5.12.10
+Using -p1 here specifies that we want to patch inside the current directory, and --dry-run prevents any
+file changes from taking place - it just shows what would happen
+	patch -p1 patch-5.12.10
+	patch -p1 patch-5.12.9-10
+Configure the kernel with current kernel configuration file
+/boot/config-5.11.0-18-generic
+	cp /boot/config-$(uname -r) .config
+Make config file based on currently connected hardware of your computer
+If you have a Core i3/i5/i7 processor, for instance, you will want to
+choose the Core 2/newer Xeon option that eliminates all modules
+not currently loaded in memory.
+	make localmodconfig
+
+Once you have a configuration file in place, you need to tweak
+it to take the new options into account. There are a number of
+ways to do this, and for a simple update to a newer version
+the easiest option is to run
+	make oldconfig
+This prompts you for any changes between the current
+saved configuration and what is available in the new kernel.
+You normally have four options: y, m, n or ?. The first builds
+the option into the kernel, the second builds it as a loadable
+module, you have probably already guessed that n disables
+the option, while ? shows you some help text then asks the
+question again.
+
+The other options provide a graphical(ish)
+configuration program.
+	make menuconfig
+	make xconfig
+	make gconfig
+
+Once configured, start compile process (-j 8 for using 8 cores)
+	make deb-pkg -j 8
+Install newly compiled kernel
+	sudo dpkg -i linux-*.deb
+
+https://www.genbetadev.com/software-libre-y-licencias/programando-modulos-para-el-kernel-de-linux
+https://ask.fedoraproject.org/en/question/26555/how-to-get-kernel-source-code-for-386-203fc18x86_64/
+http://fedoraproject.org/wiki/Building_a_custom_kernel
+See LMI_196 page 92
+	dnf install kernel-devel kernel-headers
+	dnf download --source kernel
+	dnf install kernel
+	dnf install make gcc openssl-devel ncurses-devel
+	
+	unxz -c /usr/src/linux-config-4.9/config.amd64_none_amd64.xz > .config
+or
+	cp /boot/config-`uname -r`* .config
+	
+Further edit the config file
+	make menuconfig
+	
+	make -j4 # using four cpu threads
+	make modules_install install
+
+	mkdir hello
+	cd hello
+	vim hello.c
+#include <linux/module.h>       /* Needed by all modules */
+#include <linux/kernel.h>       /* Needed for KERN_INFO */
+#include <linux/init.h>         /* Needed for the macros */
+static int __init hello_start(void)
+{
+printk(KERN_INFO "Loading hello module...\n");
+printk(KERN_INFO "Hello world\n");
+return 0;
+}
+static void __exit hello_end(void)
+{
+printk(KERN_INFO "Goodbye Mr.\n");
+}
+module_init(hello_start);
+module_exit(hello_end);
+	vim Makefile
+obj-m = hello.o
+KVERSION = $(shell uname -r)
+all:
+        make -C '/lib/modules/$(KVERSION)/build' M=$(PWD) modules
+clean:
+        make -C '/lib/modules/$(KVERSION)/build' M=$(PWD) clean
+
+Now, compile
+	make
+
+http://arjunsreedharan.org/post/82710718100/kernel-101-lets-write-a-kernel
+
+Make a module
+Insert module
+	sudo insmod reverse.ko
+	dmesg | tail -1
+List modules
+	sudo lsmod
+Remove module
+	sudo rmmod reverse
+
+Once configured, you can compile and install the kernel and module like this:
+	make all -j 8
+Install the kernel modules
+	make modules_install
+At this point, you should see a directory named /lib/modules/5.12.10/ in your system.
+Install the new kernel on the system:
+	make install
+http://www.thegeekstuff.com/2013/06/compile-linux-kernel/
+The make install command will create the following files in the /boot directory.
+
+    vmlinuz-5.12.10 - The actual kernel. The compressed kernel image. This is loaded by Grub (the boot loader) and executed.
+    System.map-5.12.10 - The symbols exported by the kernel. A table of symbol names (for example, function names) and their addresses in memory. It's useful for debugging in case of kernel crashes.
+    initrd.img-5.12.10 - initrd image is temporary root file system used during boot process. An initial RAMdisk - a small root filesystem with essential drivers and utilities for booting the system (and mounting the real root filesystem from elsewhere).
+    config-5.12.10 - The kernel configuration file. A copy of the .config file generated when you ran make xconfig or one of the variants.
+
+The command "make install" will also update the /boot/grub/grub.cfg by default. So we don't need to manually edit the grub.cfg file.
+
+Clean the build files
+	make clean
+Still leaves .config and some other files in place.
+To reset the kernel sources to their original, pristine form, use
+	make mrproper
+After entering this, all temporary files and settings will be
+removed, just as if you had extracted a fresh kernel tarball.
+
+Create a kernel patch
+	diff -uprN linux-3.18.7/ linux-3.18.7-me/ > myfile.patch
+You can now compress the patch file and distribute it to
+others, and they can apply it using the instructions that have
+been described in the main text. If you've got something really
+cool to show and want to send it to a kernel developer, read
+Documentation/SubmittingPatches in the kernel source
+code first - it contains lots of useful tips.
+
+1. sudo update-initramfs -ck 3.9.3
+2. sudo update-grub
+After executing these commands, we will get initrd.img-5.12.10 in /boot directory and grub menu will be updated with new kernel boot options.
+
+Build a new initrd
+https://serverfault.com/questions/645566/a-new-version-of-boot-grub-menu-lst-is-available-when-upgrading-ubuntu-on-an
+Configure grub
+	update-grub2
+	grub-mkconfig
+
+Meltdown prep
+https://news.ycombinator.com/item?id=16107578
+make CONFIG_PAGE_TABLE_ISOLATION=y deb-pkg
+Remove old kernels in /boot
+https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot

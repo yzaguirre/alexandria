@@ -1,5 +1,7 @@
 https://www.brow.sh/
+https://github.com/browsh-org/browsh
 https://news.ycombinator.com/item?id=17487552
+https://www.reddit.com/r/linux/comments/ny7ne2/browsing_web_using_browsh_browsh/
 	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_amd64.deb
 	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_linux_arm64.deb
 	wget https://github.com/browsh-org/browsh/releases/download/v1.6.4/browsh_1.6.4_checksums.txt

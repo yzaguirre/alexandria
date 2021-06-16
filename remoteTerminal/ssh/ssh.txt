@@ -61,10 +61,21 @@ http://pentestmonkey.net/cheat-sheet/ssh-cheat-sheet
 ssh in a box
 	# service shellinabox restart
 SSH-AGENT
-add a key
-	$ ssh-add .ssh/cb64team
-list keys
-	$ ssh-add -l
+MacOS
+https://stackoverflow.com/questions/28692659/could-not-open-a-connection-to-your-authentication-agent-mac-os
+https://mytrashcode.com/open-connection-authentication-agent
+https://www.backarapper.com/add-ssh-keys-to-ssh-agent-on-startup-in-macos/
+	$(ssh-agent)
+https://superuser.com/questions/88470/how-to-use-mac-os-x-keychain-with-ssh-keys
+Add to ~/.ssh/config
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+Add a key to agent
+	ssh-add ~/.ssh/id_rsa
+	ssh-add -K ~/.ssh/id_rsa
+List keys
+	ssh-add -l
 Mensajes de Bievenida
 http://www.howtogeek.com/howto/ubuntu/change-ssh-welcome-banner-on-ubuntu/
 http://askubuntu.com/questions/100052/modify-the-ssh-welcome-message-to-include-system-ip-address
@@ -140,8 +151,10 @@ Give it rw permissions:
 
 Configure the server
 http://www.openbsd.org/cgi-bin/man.cgi?query=sshd_config&sektion=5
+🔒 Securing SSH Server: Configuration
+https://www.youtube.com/watch?v=k0kKbDDlLTY
 
-	# vim /etc/ssh/sshd_config
+	vim /etc/ssh/sshd_config
 
 Banner /etc/mensaje.ssh
 Banner /etc/issue.net
@@ -180,6 +193,10 @@ Delete old ssh host keys
 Debian or Ubuntu Linux Regenerate OpenSSH Host Keys
 	dpkg-reconfigure openssh-server
 	systemctl restart ssh
+MacOS reload
+https://superuser.com/questions/478035/command-line-ssh-restart-mac-osx-mountain-lion
+	sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+	sudo launchctl load /System/Library/LaunchDaemons/ssh.plist
 Get fingerprint
 	ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
 Remove all from the known_hosts on local machine, that belongs to remote host
@@ -194,3 +211,8 @@ View history file
 SCP
 https://stackoverflow.com/questions/16886179/scp-or-sftp-copy-multiple-files-with-single-command
 	scp your_username@remote.edu:/some/remote/directory/\{a,b,c\} ./
+
+SSH quoting
+https://www.chiark.greenend.org.uk/~cjwatson/blog/ssh-quoting.html
+https://news.ycombinator.com/item?id=27483077
+https://www.reddit.com/r/linux/comments/ny6jpo/ssh_quoting/

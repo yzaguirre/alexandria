@@ -1,0 +1,6 @@
+https://chromium-bsu.sourceforge.io
+https://sourceforge.net/projects/chromium-bsu/files/
+https://www.reddit.com/r/linux/comments/nscio8/tried_installing_chromium_ended_up_with_something/
+	apt install chromium-bsu
+The following NEW packages will be installed:
+chromium-bsu chromium-bsu-data fonts-uralic libalut0 libglc0 libglewmx1.13 libsdl2-image-2.0-0

@@ -2,13 +2,19 @@ https://medium.com/@sidneyliebrand/how-fzf-and-ripgrep-improved-my-workflow-61c7
 https://docs.rs/regex/1/regex/#syntax
 https://blog.burntsushi.net/ripgrep/
 https://github.com/BurntSushi/ripgrep/releases
-
+https://www.reddit.com/r/linux/comments/ny6h0d/ripgrep_1300/
+https://news.ycombinator.com/item?id=27491583
 	apt install ripgrep
-	wget https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
-	dpkg -i ripgrep_12.1.1_amd64.deb
+	wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+	dpkg -i ripgrep_13.0.0_amd64.deb
+Homebrew
+	brew install ripgrep
+Configuration file at
+~/.ripgreprc
 	
 By default, hidden files and directories are skipped.
 	rg --hidden
+	rg -.
 https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#manual-filtering-file-types
 	rg dbpass -rn -g '*.rs'
 Globs are matched case insensitively.

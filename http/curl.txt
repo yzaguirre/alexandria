@@ -22,8 +22,18 @@ http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXY
 	ALL_PROXY=socks5://bob:marley@localhost:12345 curl options
 https://stackoverflow.com/questions/14944067/curl-request-using-socks5-proxy-fails-when-using-php-but-works-through-the-comma
 	curl --socks5-hostname localhost:2001
-	
 
+Passwords
+https://smallstep.com/blog/command-line-secrets/
+	curl -u carl:password https://example.com:3000
+Better to use a .netrc file
+https://everything.curl.dev/usingcurl/netrc
+	curl -n https://example.com:3000
+	curl --netrc-file ~/.netrc https://example.com:3000
+	cat ~/.netrc
+machine example.com
+login daniel
+password qwerty
 
 http://orchestrate.io/
 curl https://api.orchestrate.io/v0/users/bigfoot \

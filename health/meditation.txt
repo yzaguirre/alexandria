@@ -1,2 +1,7 @@
 https://midorikocak.github.io/breathe
 https://www.reddit.com/r/webdev/comments/n6wydm/a_small_meditation_app_made_with_vanilla/
+
+The Tyranny of the Faceless Other
+Don't create for an imaginary group of people
+https://sarvasvkulpati.com/blog/the-faceless-other
+https://news.ycombinator.com/item?id=27433679

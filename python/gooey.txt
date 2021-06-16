@@ -1,0 +1,5 @@
+Turn (almost) any Python command line program into a full
+GUI application with one line
+https://github.com/chriskiehl/Gooey
+https://news.ycombinator.com/item?id=27490291
+	sudo -H pip3 install Gooey 
