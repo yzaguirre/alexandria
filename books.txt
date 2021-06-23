@@ -12,3 +12,7 @@ https://www.reddit.com/r/Entrepreneur/comments/nm51wm/just_launched_a_new_web_se
 
 Books for Effective Communication
 https://news.ycombinator.com/item?id=27408120
+
+How to Write a Programming Book
+https://cscalfani.medium.com/how-to-write-a-programming-book-76ab4f8a7071
+https://news.ycombinator.com/item?id=27537626

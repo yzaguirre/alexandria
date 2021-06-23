@@ -1,10 +1,26 @@
 https://irssi.org/
 https://github.com/irssi/irssi
-	wget https://github.com/irssi/irssi/releases/download/1.1.1/irssi-1.1.1.tar.gz
-	wget https://github.com/irssi/irssi/releases/download/1.1.1/irssi-1.1.1.tar.gz.asc
-	gpg --verify irssi-1.1.1.tar.gz.asc irssi-1.1.1.tar.gz
-	tar xf irssi-1.1.1.tar.gz
-	cd irssi-1.1.1
+	apt install irssi
+Compile
+https://stackoverflow.com/questions/17576911/cannot-find-lperl-doing-a-makefile-on-c
+	apt install libperl-dev
+	wget https://github.com/irssi/irssi/releases/download/1.2.3/irssi-1.2.3.tar.gz
+	wget https://github.com/irssi/irssi/releases/download/1.2.3/irssi-1.2.3.tar.gz.asc
+	gpg --verify irssi-1.2.3.tar.gz.asc irssi-1.2.3.tar.gz
+	tar xf irssi-1.2.3.tar.gz
+	cd irssi-1.2.3
 	./configure
-	make -j 2
+	make -j 12 # using 12 cores
 	sudo make install
+Homebrew
+	brew install irssi
+Config file at
+~/.irssi/config
+
+Switch between panes
+ALT+1
+ALT+2
+ALT+N
+
+Irssi - Terminal IRC Client - Who Needs a GUI to Chat!
+https://www.youtube.com/watch?v=gOg-V_-tZMo

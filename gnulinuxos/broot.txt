@@ -4,12 +4,12 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.5.1
+	git checkout v1.6.0
 	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.5.1/broot_1.5.1.zip
-	unzip broot_1.5.1.zip
+	wget https://github.com/Canop/broot/releases/download/v1.6.0/broot_1.6.0.zip
+	unzip broot_1.6.0.zip
 	sudo mv build/x86_64-linux/broot /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s broot br

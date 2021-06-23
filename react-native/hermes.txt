@@ -9,3 +9,5 @@ https://www.reddit.com/r/reactnative/comments/n147f0/bringing_hermes_to_ios_in_r
 https://www.reddit.com/r/reactnative/comments/n5e7jo/our_app_is_70_faster_to_load_with_hermes/
 
 https://www.reddit.com/r/reactnative/comments/n9wxs5/enabling_hermes_on_ios_cut_our_load_time_in_half/
+
+https://callstack.com/blog/hermes-performance-on-ios/

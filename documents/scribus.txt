@@ -1,0 +1,12 @@
+https://www.scribus.net/
+	apt install scribus
+1.5.6.1+dfsg-2build2
+The following NEW packages will be installed:
+blt fonts-dejavu icc-profiles-free libcoin80c libcollada-dom2.5-dp0 libopenscenegraph161 libopenthreads21 libpodofo0.9.7 libqxp-0.0-0 libzmf-0.0-0
+python3-tk scribus scribus-data tk8.6-blt2.5
+
+Ubuntu
+	sudo add-apt-repository ppa:scribus/ppa
+	sudo apt install scribus
+Homebrew
+	brew install scribus

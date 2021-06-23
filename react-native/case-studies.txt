@@ -84,3 +84,20 @@ https://www.reddit.com/r/reactnative/comments/nl17ke/anyone_tried_making_anythin
 
 https://github.com/functionland/photos
 https://www.reddit.com/r/reactnative/comments/nrjr3z/google_photos_open_source_alternative_in_react/
+
+https://www.reddit.com/r/reactnative/comments/nzrwnk/i_created_a_gmail_mobile_app_clone_using/
+https://github.com/princewillIroka/gmail_clone
+
+https://www.reddit.com/r/reactnative/comments/o0bwr8/im_tired_of_seeing_clones_everyday_what_is_your/
+https://www.zaycare.com/
+https://www.4bagr.app/
+https://mymories.de/
+https://onthisspot.ca/
+https://fastrhymes.com/
+
+https://github.com/jsxclan/musicont
+https://www.reddit.com/r/reactnative/comments/o3f00e/musicont_music_player_as_been_released_on_github/
+
+https://datingapppro.com/
+
+https://codecanyon.net/item/store-manager-react-native-application-for-wordpress-woocomerce/28455094

@@ -136,11 +136,13 @@ who is occupying port 60001
 	lsof -i :80
 	lsof -i :80 | grep LISTEN
 
-Printe directory tree
 Combinando herramientas
 http://systembash.com/content/one-line-linux-command-to-print-out-directory-tree-listing/
 	ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' \
 -e 's/^/ /' -e 's/-/|/'
+
+Print directory tree
+http://mama.indstate.edu/users/ice/tree/
 http://www.cyberciti.biz/faq/linux-show-directory-structure-command-line/
 	tree /VMs/ISO
 only directories

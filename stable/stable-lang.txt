@@ -1,0 +1,4 @@
+Stabel: A pure, concatenative and statically typed programming language
+https://www.stabel-lang.org/
+https://fossils.stabel-lang.org/compiler/technote/ac09a67207a9d59053492364dc586bc263ef71cf
+https://news.ycombinator.com/item?id=27500975

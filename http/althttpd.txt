@@ -1,0 +1,3 @@
+Althttpd: Simple webserver in a single C file
+https://sqlite.org/althttpd/doc/trunk/althttpd.md
+https://news.ycombinator.com/item?id=27431910

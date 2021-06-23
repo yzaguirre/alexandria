@@ -1,0 +1,27 @@
+aria2 is a lightweight multi-protocol & multi-source,
+cross platform download utility operated in command-line.
+It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
+https://aria2.github.io
+https://github.com/aria2/aria2
+	apt install aria2
+Homebrew
+	brew install aria2
+
+Windows
+An Aria2 GUI for Windows & Linux & MacOS
+https://aria-ng.xmader.com/
+https://github.com/Xmader/aria-ng-gui
+	scoop bucket add extras
+	scoop install aria-ng-gui
+	AriaNgGUI.exe
+Configuration
+Windows
+%APPDATA%/aria-ng-gui/aria2.conf
+
+Usage
+	aria2c http://example.org/mylinux.iso
+	aria2c http://example.org/mylinux.torrent
+	aria2c 'magnet:?xt=urn:btih:248D0A1CD08284299DE78D5C1ED359BB46717D8C'
+	aria2c http://example.org/mylinux.metalink
+Download URIs found in text file:
+	aria2c -i uris.txt

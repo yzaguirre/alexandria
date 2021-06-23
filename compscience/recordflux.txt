@@ -1,0 +1,4 @@
+Formal message specification and generation of verifiable
+binary parsers and message generators
+https://github.com/Componolit/RecordFlux
+	sudo -H pip3 install RecordFlux

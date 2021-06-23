@@ -52,6 +52,10 @@ Open a URL
 	open "https://www.davidyzaguirre.com"
 Send standard input to default editor
 	ls | open -f
+More examples
+https://news.ycombinator.com/item?id=27529555
+	open -a "Google Chrome" "https://duckduckgo.com/?q=umbrella"
+	open -a "Google Chrome" "https://www.google.com/search?q=umbrella"
 
 Sensible macOS Defaults
 https://github.com/mathiasbynens/dotfiles/blob/master/.macos

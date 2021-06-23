@@ -1,1 +1,5 @@
+The open and composable observability and data visualization platform.
+Visualize metrics, logs, and traces from multiple sources.
 https://grafana.com/
+https://github.com/grafana/grafana
+https://news.ycombinator.com/item?id=27433552

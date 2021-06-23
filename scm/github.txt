@@ -121,6 +121,8 @@ https://gist.github.com/marchampson/4655798
 https://developer.github.com/changes/2020-02-14-deprecating-password-auth/
 https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
 	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+Add collaborator as read-only
+	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id' -d '{"permission":"pull"}'
 https://github.com/my_gh_userid/my_repo/invitations
 Remove a collaborator
 	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
@@ -130,7 +132,8 @@ Check if user permissions as collaborator
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id/permission'
 List collaborators
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators'
-
+Change repo properties like description
+	curl -i -H 'Authorization: token my_access_token' -X PATCH -H 'Accept: application/vnd.github.v3+json' 'https://api.github.com/repos/my_gh_userid/my_repo' -d '{"description":"This Project Rocks!"}'
 Delete a repo
 	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo'
 

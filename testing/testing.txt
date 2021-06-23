@@ -1,2 +1,6 @@
 https://ali-haydar.medium.com/lessons-learned-about-software-quality-or-delivery-3a05ca2e4609
 https://news.ycombinator.com/item?id=24898601
+
+What the Fastly outage can teach us about writing error messages
+https://onlineornot.com/what-fastly-outage-can-teach-about-writing-error-messages
+https://news.ycombinator.com/item?id=27443519

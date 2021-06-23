@@ -6,6 +6,7 @@ Install
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew install wget
 Homebrew installs packages to their own directory and then symlinks their files into /usr/local.
+	brew cask install firefox
 
 Make a dump
 	brew bundle dump --describe
@@ -25,3 +26,8 @@ Edit the formula
 
 Remove cache
 	brew --cache
+
+Open homepage
+	brew cask home pycharm
+Homebrew Tutorial: Simplify Software Installation on Mac Using This Package Manager
+https://www.youtube.com/watch?v=SELYgZvAZbU

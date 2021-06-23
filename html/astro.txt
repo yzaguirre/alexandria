@@ -1,0 +1,3 @@
+Astro: Ship Less JavaScript
+https://astro.build/blog/introducing-astro
+https://news.ycombinator.com/item?id=27440553

@@ -1,3 +1,7 @@
+An interactive introduction to Awk
+https://www.n8ta.com/projects/awk.html
+https://news.ycombinator.com/item?id=27437401
+
 Explain the following statement:
 ls -lhrS | grep -i $USER | tail -3 | awk '{ print $5, $9; }'
 Answer:
@@ -28,3 +32,6 @@ awk '/Mark/{printf("%s made more than 50 dollars\n", $1)}'
 awk '$1 == "Mark" || $1 == "Beth" {printf("%s made more than 50 dollars\n", $1)}'
 
 awk 'NF > 3' junk.data
+
+Learning Awk Is Essential For Linux Users
+https://www.youtube.com/watch?v=9YOZmI-zWok

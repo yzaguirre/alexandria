@@ -1,0 +1,25 @@
+Free and open source video editor,
+based on MLT Framework and KDE Frameworks 5
+https://kdenlive.org
+https://invent.kde.org/multimedia/kdenlive
+	apt install kdenlive
+The following NEW packages will be installed:
+breeze-icon-theme catdoc dvdauthor dvgrab frei0r-plugins genisoimage gstreamer1.0-plugins-bad kaccounts-providers kdenlive kdenlive-data kinit
+libaccounts-qt5-1 libappimage0 libebur128-1 libepub0 libfluidsynth2 libgavl1 libgupnp-igd-1.0-4 libinstpatch-1.0-2 libkaccounts2 libkf5bluezqt-data
+libkf5bluezqt6 libkf5filemetadata-bin libkf5filemetadata-data libkf5filemetadata3 libkf5newstuff-data libkf5newstuff5 libkf5newstuffcore5
+libkf5notifyconfig-data libkf5notifyconfig5 libkf5purpose-bin libkf5purpose5 libltc11 libmjpegutils-2.1-0 libmlt++3 libmlt-data libmlt6 libmodplug1
+libmovit8 libmpeg2encpp-2.1-0 libmplex2-2.1-0 libnice10 libofa0 libopenni2-0 libqt5webengine5 libquicktime2 librtaudio6 librttr-core0.9.6
+libsignon-plugins-common1 libsignon-qt5-1 libsoundtouch1 libsox-fmt-alsa libsox-fmt-base libsox3 libspandsp2 libsquashfuse0 libsrtp2-1 libvo-aacenc0
+libwildmidi2 melt oxygen-icon-theme qml-module-org-kde-bluezqt qml-module-org-kde-newstuff qml-module-org-kde-purpose qml-module-qtwebengine
+qml-module-ubuntu-onlineaccounts signon-plugin-oauth2 swh-plugins timgm6mb-soundfont
+
+Ubuntu
+	sudo add-apt-repository ppa:kdenlive/kdenlive-stable
+	sudo apt install kdenlive
+The following NEW packages will be installed:                                                                                                                  
+breeze breeze-cursor-theme breeze-icon-theme catdoc frei0r-plugins kaccounts-providers kde-style-breeze kdenlive kdenlive-data kinit kwin-style-breeze      
+libaccounts-qt5-1 libappimage0 libebur128-1 libepub0 libgavl1 libkaccounts2 libkdecorations2-5v5 libkdecorations2private8 libkf5bluezqt-data libkf5bluezqt6 
+libkf5filemetadata-bin libkf5filemetadata-data libkf5filemetadata3 libkf5newstuff-data libkf5newstuff5 libkf5newstuffcore5 libkf5notifyconfig-data          
+libkf5notifyconfig5 libkf5purpose-bin libkf5purpose5 libkf5style5 libmlt++3 libmlt-data libmlt6 libmovit8 libqt5networkauth5 libqt5webengine5 librtaudio6    
+libsignon-plugins-common1 libsignon-qt5-1 libsox-fmt-alsa libsox-fmt-base libsox3 libsquashfuse0 melt qml-module-org-kde-bluezqt                            
+qml-module-org-kde-newstuff qml-module-org-kde-purpose qml-module-qtwebengine qml-module-ubuntu-onlineaccounts signon-plugin-oauth2

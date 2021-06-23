@@ -1,3 +1,5 @@
+https://www.chromium.org/
+
 https://www.reddit.com/r/linux/comments/l1xzah/multiple_distros_considering_removal_of_chromium/
 Google's software development mentality is everything should be run isolated.
 

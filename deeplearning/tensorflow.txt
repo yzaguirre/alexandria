@@ -1,3 +1,6 @@
+https://www.tensorflow.org/
+https://www.freecodecamp.org/learn/machine-learning-with-python/
+
 # Installation
 	sudo -H pip3 install tensorflow
 

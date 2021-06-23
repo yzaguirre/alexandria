@@ -1,0 +1,75 @@
+JPEG XL
+https://jpeg.org/jpegxl/
+https://gitlab.com/wg1/jpeg-xl
+https://github.com/libjxl/libjxl
+
+https://jpegxl.info/
+https://news.ycombinator.com/item?id=27577328
+Media type: image/jxl
+
+Compile
+https://github.com/libjxl/libjxl/blob/main/doc/developing_in_debian.md
+	sudo apt install cmake pkg-config libbrotli-dev
+The following NEW packages will be installed:
+cmake cmake-data libbrotli-dev libjsoncpp24 librhash0
+	sudo apt install libgif-dev libjpeg-dev libopenexr-dev libpng-dev libwebp-dev
+The following NEW packages will be installed:
+libgif-dev libilmbase-dev libjpeg-dev libopenexr-dev libwebp-dev
+	sudo apt install clang
+The following NEW packages will be installed:
+binfmt-support clang clang-12 lib32gcc-s1 lib32stdc++6 libc6-i386 libclang-common-12-dev libclang-cpp12 libclang1-12 libllvm12 libobjc-10-dev libobjc4
+libomp-12-dev libomp5-12 libpfm4 libz3-4 libz3-dev llvm-12 llvm-12-dev llvm-12-linker-tools llvm-12-runtime llvm-12-tools
+	export CC=clang-12 CXX=clang++-12
+For man pages
+	apt install asciidoc
+Download source code
+	wget https://gitlab.com/wg1/jpeg-xl/-/archive/v0.3.7/jpeg-xl-v0.3.7.tar.gz
+or	wget https://github.com/libjxl/libjxl/archive/refs/tags/v0.3.7.tar.gz
+	tar xf jpeg-xl-v0.3.7.tar.gz
+	cd jpeg-xl-v0.3.7
+	./deps.sh
+	mkdir build
+	cd build
+	cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF ..
+	cmake --build . -- -j$(nproc)
+The encoder/decoder tools will be available in the build/tools directory.
+To encode a source image to JPEG XL with default settings:
+	build/tools/cjxl input.png output.jxl
+For more settings run
+	build/tools/cjxl --help
+or for a full list of options run
+	build/tools/cjxl -v -v --help
+To decode a JPEG XL file run:
+	build/tools/djxl input.jxl output.png
+When possible cjxl/djxl are able to read/write the following
+image formats: .exr, .gif, .jpeg/.jpg, .pfm, .pgm/.ppm, .pgx, .png.
+Install
+	sudo cmake --install .
+/usr/local/lib/libhwy.a
+/usr/local/include/contrib/image/image.h
+/usr/local/include/contrib/math/math-inl.h
+/usr/local/include/hwy
+/usr/local/lib/pkgconfig/libhwy.pc
+/usr/local/lib/pkgconfig/libhwy-test.pc
+/usr/local/lib/libjxl.a
+/usr/local/lib/libjxl_dec.a
+/usr/local/lib/libjxl.so.0.3.7
+/usr/local/lib/libjxl.so.0
+/usr/local/lib/libjxl.so
+/usr/local/lib/pkgconfig/libjxl.pc
+/usr/local/lib/libjxl_threads.a
+/usr/local/lib/libjxl_threads.so.0.3.7
+/usr/local/lib/libjxl_threads.so.0
+/usr/local/lib/libjxl_threads.so
+/usr/local/lib/pkgconfig/libjxl_threads.pc
+/usr/local/include/jxl
+/usr/local/bin/cjxl
+/usr/local/bin/djxl
+/usr/local/bin/benchmark_xl
+
+You may need to configure the dynamic linker run-time bindings:
+	sudo ldconfig /usr/local/lib
+
+JPEG XL would be Turing-complete
+https://dbohdan.com/wiki/jpeg-xl?
+https://news.ycombinator.com/item?id=27559748

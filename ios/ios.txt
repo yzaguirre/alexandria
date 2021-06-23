@@ -61,3 +61,6 @@ objectVersion :51
 Constraints on Image View
 How to scale a view based on device size using Auto Layout in Interface Builder
 https://www.youtube.com/watch?v=vegamwo6SvU
+
+Launch Screens in iOS 14
+https://www.youtube.com/watch?v=xHXIwlqhQwY

@@ -313,3 +313,21 @@ Zip file
 https://stackoverflow.com/questions/3423540/zip-latest-committed-changes-only
 	git archive -o ../latest.zip some-commit
 	git archive -o ../latest.zip some-commit $(git diff --name-only earlier-commit some-commit)
+
+Bundle a repository
+https://git-scm.com/docs/git-bundle
+https://dev.to/princewilliroka/how-to-bundle-export-a-git-repo-as-a-single-file-without-losing-the-git-history-3111
+https://stackoverflow.com/questions/11792671/how-to-git-bundle-a-complete-repo
+Every branch
+	git bundle create reponame.bundle --all
+Just the main branch
+	git bundle create reponame.bundle main
+Unbundle with
+	git clone reponame.bundle
+
+Git undo: We can do better
+https://blog.waleedkhan.name/git-undo/
+https://news.ycombinator.com/item?id=27579701
+Never use `git checkout`, but `git switch`
+and "git restore` that were introduced in git 2.15 IIRC.
+They are much less confusing and error prone.

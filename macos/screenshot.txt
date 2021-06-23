@@ -1,1 +1,25 @@
+Whole Screen
+	Ctrl+Shift+F3
+A rectangle
+	Ctrl+Shift+F4
+A window
+	Ctrl+Shift+F4, space
+Center
+	Ctrl+Shift+F4, option
 Ctrl+Shift+F5
+
+CLI
+Capture with cursor, 5 second timer and save it in ~/Desktop
+	screencapture -C -T 5 ~/Desktop/ss.png
+Change default settings
+	defaults write com.apple.screencapture type jpg
+	defaults write com.apple.screencapture type png
+	defaults write com.apple.screencapture location ~/Desktop/Screenshots/
+Restart the system UI server in order for changes to take place
+	killall SystemUIServer
+
+Open Preview
+	File -> Take Screen Shot
+
+Mac Tip: Ways to perform Screen Capturing and Screenshots
+https://www.youtube.com/watch?v=VmQq1o1taOA

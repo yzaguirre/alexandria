@@ -1,0 +1,4 @@
+A small and fast programming language.
+https://thakeenathees.github.io/pocketlang/
+https://github.com/ThakeeNathees/pocketlang
+https://news.ycombinator.com/item?id=27588842

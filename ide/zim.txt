@@ -1,1 +1,7 @@
 https://www.zim-wiki.org/
+	apt install zim
+DEB
+	wget https://zim-wiki.org/downloads/zim_0.73.5_all.deb
+	dpkg -i zim_0.73.5_all.deb
+Homebrew
+	brew install zim

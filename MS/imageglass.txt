@@ -1,0 +1,24 @@
+A lightweight, versatile image viewer
+https://imageglass.org
+https://github.com/d2phap/ImageGlass
+	wget https://github.com/d2phap/ImageGlass/releases/download/8.2.6.6/ImageGlass_8.2.6.6_x64.msi
+	sha1sum ImageGlass_8.2.6.6_x64.msi
+15fed676bce43befe21bcb8141409a356a87f1da
+	explorer ImageGlass_8.2.6.6_x64.msi
+Scoop
+	scoop bucket add extras
+	scoop install imageglass
+
+Command line
+https://imageglass.org/docs/command-line-utilities
+https://github.com/d2phap/ImageGlass/blob/prod/Source/Ultilities/igcmd/Program.cs
+Set desktop wallpaper
+	igcmd.exe setwallpaper <string imgPath> [int style]
+Display Check for update dialog
+	igcmd.exe igupdate
+Check for update without GUI
+	igcmd.exe igautoupdate
+Display First-launch configurations dialog
+	igcmd.exe firstlaunch
+Set lock screen image
+	igcmdWin10.exe setlockimage

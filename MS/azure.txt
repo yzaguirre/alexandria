@@ -27,3 +27,5 @@ Listing all resource groups
 	az group list
 https://adamtheautomator.com/azure-pipelines-tutorial/
 
+Azure Storage Walk-through | Azure Disks, Managed Disks and Disk Performance
+https://www.youtube.com/watch?v=KIys1MKAvSQ

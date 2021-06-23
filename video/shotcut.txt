@@ -1,13 +1,26 @@
+cross-platform (Qt), open-source (GPLv3) video editor
 https://shotcut.org
-Windows
-	scoop bucket add extras
-	scoop install shotcut
+https://github.com/mltframework/shotcut
 http://www.shotcut.org/bin/view/Shotcut/Download
 https://www.shotcut.org/download/
 https://news.ycombinator.com/item?id=10009472
-	wget https://github.com/mltframework/shotcut/releases/download/v16.07/shotcut-debian8-x86_64-160701.tar.bz2
-	tar xf shotcut-debian8-x86_64-160701.tar.bz2 -C /opt
+
+	apt install shotcut
+The following NEW packages will be installed:
+libjs-three shotcut shotcut-data
+
+Windows
+	scoop bucket add extras
+	scoop install shotcut
+Linux
+	wget https://github.com/mltframework/shotcut/releases/download/v21.05.18/shotcut-linux-x86_64-210518.txz
+	wget https://github.com/mltframework/shotcut/releases/download/v21.05.18/sha256sums.txt
+	wget https://github.com/mltframework/shotcut/releases/download/v21.05.18/md5sums.txt
+	sha256sum -c --ignore-missing sha256sums.txt
+	md5sum -c --ignore-missing md5sums.txt
+	tar xf shotcut-linux-x86_64-210518.txz -C /opt
 	ln -s /opt/Shotcut/Shotcut.desktop /usr/local/share/applications/
 	ln -s /opt/Shotcut/Shotcut.app/shotcut /usr/local/bin
 
-	
+Homebrew
+	brew install shotcut

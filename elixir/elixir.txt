@@ -31,3 +31,7 @@ https://news.ycombinator.com/item?id=27430806
 Good and Bad Elixir
 https://keathley.io/blog/good-and-bad-elixir.html
 https://news.ycombinator.com/item?id=27463725
+
+Onboarding to Elixir
+https://underjord.io/onboarding-to-elixir.html
+https://news.ycombinator.com/item?id=27591079

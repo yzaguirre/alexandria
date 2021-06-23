@@ -1,0 +1,4 @@
+https://www.foundationdb.org/
+https://news.ycombinator.com/item?id=27424605
+See ~/Libros/Progra/DB/fdb-paper.pdf
+https://apple.github.io/foundationdb/data-modeling.html

@@ -5,10 +5,18 @@ Windows
 	scoop bucket add extras
 	scoop install gimp
 Or
-	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.18-setup-2.exe
-	sha256sum gimp-2.10.18-setup-2.exe
-bf6ce59587e63e1e8bab923e7dfdaa0f2c8bd3ac4d0ced602f3c063f9e32465c
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.24-setup-3.exe
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/SHA1SUMS
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/SHA256SUMS
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/windows/SHA512SUMS
+	sha1sum -c --ignore-missing SHA1SUMS
+	sha256sum -c --ignore-missing SHA256SUMS
+	sha512sum -c --ignore-missing SHA512SUMS
+	sha256sum gimp-2.10.24-setup-3.exe
+5e9eabe5739523a9fc347b4614d919418f3335e7aab082a65f71705421e85e04
 	explorer gimp-2.10.18-setup-2.exe
+Homebrew
+	brew install gimp
 http://www.taringa.net/post/linux/18441277/Usando-los-efectos-de-Instagram-en-GIMP.html
 http://www.wikihow.com/Adjust-Brightness-in-GIMP
 Invert colors https://www.youtube.com/watch?v=GDvqTW0WyYs

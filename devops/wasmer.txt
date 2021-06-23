@@ -1,0 +1,3 @@
+https://wasmer.io/posts/wasmer-2.0
+https://github.com/wasmerio/wasmer
+https://news.ycombinator.com/item?id=27537541

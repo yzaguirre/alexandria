@@ -4,6 +4,27 @@ https://github.com/ImageMagick/ImageMagick
 MacOs
 	brew install ghostscript
 	brew install imagemagick
+Compile
+https://imagemagick.org/script/install-source.php
+https://imagemagick.org/script/advanced-linux-installation.php
+https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
+https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
+https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
+	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev
+	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-1.tar.gz
+	tar xf 7.1.0-1.tar.gz
+	cd ImageMagick-7.1.0-1
+	./configure --with-modules
+If using jpeg-xl. See ~/images/jpegxl.txt
+https://github.com/ImageMagick/ImageMagick/issues/3236
+https://github.com/ImageMagick/ImageMagick/issues/3528
+	./configure --with-modules --without-utilities --with-jxl
+	make -j 12 # twelve cores
+	sudo make install
+You may need to configure the dynamic linker run-time bindings:
+	sudo ldconfig /usr/local/lib
+Finally, verify the ImageMagick install worked properly, type
+	convert logo: logo.gif
 
 Concatenate images
 Join current images vertically or horizontally
@@ -14,6 +35,10 @@ Vertical
 	convert -append in-*.jpg out.jpg
 Horizontal
 	convert +append in-*.jpg out.jpg
+
+SVG to PNG
+	convert drawing.svg -size 2000x3000 drawing.png
+	convert -density 300 -background none butterfly.svg butterfly.png
 
 Add a image
 https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one-with-imagemagick-command-line
@@ -37,7 +62,10 @@ Available fonts
 	convert -list font
 or
 	convert -list type
+Available formats
+	convert -list format
 
+See ~/macos/sips.txt
 Shrink 200 .png files to 50%
 	for f in *.png; do mogrify -resize 50% $f; done
 Convert those files to another format

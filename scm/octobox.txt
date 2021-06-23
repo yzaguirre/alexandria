@@ -1,0 +1,6 @@
+Untangle your GitHub Notifications
+https://octobox.io
+https://github.com/octobox/octobox
+
+Install
+https://github.com/octobox/octobox/blob/master/docs/INSTALLATION.md

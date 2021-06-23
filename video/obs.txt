@@ -1,6 +1,17 @@
 https://obsproject.com/
 https://github.com/jp9000/obs-studio
 https://github.com/jp9000/obs-studio/blob/master/INSTALL
+	apt install obs-studio
+Homebrew
+	brew install obs
+Ubuntu
+	sudo apt install ffmpeg v4l2loopback-dkms
+The following NEW packages will be installed:
+dctrl-tools dkms v4l2loopback-dkms
+	sudo add-apt-repository ppa:obsproject/obs-studio
+	sudo apt install obs-studio
+The following NEW packages will be installed:
+libfdk-aac2 obs-studio
 
 Linux (Manually compiling on Debian-based distros)
 Set up a build environment:

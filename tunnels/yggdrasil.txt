@@ -1,0 +1,5 @@
+Yggdrasil - Early-stage implementation of an end-to-end encrypted IPv6 network
+An experiment in scalable routing as an encrypted IPv6 overlay network
+https://yggdrasil-network.github.io
+https://github.com/yggdrasil-network/yggdrasil-go
+https://news.ycombinator.com/item?id=27577201

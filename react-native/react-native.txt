@@ -423,9 +423,14 @@ https://www.reddit.com/r/reactnative/comments/nvelv2/monterrey_and_ios15_support
 
 https://www.pixelcrayons.com/blog/react-native-0-64-2-released-discovering-and-upgrading-whats-new
 https://www.reddit.com/r/reactnative/comments/nwk922/react_native_0642_released_discovering_and/
+https://react-native-community.github.io/upgrade-helper/?from=0.63.4&to=0.64.2
 
 https://github.com/facebook/hermes/issues/499
 App size with hermes_enabled => false: 113.4mb
 App size with hermes_enabled => true: 540.19mb
 https://github.com/FormidableLabs/victory-native/issues/653
 Victory needs a resolution for d3-array for RN 0.64.2 upgrade
+
+Charts
+https://www.reddit.com/r/reactnative/comments/nwd15p/how_would_i_go_about_recreating_a_similar_chart/
+https://blog.logrocket.com/the-top-8-react-native-chart-libraries-for-2021/

@@ -102,3 +102,7 @@ iface lo inet loopback
 https://wiki.debian.org/NetworkManager
 modify /etc/NetworkManager/NetworkManager.conf
 	/etc/init.d/network-manager restart
+
+Ditching OpenPGP, a new approach to signing APT repositories
+https://wiki.debian.org/Teams/Apt/Spec/AptSign
+https://news.ycombinator.com/item?id=27586146

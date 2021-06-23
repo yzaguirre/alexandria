@@ -6,4 +6,11 @@ x	pod install
 
 https://github.com/talut/rn-secure-storage
 
+A Persistent, Secure, And Local Database For React-Native
+https://mattperls-code.github.io/react-native-vault/#/
+https://github.com/mattperls-code/react-native-vault
+https://www.reddit.com/r/reactnative/comments/o3rc7h/react_native_vault_a_persistent_and_secure_local/
+	yarn install react-native-vault
+	yarn pod
+
 See ~/ios/keychain.txt

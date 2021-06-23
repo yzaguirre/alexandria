@@ -16,6 +16,15 @@ https://github.com/zo0r/react-native-push-notification
 https://dev.to/edmondso006/react-native-local-ios-and-android-notifications-2c58
 	yarn add react-native-push-notification
 
+React Native #18: Local Push Notification
+https://www.youtube.com/watch?v=Sx-KapT-_DU
+
+React Native - Local and Schedule Push Notification on both Android and IOS.
+https://www.youtube.com/watch?v=xSOr_u3Ev1s
+
+React Native Tutorial #28 (2021) - Local & Scheduled Push Notification
+https://www.youtube.com/watch?v=RgN1TEnULVQ
+
 https://onesignal.com/mobile-push
 https://github.com/OneSignal/react-native-onesignal
 

@@ -51,6 +51,7 @@ React Native Splash Screen IOS. React Native Beginner Project Course.#51
 https://www.youtube.com/watch?v=5_M8eoMuXaE
 
 Show a bootsplash during app startup. Hide it when you are ready.
+https://dev.to/princewilliroka/how-to-add-splashscreen-to-a-reactnative-app-with-react-native-bootsplash-22oj
 https://github.com/zoontek/react-native-bootsplash
 	yarn add react-native-bootsplash
 	yarn react-native generate-bootsplash assets/bootsplash_logo_original.png \

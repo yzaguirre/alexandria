@@ -29,3 +29,13 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+Alias
+	alias
+Global alias
+	alias -g c=cd
+	unalias \c
+Edit config file
+	vim ~/.zshrc
+alias zshconfig="nvim ~/.zshrc"
+	source ~/.zshrc
