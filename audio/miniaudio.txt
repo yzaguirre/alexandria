@@ -1,0 +1,3 @@
+Single file audio playback and capture library written in C.
+https://miniaud.io
+https://github.com/mackron/miniaudio

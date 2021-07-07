@@ -21,4 +21,13 @@ https://news.ycombinator.com/item?id=26326599
 
 https://icones.netlify.app/
 
-https://iconstore.co/category/technology/
+https://iconstore.co/category/technology/ 
+
+https://icomoon.io/app/#/select
+
+Iconic fonts scissors
+https://fontello.com/
+https://github.com/fontello/fontello
+https://github.com/paulyoung/fontello-cli
+	npm install -g fontello-cli
+	fontello-cli --help

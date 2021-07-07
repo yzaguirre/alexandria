@@ -1,0 +1,4 @@
+http://www.deeplearning.net/software/theano/
+Theano is a Python library that allows one to define and evaluate mathematical
+expressions involving multi-dimensional arrays efficiently.
+	sudo -H pip3 install theano

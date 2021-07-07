@@ -20,3 +20,7 @@ https://danrl.com/blog/2017/google-kubernetes-engine-and-lets-encrypt/
 
 https://blog.levine.sh/14058/wireguard-on-k8s-road-warrior-style-vpn-server
 https://news.ycombinator.com/item?id=23003138
+
+Everything Useful I Know About kubectl
+https://www.atomiccommits.io/everything-useful-i-know-about-kubectl/
+https://news.ycombinator.com/item?id=27737064

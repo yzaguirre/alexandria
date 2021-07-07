@@ -1,6 +1,6 @@
 Count your code, quickly.
 https://github.com/XAMPPRocky/tokei
-	wget https://github.com/XAMPPRocky/tokei/releases/download/v12.1.0/tokei-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/XAMPPRocky/tokei/releases/download/v12.1.2/tokei-x86_64-unknown-linux-gnu.tar.gz
 	tar xf tokei-x86_64-unknown-linux-gnu.tar.gz
 Windows
 	scoop install tokei

@@ -2,3 +2,16 @@ https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-screen-snippin
 https://www.askvg.com/tip-different-ways-to-open-screen-snip-sketch-in-windows-10/
 	explorer ms-screenclip:
 	explorer ms-screensketch:
+
+ShareX lets you capture or record any area of your screen and share it
+with a single press of a key. It also allows uploading images,
+text or other types of files to many supported destinations
+you can choose from.
+https://getsharex.com
+https://github.com/ShareX/ShareX
+Scoop
+	scoop bucket add extras
+	scoop install sharex
+
+The Best Screenshot Tool | ShareX
+https://www.youtube.com/watch?v=dGDWgl7MxMM

@@ -3,3 +3,6 @@ https://www.logilab.org/blogentry/6546148
 https://www.reddit.com/r/debian/comments/2brmp2/installing_debian_jessie_in_uefi_mode/
 https://blog.getreu.net/projects/legacy-to-uefi-boot/
 https://help.ubuntu.com/community/UEFI
+
+https://www.reddit.com/r/linux/comments/o8dius/are_the_requirements_for_windows_11_the_final/
+	sbsign --key /path/to/key --cert /path/to/cert --output /boot/EFI/signed_windows.efi /boot/EFI/windows.efi

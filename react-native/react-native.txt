@@ -434,3 +434,5 @@ Victory needs a resolution for d3-array for RN 0.64.2 upgrade
 Charts
 https://www.reddit.com/r/reactnative/comments/nwd15p/how_would_i_go_about_recreating_a_similar_chart/
 https://blog.logrocket.com/the-top-8-react-native-chart-libraries-for-2021/
+
+https://tsh.io/blog/react-native-latest-version/

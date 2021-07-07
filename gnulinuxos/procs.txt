@@ -1,5 +1,5 @@
 https://github.com/dalance/procs
-	wget https://github.com/dalance/procs/releases/download/v0.10.7/procs-v0.10.7-x86_64-lnx.zip
-	unzip procs-v0.10.7-x86_64-lnx.zip -d /usr/local/bin
+	wget https://github.com/dalance/procs/releases/download/v0.11.9/procs-v0.11.9-x86_64-lnx.zip
+	unzip procs-v0.11.9-x86_64-lnx.zip -d /usr/local/bin
 Windows
 	scoop install procs

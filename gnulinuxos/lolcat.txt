@@ -1,8 +1,11 @@
 https://github.com/busyloop/lolcat
 https://twitter.com/bobbybobson4888/status/1399249162420559872
-	apt install lolcat
+	apt install lolcat cowsay fortune sl toilet figlet cmatrix rig
 Homebrew
-	brew install lolcat cowsay fortune
+	brew install lolcat cowsay fortune sl toilet figlet cmatrix rig
 Usage
 	git status | cowsay | lolcat
 	fortune | cowsay | lolcat
+
+Other Useful Terminal Commands - lolcat, toilet, ponysay and more!
+https://www.youtube.com/watch?v=coXb-2VxT5s

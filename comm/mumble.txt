@@ -1,3 +1,5 @@
+https://news.ycombinator.com/item?id=27648915
+
 https://www.digitalocean.com/community/tutorials/how-to-use-the-mumble-server-one-click-application-image
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-mumble-server-murmur-on-ubuntu-14-04
 	apt install mumble-server
@@ -41,7 +43,9 @@ users - The maximum number of simultaneous users that can connect to the server.
 For 512 MB of RAM, the recommended setting is 50 users for 60Kbps-72Kbps bandwidth per user.
 
 	service mumble-server restart
-	
+
+https://www.mumble.info
+https://github.com/mumble-voip/mumble
 Install client
 	apt install mumble
 
@@ -51,31 +55,32 @@ Ubuntu
 https://launchpad.net/~mumble/+archive/ubuntu/release
 
 Compile client
-http://wiki.mumble.info/wiki/BuildingLinux
+https://wiki.mumble.info/wiki/BuildingLinux
 Download 
-mumble-1.2.8.tar.gz
-mumble-1.2.8.tar.gz.sig
-from 
-https://sourceforge.net/projects/mumble/files/Mumble/1.2.8/
+	wget https://github.com/mumble-voip/mumble/releases/download/1.3.4/mumble-1.3.4.tar.gz
+	wget https://github.com/mumble-voip/mumble/releases/download/1.3.4/mumble-1.3.4.tar.gz.sig
 Import keys
-	wget http://mumble.info/gpg/mumble-auto-build-2014.asc
-	gpg2 --with-fingerprint mumble-auto-build-2014.asc
-	gpg2 --import mumble-auto-build-2014.asc
+https://github.com/mumble-voip/mumble-gpg-signatures/blob/master/gpg.txt
+	wget https://github.com/mumble-voip/mumble-gpg-signatures/raw/master/mumble-auto-build-2021.asc
+	gpg --with-fingerprint mumble-auto-build-2021.asc
+	gpg --import mumble-auto-build-2021.asc
 Verify
-	gpg2 --verify mumble-1.2.8.tar.gz.sig
+	gpg --verify mumble-1.3.4.tar.gz.sig
 Extract
-	tar xf mumble-1.2.8.tar.gz
-	cd mumble-1.2.8
+	tar xf mumble-1.3.4.tar.gz
+	cd mumble-1.3.4
 Dependencies
-	apt-get install build-essential pkg-config qt4-dev-tools libqt4-dev libspeex1 \
-libspeex-dev libboost-dev libasound2-dev libssl-dev g++ \
-libspeechd-dev libzeroc-ice-dev ice-slice libpulse-dev slice2cpp \
-libcap-dev libspeexdsp-dev libprotobuf-dev protobuf-compiler \
+	apt install build-essential pkg-config qt5-default qttools5-dev-tools libqt5svg5-dev \
+libboost-dev libasound2-dev libssl-dev \
+libspeechd-dev libzeroc-ice-dev libpulse-dev \
+libcap-dev libprotobuf-dev protobuf-compiler \
 libogg-dev libavahi-compat-libdnssd-dev libsndfile1-dev \
 libg15daemon-client-dev libxi-dev 
 
 compile
 	qmake -recursive main.pro
-	make
+If you want to compile only the Mumble server (aka Murmur), then type:
+	qmake -recursive main.pro CONFIG+=no-client
+	make -j 12 # Using twelve CPU cores
 	cd release
 	./mumble

@@ -1,0 +1,14 @@
+https://www.openexr.com
+https://github.com/AcademySoftwareFoundation/openexr
+Homebrew
+	brew install imath
+Error: The `brew link` step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+Could not symlink lib/libImath.dylib
+Target /usr/local/lib/libImath.dylib is a symlink belonging to ilmbase.
+You can unlink it:
+	brew unlink ilmbase
+To force the link and overwrite all conflicting files:
+	brew link --overwrite imath
+To list all files that would be deleted:
+	brew link --overwrite --dry-run imath

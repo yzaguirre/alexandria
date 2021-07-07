@@ -1,0 +1,25 @@
+Download APK from play store
+https://www.wikihow.com/Download-an-APK-File-from-the-Google-Play-Store
+https://play.google.com/store/apps/details?id=com.bestringtones.funny
+Open https://apps.evozi.com/apk-downloader
+com.bestringtones.funny
+	wget https://storage.evozi.com/apk/dl/17/05/08/com.bestringtones.funny_10.apk
+	unzip com.bestringtones.funny_10.apk -d tempdir
+
+APK directories
+https://android.stackexchange.com/questions/4510/where-are-the-apk-files-of-currently-installed-apps-stored-on-my-android-device
+https://fileinfo.com/help/where_are_android_apps_installed
+/data/app
+/data/app-private
+/system/app/
+/sdcard/.android_secure (shows .asec files, not .apks)
+On Samsung phones: /sdcard/external_sd/.android_secure
+
+https://android.stackexchange.com/questions/56905/where-is-the-default-ringtone-stored
+/system/media/audio/ringtones
+
+https://github.com/gotbletu/shownotes/blob/master/apkversion.md
+https://www.youtube.com/watch?v=9QxQmDx1wms
+
+Read fingerprint off an APK
+	unzip -p fairemail.apk META-INF/CERT.RSA | keytool -printcert

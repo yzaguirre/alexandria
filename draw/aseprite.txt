@@ -1,0 +1,29 @@
+Animated sprite editor & pixel art tool
+https://www.aseprite.org
+https://www.aseprite.org/docs/cli/
+https://github.com/aseprite/aseprite
+https://github.com/aseprite/aseprite/blob/master/INSTALL.md
+Compile
+	apt install g++ cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+The following additional packages will be installed:
+libfontconfig-dev libfreetype-dev libfreetype6-dev libxfixes-dev libxrender-dev x11proto-input-dev
+
+	cd aseprite
+	mkdir build
+	cd build
+	cmake \
+	  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+	  -DLAF_BACKEND=skia \
+	  -DSKIA_DIR=$HOME/deps/skia \
+	  -DSKIA_LIBRARY_DIR=$HOME/deps/skia/out/Release-x64 \
+	  -DSKIA_LIBRARY=$HOME/deps/skia/out/Release-x64/libskia.a \
+	  -G Ninja \
+	  ..
+	ninja aseprite
+In this case, $HOME/deps/skia is the directory where Skia was compiled or uncompressed.
+
+https://libresprite.github.io
+https://github.com/LibreSprite/LibreSprite
+	wget https://github.com/LibreSprite/LibreSprite/releases/download/continuous/LibreSprite-4fc8d53-x86_64.AppImage
+	mv LibreSprite-4fc8d53-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/LibreSprite-4fc8d53-x86_64.AppImage /usr/local/bin/guiscrcpy

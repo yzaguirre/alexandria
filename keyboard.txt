@@ -14,3 +14,6 @@ https://wiki.archlinux.org/index.php/Xorg_(Espa%C3%B1ol)/Keyboard_configuration_
 	localectl status
 	localectl list-x11-keymap-layouts
 	setxkbmap latam
+
+https://github.com/samvel1024/kbct
+https://www.reddit.com/r/linux/comments/o7bop3/keyboard_customization_tool_for_linux/

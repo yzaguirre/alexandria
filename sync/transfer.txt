@@ -1,0 +1,4 @@
+Easy and fast file sharing from the command-line.
+https://transfer.sh
+https://github.com/dutchcoders/transfer.sh
+https://news.ycombinator.com/item?id=27739991

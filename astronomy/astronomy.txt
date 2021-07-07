@@ -1,3 +1,7 @@
 OpenAstroTracker: 3D printed, open source star tracker
 https://openastrotech.com/
 https://news.ycombinator.com/item?id=26930958
+
+NASA can't figure out what's causing computer issues on the Hubble telescope
+https://www.npr.org/2021/06/23/1009567351/hubble-trouble-nasa-cant-figure-out-whats-causing-computer-issues-on-the-telesco
+https://news.ycombinator.com/item?id=27617256

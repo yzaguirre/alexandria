@@ -11,3 +11,18 @@ https://play.google.com/store/apps/details?id=com.smarterdroid.wififiletransfer
 Sipdroid for Android, GPL v3
 Linphone for Android, BlackBerry, iPhone, Windows phone; GPL v2
 CSipSimple for Android, GPL v3
+
+Fully featured, open source, privacy friendly email app for Android
+https://email.faircode.eu
+https://github.com/M66B/FairEmail
+
+Book Reader for Android
+https://librera.mobi
+https://github.com/foobnix/LibreraReader
+
+https://www.simplemobiletools.com/gallery/
+https://github.com/SimpleMobileTools/Simple-Gallery
+
+Open Source Password Manager for Android
+https://www.keepassdx.com
+https://github.com/Kunzisoft/KeePassDX

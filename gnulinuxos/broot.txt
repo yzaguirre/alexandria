@@ -4,12 +4,12 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.6.0
+	git checkout v1.6.1
 	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.6.0/broot_1.6.0.zip
-	unzip broot_1.6.0.zip
+	wget https://github.com/Canop/broot/releases/download/v1.6.1/broot_1.6.1.zip
+	unzip broot_1.6.1.zip
 	sudo mv build/x86_64-linux/broot /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s broot br
@@ -40,3 +40,6 @@ If you want to display sizes, dates and permissions, do
 You may also toggle options with a few keystrokes while inside broot.
 For example hitting a space, a d then enter shows you the dates.
 Or a space, then h then enter and you see hidden files.
+
+Broot Is A Better Way To Navigate Directories
+https://www.youtube.com/watch?v=lGD-wsQO_lI

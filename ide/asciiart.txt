@@ -8,3 +8,13 @@ http://search.cpan.org/dist/App-Asciio/lib/App/Asciio.pm
 https://github.com/109149/you-to-ascii
 http://aa-project.sourceforge.net/aalib/
 https://www.reddit.com/r/webdev/comments/nrk9q1/hello_humans_convert_live_video_of_yourself_into/
+
+https://github.com/Talinx/jp2a
+	apt install jp2a
+Homebrew
+	brew install jp2a
+
+ansilove
+https://www.ansilove.org
+https://github.com/ansilove/ansilove
+	apt install ansilove

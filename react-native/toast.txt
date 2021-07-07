@@ -18,3 +18,8 @@ import { useToast } from 'react-native-styled-toast'
 const { toast } = useToast()
 
 return <Button onPress={() => toast({ message: 'Check me out!', ...config })} />
+
+Cross-platform Toast component for React Native, supports Android, IOS and Web
+https://github.com/arnnis/react-native-fast-toast
+https://www.reddit.com/r/reactnative/comments/obo3gw/reactnativefasttoast_updated_to_version_3_with/
+	yarn add react-native-fast-toast

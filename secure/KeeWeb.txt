@@ -1,0 +1,18 @@
+KeeWeb
+Free cross-platform password manager compatible with KeePass
+https://keeweb.info
+https://app.keeweb.info
+https://github.com/keeweb/keeweb
+Web
+	wget https://github.com/keeweb/keeweb/releases/download/v1.18.6/KeeWeb-1.18.6.html.zip
+	wget https://github.com/keeweb/keeweb/releases/download/v1.18.6/Verify.sha256
+	wget https://github.com/keeweb/keeweb/releases/download/v1.18.6/Verify.sign.sha256
+	sha256sum -c --ignore-missing Verify.sha256
+	unzip KeeWeb-1.18.6.html.zip -d html
+	chromium html/index.html
+Linux
+	wget https://github.com/keeweb/keeweb/releases/download/v1.18.6/KeeWeb-1.18.6.linux.x64.deb
+
+gpg --verify
+Homebrew
+	brew install keeweb

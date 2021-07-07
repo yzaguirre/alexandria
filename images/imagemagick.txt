@@ -10,7 +10,7 @@ https://imagemagick.org/script/advanced-linux-installation.php
 https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
 https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
 https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
-	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev
+	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev libttfautohint-dev
 	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-1.tar.gz
 	tar xf 7.1.0-1.tar.gz
 	cd ImageMagick-7.1.0-1

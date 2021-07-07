@@ -1,0 +1,31 @@
+https://www.cstr.ed.ac.uk/projects/festival/
+https://wiki.archlinux.org/title/Festival
+	sudo apt install festival festvox-ellpc11k
+The following NEW packages will be installed:
+festival festlex-cmu festlex-poslex festvox-kallpc16k libestools2.5 festvox-ellpc11k
+
+Configuration file
+	vim ~/.festivalrc
+(Parameter.set 'Audio_Required_Format 'aiff)
+(Parameter.set 'Audio_Method 'Audio_Command)
+(Parameter.set 'Audio_Command "paplay $FILE --client-name=Festival --stream-name=Speech")
+
+Usage
+	festival
+festival> (voice.list)
+(kal_diphone el_diphone)
+festival> (SayText "hello")
+
+Read from clipboard
+	xsel | festival --tts
+
+Read a text
+	festival --tts README.md
+
+Convert a text to WAV
+	text2wave paragraph.txt -o paragraph.wav
+Convert a text to mp3
+	text2wave paragraph.txt | lame - paragraph.mp3
+
+Text To Speech On Linux With Festival
+https://www.youtube.com/watch?v=cloONmLZo4o

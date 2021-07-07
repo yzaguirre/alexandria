@@ -1,0 +1,7 @@
+Plover (rhymes with "hover") is a free, open source stenography engine.
+https://www.openstenoproject.org/plover/
+https://github.com/openstenoproject/plover
+https://news.ycombinator.com/item?id=27602077
+	apt install plover
+Homebrew
+	brew install plover

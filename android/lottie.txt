@@ -1,0 +1,10 @@
+Render After Effects animations natively on Android and iOS,
+Web, and React Native
+https://airbnb.design/lottie/
+https://github.com/airbnb/lottie-android
+dependencies {
+  implementation 'com.airbnb.android:lottie:3.5.0'
+}
+
+https://lottielab.io/
+https://www.reddit.com/r/programming/comments/od3o6l/im_working_on_this_animation_editor_to_edit_and/

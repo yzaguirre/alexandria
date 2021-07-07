@@ -1,3 +1,9 @@
+https://reactnative.directory
+
+https://aggregatedawesome.com/react-native
+
+https://reactresources.com/topics/react-native
+
 https://www.reddit.com/r/reactnative/comments/lfgdyx/after_a_year_of_playing_with_react_native_on_the/
 https://www.reddit.com/r/reactnative/comments/lg2z86/react_native_image_viewer_with_background_blur/
 https://www.reddit.com/r/reactnative/comments/lgf0so/whats_the_best_way_to_create_mockups_like_these/
@@ -101,3 +107,15 @@ https://www.reddit.com/r/reactnative/comments/o3f00e/musicont_music_player_as_be
 https://datingapppro.com/
 
 https://codecanyon.net/item/store-manager-react-native-application-for-wordpress-woocomerce/28455094
+
+https://github.com/PrincewillIroka/project_management_mobile_app
+https://www.reddit.com/r/reactnative/comments/o6z3t3/i_created_a_project_management_mobile_app_using/
+
+https://github.com/ShivamJoker/SQL-Play
+https://www.reddit.com/r/reactnative/comments/oa2dw7/i_finally_added_some_end_to_end_testing_in_my_app/
+
+https://www.matchingmovies.com/
+https://www.reddit.com/r/reactnative/comments/o950lh/i_wrote_my_first_big_react_native_app_as_a_non/
+
+https://www.botreetechnologies.com/blog/case-study-of-restaurant-app-built-with-react-native/
+https://www.reddit.com/r/reactnative/comments/obegqn/proven_case_study_of_restaurant_app_built_with/

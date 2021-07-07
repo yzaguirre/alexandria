@@ -10,6 +10,22 @@ http://infozip.sourceforge.net/mans/
 http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-directory-via-terminal-without-hidden
 	zip -r file.zip file1.txt files/
 	unzip file.zip -d exdir
+
+http://www.cyberciti.biz/faq/howto-compress-expand-gz-files/
+gunzip one file
+	gzip bashrc
+	gunzip < file.tgz | tar xvf 
+Decompress
+	gzip -d file.gz
+	gunzip bashrc.gz
+	gunzip < file.tar.gz | tar xvf -
+
+Details
+	zipdetails archive.zip
+
+Brief overview
+	zipinfo archive.zip
+
 https://www.computerhope.com/unix/unzip.htm
 Extract only those files that already exist on disk and that are newer than the disk copies.
 	unzip -f file
@@ -25,3 +41,22 @@ https://www.reddit.com/r/programming/comments/mtfph7/listing_the_contents_of_a_r
 https://github.com/gdraheim/zziplib
 	apt install libzzip-0-13
 Dev: libzzip-dev
+
+Encrypted archive
+	zipcloack archive.zip
+
+Search for "alias" strings in archive
+	zipgrep alias archive.zip bashrc
+
+Add comments
+	zipnote archive.zip > comments
+Edit "comments" text file and later insert comments
+	zipnote -w archive.zip < comments
+View comments
+	zipnote archive.zip
+
+Split multiple parts (in bytes)
+	zipsplit -n 4028 archive.zip
+
+Zipping Your Files In Linux
+https://www.youtube.com/watch?v=zjI-A3EYzQ4

@@ -1,0 +1,22 @@
+https://schollz.com/blog/croc6
+https://github.com/schollz/croc
+	wget https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_Linux-64bit.deb
+	wget https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_checksums.txt
+	sha256sum -c --ignore-missing croc_9.2.0_checksums.txt
+	dpkg -i croc_9.2.0_Linux-64bit.deb
+Termux
+	apt install croc
+Android
+https://github.com/howeyc/crocgui
+Windows
+	scoop install croc
+Homebrew
+	brew install croc
+
+Usage
+Send without a relay
+	croc --local send file.txt
+Send a stream
+	ls -lah | croc --local send
+Receive knowing the sender's IP address
+	croc --ip 192.168.0.5 --local anita-price-quick

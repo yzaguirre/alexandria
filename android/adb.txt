@@ -1,7 +1,9 @@
 Debian repo
 	apt install adb android-libadb android-libbase android-libboringssl android-libcrypto-utils android-libcutils android-liblog android-sdk-platform-tools-common
-Symlinc
+Symlink
 	ln -s /VMs/opt/android-sdk-linux/platform-tools/adb /usr/local/bin/adb
+Homebrew
+	brew cask install android-platform-tools
 http://www.emoticode.net/bash/launch-app-sh.html
 key
 http://forum.xda-developers.com/showthread.php?t=2247471
@@ -95,9 +97,11 @@ https://varunbarad.com/blog/testing-deep-link-urls-using-adb
 Screenshots
 https://developer.android.com/studio/command-line/adb#screencap
 https://medium.com/mobile-app-development-publication/capture-picture-and-record-video-using-adb-5f4c582acb3c
+https://stackoverflow.com/questions/42564693/adb-exec-out-not-working
 	adb shell screencap /storage/emulated/0/DCIM/Screenshots/filename.png
-	adb shell screencap -p > myfile.jpg
-	alias capture="adb shell screencap -p > $@"
+	adb exec-out screencap -p > myfile.png
+	adb exec-out screencap -p | xclip -selection clipboard -target image/png
+	alias capture="adb exec-out screencap -p > $@"
 	capture myfile.jpg
 
 Record Screen
@@ -113,3 +117,44 @@ Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
 https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
 https://stackoverflow.com/questions/50211010/android-wifi-adb-plugin-not-working-with-some-android-real-device#50211408
+	adb tcpip 6969
+	adb connect 192.168.0.10:6969
+
+Android properties
+	adb shell getprop "ro.build.version.release"
+	adb shell getprop "ro.build.version.sdk"
+
+Get coordinates on screen
+Activate "Pointer location" in developer options
+Screen taps
+	adb shell input tap 538 1099
+Send keyboard strokes
+	adb shell input text "Hello"
+Send key events
+Back
+	adb shell input keyevent 4
+Touchscreen swipe
+	adb shell input touchscreen swipe 500 500 500 1000 2000
+
+Lists packages
+	adb shell pm list packages
+
+Information an app has on a device
+	adb shell
+	run-as bk.yt.example
+	pwd
+
+Control your device from your computer - ADB tutorial
+https://www.youtube.com/watch?v=uOPcUjVl2YQ
+
+YOU NEED TO TRY These ADB Commands! | Best ADB Commands For Android 2021
+https://www.youtube.com/watch?v=XoJ7o0A-DMc
+
+How to use ADB and scrcpy to interact with your Android phone
+https://www.youtube.com/watch?v=0Anz2Y2O4Tk
+
+Automate Repeated Stuff - Using ADB (adb push & pull)
+https://www.youtube.com/watch?v=0lBTc4aE10I
+echo "Pulling newest video"
+file=$(adb shell ls sdcard/DCIM/Camera | grep mp4 | tail -n1 | sed 's/^M//g')
+adb pull "sdcard/DCIM/Camera/$file"

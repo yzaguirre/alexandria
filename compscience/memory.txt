@@ -1,0 +1,1 @@
+https://ariadne.space/2021/06/25/understanding-thread-stack-sizes-and-how-alpine-is-different/

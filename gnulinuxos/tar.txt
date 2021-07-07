@@ -43,17 +43,6 @@ Suggests use xf
 -r, --append
 	append files to the end of an archive
 
-
-
-http://www.cyberciti.biz/faq/howto-compress-expand-gz-files/
-gz
-	$ gunzip file.gz
-	or
-	$ gzip -d file.gz
-on unix
-	$ gunzip < file.tar.gz | tar xvf -
-	$ gunzip < file.tgz | tar xvf 
-
 rar
 	$ unrar x file.rar
 

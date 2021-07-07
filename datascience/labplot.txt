@@ -1,13 +1,22 @@
-https://labplot.kde.org/
+https://labplot.kde.org
+https://invent.kde.org/education/labplot
 	apt install labplot
+The following NEW packages will be installed:
+kuserfeedback-doc labplot labplot-data libcantorlibs28 libcerf1 libkf5syntaxhighlighting-data libkf5syntaxhighlighting5 libkuserfeedbackcore1
+libkuserfeedbackwidgets1 libqt5serialport5 qml-module-org-kde-userfeedback
+Linux
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2.tar.xz
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2.tar.xz.sig
+	gpg --verify labplot-2.8.2.tar.xz.sig
+	tar xf labplot-2.8.2.tar.xz
 Windows
-	wget https://download.kde.org/stable/labplot/2.7.0/labplot-2.7.0-64bit-setup.exe
-	wget https://download.kde.org/stable/labplot/2.7.0/labplot-2.7.0-64bit-setup.exe.sha256
-	wget https://download.kde.org/stable/labplot/2.7.0/labplot-2.7.0-64bit-setup.exe.sha1
-	wget https://download.kde.org/stable/labplot/2.7.0/labplot-2.7.0-64bit-setup.exe.md5
-	sha256sum -c labplot-2.7.0-64bit-setup.exe.sha256
-	sha1sum -c labplot-2.7.0-64bit-setup.exe.sha1
-	md5sum -c labplot-2.7.0-64bit-setup.exe.md5
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2-64bit-setup.exe
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2-64bit-setup.exe.sha256
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2-64bit-setup.exe.sha1
+	wget https://download.kde.org/stable/labplot/2.8.2/labplot-2.8.2-64bit-setup.exe.md5
+	sha256sum -c labplot-2.8.2-64bit-setup.exe.sha256
+	sha1sum -c labplot-2.8.2-64bit-setup.exe.sha1
+	md5sum -c labplot-2.8.2-64bit-setup.exe.md5
 SHA-256 Hash: 975ba3f5a617c907d4cd213647366691ce339869e50dd43fafe02b6a5abd0f59
 SHA-1 Hash: e3fc779c2316bbb75dcd1a7b401cc7d421133a0c
 MD5 Hash: 5f38309780a50f8e18ac04f68cc77b9b

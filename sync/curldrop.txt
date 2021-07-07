@@ -1,0 +1,11 @@
+Web app for for easy file uploads via curl
+https://github.com/kennell/curldrop
+	sudo -H pip3 install curldrop
+	curldrop --help
+Start a service
+	curldrop
+	curldrop --upload-dir /tmp
+Upload files
+	curl --upload-file myfile.txt http://localhost:8000
+Download a file
+	curl http://localhost:8000/2cfb02dc

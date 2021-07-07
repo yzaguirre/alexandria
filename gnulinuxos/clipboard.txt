@@ -1,4 +1,16 @@
 https://github.com/astrand/xclip
+Copy Image to clipboard
+https://superuser.com/questions/199285/how-to-copy-image-to-clipboard-to-paste-to-another-application/1098582#1098582
+	xclip -selection clipboard -target image/png -i
+	adb shell screencap -p | xclip -selection clipboard -target image/png
 
 dead simple program that generates qr codes from your clipboard
 https://github.com/toasterrepairman/qlip
+
+xsel
+command-line tool to access X clipboard and selection buffers
+http://www.vergenet.net/~conrad/software/xsel/
+To read a file into the X selection:
+	xsel < file
+To write the X selection to a file:
+	xsel > file

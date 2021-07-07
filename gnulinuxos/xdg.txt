@@ -1,2 +1,16 @@
 https://wiki.debian.org/XDGBaseDirectorySpecification
 https://www.reddit.com/r/linux/comments/ny34vs/new_xdg_state_home_in_xdg_base_directory_spec/
+
+xdg-open
+	xdg-settings get default-web-browser
+	xdg-settings set default-web-browser firefox-personal.desktop
+	xdg-open https://example.com
+Shortcut location
+~/.local/share/applications
+/usr/local/share/applications
+/usr/share/applications
+
+Choosing a browser profile with xdg-open
+https://www.youtube.com/watch?v=IiafBlweCbs
+https://dabase.com/tips/archlinux/2021/Setting-the-default-browser/
+

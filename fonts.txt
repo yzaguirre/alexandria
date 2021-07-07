@@ -4,8 +4,25 @@ https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html
 	fc-list -V
 	fc-list -h
 	fc-list | grep -i UbuntuMono
+	fc-list | awk '{print $1}' | sed 's/://g' | dmenu -l 20 -p 'Fontviewer: '
+View a font
+	display /usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf
+Fontviewer
+	apt install suckless-tools
+	vim ~/.dmenu/dmenu-fontviewer.sh
+#!/bin/bash
+choice=$(fc-list | awk '{print $1}' | sed 's/://g' | dmenu -l 20 -p 'FontViewer:')
+display "$choice"
+	./dmenu-fontviewer.sh
+
+Fontmatrix
+https://github.com/fcoiffie/fontmatrix
+	apt install fontmatrix
+	fontmatrix
+
 Drop fonts at any of the following directories
 ~/.fonts
+~/.local/share/fonts
 /usr/share/fonts/
 
 and then
@@ -21,3 +38,6 @@ https://forum.manjaro.org/t/remmina-no-characters-only-rectangles/5465
 	rm ~/.cache/fontconfig/*
 	rm /var/cache/fontconfig/*
 	fc-cache -fv
+
+https://www.youtube.com/watch?v=rLZk7cWbycI
+Font Management On Linux

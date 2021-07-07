@@ -1,0 +1,4 @@
+Make images smaller using best-in-class codecs, right in the browser.
+https://squoosh.app
+https://github.com/GoogleChromeLabs/squoosh
+https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli

@@ -1,6 +1,6 @@
 https://github.com/leandromoreira/ffmpeg-libav-tutorial#learn-ffmpeg-libav-the-hard-way
-http://www.ffmpeg.org/
-http://en.wikipedia.org/wiki/FFmpeg
+https://www.ffmpeg.org/
+https://en.wikipedia.org/wiki/FFmpeg
 The project comprises several components:
 ffmpeg is a command-line tool to convert one video file format to another. It can also grab and encode in real-time from a TV card.
 ffserver is an HTTP and RTSP multimedia streaming server for live broadcasts. It can also time shift live broadcast.
@@ -19,19 +19,19 @@ See RickMates below
 Installing FFmpeg on macOS Big Sur (on Intel)
 https://www.youtube.com/watch?v=zl4vo0dhLRk
 Download the following: ffmpeg, ffprobe, ffplay
-	wget https://evermeet.cx/ffmpeg/ffmpeg-4.3.1.zip
-	wget https://evermeet.cx/ffmpeg/ffmpeg-4.3.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffprobe-4.3.1.zip
-	wget https://evermeet.cx/ffmpeg/ffprobe-4.3.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffplay-4.3.1.zip
-	wget https://evermeet.cx/ffmpeg/ffplay-4.3.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffmpeg-4.4.zip
+	wget https://evermeet.cx/ffmpeg/ffmpeg-4.4.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffprobe-4.4.zip
+	wget https://evermeet.cx/ffmpeg/ffprobe-4.4.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffplay-4.4.zip
+	wget https://evermeet.cx/ffmpeg/ffplay-4.4.zip.sig
 	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
-	gpg --verify ffmpeg-4.3.1.zip.sig
-	gpg --verify ffprobe-4.3.1.zip.sig
-	gpg --verify ffplay-4.3.1.zip.sig
-	unzip ffmpeg-4.3.1.zip -d /usr/local/bin
-	unzip ffprobe-4.3.1.zip -d /usr/local/bin
-	unzip ffplay-4.3.1.zip -d /usr/local/bin
+	gpg --verify ffmpeg-4.4.zip.sig
+	gpg --verify ffprobe-4.4.zip.sig
+	gpg --verify ffplay-4.4.zip.sig
+	unzip ffmpeg-4.4.zip -d /usr/local/bin
+	unzip ffprobe-4.4.zip -d /usr/local/bin
+	unzip ffplay-4.4.zip -d /usr/local/bin
 Remove from quarantine
 	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
 Add the /usr/local/bin to PATH
@@ -39,19 +39,30 @@ Add the /usr/local/bin to PATH
 PATH+=/usr/local/bin
 	source ~/.zshrc
 
+Binary
+https://johnvansickle.com/ffmpeg/
+	wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+	wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz.md5
+	md5sum -c ffmpeg-release-amd64-static.tar.xz.md5
+	tar xf ffmpeg-release-amd64-static.tar.xz
+	cd ffmpeg-4.4-amd64-static
+	mv ffmpeg ffprobe qt-faststart /usr/local/bin
+	sudo mv manpages/ /usr/local/src
+x	cp -r model /usr/local/share/
+
 Custom compilation with FDK AAC encoder and such, see:
 https://trac.ffmpeg.org/wiki/CompilationGuide
 
 Compile
-	wget https://www.ffmpeg.org/releases/ffmpeg-2.6.2.tar.bz2
-	wget https://www.ffmpeg.org/releases/ffmpeg-2.6.2.tar.bz2.asc
-	gpg2 --recv-keys 0xd67658d8
-	gpg2 --edit-key 0xd67658d8
-	gpg2 --verify ffmpeg-2.6.2.tar.bz2.asc ffmpeg-2.6.2.tar.bz2
-	tar xf ffmpeg-2.6.2.tar.bz2
-	cd ffmpeg-2.6.2
+	wget https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.bz2
+	wget https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.bz2.asc
+	gpg --recv-keys 0xd67658d8
+	gpg --edit-key 0xd67658d8
+	gpg --verify ffmpeg-4.4.tar.bz2.asc ffmpeg-4.4.tar.bz2
+	tar xf ffmpeg-4.4.tar.bz2
+	cd ffmpeg-4.4
 	./configure
-	make -j2
+	make -j 12 # twelve CPU cores
 	make install
 
 Very minimal FFmpeg installation:
@@ -62,17 +73,22 @@ Very minimal FFmpeg installation:
 	make -j4
 	sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
 				--pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+Video information
+	ffmpeg -i video.mp4
+
+List codecs
+	ffmpeg -codecs
 
 Trim video
 https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
 https://stackoverflow.com/questions/19774975/unknown-encoder-libfaac
+	ffmpeg -i video.mp4 -ss 0 -to 30 fragment.mp4
 	ffmpeg -i "Path\do you want him.flv"        \
        -ss 00:00:05.240 -to 00:00:08.360    \
        -vcodec libx264 -acodec aac \
        "Path\Do you want him1.flv"
 	ffmpeg -i "Path\do you want him.flv" -ss 00:00:05.240 -to 00:00:08.360 -vcodec libx264 -acodec aac "Path\Do you want him1.flv"
 https://sandilands.info/sgordon/multimedia-on-linux-command-line
-
 
 Concat
 https://stackoverflow.com/questions/7333232/concatenate-two-mp4-files-using-ffmpeg
