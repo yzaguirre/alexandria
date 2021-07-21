@@ -1,0 +1,4 @@
+A cross-platform protocol library to communicate with iOS devices
+https://libimobiledevice.org
+https://github.com/libimobiledevice/libimobiledevice
+https://news.ycombinator.com/item?id=27758045

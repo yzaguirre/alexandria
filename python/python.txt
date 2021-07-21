@@ -1,4 +1,6 @@
 https://www.python.org/
+	python3 -m pip install -U autopep8 --user
+
 5 Python tricks that will improve your life
 Aaron Jack
 https://www.youtube.com/watch?v=5tcs2qXP3Pg
@@ -56,6 +58,8 @@ https://stackoverflow.com/questions/12400256/python-converting-epoch-time-into-t
 	import datetime
 	datetime.datetime.fromtimestamp(1347517370).strftime('%c')
 '2012-09-13 02:22:50'
+TODAY_DATE = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+'2021-07-13 22:26:03'
 
 Base64
 https://docs.python.org/3/library/base64.html

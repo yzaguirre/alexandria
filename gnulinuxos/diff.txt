@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/12241388/using-the-diff-command
+	diff -q dir1 dir2
+
+difftastic, a syntax-aware diff
+https://github.com/wilfred/difftastic
+https://news.ycombinator.com/item?id=27768861

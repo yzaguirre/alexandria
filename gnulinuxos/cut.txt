@@ -1,0 +1,13 @@
+https://www.gnu.org/software/coreutils/manual/html_node/The-cut-command.html
+
+A sharp cut(1) clone.
+https://github.com/sstadick/hck
+https://news.ycombinator.com/item?id=27794188
+	wget https://github.com/sstadick/hck/releases/download/v0.4.2/default.hck-linux-amd64.deb
+	sudo dpkg -i default.hck-linux-amd64.deb
+Homebrew
+	brew tap sstadick/hck
+	brew install hck
+
+A human-friendly and fast alternative to cut and (sometimes) awk
+https://github.com/theryangeary/choose

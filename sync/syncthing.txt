@@ -46,6 +46,7 @@ Start service
 
 Config at
 ~/.config/syncthing/config.xml
+
 Install MacOS
 	unzip syncthing-macos-universal-v1.16.1.zip
 	cd syncthing-macos-universal-v1.16.1
@@ -71,6 +72,9 @@ To have launchd start syncthing now and restart at login:
 Or, if you don't want/need a background service you can just run:
   syncthing
 See :/sync/launchagents/homebrew.mxcl.syncthing.plist
+Config at
+https://docs.syncthing.net/users/config.html
+$HOME/Library/Application Support/Syncthing
 
 F-Droid
 https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid

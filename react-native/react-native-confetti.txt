@@ -1,0 +1,3 @@
+Raining confetti made with react native animations
+https://github.com/cdvntr/react-native-confetti
+	yarn add react-native-confetti

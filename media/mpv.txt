@@ -1,4 +1,4 @@
-https://mpv.io/installation/
+https://mpv.io/installation
 https://github.com/mpv-player/mpv
 	apt install rst2pdf
 	apt install libgnutls28-dev libopus-dev libsmbclient-dev
@@ -21,6 +21,10 @@ You can do incremental builds by explicitly calling
 	./build
 Install mpv with:
 	sudo ./install
+
+Configuration files
+https://mpv.io/manual/stable/#configuration-files
+~/.config/mpv/mpv.conf
 
 https://www.reddit.com/r/LinuxActionShow/comments/4o2230/you_can_use_mpv_to_make_a_picture_in_picture/
 	mpv --ontop --no-border --autofit=384x216 --geometry=99%:2% [file]

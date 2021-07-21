@@ -20,3 +20,6 @@ https://www.youtube.com/watch?v=5_M8eoMuXaE
 
 Custom Launcher Icons/Change App Icon. React Native Beginner Project Course.#35
 https://www.youtube.com/watch?v=jn1vIZx4DEA
+
+Best app icon resizer for mobile developers
+https://makeappicon.com

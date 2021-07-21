@@ -1,0 +1,10 @@
+https://opusdesign.us/wordcount/what-is-the-ideal-image-resolution-for-print-web/
+Web images: 72ppi. Print images: 300dpi.
+
+https://www.foregroundweb.com/image-size/
+Image Dimensions
+Image Quality Level
+Extra Compression Tools
+
+https://cft.vanderbilt.edu/wp-content/uploads/sites/59/Image_resolutions.pdf
+See ~/Libros/Progra/Design UX UI/Image_resolutions.pdf

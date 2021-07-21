@@ -56,6 +56,10 @@ For MacOS
 	brew install node
 	brew install watchman
 	brew install cocoapods
+https://stackoverflow.com/questions/64698820/ignoring-ffi-1-13-1-because-its-extensions-are-not-built-try-gem-pristine-ffi
+Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0
+1.10.1
+	brew link --overwrite cocoapods
 For new versions
 	brew upgrade node
 https://stackoverflow.com/questions/59410402/webpacker-error-while-creating-ruby-on-rails-app

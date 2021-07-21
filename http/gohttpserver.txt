@@ -1,18 +1,36 @@
+HAS GOOGLE ANALYTICS
+https://github.com/codeskyblue/gohttpserver/issues/85
 https://github.com/codeskyblue/gohttpserver
 Windows
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_windows_amd64.zip
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_checksums.txt
-	sha256sum.exe --ignore-missing -c gohttpserver_1.0.5_checksums.txt
-	unzip gohttpserver_1.0.5_windows_amd64.zip -d ~/bin
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_windows_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
+	sha256sum.exe --ignore-missing -c gohttpserver_1.1.0_checksums.txt
+	tar xf gohttpserver_1.1.0_windows_amd64.tar.gz -C ~/bin
 	cd !$
-	rm LICENSE README.md .ghs.yml
+	rm LICENSE README.md
 Linux
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_linux_amd64.zip
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.0.5/gohttpserver_1.0.5_checksums.txt
-	sha256sum --ignore-missing -c gohttpserver_1.0.5_checksums.txt
-	unzip gohttpserver_1.0.5_linux_amd64.zip
-	rm LICENSE README.md .ghs.yml
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_linux_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
+	tar xf gohttpserver_1.1.0_linux_amd64.tar.gz
+	rm LICENSE README.md
 	mv gohttpserver /usr/local/bin
+Termux
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_linux_arm64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
+	tar xf gohttpserver_1.1.0_linux_arm64.tar.gz -C ~/bin
+	cd $!
+	rm LICENSE README.md
+MacOS
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_darwin_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
+	tar xf gohttpserver_1.1.0_darwin_amd64.tar.gz -C ~/bin
+	cd !$
+	rm LICENSE README.md
+Make alias
+	alias gohttpserver='gohttpserver --google-tracker-id ""'
 Usage
 	gohttpserver -r ./ --port 8000 --upload
 	gohttpserver --help

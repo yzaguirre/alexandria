@@ -1,13 +1,22 @@
 https://github.com/TheWaWaR/simple-http-server/
 Windows
 	scoop install simple-http-server
-
 Linux
-	wget https://github.com/TheWaWaR/simple-http-server/releases/download/0.4.2/simple-http-server-linux-64.gz
-	gunzip -d simple-http-server-linux-64
-	mv simple-http-server-linux-64 /usr/local/bin/simple-http-server
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server.sha256
+	sha256sum x86_64-unknown-linux-musl-simple-http-server
+	cat x86_64-unknown-linux-musl-simple-http-server.sha256
+	chmod u+x x86_64-unknown-linux-musl-simple-http-server
+	mv x86_64-unknown-linux-musl-simple-http-server /usr/local/bin/simple-http-server
 	simple-http-server -V
 	simple-http-server -i --nocache -up 80
+MacOS
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-apple-darwin-simple-http-server
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-apple-darwin-simple-http-server.sha256
+	sha256sum x86_64-apple-darwin-simple-http-server
+	cat x86_64-apple-darwin-simple-http-server.sha256
+	chmod u+x x86_64-apple-darwin-simple-http-server
+	mv x86_64-apple-darwin-simple-http-server ~/bin/simple-http-server
 Termux install
 https://github.com/termux/termux-packages/issues/2847
 	cargo install simple-http-server

@@ -119,3 +119,16 @@ https://www.reddit.com/r/reactnative/comments/o950lh/i_wrote_my_first_big_react_
 
 https://www.botreetechnologies.com/blog/case-study-of-restaurant-app-built-with-react-native/
 https://www.reddit.com/r/reactnative/comments/obegqn/proven_case_study_of_restaurant_app_built_with/
+
+https://www.reddit.com/r/reactnative/comments/oiq3o8/just_released_v2_of_my_newssummarizing_app_after/
+
+https://www.reddit.com/r/reactnative/comments/oi66aq/opensource_rn_apps_that_are_in_production_for/
+
+https://alexmngn.medium.com/building-a-financial-mobile-app-at-scale-with-react-native-571f998e7a5d
+https://www.reddit.com/r/reactnative/comments/om51d6/building_a_financial_mobile_app_at_scale_with/
+
+Slider Color Picker
+https://www.reddit.com/r/reactnative/comments/omsua1/first_ever_single_slider_color_picker_in_rn/
+
+Flashcard app
+https://www.reddit.com/r/reactnative/comments/omthw5/2_weeks_ago_i_shared_the_first_preview_of_my/

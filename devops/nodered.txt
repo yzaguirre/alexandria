@@ -1,0 +1,3 @@
+https://nodered.org
+https://nodered.org/blog/2021/07/20/version-2-0-released
+https://news.ycombinator.com/item?id=27892226

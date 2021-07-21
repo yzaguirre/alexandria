@@ -1,0 +1,49 @@
+Install dependencies
+	sudo -H pip3 install -U smtplib
+
+how to send emails easily using python - smtplib
+https://www.youtube.com/watch?v=sXjpkcF7rPQ
+
+Sending Email using Python
+https://www.youtube.com/watch?v=YVxAqHE8RM4&t
+
+Sending an Email in Python via Gmail
+https://www.youtube.com/watch?v=mP_Ln-Z9-XY
+
+from email.message import EmailMessage
+import imghdr
+
+contacts = ['name@example.com']
+
+msg = EmailMessage()
+msg['Subject'] = 'Grab dinner this weekend?'
+msg['From'] = EMAiL_ADDRESS
+# msg['To'] = 'name@example.com'
+# msg['To'] = contacts
+msg['To'] = ', '.join(contacts)
+msg.set_content('How about dinner at 6pm this Saturday?')
+
+msg.add_alternative("""\
+<html>
+""", subtype='html')
+
+Open the file to attach:
+files = ['image.jpg', 'resume.pdf']
+for file in files:
+	with open(file, 'rb') as f:
+		file_data = f.read()
+		# file_type = imghdr.what(f.name)
+		file_name = f.name
+	# msg.add_attachment(file_data, maintype='image', subtype=file_type, filename=file_name)
+	msg.add_attachment(file_data, maintype='application', subtype='octet-stream', filename=file_name)
+
+How to Send Emails Using Python - Plain Text, Adding Attachments, HTML Emails, and More
+https://www.youtube.com/watch?v=JRCJ6RtE3xU
+
+30 Days of Python - Day 9 - Send Email & Read Inbox - Python TUTORIAL
+https://www.youtube.com/watch?v=6DD4IOHhNYo
+
+IMAP
+
+Day 30: Fetch & Convert Email in Python Programming
+https://www.youtube.com/watch?v=bbPwv0TP2UQ

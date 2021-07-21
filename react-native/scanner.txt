@@ -1,0 +1,2 @@
+https://github.com/Woonivers/react-native-document-scanner#readme
+https://www.reddit.com/r/reactnative/comments/oktr2h/help_with_document_scanner_lib_for_react_native/

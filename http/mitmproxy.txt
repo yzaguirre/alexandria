@@ -1,11 +1,27 @@
 https://mitmproxy.org/
+
+Mitmproxy 7
+https://mitmproxy.org/posts/releases/mitmproxy7/
+https://news.ycombinator.com/item?id=27855476
+
 https://docs.mitmproxy.org/stable/overview-installation/
 https://mitmproxy.org/doc/howmitmproxy.html
 https://github.com/mitmproxy/mitmproxy
 	apt install python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev
 	pip3 install mitmproxy
+Homebrew
+	brew install mitmproxy
+Download and install TLS certificates at http://mitm.it
+Copy of certificate is in ~/.mitmproxy/mitmproxy-ca-cert.cer
+
+https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/
+https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62
+https://gaikwadchetan93.medium.com/monitoring-modifying-android-app-network-traffic-via-mitm-proxy-part-1-886f6324f705
+https://hurricanelabs.com/blog/modifying-android-apps-to-allow-tls-intercept-with-user-cas/
+
 http://docs.mitmproxy.org/en/latest/transparent/linux.html
 	sudo sysctl -w net.ipv4.ip_forward=1
+	sudo sysctl -w net.ipv6.conf.all.forwarding=1
 	echo 0 | sudo tee /proc/sys/net/ipv4/conf/*/send_redirects
 	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
 	sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8080
@@ -22,7 +38,7 @@ Run mimtproxy once to generate the file below (mitmproxy-ca-cert.cer) and exit
 	mitmproxy
 Add cert to trusted certs on your OS
 	cp ~/.mitmproxy/mitmproxy-ca-cert.cer /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
-	/usr/sbin/update-ca-certificates
+	sudo update-ca-certificates
 And it's done. Now we can try HTTPS websites:
 	curl -x https://127.0.0.1:8080 https://dadario.com.br
 Ok, but how to manipulate requests?
@@ -45,3 +61,17 @@ Mitmproxy will then look for mitmproxy-ca.pem in the specified directory.
 Save master secrets
 	SSLKEYLOGFILE="$PWD/.mitmproxy/sslkeylogfile.txt" mitmproxy
 
+Install a CA Certificate
+PEM format with .crt extension
+https://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate/94861#94861
+	sudo mkdir /usr/local/share/ca-certificates/extra
+	sudo cp foo.crt /usr/local/share/ca-certificates/extra/foo.crt
+	sudo dpkg-reconfigure ca-certificates
+or	sudo update-ca-certificates
+Convert .pem to .crt
+	openssl x509 -in foo.pem -inform PEM -out foo.crt
+Convert .cer to .crt
+	openssl x509 -inform DER -in foo.cer -out foo.crt
+
+mitmweb
+	mitmweb --web-port 8090 --web-host 192.168.0.7

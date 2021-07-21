@@ -66,3 +66,8 @@ https://hakibenita.com/sql-for-data-analysis
 https://news.ycombinator.com/item?id=27025829
 	.format csv
 	.import <path to csv file> <table name>
+
+Write results to txt file
+sqlite> .output test_file_1.txt
+sqlite> select * from tbl1;
+	cat test_file_1.txt

@@ -2,8 +2,14 @@ OSI
 http://null-byte.wonderhowto.com/how-to/spy-your-buddys-network-traffic-intro-wireshark-and-osi-model-0133807/
 
 https://www.wireshark.org/	
-	apt-get install wireshark tshark
-	
+	apt install wireshark tshark
+The following NEW packages will be installed:
+libbcg729-0 libsmi2ldbl libspandsp2 libwireshark-data libwireshark14 libwiretap11 libwsutil12 wireshark wireshark-common wireshark-qt
+
+Termux
+	apt install root-repo
+	apt install tshark
+
 http://securityblog.gr/1195/run-wireshark-as-a-user-rather-than-root-ubuntu/
 	chgrp adm /usr/bin/dumpcap
 	chmod 750 /usr/bin/dumpcap

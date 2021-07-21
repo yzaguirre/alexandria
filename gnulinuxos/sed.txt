@@ -52,3 +52,6 @@ https://stackoverflow.com/questions/24014915/change-windows-filenames-to-bash-fi
 http://www.theunixschool.com/2014/08/sed-examples-remove-delete-chars-from-line-file.html
 To remove everything except the 1st n characters in every line:
 	sed -r 's/(.{3}).*/\1/' file
+
+Intuitive find & replace CLI (sed alternative)
+https://github.com/chmln/sd

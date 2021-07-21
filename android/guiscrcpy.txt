@@ -22,3 +22,4 @@ Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Me
 Homebrew
 	xcode-select --install
 	brew install scrcpy
+	sudo -H pip3 install -U guiscrcpy

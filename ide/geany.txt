@@ -19,4 +19,5 @@ Verify download
 	md5sum.exe -c --ignore-missing MD5SUMS
 	sha256sum.exe -c --ignore-missing SHA256SUMS
 	gpg --verify geany-plugins-1.35_setup.exe.sig
+
 Add "C:\Program Files (x86)\Geany\bin" to PATH

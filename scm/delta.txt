@@ -1,0 +1,8 @@
+A viewer for git and diff output
+https://github.com/dandavison/delta
+	wget https://github.com/dandavison/delta/releases/download/0.8.2/git-delta_0.8.2_amd64.deb
+	dpkg -i git-delta_0.8.2_amd64.deb
+Homebrew
+	brew install git-delta
+Windows
+	scoop install delta

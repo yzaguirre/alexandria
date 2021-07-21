@@ -1,6 +1,6 @@
 https://github.com/dmerejkowsky/ruplacer
 .deb installer not available form https://github.com/TankerHQ/ruplacer
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.0/ruplacer-linux
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.2/ruplacer-linux
 	chmod u+x ruplacer-linux
 	mv ruplacer-linux /usr/local/bin/ruplacer
 MacOS

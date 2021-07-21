@@ -5,6 +5,7 @@ Xcode command line tools (macOS)
 Install
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew install wget
+	brew install awk coreutils findutils gnu-tar gnu-sed gnu-which gnu-time
 Homebrew installs packages to their own directory and then symlinks their files into /usr/local.
 	brew cask install firefox
 
@@ -31,3 +32,7 @@ Open homepage
 	brew cask home pycharm
 Homebrew Tutorial: Simplify Software Installation on Mac Using This Package Manager
 https://www.youtube.com/watch?v=SELYgZvAZbU
+
+Error: Directory not empty @ dir_s_rmdir - /usr/local/Cellar/python@3.9/3.9.5
+https://github.com/certbot/certbot/issues/6255
+	sudo chown -R myuser:staff /usr/local/Cellar/python@3.9/3.9.5

@@ -1,0 +1,4 @@
+A simple GTK+ frontend for mpv
+https://celluloid-player.github.io
+https://github.com/celluloid-player/celluloid
+See :/media/mpv.txt

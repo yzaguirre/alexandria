@@ -31,6 +31,10 @@ Download .deb
 	wget http://packages.linuxmint.com/pool/upstream/c/chromium/chromium_90.0.4430.93~linuxmint1%2bdebbie_amd64.deb -O chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 
+Use Debian package
+Let's Install Chromium in Ubuntu Without Snap
+https://www.youtube.com/watch?v=Gk2QH2PocA8
+
 https://askubuntu.com/questions/1184357/why-cant-chromium-suddenly-access-any-partition-except-for-home
 If installed with snap
 	snap connect chromium:removable-media

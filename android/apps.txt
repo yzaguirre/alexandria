@@ -26,3 +26,5 @@ https://github.com/SimpleMobileTools/Simple-Gallery
 Open Source Password Manager for Android
 https://www.keepassdx.com
 https://github.com/Kunzisoft/KeePassDX
+
+https://gitlab.com/juanitobananas/scrambled-exif/tree/HEAD

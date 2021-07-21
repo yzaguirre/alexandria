@@ -111,3 +111,17 @@ https://www.youtube.com/watch?v=GNRg2P8Vqqs
 Turning the Raspberry Pi 4 into a Mini Server
 https://www.youtube.com/watch?v=vgjVps6etYA
 https://n-o-d-e.net/node_mini_server3.html
+
+Raspberry Pi mini server
+https://www.reddit.com/r/RASPBERRY_PI_PROJECTS/comments/objann/finished_my_raspberry_pi_mini_server_with_built/
+The Raspberry Pi IoT Notification Bell
+https://www.reddit.com/r/RASPBERRY_PI_PROJECTS/comments/obmha7/the_raspberry_pi_iot_notification_bell/
+
+TimeTrack Raspberry Pi
+https://city-of-bloomington.github.io/timetrack/
+https://news.ycombinator.com/item?id=27777077
+
+Using IceWM and a Raspberry Pi as my main PC, sharing my theme, config and some
+https://news.ycombinator.com/item?id=27796443
+
+https://www.cnx-software.com/2021/07/13/diy-raspberry-pi-4-mini-server-includes-ups-and-oled-information-display/s

@@ -1,16 +1,16 @@
 Friendly and fast tool for sending HTTP requests
 https://github.com/ducaale/xh
-https://docs.rs/crate/ht/0.3.5
+https://docs.rs/crate/ht/0.10.0
 Install
 	cargo install ht
-	wget https://github.com/ducaale/xh/releases/download/v0.9.2/xh-v0.9.2-x86_64-unknown-linux-musl.tar.gz
-	tar xf xh-v0.9.2-x86_64-unknown-linux-musl.tar.gz
-	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/xh /usr/local/bin
+	wget https://github.com/ducaale/xh/releases/download/v0.10.0/xh-v0.10.0-x86_64-unknown-linux-musl.tar.gz
+	tar xf xh-v0.10.0-x86_64-unknown-linux-musl.tar.gz
+	sudo mv xh-v0.10.0-x86_64-unknown-linux-musl/xh /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s ./xh ./xhs
 Terminal completions
-	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/completions/xh.bash /usr/share/bash-completion/completions
-	sudo mv xh-v0.9.2-x86_64-unknown-linux-musl/completions/xh.fish /usr/share/fish/completions
+	sudo mv xh-v0.10.0-x86_64-unknown-linux-musl/completions/xh.bash /usr/share/bash-completion/completions
+	sudo mv xh-v0.10.0-x86_64-unknown-linux-musl/completions/xh.fish /usr/share/fish/completions
 Windows
 	scoop install xh
 MacOS

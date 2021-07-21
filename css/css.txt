@@ -10,3 +10,6 @@ https://stackoverflow.com/questions/22673008/css-make-div-width-proportional-to-
 width: 50%;
 height: 0;
 padding-bottom: 50%;
+
+10 CSS Pro Tips - Code this, NOT that!
+https://www.youtube.com/watch?v=Qhaz36TZG5Y

@@ -26,6 +26,19 @@ https://github.com/classapp/react-native-video-helper
 https://github.com/zi6xuan/react-native-video-helper
 React Native video helper library, to compress and trim videos using AVFoundation in iOS and MediaCodec in Android
 	yarn add react-native-video-helper
+import RNVideoHelper from 'react-native-video-helper'
+const sourceUri = 'assets-library://asset/asset.mov?id=0F3F0000-9518-4F32-B389-7117F4C2B069&ext=mov'
+RNVideoHelper.compress(sourceUri, { startTime: 0, endTime: 4000 , quality: 'low' })
+RNVideoHelper.compress(sourceUri, {
+	startTime: 10, // optional, in seconds, defaults to 0
+	endTime: 100, //  optional, in seconds, defaults to video duration
+	quality: 'low', // default low, can be medium or high
+	defaultOrientation: 0 // By default is 0, some devices not save this property in metadata. Can be between 0 - 360
+}).progress(value => {
+	console.warn('progress', value); // Int with progress value from 0 to 1
+}).then(compressedUri => {
+	console.warn('compressedUri', compressedUri); // String with path to temporary compressed video
+});
 
 https://account.photoeditorsdk.com/pricing
 https://blog.photoeditorsdk.com/a-photo-and-video-editor-for-your-react-native-apps/

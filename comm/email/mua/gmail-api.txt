@@ -1,12 +1,22 @@
 https://developers.google.com/gmail/api/
 https://developers.google.com/gmail/api/guides/
-https://stackoverflow.com/questions/8179103/read-all-mails-from-gmail-api-using-oauth
-https://developers.google.com/api-client-library/python/
+
 Gmail specific documentation
-https://developers.google.com/gmail/api/v1/reference/
-https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/index.html
+https://developers.google.com/gmail/api/reference/rest
+x https://developers.google.com/gmail/api/v1/reference/
+
+C#
 https://developers.google.com/resources/api-libraries/documentation/gmail/v1/csharp/latest/
+
+Python
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/index.html
+x https://developers.google.com/api-client-library/python
+https://github.com/googleapis/google-api-python-client
+https://googleapis.github.io/google-api-python-client/docs/
+
 https://github.com/unshift/gmail-cli
+
+https://stackoverflow.com/questions/8179103/read-all-mails-from-gmail-api-using-oauth
 
 Search operators you can use with Gmail
 https://support.google.com/mail/answer/7190?hl=en
@@ -43,3 +53,58 @@ This is a message just to say hello. So, "Hello".
 
 https://www.reddit.com/r/todayilearned/comments/cmrmgr/til_liechtenstein_has_a_100_literacy_rate/
 https://www.reddit.com/r/todayilearned/
+
+List labels
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/gmail_v1.users.labels.html#list
+labelResults = service.users().labels().list(userId='me').execute()
+    for label in labelResults.get('labels', []):
+        print(f"id: {label['id']}, type: {label['type']}, name: {label['name']}{linesep}")
+
+List emails in INBOX
+results = service.users().messages().list(userId='me', labelIds=['INBOX']).execute()
+
+Check unread email in INBOX
+results = service.users().messages().list(userId='me', labelIds=['INBOX'], q="is:unread").execute()
+
+Mark email as Read
+https://developers.google.com/resources/api-libraries/documentation/gmail/v1/python/latest/gmail_v1.users.messages.html#modify
+results = service.users().messages().modify(userId='me', id=message['id'], body={'removeLabelIds': ['UNREAD']}).execute()
+
+Mark email as Read, remove from INBOX and add label "Insurance"
+results = service.users().messages().modify(userId='me', id=message['id'], body={'removeLabelIds': ['UNREAD', 'INBOX'], 'addLabelIds': ['Label_192837465']}).execute()
+
+Check E-mail Messages with Python and Gmail API | #34 (Gmail API #1)
+https://www.youtube.com/watch?v=njDGaVnz9Z8
+
+From a message - get() - extract the raw body
+import email
+msg_raw = base64.urlsafe_b64decode(message['raw'].encode('ASCII'))
+msg_str = email.message_from_bytes(msg_raw)
+content_types = msg_str.get_content_maintypes()
+if content_types == 'multipart':
+	# part 1 is plain text, part 2 is html text
+	part1, part2 = msg_str.get_payload()
+	print("This is the message body: ")
+	print(part1.get_payload())
+	return part1.get_payload()
+else:
+	return msg_str.get_payload()
+
+Using Gmail's API To Search & Display Emails Using Python
+https://www.youtube.com/watch?v=vgk7Yio-GQw
+
+Send attachment email
+https://github.com/NormanBenbrahim/send_email_attachment
+https://www.youtube.com/watch?v=TMyrZSAOEz4
+https://stackoverflow.com/questions/25346001/add-excel-file-attachment-when-sending-python-email
+part = MIMEBase('application', "octet-stream")
+part.set_payload(open("WorkBook3.xlsx", "rb").read())
+encoders.encode_base64(part)
+part.add_header('Content-Disposition', 'attachment; filename="WorkBook3.xlsx"')
+msg.attach(part)
+
+Or
+with open(file, 'rb') as f:
+	msg = MIMEBase(main_type, sub_type)
+	msg.set_payload(f.read())
+	encoders.encode_base64(msg)

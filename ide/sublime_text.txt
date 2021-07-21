@@ -1,3 +1,8 @@
+https://www.sublimetext.com/
+
+subl can now be used to edit stdin, eg:
+	echo test | subl | cat
+
 Sublime Text 4
 https://www.sublimetext.com/blog/articles/sublime-text-4
 https://news.ycombinator.com/item?id=27230042
@@ -11,19 +16,21 @@ https://news.codecademy.com/visual-studio-code-sublime-text/
 Multi-edit: When you press ctrl + d,
 all instances of the word or command you are currently on will be highlighted within the file,
 you can also press ctrl + f to find and replace words.
+MacOS
+$HOME/Library/Application Support/Sublime Text 3
 
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
-https://www.sublimetext.com/
-	wget https://download.sublimetext.com/sublime_text_build_4107_x64.tar.xz
-	wget https://download.sublimetext.com/sublime_text_build_4107_x64.tar.xz.asc
-	gpg --verify sublime_text_build_4107_x64.tar.xz.asc
+Install
+	wget https://download.sublimetext.com/sublime_text_build_4113_x64.tar.xz
+	wget https://download.sublimetext.com/sublime_text_build_4113_x64.tar.xz.asc
+	gpg --verify sublime_text_build_4113_x64.tar.xz.asc
 
-	tar xf sublime_text_build_4107_x64.tar.xz -C /opt
+	tar xf sublime_text_build_4113_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 MacOS
-	wget https://download.sublimetext.com/sublime_text_build_4107_mac.zip
-	unzip https://download.sublimetext.com/sublime_text_build_4107_mac.zip -d /Applications
+	wget https://download.sublimetext.com/sublime_text_build_4113_mac.zip
+	unzip https://download.sublimetext.com/sublime_text_build_4113_mac.zip -d /Applications
 
 Cache directory
 ~/.cache

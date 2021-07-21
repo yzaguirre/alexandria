@@ -1,7 +1,21 @@
+Tesseract OCR 
+https://tesseract-ocr.github.io
+https://github.com/tesseract-ocr/tesseract
+https://news.ycombinator.com/item?id=27876383
+Install
+	apt install tesseract-ocr tesseract-ocr-spa
+Termux
+	apt install tesseract
+Homebrew
+	brew install tesseract
+
+https://news.ycombinator.com/item?id=23270970
+https://github.com/tesseract-ocr/tessdata
+
 https://stackoverflow.com/questions/11489824/how-do-i-choose-between-tesseract-and-opencv
 Optical Character Recognition
 http://jocr.sourceforge.net/
-	sudo apt-get install gocr
+	apt install gocr
 	gocr -i 1.jpg
 
 ocrad
@@ -10,9 +24,13 @@ get image to pmn with imagemagik
 Now run ocr
 	ocrad 1.pnm
 
-https://code.google.com/p/tesseract-ocr/
-	sudo apt-get install tesseract-ocr tesseract-ocr-spa tesseract-ocr-equ
-get image to TIF file with imagemagik
+https://til.simonwillison.net/tesseract/tesseract-cli
+To convert an image into an annotated PDF (which you can then copy and
+paste text out of, and which will be correctly indexed by Spotlight):
+	tesseract image.png output-file -l eng pdf
+To get out just the plain text:
+	tesseract image.png output-file -l eng txt
+Get image to TIF file with imagemagik
 	convert 1.jpg 1.tif
 Now run ocr
 	tesseract 1.tif output
@@ -21,7 +39,3 @@ Make a "better" quality
 	convert 1.jpg -resize 1000 1.tif
 	convert 1.jpg -resize 5000 1.tif
 And run tesseract again
-
-https://news.ycombinator.com/item?id=23270970
-https://tesseract-ocr.github.io/
-https://github.com/tesseract-ocr/tessdata

@@ -36,7 +36,9 @@ https://developer.android.com/reference/android/R.color.html
 HTTPS
 https://developer.android.com/training/articles/security-ssl.html
 Network Security
-https://developer.android.com/training/articles/security-config.html
+https://developer.android.com/training/articles/security-config
+https://hurricanelabs.com/blog/modifying-android-apps-to-allow-tls-intercept-with-user-cas/
+https://httptoolkit.tech/blog/android-11-trust-ca-certificates/
 
 Fragments
 https://developer.android.com/guide/components/fragments.html

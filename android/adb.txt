@@ -94,6 +94,11 @@ Open deep-link URLs
 https://varunbarad.com/blog/testing-deep-link-urls-using-adb
 	adb shell am start -a android.intent.action.VIEW -d "https://varunbarad.com/blog"
 
+Start an app
+https://stackoverflow.com/questions/4567904/how-to-start-an-application-using-android-adb-tools
+	adb shell am start -n com.package.name/com.package.name.ActivityName
+	adb shell am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName 
+
 Screenshots
 https://developer.android.com/studio/command-line/adb#screencap
 https://medium.com/mobile-app-development-publication/capture-picture-and-record-video-using-adb-5f4c582acb3c
@@ -158,3 +163,6 @@ https://www.youtube.com/watch?v=0lBTc4aE10I
 echo "Pulling newest video"
 file=$(adb shell ls sdcard/DCIM/Camera | grep mp4 | tail -n1 | sed 's/^M//g')
 adb pull "sdcard/DCIM/Camera/$file"
+
+https://ivrodriguez.com/installing-self-signed-certificates-on-android/
+https://stackoverflow.com/questions/44942851/install-user-certificate-via-adb
