@@ -1,5 +1,19 @@
+A command-line tool to turn web pages into beautiful,
+readable PDF, EPUB, or HTML docs.
 https://github.com/danburzo/percollate
 https://news.ycombinator.com/item?id=18183334
+	npm install -g percollate
+	percollate --help
+	percollate <command> [options] url [url]...
+	percollate pdf https://example.com -o my-example.pdf
+Provide a title for the bundle.
+	percollate epub http://example.com/page-1 http://example.com/page-2 --title="Best Of Example"
+Generate a cover.
+	percollate pdf --cover https://example.com -o my-example.pdf
+The option is implicitly enabled when the --title option is provided,
+or when bundling more than one web page to a single file.
+Disable this implicit behavior by passing the --no-cover flag.
+
 
 https://news.ycombinator.com/item?id=18199708
 https://blog.socialcops.com/technology/engineering/camelot-python-library-pdf-data/
@@ -14,3 +28,19 @@ https://github.com/gotbletu/shownotes/blob/master/combine_pdf.txt
 combine-pdf() { gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=combinedpdf_`date +'%F_%Hh%M'`.pdf -f "$@" ;}
 
 https://osxdaily.com/2021/01/05/how-combine-pdf-files-mac/
+
+https://www.reddit.com/r/AskReddit/comments/p02ibn/what_should_exist_but_doesnt/h84icen/
+	apt install xournal
+
+Parse PDF file with PyMuPDF and generate docx with python-docx
+https://github.com/dothinking/pdf2docx
+	sudo -H pip3 install pdf2docx
+
+How to compare two PDF documents
+https://eclecticlight.co/2021/08/14/how-to-compare-two-pdf-documents/
+https://news.ycombinator.com/item?id=28179746
+
+diffpdf
+https://www.qtrac.eu/diffpdf-foss.html
+https://gitlab.com/eang/diffpdf/
+	apt install diffpdf

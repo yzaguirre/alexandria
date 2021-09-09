@@ -37,3 +37,25 @@ Way easier than printing, signing, scanning, and then emailing back.
 In those cases I usually take the PDF, open it with LibreOffice
 and paste over my signature, scanned once upon a time.
 Never got any complaints, but it could be easily discovered for sure.
+
+How to scan your signature
+https://www.youtube.com/watch?v=CgcU4zKm0Bc
+Crop the photograph
+Sharpness: 100%
+Brightness: 90%
+Color: Blue
+
+How To Make An Electronic Signature And Insert Into Documents
+https://www.youtube.com/watch?v=Rr80GNnx1iI
+
+How to Create Digital Signatures in Word – Quick and Easy Tutorial – Transparent Background
+https://www.youtube.com/watch?v=qKQT5HW4kxY
+
+Sign PDF files with valid x509 certificate
+https://github.com/lsnepomuceno/laravel-a1-pdf-sign
+
+FREE Options to Sign PDF | Make an Electronic Signature
+https://www.youtube.com/watch?v=3tqb1htxz1k
+
+How to make Electronic Signature
+https://www.youtube.com/watch?v=dwqg52dlbvc

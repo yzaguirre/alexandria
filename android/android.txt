@@ -63,3 +63,9 @@ or
 	myDialog.getContext().getResources().getIdentifier("myImageView", "id", activity.getPackageName())
 
 https://developer.android.com/studio/releases?utm_source=android-studio&utm_medium=studio-assistant#4-1-0
+
+How Google bought Android
+https://news.ycombinator.com/item?id=28167690
+
+Creating Different Build Variants in Android
+https://www.youtube.com/watch?v=l-PTrjFaDJk

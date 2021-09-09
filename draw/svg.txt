@@ -1,1 +1,4 @@
 See ~/draw/inkscape.txt ~/draw/krita.txt ~/libreofice/unoconv.txt ~/documents/mermaid.txt
+
+Reduce the size of SVGs
+https://github.com/sonnyp/OhMySVG

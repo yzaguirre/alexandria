@@ -1,4 +1,6 @@
 https://reactnavigation.org/
+React navigation 6
+https://reactnavigation.org/blog/2021/08/14/react-navigation-6.0/
 React navigation 5
 https://heartbeat.fritz.ai/getting-started-with-stack-navigator-using-react-navigation-5-in-react-native-and-expo-apps-4c516becaee1
 https://www.youtube.com/watch?v=54aPIdfClY8&t=197s
@@ -55,3 +57,6 @@ function Albums() {
 
 Custom header
 https://reactnavigation.org/docs/header-buttons/#adding-a-button-to-the-header
+
+How to handle AuthStack/MainStack Redux Login/Signup Api Integration in React Native | Gulsher Khan
+https://www.youtube.com/watch?v=CQYYcYhJMoQ

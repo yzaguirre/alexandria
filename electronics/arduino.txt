@@ -35,3 +35,7 @@ https://news.ycombinator.com/item?id=27123410
 	ln -s /opt/arduino-ide/arduino-ide /usr/local/bin/
 
 https://store.arduino.cc/digital/create
+
+This project aims to simplify creation of basic Arduino programs by just editing a UI on Android.
+https://github.com/targist/ardui
+https://news.ycombinator.com/item?id=28035039

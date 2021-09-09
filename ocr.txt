@@ -39,3 +39,9 @@ Make a "better" quality
 	convert 1.jpg -resize 1000 1.tif
 	convert 1.jpg -resize 5000 1.tif
 And run tesseract again
+
+PaddleOCR
+https://github.com/PaddlePaddle/PaddleOCR
+https://pypi.org/project/paddleocr/
+https://huggingface.co/spaces/akhaliq/PaddleOCR
+https://news.ycombinator.com/item?id=28473496

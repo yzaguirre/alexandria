@@ -122,6 +122,7 @@ Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
 https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
 https://stackoverflow.com/questions/50211010/android-wifi-adb-plugin-not-working-with-some-android-real-device#50211408
+https://android.stackexchange.com/questions/234465/how-do-you-pair-a-device-for-wireless-debugging-with-a-qr-code
 	adb tcpip 6969
 	adb connect 192.168.0.10:6969
 

@@ -130,6 +130,7 @@ Run for iOS
 	react-native run-ios
 	react-native run-ios --simultator "iPhone X"
 	react-native run-ios --device "Kris101"
+or	xed -b ios
 
 Erase cache
 	npm start --reset-cache

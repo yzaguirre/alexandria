@@ -1,0 +1,6 @@
+Convert Word documents (.docx files) to HTML
+https://github.com/mwilliamson/mammoth.js/
+	npm install mammoth
+
+https://mike.zwobble.org/2021/08/side-projects-vs-industry/
+https://news.ycombinator.com/item?id=28025693

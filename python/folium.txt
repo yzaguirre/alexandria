@@ -1,0 +1,2 @@
+http://python-visualization.github.io/folium/installing.html
+	sudo -H pip install folium

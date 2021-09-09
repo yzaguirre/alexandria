@@ -8,3 +8,14 @@ https://github.com/lovell/sharp
 
 CLI for sharp.
 https://github.com/vseventer/sharp-cli
+
+https://www.reddit.com/r/reactnative/comments/ovo9za/how_to_handle_svg_images_in_react_native/
+https://jaka-tertinek.medium.com/how-to-handle-svg-images-in-react-native-127eb3cdeb9a
+https://github.com/react-native-svg/react-native-svg/issues/1306#issuecomment-686420284
+
+import { WithLocalSvg } from 'react-native-svg'
+<WithLocalSvg
+	width="100%"
+	height="100%"
+	asset={require('../assets/images/createTag.svg')}
+/>

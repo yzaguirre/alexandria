@@ -51,3 +51,13 @@ https://news.ycombinator.com/item?id=27736650
 
 NDA expired, let’s spill the beans on a weird startup
 https://news.ycombinator.com/item?id=27782604
+
+Blizzard's reputation collapsed in just three years
+https://news.ycombinator.com/item?id=28022066
+
+Malicious PyPI packages stealing credit cards and injecting code
+https://jfrog.com/blog/malicious-pypi-packages-stealing-credit-cards-injecting-code/
+https://news.ycombinator.com/item?id=28048184
+
+Expose corruption in EPA Chemical Safety Office
+https://news.ycombinator.com/item?id=28092336

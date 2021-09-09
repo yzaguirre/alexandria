@@ -64,3 +64,7 @@ only in as much as their syntax can be easily misconfigured, if you're not very 
 
 # Max mail
 https://www.electrictoolbox.com/postfix-email-size-limit/
+
+Email Authenticity 101: DKIM, Dmarc, and SPF
+https://www.alexblackie.com/articles/email-authenticity-dkim-spf-dmarc/
+https://news.ycombinator.com/item?id=28194477

@@ -41,3 +41,6 @@ Download image and uri encode it
 mail.compose.attach_http_images
 
 https://support.mozilla.org/es/kb/firma-digital-y-cifrado-de-mensajes
+
+https://news.ycombinator.com/item?id=28084907
+Thunderbird does not use gnupg anymore and the enigmail extension is not needed.

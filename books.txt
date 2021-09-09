@@ -16,3 +16,13 @@ https://news.ycombinator.com/item?id=27408120
 How to Write a Programming Book
 https://cscalfani.medium.com/how-to-write-a-programming-book-76ab4f8a7071
 https://news.ycombinator.com/item?id=27537626
+
+How Linux Works, 3rd Edition
+https://nostarch.com/howlinuxworks3
+
+The Linux Command Line
+https://www.linuxcommand.org/tlcl.php
+
+https://www.reddit.com/r/linux/comments/oqw2ac/looking_forward_to_learn_how_linux_works_under/
+
+https://www.reddit.com/r/Entrepreneur/comments/kr9i6h/what_book_have_you_read_that_made_you_say_this/

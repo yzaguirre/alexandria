@@ -8,3 +8,8 @@ kaggle.com
 
 https://www.reddit.com/r/learnmachinelearning/comments/g6jyes/stanford_release_andrew_ngs_machine_learning/
 https://www.youtube.com/watch?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&v=jGwO_UgTS7I&feature=emb_title
+
+Fooling Neural Networks
+https://slazebni.cs.illinois.edu/fall18/lec12_adversarial.pdf
+https://news.ycombinator.com/item?id=28085512
+See ~/Libros/Progra/AI/lec12_adversarial.pdf

@@ -61,6 +61,14 @@ https://stackoverflow.com/questions/12400256/python-converting-epoch-time-into-t
 TODAY_DATE = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 '2021-07-13 22:26:03'
 
+dateutil - powerful extensions to datetime
+https://dateutil.readthedocs.io/en/stable/
+	sudo -H pip3 install python-dateutil
+from dateutil.parser import *
+now = parse("Sat Oct 11 17:13:46 UTC 2003")
+now.timestamp()
+date = datetime.datetime.fromtimestamp(now.timestamp())
+
 Base64
 https://docs.python.org/3/library/base64.html
 	import base64

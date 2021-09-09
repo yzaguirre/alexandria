@@ -28,3 +28,5 @@ When referring to an API, a major upgrade is usually an interface change that wi
 ApproveAPI
 https://approveapi.com/
 https://news.ycombinator.com/item?id=19360844
+
+https://github.com/public-apis/public-apis

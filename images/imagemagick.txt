@@ -42,6 +42,24 @@ SVG to PNG
 	convert drawing.svg -size 2000x3000 drawing.png
 	convert -density 300 -background none butterfly.svg butterfly.png
 
+Remove white background
+https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=32118
+	convert GvCTYAI.png -white-threshold 70% result.png
+
+https://www.halberesford.com/how-to-make-an-images-background-transparent-using-imagemagick/
+	convert orig-2.png -transparent "#ffffff" transparent.png
+
+Removing background using imagemagick, on a white product
+https://stackoverflow.com/questions/31837724/removing-background-using-imagemagick-on-a-white-product
+	convert shirt.jpg -threshold 99.99% -negate result.jpg
+I would take advantage of HSL colorspace, and create an alpha mask from the lightness channel.
+https://en.wikipedia.org/wiki/HSL_and_HSV
+	convert tshirt.jpg \( \
+        +clone -colorspace HSL -separate \
+        -delete 0,1 -fx 'u>0.975?0:1' \) \
+        -compose CopyOpacity -composite  \
+        out.png
+
 Add a image
 https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one-with-imagemagick-command-line
 	convert k0jbqs.jpg \

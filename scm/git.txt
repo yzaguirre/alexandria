@@ -139,7 +139,10 @@ Diff color attributes
 	git config --global color.diff.new "green italic"
 	git diff
 	git diff --color-words
-
+Colorize the output always
+https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
+	git -c color.status=always status
+ 
 https://stackoverflow.com/questions/2389361/undo-a-git-merge
 	git reset --hard HEAD~5
 Unstage a file
@@ -331,3 +334,12 @@ https://news.ycombinator.com/item?id=27579701
 Never use `git checkout`, but `git switch`
 and "git restore` that were introduced in git 2.15 IIRC.
 They are much less confusing and error prone.
+
+gc
+https://stackoverflow.com/questions/8633981/what-does-auto-packing-the-repository-for-optimum-performance-mean
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
+
+New in Git: switch and restore
+https://www.banterly.net/2021/07/31/new-in-git-switch-and-restore/
+https://news.ycombinator.com/item?id=28024972

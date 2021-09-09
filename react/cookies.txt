@@ -1,0 +1,3 @@
+React hook for managing GDPR cookie consent state.
+https://github.com/bring-shrubbery/use-cookie-consent
+	yarn add use-cookie-consent

@@ -18,3 +18,6 @@ https://www.youtube.com/watch?v=f0RepUfPcco
 tinder like react-native deck swiper
 https://github.com/alexbrillant/react-native-deck-swiper
 	yarn add react-native-deck-swiper
+
+Swipe To Delete in React Native
+https://www.youtube.com/watch?v=1y_B4tBezQQ

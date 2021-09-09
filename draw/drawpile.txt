@@ -1,4 +1,4 @@
-https://drawpile.net/
+https://drawpile.net
 A collaborative drawing program
 https://github.com/drawpile/Drawpile
 Windows

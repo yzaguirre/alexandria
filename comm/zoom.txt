@@ -4,3 +4,15 @@ Version 5.6.16888.0424
 	wget https://zoom.us/client/latest/zoom_amd64.deb
 STUDYSTREAM
 https://www.studystream.live/
+
+Dependencies:
+
+gir1.2-ibus-1.0_1.5.17-3ubuntu5.3_amd64.deb
+ibus_1.5.17-3ubuntu5.3_amd64.deb
+libibus-1.0-5_1.5.17-3ubuntu5.3_amd64.deb
+libxcb-xtest0_1.13-1_amd64.deb
+zoom_amd64.deb
+
+Stop using Zoom, Hamburg's data protection agency warns state government
+https://techcrunch.com/2021/08/17/stop-using-zoom-hamburgs-dpa-warns-state-government/
+https://news.ycombinator.com/item?id=28210076

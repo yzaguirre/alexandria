@@ -1,0 +1,7 @@
+A small set of Python functions to draw pretty maps from OpenStreetMap
+data. Based on osmnx, matplotlib and shapely libraries.
+https://github.com/marceloprates/prettymaps
+https://news.ycombinator.com/item?id=28300951
+
+Save your map
+plt.savefig('my-map.png')

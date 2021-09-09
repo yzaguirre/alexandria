@@ -108,3 +108,30 @@ with open(file, 'rb') as f:
 	msg = MIMEBase(main_type, sub_type)
 	msg.set_payload(f.read())
 	encoders.encode_base64(msg)
+
+Header names:
+Delivered-To
+Received
+X-Google-Smtp-Source
+X-Received
+ARC-Seal
+ARC-Message-Signature
+ARC-Authentication-Results
+Return-Path
+Received
+Received-SPF
+Authentication-Results
+DKIM-Signature
+Date (Value: Fri, 16 Jul 2021 18:25:39 +0000)
+From
+Subject
+To
+Mime-Version
+Content-Type
+Message-ID
+Feedback-ID
+X-SES-Outgoing
+
+PHP
+Google Gmail API Ep. 1 - Quickstart
+https://www.youtube.com/watch?v=j_ilbyXwIzI

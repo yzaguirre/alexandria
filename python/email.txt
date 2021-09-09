@@ -10,6 +10,9 @@ https://www.youtube.com/watch?v=YVxAqHE8RM4&t
 Sending an Email in Python via Gmail
 https://www.youtube.com/watch?v=mP_Ln-Z9-XY
 
+How to send Email with Attachment using Python
+https://www.youtube.com/watch?v=J96AFzl8qpE
+
 from email.message import EmailMessage
 import imghdr
 
@@ -47,3 +50,10 @@ IMAP
 
 Day 30: Fetch & Convert Email in Python Programming
 https://www.youtube.com/watch?v=bbPwv0TP2UQ
+
+How to Send Emails Using Python - Plain Text, Adding Attachments, HTML Emails, and More | Hindi Tut.
+https://www.youtube.com/watch?v=uAfeB4jMLXg
+
+Flask (Python)
+Sending Automated Emails in Flask
+https://www.youtube.com/watch?v=ejLGwHiyqGU

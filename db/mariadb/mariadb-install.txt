@@ -1,6 +1,10 @@
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
 	apt install mariadb-server
-	mysql_secure_installation
+The following NEW packages will be installed:
+galera-4 gawk libaio1 libconfig-inifiles-perl libdbd-mariadb-perl libhtml-template-perl libmariadb3 libterm-readkey-perl mariadb-client-10.5
+mariadb-client-core-10.5 mariadb-common mariadb-server mariadb-server-10.5 mariadb-server-core-10.5 socat
+	sudo mariadb_secure_installation
+	sudo mysqladmin version
 	mysqladmin -p -u root version
 Windows
 	scoop install mariadb
@@ -18,3 +22,9 @@ To stop and/or delete the Service run
 	sc stop MariaDB
 and
 	sc delete MariaDB
+
+Stop on system boot
+	systemctl disable mariadb.service
+
+Create user
+GRANT ALL ON *.* TO 'david'@'localhost' IDENTIFIED BY 'DAVID' WITH GRANT OPTION;

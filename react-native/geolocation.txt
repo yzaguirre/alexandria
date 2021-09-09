@@ -58,3 +58,7 @@ https://github.com/venits/react-native-map-clustering
 #10 ReactNative: Showing multiple marker on Map | Snapchat Map | onchangeregion || By Gulsher Khan
 https://www.youtube.com/watch?v=NAEqHr7o1g8
 https://github.com/gulsher7/SnapChat-Clone-React-native/blob/main/src/utils/helperFunctions.js
+
+#8 React Native Tracking:- Calculate distance & time b/w coordinates || Google map || Gulsher Khan
+https://www.youtube.com/watch?v=ZaDEFSvgU7g
+https://github.com/gulsher7/SMOOTH_TRACKING

@@ -1,0 +1,4 @@
+Like jq, but for HTML. Uses CSS selectors to extract bits content
+from HTML files.
+https://github.com/mgdm/htmlq
+https://news.ycombinator.com/item?id=28441880

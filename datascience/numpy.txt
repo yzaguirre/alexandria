@@ -2,7 +2,7 @@ https://numpy.org/
 http://www.scipy.org/Tentative_NumPy_Tutorial
 http://scipy-lectures.github.com
 Install
-	sudo -H pip3 install numpy
+	sudo -H pip install numpy
 Parwiz Forogh
 Python For Data Science
 https://www.youtube.com/playlist?list=PL1FgJUcJJ03vXmv0nUOxJd1TL7C1JBHNV

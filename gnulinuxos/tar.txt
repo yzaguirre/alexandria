@@ -2,27 +2,6 @@ See ~/compression/zip.txt
 http://gnuwin32.sourceforge.net/packages.html
 
 For use in other languajes, see java/jtar.txt and js/js-tar.txt
-Rar Files
-https://winrar.es/
-Print comment and extract
-	rar x -zCMT file.rar
-Extract modified files (freshen files)
-	rar x -f file.rar
-Extract modified files (update files)
-	rar x -u file.rar
-Show file list
-	unrar l file.rar
-	rar vt file.rar
-Create file
-	rar a -r mybackup.rar file1 file2 
-Include file by xlsx and docx extension
-https://stackoverflow.com/questions/14230613/how-to-archive-specific-file-types-with-bat-and-rar
-	rar a -r -n"*.xlsx" -n"*.docx" mybackup.rar .
-Exclude files
-https://stackoverflow.com/questions/12062952/excluding-folders-in-winrar
-	rar a -x"*\.git" -x"*\.svn" -r mybackup.rar folder1/ folder2/
-https://diasp.eu/posts/3890839
-	rarcrack file.ext --threads 10 --type zip
 
 http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file
 Type at the command prompt 
@@ -42,9 +21,6 @@ Suggests use xf
 	append tar files to an archive
 -r, --append
 	append files to the end of an archive
-
-rar
-	$ unrar x file.rar
 
 7z
 https://www.7-zip.org/
@@ -129,12 +105,6 @@ http://unix.stackexchange.com/questions/13093/add-update-a-file-to-an-existing-t
 	$ gunzip archive.tar.gz
 	$ tar rf archive.tar data/data/com.myapp.backup/./files/settings.txt
 	$ gzip archive.tar
-Create rar
-http://commandline4winrar.blogspot.com/
-http://www.tecmint.com/how-to-open-extract-and-create-rar-files-in-linux/
-The next example: add all *.WAV files to the solid RAR archive Songs:
-	rar A -S Songs.RAR *.WAV
-	rar a MYS1_Practica1_200819312.rar *
 
 Multi Volume tar
 http://www.linuxquestions.org/questions/linux-software-2/multi-volume-tar-278989/

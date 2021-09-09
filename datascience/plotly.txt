@@ -1,0 +1,4 @@
+The interactive graphing library for Python (includes Plotly Express)
+https://plotly.com/python/
+https://github.com/plotly/plotly.py
+	sudo -H pip install plotly==5.2.2

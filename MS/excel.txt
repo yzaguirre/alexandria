@@ -23,7 +23,7 @@ https://lucidgen.com/en/how-to-merge-multiple-excel-and-csv-files-into-1-sheet/
 
 csv2xlsx
 https://github.com/impercz/csv2xlsx
-	pip3 install csv2xlsx
+	sudo -H pip install csv2xlsx
 	csv2xlsx 'utf-8' test < ~/test.csv > ~/test.xlsx
 
 https://github.com/nmolinos/csv2excel

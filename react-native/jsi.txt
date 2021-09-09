@@ -1,0 +1,2 @@
+https://blog.notesnook.com/convert-native-modules-to-react-native-jsi-modules/
+https://www.reddit.com/r/reactnative/comments/p59i8q/react_native_jsi_part_2_converting_native_modules/

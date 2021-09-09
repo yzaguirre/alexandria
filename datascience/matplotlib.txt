@@ -1,7 +1,7 @@
 matplotlib: plotting with Python
 https://matplotlib.org/
 https://github.com/matplotlib/matplotlib
-	sudo -H pip3 install matplotlib
+	sudo -H pip install matplotlib
 
 Parwiz Forogh
 Python For Data Science
@@ -9,3 +9,5 @@ https://www.youtube.com/playlist?list=PL1FgJUcJJ03vXmv0nUOxJd1TL7C1JBHNV
 
 Matplotlib Tutorial (Part 1): Creating and Customizing Our First Plots
 https://www.youtube.com/watch?v=UO98lJQ3QGI
+
+https://matplotlib.org/3.4.3/gallery/color/named_colors.html

@@ -8,3 +8,15 @@ https://github.com/bfabiszewski/ulogger-server
 	cat gps.csv
 -110.12345,44.98765,"ACME Show Store","Phone: 555-829-8293"
 	gpsbabel -i csv -f gps.csv -o gpx -F new.gpx
+
+https://www.reddit.com/r/linux/comments/oq6vic/zombietrackergps_109_released_privacyfriendly/
+https://www.zombietrackergps.net/ztgps/
+https://gitlab.com/ldutils-projects/zombietrackergps
+	wget https://www.zombietrackergps.net/ztgps/Downloads/1.09/zombietrackergps-1.09_amd64.deb
+	wget https://www.zombietrackergps.net/ztgps/Downloads/1.09/zombietrackergps-1.09_amd64.deb.sig
+	wget https://www.zombietrackergps.net/ztgps/Downloads/1.09/sha256sums.txt
+	wget https://www.zombietrackergps.net/ztgps/Downloads/1.09/sha256sums.txt.sig
+	gpg --verify sha256sums.txt.sig
+	gpg --verify zombietrackergps-1.09_amd64.deb.sig
+	sha256sum -c --ignore-missing sha256sums.txt
+	dpkg -i zombietrackergps-1.09_amd64.deb

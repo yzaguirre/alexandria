@@ -1,0 +1,20 @@
+LabelImg is a graphical image annotation tool and
+label object bounding boxes in images
+https://github.com/tzutalin/labelImg
+Install
+	sudo -H pip install labelImg
+	labelImg
+	labelImg [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+From source
+	apt install pyqt5-dev-tools
+	sudo pip3 install -r requirements/requirements-linux-python3.txt
+	make qt5py3
+	python3 labelImg.py
+	python3 labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+Virtualenv
+	brew install python3
+	pip install pipenv
+	pipenv run pip install pyqt5==5.12.1 lxml
+	pipenv run make qt5py3
+	pipenv run python3 labelImg.py
+	[Optional] rm -rf build dist; python setup.py py2app -A;mv "dist/labelImg.app" /Applications

@@ -29,7 +29,7 @@ usage: PortableSigner
  -t <arg>              Inputfile (PDF)
 
 https://paulbradley.org/digitally-sign-pdf-files/
-PortableSigner expects a pfx (Personal Information Exchange) file as the certificate input. 
+PortableSigner expects a pfx (Personal Information Exchange) file as the certificate input.
 See ssl/ssl-pfx.txt
 
 Below is a sample command line showing how to sign a PDF called input.pdf

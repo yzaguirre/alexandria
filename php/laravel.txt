@@ -392,3 +392,6 @@ $projects = \App\Project::cursor();
 foreach($projects->take(500) as $project){
 	logger($project->name);
 }
+
+How to use a forked Laravel Package instead of the original?
+https://phpreel.medium.com/how-to-use-a-forked-laravel-package-instead-of-the-original-90dd5b64068a

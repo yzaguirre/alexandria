@@ -55,3 +55,8 @@ Usage
 sqhead
 https://news.ycombinator.com/item?id=27485672
 alias sqhead='python /home/user/Coding/Py-Code/sqlHead.py'
+
+SheetJS Community Edition - Spreadsheet Data Toolkit
+https://sheetjs.com
+https://github.com/SheetJS/sheetjs
+https://news.ycombinator.com/item?id=28029086

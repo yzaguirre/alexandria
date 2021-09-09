@@ -20,3 +20,7 @@ https://news.ycombinator.com/item?id=15666311
 https://matias.insaurral.de/post/http-load-testing-tools/
 
 https://howhttps.works/episodes/
+
+Micro HTTP server in 22 lines of C
+https://twitter.com/ilyakurdyukov/status/1421349901720510465
+https://news.ycombinator.com/item?id=28017051

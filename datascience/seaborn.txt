@@ -1,0 +1,4 @@
+Statistical data visualization in Python
+https://seaborn.pydata.org
+https://github.com/mwaskom/seaborn
+	sudo -H pip install seaborn

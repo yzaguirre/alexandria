@@ -1,3 +1,5 @@
-https://pandas.pydata.org/
-	sudo -H pip3 install pandas
+https://pandas.pydata.org
+	sudo -H pip install pandas pandas-datareader
 See ~/Libros/Quick Reference Guide/Pandas_Cheat_Sheet.pdf
+
+https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?highlight=read_csv#pandas.read_csv

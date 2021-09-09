@@ -85,3 +85,7 @@ as a table in the terminal.
 https://github.com/kellyjonbrazil/jtbl
 	sudo -H pip3 install jtbl
 	cat cities.json | jtbl
+
+Extracting Objects Recursively with Jq
+https://til.simonwillison.net/jq/extracting-objects-recursively
+https://news.ycombinator.com/item?id=28026712

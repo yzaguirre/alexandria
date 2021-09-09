@@ -651,3 +651,6 @@ https://www.youtube.com/watch?v=dQa9mveTSV4
 
 http://coffeeshopwifi.com
 Similar to http://neverssl.com
+
+Open Source Alternatives to Popular B2B Tools
+https://news.ycombinator.com/item?id=27915370

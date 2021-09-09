@@ -1,0 +1,9 @@
+https://developers.google.com/youtube/api/
+https://developers.google.com/youtube/v3/getting-started
+https://developers.google.com/youtube/v3/code_samples
+	sudo -H pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+	sudo -H pip3 install --upgrade google-api-python-client
+
+Check credentials in API dashboard
+https://console.cloud.google.com/apis/dashboard
+https://console.cloud.google.com/apis/credentials

@@ -23,3 +23,6 @@ https://www.reddit.com/r/reactnative/comments/ls5566/ive_released_the_reactnativ
 	yarn add react-native-vision-camera
 iOS
 	npx pod-install ios
+
+React Native Tutorial #31 (2021) - RN Camera with Hooks
+https://www.youtube.com/watch?v=1dcFNPA1sTw

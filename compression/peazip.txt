@@ -8,6 +8,8 @@ https://peazip.github.io/index.html
 https://github.com/peazip/PeaZip/
 https://www.reddit.com/r/linux/comments/nwrq8t/peazip_80_is_here/
 	apt install libqt5pas1
-	wget https://github.com/peazip/PeaZip/releases/download/8.0.0/peazip_8.0.0.LINUX.x86_64.Qt5.deb
-	wget https://github.com/peazip/PeaZip/releases/download/8.0.0/peazip_help.pdf
-	dpkg -i peazip_8.0.0.LINUX.x86_64.Qt5.deb
+	wget https://github.com/peazip/PeaZip/releases/download/8.1.0/peazip_8.1.0.LINUX.x86_64.Qt5.deb
+	wget https://github.com/peazip/PeaZip/releases/download/8.1.0/peazip_help.pdf
+	dpkg -i peazip_8.1.0.LINUX.x86_64.Qt5.deb
+
+https://www.reddit.com/r/linux/comments/oqqj8q/peazip_810_released/

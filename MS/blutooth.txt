@@ -1,0 +1,12 @@
+https://www.amarinfotech.com/differences-comparisons-bluetooth-5-vs-4-2.html
+https://www.thewindowsclub.com/how-to-check-bluetooth-version-in-windows-10
+LMP 9.x – Bluetooth 5.0
+LMP 8.x – Bluetooth 4.2
+LMP 7.x – Bluetooth 4.1
+LMP 6.x – Bluetooth 4.0
+LMP 5.x – Bluetooth 3.0 + HS
+LMP 4.x – Bluetooth 2.1 + EDR
+LMP 3.x – Bluetooth 2.0 + EDR
+LMP 2.x – Bluetooth 1.2
+LMP 1.x – Bluetooth 1.1
+LMP 0.x – Bluetooth 1.0b

@@ -192,3 +192,8 @@ https://news.ycombinator.com/item?id=11317899
 * A number have been shaken down by Oracle sales reps who threaten a license review and potentially stiff penalties and litigation if they find anything at all out of order - unless they purchase software they don't need.
 
 https://cwharton.com/blog/2016/10/postgresql-and-freebsd-quick-start/
+
+The easiest way to get started with PostgreSQL on the Mac
+https://postgresapp.com
+https://github.com/PostgresApp/PostgresApp
+https://news.ycombinator.com/item?id=28084271

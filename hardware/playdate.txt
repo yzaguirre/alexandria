@@ -1,2 +1,4 @@
+It's a new, tiny handheld game system with a bunch of brand-new games.
+We made Playdate just for fun.
 https://play.date/
 https://news.ycombinator.com/item?id=27437600

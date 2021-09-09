@@ -1,0 +1,29 @@
+Rar Files
+https://winrar.es/
+Print comment and extract
+	rar x -zCMT file.rar
+Extract modified files (freshen files)
+	rar x -f file.rar
+Extract modified files (update files)
+	rar x -u file.rar
+Show file list
+	unrar l file.rar
+	rar vt file.rar
+Create file
+	rar a -r mybackup.rar file1 file2 
+Include file by xlsx and docx extension
+https://stackoverflow.com/questions/14230613/how-to-archive-specific-file-types-with-bat-and-rar
+	rar a -r -n"*.xlsx" -n"*.docx" mybackup.rar .
+http://commandline4winrar.blogspot.com/
+http://www.tecmint.com/how-to-open-extract-and-create-rar-files-in-linux/
+The next example: add all *.WAV files to the solid RAR archive Songs:
+	rar A -S Songs.RAR *.WAV
+	rar a MYS1_Practica1_200819312.rar *
+Exclude files
+https://stackoverflow.com/questions/12062952/excluding-folders-in-winrar
+	rar a -x"*\.git" -x"*\.svn" -r mybackup.rar folder1/ folder2/
+https://diasp.eu/posts/3890839
+	rarcrack file.ext --threads 10 --type zip
+
+Uncompress
+	unrar x file.rar

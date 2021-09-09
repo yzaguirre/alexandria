@@ -7,3 +7,6 @@ https://youtu.be/q5J5ho7YUhA
 VS Code plugin: Firebase Explorer
 Configure firebase
 	firebase init
+
+How to NOT get a 30K Firebase Bill
+https://www.youtube.com/watch?v=Lb-Pnytoi-8

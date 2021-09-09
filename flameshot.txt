@@ -3,10 +3,10 @@ https://flameshot.org/
 https://flameshot.org/advanced/command-line-options/
 	apt install flameshot
 DEB installer
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot-0.9.0-1.ubuntu-20.04.amd64.deb
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot-0.9.0-1.ubuntu-20.04.amd64.deb.sha256sum
-	sha256sum -c --ignore-missing flameshot-0.9.0-1.ubuntu-20.04.amd64.deb.sha256sum
-	dpkg -i flameshot-0.9.0-1.ubuntu-20.04.amd64.deb 
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.10.0/flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb
+	wget https://github.com/flameshot-org/flameshot/releases/download/v0.10.0/flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb.sha256sum
+	sha256sum -c --ignore-missing flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb.sha256sum
+	dpkg -i flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb
 AppImage
 	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage
 	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage.sha256sum
@@ -21,3 +21,7 @@ Manual install
 	open flameshot.dmg
 Capture with GUI with custom save path:
 	flameshot gui -p ~/myStuff/captures
+
+Disable Imgur upload
+https://github.com/flameshot-org/flameshot/issues/1529
+Configuration > Interface > uncheck image upload

@@ -4,3 +4,6 @@ https://www.reddit.com/r/reactnative/comments/n64kk8/i_built_a_game_changer_the_
 
 https://github.com/Sanket758/RN-Blink-Smile-Detection
 https://www.reddit.com/r/reactnative/comments/n70itd/eye_blinksmile_detection_with_rncamera/
+
+TensorFlow Platform Adapter for React Native
+https://github.com/tensorflow/tfjs/tree/master/tfjs-react-native

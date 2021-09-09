@@ -3,3 +3,10 @@ A ScrollView component that handles keyboard appearance and
 automatically scrolls to focused TextInput
 https://github.com/APSL/react-native-keyboard-aware-scroll-view
 	yarn add react-native-keyboard-aware-scroll-view
+
+https://www.reddit.com/r/reactnative/comments/oyeb9d/no_question_just_a_statement_i_hate/
+
+Codeless drop-in universal library allows to prevent issues of keyboard
+sliding up and cover UITextField/UITextView.
+Neither need to write any code nor any setup required and much more.
+https://github.com/hackiftekhar/IQKeyboardManager

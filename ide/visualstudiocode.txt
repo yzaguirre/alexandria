@@ -149,3 +149,12 @@ Mariana Pro
 Sublime Text theme
 https://github.com/n0rmand0/Mariana-Pro-color-theme
 https://marketplace.visualstudio.com/items?itemName=rickynormandeau.mariana-pro
+
+Snipped
+https://github.com/jeffersonlicet/snipped
+https://marketplace.visualstudio.com/items?itemName=jeffersonlicet.snipped
+https://www.reddit.com/r/webdev/comments/oqgq4f/snipped_my_first_vs_code_extension_create_fancy/
+
+Visual Studio Code v1.60.0 now supports native bracket pair colorization!
+"editor.bracketPairColorization.enabled: true" is all you need to enable this 🧑‍💻
+https://twitter.com/Mastapegs/status/1433812713638072325

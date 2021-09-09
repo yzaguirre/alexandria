@@ -1,0 +1,13 @@
+GIS, Geographic Information System
+SIG, Sistema de Información Geográfica
+ArcGis, by Esri
+https://www.esri.com/en-us/arcgis/about-arcgis/overview?rsource=%2Fsoftware%2Farcgis
+ArcPy module for Python
+https://github.com/PacktPublishing/ArcGIS-Desktop-For-Spatial-Analysis-Go-From-Basic-To-Pro
+gdb
+gdbtable
+gdbtablx
+freelist
+gdbindexes
+atx
+spx

@@ -132,3 +132,22 @@ https://www.reddit.com/r/reactnative/comments/omsua1/first_ever_single_slider_co
 
 Flashcard app
 https://www.reddit.com/r/reactnative/comments/omthw5/2_weeks_ago_i_shared_the_first_preview_of_my/
+
+https://www.reddit.com/r/reactnative/comments/oqq1pe/meme_maker_making_my_most_powerful_project_even/
+
+https://www.reddit.com/r/reactnative/comments/orxvjg/open_source_i_made_a_simple_video_sharing_app/
+https://github.com/uzaysan/SnackVideoApp
+
+https://www.reddit.com/r/reactnative/comments/orfzc1/my_first_application/
+
+A shopping mobile application made with react native for Android.
+https://www.reddit.com/r/reactnative/comments/otfdcc/my_first_react_native_real_project_source_code_in/
+https://github.com/abdoutech19/shop-app
+
+https://github.com/heylinda/heylinda-app
+https://www.reddit.com/r/reactnative/comments/ovyjtq/open_source_meditation_app/
+
+https://github.com/Hrushi2406/Amazon-ui-concept
+https://www.reddit.com/r/reactnative/comments/owzb2n/amazon_ui_redesign_app/
+
+https://www.reddit.com/r/reactnative/comments/pk6625/we_just_launched_our_product_on_product_hunt/

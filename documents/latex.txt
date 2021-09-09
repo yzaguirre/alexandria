@@ -1,3 +1,10 @@
+https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex
+Install
+	apt install texlive-xetex texlive-fonts-recommended texlive-latex-recommended
+The following NEW packages will be installed:
+fonts-texgyre libapache-pom-java libcommons-logging-java libcommons-parent-java libfontbox-java libpdfbox-java preview-latex-style teckit tex-gyre
+texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-xetex tipa
+
 la version actual es 2013, pero se elige trabajar con 2012
 http://miguel.leugim.com.mx/index.php/2008/05/09/latex-install-on-debian-gnulinux/
 
@@ -28,3 +35,7 @@ https://miktex.org/
 Self-rendering Markdown + LaTeX documents
 https://github.com/susam/texme
 https://news.ycombinator.com/item?id=27324427
+
+Rustdoc résumé
+https://yozhgoor.github.io/yohan_boogaert_1995/
+https://news.ycombinator.com/item?id=28197370

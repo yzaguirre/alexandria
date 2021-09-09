@@ -1,0 +1,15 @@
+Cross-platform text editor, written in Lazarus
+https://cudatext.github.io
+https://github.com/Alexey-T/CudaText
+https://www.fosshub.com/CudaText.html
+https://www.reddit.com/r/linux/comments/oqcazj/cudatext_an_open_source_alternative_to_sublimetext/
+Verify
+	md5sum cudatext_1.139.2.1-1_qt5_amd64.deb 
+12e0e33ece0ee99865d1380cc55d1da5  cudatext_1.139.2.1-1_qt5_amd64.deb
+	sha1sum cudatext_1.139.2.1-1_qt5_amd64.deb 
+49544e68c9ef5194df522c698511a3c3e54a480d  cudatext_1.139.2.1-1_qt5_amd64.deb
+	sha256sum cudatext_1.139.2.1-1_qt5_amd64.deb 
+2d0e6ec7d27656557d9444b434771c0e8d1267390e25eb464836898724f9de41  cudatext_1.139.2.1-1_qt5_amd64.deb
+	dpkg -i cudatext_1.139.2.1-1_qt5_amd64.deb
+* long tour in 14 minutes: https://www.youtube.com/watch?v=q8edzSd400Y
+* micro review in 3 minutes: https://www.youtube.com/watch?v=ts0z7CsflT4

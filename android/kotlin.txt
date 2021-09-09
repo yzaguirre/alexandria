@@ -10,3 +10,6 @@ fun Activity.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
 Call Toast
 
 toast("Hello Kotlin, Hackbal Teamz")
+
+Kotlin Android Tutorial | How to Create an Android App using Kotlin? | Edureka
+https://www.youtube.com/watch?v=WzVNGFK8bNc

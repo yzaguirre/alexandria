@@ -1,0 +1,22 @@
+Google Drive API
+https://developers.google.com/resources/api-libraries/documentation/drive/v3/python/latest/index.html
+https://developers.google.com/drive/api/v3/about-sdk?hl=en
+	sudo -H pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
+Google Drive API
+The REST API that allows you to leverage Google Drive storage from within your app.
+
+Scope
+https://developers.google.com/drive/api/v3/about-auth?hl=en
+
+https://www.googleapis.com/auth/drive
+Full, permissive scope to access all of a user's files, excluding the Application Data folder.
+
+Upload files
+https://developers.google.com/drive/api/v3/manage-uploads?hl=en#python
+file_metadata = {'name': 'photo.jpg'}
+media = MediaFileUpload('files/photo.jpg', mimetype='image/jpeg')
+file = drive_service.files().create(body=file_metadata,
+                                    media_body=media,
+                                    fields='id').execute()
+print 'File ID: %s' % file.get('id')

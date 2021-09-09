@@ -23,7 +23,8 @@ The following NEW packages will be installed:
 libevent-core-2.1-7 libevent-dev libevent-extra-2.1-7 libevent-openssl-2.1-7 libevent-pthreads-2.1-7 libncurses-dev libncurses5-dev
 	git clone https://github.com/tmux/tmux.git
 	cd tmux
-or	wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
+or
+	wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
 	tar xf tmux-3.2a.tar.gz
 	cd tmux-3.2a
 	
@@ -149,3 +150,7 @@ Status bar
 
 Tmux Tutorial
 https://www.youtube.com/watch?v=cPWEX2446B4
+
+Capture pane
+Sends the buffer to a pipe
+	tmux capture-pane -pS -1000000 | tee file.txt

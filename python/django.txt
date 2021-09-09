@@ -66,3 +66,7 @@ Create views
 https://www.digitalocean.com/community/tutorials/how-to-create-django-views
 
 https://www.digitalocean.com/community/tutorials/django-authentication-with-facebook-instagram-and-linkedin
+
+Building a Django driver for Psycopg 3
+https://www.psycopg.org/articles/2021/08/02/psycopg3-django-driver/
+https://news.ycombinator.com/item?id=28034581
