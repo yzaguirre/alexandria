@@ -154,3 +154,6 @@ https://www.youtube.com/watch?v=cPWEX2446B4
 Capture pane
 Sends the buffer to a pipe
 	tmux capture-pane -pS -1000000 | tee file.txt
+
+Easiest way to copy text in Tmux | Oh My Tmux
+https://www.youtube.com/watch?v=bubTu4ovhmc

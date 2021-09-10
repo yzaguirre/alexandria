@@ -1,6 +1,8 @@
 LabelImg is a graphical image annotation tool and
 label object bounding boxes in images
 https://github.com/tzutalin/labelImg
+Label and annotate images
+https://www.youtube.com/watch?v=p0nR2YsCY_U
 Install
 	sudo -H pip install labelImg
 	labelImg

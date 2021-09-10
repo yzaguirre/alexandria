@@ -2,3 +2,9 @@ Like jq, but for HTML. Uses CSS selectors to extract bits content
 from HTML files.
 https://github.com/mgdm/htmlq
 https://news.ycombinator.com/item?id=28441880
+	cargo install htmlq
+	htmlq -h
+Find all the links in a page
+	curl --silent https://www.rust-lang.org/ | htmlq --attribute href a
+Extract the text of <a> tags
+	cat index.html | htmlq '.title a' --text
