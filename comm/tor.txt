@@ -14,13 +14,13 @@ https://support.torproject.org/tbb/how-to-verify-signature/
 Verify download
 https://www.torproject.org/docs/debian.html.en
 	gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
-	wget https://www.torproject.org/dist/torbrowser/9.0.10/tor-browser-linux64-9.0.10_en-US.tar.xz
-	wget https://www.torproject.org/dist/torbrowser/9.0.10/tor-browser-linux64-9.0.10_en-US.tar.xz.asc
-	gpg --verify tor-browser-linux64-9.0.10_en-US.tar.xz.asc
-	rm -r /VMs/opt/tor
-	tar xf tor-browser-linux* -C /VMs/opt/
-	mv /VMs/opt/{tor-browser_*,tor}
-	ln -s /VMs/opt/tor/Browser/start-tor-browser /usr/local/bin/tor
+	wget https://www.torproject.org/dist/torbrowser/10.5.6/tor-browser-linux64-10.5.6_en-US.tar.xz
+	wget https://www.torproject.org/dist/torbrowser/10.5.6/tor-browser-linux64-10.5.6_en-US.tar.xz.asc
+	gpg --verify tor-browser-linux64-10.5.6_en-US.tar.xz.asc
+	rm -r /opt/tor
+	tar xf tor-browser-linux* -C /opt/
+	mv /opt/{tor-browser_*,tor}
+	ln -s /opt/tor/Browser/start-tor-browser /usr/local/bin/tor
 Windows
 	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe
 	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe.asc

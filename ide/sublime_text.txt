@@ -28,6 +28,9 @@ Install
 
 	tar xf sublime_text_build_4113_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
+Windows
+	wget https://download.sublimetext.com/sublime_text_build_4113_x64_setup.exe
+	explorer.exe sublime_text_build_4113_x64_setup.exe
 MacOS
 	wget https://download.sublimetext.com/sublime_text_build_4113_mac.zip
 	unzip https://download.sublimetext.com/sublime_text_build_4113_mac.zip -d /Applications

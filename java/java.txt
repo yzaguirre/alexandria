@@ -22,3 +22,7 @@ Create jar file
 
 https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-16/
 https://www.reddit.com/r/programming/comments/mhurew/a_categorized_list_of_all_java_and_jvm_features/
+
+Java 17
+https://mail.openjdk.java.net/pipermail/jdk-dev/2021-September/006037.html
+https://news.ycombinator.com/item?id=28525378

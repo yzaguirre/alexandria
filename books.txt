@@ -26,3 +26,6 @@ https://www.linuxcommand.org/tlcl.php
 https://www.reddit.com/r/linux/comments/oqw2ac/looking_forward_to_learn_how_linux_works_under/
 
 https://www.reddit.com/r/Entrepreneur/comments/kr9i6h/what_book_have_you_read_that_made_you_say_this/
+
+Ask HN: How do I easily catalog a couple thousand physical books?
+https://news.ycombinator.com/item?id=28605777

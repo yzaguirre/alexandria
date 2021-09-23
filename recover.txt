@@ -1,12 +1,12 @@
 http://blog.bisect.de/2011/08/how-to-undelete-files-from-ext3ext4.html
-	apt-get install extundelete
+	apt install extundelete
 Restore
-	cd /VMs/tmp
+	cd /tmp
 	extundelete --restore-file /home/david/downloads/linuxactionshowep307.mp4 /dev/sda1
 
 apt-get install testdisk
 
 photorec
 http://www.cgsecurity.org/wiki/File_Formats_Recovered_By_PhotoRec
-	apt-get install testdisk
+	apt install testdisk
 	photorec /d recup_dir /dev/sdc1

@@ -1,0 +1,3 @@
+Menubar app to remove link tracking parameters automatically
+https://github.com/rknightuk/TrackerZapper
+https://news.ycombinator.com/item?id=28576147

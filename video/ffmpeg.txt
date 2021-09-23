@@ -157,3 +157,13 @@ Extract Video/Remove Audio from a Video File
 
 Add Silent Audio Track to a Video File
 	ffmpeg -i video_without_audio.mp4 -f lavfi -i anullsrc -vcodec copy -acodec aac -shortest video_with_silence.mp4
+
+https://stackoverflow.com/questions/40088222/ffmpeg-convert-video-to-images
+Create a thumbnail image every X seconds of the video
+https://web.archive.org/web/20210621172103/https://trac.ffmpeg.org/wiki/Create%20a%20thumbnail%20image%20every%20X%20seconds%20of%20the%20video
+Output one image every second:
+	ffmpeg -i input.mp4 -vf fps=1 out%d.png
+Output one image every minute:
+	ffmpeg -i test.mp4 -vf fps=1/60 thumb%04d.png
+Output one image every 10 minutes:
+	ffmpeg -i test.mp4 -vf fps=1/600 thumb%04d.png

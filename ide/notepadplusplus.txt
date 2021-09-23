@@ -2,6 +2,16 @@ https://notepad-plus-plus.org
 Notepad++ v8 release
 https://notepad-plus-plus.org/downloads/v8/
 https://news.ycombinator.com/item?id=27420726
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.x64.exe.sig
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.checksums.sha256
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.checksums.sha256.sig
+	wget https://notepad-plus-plus.org/gpg/nppGpgPub.asc
+	gpg --import nppGpgPub.asc
+	gpg --verify npp.8.1.4.Installer.x64.exe.sig
+	gpg --verify npp.8.1.4.checksums.sha256.sig
+	dos2unix npp.8.1.4.checksums.sha256
+	sha256sum -c --ignore-missing npp.8.1.4.checksums.sha256
 
 http://docs.notepad-plus-plus.org/index.php/Command_Line_Switches
 	notepad++.exe -n25 file.txt

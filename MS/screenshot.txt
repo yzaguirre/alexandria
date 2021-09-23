@@ -15,3 +15,7 @@ Scoop
 
 The Best Screenshot Tool | ShareX
 https://www.youtube.com/watch?v=dGDWgl7MxMM
+
+Simple and efficient screen recording utility for Windows
+https://github.com/mmozeiko/wcap
+https://news.ycombinator.com/item?id=28596413

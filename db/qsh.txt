@@ -1,0 +1,3 @@
+shell-based database query tool
+https://news.ycombinator.com/item?id=28550874
+https://github.com/muhmud/qsh

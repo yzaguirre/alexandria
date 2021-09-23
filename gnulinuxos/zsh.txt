@@ -39,3 +39,9 @@ Edit config file
 	vim ~/.zshrc
 alias zshconfig="nvim ~/.zshrc"
 	source ~/.zshrc
+
+https://github.com/romkatv/powerlevel10k
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+	echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+Configuration
+	p10k configure
