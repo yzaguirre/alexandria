@@ -1,3 +1,6 @@
+Understanding Awk
+https://earthly.dev/blog/awk-examples/
+https://news.ycombinator.com/item?id=28707463
 An interactive introduction to Awk
 https://www.n8ta.com/projects/awk.html
 https://news.ycombinator.com/item?id=27437401

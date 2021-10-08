@@ -3,3 +3,8 @@ https://blog.kowalczyk.info/article/2f72237a4230410a888acbfce3dc0864/lessons-lea
 https://news.ycombinator.com/item?id=27968900
 	wget https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.3-64-install.exe
 	explorer.exe SumatraPDF-3.3.3-64-install.exe
+Dark mode
+https://oak.dev/2020/05/06/dark-mode-for-sumatra-pdf/
+TextColor = #eeeeee
+BackgroundColor = #111111
+GradientColors = #000000

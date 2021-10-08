@@ -1,0 +1,21 @@
+WSL 2 Networking
+https://www.youtube.com/watch?v=yCK3easuYm4
+Allow traffic to vm
+Map external port to internal host
+	netsh interface portproxy add v4tov4 listenport=3390 listenaddress=0.0.0.0 connectport=3390 connectaddress=192.168.170.227
+
+Windows development setup with WSL2, ZSH, VSCode, and more 🤫
+https://www.youtube.com/watch?v=oF6gLyhQDdw
+
+A Linux Dev Environment on Windows with WSL 2, Docker Desktop and More
+https://www.youtube.com/watch?v=idW-an99TAM
+
+https://www.lshell.com/post/how-to-limit-the-maximum-memory-usage-of-wsl2/
+https://winaero.com/terminate-running-wsl-linux-distro-windows-10/
+https://developpaper.com/how-to-limit-the-memory-and-cpu-usage-of-windows-wsl/
+https://www.techiepie.com/windows/how-to-limit-memory-and-processor-in-wsl-2-windows-10/
+Power off
+	wsl -t Ubuntu
+Start
+	wsl -d Ubuntu
+

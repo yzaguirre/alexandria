@@ -13,3 +13,6 @@ Fooling Neural Networks
 https://slazebni.cs.illinois.edu/fall18/lec12_adversarial.pdf
 https://news.ycombinator.com/item?id=28085512
 See ~/Libros/Progra/AI/lec12_adversarial.pdf
+
+https://twitter.com/Mike051270/status/1440432205705060359
+One common architecture for recommendation systems consists of:

@@ -64,3 +64,8 @@ see ~/http/frp.txt
 Migrating Millions of Concurrent WebSockets to Envoy
 https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/
 https://news.ycombinator.com/item?id=26476894
+
+cURL
+https://askubuntu.com/questions/1327783/can-you-set-socks5-proxy-from-linux-command-line
+	curl -x socks5h://localhost:9090 google.com -o output.curl
+

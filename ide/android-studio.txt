@@ -9,7 +9,8 @@ Install
 	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /opt/android-studio/bin/studio.sh'
 	touch ~/.android/analytics.settings
 
-For W
+For Windows
+https://stackoverflow.com/questions/53076422/getting-android-sdkmanager-to-run-with-java-11
 https://developer.android.com/studio/#downloads
 	sha256sum sdk-tools-windows-4333796.zip
 7e81d69c303e47a4f0e748a6352d85cd0c8fd90a5a95ae4e076b5e5f960d3c7a

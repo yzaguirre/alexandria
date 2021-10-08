@@ -5,3 +5,11 @@ DEB
 	dpkg -i zim_0.73.5_all.deb
 Homebrew
 	brew install zim
+Windows
+	wget https://zim-wiki.org/downloads/zim-desktop-wiki-0.74.1-setup-w64_x86.exe
+	explorer.exe zim-desktop-wiki-0.74.1-setup-w64_x86.exe
+
+Styles
+https://superuser.com/questions/1260661/change-font-color-of-headers-in-zim-wiki
+C:\Program Files\Zim Desktop Wiki\share\zim
+

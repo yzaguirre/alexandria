@@ -12,3 +12,5 @@ Acelerar reproduccion
 	sox tux.ogg acelerado.wav speed 2.0
 Recortar, seleccionar los primeros 10 segundos después del primer minuto de reproducción
 	sox tux.wav recortado.ogg trim 60 10
+Trim
+	sox input.mp3 output.mp3 trim 2:24 +0:01.800

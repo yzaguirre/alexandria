@@ -8,6 +8,10 @@ https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
 Pip
 	sudo -H pip3 install -U guiscrcpy
 Windows
+Configuration files
+https://github.com/srevinsaju/guiscrcpy/blob/main/docs/CONFIGURATION.md
+C:\Users\<username>\AppData\Local\guiscrcpy\guiscrcpy.json
+
 Install scrcpy
 https://github.com/genymobile/scrcpy/
 	wget https://github.com/Genymobile/scrcpy/releases/download/v1.13/scrcpy-win64-v1.13.zip
@@ -15,8 +19,11 @@ https://github.com/genymobile/scrcpy/
 806aafc00d4db01513193addaa24f47858893ba5efe75770bfef6ae1ea987d27
 scrcpy with scoop
 	scoop install scrcpy
+Chocolately
+	choco install scrcpy
 Directory: ~\scoop\apps\scrcpy\current
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/4.7.7/guiscrcpy.exe
+Directory: C:/ProgramData/chocolatey/bin
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.10.0/guiscrcpy-PyQt5-x64.exe
 Save it at C:\Program Files\guiscrpy
 Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Menu
 Homebrew

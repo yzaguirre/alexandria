@@ -1,3 +1,6 @@
+Mosquitto: An open-source MQTT broker
+https://github.com/eclipse/mosquitto
+https://news.ycombinator.com/item?id=28695346
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04-quickstart
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-18-04
 Install

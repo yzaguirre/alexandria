@@ -29,3 +29,7 @@ weather.local {
 "dev": "caddy stop; caddy start && next dev"
 	vim /etc/hosts
 127.0.0.1 weather.local
+
+Static files
+	caddy file-server --browse --listen :2015 --root ~/mysite
+

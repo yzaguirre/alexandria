@@ -119,3 +119,6 @@ http://askubuntu.com/questions/147241/ddg#147265
 	update-alternatives --config editor
 	visudo
 	username ALL=(ALL) NOPASSWD: ALL
+
+https://linuxconfig.net/manuals/howto/etc-group-file.html
+	groups david

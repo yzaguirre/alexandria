@@ -35,6 +35,16 @@ Use Debian package
 Let's Install Chromium in Ubuntu Without Snap
 https://www.youtube.com/watch?v=Gk2QH2PocA8
 
+Chromium 94 audio sandbox
+https://github.com/chromium/chromium/blob/master/services/audio/audio_sandbox_hook_linux.cc#L133
+https://subsetgames.com/forum/viewtopic.php?t=21661
+https://github.com/AyatanaIndicators/ayatana-indicator-sound/issues/15
+https://unix.stackexchange.com/questions/89977/pulseaudio-failed-to-create-secure-directory-in-nfs-share
+https://amarok-devel.kde.narkive.com/I8gXXp9u/failed-to-create-secure-directory-run-user-1000-pulse-permission-denied-external-mysql-difficulties
+https://bugs.launchpad.net/ubuntu/+source/pulseaudio/+bug/1197395
+	usermod -aG audio david
+	groups david
+
 https://askubuntu.com/questions/1184357/why-cant-chromium-suddenly-access-any-partition-except-for-home
 If installed with snap
 	snap connect chromium:removable-media
@@ -82,3 +92,11 @@ Run
 Find profile directory with
 	chrome://version
 $HOME/Library/ApplicationSupport/Chromium/Default
+
+Disable GPU
+https://simpleit.rocks/linux/ubuntu/fixing-common-google-chrome-gpu-process-error-message-in-linux/
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=918433
+ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
+	chromium --disable-gpu --disable-software-rasterizer
+	chromium --use-gl=swiftshader
+	export MESA_GLSL_CACHE_DISABLE=true

@@ -1,0 +1,9 @@
+simple and efficient screen recording utility for Windows
+https://github.com/mmozeiko/wcap
+https://news.ycombinator.com/item?id=28596413
+	wget https://raw.githubusercontent.com/wiki/mmozeiko/wcap/wcap.exe
+	explorer.exe wcap.exe
+
+press Ctrl + PrintScreen to start recording current monitor (where mouse cursor currently is positioned)
+press Ctrl + Win + PrintScreen to start recording currently active window
+press Ctrl + Shift + PrintScreen to select & record fixed position area on current monitor
