@@ -44,3 +44,6 @@ wodim --devices
 
 cdrecord
 	cdrecord speed=4 -eject --dev=/dev/sr0 /tmp/BOOT-CD.iso
+Jörg Schilling has died
+https://minnie.tuhs.org/pipermail/tuhs/2021-October/024523.html
+https://news.ycombinator.com/item?id=28827388

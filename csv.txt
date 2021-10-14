@@ -60,3 +60,14 @@ SheetJS Community Edition - Spreadsheet Data Toolkit
 https://sheetjs.com
 https://github.com/SheetJS/sheetjs
 https://news.ycombinator.com/item?id=28029086
+
+Tidy Viewer - a cross-platform CSV pretty printer for viewer enjoyment
+https://github.com/alexhallam/tv
+https://news.ycombinator.com/item?id=28670252
+	wget https://github.com/alexhallam/tv/releases/download/0.0.21/tidy-viewer_0.0.21_amd64.deb
+	dpkg -i tidy-viewer_0.0.21_amd64.deb
+	echo "alias tv='tidy-viewer'" >> ~/.bash_alias
+Windows
+	wget https://github.com/alexhallam/tv/releases/download/0.0.21/tidy-viewer--x86_64-pc-windows-msvc.zip
+	unzip tidy-viewer--x86_64-pc-windows-msvc.zip
+	mv tidy-viewer--x86_64-pc-windows-msvc/tidy-viewer.exe %HOME%/bin/tv.exe

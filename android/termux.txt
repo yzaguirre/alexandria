@@ -31,6 +31,7 @@ https://wiki.termux.com/wiki/Hardware_Keyboard
 https://wiki.termux.com/wiki/User_Interface
 
 https://wiki.termux.com/wiki/Termux:Widget
+https://github.com/termux/termux-widget
 	mkdir -p $HOME/.shortcuts
 SSH
 https://wiki.termux.com/wiki/Remote_Access#OpenSSH
