@@ -1,0 +1,19 @@
+Insanely fast image printing in your terminal
+https://github.com/posva/catimg
+https://posva.net/shell/retro/bash/2013/05/27/catimg
+	wget https://github.com/posva/catimg/archive/refs/tags/2.7.0.tar.gz
+	tar xf 2.7.0.tar.gz
+	cd catimg-2.7.0
+	mv catimg /usr/local/bin
+	mv catimg-ext-colors.png /usr/local/bin
+	mv man/catimg.1 /usr/share/man/man1
+	mv completion/_catimg /usr/share/zsh/vendor-completions
+Termux
+	scp catimg catimg-ext-colors.png phone:bin
+Compile source
+	git clone https://github.com/posva/catimg.git
+	cd catimg
+	cmake .
+	make install
+Homebrew
+	brew install catimg

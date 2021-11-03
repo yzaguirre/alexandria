@@ -47,3 +47,9 @@ cdrecord
 Jörg Schilling has died
 https://minnie.tuhs.org/pipermail/tuhs/2021-October/024523.html
 https://news.ycombinator.com/item?id=28827388
+
+usbimager
+A very minimal GUI app that can write compressed disk images to USB drives
+https://gitlab.com/bztsrc/usbimager
+https://news.ycombinator.com/item?id=28904309
+

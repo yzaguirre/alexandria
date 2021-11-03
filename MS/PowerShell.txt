@@ -54,3 +54,8 @@ Shortcuts
 https://superuser.com/questions/392061/how-to-make-a-shortcut-from-cmd
 https://stackoverflow.com/questions/30028709/how-do-i-create-a-shortcut-via-command-line-in-windows
 powershell "\$s=(New-Object -COM WScript.Shell).CreateShortcut('code\Caddyr.lnk');\$s.TargetPath='C:\Users\david\Documents\GitHub\Caddyr';\$s.Save()"
+
+Print assembly version
+https://stackoverflow.com/questions/1710935/how-do-i-find-the-publickeytoken-for-a-particular-dll
+	([system.reflection.assembly]::loadfile("C:\..\Full_Path\..\MyDLL.dll")).FullName
+MyDLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a

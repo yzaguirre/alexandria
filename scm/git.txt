@@ -316,6 +316,9 @@ Zip file
 https://stackoverflow.com/questions/3423540/zip-latest-committed-changes-only
 	git archive -o ../latest.zip some-commit
 	git archive -o ../latest.zip some-commit $(git diff --name-only earlier-commit some-commit)
+Make zip of changed files
+https://stackoverflow.com/questions/23115777/git-archive-with-unstaged-changes
+	git diff --name-only -a | xargs zip myUnstagedChanges.zip
 
 Bundle a repository
 https://git-scm.com/docs/git-bundle

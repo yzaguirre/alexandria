@@ -1,13 +1,13 @@
 http://syncthing.net/
 https://github.com/syncthing/syncthing
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/sha1sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/sha256sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-linux-amd64-v1.18.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-linux-386-v1.18.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-linux-arm-v1.18.2.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-windows-amd64-v1.18.2.zip
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-macos-universal-v1.18.2.zip
-	wget https://github.com/syncthing/syncthing/releases/download/v1.18.2/syncthing-macos-amd64-v1.18.2.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/sha1sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/sha256sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-linux-amd64-v1.18.4.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-linux-386-v1.18.4.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-linux-arm-v1.18.4.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-windows-amd64-v1.18.4.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-macos-universal-v1.18.4.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.18.4/syncthing-macos-amd64-v1.18.4.zip
 Verify
 https://syncthing.net/security.html
 Release binaries are signed with key D26E6ED000654A3E
@@ -17,13 +17,13 @@ Release binaries are signed with key D26E6ED000654A3E
 	gpg --verify sha256sum.txt.asc
 http://discourse.syncthing.net/t/getting-started/46
 Install amd64
-	tar xf syncthing-linux-amd64-v1.18.2.tar.gz -C /opt
-	mv /opt/{syncthing-linux-amd64-v1.18.2,syncthing}
+	tar xf syncthing-linux-amd64-v1.18.4.tar.gz -C /opt
+	mv /opt/{syncthing-linux-amd64-v1.18.4,syncthing}
 	ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
 Install raspberry pi
 	mkdir ~/.syncthing
-	tar xf syncthing-linux-arm-v1.18.2.tar.gz -C ~/
-	mv ~/syncthing-linux-arm-v1.18.2 .syncthing
+	tar xf syncthing-linux-arm-v1.18.4.tar.gz -C ~/
+	mv ~/syncthing-linux-arm-v1.18.4 .syncthing
 	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
 Remarkable
 https://github.com/Evidlo/remarkable_syncthing
@@ -48,8 +48,8 @@ Config at
 ~/.config/syncthing/config.xml
 
 Install MacOS
-	unzip syncthing-macos-universal-v1.18.2.zip
-	cd syncthing-macos-universal-v1.18.2
+	unzip syncthing-macos-universal-v1.18.4.zip
+	cd syncthing-macos-universal-v1.18.4
 	ruplacer "/USERNAME" "/david" etc/macos-launchd/syncthing.plist
 	mv etc/macos-launchd/syncthing.plist ~/Library/LaunchAgents/syncthing.plist
 	mv syncthing ~/bin

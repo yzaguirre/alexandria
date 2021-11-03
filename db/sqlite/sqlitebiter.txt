@@ -1,0 +1,4 @@
+https://sqlitebiter.readthedocs.io/en/latest/
+	sudo -H pip3 install sqlitebiter
+https://sqlitebiter.readthedocs.io/en/latest/pages/usage/file/index.html#examples
+	sqlitebiter -o sample.sqlite file call_log.json
