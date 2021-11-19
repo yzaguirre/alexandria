@@ -1,0 +1,5 @@
+Capturing and Decrypting HTTPS Traffic from iOS Apps Using Frida (2019)
+https://andydavies.me/blog/2019/12/12/capturing-and-decrypting-https-traffic-from-ios-apps/
+https://news.ycombinator.com/item?id=29198671
+	sudo -H pip3 install -U frida-tools
+	frida-trace -i "recv*" Twitter

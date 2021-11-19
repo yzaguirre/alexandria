@@ -1,6 +1,9 @@
 https://www.python.org/
 	python3 -m pip install -U autopep8 --user
 
+did you know that you can use functions as values in a Python dictionary?
+https://twitter.com/DynamicWebPaige/status/1456110881553612803
+
 5 Python tricks that will improve your life
 Aaron Jack
 https://www.youtube.com/watch?v=5tcs2qXP3Pg

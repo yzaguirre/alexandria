@@ -1,1 +1,4 @@
 https://www.browserstack.com/
+https://stackoverflow.com/questions/53060432/how-can-i-create-an-xiaomi-emulator-for-android-studio-or-any-other-way-to-test
+https://www.browserstack.com/test-on-xiaomi
+https://stackoverflow.com/questions/39485452/is-there-any-way-to-emulate-perfectly-a-oneplus-device

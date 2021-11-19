@@ -14,3 +14,7 @@ If you have installed tiff2pdf, you can convert a tiff image to pdf format as fo
 	tiff2pdf -o output.pdf input.tiff
 
 If you would like to extract specific pages from a tiff image and convert them into a pdf file, what you can do is to convert the whole tiff file into a pdf using the above method, and then edit the pdf file to your needs.
+
+Image file formats that didn't make it
+https://tedium.co/2021/11/10/10-forgotten-image-formats/
+https://news.ycombinator.com/item?id=29175656

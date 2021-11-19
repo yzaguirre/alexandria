@@ -157,3 +157,8 @@ Sends the buffer to a pipe
 
 Easiest way to copy text in Tmux | Oh My Tmux
 https://www.youtube.com/watch?v=bubTu4ovhmc
+
+Swap panels
+https://superuser.com/questions/879190/how-does-one-swap-two-panes-in-tmux
+CTRL+B {
+CTRL+B }

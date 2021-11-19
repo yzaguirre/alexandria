@@ -28,3 +28,8 @@ https://www.keepassdx.com
 https://github.com/Kunzisoft/KeePassDX
 
 https://gitlab.com/juanitobananas/scrambled-exif/tree/HEAD
+
+How to remove voicemail notification
+https://eu.community.samsung.com/t5/other-smartphones/how-to-remove-voicemail-notification/td-p/629184
+https://www.groovypost.com/howto/remove-annoying-voicemail-notification-android/
+https://www.samsung.com/uk/support/mobile-devices/how-to-remove-voicemail-notifications/

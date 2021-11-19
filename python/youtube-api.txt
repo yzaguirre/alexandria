@@ -7,3 +7,7 @@ https://developers.google.com/youtube/v3/code_samples
 Check credentials in API dashboard
 https://console.cloud.google.com/apis/dashboard
 https://console.cloud.google.com/apis/credentials
+
+Making the dislike count private across YouTube
+https://support.google.com/youtube/thread/134791097/update-to-youtube-dislike-counts?hl=en
+https://news.ycombinator.com/item?id=29177091

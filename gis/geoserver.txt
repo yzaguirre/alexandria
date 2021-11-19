@@ -1,0 +1,5 @@
+http://geoserver.org
+https://docs.geoserver.org/latest/en/user/security/webadmin/index.html
+https://stackoverflow.com/questions/60597777/geoserver-and-moving-to-https
+Installing Tomcat and Geoserver on a Windows Server (1 of 4)
+https://www.youtube.com/watch?v=7bbq3gWEXI8

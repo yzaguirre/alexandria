@@ -1,0 +1,3 @@
+https://github.com/jez/as-tree
+	wget https://github.com/jez/as-tree/releases/download/0.12.0/as-tree-0.12.0-linux.zip
+	unzip as-tree-0.12.0-linux.zip -d /usr/local/bin

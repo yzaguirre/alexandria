@@ -104,3 +104,11 @@ Remove 2fa for david
 	php occ twofactorauth:disable david
 API
 https://docs.nextcloud.com/server/latest/developer_manual/client_apis/WebDAV/basic.html#
+
+Upload with curl
+https://cylab.be/blog/33/how-to-upload-your-files-to-nextcloud-file-drop-using-curl
+https://justyn.io/til/upload-files-to-nextcloud-using-curl-and-webdav/
+	cd bin
+	curl -O 'https://gist.githubusercontent.com/tavinus/93bdbc051728748787dc22a58dfe58d8/raw/cloudsend.sh'
+	chmod +x cloudsend.sh
+	cloudsend './myfile' 'https://cloud.mydomain.com/s/file-drop-link'

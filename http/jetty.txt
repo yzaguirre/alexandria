@@ -1,0 +1,3 @@
+https://www.eclipse.org/jetty/documentation.php
+https://www.eclipse.org/jetty/documentation/jetty-9/index.html#loading-keys-and-certificates
+https://stackoverflow.com/questions/60597777/geoserver-and-moving-to-https

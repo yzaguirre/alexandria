@@ -3,13 +3,13 @@ https://news.ycombinator.com/item?id=26710013
 https://news.ycombinator.com/item?id=12093182
 https://www.djangoproject.com/download/#supported-versions
 https://groups.google.com/forum/#!forum/django-users
-	sudo -H pip install Django==2.1
+	sudo -H pip install 'django==3.2.*'
 Create virtual environment
 https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-18-04
 	sudo -H pip3 install venv
 	mkdir myproject
 	cd myproject
-	python3.6 -m venv my_env
+	python3.10 -m venv my_env
 To install packages into the isolated environment, you must activate it by typing:
 	source my_env/bin/activate
 	pip install django
@@ -70,3 +70,6 @@ https://www.digitalocean.com/community/tutorials/django-authentication-with-face
 Building a Django driver for Psycopg 3
 https://www.psycopg.org/articles/2021/08/02/psycopg3-django-driver/
 https://news.ycombinator.com/item?id=28034581
+
+Securely Deploy a Django App With Gunicorn, Nginx, & HTTPS
+https://realpython.com/django-nginx-gunicorn/

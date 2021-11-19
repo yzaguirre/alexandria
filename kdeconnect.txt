@@ -1,6 +1,7 @@
 https://kdeconnect.kde.org/download.html
 https://invent.kde.org/network/kdeconnect-kde
 https://github.com/KDE/kdeconnect-kde
+	apt install kdeconnect
 https://community.kde.org/KDEConnect
 Android
 https://invent.kde.org/network/kdeconnect-android
@@ -24,3 +25,14 @@ https://www.reddit.com/r/kde/comments/kak6gg/revisiting_kde_connect_and_clipboar
 https://joaoapps.com/AutoApps/Help/Info/com.joaomgcd.join/android_10_read_logs.html
 	adb -d shell appops set org.kde.kdeconnect_tp SYSTEM_ALERT_WINDOW allow
 	adb shell am force-stop org.kde.kdeconnect_tp
+
+CLI
+	kdeconnect-cli
+- SM-T295: 228a9627313deb8a (paired and reachable)
+- Galaxy Tab S5e: daec21fa8efdae5d (paired and reachable)
+- Galaxy A70: ddb1667d92c36a5c (paired and reachable)
+kdeconnect-cli -d 428a9627313deb8a --share file.txt 
+kdeconnect-cli -d 428a9627313deb8a --share-text hello
+kdeconnect-cli -d 48a9627313deb8a --list-notifications
+kdeconnect-cli -d 4228a9627313deb8a --send-sms "Hola desde la terminal" --destination eduardo --attachment url
+kdeconnect-cli -d ddb1667d92c36a5c --photo hello.jpg

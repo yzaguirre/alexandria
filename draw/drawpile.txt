@@ -2,5 +2,8 @@ https://drawpile.net
 A collaborative drawing program
 https://github.com/drawpile/Drawpile
 Windows
-	wget https://drawpile.net/files/win/drawpile-2.1.17-setup.exe
-	explorer drawpile-2.1.17-setup.exe
+	wget https://drawpile.net/files/win/drawpile-2.1.20-setup.exe
+	explorer drawpile-2.1.20-setup.exe
+Chocolately
+	choco install drawpile
+

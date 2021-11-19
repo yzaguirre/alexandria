@@ -1,0 +1,4 @@
+📺🗿 Terminal graphics for the 21st century.
+https://github.com/hpjansson/chafa
+https://hpjansson.org/chafa/
+	apt install chafa

@@ -215,3 +215,7 @@ https://github.com/ethereum/solidity
 Javascript dev
 	npm install web3
 	
+Dapp for development ready to be used and built upon.
+https://github.com/reganwillis/Skeleton-Dapp
+	npm install
+	npm install -g ganache-cli

@@ -1,3 +1,7 @@
+Taking notes in mathematics lectures using LaTeX and Vim (2019)
+https://castel.dev/post/lecture-notes-1/
+https://news.ycombinator.com/item?id=29143707
+
 https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex
 Install
 	apt install texlive-xetex texlive-fonts-recommended texlive-latex-recommended

@@ -346,3 +346,8 @@ See "git help gc" for manual housekeeping.
 New in Git: switch and restore
 https://www.banterly.net/2021/07/31/new-in-git-switch-and-restore/
 https://news.ycombinator.com/item?id=28024972
+
+https://www.atlassian.com/git/tutorials/rewriting-history
+	git add file.txt
+	git commit --amend
+	git commit --amend --no-edit
