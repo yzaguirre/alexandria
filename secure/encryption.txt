@@ -1,3 +1,5 @@
+Learning applied cryptography? 
+https://twitter.com/NCCGroupInfosec/status/1469245756653645830
 How I Learned Symmetric-Key Cryptanalysis
 https://akircanski.github.io/cryptanalysis/2021/04/27/symmetric-key-cryptanalysis-howto.html
 https://news.ycombinator.com/item?id=27406888

@@ -116,3 +116,9 @@ javascript: link=today=new Date();dd=today.getDate();mm=today.getMonth()+1;windo
 https://dev.to/suprabhasupi/use-javascript-console-like-pro-3j1h
 let info = [["Suprabha"], ["Frontend Dev"], ["Javascript"]]
 console.table(info)
+
+Build fancy landing pages with React(-three-fiber) and Threejs
+https://0xca0a.gumroad.com/l/B4N4N4S
+https://twitter.com/0xca0a/status/1445409346305892353
+After years of making content for free, I completed my first ever paid-for course over at https://0xca0a.gumroad.com/l/B4N4N4S ✨
+It teaches front-end devs how to make Awwwards-type websites. Even if you've never even touched Threejs before.

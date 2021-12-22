@@ -16,3 +16,7 @@ See ~/Libros/Progra/AI/lec12_adversarial.pdf
 
 https://twitter.com/Mike051270/status/1440432205705060359
 One common architecture for recommendation systems consists of:
+
+Driver Braking Analyzer - A TinyML model using Edge Impulse
+https://twitter.com/ideaMani_/status/1386016542689611776
+https://www.hackster.io/manivannan/driver-braking-analyzer-a-tinyml-model-using-edge-impulse-b1f749

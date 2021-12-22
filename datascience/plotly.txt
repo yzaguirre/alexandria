@@ -2,3 +2,7 @@ The interactive graphing library for Python (includes Plotly Express)
 https://plotly.com/python/
 https://github.com/plotly/plotly.py
 	sudo -H pip install plotly==5.2.2
+
+Snippets extension plugin for VS for the Plotly Dash microframework
+https://marketplace.visualstudio.com/items?itemName=PlotlyDashSnippets.plotly-dash-snippets
+https://twitter.com/DynamicWebPaige/status/1401186484049178624

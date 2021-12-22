@@ -119,3 +119,13 @@ https://stackoverflow.com/questions/1602934/check-if-a-given-key-already-exists-
 Figlet
 https://www.linux-magazine.com/Issues/2020/232/curses
 	sudo -H pip3 install pyfiglet
+
+Virtual environment
+	sudo apt install python3.10-venv
+	python3.10 -m venv entorno
+	source entorno/bin/activate
+or	. entorno/bin/activate
+	pip3 install pytest
+	pytest
+Exit
+	deactivate

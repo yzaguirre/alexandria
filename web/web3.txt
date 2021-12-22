@@ -1,0 +1,2 @@
+Let's Encrypt, which is the centralized Web2 service used to secure most Web3 project websites. https://letsencrypt.org
+https://twitter.com/kelseyhightower/status/1473310965454278656

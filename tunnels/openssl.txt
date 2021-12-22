@@ -52,7 +52,7 @@ time, however, all that an eavesdropper would see is the encrypted traffic.
 
 The openssl binary is also capable of running a very basic secure web server. It passes files relative
 to the local directory in which it is running, so a request for /README when running in /var/tmp
-will return the fi le /var/tmp/README. This is not suitable for production use, but it is very useful for
+will return the file /var/tmp/README. This is not suitable for production use, but it is very useful for
 testing SSL clients connectivity. This is not the place for a primer on SSL, but the following will get
 you a self-signed certificate (with a password of welcome123) for the OpenSSL server to use.
 
@@ -91,3 +91,20 @@ Symmetric encryption
 	openssl enc -aes-128-cbc -in file.txt -out file
 Decrypt
 	openssl enc -d -aes-128-cbc -in file -out file.txt
+
+Asymmetric encryption
+Create private key. Protected by password
+	openssl genrsa -aes-256-cbc -out myprivate.key
+Derive public key
+	openssl rsa -in myprivate.key -pubout > mypublic.key
+Encrypt a message
+	vim message.txt
+	openssl rsautl -encrypt -inkey mypublic.key -pubin -in message.txt -out message.enc
+Sign an encrypted message
+	openssl dsgt -sha256 -sign alice_private.key -out signer secret.enc
+	openssl base64 -in signer -out alice_signature
+Decrypt a message
+	openssl rsautil --decrypt -inkey myprivate.key -in message.enc > clear.txt
+Verify the encrypted message with the signarue
+	openssl base64 -d -in alice_signature -out signer
+	openssl dgst -sha256 -verify alice_signature -out signer

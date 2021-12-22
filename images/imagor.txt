@@ -1,0 +1,4 @@
+Fast, Docker-ready image processing server written in Go and libvips,
+with Thumbor URL syntax
+https://github.com/cshum/imagor
+https://news.ycombinator.com/item?id=29514322

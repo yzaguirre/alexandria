@@ -194,3 +194,28 @@ https://news.ycombinator.com/item?id=25058783
 
 https://www.cyberciti.biz/tips/linux-security.html
 https://twitter.com/tavernalinux/status/1422771834030862336
+
+AWS outage
+https://twitter.com/EvanKirstel/status/1468606578471354376
+https://twitter.com/QuinnyPig/status/1468439682241290244
+https://twitter.com/CoinersTakingLs/status/1468752041883275265
+Summary of Service Event
+https://news.ycombinator.com/item?id=29516482
+
+AWS bills due to fraud
+https://twitter.com/nixcraft/status/1470771133205164039
+
+log4j bug
+https://news.ycombinator.com/item?id=29523608
+https://twitter.com/matthew_d_green/status/1469715416549367812
+https://twitter.com/PeterTBBrett/status/1469576898154053634
+https://twitter.com/GossiTheDog/status/1469838137266520072
+https://www.youtube.com/watch?v=NOxSLe5GjOk
+https://www.youtube.com/watch?v=5-GkpxbZ9Zw
+https://www.youtube.com/watch?v=ysFB6JKTs5U
+https://www.youtube.com/watch?v=oShZwiDTx9U
+https://www.youtube.com/watch?v=0-abhd-CLwQ
+ffmpeg
+https://twitter.com/videolan/status/1469736986126733313
+iMessage
+https://twitter.com/laparisa/status/1471201396951109635

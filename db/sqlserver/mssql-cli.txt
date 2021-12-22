@@ -29,9 +29,21 @@ Usage
 	mssql-cli -S <server URL> -d <database name> -U <username> -P <password>
 	mssql-cli --help
 
+-Q, --query
+To make a query in non-interactive mode, use the -Q (or --query) argument, followed by a T-SQL statement surrounded in double or single quotes. sqlcmd syntax is also supported.
+
+-i, --input-file
+An input file using T-SQL or sqlcmd syntax may be specified as an alternative to using -Q.
+
 Environment Variables
 MSSQL_CLI_SERVER - Set Default Server
 MSSQL_CLI_DATABASE - Set Default Database
 MSSQL_CLI_USER - Set Default User
 MSSQL_CLI_PASSWORD - Set Default Password
 MSSQL_CLI_ROW_LIMIT - Set Default Row Limit
+
+https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md#special-commands
+List or describe database objects. Calls sp_help.
+	\d OBJECT
+List tables
+	\lt

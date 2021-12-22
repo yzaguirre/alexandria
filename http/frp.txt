@@ -2,6 +2,8 @@ https://github.com/fatedier/frp
 A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
 Windows
 	scoop install frp
+Won't run on Windows 2008
+https://stackoverflow.com/questions/62681151/not-a-valid-win32-application-when-building-on-a-windows-server-2008
 Linux frpc
 	wget https://github.com/fatedier/frp/releases/download/v0.31.1/frp_0.31.1_linux_arm64.tar.gz
 	tar xf frp_0.31.1_linux_arm64.tar.gz

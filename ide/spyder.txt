@@ -1,0 +1,3 @@
+https://docs.spyder-ide.org
+https://github.com/spyder-ide/spyder/
+Windows and Mac binaries only

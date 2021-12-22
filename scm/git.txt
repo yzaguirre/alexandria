@@ -322,6 +322,7 @@ https://stackoverflow.com/questions/23115777/git-archive-with-unstaged-changes
 
 Bundle a repository
 https://git-scm.com/docs/git-bundle
+https://twitter.com/PrincewillIroka/status/1396106203697139712
 https://dev.to/princewilliroka/how-to-bundle-export-a-git-repo-as-a-single-file-without-losing-the-git-history-3111
 https://stackoverflow.com/questions/11792671/how-to-git-bundle-a-complete-repo
 Every branch

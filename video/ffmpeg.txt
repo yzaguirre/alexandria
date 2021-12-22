@@ -170,3 +170,13 @@ Output one image every minute:
 	ffmpeg -i test.mp4 -vf fps=1/60 thumb%04d.png
 Output one image every 10 minutes:
 	ffmpeg -i test.mp4 -vf fps=1/600 thumb%04d.png
+
+https://github.com/georgmartius/vid.stab
+http://public.hronopik.de/vid.stab/
+https://twitter.com/Wikinaut/status/1445321884132913159
+How to deshake a video with vidstab
+pass1
+	ffmpeg -i input.mp4 -vf vidstabdetect -f null -
+pass2
+	ffmpeg -i input.mp4 -vf vidstabtransform=crop=black:smoothing=20,unsharp=5:5:0.8:3:3:0.4 output.mp4
+

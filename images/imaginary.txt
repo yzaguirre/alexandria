@@ -1,0 +1,4 @@
+Fast, simple, scalable, Docker-ready HTTP microservice for
+high-level image processing
+https://fly.io/docs/app-guides/run-a-global-image-service/
+https://github.com/h2non/imaginary

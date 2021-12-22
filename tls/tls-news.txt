@@ -6,3 +6,7 @@ So Server Name Indication (SNI) was invented. In effect you send, in plain text,
 At the time this didn't have large security implications because unencrypted DNS was already leaking requests like crazy. But with DNS slowly getting more secure and TLS gaining a huge market share (<3 Let's Encrypt), SNI is starting to stand out as an "easy" way to spy on what someone is requesting.
 
 While IP Addresses themselves can be used for spying, encrypted DNS, protected SNI, and TLS all increase the cost and complexity of that spying, and make the results harder to trust (particularly on shared hosts or sites using a shared load balancing system). If encrypted SNI becomes a reality, it is a huge win against ISPs spying on us and selling our browsing histories.
+
+Implementing TLS Encrypted Client Hello
+https://guardianproject.info/2021/11/30/implementing-tls-encrypted-client-hello/
+https://news.ycombinator.com/item?id=29530811

@@ -1,3 +1,13 @@
 Reclaim Windows10 
 https://gist.github.com/alirobe/7f3b34ad89a159e6daa1
 https://news.ycombinator.com/item?id=27353810
+
+https://www.reddit.com/r/Windows10/comments/r8qjqh/windows_11_made_me_appreciate_windows_10/
+https://www.reddit.com/r/Windows10/comments/r9mhjz/windows_10_looks_better_than_windows_11_the_start/
+
+Download
+https://www.microsoft.com/en-us/software-download/windows10ISO
+Verify
+	Get-FileHash C:\Users\user1\Downloads\Win10_21H2_Spanish_x64.iso
+	sha256sum Win10_21H2_Spanish_x64.iso
+F240F1AE1F5738E50301E7DABEEBB2B4EF11FA0B9DD7DA1475A7ADF27A4BE4A7

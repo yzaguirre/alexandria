@@ -103,3 +103,11 @@ they do in a browser.
 
 HTTPS
 CURL_CA_BUNDLE
+
+Stream camera
+Combine curl's ability to authenticate with an HTTP stream with
+mpv's ability to play a mjpeg stream from a remote camera.
+Passing the credentials on stdin to curl to avoid them
+being in the proc table.
+	curl -s -K- http://192.168.0.99:8081/ <<<"--user httpuser:httppass" | mpv -
+https://twitter.com/climagic/status/1409525480705904642

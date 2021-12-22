@@ -1,3 +1,6 @@
+Building a 4-node Raspberry Pi Cluster
+https://www.youtube.com/watch?v=H2rTecSO0gk
+
 The Raspberry Pi can boot off NVMe SSDs now
 https://www.jeffgeerling.com/blog/2021/raspberry-pi-can-boot-nvme-ssds-now
 https://news.ycombinator.com/item?id=26558939

@@ -441,3 +441,6 @@ https://www.reddit.com/r/reactnative/comments/nwd15p/how_would_i_go_about_recrea
 https://blog.logrocket.com/the-top-8-react-native-chart-libraries-for-2021/
 
 https://tsh.io/blog/react-native-latest-version/
+
+https://twitter.com/markdalgleish/status/1438301552410873859
+TIL StyleSheet.create in React Native literally just hands your styles back to you, offering no perf optimisation at all.

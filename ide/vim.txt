@@ -208,3 +208,6 @@ https://www.youtube.com/watch?v=DogKdiRx7ls
 Auto indent
 https://linuxdigest.com/howto/how-to-autoindent-in-vim/
 :set noautoindent
+
+Vimscript
+https://learnvimscriptthehardway.stevelosh.com/

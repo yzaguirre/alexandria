@@ -1,3 +1,5 @@
+https://www.reddit.com/r/commandline/comments/fsm3sj/neomutt_config_megathread/
+
 Teaching an Old Dog New Tricks -- IRC: #neomutt on irc.libera.chat
 https://neomutt.org/
 https://github.com/neomutt/neomutt

@@ -1,3 +1,6 @@
+https://negfeedback.blogspot.com/2020/05/indispensable-command-line-tools.html
+https://www.reddit.com/r/commandline/comments/goyisq/indispensable_commandline_tools/
+
 How to learn Unix tools
 https://blog.nindalf.com/posts/how-to-learn-unix-tools/
 https://news.ycombinator.com/item?id=26940445

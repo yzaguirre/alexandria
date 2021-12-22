@@ -86,3 +86,6 @@ https://github.com/tjluoma/launchd-keepalive
 ~/Library/LaunchAgents
 	launchctl load ~/Library/LaunchAgents/syncthing.plist
 	launchctl unload ~/Library/LaunchAgents/syncthing.plist
+
+Screen reader
+https://twitter.com/AshleeMBoyer/status/1402975801902047234

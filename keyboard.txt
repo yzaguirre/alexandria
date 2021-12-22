@@ -17,3 +17,6 @@ https://wiki.archlinux.org/index.php/Xorg_(Espa%C3%B1ol)/Keyboard_configuration_
 
 https://github.com/samvel1024/kbct
 https://www.reddit.com/r/linux/comments/o7bop3/keyboard_customization_tool_for_linux/
+Emojis
+https://www.reddit.com/r/InternetIsBeautiful/comments/hurzki/copy_paste_emoticons_and_cute_faces_%CA%96_%CA%95%E1%B4%A5%CA%94%E3%81%A3_%E0%B8%87%E0%B8%87/
+	Windows+.

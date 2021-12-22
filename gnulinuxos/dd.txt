@@ -41,3 +41,6 @@ Create A FAT Filesystem
 Mount The Drive
 	sudo mkdir /mnt/sdX1
 	sudo mount /dev/sdX1 /mnt/sdX1
+
+https://twitter.com/nixcraft/status/1144858617595621376
+	dd if=/dev/INPUT of=/path/to/OUTPUT status=progress bs=1M 

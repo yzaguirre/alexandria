@@ -19,6 +19,9 @@ print content of object
 https://stackoverflow.com/questions/1625208/print-content-of-javascript-object
 alert(JSON.stringify(YOUR_OBJECT_HERE, null, 4));
 
+https://api.jquery.com/category/attributes/
+https://api.jquery.com/category/css/
+
 Change css
 https://stackoverflow.com/questions/9964793/dynamically-change-text-on-twitter-bootstrap-button-whilst-preserving-icon
 $('#myButton i:first-child').attr('class','icon icon-remove');
@@ -47,3 +50,7 @@ $("#myeditablediv").keypress(function(e) {
 Ajax file upload
 https://codepedia.info/generic-handler-ashx-file-post-send-json-data-parameters-in-asp-net-c-jquery/
 https://codepedia.info/upload-image-using-jquery-ajax-asp-net-c-sharp/#add_Generic_handler_serverside
+
+https://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
+To Read Selected Text
+	$('#selectId>option:selected').text();
