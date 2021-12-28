@@ -1,0 +1,8 @@
+https://monovm.com/blog/cd-command-windows/
+Change the current working directory to another directory present
+within another drive.
+cd /d [path]
+	cd /d D:
+
+(Drive_Letter):
+	D:

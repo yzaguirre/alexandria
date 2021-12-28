@@ -67,6 +67,14 @@ https://code.visualstudio.com/docs/editor/command-line
 -g or --goto	When used with file:line[:character], opens a file at a specific line and optional character position. This argument is provided since some operating systems permit : in a file name.
 
 Plugins
+
+C#
+Debugger for Chrome
+Python
+vscode-icons
+C/C++
+ESLint
+
 Bracket Pair Colorizer 2
 https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
 https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2

@@ -1,5 +1,11 @@
 https://imagemagick.org
 https://github.com/ImageMagick/ImageMagick
+
+How Does your Smartphone Compress and Save Pictures?
+A Very Detailed Dive into JPEG Compression
+https://www.youtube.com/watch?v=Kv1Hiv3ox8I
+
+Install
 	apt install imagemagick
 Termux
 	apt install imagemagick ghostscript
@@ -13,9 +19,9 @@ https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
 https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
 https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
 	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev libttfautohint-dev
-	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-17.tar.gz
-	tar xf 7.1.0-17.tar.gz
-	cd ImageMagick-7.1.0-17
+	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-19.tar.gz
+	tar xf 7.1.0-19.tar.gz
+	cd ImageMagick-7.1.0-19
 	./configure --with-modules --with-fontconfig=yes --with-freetype=yes --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
 If using jpeg-xl. See ~/images/jpegxl.txt
 https://github.com/ImageMagick/ImageMagick/issues/3236

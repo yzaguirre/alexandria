@@ -56,6 +56,8 @@ Test spam
 	tail -f /var/log/mail.log
 
 # DKIM
+https://www.reddit.com/r/holdmyfeedingtube/comments/ektbjm/hmft_after_i_get_bumped_on_the_head/
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-dkim-with-postfix-on-debian-wheezy
 http://www.opendkim.org/opendkim-README
 https://easyengine.io/tutorials/mail/dkim-postfix-ubuntu/

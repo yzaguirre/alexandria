@@ -2,31 +2,53 @@ https://guiscrcpy.srev.in
 https://guiscrcpy.github.io
 https://github.com/srevinsaju/guiscrcpy
 https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.2/guiscrcpy-.dev.r.glibc2.27-x86_64.AppImage
-	chmod u+x guiscrcpy-.dev.r.glibc2.27-x86_64.AppImage
-	mv guiscrcpy-.dev.r.glibc2.27-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
+AppImage
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage
+	chmod u+x guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage
+	mv guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
 	ln -s ~/appimage/guiscrcpy-x86_64.AppImage /usr/local/bin/guiscrcpy
+Ubuntu dependency on AppImage
+	apt install libva-drm2
+
 Pip
-	sudo -H pip3 install -U guiscrcpy
+	sudo -H pip install -U guiscrcpy
+Pyside2 dependency in Ubuntu
+https://stackoverflow.com/questions/47362751/installing-pyside-for-python3
+https://pypi.org/project/PySide/
+	sudo -H pip install -U pyside2
+Successfully installed pyside2-5.15.2 shiboken2-5.15.2
+Ubuntu packages
+	apt install python3-pyside2.qtcore python3-pyside2.qtgui
+The following NEW packages will be installed:
+  libpyside2-py3-5.15 libshiboken2-py3-5.15 python3-pyside2.qtcore python3-pyside2.qtgui
 Windows
 Configuration files
 https://github.com/srevinsaju/guiscrcpy/blob/main/docs/CONFIGURATION.md
 C:\Users\<username>\AppData\Local\guiscrcpy\guiscrcpy.json
 
-Install scrcpy
 https://github.com/genymobile/scrcpy/
-	wget https://github.com/Genymobile/scrcpy/releases/download/v1.13/scrcpy-win64-v1.13.zip
-	sha256sum scrcpy-win64-v1.13.zip
-806aafc00d4db01513193addaa24f47858893ba5efe75770bfef6ae1ea987d27
-scrcpy with scoop
+Install scrcpy
+	apt install scrcpy
+Compile latest
+https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
+Windows binary
+	wget https://github.com/Genymobile/scrcpy/releases/download/v1.21/scrcpy-win64-v1.21.zip
+	wget https://github.com/Genymobile/scrcpy/releases/download/v1.21/SHA256SUMS.txt
+	wget https://github.com/Genymobile/scrcpy/releases/download/v1.21/SHA256SUMS.txt.asc
+	sha256sum -c --ignore-missing SHA256SUMS.txt
+	gpg --verify SHA256SUMS.txt.asc
+Scoop
 	scoop install scrcpy
 Chocolately
 	choco install scrcpy
 Directory: ~\scoop\apps\scrcpy\current
 Directory: C:/ProgramData/chocolatey/bin
-	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.2/guiscrcpy-PyQt5-x64.exe
-Save it at C:\Program Files\guiscrpy
+
+guiscrcpy binary for Windows
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-PyQt5-x64.exe
+Save it at C:\Program Files\guiscrcpy
 Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Menu
+
 Homebrew
 	xcode-select --install
 	brew install scrcpy

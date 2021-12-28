@@ -1,0 +1,21 @@
+https://wiki.qt.io/Qt_for_Python
+https://newbedev.com/recommended-way-for-installing-pyside-on-ubuntu
+https://stackoverflow.com/questions/47362751/installing-pyside-for-python3
+
+PySide up to Python 3.4
+https://pypi.org/project/PySide/
+	sudo -H pip install -U PySide
+
+PySide2 up to Python 3.9
+https://pypi.org/project/PySide2/
+	sudo -H pip install -U PySide2
+Successfully installed pyside2-5.15.2 shiboken2-5.15.2
+Ubuntu packages
+See ./qt
+	apt install python3-pyside2.qtcore python3-pyside2.qtgui
+The following NEW packages will be installed:
+  libpyside2-py3-5.15 libshiboken2-py3-5.15 python3-pyside2.qtcore python3-pyside2.qtgui
+
+PySide6 up to Python 3.10
+https://pypi.org/project/PySide6/
+	sudo -H pip install -U PySide6
