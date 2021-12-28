@@ -1,0 +1,11 @@
+7-Zip
+https://www.7-zip.org/
+	apt install p7zip
+Binary
+	wget https://www.7-zip.org/a/7z2106-linux-x64.tar.xz
+	tar xfv 7z2106-linux-x64.tar.xz
+Windows
+	winget install 7zip.7zip
+Installer
+	wget https://www.7-zip.org/a/7z2106-x64.exe
+Append to PATH C:\Program Files\7-Zip

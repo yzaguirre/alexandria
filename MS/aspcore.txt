@@ -21,3 +21,6 @@ A razor page is a server side only page
 
 Add a razor component
 	dotnet new razorcomponent -n WeatherData
+
+Access Background Services From ASP.NET Core
+https://khalidabuhakmeh.com/access-background-services-from-aspnet-core

@@ -1,8 +1,25 @@
-https://www.python.org/
+https://www.python.org
+	apt install python3 python3-pip
+For Python 3.10
+	apt install python3.10
+Windows
+	winget install Python.Python.3
+Installs at C:\Users\%HOME%\AppData\Local\Programs\Python\Python310
+
 	python3 -m pip install -U autopep8 --user
+
+https://www.debugpoint.com/2021/10/install-python-3-10-ubuntu/
 
 did you know that you can use functions as values in a Python dictionary?
 https://twitter.com/DynamicWebPaige/status/1456110881553612803
+
+Merge 2 dictionaries, since python 3.9
+z = x | y
+using dictionary unpacking
+z = {**x, **y}
+Classic way of merging
+z = x.copy()
+z.update(y)
 
 5 Python tricks that will improve your life
 Aaron Jack
@@ -11,6 +28,15 @@ https://www.youtube.com/watch?v=5tcs2qXP3Pg
 http://www.emoticode.net/python/hadcore-httprequest.html
 http://www.emoticode.net/python/httprequest.html
 
+https://www.python.org/downloads/
+https://stackoverflow.com/questions/58984026/official-python-gpg-signing-key-where-is-it-gpg-using-rsa-key-fc6246434870
+Windows
+	choco install python
+Installer
+	curl -o python-3.10.1-amd64.exe https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe
+	curl -o python-3.10.1-amd64.exe.asc https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe.asc
+	gpg --verify python-3.10.1-amd64.exe.asc
+	explorer.exe python-3.10.1-amd64.exe
 Install setup tools and pip on Windows
 http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows
 http://stackoverflow.com/questions/2817869/error-unable-to-find-vcvarsall-bat
@@ -79,6 +105,27 @@ https://docs.python.org/3/library/base64.html
 
 Open files
 https://docs.python.org/3/library/functions.html#open
+Check if file exists
+import os
+if os.path.isfile("filename.txt"): # file exists
+	f = open("filename.txt")
+if os.path.isdir(file_path): # directory exists
+if os.path.exists(file_path): # file or directory exists
+
+Path lib module
+from pathlib import Path
+my_file = Path("/path/to/file.txt")
+if my_file.is_file():
+if my_file.is_dir():
+if my_file.exists():
+
+Create a nested directory
+form pathlib import Path
+Path("./data/subdir").mkdir(parents=True, exist_ok=True)
+Old method
+import os
+if not os.path.exists("./data/subdir"):
+	os.makedirs("./data/subdir")
 
 Argument parser
 https://docs.python.org/3/library/argparse.html
@@ -93,6 +140,23 @@ parser.add_argument("-q", "--quiet",
                     help="don't print status messages to stdout")
 
 args = parser.parse_args()
+
+Find a index
+my_list = ["apple, "banana", "cherry"]
+try:
+	idx = my_list.index("orange")
+except ValueError:
+	idx = -1
+Get all indices of repeated values
+my_list = ["apple", "apple", "cherry"]
+my_list.index("apple")
+idxs = [i for (i, e) in enumerate(my_list) if e == "apple"]
+
+Concatenate two lists
+a = [1, 2]
+b = [3, 4]
+# shallow copy
+c = [*a, *b]
 
 Reverse a list
 https://stackoverflow.com/questions/529424/traverse-a-list-in-reverse-order-in-python
@@ -121,11 +185,39 @@ https://www.linux-magazine.com/Issues/2020/232/curses
 	sudo -H pip3 install pyfiglet
 
 Virtual environment
+https://docs.python.org/3/library/venv.html
 	sudo apt install python3.10-venv
 	python3.10 -m venv entorno
 	source entorno/bin/activate
-or	. entorno/bin/activate
-	pip3 install pytest
+or
+	. entorno/bin/activate
+cmd.exe
+	C:\> <venv>\Scripts\activate.bat
+PowerShell
+PS C:\> <venv>\Scripts\Activate.ps1
+
+	pip install pytest
 	pytest
 Exit
 	deactivate
+
+Create copy of array
+a = [1, 2, 3, 4]
+for item in a[:]:
+	print(item)
+Or
+a[:] = [x for x in a if not even(x)]
+
+Using iter tools
+from itertools import filterfalse
+a[:] = filterfalse(even, a)
+ 
+Subprocess
+
+import subprocess
+subprocess.run(["ls", "-l"])
+
+import os
+os.system("ls -l")
+
+subprocess.Popen(["/usr/bin/git", "commit", "-m", "Fixes a bug."])

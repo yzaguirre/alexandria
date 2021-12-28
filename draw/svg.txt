@@ -2,3 +2,7 @@ See ~/draw/inkscape.txt ~/draw/krita.txt ~/libreofice/unoconv.txt ~/documents/me
 
 Reduce the size of SVGs
 https://github.com/sonnyp/OhMySVG
+
+https://www.svgrepo.com
+https://news.ycombinator.com/item?id=26117767
+Browse 300.000+ SVG Vectors and Icons

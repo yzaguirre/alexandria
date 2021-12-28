@@ -5,6 +5,8 @@ Install folder at
 C:\Users\Rlemus\AppData\Local\Programs\Microsoft VS Code
 
 https://github.com/Microsoft/vscode
+Windows
+	winget install Microsoft.VisualStudioCode
 Install
 MacOS
 	wget "https://code.visualstudio.com/sha/download?build=stable&os=darwin" -O VSCode-darwin.zip

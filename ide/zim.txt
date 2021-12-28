@@ -1,13 +1,13 @@
 https://www.zim-wiki.org/
 	apt install zim
 DEB
-	wget https://zim-wiki.org/downloads/zim_0.73.5_all.deb
-	dpkg -i zim_0.73.5_all.deb
+	wget https://zim-wiki.org/downloads/zim_0.74.3_all.deb
+	dpkg -i zim_0.74.3_all.deb
 Homebrew
 	brew install zim
 Windows
-	wget https://zim-wiki.org/downloads/zim-desktop-wiki-0.74.1-setup-w64_x86.exe
-	explorer.exe zim-desktop-wiki-0.74.1-setup-w64_x86.exe
+	wget https://zim-wiki.org/downloads/zim-desktop-wiki-0.74.3-setup-w64_x86.exe
+	explorer.exe zim-desktop-wiki-0.74.3-setup-w64_x86.exe
 
 Styles
 https://superuser.com/questions/1260661/change-font-color-of-headers-in-zim-wiki

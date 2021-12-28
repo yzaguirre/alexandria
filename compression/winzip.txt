@@ -1,0 +1,3 @@
+https://www.winzip.com/en/
+Windows
+	winget install Corel.WinZip

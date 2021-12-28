@@ -1,5 +1,8 @@
 Rar Files
+https://www.win-rar.com
 https://winrar.es/
+	winget install RARLab.WinRAR
+Add C:\Program Files\WinRAR to PATH
 Print comment and extract
 	rar x -zCMT file.rar
 Extract modified files (freshen files)

@@ -76,6 +76,9 @@ Very minimal FFmpeg installation:
 	make -j4
 	sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
 				--pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+Windows
+	choco install ffmpeg
+
 Video information
 	ffmpeg -i video.mp4
 

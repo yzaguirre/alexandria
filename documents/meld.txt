@@ -1,6 +1,9 @@
 https://meldmerge.org/
 https://stackoverflow.com/questions/161813/how-to-resolve-merge-conflicts-in-git
 	apt install meld
+Windows
+	winget install Meld.Meld
+Add C:\Program Files (x86)\Meld to PATH
 Windows 10 use version 3.18.3
 	wget https://download.gnome.org/binaries/win32/meld/3.18/Meld-3.18.3-win32.msi
 Make an alias in ~/.bashrc

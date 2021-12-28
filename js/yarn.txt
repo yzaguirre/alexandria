@@ -6,3 +6,5 @@ Debian/Ubuntu
 	apt update
 	apt install yarn
 	yarn --version
+Windows
+	winget install Yarn.Yarn

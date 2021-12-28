@@ -1,0 +1,4 @@
+https://github.com/Dogramming/Imaconverter
+Windows
+	winget install Dogramming.Imaconverter
+Warning: Don't use!

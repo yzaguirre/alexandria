@@ -7,10 +7,17 @@ Systemd config file
 https://github.com/caddyserver/dist/tree/master/init
 
 Install
-	wget https://github.com/caddyserver/caddy/releases/download/v2.4.5/caddy_2.4.5_linux_amd64.deb
-	wget https://github.com/caddyserver/caddy/releases/download/v2.4.5/caddy_2.4.5_checksums.txt
-	sha512sum -c --ignore-missing caddy_2.4.5_checksums.txt
-	dpkg -i caddy_2.4.5_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_checksums.txt
+	sha512sum -c --ignore-missing caddy_2.4.6_checksums.txt
+	dpkg -i caddy_2.4.6_linux_amd64.deb
+	systemctl disable caddy
+	systemctl stop caddy
+Logs
+	journalctl --no-pager -u caddy
+Configuration at /etc/caddy/Caddyfile
+Windows
+	choco install caddy
 MacOS
 	brew install caddy
 To have launchd start caddy now and restart at login:

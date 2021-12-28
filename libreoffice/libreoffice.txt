@@ -3,21 +3,23 @@ https://www.libreoffice.org/
 	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png
 
 Mirror
-http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/7.1.3/deb/x86_64/
+http://mirrors.ucr.ac.cr/tdf/libreoffice/stable/7.2.4/deb/x86_64/
 
 Keys
 http://ask.libreoffice.org/en/question/45539/where-is-the-signing-public-gpgpgp-key-the-libreoffice-webpage/
 http://listarchives.libreoffice.org/global/users/msg27065.html
-https://download.documentfoundation.org/libreoffice/stable/7.1.3/deb/x86_64/
+https://download.documentfoundation.org/libreoffice/stable/7.2.4/deb/x86_64/
 	gpg --keyserver hkps://keys.gnupg.net --recv-keys AFEEAEA3
 Verify download
-	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb.tar.gz.asc
-	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb_langpack_es.tar.gz.asc
-	gpg --verify LibreOffice_7.1.3_Linux_x86-64_deb_helppack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.2.4_Linux_x86-64_deb.tar.gz.asc
+	gpg --verify LibreOffice_7.2.4_Linux_x86-64_deb_langpack_es.tar.gz.asc
+	gpg --verify LibreOffice_7.2.4_Linux_x86-64_deb_helppack_es.tar.gz.asc
 Uncompress
-	tar xf LibreOffice_7.1.3_Linux_x86-64_deb.tar.gz
-	tar xf LibreOffice_7.1.3_Linux_x86-64_deb_langpack_es.tar.gz
-	tar xf LibreOffice_7.1.3_Linux_x86-64_deb_helppack_es.tar.gz
+	tar xf LibreOffice_7.2.4_Linux_x86-64_deb.tar.gz
+	tar xf LibreOffice_7.2.4_Linux_x86-64_deb_langpack_es.tar.gz
+	tar xf LibreOffice_7.2.4_Linux_x86-64_deb_helppack_es.tar.gz
+Windows
+	winget install TheDocumentFoundation.LibreOffice
 
 Remember
 	/usr/bin/libreoffice6.4 -> /opt/libreoffice6.4/program/soffice

@@ -4,6 +4,7 @@ Install
 	apt install bat
 Windows
 	scoop install bat
+	choco install bat
 Alias
 	mkdir -p ~/.local/bin
 	ln -s /usr/bin/batcat ~/.local/bin/bat

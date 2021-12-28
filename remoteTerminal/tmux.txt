@@ -16,6 +16,17 @@ Install
 	apt install tmux
 MacOS
 	brew install tmux
+Windows
+https://gist.github.com/DeanPDX/acff533cff0cfbda2761d1e62e8cb1a7
+https://dev.to/timothydjones/install-tmux-on-git-for-windows-1cf2
+https://blog.pjsen.eu/?p=440
+https://stackoverflow.com/questions/43378290/git-bash-mingw-64-v2-12-2-how-do-i-change-the-font-size
+	winget install msys2.msys2
+	winget install Maximus5.ConEmu
+	pacman -S tmux
+Copy tmux and msys-event binaries from msys2 bin folder
+(probably C:\msys64\usr\bin) to git bash bin folder
+(probably C:\Program Files\Git\usr\bin).
 
 Compile
 	apt install libevent-dev libncurses5-dev

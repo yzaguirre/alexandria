@@ -1,0 +1,7 @@
+A cross platform desktop reading app, based on the Readium Desktop toolkit
+https://www.edrlab.org/software/thorium-reader/
+https://github.com/edrlab/thorium-reader
+	wget https://github.com/edrlab/thorium-reader/releases/download/v1.7.3/EDRLab.ThoriumReader_1.7.3_amd64.deb
+	dpkg -i EDRLab.ThoriumReader_1.7.3_amd64.deb
+Windows
+	winget install EDRLab.Thorium

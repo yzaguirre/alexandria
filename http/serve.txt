@@ -2,8 +2,9 @@ https://github.com/philippgille/serve
 Windows
 	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Windows_x64.zip
 	unzip serve_v0.3.2_Windows_x64.zip -d ~/bin
-Or use scoop.sh
+Or use scoop.sh or chocolately
 	scoop install serve
+	choco install serve
 Linux
 	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Linux_x64
 	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Linux_x64.sha256

@@ -1,6 +1,8 @@
 A lightweight, versatile image viewer
 https://imageglass.org
 https://github.com/d2phap/ImageGlass
+	winget install ImageGlass
+Installer
 	wget https://github.com/d2phap/ImageGlass/releases/download/8.2.6.6/ImageGlass_8.2.6.6_x64.msi
 	sha1sum ImageGlass_8.2.6.6_x64.msi
 15fed676bce43befe21bcb8141409a356a87f1da

@@ -1,4 +1,5 @@
 https://nextcloud.com
+https://github.com/nextcloud/desktop
 https://nextcloud.com/blog/nextcloud-hub-21-out-with-up-to-10x-better-performance-whiteboard-and-more-collaboration-features/
 https://news.ycombinator.com/item?id=26236770
 Desktop client
@@ -14,20 +15,22 @@ After adding the PPA to your system as described below, the client can be instal
 - Other, or if you don't want/need the file manager integration:
 	apt install nextcloud-desktop nextcloud-desktop-cmd
 AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2-x86_64.AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2-x86_64.AppImage.asc
-	gpg --verify Nextcloud-3.2.2-x86_64.AppImage.asc
-	chmod u+x Nextcloud-3.2.2-x86_64.AppImage
-	mv Nextcloud-3.2.2-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.4.1-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.4.1-x86_64.AppImage
+	mv Nextcloud-3.4.1-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 MacOS
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2.pkg
-	wget https://github.com/nextcloud/desktop/releases/download/v3.2.2/Nextcloud-3.2.2.pkg.asc
-	gpg --verify Nextcloud-3.2.2.pkg.asc
-	open Nextcloud-3.2.2.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1.pkg.asc
+	gpg --verify Nextcloud-3.4.1.pkg.asc
+	open Nextcloud-3.4.1.pkg
 	ln -s /Applications/nextcloud.app/Contents/MacOS/nextcloudcmd /usr/local/bin/nextcloudcmd
 Homebrew
 	brew install nextcloud
+Windows
+	winget install Nextcloud.NextcloudDesktop
 
 Off maintenance mode
 	php occ maintenance:mode --off

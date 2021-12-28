@@ -1,3 +1,7 @@
+Mentoring
+https://twitter.com/razlupercio/status/1473065406906654724
+https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github
+
 https://help.github.com/articles/github-flavored-markdown
 https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 
@@ -85,29 +89,46 @@ https://github.com/cli/cli/releases/tag/v0.8.0
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
 https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
-	wget https://github.com/cli/cli/releases/download/v1.11.0/gh_1.11.0_linux_amd64.deb
-	wget https://github.com/cli/cli/releases/download/v1.11.0/gh_1.11.0_checksums.txt
-	sha256sum --ignore-missing -c gh_1.11.0_checksums.txt
-	dpkg -i gh_1.11.0_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
+	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
+	dpkg -i gh_2.4.0_linux_amd64.deb
+Package manager
+	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+	apt update
+	apt install gh
 Termux
 	apt install gh
 ARM64
-	wget https://github.com/cli/cli/releases/download/v1.11.0/gh_1.11.0_linux_arm64.tar.gz
-	wget https://github.com/cli/cli/releases/download/v1.11.0/gh_1.11.0_checksums.txt
-	sha256sum --ignore-missing -c gh_1.11.0_checksums.txt
-	tar xf gh_1.11.0_linux_arm64.tar.gz
-	cd gh_1.11.0_linux_arm64/bin
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_arm64.tar.gz
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
+	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
+	tar xf gh_2.4.0_linux_arm64.tar.gz
+	cd gh_2.4.0_linux_arm64/bin
 	./gh
+ARM6
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_armv6.deb
+	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
+	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
+	dpkg -i gh_2.4.0_linux_armv6.deb
 MacOS
 	brew install gh
 Update
 	brew upgrade gh
 Windows
+	winget install GitHub.cli
+	winget upgrade --id GitHub.cli
+Scoop
 	scoop bucket add github-gh https://github.com/cli/scoop-gh.git
 	scoop install gh
 Update
 	scoop update gh
-Config file at ~/.config/gh/
+Chocolately
+	choco install gh
+	choco upgrade gh
+Config file at ~/.config/gh/ or C:\Users\%HOME%\AppData\Roaming\GitHub CLI
+Extensions at C:\Users\dyzag\AppData\Roaming\GitHub CLI
 https://cli.github.com/manual/
 	gh auth login
 Use SSH
@@ -116,27 +137,48 @@ Create repository
 	gh repo --help
 	gh repo create my-cool-project -d "My description" -t "my_team" -h "https://homepage.com"
 	gh repo create company/my-cool-project --private
+List all repos
+https://cli.github.com/manual/gh_repo_list
+Up to 100 repositories
+	gh repo list -L 100
+Filter fields
+	gh repo list -L 100 --json id,name,url,createdAt,updatedAt,pushedAt,sshUrl,homepageUrl,description
+Rename a repository
+https://cli.github.com/manual/gh_repo_rename
+	gh repo rename [<new-name>] [flags]
 Add collaborator from command line
 https://gist.github.com/marchampson/4655798
 https://developer.github.com/changes/2020-02-14-deprecating-password-auth/
-https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator
+https://docs.github.com/en/rest/reference/collaborators
+https://cli.github.com/manual/gh_api
+https://github.com/cli/cli/issues/2807
 	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+	gh api -X PUT repos/:owner/:repo/collaborators/:SOMEONE
 Add collaborator as read-only
 	curl -i -H 'Authorization: token my_access_token' -X PUT -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id' -d '{"permission":"pull"}'
+	gh api -X PUT repos/:owner/:repo/collaborators/:SOMEONE -f permission=pull
+	gh api -X PUT repos/:owner/:repo/collaborators/:SOMEONE -f permission=admin
 https://github.com/my_gh_userid/my_repo/invitations
 Remove a collaborator
 	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+	gh api -X DELETE repos/:owner/:repo/collaborators/:SOMEONE
 Check if user is a collaborator
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id'
+	gh api -iX GET /repos/{owner}/{repo}/collaborators/{username}
 Check if user permissions as collaborator
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators/my_collaborator_id/permission'
+	gh api -X GET /repos/{owner}/{repo}/collaborators/{username}/permission
 List collaborators
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo/collaborators'
-Change repo properties like description
+	gh api -X GET /repos/{owner}/{repo}/collaborators --jq ".[]|{login: .login, id: .id, role_name: .role_name, permissions: .permissions}"
+Edit description (or other characteristics)
+https://cli.github.com/manual/gh_repo_edit
 	curl -i -H 'Authorization: token my_access_token' -X PATCH -H 'Accept: application/vnd.github.v3+json' 'https://api.github.com/repos/my_gh_userid/my_repo' -d '{"description":"This Project Rocks!"}'
+	gh repo edit -d "New description" -h "https://newurl.com" --visibility private --add-topic "topics"
 Delete a repo
+https://cli.github.com/manual/gh_repo_delete
 	curl -i -H 'Authorization: token my_access_token' -X DELETE -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/repos/my_gh_userid/my_repo'
-
+	gh repo delete [<repository>] --confirm
 List repos for a user
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/user/repos'
 
@@ -149,3 +191,19 @@ https://news.ycombinator.com/item?id=26822169
 "Private" branches
 https://stackoverflow.com/questions/7983204/having-a-private-branch-of-a-public-repo-on-github
 https://github.community/t/project-setup-question-with-public-and-private-branches/2198
+
+Extensions
+https://github.com/topics/gh-extension
+https://github.com/vilmibm/gh-user-status
+	gh extension install vilmibm/gh-user-status
+https://github.com/sheepla/gh-userfetch
+	gh extension install sheepla/gh-userfetch
+	gh-userfetch
+https://github.com/mislav/gh-repo-collab
+	gh extension install mislav/gh-repo-collab
+Usage: gh repo-collab list [<repo>]
+       gh repo-collab add <repo> <login> [--permission <string>]
+       gh repo-collab add <repo> < logins-file.txt
+       gh repo-collab remove <repo> <login>
+
+Valid permission is one of: pull, triage, push, maintain, admin.

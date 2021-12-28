@@ -1,3 +1,10 @@
-https://www.visidata.org/
+https://www.visidata.org
 https://github.com/saulpw/visidata
-	pip3 install visidata
+	sudo -H pip install -U visidata
+
+VisiData supports tsv, csv, sqlite, json, xlsx (Excel), hdf5, and many other formats.
+https://www.visidata.org/docs/formats/
+
+	vd input.csv
+To JSON
+	vd input.csv -b -o output.json

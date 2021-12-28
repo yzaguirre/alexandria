@@ -1,0 +1,4 @@
+Modern unix toolset packaged for PowerShell
+https://github.com/nickcox/modern-unix
+https://www.powershellgallery.com/packages/modern-unix-win/0.0.8
+	Install-Module -Name modern-unix-win

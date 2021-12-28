@@ -13,8 +13,10 @@ Start PowerShell
 	pwsh
 
 Manual install
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.2/powershell_7.0.2-1.ubuntu.18.04_amd64.deb
-	dpkg -i powershell_7.0.2-1.ubuntu.18.04_amd64.deb
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/powershell_7.2.1-1.ubuntu.18.04_amd64.deb
+	sha256sum powershell_7.2.1-1.ubuntu.18.04_amd64.deb
+11756A6265BDC1EBD14D678AB08A6999C03E24157B26B2C2E40640E44CB46ACD
+	dpkg -i powershell_7.2.1-1.ubuntu.18.04_amd64.deb
 	apt install -f
 
 http://blogs.technet.com/b/heyscriptingguy/archive/2013/06/02/weekend-scripter-install-powershell-3-0-on-windows-7.aspx

@@ -1,0 +1,16 @@
+https://www.msys2.org
+	winget install msys2.msys2
+Uses ~/.profile
+See ~/remoteTerminal/tmux.txt and ~/scm/gitforwindows.txt
+	vim ~/.profile
+export PATH=$PATH:~/AppData/Local/Programs/oh-my-posh/bin:~/AppData/Local/Programs/oh-my-posh/themes
+eval "$(oh-my-posh.exe --init --shell bash --config ~/AppData/Local/Programs/oh-my-posh/themes/powerline.omp.json)"
+
+Oh My Posh
+https://ohmyposh.dev
+	winget install JanDeDobbeleer.OhMyPosh
+
+Como Agregar GitBash a la terminal de windows [OhMyPosh]
+https://www.youtube.com/watch?v=_yWb-DukI4k
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+	unzip Meslo.zip -d tmp

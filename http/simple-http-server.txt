@@ -1,6 +1,11 @@
 https://github.com/TheWaWaR/simple-http-server/
 Windows
 	scoop install simple-http-server
+Installer
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-pc-windows-msvc-simple-http-server.exe
+	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-pc-windows-msvc-simple-http-server.exe.sha256
+	sha256sum -c --ignore-missing x86_64-pc-windows-msvc-simple-http-server.exe.sha256
+	mv x86_64-pc-windows-msvc-simple-http-server.exe bin/simple-http-server.exe
 Linux
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server.sha256

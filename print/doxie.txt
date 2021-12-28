@@ -1,0 +1,4 @@
+Doxie – portable scanners for going paperless
+https://www.getdoxie.com
+Windows
+	winget Doxie.Doxie

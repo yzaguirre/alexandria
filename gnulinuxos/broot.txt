@@ -4,12 +4,12 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.6.1
+	git checkout v1.7.5
 	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.6.1/broot_1.6.1.zip
-	unzip broot_1.6.1.zip
+	wget https://github.com/Canop/broot/releases/download/v1.7.5/broot_1.7.5.zip
+	unzip broot_1.7.5.zip
 	sudo mv build/x86_64-linux/broot /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s broot br
@@ -23,10 +23,12 @@ Termux
 
 Check the $EDITOR environment variable (all OS platform)
 Windows
+x	wget https://dystroy.org/broot/download/x86_64-pc-windows-gnu/broot.exe
 	mv build/x86_64-pc-windows-gnu/broot.exe ~/bin
+	vim ~/.bashrc
+source /c/Users/$USERNAME/AppData/Roaming/dystroy/broot/data/launcher/bash/1
 Configuration file
-%HOME%\AppData\Roaming\dystroy\broot\config\conf.toml
-
+%HOME%\AppData\Roaming\dystroy\broot\config\conf.hjson
 MacOS
 	brew install broot
 

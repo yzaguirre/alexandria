@@ -1,3 +1,13 @@
+https://www.gnu.org/software/wget/
+	apt install wget
+Windows
+https://community.chocolatey.org/packages/Wget
+	choco install wget
+Binaries from
+https://eternallybored.org/misc/wget/
+https://builtvisible.com/download-your-website-with-wget/
+https://sourceforge.net/projects/gnuwin32/
+
 If you need to go via a proxy server, the ~/.wgetrc file can be used to set proxy settings for the
 wget tool.
 
@@ -23,5 +33,3 @@ https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-dir
 	wget -r -np -R "index.html*,*.svn*,*.git*" http://example.com/configs/.vim/
 https://serverfault.com/questions/324555/how-to-exclude-certain-directories-while-using-wget#744334
 	wget --exclude-directories=.svn -r ftp://path/to/src
-
-https://sourceforge.net/projects/gnuwin32/

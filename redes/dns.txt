@@ -4,3 +4,6 @@ https://github.com/mxplusb/cloudflare-sync
 https://news.ycombinator.com/item?id=20885876
 
 https://github.com/nickbabcock/dness
+
+https://rethinkdns.com
+Previously https://www.bravedns.com

@@ -8,12 +8,13 @@ https://invent.kde.org/network/kdeconnect-android
 Windows
 https://www.youtube.com/watch?v=Zk8ScqK-xiE
 https://www.dedoimedo.com/computers/kde-connect-windows.html
+	winget install kdeconnect
 
 https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/
-	wget https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-1.4-444-windows-msvc2019_64-cl.exe
-	wget https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-1.4-444-windows-msvc2019_64-cl.exe.sha256
-	sha256sum kdeconnect-kde-1.4-444-windows-msvc2019_64-cl.exe
-	cat kdeconnect-kde-1.4-444-windows-msvc2019_64-cl.exe.sha256
+	wget https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-21.12.0-821-windows-msvc2019_64-cl.exe
+	wget https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/artifact/kdeconnect-kde-21.12.0-821-windows-msvc2019_64-cl.exe.sha256
+	sha256sum kdeconnect-kde-21.12.0-821-windows-msvc2019_64-cl.exe
+	cat kdeconnect-kde-21.12.0-821-windows-msvc2019_64-cl.exe.sha256
 KDE
 	wget https://download.kde.org/unstable/kdeconnect/win64-pre-20.08/kdeconnect-kde-91c05d0.exe
 	explorer.exe kdeconnect-kde-91c05d0.exe

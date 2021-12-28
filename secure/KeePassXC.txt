@@ -32,7 +32,9 @@ https://news.ycombinator.com/item?id=23768819
 	chmod u+x KeePassXC-2.6.6-x86_64.AppImage
 	mv KeePassXC-2.6.6-x86_64.AppImage ~/appimage
 	ln -s ~/appimage/KeePassXC-2.6.6-x86_64.AppImage /usr/local/bin/keepassxc
-MS Windows install
+Windows
+	winget install KeePassXCTeam.KeePassXC
+Installer
 	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi
 	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi.sig
 	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi.DIGEST

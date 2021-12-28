@@ -1,5 +1,6 @@
 Other clients
 http://gpg4win.org/download.html
+	winget install gpg4win
 
 Recommendations
 	If you compress after encrypting, the file,

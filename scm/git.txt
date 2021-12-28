@@ -1,3 +1,5 @@
+See ./gitforwindows.txt
+
 https://bakkenbaeck.github.io/a-random-walk-through-git/
 
 https://akrabat.com/a-few-git-tips/

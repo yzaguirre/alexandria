@@ -1,0 +1,5 @@
+https://wiki.gnome.org/Apps/Gedit
+https://gitlab.gnome.org/GNOME/gedit/blob/master/README.md
+	apt install gedit
+Windows
+	winget install gnome.gedit

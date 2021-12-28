@@ -82,3 +82,14 @@ auth-type: "http"
 auth-http: "david:123"
 cert: "server.crt"
 key: "server.key"
+
+Upload with CURL
+For example, upload a file named foo.txt to directory somedir
+	curl -F file=@foo.txt localhost:8000/somedir
+{"destination":"somedir/foo.txt","success":true}
+Upload with token
+	curl -F file=@foo.txt -F token=12312jlkjafs localhost:8000/somedir
+{"destination":"somedir/foo.txt","success":true}
+Upload and change filename
+	curl -F file=@foo.txt -F filename=hi.txt localhost:8000/somedir
+{"destination":"somedir/hi.txt","success":true}

@@ -9,6 +9,7 @@ text or other types of files to many supported destinations
 you can choose from.
 https://getsharex.com
 https://github.com/ShareX/ShareX
+	winget install ShareX.ShareX
 Scoop
 	scoop bucket add extras
 	scoop install sharex
@@ -19,3 +20,4 @@ https://www.youtube.com/watch?v=dGDWgl7MxMM
 Simple and efficient screen recording utility for Windows
 https://github.com/mmozeiko/wcap
 https://news.ycombinator.com/item?id=28596413
+	curl -o wcap.exe https://raw.githubusercontent.com/wiki/mmozeiko/wcap/wcap.exe
