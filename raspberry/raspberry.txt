@@ -46,8 +46,14 @@ SHA-1:  3a34e7b05e1e6e9042294b29065144748625bea8
 SD SDHC
 Default login: pi / raspberry
 http://www.raspberrypi.org/documentation/installation/installing-images/linux.md
-https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-jessie-lite.zip.torrent
-	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-jessie-lite.zip.sha1
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip.torrent
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.info
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip.sha1
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip.sha256
+	wget https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/2020-02-13-raspbian-buster-lite.zip.sig
+	sha1sum -c --ignore-missing 2020-02-13-raspbian-buster-lite.zip.sha1
+	sha256sum -c --ignore-missing 2020-02-13-raspbian-buster-lite.zip.sha256
+	gpg --verify 2020-02-13-raspbian-buster-lite.zip.sig
 Unmount the SD card and copy the OS image
 	dd bs=4M if=2014-12-24-wheezy-raspbian.img of=/dev/sdd; sync
 
@@ -60,7 +66,7 @@ IMG data
 Startsector 8192
 Multiply 8192 times 512 byes
 8192*512 = 4194304
-	mount -o ro,loop,offset=4194304 2017-04-10-raspbian-jessie-lite.img /mnt/first
+	mount -o ro,loop,offset=4194304 2017-04-10-raspbian-buster-lite.img /mnt/first
 	sudo dd if=/dev/loop4 of=/dev/sdb1 bs=512
 
 After installing PHP, update krb5

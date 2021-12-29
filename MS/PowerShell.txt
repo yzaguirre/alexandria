@@ -26,6 +26,9 @@ C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe
 
 Startup scripts stored in
 C:\Users\David\Documents\WindowsPowerShell
+	$profile
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2
+https://lazyadmin.nl/powershell/powershell-profile/
 
 Para correr Scripts
 	Get-ExecutionPolicy -List

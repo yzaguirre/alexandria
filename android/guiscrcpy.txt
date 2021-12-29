@@ -2,11 +2,16 @@ https://guiscrcpy.srev.in
 https://guiscrcpy.github.io
 https://github.com/srevinsaju/guiscrcpy
 https://github.com/srevinsaju/guiscrcpy/blob/master/docs/FAQ.md
-AppImage
+AppImage (pick one only)
 	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage
 	chmod u+x guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage
-	mv guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage ~/appimage/guiscrcpy-x86_64.AppImage
-	ln -s ~/appimage/guiscrcpy-x86_64.AppImage /usr/local/bin/guiscrcpy
+	mv guiscrcpy-v4.11.3.dev.r.glibc2.31-x86_64.AppImage ~/appimage/guiscrcpy.dev.r-x86_64.AppImage
+	ln -s ~/appimage/guiscrcpy.dev.r-x86_64.AppImage /usr/local/bin/guiscrcpy
+	
+	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-v4.11.3.dev.m.glibc2.31-x86_64.AppImage
+	chmod u+x guiscrcpy-v4.11.3.dev.m.glibc2.31-x86_64.AppImage
+	mv guiscrcpy-v4.11.3.dev.m.glibc2.31-x86_64.AppImage ~/appimage/guiscrcpy.dev.m-x86_64.AppImage
+	ln -s ~/appimage/guiscrcpy.dev.m-x86_64.AppImage /usr/local/bin/guiscrcpy2
 Ubuntu dependency on AppImage
 	apt install libva-drm2
 
@@ -22,6 +27,10 @@ Ubuntu packages
 The following NEW packages will be installed:
   libpyside2-py3-5.15 libshiboken2-py3-5.15 python3-pyside2.qtcore python3-pyside2.qtgui
 Windows
+	pip show guiscrcpy
+	pip install -U guiscrcpy
+	guiscrcpy config -r
+	guiscrcpy
 Configuration files
 https://github.com/srevinsaju/guiscrcpy/blob/main/docs/CONFIGURATION.md
 C:\Users\<username>\AppData\Local\guiscrcpy\guiscrcpy.json
@@ -37,16 +46,19 @@ Windows binary
 	wget https://github.com/Genymobile/scrcpy/releases/download/v1.21/SHA256SUMS.txt.asc
 	sha256sum -c --ignore-missing SHA256SUMS.txt
 	gpg --verify SHA256SUMS.txt.asc
+	mkdir tmp && unzip scrcpy-win64-v1.21.zip -d tmp
+Rename tmp/ to C:\Program Files\scrcpy
 Scoop
 	scoop install scrcpy
 Chocolately
 	choco install scrcpy
 Directory: ~\scoop\apps\scrcpy\current
 Directory: C:/ProgramData/chocolatey/bin
+scrcpy-server at C:\ProgramData\chocolatey\lib\scrcpy\tools\scrcpy-server
 
 guiscrcpy binary for Windows
 	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-PyQt5-x64.exe
-Save it at C:\Program Files\guiscrcpy
+Save it at C:\Program Files\guiscrcpy or ~/bin
 Make a shortcut of guiscrcpy.exe in ~\AppData\Roaming\Microsoft\Windows\Start Menu
 
 Homebrew

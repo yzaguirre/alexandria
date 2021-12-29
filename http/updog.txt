@@ -1,4 +1,5 @@
 https://github.com/sc0tfree/updog
 https://www.reddit.com/r/netsec/comments/f5vqqj/introducing_updog_a_replacement_for_pythons/
-	pip3 install updog
+	pip install updog
 	updog [-d DIRECTORY] [-p PORT] [--password PASSWORD] [--ssl]
+
