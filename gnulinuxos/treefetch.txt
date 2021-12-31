@@ -1,0 +1,4 @@
+https://github.com/angelofallars/treefetch/
+https://www.reddit.com/r/programming/comments/rqy1n6/comment/hqeyp24/
+	wget https://github.com/angelofallars/treefetch/releases/download/v1.2.1/treefetch
+	mv treefetch /usr/local/bin

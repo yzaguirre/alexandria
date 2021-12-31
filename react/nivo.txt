@@ -1,1 +1,2 @@
-https://nivo.rocks/
+https://nivo.rocks
+https://dev.to/przpiw/build-data-visualisation-components-with-react-and-nivo-1d7e

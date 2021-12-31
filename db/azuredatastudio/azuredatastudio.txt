@@ -1,7 +1,12 @@
 https://github.com/microsoft/azuredatastudio
 https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-ver15
 https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15
-	wget https://go.microsoft.com/fwlink/?linkid=2127524 -O azuredatastudio-1.18.1.deb
-	dpkg -i azuredatastudio-1.18.1.deb
+	wget https://go.microsoft.com/fwlink/?linkid=2183341 -O azuredatastudio-1.34.0.deb
+	dpkg -i azuredatastudio-1.34.0.deb
 	apt install libxss1 libgconf-2-4 libunwind8
 	azuredatastudio
+Windows
+	winget install Microsoft.AzureDataStudio
+Installer
+	wget https://go.microsoft.com/fwlink/?linkid=2183423 -O azuredatastudio-windows-setup-1.34.0.exe
+	explorer.exe azuredatastudio-windows-setup-1.34.0.exe

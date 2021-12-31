@@ -1,0 +1,3 @@
+https://gitforwindows.org
+	winget install Git.Git
+Uses ~/.bashrc

@@ -16,6 +16,9 @@ https://developpaper.com/how-to-limit-the-memory-and-cpu-usage-of-windows-wsl/
 https://www.techiepie.com/windows/how-to-limit-memory-and-processor-in-wsl-2-windows-10/
 Power off
 	wsl -t Ubuntu
+Check status
+	wsl -l -v
 Start
+https://github.com/microsoft/WSL/issues/5399
 	wsl -d Ubuntu
 

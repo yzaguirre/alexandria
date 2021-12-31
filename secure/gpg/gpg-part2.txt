@@ -1,6 +1,12 @@
 Other clients
 http://gpg4win.org/download.html
 	winget install gpg4win
+Installed at C:\Program Files (x86)\Gpg4win\bin
+and at C:\Program Files (x86)\GnuPG\bin
+Only gpg cli
+	winget install GnuPG.GnuPG
+
+Home at C:\Users\dyzag\AppData\Roaming\gnupg
 
 Recommendations
 	If you compress after encrypting, the file,

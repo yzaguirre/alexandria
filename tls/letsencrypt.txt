@@ -113,6 +113,9 @@ Standalone
 Certs are saved in
 /etc/letsencrypt/live
 
+Delete a certificate, after no longer in use
+	certbot delete --cert-name example.com
+
 Autorenewal with systemd timer. It runs
 	certbot renew --dry-run
 Also check /etc/cron.d. This script runs twice a day and will renew any certificate that's within thirty days of expiration.

@@ -64,3 +64,8 @@ Print assembly version
 https://stackoverflow.com/questions/1710935/how-do-i-find-the-publickeytoken-for-a-particular-dll
 	([system.reflection.assembly]::loadfile("C:\..\Full_Path\..\MyDLL.dll")).FullName
 MyDLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a
+
+Import Excel to SQL Server database
+https://github.com/microsoft/azuredatastudio/issues/200
+https://github.com/SQLvariant/Demos/blob/master/Presentations/Ignite2018-THR2114/2A_Import-Excel.ps1
+

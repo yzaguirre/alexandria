@@ -191,7 +191,7 @@ https://news.ycombinator.com/item?id=25047141
 Swiss report reveals new details on CIA spying operation
 https://www.washingtonpost.com/national-security/swiss-report-reveals-new-details-on-cia-spying-operation/2020/11/10/c93ca7fc-2386-11eb-8672-c281c7a2c96e_story.html
 https://news.ycombinator.com/item?id=25058783
-
+H
 https://www.cyberciti.biz/tips/linux-security.html
 https://twitter.com/tavernalinux/status/1422771834030862336
 
@@ -215,6 +215,8 @@ https://www.youtube.com/watch?v=5-GkpxbZ9Zw
 https://www.youtube.com/watch?v=ysFB6JKTs5U
 https://www.youtube.com/watch?v=oShZwiDTx9U
 https://www.youtube.com/watch?v=0-abhd-CLwQ
+MS response
+https://twitter.com/MarlonVega02/status/1476154916100087810
 ffmpeg
 https://twitter.com/videolan/status/1469736986126733313
 iMessage

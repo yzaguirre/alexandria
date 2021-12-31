@@ -5,7 +5,7 @@ https://github.com/dbcli/mssql-cli
 https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md
 https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md
 https://www.sqlshack.com/introduction-mssql-cli-new-interactive-command-line-tool-sql-server/
-	sudo -H pip3 install mssql-cli
+	sudo -H pip install mssql-cli
 Compile bug
 https://github.com/termux/termux-packages/issues/136
 	apt install python-dev

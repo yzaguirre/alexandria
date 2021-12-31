@@ -117,6 +117,9 @@ https://programmer.group/adb-screen-capture-and-recording-commands.html
 	adb shell screenrecord /mnt/sdcard/Download/test.mp4
 	adb shell screenrecord /storage/emulated/0/DCIM/Screenshots/filename.mp4
 	adb pull /sdcard/DCIM/Screenshots/filename.mp4
+Record with scrcpy. See ./guiscrcpy.txt
+	scrcpy --no-display --record file.mp4
+	scrcpy -Nr file.mkv
 
 Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b

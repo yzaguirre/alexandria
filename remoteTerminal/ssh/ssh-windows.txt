@@ -1,3 +1,27 @@
+https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview
+OpenSSH is the open-source version of the Secure Shell (SSH) tools
+used by administrators of Linux and other non-Windows for
+cross-platform management of remote systems.
+OpenSSH has been added to Windows (as of autumn 2018),
+and is included in Windows 10 and Windows Server 2019.
+
+Install
+https://github.com/PowerShell/openssh-portable
+https://github.com/PowerShell/Win32-OpenSSH
+https://superuser.com/questions/1395962/is-it-possible-to-update-the-built-in-openssh-client-in-windows-10
+	choco upgrade openssh --pre
+
+https://devblogs.microsoft.com/powershell/openssh-for-windows-update/
+
+Configuration file
+%userprofile%\.ssh\config
+System-wide configuration file
+%programdata%\ssh\ssh_config
+
+Server configuration directory
+https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
+%programdata%/ssh/
+
 https://en.wikipedia.org/wiki/Comparison_of_SSH_servers
 http://www.extenua.com/silvershield.htm
 	$ wget http://dl.extenua.com/SilverSHielD_Setup.exe

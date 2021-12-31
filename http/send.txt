@@ -5,3 +5,11 @@ https://news.ycombinator.com/item?id=19367850
 	npm install
 	npm start
 
+A fork of Mozilla's Firefox Send.
+Mozilla discontinued Send,
+this fork is a community effort to keep the project up-to-date and alive.
+https://send.vis.ee/
+https://github.com/timvisee/send
+
+📬 Easily and securely share files from the command line. A fully featured Firefox Send client.
+https://github.com/timvisee/ffsend

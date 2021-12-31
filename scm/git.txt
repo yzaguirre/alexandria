@@ -93,12 +93,21 @@ https://codewords.recurse.com/issues/two/git-from-the-inside-out
 https://news.ycombinator.com/item?id=12802949
 
 User config
+https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-configuration
+	git config --list --show-origin
 System config: /etc/gitconfig
 	git config --system core.editor "/bin/vim"
+	git config --system core.editor "C:/Program Files/Vim/vim82/vim.exe"
 Global config: ~/.gitconfig
 	git config --global user.name "David Y. Gonzalez"
 	git config --global user.email "dvdyzag@gmail.com"
+https://stackoverflow.com/questions/46992596/configure-gpg-for-git-on-windows
+https://neurotechnics.com/blog/configure-gpg-to-sign-git-commits-in-windows/
+	git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
+	git config --global user.signingkey DA03396D49F620F3
 	git config --global commit.gpgsign true
+Optionally, you may need to disable TTY if your IDE doesn't like talking to gpg properly:
+	echo 'no-tty' >> ~/.gnupg/gpg.conf
 Local config: .git/config
 	git config user.name "user"
 	git config --local user.signingkey 3AA5C34371567BD2
@@ -143,6 +152,7 @@ Diff color attributes
 	git diff --color-words
 Colorize the output always
 https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
+https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 	git -c color.status=always status
  
 https://stackoverflow.com/questions/2389361/undo-a-git-merge

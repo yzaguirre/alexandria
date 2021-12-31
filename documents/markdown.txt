@@ -1,5 +1,14 @@
 See ~/documents/grip.txt
 
+Glow
+https://github.com/charmbracelet/glow/
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.deb
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt.sig
+	sha256sum -c --ignore-missing checksums.txt
+	gpg --verify checksums.txt.sig
+	dpkg -i glow_1.4.1_linux_amd64.deb
+
 http://www.tablesgenerator.com/markdown_tables#
 https://help.github.com/articles/markdown-basics
 https://help.github.com/articles/github-flavored-markdown

@@ -19,3 +19,8 @@ Basic regular expressions are built into grep
 	^$.[]*
 Extended regular expressions (){}?+
 egrep is deprecated, use grep -E
+
+A command-line tool and library for generating regular expressions
+from user-provided test cases
+https://github.com/pemistahl/grex
+https://www.reddit.com/r/rust/comments/ef3hd7/grex_030_a_commandline_tool_and_library_for/
