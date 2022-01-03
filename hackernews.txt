@@ -28,3 +28,8 @@ depending on your Ubuntu Version.
 Or put it in 
 	~/.config/openbox/autostart 
 if you are running OpenBox. Here is how the configuration should look like in Ubuntu and its derivatives.
+
+hacker news
+Browse Hacker News like a haxor: A Hacker News command line interface (CLI).
+https://news.ycombinator.com/item?id=29759204
+https://github.com/donnemartin/haxor-news

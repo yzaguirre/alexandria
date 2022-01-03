@@ -28,12 +28,19 @@ https://joaoapps.com/AutoApps/Help/Info/com.joaomgcd.join/android_10_read_logs.h
 	adb shell am force-stop org.kde.kdeconnect_tp
 
 CLI
-	kdeconnect-cli
+https://cubiclenate.com/2019/01/09/kde-connect-cli-a-gift-to-future-self/
+https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands
+	kdeconnect-cli -l
 - SM-T295: 228a9627313deb8a (paired and reachable)
 - Galaxy Tab S5e: daec21fa8efdae5d (paired and reachable)
 - Galaxy A70: ddb1667d92c36a5c (paired and reachable)
-kdeconnect-cli -d 428a9627313deb8a --share file.txt 
-kdeconnect-cli -d 428a9627313deb8a --share-text hello
-kdeconnect-cli -d 48a9627313deb8a --list-notifications
-kdeconnect-cli -d 4228a9627313deb8a --send-sms "Hola desde la terminal" --destination eduardo --attachment url
-kdeconnect-cli -d ddb1667d92c36a5c --photo hello.jpg
+	kdeconnect-cli -d 428a9627313deb8a --share file.txt
+	kdeconnect-cli -d 428a9627313deb8a --share-text hello
+	kdeconnect-cli -d 48a9627313deb8a --list-notifications
+	kdeconnect-cli -d 4228a9627313deb8a --send-sms "Hola desde la terminal" --destination eduardo --attachment url
+	kdeconnect-cli -d ddb1667d92c36a5c --photo hello.jpg
+	kdeconnect-cli -d ddb1667d92c36a5c --ping-msg "$(date.exe +'%F_%H.%M.%S')"
+
+https://rafaelc.org/posts/mounting-kde-connect-filesystem-via-cli/
+
+https://doronbehar.com/articles/using-kdeconnect-to-comfortably-send-sms-messages-from-the-shell/

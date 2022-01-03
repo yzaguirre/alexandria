@@ -1,0 +1,2 @@
+https://github.com/KittyKatt/screenFetch
+	apt install screenfetch

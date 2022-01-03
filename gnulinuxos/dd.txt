@@ -11,7 +11,8 @@ Ubuntu also creates /dev/cdrw and /dev/dvd devices files as well as
 
 Backup a drive (HDD, SD, USB, etc)
 Backup the whole device (includes all partitions)
-	sudo dd if=/dev/sdb of=mydevice.img 
+https://unix.stackexchange.com/questions/558346/how-do-i-make-an-iso-from-a-working-sd-card
+	dd if=/dev/sdb of=mydevice.img
 Mount an image of a device
 https://major.io/2010/12/14/mounting-a-raw-partition-file-made-with-dd-or-dd_rescue-in-linux/
 Find the offset sector, two ways:

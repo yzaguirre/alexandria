@@ -10,6 +10,9 @@ Mount an ISO
 	# mount -t iso9660 -o loop image.iso /mnt/iso_image
 
 Create ISO from CD
+https://briansnelson.com/Make_an_ISO_from_a_Folder_with_mkisofs
+https://unix.stackexchange.com/questions/558346/how-do-i-make-an-iso-from-a-working-sd-card
+	apt install genisoimage
 	mkisofs -r -o xxxx.iso /cdrom/
 	dd if=/dev/cdrom of=ubuntu.iso
 Create ISO from collection of files

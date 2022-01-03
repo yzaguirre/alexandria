@@ -15,3 +15,4 @@ https://github.com/sharkdp/bat/releases
 	mkdir ~/.config/bat && cd ~/.config/bat
 	vim config
 --pager="less -RS"
+--wrap=never

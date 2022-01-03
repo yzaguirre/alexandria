@@ -619,6 +619,7 @@ xplr
 xh
 ripgrep
 fd-find
+insect
 ruplacer
 duc
 exa

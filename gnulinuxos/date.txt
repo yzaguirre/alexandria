@@ -6,6 +6,8 @@ febrero 2019
 2019-02-20_15.33.17
 	date +%s # factor current timestamp
 1550698513
+	date '+%Y%m%d_%H%M%S'
+20211231_145722
 
 https://unix.stackexchange.com/questions/43264/first-and-last-day-of-a-month
 End of month, from current month

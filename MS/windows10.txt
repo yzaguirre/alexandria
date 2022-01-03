@@ -11,3 +11,6 @@ Verify
 	Get-FileHash C:\Users\user1\Downloads\Win10_21H2_Spanish_x64.iso
 	sha256sum Win10_21H2_Spanish_x64.iso
 F240F1AE1F5738E50301E7DABEEBB2B4EF11FA0B9DD7DA1475A7ADF27A4BE4A7
+
+https://www.digitalcitizen.life/windows-10-debloater/
+https://github.com/Sycnex/Windows10Debloater/

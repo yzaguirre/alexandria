@@ -58,3 +58,11 @@ cmd.Parameters.AddWithValue("@intParam",
 
 https://stackoverflow.com/questions/4657974/how-to-generate-unique-file-names-in-c-sharp
 https://docs.microsoft.com/en-us/dotnet/api/system.io.path.gettempfilename?redirectedfrom=MSDN&view=netcore-3.1#System_IO_Path_GetTempFileName
+
+SQL Server
+Connection String http://www.connectionstrings.com/sql-server-2012
+Data Source=190.190.200.100,1433;Network Library=DBMSSOCN;
+Initial Catalog=myDataBase;User ID=myUsername;Password=myPassword;
+
+SqlConnection cs = new SqlConnection("Data Source=WIN-PASIVO\\SQLSERVERTOPDOG; Initial Catalog=YOUTUBE; Integrated Security=TRUE; User id=david; Password=Endgame90");
+SqlConnection cs = new SqlConnection("Data Source=192.168.0.253,1433; Network Library=DBMSSOCN; Initial Catalog=YOUTUBE; User id=david; Password=Holamundo11");

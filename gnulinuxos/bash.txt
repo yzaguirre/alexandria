@@ -199,3 +199,10 @@ Wireless adb
 	adb connect phone_ip:port
 	adb devices
 	adb -s DEVICE_ID shell
+
+Macros
+https://www.gnu.org/software/bash/manual/html_node/Keyboard-Macros.html
+https://twitter.com/nixcraft/status/1477012146877710337
+Ctrl + x + ( To start recording a macro
+Ctrl + x + ) To stop recording a macro
+Ctrl + x + e To execute the last recorded macro

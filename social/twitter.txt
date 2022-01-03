@@ -1,3 +1,17 @@
+Get started with Twitter API
+https://www.youtube.com/watch?v=i9RiABNFwks
+
+Twitter forces all new users to enter a valid phone number
+https://news.ycombinator.com/item?id=19487304
+
+https://tasshin.com/blog/a-guide-to-twitter/
+https://news.ycombinator.com/item?id=29752379
+
+Los tuits guardados todavía no se pueden consumir desde fuera de Tuiter,
+están en ello pero de momento yo de ti los compartiría fuera como
+te han sugerido
+https://twitter.com/_contrafoque/status/1475031010303778824
+
 https://github.com/sferik/t
 http://xmodulo.com/access-twitter-command-line-linux.html
 https://apps.twitter.com/app/new
