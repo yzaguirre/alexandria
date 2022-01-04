@@ -1,0 +1,11 @@
+https://store.steampowered.com/about/
+	apt install steam-launcher
+The following NEW packages will be installed:
+  i965-va-driver:i386 intel-media-va-driver:i386 libegl-mesa0:i386 libegl1:i386 libgbm1:i386 libigdgmm11:i386 libva2:i386 libwayland-server0:i386
+  libxinerama1:i386 libxss1:i386 mesa-va-drivers:i386 steam-libs-amd64 steam-libs-i386:i386 va-driver-all:i386
+https://askubuntu.com/questions/915950/steam-error-no-such-file-or-directory-for-17-04
+	mkdir /home/$USER/.steam/ubuntu12_32/steam-runtime
+
+Dangerous script
+https://github.com/ValveSoftware/steam-for-linux/issues/3671#issuecomment-70161790
+https://twitter.com/nixcraft/status/1364746532096929793/photo/1

@@ -60,3 +60,9 @@ https://www.lapsedordinary.net/2016/01/24/setting-up-your-wordpress-blog-as-a-to
 Popular onion sites
 https://www.facebook.com/notes/protect-the-graph/making-connections-to-facebook-more-secure/1526085754298237
 https://facebookcorewwwi.onion/
+
+
+Now that the new OnionShare has better command line support,
+I just wrote a guide explaining how to run your own anonymous
+Tor dropbox on a Raspberry Pi. Check it out
+https://twitter.com/micahflee/status/1364754929416601601

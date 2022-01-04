@@ -166,3 +166,6 @@ https://packagecontrol.io/packages/SQLTools
 Cut doesn't work
 https://stackoverflow.com/questions/33740545/cut-and-paste-issue-with-sublime-text-st3
 Remove Origami. Or change the key bindings.
+
+Spiritual successor to Sublime IS Sublilme. Come on, it’s the perfect editor, hope it never changes
+https://twitter.com/nikitonsky/status/1364917053744959489
