@@ -57,3 +57,6 @@ Hospital prociegos, en la zona 11.
 Hay siempre un médico que atiende emergencias.
 
 Visualiza Zona 9
+
+https://justgetflux.com/faq.html
+	winget install flux.flux

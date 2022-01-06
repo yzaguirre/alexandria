@@ -122,3 +122,13 @@ https://0xca0a.gumroad.com/l/B4N4N4S
 https://twitter.com/0xca0a/status/1445409346305892353
 After years of making content for free, I completed my first ever paid-for course over at https://0xca0a.gumroad.com/l/B4N4N4S ✨
 It teaches front-end devs how to make Awwwards-type websites. Even if you've never even touched Threejs before.
+
+https://stackoverflow.com/questions/195951/how-can-i-change-an-elements-class-with-javascript
+document.getElementById("MyElement").classList.add('MyClass');
+document.getElementById("MyElement").classList.remove('MyClass');
+if ( document.getElementById("MyElement").classList.contains('MyClass') )
+document.getElementById("MyElement").classList.toggle('MyClass');
+
+Lists
+https://stackoverflow.com/questions/11351135/create-ul-and-li-elements-in-javascript
+

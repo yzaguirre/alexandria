@@ -221,3 +221,12 @@ import os
 os.system("ls -l")
 
 subprocess.Popen(["/usr/bin/git", "commit", "-m", "Fixes a bug."])
+
+The #Python lambda is frequently used in conjunction with the `map()` function. 🐍🔥
+If you're a fan of functional programming, the following code style will look familiar
+https://twitter.com/driscollis/status/1478109446954004487
+	list(map((lambda x: x*3), range(5)))
+[0, 3, 6, 9, 12]
+
+List comprehension:
+	[3 * x for x in range(5)]

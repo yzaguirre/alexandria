@@ -218,6 +218,9 @@ https://linear.app
 https://news.ycombinator.com/item?id=23693029
 https://medium.com/linear-app/practices-for-building-linear-is-now-open-for-all-234f7cf9a3d0
 
+https://linetime.matteoricupero.it/
+https://www.reddit.com/r/programming/comments/rvqhsh/linetime_create_share_and_print_events/
+
 Feeds
 canto
 newsbeuter

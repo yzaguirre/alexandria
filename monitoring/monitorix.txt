@@ -8,14 +8,19 @@ Set your hostname and title
 Double check the built in httpd port. 8080 is the default. Which is also sabnzbd’s port.
 Set to enabled if you want to use the internal webserver.
 
+
 Load new configuration
 	sudo service monitorix restart
 Disable service
 	sudo service monitorix stop
 	sudo update-rc.d -f monitorix remove
+SystemD
+	systemctl disable monitorix.service
 
 Further down you can turn on and off what it graphs.
 https://www.xmodulo.com/web-based-lightweight-system-monitor-linux.html
 
 Web interface
 http://127.0.0.1:8080/monitorix
+
+Or port 8086 on Ubuntu

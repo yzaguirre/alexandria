@@ -69,3 +69,6 @@ Import Excel to SQL Server database
 https://github.com/microsoft/azuredatastudio/issues/200
 https://github.com/SQLvariant/Demos/blob/master/Presentations/Ignite2018-THR2114/2A_Import-Excel.ps1
 
+https://stackoverflow.com/questions/9086880/t-sql-export-to-new-excel-file
+	Invoke-Sqlcmd -Query $Query -Database $Database -ServerInstance $Server | Export-Csv $FilePath
+

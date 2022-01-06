@@ -1,3 +1,6 @@
+https://gnupg.org/blog/20220102-a-new-future-for-gnupg.html
+https://news.ycombinator.com/item?id=29791056
+
 https://xkcd.com/1553/
 https://lwn.net/Articles/735840/
 Use a key without importing it

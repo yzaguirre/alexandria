@@ -1,6 +1,9 @@
 https://www.visidata.org
 https://github.com/saulpw/visidata
 	sudo -H pip install -U visidata
+Windows dependency
+https://stackoverflow.com/questions/35850362/importerror-no-module-named-curses-when-trying-to-import-blessings
+	pip install windows-curses
 
 VisiData supports tsv, csv, sqlite, json, xlsx (Excel), hdf5, and many other formats.
 https://www.visidata.org/docs/formats/

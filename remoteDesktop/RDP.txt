@@ -5,7 +5,11 @@ youtube user babarehner
 Remote Desktop Connection from Windows 7 to Ubuntu 12.04 
 http://www.youtube.com/watch?v=KY3V79t5tKA
 Demonstrates how to complete a remote desktop connection from a Windows 7 desktop to an Ubuntu 12.04 desktop. A software package xrdp is installed from Ubuntu Software Center to an Ubuntu 12.04 desktop making the Ubuntu desktop a Remote Desktop Protocol Server.
-To turn off xrdp Remote Desktop Protocol Server use "sudo service xrdp stop" and to turn it back on use "sudo service xrdp start" from the command line.
+To turn off xrdp Remote Desktop Protocol Server use 
+	service xrdp stop
+and to turn it back on use
+	service xrdp start
+from the command line.
 
 To check out an Ubuntu Remote Desktop client see "Explore Remote Desktop Connection from Ubuntu 12 to MS Windows."- http://youtu.be/ZCyRBoZ_eGM
 To check out how to connect to an Ubuntu 13.04 desktop or an Ubuntu 12.10 desktop with Windows 7 or 8 see "Remote Desktop Connection from Windows 8 to Ubuntu 13.04"- http://youtu.be/XgMJI8cvXOg

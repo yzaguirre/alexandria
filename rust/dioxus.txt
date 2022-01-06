@@ -1,0 +1,5 @@
+Elegant React-like library for building user interfaces for
+desktop, web, mobile, SSR, liveview, and more.
+https://dioxuslabs.com/blog/introducing-dioxus/
+https://github.com/dioxuslabs/dioxus
+https://www.reddit.com/r/programming/comments/rvl6ho/dioxus_v01_a_new_rust_gui_toolkit_for_web_desktop/

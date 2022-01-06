@@ -1,0 +1,5 @@
+Yew is a modern Rust framework for creating multi-threaded
+front-end web apps using WebAssembly.
+https://yew.rs
+https://github.com/yewstack/yew
+https://docs.rs/yew/latest/yew/
