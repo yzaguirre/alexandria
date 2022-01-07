@@ -98,6 +98,9 @@ Binary at
 ~/.dotnet/tools
 %USERPROFILE%\.dotnet\tools
 
+Uninstall a tool
+	dotnet tool uninstall --global weather.cli
+
 Create a exe
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build
 https://blog.jongallant.com/2017/09/dotnet-core-console-app-create-exe-instead-of-dll/

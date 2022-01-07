@@ -1,3 +1,53 @@
+https://kubernetes.io
+https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+https://github.com/kubernetes/kubernetes
+Windows
+https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+	curl -LO "https://dl.k8s.io/release/v1.23.1/bin/windows/amd64/kubectl.exe"
+	curl -LO "https://dl.k8s.io/v1.23.1/bin/windows/amd64/kubectl.exe.sha256"
+	CertUtil -hashfile kubectl.exe SHA256
+	type kubectl.exe.sha256
+Verify with PowerShell
+	$($(CertUtil -hashfile .\kubectl.exe SHA256)[1] -replace " ", "") -eq $(type .\kubectl.exe.sha256)
+Install to PATH directory
+	move kubectl.exe ../bin
+Chocolately
+	choco install kubernetes-cli
+
+Usage
+	kubectl version --client
+	cd %USERPROFILE%
+	mkdir .kube
+	cd .kube
+	New-Item config -type file
+Verify kubectl configuration 
+	kubectl cluster-info
+
+PowerShell completion
+	kubectl completion powershell | Out-String | Invoke-Expression
+
+Add plugin kubectl convert
+	curl -LO "https://dl.k8s.io/release/v1.23.1/bin/windows/amd64/kubectl-convert.exe"
+	curl -LO "https://dl.k8s.io/v1.23.1/bin/windows/amd64/kubectl-convert.exe.sha256"
+	CertUtil -hashfile kubectl-convert.exe SHA256
+	type kubectl-convert.exe.sha256
+	$($(CertUtil -hashfile .\kubectl-convert.exe SHA256)[1] -replace " ", "") -eq $(type .\kubectl-convert.exe.sha256)
+	move kubectl-convert.exe ../bin
+Verify
+	kubectl convert --help
+
+minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+https://minikube.sigs.k8s.io/docs/start/
+https://github.com/kubernetes/minikube
+x	wget https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+	curl -LO https://github.com/kubernetes/minikube/releases/download/v1.24.0/minikube-windows-amd64.exe
+	curl -LO https://github.com/kubernetes/minikube/releases/download/v1.24.0/minikube-windows-amd64.exe.sha256
+	CertUtil -hashfile minikube-windows-amd64.exe SHA256
+	type minikube-windows-amd64.exe.sha256
+Save the exe to C:\minikube directory, add it to PATH environment variable.
+Start your cluster
+	minikube start
+
 Google admits Kubernetes container tech is too complex
 https://www.theregister.com/2021/02/25/google_kubernetes_autopilot/
 https://news.ycombinator.com/item?id=26271470
@@ -24,3 +74,17 @@ https://news.ycombinator.com/item?id=23003138
 Everything Useful I Know About kubectl
 https://www.atomiccommits.io/everything-useful-i-know-about-kubectl/
 https://news.ycombinator.com/item?id=27737064
+
+How to deploy .NET apps to Kubernetes
+https://www.youtube.com/watch?v=cNlxPKy_NPA
+	kubectl get pods
+	touch deploy.yml
+	kubectl apply -f .\deploy.yml
+	kubectl get svc
+	touch service.yml
+	kubectl apply -f .\service.yml
+	kubectl get svc
+Delete a pod
+	kubectl delete pod weather-api-deployment-hash
+	kubectl get pods
+

@@ -16,3 +16,6 @@ https://github.com/sharkdp/bat/releases
 	vim config
 --pager="less -RS"
 --wrap=never
+Windows
+C:\Users\dyzag\AppData\Roaming\bat\config
+

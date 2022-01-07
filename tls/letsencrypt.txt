@@ -1,5 +1,10 @@
 https://letsencrypt.org/docs/staging-environment/
 
+Should you use Let's Encrypt for internal hostnames?
+https://shkspr.mobi/blog/2022/01/should-you-use-lets-encrypt-for-internal-hostnames/
+https://news.ycombinator.com/item?id=29808233
+
+
 Let's Encrypt DST Root CA X3 Expiration – September 2021
 https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/
 https://news.ycombinator.com/item?id=27181374

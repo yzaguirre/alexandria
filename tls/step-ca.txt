@@ -1,3 +1,7 @@
 https://smallstep.com/blog/private-acme-server/
 https://github.com/smallstep/cli
 https://github.com/smallstep/certificates
+
+https://smallstep.com/docs/step-ca
+https://gist.github.com/mojzu/b093d79e73e7aa302dde8e335945b2cd
+https://news.ycombinator.com/item?id=29809113

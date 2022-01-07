@@ -33,3 +33,6 @@ Tests users, database or its configuration can have exploits associated with the
 so better safe than sorry for a production environment.
 reload
 	systemctl restart mariadb.service
+
+https://www.hellodevops.blog/posts/database-character-sets-and-collations-explained/
+https://news.ycombinator.com/item?id=29793916

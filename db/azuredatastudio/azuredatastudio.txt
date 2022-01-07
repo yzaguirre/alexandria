@@ -10,3 +10,10 @@ Windows
 Installer
 	wget https://go.microsoft.com/fwlink/?linkid=2183423 -O azuredatastudio-windows-setup-1.34.0.exe
 	explorer.exe azuredatastudio-windows-setup-1.34.0.exe
+
+Top 5 Time-Saving Extensions in Azure Data Studio
+https://youtu.be/MBlbLQKiD6g
+
+Build SQL Database Projects Easily in Azure Data Studio | Data Exposed
+https://www.youtube.com/watch?v=I6T9OA9YBGg
+

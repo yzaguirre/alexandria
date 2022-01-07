@@ -7,3 +7,7 @@ https://github.com/nickbabcock/dness
 
 https://rethinkdns.com
 Previously https://www.bravedns.com
+
+Why might you run your own DNS server?
+https://jvns.ca/blog/2022/01/05/why-might-you-run-your-own-dns-server-/
+https://news.ycombinator.com/item?id=29812736

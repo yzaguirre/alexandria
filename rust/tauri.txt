@@ -1,0 +1,5 @@
+Tauri - Electron alternative written in Rust 
+Build smaller, faster, and more secure desktop applications with a web frontend.
+https://tauri.studio/en/
+https://github.com/tauri-apps/tauri
+https://news.ycombinator.com/item?id=29807022
