@@ -1,3 +1,6 @@
 Cheapest/easiest way to host a static site?
 https://news.ycombinator.com/item?id=26594242
 
+We handle 80TB and 5M page views a month for under $400
+https://blog.polyhaven.com/how-we-handle-80tb-and-5m-page-views-a-month-for-under-400/
+https://news.ycombinator.com/item?id=29816504

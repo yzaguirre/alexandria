@@ -44,3 +44,6 @@ diffpdf
 https://www.qtrac.eu/diffpdf-foss.html
 https://gitlab.com/eang/diffpdf/
 	apt install diffpdf
+
+https://www.simplepdf.eu
+https://news.ycombinator.com/item?id=29837895

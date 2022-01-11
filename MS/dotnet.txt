@@ -58,17 +58,20 @@ Installed an ASP.NET Core HTTPS development certificate.
 To trust the certificate run (Windows and macOS only).
 	dotnet dev-certs https --trust
 
-Import assembly reference, like SqlConnection
+Import libraries
 https://stackoverflow.com/questions/46815546/how-to-add-external-assembly-dll-to-net-core-2-0-on-visual-studio-code#46815598
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
-	dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
-	dotnet add app/app.csproj reference System.Configuration
-	dotnet add app/app.csproj reference lib/lib.csproj
+https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
 	dotnet add package System.Data.SqlClient
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files
 https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net-core-via-pocos#43512837
-	dotnet add package System.Configuration.ConfigurationManager
+https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration
+x	dotnet add package Microsoft.Extensions.Hosting
+x	dotnet add package Microsoft.Extensions.Configuration
+	dotnet add package Microsoft.Extensions.Configuration.Binder
+	dotnet add package Microsoft.Extensions.Configuration.Json
+	dotnet add package Microsoft.Extensions.Configuration.EnvironmentVariables
 	dotnet add package Google.Apis.Gmail.v1
 	dotnet add package Open-XML-SDK
 	dotnet add package Newtonsoft.Json
@@ -100,6 +103,10 @@ Binary at
 
 Uninstall a tool
 	dotnet tool uninstall --global weather.cli
+
+Builds a project and all of its dependencies
+https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-msbuild
+	dotnet msbuild
 
 Create a exe
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build

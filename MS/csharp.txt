@@ -1,3 +1,5 @@
+https://docs.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates
+
 https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/
 https://news.ycombinator.com/item?id=23249171
 
@@ -47,9 +49,16 @@ https://docs.microsoft.com/en-us/dotnet/api/system.io.path?view=netframework-4.8
 Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".myfilerc");
 
 Read from app.settings
+Discontinued since dotnet 5
+https://stackoverflow.com/questions/66126494/the-type-name-configurationmanager-could-not-be-found-in-the-namespace-system
 https://stackoverflow.com/questions/10864755/adding-and-reading-from-a-config-file
 using System.Configuration;
 ConfigurationManager.AppSettings["keyname"];
+
+appsettings.json for Configuration
+https://docs.microsoft.com/en-us/aspnet/core/migration/configuration?view=aspnetcore-6.0
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-6.0
+https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration
 
 https://stackoverflow.com/questions/8411184/can-i-pass-a-dbnull-to-integer-type-variable
 private void BindGridView(String Fromdate, String Todate, int? IsPending) {

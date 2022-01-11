@@ -1,0 +1,13 @@
+A logger for MSBuild that records a structured representation
+of executed targets, tasks, property and item values.
+https://msbuildlog.com
+https://github.com/KirillOsenkov/MSBuildStructuredLog
+https://news.ycombinator.com/item?id=29851156
+	choco install msbuild-structured-log-viewer
+
+Compile
+	msbuild MySolution.sln /bl
+Open the log file (msbuild.binlog) with the viewer
+
+MSBuild Structured Log Viewer
+https://www.youtube.com/watch?v=CNkGEBmZ1yo

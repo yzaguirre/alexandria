@@ -1,0 +1,4 @@
+https://openpyxl.readthedocs.io/en/stable/
+https://foss.heptapod.net/openpyxl/openpyxl
+openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
+	sudo -H pip install -U openpyxl

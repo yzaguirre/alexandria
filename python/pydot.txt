@@ -1,0 +1,3 @@
+https://pypi.org/project/pydot/
+https://github.com/pydot/pydot
+	sudo -H pip install -U pydot

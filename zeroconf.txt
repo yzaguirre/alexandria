@@ -22,8 +22,11 @@ Restart message bus
 
 
 Bonjour64
+https://support.apple.com/kb/DL999?locale=es_LAMR
 http://opensource.apple.com/tarballs/mDNSResponder/
 dropbox direct link http://db.tt/LKonLUwJ
+Windows
+	choco install bonjour
 
 http://stackoverflow.com/questions/6160647/differences-between-bonjour-avahi-people-nearby-protocol
 

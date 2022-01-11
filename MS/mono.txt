@@ -3,8 +3,13 @@ http://en.wikipedia.org/wiki/Mono_(software)
 Install
 
 	apt install mono-complete monodevelop referenceassemblies-pcl ca-certificates-mono mono-xsp4
+Windows
+	winget install Mono.Mono
+Or download the very latest
+https://download.mono-project.com/archive/6.12.0/windows-installer/
+
 Do the hello world
-http://www.mono-project.com/docs/getting-started/mono-basics/
+https://www.mono-project.com/docs/getting-started/mono-basics/
 Compile
 	mcs HelloWorld.cs
 Run

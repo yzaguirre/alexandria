@@ -16,3 +16,5 @@ https://edotor.net/
 
 https://sketchviz.com/new
 
+See ~/python/pydot.txt
+

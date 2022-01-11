@@ -1,3 +1,7 @@
+XMPP: the secure communication protocol that respects privacy
+https://notes.nicfab.it/post/xmpp/xmpp/
+https://news.ycombinator.com/item?id=29871358
+
 https://trashserver.net/en/about-this-server/
 https://news.ycombinator.com/item?id=19894314
 ejabberd

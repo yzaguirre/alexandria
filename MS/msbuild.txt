@@ -1,0 +1,29 @@
+MS Build - Microsoft build engine
+Replaces xbuild on Mono
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022
+https://github.com/dotnet/msbuild
+Usual directory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
+
+CD into project directory, where the solution file exists
+and
+	msbuild.exe
+It will build in debug mode
+If target Build exists
+	msbuild.exe -t:Build
+For release mode
+	msbuild.exe -property:Configuration=Release
+
+Create project file in XML
+	vim build.xml
+	msbuild.exe build.xml
+
+Introduction to MSBuild
+https://www.youtube.com/watch?v=oFyj-qGMqAA
+
+Optimizing msbuild (C#/.NET/C++) build performance with Visual Studio 2022
+https://www.youtube.com/watch?v=WpB8rFQrB74
+
+MSBuild | MSBuild Tutorial | DevOps Tools | DevOps Tutorial | Intellipaat
+https://www.youtube.com/watch?v=tg_GxFzeAps
