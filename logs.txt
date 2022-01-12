@@ -1,0 +1,7 @@
+Log file navigator
+https://lnav.org
+https://github.com/tstack/lnav
+	wget https://github.com/tstack/lnav/releases/download/v0.10.1/lnav-0.10.1-musl-64bit.zip
+	unzip lnav-0.10.1-musl-64bit.zip
+	mv lnav-0.10.1/lnav /usr/local/bin
+	lnav

@@ -1,0 +1,8 @@
+Easily query, script, and visualize data from every database, file, and API.
+https://datastation.multiprocess.io
+https://github.com/multiprocessio/datastation
+
+https://datastation.multiprocess.io/blog/2022-01-11-dsq.html
+https://github.com/multiprocessio/dsq
+https://news.ycombinator.com/item?id=29892463
+Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more.
