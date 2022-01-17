@@ -1,10 +1,35 @@
 https://www.python.org
-	apt install python3 python3-pip
+	apt install python3.9 python3.9-venv python3-pip
 For Python 3.10
 	apt install python3.10
 Windows
 	winget install Python.Python.3
 Installs at C:\Users\%HOME%\AppData\Local\Programs\Python\Python310
+For Python 3.9.9
+https://www.python.org/downloads/release/python-399/
+	wget https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe
+	wget https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe.asc
+	gpg --verify python-3.9.9-amd64.exe.asc
+	md5sum python-3.9.9-amd64.exe
+a09ef64c9ea2e7d9a04a2cafb833aa7b
+	explorer python-3.9.9-amd64.exe
+Disable the MAX_PATH path length limitation
+https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
+https://stackoverflow.com/questions/27680647/does-max-path-issue-still-exists-in-windows-10
+All other Windows installation
+python is C:\Python39\python
+          C:\Python39\Scripts\
+          C:\Users\dyzag\AppData\Roaming\Python\Python39\Scripts\
+          C:\Users\dyzag\AppData\Local\Programs\Python\Python39
+          C:\Users\dyzag\AppData\Local\Programs\Python\Python39\Scripts
+python is C:\Users\dyzag\AppData\Local\Programs\Python\Python310\python
+          C:\Users\dyzag\AppData\Local\Programs\Python\Python310\Scripts\
+python is C:\Users\dyzag\AppData\Local\Microsoft\WindowsApps\python
+
+Uninstall python from Microsoft store
+Settings -> App execution aliases
+C:\Users\dyzag\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.16.13405.0_x64__8wekyb3d8bbwe
 
 	python3 -m pip install -U autopep8 --user
 
@@ -213,14 +238,21 @@ from itertools import filterfalse
 a[:] = filterfalse(even, a)
  
 Subprocess
-
+https://youtu.be/qUeud6DvOWI?t=360
 import subprocess
 subprocess.run(["ls", "-l"])
+subprocess.run(["ls", "-l"], capture_output=True)
 
 import os
 os.system("ls -l")
 
 subprocess.Popen(["/usr/bin/git", "commit", "-m", "Fixes a bug."])
+
+Lambdas in Python - One Line Anonymous Functions
+https://www.youtube.com/watch?v=ZnkV6ST4a_U
+	a = lambda x, y: x + y
+	b = lambda x: lambda y: x + y
+	print(b(1)(2))
 
 The #Python lambda is frequently used in conjunction with the `map()` function. 🐍🔥
 If you're a fan of functional programming, the following code style will look familiar

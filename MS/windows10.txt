@@ -14,3 +14,24 @@ F240F1AE1F5738E50301E7DABEEBB2B4EF11FA0B9DD7DA1475A7ADF27A4BE4A7
 
 https://www.digitalcitizen.life/windows-10-debloater/
 https://github.com/Sycnex/Windows10Debloater/
+
+Install redistributables
+	winget install Microsoft.VC++2013Redist-x64
+	winget install Microsoft.VC++2013Redist-x86
+	winget install Microsoft.VC++2015-2019Redist-x64
+	winget install Microsoft.VC++2015-2019Redist-x86
+
+https://www.youtube.com/watch?v=RX160bcMFuA
+Windows 10 Tips & Tricks You Should Be Using!
+God Mode
+Create a folder with the name:
+	cd Desktop
+	mkdir GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+Windows 10 Settings You Should Change Right Away! 2021
+https://www.youtube.com/watch?v=FOKt8C_AftU
+Open cmd administrator
+	explorer shell:AppsFolder
+
+Windows 10: Useful Shortcuts You'll Wish You Knew Earlier! (2021)
+https://www.youtube.com/watch?v=-yvYXTpu11Y

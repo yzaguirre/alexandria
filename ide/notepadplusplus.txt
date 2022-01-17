@@ -4,16 +4,16 @@ https://notepad-plus-plus.org/downloads/v8/
 https://news.ycombinator.com/item?id=27420726
 	winget install Notepad++.Notepad++
 Installer
-	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.9.3/npp.8.1.9.3.Installer.x64.exe
-	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.9.3/npp.8.1.9.3.Installer.x64.exe.sig
-	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.9.3/npp.8.1.9.3.checksums.sha256
-	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.9.3/npp.8.1.9.3.checksums.sha256.sig
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.2/npp.8.2.Installer.x64.exe
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.2/npp.8.2.Installer.x64.exe.sig
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.2/npp.8.2.checksums.sha256
+	wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.2/npp.8.2.checksums.sha256.sig
 	wget https://notepad-plus-plus.org/gpg/nppGpgPub.asc
 	gpg --import nppGpgPub.asc
-	gpg --verify npp.8.1.9.3.Installer.x64.exe.sig
-	gpg --verify npp.8.1.9.3.checksums.sha256.sig
-	dos2unix npp.8.1.9.3.checksums.sha256
-	sha256sum -c --ignore-missing npp.8.1.9.3.checksums.sha256
+	gpg --verify npp.8.2.Installer.x64.exe.sig
+	gpg --verify npp.8.2.checksums.sha256.sig
+	dos2unix npp.8.2.checksums.sha256
+	sha256sum -c --ignore-missing npp.8.2.checksums.sha256
 Append to PATH environment variable
 C:\Program Files\Notepad++
 
@@ -24,3 +24,7 @@ Return to previous editing buffer
 CTRL+TAB does that, if it's enabled and configured to do so in the
 settings (Settings -> Misc -> Document Switcher;
 check "Enable" and "Enable MRU behaviour").
+
+Setting up Notepad ++ for Python
+https://www.youtube.com/watch?v=IKZ13my48Co
+

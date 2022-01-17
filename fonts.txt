@@ -41,3 +41,7 @@ https://forum.manjaro.org/t/remmina-no-characters-only-rectangles/5465
 
 https://www.youtube.com/watch?v=rLZk7cWbycI
 Font Management On Linux
+
+Windows 10: How to Install Fonts on Your PC
+https://www.youtube.com/watch?v=LfS2_PcSlsw
+Open Font Settings

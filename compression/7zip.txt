@@ -1,9 +1,14 @@
 7-Zip
-https://www.7-zip.org/
+https://www.7-zip.org
+https://sourceforge.net/p/sevenzip/discussion/45797/thread/0a7b47970b/
+Linux
+https://news.ycombinator.com/item?id=26426816
+https://sourceforge.net/p/sevenzip/discussion/45797/thread/7fe6c21efa/
+	wget https://www.7-zip.org/a/7z2107-linux-x64.tar.xz
+	tar xfv 7z2107-linux-x64.tar.xz
+p7zip
+https://github.com/jinfeihan57/p7zip
 	apt install p7zip
-Binary
-	wget https://www.7-zip.org/a/7z2106-linux-x64.tar.xz
-	tar xfv 7z2106-linux-x64.tar.xz
 Windows
 	winget install 7zip.7zip
 Installer

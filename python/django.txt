@@ -1,9 +1,12 @@
+Gitignore
+https://gist.github.com/jisungs/e14615a0c52b2f81ad88fb6b332b6ba7
+
 Django 3.2
 https://news.ycombinator.com/item?id=26710013
 https://news.ycombinator.com/item?id=12093182
 https://www.djangoproject.com/download/#supported-versions
 https://groups.google.com/forum/#!forum/django-users
-	sudo -H pip install 'django==3.2.*'
+	sudo -H pip install -U django
 Create virtual environment
 https://www.digitalocean.com/community/tutorials/how-to-install-the-django-web-framework-on-ubuntu-18-04
 	sudo -H pip3 install venv
@@ -24,6 +27,7 @@ Start a project
 	django-admin startproject mysite . # use current directory
 Migrate the database (sqlite is default)
 	python manage.py migrate
+	python manage.py startapp mysite
 Create administrative user for Django admin interface
 https://www.digitalocean.com/community/tutorials/how-to-enable-and-connect-the-django-admin-interface
 	python manage.py createsuperuser
@@ -32,17 +36,25 @@ To successfully test your application, you will need to modify one of the direct
 ALLOWED_HOSTS
 This defines a whitelist of addresses or domain names that may be used to connect to the Django instance.
 
+Add a model and migrate
+	python manage.py makemigrations mysite
+
 Deployment guidelines
 https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 Run dev server
 	python manage.py runserver
+	python manage.py runserver 8001
 	python manage.py runserver 192.168.0.10:8000
 
-	
 To access the admin interface, add /admin/ to the end of your URL:
 http://your_server_ip:8000/admin/
 
+Start interactive shell
+	python manage.py shell
+
+Create a view function
+	
 
 Database support
 https://docs.djangoproject.com/en/2.1/topics/install/#database-installation

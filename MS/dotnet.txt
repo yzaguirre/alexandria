@@ -40,6 +40,9 @@ in the previous command with dotnet-runtime-6.0:
 
 Installation at /usr/share/dotnet/
 
+Termux
+https://www.reddit.com/r/termux/comments/r9jsvv/anyone_managed_to_use_dotnet_sdk_6_on_debian_10/
+
 Write this in ~/.profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
 Start a new project
@@ -112,6 +115,10 @@ Create a exe
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build
 https://blog.jongallant.com/2017/09/dotnet-core-console-app-create-exe-instead-of-dll/
 	dotnet build
+	dotnet build /pp > out.txt
+	dotnet build /clp:PerformanceSummary
+Binary log
+	dotnet build /bl
 Pass a runtime
 	dotnet build -r win10-x64
 Get your Exe at bin\Debug\netcoreapp3.0\win10-x64\myApp.exe
@@ -134,7 +141,9 @@ https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
 
 https://www.youtube.com/watch?v=18-NocobSQk
 https://www.thewindowsclub.com/api-ms-win-crt-runtime-l1-1-0-dll-is-missing
-Install the Microsoft Visual C++ 2015 Redistributable 
+Install the Microsoft Visual C++ 2015 Redistributable
+	winget install Microsoft.VC++2015-2019Redist-x64
+	winget install Microsoft.VC++2015-2019Redist-x86
 
 Make installer
 https://wixtoolset.org/

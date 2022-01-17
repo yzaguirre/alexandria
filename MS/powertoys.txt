@@ -2,3 +2,6 @@ https://docs.microsoft.com/en-us/windows/powertoys/
 https://github.com/microsoft/PowerToys
 https://www.howtogeek.com/665780/all-microsofts-powertoys-for-windows-10-explained/
 	winget install Microsoft.PowerToys
+
+Porque instalar PowerToys en WINDOWS 10
+https://www.youtube.com/watch?v=yRGBorpYSgw
