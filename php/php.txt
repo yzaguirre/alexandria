@@ -1,3 +1,8 @@
+PHP in 2022
+https://www.youtube.com/watch?v=W3p8BGeiTwQ
+https://stitcher.io/blog/php-in-2022
+https://news.ycombinator.com/item?id=29889705
+
 PHP in 2019
 https://www.php.net/archive/2019.php#2019-11-28-1
 https://stitcher.io/blog/php-in-2019
@@ -33,6 +38,12 @@ Installing PHP for IIS is very straightforward. We just need to download the lat
 installer from http://windows.php.net/download/ and run it. At the time of
 writing this book, PHP 5.3 VC9 x86 was the latest installer available. Select the IIS
 FastCGI radio button when prompted, and install keeping the rest as default.
+
+Windows
+Xampp
+	winget install ApacheFriends.Xampp
+Installed at C:\xampp
+Add C:\xampp\php\windowsXamppPhp to PATH
 
 Install PHP on OpenSuse
 http://www.howtoforge.com/installing-apache2-with-php5-and-mysql-support-onopensuse-12.3-lamp

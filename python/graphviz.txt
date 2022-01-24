@@ -1,0 +1,3 @@
+https://graphviz.readthedocs.io/en/stable/
+https://pypi.org/project/graphviz/
+	sudo -H pip install -U graphviz

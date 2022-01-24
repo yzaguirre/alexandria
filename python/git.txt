@@ -1,0 +1,3 @@
+https://pypi.org/project/GitPython/
+https://digitalvarys.com/git-operations-with-python-scripting/
+	sudo -H pip install -U GitPython

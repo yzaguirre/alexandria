@@ -62,3 +62,7 @@ https://github.com/gulsher7/SnapChat-Clone-React-native/blob/main/src/utils/help
 #8 React Native Tracking:- Calculate distance & time b/w coordinates || Google map || Gulsher Khan
 https://www.youtube.com/watch?v=ZaDEFSvgU7g
 https://github.com/gulsher7/SMOOTH_TRACKING
+
+https://www.reddit.com/r/reactnative/comments/s8dqel/google_maps_related_icons_emerge_on_selecting_the/
+Get rid of them by setting:
+<MapView toolbarEnabled={false} />

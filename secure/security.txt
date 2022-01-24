@@ -221,3 +221,8 @@ ffmpeg
 https://twitter.com/videolan/status/1469736986126733313
 iMessage
 https://twitter.com/laparisa/status/1471201396951109635
+
+Add-on TPM which can auto-decrypt the disk if it detects
+that the Raspberry Pi and SD card it is connected to have not changed
+https://www.zymbit.com/zymkey/
+https://news.ycombinator.com/item?id=29966539

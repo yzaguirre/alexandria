@@ -9,3 +9,19 @@ Use ISO dates
 
 	document.getElementById("datefilter").setAttribute("min", startOfYear.toISOString().split('T')[0]);
 	document.getElementById("datefilter").setAttribute("max", endOfYear.toISOString().split('T')[0]);
+
+https://stackoverflow.com/questions/30891880/set-date-in-bootstrap-datetimepicker-input
+var $ele = $("#datetimepicker2");
+var date = new Date(1434544649384);
+var datePickerObject = $ele.data("DateTimePicker");
+
+if (typeof datePickerObject !== "undefined") {
+  // it's already been Initialize . Just update the date.
+  datePickerObject.date(date);
+}
+else {
+  // it hasn't been initialized yet. Initialize it with the date.
+  $ele.datetimepicker({
+    date: date
+  });
+}

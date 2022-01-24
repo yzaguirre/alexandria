@@ -1,3 +1,7 @@
+The curious case of the Raspberry Pi in the network closet (2019)
+https://blog.haschek.at/2019/the-curious-case-of-the-RasPi-in-our-network.html
+https://news.ycombinator.com/item?id=29965110
+
 Building a 4-node Raspberry Pi Cluster
 https://www.youtube.com/watch?v=H2rTecSO0gk
 

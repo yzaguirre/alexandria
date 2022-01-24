@@ -4,3 +4,6 @@ How to Use tr, sed, and aspell - Linux Terminal 201 - HakTip 170-F7Brrn-L1Zg.mp4
 	cat moon.txt
 fighting evil by moonlight winning lpve by dsylight
 	aspell check moon.txt
+
+Spell check a file containing HTML syntax
+	aspell -H check foo.txt

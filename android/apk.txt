@@ -23,3 +23,9 @@ https://www.youtube.com/watch?v=9QxQmDx1wms
 
 Read fingerprint off an APK
 	unzip -p fairemail.apk META-INF/CERT.RSA | keytool -printcert
+
+A tool for reverse engineering Android apk files
+https://ibotpeaches.github.io/Apktool/
+https://github.com/iBotPeaches/Apktool
+https://news.ycombinator.com/item?id=29962356
+	apktool d test.apk

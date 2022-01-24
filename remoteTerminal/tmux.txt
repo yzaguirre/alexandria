@@ -169,6 +169,10 @@ Sends the buffer to a pipe
 Easiest way to copy text in Tmux | Oh My Tmux
 https://www.youtube.com/watch?v=bubTu4ovhmc
 
+https://news.ycombinator.com/item?id=30051764
+	tmux show-buffer | xsel -b
+	tmux show-buffer | pbcopy
+
 Swap panels
 https://superuser.com/questions/879190/how-does-one-swap-two-panes-in-tmux
 CTRL+B {

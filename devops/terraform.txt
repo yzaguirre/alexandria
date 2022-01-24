@@ -12,3 +12,6 @@ https://news.ycombinator.com/item?id=27433863
 Providers
 https://www.terraform.io/docs/providers/index.html
 Digital Ocean provider
+
+Cheatsheet
+https://acloudguru.com/blog/engineering/the-ultimate-terraform-cheatsheet

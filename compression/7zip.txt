@@ -22,4 +22,3 @@ Include only files with txt extension. It starts with current directory.
 	7z a -tzip -i"!*.txt" file.zip additional_dirs/
 Extract file
 	7z x file.zip -o outputdir/
-

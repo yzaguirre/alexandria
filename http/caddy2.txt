@@ -13,6 +13,9 @@ Install
 	dpkg -i caddy_2.4.6_linux_amd64.deb
 	systemctl disable caddy
 	systemctl stop caddy
+Raspberry Pi
+	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_armv6.deb
+	dpkg -i caddy_2.4.6_linux_armv6.deb
 Logs
 	journalctl --no-pager -u caddy
 Configuration at /etc/caddy/Caddyfile

@@ -6,6 +6,10 @@ https://news.ycombinator.com/item?id=19826169
 https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906
 https://news.ycombinator.com/item?id=16420142
 
+Termux
+https://github.com/zeromq/pyzmq/issues/1469
+	apt install libzmq
+
 https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
 	sudo -H pip install -U jupyterlab

@@ -1,0 +1,4 @@
+💡🚀🍿 Play eye-catching math visualization on the web using SVG.
+https://github.com/imaphatduc/cubecubed
+https://imaphatduc.github.io/cubecubed/#/quickstart
+https://www.reddit.com/r/programming/comments/s5cad8/cubecubed_can_now_dynamically_write_latex_string/

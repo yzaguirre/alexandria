@@ -1,6 +1,10 @@
 http://jquery.com/
 http://jqueryui.com/
 
+Replacing jQuery (110kb) With UmbrellaJS (8kb)
+https://www.bennadel.com/blog/4184-replacing-jquery-110kb-with-umbrella-js-8kb.htm
+https://news.ycombinator.com/item?id=29965851
+
 download latest jquery minimal
 	wget http://code.jquery.com/jquery-2.1.1.min.js -O jquery.min.js
 Bower install
