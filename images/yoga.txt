@@ -19,7 +19,7 @@ https://www.reddit.com/r/linux/comments/nyedh4/optimize_your_images_with_yoga_im
 Using Guetzli
 https://ai.googleblog.com/2017/03/announcing-guetzli-new-open-source-jpeg.html
 
-Alternatives
+Alternatives. See ~/images/optipng.txt
 	optipng -o7
 	optipng -o9 -f0-5 -zm1-9 -zc1-9 -zs0-3 -zw256
 

@@ -9,5 +9,10 @@ VisiData supports tsv, csv, sqlite, json, xlsx (Excel), hdf5, and many other for
 https://www.visidata.org/docs/formats/
 
 	vd input.csv
+Windows
+	python -m visidata "visidata.main.vd_cli()"
 To JSON
 	vd input.csv -b -o output.json
+
+View sheet names
+	vd file.xlsx -b -o sheets.csv

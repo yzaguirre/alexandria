@@ -21,3 +21,22 @@ Simple and efficient screen recording utility for Windows
 https://github.com/mmozeiko/wcap
 https://news.ycombinator.com/item?id=28596413
 	curl -o wcap.exe https://raw.githubusercontent.com/wiki/mmozeiko/wcap/wcap.exe
+
+Greenshot
+https://getgreenshot.org
+https://github.com/greenshot/greenshot
+	winget install Greenshot.Greenshot
+Configuration at
+C:\Users\%USERNAME%\AppData\Roaming\Greenshot\
+Add to Path
+C:\Program Files\Greenshot\
+	Greenshot.exe /help
+Logging at
+C:\Users\%USERNAME%\AppData\Local\Greenshot\Greenshot.log
+Turn off logging
+	notepad++ "C:\Program Files\Greenshot\log4net.xml"
+<level value="OFF"/>
+See ~/images/optipng.txt
+https://getgreenshot.org/faq/is-there-any-way-to-optmize-the-png-files/
+OptimizePNGCommand=optipng.exe
+OptimizePNGCommandArguments="{0}"

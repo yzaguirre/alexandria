@@ -1,0 +1,5 @@
+https://www.righto.com/2022/01/silicon-die-teardown-look-inside-early.html
+https://news.ycombinator.com/item?id=30060603
+
+A Working Replica of the classic 555 timer made using discrete components
+https://hackaday.io/project/182863-giant-555-timer

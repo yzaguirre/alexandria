@@ -20,6 +20,8 @@ Uncompress
 	tar xf LibreOffice_7.2.5_Linux_x86-64_deb_helppack_es.tar.gz
 Windows
 	winget install TheDocumentFoundation.LibreOffice
+Add to PATH
+C:\Program Files\LibreOffice\program
 Chocolately
 	choco install libreoffice-fresh
 

@@ -262,3 +262,8 @@ https://twitter.com/driscollis/status/1478109446954004487
 
 List comprehension:
 	[3 * x for x in range(5)]
+
+Iterate dictionary
+https://realpython.com/iterate-through-dictionary-python/
+for key, value in a_dict.items():
+	print(key, '->', value)

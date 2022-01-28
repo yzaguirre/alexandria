@@ -248,3 +248,11 @@ case $1 in
 [0-9]*) echo only numbers ;;
 *) echo anything else;;
 esac
+
+Iterate over CSV
+https://www.baeldung.com/linux/csv-parsing
+#!/bin/bash
+while read line
+do
+   echo "Record is : $line"
+done < <(tail -n +2 input.csv)

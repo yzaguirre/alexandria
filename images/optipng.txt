@@ -1,0 +1,7 @@
+http://optipng.sourceforge.net
+	choco install optipng
+Manual
+	wget http://optipng.sourceforge.net/optipng-0.7.7.man.pdf
+Usage
+	optipng -o7
+	optipng -o9 -f0-5 -zm1-9 -zc1-9 -zs0-3 -zw256

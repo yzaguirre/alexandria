@@ -2,9 +2,13 @@ http://dag.wiee.rs/home-made/unoconv/
 https://github.com/dagwieers/unoconv
 https://api.libreoffice.org/
 https://wiki.openoffice.org/wiki/API/Tutorials/PDF_export
+See ./unoserver.txt
 	apt install unoconv
 Homebrew
 	brew install unoconv
+Pypi
+https://pypi.org/project/unoconv/
+	sudo -H pip install -U unoconv
 Usage
 https://linuxconfig.org/how-to-convert-documents-between-libreoffice-and-microsoft-office-file-formats-on-linux
 	unoconv --show

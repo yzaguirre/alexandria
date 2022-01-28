@@ -1,26 +1,45 @@
 Powerful yet simple to use screenshot software.
-https://flameshot.org/
-https://flameshot.org/advanced/command-line-options/
+https://flameshot.org
+Flameshot v11.0.0
+https://github.com/flameshot-org/flameshot/releases/tag/v11.0.0
+https://news.ycombinator.com/item?id=30071766
+Install
 	apt install flameshot
 DEB installer
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.10.0/flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.10.0/flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb.sha256sum
-	sha256sum -c --ignore-missing flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb.sha256sum
-	dpkg -i flameshot-0.10.0.rc1-1.ubuntu-20.04.amd64.deb
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/flameshot-11.0.0-1.ubuntu-20.04.amd64.deb
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/flameshot-11.0.0-1.ubuntu-20.04.amd64.deb.sha256sum
+	sha256sum -c --ignore-missing flameshot-11.0.0-1.ubuntu-20.04.amd64.deb.sha256sum
+	dpkg -i flameshot-11.0.0-1.ubuntu-20.04.amd64.deb
 AppImage
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/Flameshot-0.9.0.x86_64.AppImage.sha256sum
-	sha256sum -c --ignore-missing Flameshot-0.9.0.x86_64.AppImage.sha256sum
-	chmod u+x Flameshot-0.9.0.x86_64.AppImage
-	mv Flameshot-0.9.0.x86_64.AppImage ~/appimage/
-	ln -s ~/appimage/Flameshot-0.9.0.x86_64.AppImage /usr/local/bin/flameshot
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/Flameshot-11.0.0.x86_64.AppImage
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/Flameshot-11.0.0.x86_64.AppImage.sha256sum
+	sha256sum -c --ignore-missing Flameshot-11.0.0.x86_64.AppImage.sha256sum
+	chmod u+x Flameshot-11.0.0.x86_64.AppImage
+	mv Flameshot-11.0.0.x86_64.AppImage ~/appimage/
+	ln -s ~/appimage/Flameshot-11.0.0.x86_64.AppImage.sha256sum /usr/local/bin/flameshot
 MacOS
 	brew install flameshot
 Manual install
-	wget https://github.com/flameshot-org/flameshot/releases/download/v0.9.0/flameshot.dmg
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/flameshot.dmg
+	wget https://github.com/flameshot-org/flameshot/releases/download/v11.0.0/Flameshot-11.0.0.x86_64.AppImage.sha256sum
+	shasum -a 256 flameshot.dmg
 	open flameshot.dmg
+Windows
+	winget install Flameshot.Flameshot
+Install directory: C:\Program Files\Flameshot\bin
+
+Configuration at
+~/.config/flameshot/flameshot.ini
+C:\Users\dyzag\AppData\Roaming\flameshot\flameshot.ini
+	flameshot config
+
+https://flameshot.org/docs/advanced/commandline-options/
 Capture with GUI with custom save path:
 	flameshot gui -p ~/myStuff/captures
+Fullscreen capture with custom save path (no GUI) and delayed:
+	flameshot full --path ~/myStuff/captures --delay 5000
+Fullscreen capture with custom save path copying to clipboard:
+	flameshot full --clipboard --path ~/myStuff/captures
 
 Disable Imgur upload
 https://github.com/flameshot-org/flameshot/issues/1529

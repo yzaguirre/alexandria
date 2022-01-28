@@ -2,3 +2,6 @@ https://momentjs.com/docs/
 https://aboutreact.com/react-native-get-current-date-time/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 	yarn add moment
+https://momentjs.com/docs/#/parsing/
+let dte = moment("12/25/1995", "MM-DD-YYYY");
+let valid = dte.isValid();

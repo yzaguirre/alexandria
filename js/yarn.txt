@@ -8,3 +8,6 @@ Debian/Ubuntu
 	yarn --version
 Windows
 	winget install Yarn.Yarn
+
+Yarn Package Manager Crash Course
+https://www.youtube.com/watch?v=g9_6KmiBISk

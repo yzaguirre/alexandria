@@ -1,6 +1,30 @@
+csvtk
+A cross-platform, efficient and practical CSV/TSV toolkit in Golang
+https://bioinf.shenwei.me/csvtk/
+https://github.com/shenwei356/csvtk
+MacOS
+	brew install csvtk
+Windows
+	choco install csvtk
+For windows, just copy csvtk.exe to C:\WINDOWS\system32.
+	cp csvtk.exe %HOME%\bin
+Bash
+# generate completion shell
+	csvtk genautocomplete --shell bash
+# configure if never did.
+# install bash-completion if the "complete" command is not found.
+	echo "for bcfile in ~/.bash_completion.d/* ; do source \$bcfile; done" >> ~/.bash_completion
+	echo "source ~/.bash_completion" >> ~/.bashrc
+Usage
+	cat testdata/digitals2.csv \
+    | csvtk summary --fields f4:sum,f5:sum --groups f1,f2 \
+    | csvtk pretty
+View sheets from an excel file
+	csvtk xlsx2csv -a output.xlsx
+
 csvkit
 https://csvkit.readthedocs.io/en/latest/
-	sudo -H pip3 install csvkit
+	sudo -H pip install -U csvkit
 Convert Excel to CSV:
 	in2csv data.xls > data.csv
 All sheets
@@ -22,7 +46,7 @@ Query with SQL:
 
 xlsx2csv
 https://github.com/dilshod/xlsx2csv
-	sudo -H pip3 install xlsx2csv
+	sudo -H pip install -U xlsx2csv
 Convert excel to csv
 	xlsx2csv "data.xlsx" > "data.csv"
 	xlsx2csv -q all "data.xlsx" > "data.csv"
@@ -34,7 +58,8 @@ http://csvtosql.sourceforge.net/
 
 xsv
 https://github.com/BurntSushi/xsv
-	scoop install xsv
+	choco install xsv
+or	scoop install xsv
 
 http://thomasburette.com/blog/2014/05/25/so-you-want-to-write-your-own-CSV-code/
 https://news.ycombinator.com/item?id=23190517
@@ -45,12 +70,17 @@ https://packagecontrol.io/packages/rainbow_csv
 q - Run SQL directly on CSV or TSV files
 https://github.com/harelba/q
 http://harelba.github.io/q/
-	wget https://github.com/harelba/q/releases/download/2.0.19/q-text-as-data_2.0.19-2_amd64.deb
-	dpkg -i q-text-as-data_2.0.19-2_amd64.deb
+	wget https://github.com/harelba/q/releases/download/v3.1.6/q-text-as-data-3.1.6-1.x86_64.deb
+	dpkg -i q-text-as-data-3.1.6-1_amd64.deb
 MacOS
 	brew install q
+Windows
+	wget https://github.com/harelba/q/releases/download/v3.1.6/q-text-as-data-3.1.6.msi
+	explorer q-text-as-data-3.1.6.msi
+Installed at C:\Program Files\q-text-as-data\
 Usage
 	q <flags> "<query>"
+	q "SELECT COUNT(*) FROM ./clicks_file.csv WHERE c3 > 32.3"
 
 sqhead
 https://news.ycombinator.com/item?id=27485672
@@ -68,6 +98,28 @@ https://news.ycombinator.com/item?id=28670252
 	dpkg -i tidy-viewer_0.0.21_amd64.deb
 	echo "alias tv='tidy-viewer'" >> ~/.bash_alias
 Windows
-	wget https://github.com/alexhallam/tv/releases/download/0.0.21/tidy-viewer--x86_64-pc-windows-msvc.zip
+	wget https://github.com/alexhallam/tv/releases/download/1.4.3/tidy-viewer--x86_64-pc-windows-msvc.zip
 	unzip tidy-viewer--x86_64-pc-windows-msvc.zip
 	mv tidy-viewer--x86_64-pc-windows-msvc/tidy-viewer.exe %HOME%/bin/tv.exe
+
+Miller
+https://github.com/johnkerl/miller
+https://miller.readthedocs.io/en/latest/
+https://miller.readthedocs.io/en/latest/miller-on-windows/
+Windows
+	choco install miller
+Usage
+	mlr --csv sort -f name input.csv
+
+tsv-utils
+https://ebay.github.io/tsv-utils/
+https://github.com/eBay/tsv-utils
+eBay's TSV Utilities: Command line tools for large, tabular data files.
+Filtering, statistics, sampling, joins and more.
+
+SPyQL - SQL with Python in the middle
+	sudo -H pip install -U spyql
+https://github.com/dcmoura/spyql
+https://news.ycombinator.com/item?id=30074787
+	spyql "SELECT 'Hello world' as Message TO pretty"
+	spyql "SELECT 'Hello world' as message, 1+2 as three TO json"

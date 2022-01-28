@@ -1,3 +1,11 @@
 https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
 robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 	robocopy files/ E: /e
+
+https://www.christitus.com/robocopy
+How to copy large amounts of files in Windows
+https://www.youtube.com/watch?v=0q3rGK_IMZg
+Using 16 threads (logical processors)
+	robocopy "\\192.168.0.5\files" "D:\Folder" /e /r:0 /w:0 /COPY:DAT /DCOPY:DAT /mt:16
+Append to log. The + appends to the log file
+	robocopy "\\192.168.0.5\files" "D:\Folder" /e /r:0 /w:0 /COPY:DAT /DCOPY:DAT /mt:16 /LOG+:C:\robocopy.log

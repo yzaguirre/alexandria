@@ -1,8 +1,30 @@
 https://pandas.pydata.org
-	sudo -H pip install pandas pandas-datareader
+https://www.w3resource.com/pandas/index.php
+	sudo -H pip install -U pandas pandas-datareader
 See ~/Libros/Quick Reference Guide/Pandas_Cheat_Sheet.pdf
 
 https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?highlight=read_csv#pandas.read_csv
 
 Termux
 	apt install libxslt
+
+https://www.w3resource.com/pandas/series/series-str-contains.php
+s1.str.contains('oX', case=True, regex=True)
+
+https://blog.softhints.com/how-to-use-like-operator-in-pandas-dataframe/
+
+Iterate a dictionary
+https://pythonbasics.org/pandas-iterate-dataframe/
+for index, row in df.iterrows():
+    print(type(index))
+    print(index)
+
+https://stackoverflow.com/questions/53297261/iteration-over-the-rows-of-a-pandas-dataframe-as-dictionaries
+
+Ultimate Guide to Pandas! Tricks, Shortcuts, Must Know Commands! Python for Beginners
+https://www.youtube.com/watch?v=zN2Hua6oII0
+
+Pandas Line Graph
+https://www.youtube.com/watch?v=P4F3PzCMrtk
+
+https://codeburst.io/plotting-with-pandas-dates-and-bar-plots-227f25351274

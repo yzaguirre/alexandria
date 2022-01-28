@@ -1,12 +1,14 @@
 A lightweight, versatile image viewer
 https://imageglass.org
 https://github.com/d2phap/ImageGlass
-	winget install ImageGlass
+	winget install DuongDieuPhap.ImageGlass
 Installer
-	wget https://github.com/d2phap/ImageGlass/releases/download/8.2.6.6/ImageGlass_8.2.6.6_x64.msi
-	sha1sum ImageGlass_8.2.6.6_x64.msi
-15fed676bce43befe21bcb8141409a356a87f1da
-	explorer ImageGlass_8.2.6.6_x64.msi
+	wget https://github.com/d2phap/ImageGlass/releases/download/8.5.1.22/ImageGlass_8.5.1.22_x64.msi
+	sha1sum ImageGlass_8.5.1.22_x64.msi
+988efe9ec3db11f769240fe7b118b08ee859e973
+	explorer ImageGlass_8.5.1.22_x64.msi
+Add to PATH
+C:\Program Files\ImageGlass
 Scoop
 	scoop bucket add extras
 	scoop install imageglass

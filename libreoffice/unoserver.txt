@@ -1,0 +1,11 @@
+https://github.com/unoconv/unoserver
+	sudo -H pip install -U unoserver
+Install on windows libreoffice using pip
+	wget https://bootstrap.pypa.io/get-pip.py
+	& 'C:\Program Files\LibreOffice\program\python.exe' get-pip.py
+	& 'C:\Program Files\LibreOffice\program\python.exe' -m pip install -U unoserver
+Using directory
+C:\Program Files\LibreOffice\program\python-core-3.8.10\Scripts
+Check in CMD
+	"C:\Program Files\LibreOffice\program\python.exe" -m unoserver.server --daemon --executable "C:\Program Files\LibreOffice\program\soffice.exe"
+	"C:\Program Files\LibreOffice\program\python.exe" -m unoserver.converter

@@ -7,6 +7,9 @@ https://akrabat.com/a-few-git-tips/
 https://mikkel.ca/blog/git-is-my-buddy-effective-solo-developer/
 https://news.ycombinator.com/item?id=26239068
 
+https://github.blog/2022-01-24-highlights-from-git-2-35/
+https://news.ycombinator.com/item?id=30068776
+
 https://github.blog/2020-07-27-highlights-from-git-2-28/
 https://news.ycombinator.com/item?id=23966948
 
@@ -154,7 +157,11 @@ Colorize the output always
 https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
 https://unix.stackexchange.com/questions/44266/how-to-colorize-output-of-git
 	git -c color.status=always status
- 
+
+Diff algorith
+	git diff --histogram
+	git config --global diff.algorithm "histogram"
+
 https://stackoverflow.com/questions/2389361/undo-a-git-merge
 	git reset --hard HEAD~5
 Unstage a file
@@ -307,6 +314,8 @@ Remove a stash
 	git stash drop stash@{0}
 Remove all the stash
 	git stash clear
+Stage (new in 2.35)
+	git stash --staged
 
 Identities
 https://www.micah.soy/posts/setting-up-git-identities/

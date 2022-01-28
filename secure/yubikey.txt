@@ -1,0 +1,49 @@
+Guide to Using YubiKey for GPG and SSH
+https://github.com/drduh/YubiKey-Guide
+https://news.ycombinator.com/item?id=30081348
+
+https://github.com/DataDog/yubikey
+https://news.ycombinator.com/item?id=21519077
+
+https://news.ycombinator.com/item?id=12574510
+https://www.reddit.com/r/linux/comments/4jqp8m/bad_news_twofactor_authentication_pioneer_yubikey/
+https://developers.yubico.com/PGP/
+
+Man page https://developers.yubico.com/yubico-piv-tool/Manuals/yubico-piv-tool.1.html
+https://developers.yubico.com/yubico-piv-tool/YubiKey_NEO_PIV_introduction.html
+	sudo apt-get install opensc
+	sudo apt-add-repository ppa:yubico/stable
+	sudo apt-get install yubico-piv-tool
+	sudo apt-get install yubikey-personalization
+Compile yubico-piv-tool
+x	wget https://github.com/Yubico/yubico-piv-tool/archive/yubico-piv-tool-1.0.1.tar.gz
+	wget https://developers.yubico.com/yubico-piv-tool/Releases/yubico-piv-tool-1.0.1.tar.gz
+	tar xf yubico-piv-tool-1.0.1.tar.gz
+	cd yubico-piv-tool-1.0.1
+x	autoreconf --install
+	./configure --with-backend=pcsc
+	make
+	sudo make install
+http://www.jupiterbroadcasting.com/85062/ssh-authentication-with-yubikey-las-373/
+	yubico-piv-tool -s 9a -a generate -o public.pem
+	yubico-piv-tool -a verify-pin -P 123456
+	yubico-piv-tool -a verify-pin -P 123456 -a selfsign-certificate -s 9a \
+	-S "/CN=SSH key/" -i public.pem -o cert.pem
+	yubico-piv-tool -a import-certificate -s 9a -i cert.pem
+	ssh-keygen -D $OPENSC_LIBS/opensc-pkcs11.so
+	ssh -I $OPENSC_LIBS/opensc-pkcs11.so user@remote.example.com
+Change Pin
+	yubico-piv-tool -a change-pin -P 123456 -N TheNewPinHere
+	yubico-piv-tool -a change-puk -P 12345678 -N TheNewPinHere
+Edit SSH Client to look for Yubikey 
+	vi /etc/ssh/ssh_config
+Append the line For Ubuntu 
+	PKCS11Provider /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+Get Key 
+	ssh-keygen -D /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
+For Ubuntu 32bit 
+	PKCS11Provider /usr/lib/i386-linux-gnu/opensc-pkcs11.so
+For Arch 
+	PKCS11Provider /usr/lib/opensc-pkcs11.so
+For Fedora 
+	PCKS11Provider /usr/lib64/opensc-pkcs11.so
