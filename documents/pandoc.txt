@@ -1,0 +1,23 @@
+https://github.com/jgm/pandoc
+https://pandoc.org
+Install
+	apt install latex-beamer pandoc liblua5.1-0 texlive-math-extra
+Ubuntu
+	apt install pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra texlive-latex-recommended
+Windows
+	winget install JohnMacFarlane.Pandoc
+Installed at C:\Users\dyzag\AppData\Local\Pandoc
+	scoop install pandoc latex
+pdflatex.exe at %HOME%\scoop\apps\latex\2.9.7255\texmfs\install\miktex\bin\x64
+
+https://pandoc.org/MANUAL.html
+Convert to html5
+	pandoc -f markdown -t html5 -o output.html document.md
+Conversion to pdf
+	pandoc -t beamer -o output.pdf yourInput.mkd
+https://stackoverflow.com/questions/11025123/how-to-convert-r-markdown-to-pdf
+	pandoc -s example-r-markdown.html -o example-r-markdown.pdf
+Conversion to html
+	pandoc --self-contained -t slidy -o output-slidy.html yourInput.mkd
+Conversion to Word
+	pandoc -f markdown -t docx -o output.docx document.md

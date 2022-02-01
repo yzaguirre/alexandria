@@ -1,0 +1,5 @@
+The uncompromising Python code formatter
+https://github.com/psf/black
+https://black.readthedocs.io/en/stable/change_log.html
+https://twitter.com/llanga/status/1487530230512295940
+	sudo -H pip install -U black

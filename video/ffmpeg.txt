@@ -182,3 +182,11 @@ pass1
 	ffmpeg -i input.mp4 -vf vidstabdetect -f null -
 pass2
 	ffmpeg -i input.mp4 -vf vidstabtransform=crop=black:smoothing=20,unsharp=5:5:0.8:3:3:0.4 output.mp4
+
+Rotate video
+https://shotstack.io/learn/rotate-videos-using-ffmpeg/
+	exiftool -Rotation -ImageWidth -ImageHeight h1920_w1080_f30_a9-16_r90.mp4
+Fix rotation to 0
+	ffmpeg -i h1920_w1080_f30_a9-16_r90.mp4 -c copy -metadata:s:v:0 rotate=0 temp.mp4
+Rotate
+	ffmpeg -i temp.mp4 -vf "transpose=cclock" -crf 23 -c:a copy rotated.mp4

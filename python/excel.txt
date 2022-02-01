@@ -5,3 +5,7 @@ openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
 
 Become an Excel Wizard With Python
 https://www.youtube.com/watch?v=q6Mc_sAPZ2Y
+
+How to automate Excel using Python - Online Workshop
+https://www.youtube.com/watch?v=DxPL4SwzXVw
+	sudo -H pip install -U plotly-express xlwings

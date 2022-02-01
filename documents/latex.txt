@@ -9,6 +9,15 @@ The following NEW packages will be installed:
 fonts-texgyre libapache-pom-java libcommons-logging-java libcommons-parent-java libfontbox-java libpdfbox-java preview-latex-style teckit tex-gyre
 texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-xetex tipa
 
+https://miktex.org
+https://miktex.org/howto/install-miktex
+Windows
+	winget install ChristianSchenk.MiKTeX
+Installed at C:\Users\dyzag\AppData\Local\Programs\MiKTeX
+Open console
+https://miktex.org/howto/miktex-console
+	miktex-console.exe
+
 la version actual es 2013, pero se elige trabajar con 2012
 http://miguel.leugim.com.mx/index.php/2008/05/09/latex-install-on-debian-gnulinux/
 
@@ -34,7 +43,6 @@ https://tex.stackexchange.com/questions/1725/how-do-i-generate-creative-commons-
 Packages:
 	-ccicons
 	-cclisences
-https://miktex.org/
 
 Self-rendering Markdown + LaTeX documents
 https://github.com/susam/texme
@@ -43,3 +51,28 @@ https://news.ycombinator.com/item?id=27324427
 Rustdoc résumé
 https://yozhgoor.github.io/yohan_boogaert_1995/
 https://news.ycombinator.com/item?id=28197370
+
+TeXstudio is a fully featured LaTeX editor.
+Our goal is to make writing LaTeX documents as easy
+and comfortable as possible.
+https://www.texstudio.org
+https://github.com/texstudio-org/texstudio
+Windows
+	winget install TeXstudio.TeXstudio
+Installed at C:\Program Files\texstudio
+
+LyX - The Document Processor
+https://www.lyx.org
+Windows
+	winget install LyX.LyX
+
+Kile - an Integrated LaTeX Editing Environment
+https://kile.sourceforge.io/download.php
+Windows
+	winget install KDE.kile
+
+Graphical Java application for managing BibTeX and biblatex (.bib) databases
+https://www.jabref.org
+https://github.com/JabRef/jabref
+Windows
+	winget install JabRef.JabRef

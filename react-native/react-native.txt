@@ -1,5 +1,5 @@
-https://reactnative.dev/
-https://reactnative.directory/
+https://reactnative.dev
+https://reactnative.directory
 
 Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b

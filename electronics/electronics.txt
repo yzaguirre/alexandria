@@ -15,3 +15,9 @@ https://twitter.com/Odd_Jayy/status/1430056204764471300
 
 1" HDD
 https://twitter.com/CpuGalaxy/status/1413569137167716353
+
+Yesterday I had a chat with Caleb, a 13yo (!) kid who used my
+open-source #artificialnose to build a device that can find the signs
+of fungal pneumonia in someone's breath by detecting the
+Volatile Organic Compounds that are markers for the disease. 🤯
+https://twitter.com/kartben/status/1485999765959684107

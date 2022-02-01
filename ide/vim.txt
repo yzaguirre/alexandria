@@ -218,3 +218,7 @@ https://linuxdigest.com/howto/how-to-autoindent-in-vim/
 
 Vimscript
 https://learnvimscriptthehardway.stevelosh.com/
+
+Vim Galore: everything you need to know about Vim
+https://github.com/mhinz/vim-galore
+https://news.ycombinator.com/item?id=30084913

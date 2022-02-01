@@ -267,3 +267,6 @@ Iterate dictionary
 https://realpython.com/iterate-through-dictionary-python/
 for key, value in a_dict.items():
 	print(key, '->', value)
+
+F-Strings
+https://datagy.io/python-f-strings/

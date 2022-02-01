@@ -1,0 +1,9 @@
+https://github.com/Textualize/rich-cli
+https://news.ycombinator.com/item?id=30150219
+	sudo -H pip install -U rich-cli
+Usage
+	rich loop.py
+	rich README.md -o readme.html
+	rich README.md -mo readme.html --theme 
+Themes
+	https://pygments.org/styles/

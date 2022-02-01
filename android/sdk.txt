@@ -31,6 +31,8 @@ Android Studio
 	sha256sum android-studio-ide-202.7322048-linux.tar.gz
 9f3132d181bfe4d46aca667fddf2557f3c428b6c6c726e0ac5be9f5d91fb21c6
 	tar xf android-studio-ide-202.7322048-linux.tar.gz -C /opt
+Windows
+	winget install Google.AndroidStudio
 Env variables
 https://developer.android.com/studio/command-line/variables
 https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-environment-variable
@@ -45,9 +47,12 @@ Windows locations
 Locations
 %LOCALAPPDATA%\Android\Sdk
 %LOCALAPPDATA%\Android\Sdk\platform-tools
+%LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest\bin
+C:\Program Files\Android\Android Studio\jre\bin
 
 https://developer.android.com/studio/command-line/sdkmanager
 	sdkmanager --list
+	sdkmanager.bat --list
 
 Platforms
 https://en.wikipedia.org/wiki/Android_(operating_system)#Platform_usage
@@ -55,15 +60,15 @@ https://en.wikipedia.org/wiki/Android_version_history#Overview
 	sdkmanager "platforms;android-30"
 	sdkmanager "platforms;android-29"
 	sdkmanager --install "platform-tools" "platforms;android-23" "platforms;android-24" "platforms;android-25" "platforms;android-26" "platforms;android-27" "platforms;android-28"
-	sdkmanager --install "platform-tools" "platforms;android-19" "platforms;android-21" "platforms;android-26" "platforms;android-27" "platforms;android-28"
+	sdkmanager --install "platform-tools" "platforms;android-19" "platforms;android-21" "platforms;android-26" "platforms;android-27" "platforms;android-28" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32"
 	sdkmanager "cmdline-tools;latest"
 Build tools
 https://developer.android.com/studio/releases/build-tools
-	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2" "build-tools;30.0.3"
+	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2" "build-tools;30.0.3" "build-tools;31.0.0" "build-tools;32.0.0"
 Print tools versions
 	cat cmdline-tools/latest/source.properties cmdline-tools/tools/source.properties tools/source.properties
 More stuff
-	sdkmanager --install "add-ons;addon-google_apis-google-19"
+	sdkmanager --install "add-ons;addon-google_apis-google-19" "add-ons;addon-google_apis-google-24"
 In case java isn't working
 https://stackoverflow.com/questions/47150410/failed-to-run-sdkmanager-list-with-java-9
 https://www.dev2qa.com/how-to-fix-java-lang-noclassdeffounderror-javax-xml-bind-annotation-xmlschema-when-install-android-sdk/
