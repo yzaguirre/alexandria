@@ -1,0 +1,12 @@
+An interactive web UI for gRPC, along the lines of postman
+https://github.com/fullstorydev/grpcui
+	wget https://github.com/fullstorydev/grpcui/releases/download/v1.2.0/grpcui_1.2.0_linux_x86_64.tar.gz
+	wget https://github.com/fullstorydev/grpcui/releases/download/v1.2.0/grpcui_1.2.0_checksums.txt
+	sha256sum -c --ignore-missing grpcui_1.2.0_checksums.txt
+	tar xf grpcui_1.2.0_linux_x86_64.tar.gz -C /usr/local/bin grpcui
+Windows
+	wget https://github.com/fullstorydev/grpcui/releases/download/v1.2.0/grpcui_1.2.0_windows_x86_64.zip
+	unzip grpcui_1.2.0_windows_x86_64.zip grpcui.exe -d ~/bin
+Usage
+	grpcui -plaintext localhost:12345
+	grpcui -help

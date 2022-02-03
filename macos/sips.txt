@@ -1,0 +1,4 @@
+Resize all jpegs to medium, maintaining aspect ratio
+	sips -Z 640 *jpg
+Resize to small
+	sips -Z 300 *jpg --out ~/Desktop/Small/

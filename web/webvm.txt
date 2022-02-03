@@ -1,0 +1,5 @@
+WebVM is a server-less virtual Linux environment running fully
+client-side in HTML5/WebAssembly.
+https://webvm.io
+https://leaningtech.com/webvm-server-less-x86-virtual-machines-in-the-browser/
+https://twitter.com/simonw/status/1488691998307622915

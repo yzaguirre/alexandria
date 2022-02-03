@@ -1,0 +1,27 @@
+https://libspatialindex.org
+https://github.com/libspatialindex/libspatialindex
+Windows
+	wget http://download.osgeo.org/libspatialindex/libspatialindex-1.8.0-win-msvc-2010-x64-x32.zip
+	wget http://download.osgeo.org/libspatialindex/libspatialindex-1.8.0-win-msvc-2010-x64-x32.zip.md5
+	md5sum -c --ignore-missing libspatialindex-1.8.0-win-msvc-2010-x64-x32.zip.md5
+	unzip libspatialindex-1.8.0-win-msvc-2010-x64-x32.zip
+	cd libspatialindex-1.8.0-win-msvc-2010-x64-x32
+Locate the dll with fdfind
+	fd -edll | clip.exe
+Copy dll to C:\Windows\System32
+https://lifehacker.com/install-a-dll-file-in-windows-269063
+	copy .\x64\spatialindex-64.dll C:\Windows\System32
+	copy .\x64\spatialindex_c-64.dll C:\Windows\System32
+	copy .\x32\spatialindex-32.dll C:\Windows\SysWOW64
+	copy .\x32\spatialindex_c-32.dll C:\Windows\SysWOW64
+	regsvr32 spatialindex-32.dll
+	regsvr32 spatialindex_c-32.dll
+
+Using Rtree python package
+https://www.youtube.com/watch?v=UyYKZujquWw
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#rtree
+	pip install https://download.lfd.uci.edu/pythonlibs/x6hvwk7i/Rtree-0.9.7-pp38-pypy38_pp73-win_amd64.whl
+Or if download wheel
+	pip install -r requirements.txt
+	pip install Rtree-0.9.7-pp38-pypy38_pp73-win_amd64.whl
+	./create-dataset.sh

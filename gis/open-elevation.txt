@@ -1,0 +1,25 @@
+https://www.open-elevation.com
+https://github.com/Jorl17/open-elevation
+A free and open-source alternative to Google Elevation API. Host your own!
+
+Response schema
+{
+    "results": [
+        {
+            "latitude": 41.161758,
+            "longitude": -8.583933,
+            "elevation": 117
+        }
+    ]
+}
+
+https://github.com/Jorl17/open-elevation/blob/master/docs/host-your-own.md
+See ./libspatialindex.txt
+	apt install libspatialindex-dev unrar-free bc
+	git clone http://github.com/Jorl17/open-elevation
+	cd open-elevation
+	python -m venv venv
+	source venv/Scripts/activate
+	pip install -r requirements.txt
+World dataset
+	./create-dataset.sh

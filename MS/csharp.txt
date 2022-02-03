@@ -101,3 +101,16 @@ Initial Catalog=myDataBase;User ID=myUsername;Password=myPassword;
 
 SqlConnection cs = new SqlConnection("Data Source=WIN-PASIVO\\SQLSERVERTOPDOG; Initial Catalog=YOUTUBE; Integrated Security=TRUE; User id=david; Password=Endgame90");
 SqlConnection cs = new SqlConnection("Data Source=192.168.0.253,1433; Network Library=DBMSSOCN; Initial Catalog=YOUTUBE; User id=david; Password=Holamundo11");
+
+https://stackoverflow.com/questions/29100732/ihttpactionresult-vs-async-taskihttpactionresult
+https://stackoverflow.com/questions/16544893/how-to-do-a-http-get-request-using-async-and-await
+async Task<IHttpActionResult>
+
+HttpClient
+https://makolyte.com/csharp-get-and-send-json-with-httpclient/
+	Install-Package System.Net.Http.Json
+using System.Net.Http.Json;
+//Get JSON
+var stock = await httpClient.GetFromJsonAsync<Stock>($"https://localhost:12345/stocks/{symbol}");
+//Send JSON
+await httpClient.PostAsJsonAsync<Stock>("https://localhost:12345/stocks/", stock);

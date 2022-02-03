@@ -1,0 +1,3 @@
+https://hoppscotch.io
+👽 Open source API development ecosystem
+https://github.com/hoppscotch/hoppscotch

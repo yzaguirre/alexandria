@@ -1,4 +1,9 @@
 https://www.libreoffice.org/
+LibreOffice 7.3
+https://blog.documentfoundation.org/blog/2022/02/02/libreoffice-73-community/
+https://news.ycombinator.com/item?id=30176283
+
+Convert to pdf or png
 	libreoffice --headless --convert-to pdf 7_vidas_extra_tiene_un_juanker.odp
 	convert -density 150 7_vidas_extra_tiene_un_juanker.pdf -quality 90 output.png
 

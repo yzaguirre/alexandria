@@ -12,5 +12,5 @@ No installer
 	mv /opt/Natron-2.4.0-Linux-64-no-installer /opt/Natron
 	ln -s /opt/Natron/Natron /usr/local/bin/Natron
 	ln -s /opt/Natron/NatronRenderer /usr/local/bin/NatronRenderer
-HomeBrew
+Homebrew
 	brew install natron

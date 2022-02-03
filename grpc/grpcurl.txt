@@ -1,0 +1,10 @@
+https://github.com/fullstorydev/grpcurl
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_linux_x86_64.tar.gz
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_checksums.txt
+	sha256sum -c --ignore-missing grpcurl_1.8.5_checksums.txt
+	tar xf grpcurl_1.8.5_linux_x86_64.tar.gz -C /usr/local/bin grpcurl
+Windows
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_windows_x86_64.zip
+	unzip grpcurl_1.8.5_windows_x86_64.zip grpcurl.exe -d ~/bin
+Homebrew
+	brew install grpcurl
