@@ -35,3 +35,12 @@ Open cmd administrator
 
 Windows 10: Useful Shortcuts You'll Wish You Knew Earlier! (2021)
 https://www.youtube.com/watch?v=-yvYXTpu11Y
+
+Get user accounts
+https://pureinfotech.com/see-user-accounts-windows-10/
+Open Computer Management
+Local Users and Groups > Users
+	net user
+	wmic useraccount get name
+PS
+	Get-LocalUser
