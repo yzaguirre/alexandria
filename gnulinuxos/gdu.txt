@@ -1,0 +1,18 @@
+https://github.com/dundee/gdu
+	apt install gdu
+Binary
+	wget https://github.com/dundee/gdu/releases/download/v5.13.0/gdu_linux_amd64.tgz
+	wget https://github.com/dundee/gdu/releases/download/v5.13.0/sha256sums.txt
+	wget https://github.com/dundee/gdu/releases/download/v5.13.0/sha256sums.txt.asc
+	gpg --verify sha256sums.txt.asc
+	sha256sum -c --ignore-missing sha256sums.txt
+	tar xf gdu_linux_amd64.tgz -C /usr/local/bin
+	mv /usr/local/bin/{gdu_linux_amd64,gdu}
+Raspberry Pi 2
+	apt install gdu
+More recent
+	wget https://github.com/dundee/gdu/releases/download/v5.13.0/gdu_linux_armv6l.tgz
+	tar xf gdu_linux_armv6l.tgz -C /usr/local/bin
+	mv /usr/local/bin/{gdu_linux_armv6l,gdu}
+Windows
+	choco install gdu

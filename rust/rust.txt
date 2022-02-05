@@ -1,35 +1,35 @@
 https://www.rust-lang.org/
 https://github.com/rust-lang/rust
 https://www.rust-lang.org/downloads.html
-	wget https://static.rust-lang.org/dist/rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz
-	wget https://static.rust-lang.org/dist/rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
-	wget https://static.rust-lang.org/dist/rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz
+	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.sha256
 Verify
-	gpg2 --verify rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	sha256sum -c rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.sha256
-	sha256sum -c rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	gpg2 --verify rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc
+	sha256sum -c rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.sha256
+	sha256sum -c rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
 Install
-	tar xf rust-1.53.0-x86_64-unknown-linux-gnu.tar.gz
-	cd rust-1.53.0-x86_64-unknown-linux-gnu
+	tar xf rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz
+	cd rust-1.58.1-x86_64-unknown-linux-gnu
 	sudo ./install.sh
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
 
 Src
-	wget https://static.rust-lang.org/dist/rustc-1.53.0-src.tar.gz
-	wget https://static.rust-lang.org/dist/rustc-1.53.0-src.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rustc-1.53.0-src.tar.gz.sha256
-	wget https://static.rust-lang.org/dist/rustc-1.53.0-src.tar.gz.asc.sha256
-	gpg2 --verify rustc-1.53.0-src.tar.gz.asc
-	sha256sum -c rustc-1.53.0-src.tar.gz.sha256
-	sha256sum -c rustc-1.53.0-src.tar.gz.asc.sha256
-	tar xf rustc-1.53.0-src.tar.gz -C /usr/local/src
+	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz
+	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.asc.sha256
+	gpg2 --verify rustc-1.58.1-src.tar.gz.asc
+	sha256sum -c rustc-1.58.1-src.tar.gz.sha256
+	sha256sum -c rustc-1.58.1-src.tar.gz.asc.sha256
+	tar xf rustc-1.58.1-src.tar.gz -C /usr/local/src
 Install racer (may take a while)
 	cargo install racer
 Edit 
 	vim + ~/.profile
-export RUST_SRC_PATH=/usr/local/src/rustc-1.53.0/src
+export RUST_SRC_PATH=/usr/local/src/rustc-1.58.1/src
 PATH=$PATH:/home/david/.cargo/bin
 
 Rustup
@@ -75,6 +75,12 @@ For Vim
 https://github.com/racer-rust/vim-racer
 Online
 play.rust-lang.org
+Visual Studio Code
+	ext install rust-lang.rust
+Sublime Text
+https://github.com/rust-lang/rust-enhanced
+Vim
+https://github.com/rust-lang/rust.vim
 
 The rusti is an interactive shell or Read-Evaluate-Print-Loop (REPL)
 https://github.com/murarth/rusti

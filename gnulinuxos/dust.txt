@@ -5,7 +5,9 @@ https://github.com/bootandy/dust
 	chmod u+x dust
 	mv dust /usr/local/bin
 Windows
-	cargo install du-dust
+	choco install dust
+Homebrew
+	brew install dust
 Usage:
 	dust <dir>
 	dust <dir>  <another_dir> <and_more>

@@ -1,5 +1,23 @@
 https://www.msys2.org
 	winget install msys2.msys2
+Update
+https://www.msys2.org/wiki/MSYS2-reinstallation/
+Backup packages
+	pacman -Qqe | xargs echo > /c/packages.txt ; exit
+Rename the folder
+	move C:\msys64 C:\msys64.old
+Run the installation
+	winget install msys2.msys2
+Recover the cached packages
+	rmdir C:\msys64\var\cache\pacman\pkg
+	move C:\msys64.old\var\cache\pacman\pkg C:\msys64\var\cache\pacman\
+Update packages
+	pacman -Sy
+Update the core packages:
+	pacman --needed -S bash pacman pacman-mirrors msys2-runtime
+Re-install the old packages
+	pacman -S --needed $(cat /c/packages.txt)
+
 Uses ~/.profile
 See ~/remoteTerminal/tmux.txt and ~/scm/gitforwindows.txt
 	vim ~/.profile

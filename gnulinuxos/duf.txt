@@ -1,13 +1,18 @@
 Disk Usage/Free Utility - a better 'df' alternative
 https://github.com/muesli/duf
 https://news.ycombinator.com/item?id=24604800
-	wget https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_amd64.deb
-	wget https://github.com/muesli/duf/releases/download/v0.6.2/checksums.txt
-	wget https://github.com/muesli/duf/releases/download/v0.6.2/checksums.txt.sig
+	wget https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_linux_amd64.deb
+	wget https://github.com/muesli/duf/releases/download/v0.8.0/checksums.txt
+	wget https://github.com/muesli/duf/releases/download/v0.8.0/checksums.txt.sig
 	sha256sum -c --ignore-missing checksums.txt
 	gpg --verify checksums.txt.sig
-	dpkg -i duf_0.6.2_linux_amd64.deb
+	dpkg -i duf_0.8.0_linux_amd64.deb
 	duf
 RPI arm6
-	wget https://github.com/muesli/duf/releases/download/v0.6.2/duf_0.6.2_linux_armv6.deb
-	dpkg -i duf_0.6.2_linux_armv6.deb
+	wget https://github.com/muesli/duf/releases/download/v0.8.0/duf_0.8.0_linux_armv6.deb
+	dpkg -i duf_0.8.0_linux_armv6.deb
+Windows
+	choco install duf
+	scoop install duf
+Termux
+	apt install duf

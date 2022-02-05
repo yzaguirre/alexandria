@@ -8,3 +8,7 @@ Binary
 	explorer drawpile-2.1.20-setup.exe
 Chocolately
 	choco install drawpile
+Installed at C:\Program Files\Drawpile
+
+Convert a recording to webm
+	dprectool -f binary -o recording.webm recording.dprec

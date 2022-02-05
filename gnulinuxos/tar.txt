@@ -21,6 +21,8 @@ Suggests use xf
 	append tar files to an archive
 -r, --append
 	append files to the end of an archive
+--strip-components=NUMBER
+	Strip NUMBER leading components from file names on extraction.
 
 7z
 https://www.7-zip.org/

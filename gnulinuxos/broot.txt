@@ -4,12 +4,12 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.8.0
+	git checkout v1.9.2
 	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.8.0/broot_1.8.0.zip
-	unzip broot_1.8.0.zip
+	wget https://github.com/Canop/broot/releases/download/v1.9.2/broot_1.9.2.zip
+	unzip broot_1.9.2.zip
 	sudo mv build/x86_64-linux/broot /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s broot br
@@ -28,7 +28,8 @@ Alternative binary download
 	mv build/x86_64-pc-windows-gnu/broot.exe ~/bin
 	broot.exe --install
 	vim ~/.bashrc
-source /mnt/c/Users/dyzag/AppData/Roaming/dystroy/broot/data/launcher/bash/1
+source /c/Users/dyzag/AppData/Roaming/dystroy/broot/config/launcher/bash/br
+
 Configuration file
 %HOME%\AppData\Roaming\dystroy\broot\config\conf.hjson
 MacOS

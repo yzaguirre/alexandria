@@ -1,2 +1,22 @@
 https://chocolatey.org
 https://docs.chocolatey.org/en-us/choco/commands/
+Check on PowerShell
+	Get-ExecutionPolicy
+If it returns Restricted, run
+	Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process
+Install on PowerShell
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Update
+	choco upgrade chocolatey
+
+CHOCOLATEY GUI
+https://docs.chocolatey.org/en-us/chocolatey-gui/
+	winget install Chocolatey.ChocolateyGUI
+Or choco way
+	choco install chocolateygui
+Install at C:\Program Files (x86)\Chocolatey GUI
+Update
+	choco upgrade chocolateygui
+
+List upgradable
+	choco outdated

@@ -1,3 +1,8 @@
+An Eye on your system
+Glances is a cross-platform system monitoring tool written in Python.
 https://nicolargo.github.io/glances/
 https://github.com/nicolargo/glances
-	sudo -H pip3 install glances
+https://news.ycombinator.com/item?id=24604800
+	sudo -H pip install -U glances
+Homebrew
+	brew install glances

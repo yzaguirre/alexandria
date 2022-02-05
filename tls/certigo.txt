@@ -1,0 +1,34 @@
+A utility to examine and validate certificates in a variety of formats
+https://github.com/square/certigo
+https://www.reddit.com/r/commandline/comments/sj2522/certificate_ripper_released_tool_to_extract/
+	wget https://github.com/square/certigo/releases/download/v1.14.1/certigo-linux-amd64
+	mv certigo-linux-amd64 /usr/local/bin/certigo
+Windows
+	wget -O C:\Users\dyzag\bin\certigo.exe https://github.com/square/certigo/releases/download/v1.14.1/certigo-windows-amd64
+Homebrew
+	brew install certigo
+
+Display information about a certificate (also supports --pem and --json output):
+	certigo dump --verbose squareup-2016.crt
+Display & validate certificates from a remote server (also supports --start-tls):
+	certigo connect --verbose squareup.com:443
+
+Combine with jq
+Find certificates that have linter warnings
+	certigo dump --json $INPUT | jq '.certificates[] | select(.warnings != [])'
+Find certificates that are signed with SHA1-RSA
+	certigo dump --json $INPUT | jq '.certificates[] | select(.signature_algorithm == "SHA1-RSA")'
+List all Common Names of certificates that are expired
+	certigo dump --json $INPUT | jq -r '.certificates[] | select(.not_after < now) | .subject.common_name'
+Find (redundant) self-signed certificates in intermediate chain on remote host
+	certigo connect --json $SERVER:$PORT | jq -e '.certificates[1:][] | select(.is_self_signed) | .subject.common_name'
+Test if server is requesting that clients send certificates for authentication
+	certigo connect --json $SERVER:$PORT | jq -e '.certificate_request_info != null'
+
+Look for MySQL servers with invalid certificates
+for SERVER in $(cat servers); do
+  certigo connect -t mysql -j $SERVER:3306 | jq -e '.verify_result.error != null' >/dev/null
+  if [ $? -ne 0 ]; then
+    echo "Invalid certificates on $SERVER"
+  fi
+done

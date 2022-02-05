@@ -1,6 +1,11 @@
 https://asciinema.org/docs/installation
-	sudo -H pip3 install asciinema
-usage
+	sudo -H pip install -U asciinema
+Homebrew
+	brew install asciinema
+https://stackoverflow.com/questions/62788628/modulenotfounderror-no-module-named-fcntl
+Module fctnl not available on Windows
+
+Usage
 	asciinema rec recording.cast
 To exit recording, hit CTRL+D or type exit
 Play a recording

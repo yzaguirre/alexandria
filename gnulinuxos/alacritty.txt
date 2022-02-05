@@ -1,6 +1,19 @@
 https://github.com/alacritty/alacritty
 	apt install alacritty
 Windows
+	winget install Alacritty.Alacritty
+Scoop
 	scoop bucket add extras
 	scoop install alacritty
+Config file at
+$XDG_CONFIG_HOME/alacritty/alacritty.yml
+$XDG_CONFIG_HOME/alacritty.yml
+$HOME/.config/alacritty/alacritty.yml
+$HOME/.alacritty.yml
+%APPDATA%\alacritty\alacritty.yml
 
+Configuration file example
+https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+Using mysys2 (or git bash)
+https://github.com/alacritty/alacritty/issues/3301
