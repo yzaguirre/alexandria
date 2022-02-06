@@ -1,4 +1,4 @@
-https://keepassxc.org/
+https://keepassxc.org
 https://github.com/keepassxreboot/keepassxc/blob/develop/INSTALL.md
 https://github.com/keepassxreboot/keepassxc/wiki/Building-KeePassXC
 https://keepassxc.org/blog/2021-06-11-2.6.6-released/
@@ -54,12 +54,16 @@ CLI
 	keepassxc-cli locate -k ~/mykey.key ~/mysafe.kdbx gmail
 	keepassxc-cli show ~/mysafe.kdbx "/Email/Gmail WORK"
 	keepassxc-cli generate
-
+Export
+	keepassxc-cli export -f csv ~/mysafe.kdbx | gpg -asr mykey -o mysafe.csv.asc
+Show password
+	keepassxc-cli show -sa Password mysafe.kdbx "/Mail/Gmail"
 Lock databases
 	keepassxc --lock
 
-Attachments
+Attachments, coming soon
 https://github.com/keepassxreboot/keepassxc/pull/5538
+	keepassxc-cli attachment-export mysafe.kdbx "token" > token.json
 
 KeePassXC Browser Extension
 https://github.com/keepassxreboot/keepassxc-browser

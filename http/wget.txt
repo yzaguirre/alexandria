@@ -33,3 +33,10 @@ https://stackoverflow.com/questions/273743/using-wget-to-recursively-fetch-a-dir
 	wget -r -np -R "index.html*,*.svn*,*.git*" http://example.com/configs/.vim/
 https://serverfault.com/questions/324555/how-to-exclude-certain-directories-while-using-wget#744334
 	wget --exclude-directories=.svn -r ftp://path/to/src
+
+How To Use wget To Download a File (and a full website)
+https://www.youtube.com/watch?v=Oe40pxcjPpM
+Download site
+	wget --mirror https://cereal.guru/
+More complete site download
+	wget --mirror --page-requisites --convert-link --no-clobber --no-parent --domains cereal.guru https://cereal.guru/

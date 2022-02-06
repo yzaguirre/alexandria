@@ -1,4 +1,17 @@
-https://curl.trillworks.com/
+https://curl.se
+https://github.com/curl/curl
+Install
+	apt install curl
+Windows
+	choco install curl
+Available in Windows 10
+https://curl.se/windows/microsoft.html
+Remove PowerShell Alias
+https://daniel.haxx.se/blog/2016/08/19/removing-the-powershell-curl-alias/
+Homebrew
+	brew install curl
+
+https://curl.trillworks.com
 https://github.com/NickCarneiro/curlconverter
 https://news.ycombinator.com/item?id=21224687
 
@@ -10,12 +23,57 @@ https://stackoverflow.com/questions/53114352/how-to-install-win32clipboard
 	pip install pywin32 # on windows
 	pip install uncurl
 
-
 Alternatives
 bat, httpie
 
+How to use CURL on Windows | How to test API with CURL | CURL Basics Step by Step
+https://www.youtube.com/watch?v=8f9DfgRGOBo
+Testing APIs with the cURL Command
+https://www.youtube.com/watch?v=iLVoA1DTE60
+Linux Essentials: Curl Fundamentals
+https://www.youtube.com/watch?v=Xy7fDxz39FM
+Basic cURL Tutorial
+https://www.youtube.com/watch?v=7XUibDYw4mc
+Linux/Mac Terminal Tutorial: How To Use The cURL Command
+https://www.youtube.com/watch?v=WxUVU0b95Oc
+How To Use curl (with lots of helpful examples)
+https://www.youtube.com/watch?v=BuEYquQweGo
+
+Print response headers
+	curl -i http://google.com
+Print only response headers
+	curl -I http://google.com
+Follow redirects
+	curl -L https://google.com
+Redirects
+	curl --resolve steve.org:1234:127.0.0.1 -d "" http://steve.org:1234
+Encoding the data
+	curl --data-urlencode "n m a=asdf" -v http://localhost:1234/
+Send request headers
+	curl -H "Accept:application/json" https://reqres.in/api/users/2
+Send request with cookies
+	curl --cookie "name=value" -v http://localhost:1234/
 DNS server
 	curl --dns-server <addresses>
+Log all interaction to file
+	curl --trace logtrace.txt https://reqres.in/api/users/2
+	curl --trace-ascii logtrace_ascii.txt https://reqres.in/api/users/2
+Track time
+	curl -v --trace-time http://localhost:1234/
+Save response to file
+	curl -o hsploit.html https://hsploit.com
+Save document from GitHub to file (Following redirects)
+	curl -Lo sha256sums.txt https://github.com/dundee/gdu/releases/download/v5.13.0/sha256sums.txt
+Save document with filename. Example: users
+	curl -O https://hsploit.com/users
+Limite download rate to 1k bytes
+	curl -Lo pic.png --limit-rate 1000B http://i.imgur.com/QRlAg0b.png
+
+FTP
+Upload a file, eg. hello.txt
+	curl -u test@traversymedia.com:123456! -T hello.txt ftp://ftp.traversymedia.com
+Download a file
+	curl -u test@traversymedia.com:123456! -O ftp://ftp.traversymedia.com/hello.txt
 
 Socks Proxy
 http://curl.haxx.se/libcurl/c/curl_easy_setopt.html#CURLOPTPROXY
@@ -25,6 +83,7 @@ https://stackoverflow.com/questions/14944067/curl-request-using-socks5-proxy-fai
 
 Passwords
 https://smallstep.com/blog/command-line-secrets/
+	curl carl:password@https://example.com:3000
 	curl -u carl:password https://example.com:3000
 Better to use a .netrc file
 https://everything.curl.dev/usingcurl/netrc
@@ -63,6 +122,7 @@ The simplest way is to send data along with
 a request in key/value pairs—exactly as when a form is submitted on the Web—which
 uses the -d switch. The switch is used as many times as there are fields to include:
 	curl -X POST http://requestb.in/example -d name="Lorna" -d email="lorna@example.com" -d message="this HTTP stuff is rather excellent"
+	curl -X POST http://requestb.in/example -d "name=Lorna&email=lorna@example.com&message=this HTTP stuff is rather excellent"
 
 APIs accept their data in different formats; sometimes the data cannot be POSTed as a
 form, but must be created in JSON or XML format, for example. In such instances, the
@@ -76,6 +136,8 @@ lines when working with lots of fields, and when sending non-form data, such as 
 or XML. To use the contents of a file as the body of a request, we give the filename
 prepended with an @ symbol as a single -d switch to Curl:
 	curl -X POST http://requestb.in/example -d @data.txt
+Send as JSON
+	curl -X POST -H "Accept:application/json" http://requestb.in/example -d @data.json
 
 Working with the extended features of HTTP requires the ability to work with various
 headers. Curl allows sending of any desired header (this is why, from a security stand‐

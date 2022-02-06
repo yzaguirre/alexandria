@@ -1,5 +1,8 @@
-https://diff2html.xyz/
+https://diff2html.xyz
 https://github.com/rtfpessoa/diff2html
 https://github.com/rtfpessoa/diff2html-cli
 	npm install -g diff2html-cli
 	diff2html
+diff last commit, line by line, word comparison between lines,
+previewed in the browser and input from git diff command
+	diff2html -s line -f html -d word -i command -o preview -- -M HEAD~1

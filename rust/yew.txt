@@ -3,3 +3,16 @@ front-end web apps using WebAssembly.
 https://yew.rs
 https://github.com/yewstack/yew
 https://docs.rs/yew/latest/yew/
+
+Build A Rust Frontend (Really FAST Web Apps with Yew)
+https://www.youtube.com/watch?v=MddGbXgIt2E
+
+Trunk helps in build and package a web assembly application
+	cargo install trunk
+Add web assembly as compilation target
+	rustup target add wasm32-unknown-unknown
+Create the package
+	cargo new RustFrontEnd
+	cd RustFrontEnd
+Serve web app locally
+	trunk serve

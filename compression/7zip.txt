@@ -2,17 +2,29 @@
 https://www.7-zip.org
 https://sourceforge.net/p/sevenzip/discussion/45797/thread/0a7b47970b/
 Linux
+https://www.bleepingcomputer.com/news/software/7-zip-developer-releases-the-first-official-linux-version/
+https://news.ycombinator.com/item?id=26438921
 https://news.ycombinator.com/item?id=26426816
 https://sourceforge.net/p/sevenzip/discussion/45797/thread/7fe6c21efa/
-	wget https://www.7-zip.org/a/7z2107-linux-x64.tar.xz
-	tar xfv 7z2107-linux-x64.tar.xz
 p7zip
 https://github.com/jinfeihan57/p7zip
+	apt install p7zip-full
+Binary
+	wget https://github.com/jinfeihan57/p7zip/releases/download/v17.04/linux-p7zip.zip
+	mkdir /usr/local/lib/p7zip
+	unzip linux-p7zip.zip -d /usr/local/lib/p7zip 7z 7za 7zr 7z.so 7zCon.sfx Codecs/Rar.so
+Modifify 7z, 7za and 7zr in /usr/bin
+7z Binary
+	wget https://www.7-zip.org/a/7z2107-linux-x64.tar.xz
+	tar xf 7z2107-linux-x64.tar.xz -C /usr/local/bin 7zz 7zzs
+	mkdir /usr/local/share/doc/7zip
+	tar xf 7z2107-linux-x64.tar.xz -C /usr/local/share/doc/7zip --strip-components=1 MANUAL
+Termux
 	apt install p7zip
 Windows
 	winget install 7zip.7zip
 Installer
-	wget https://www.7-zip.org/a/7z2106-x64.exe
+	wget https://www.7-zip.org/a/7z2107-x64.exe
 Append to PATH C:\Program Files\7-Zip
 
 Create ZIP file
@@ -20,5 +32,49 @@ https://stackoverflow.com/questions/18180060/how-to-zip-a-file-using-cmd-line
 	7z a -tzip {yourfile.zip} {yourfolder}
 Include only files with txt extension. It starts with current directory.
 	7z a -tzip -i"!*.txt" file.zip additional_dirs/
+Read a tar from stdin to save as 7z
+	tar cf - directory | 7za a -si directory.tar.7z
+Create based on file list
+https://superuser.com/questions/657859/7-zip-how-to-use-command-line-to-include-exclude-large-list-of-files
+	7z a -t7z -ir@"files_to_include.txt" -xr@"files_to_exclude.txt" ....
+https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
+	7z a -ttar -so my_files | ncat --send-only ip port
+Add all files from directory "dir1" to SFX archive  archive.exe
+(Remark : SFX archive MUST end with ".exe")
+	7z a -sfx archive.exe dir1
+Add all files from directory "a_directory" to the archive "archive.7z"
+(with data and header archive encryption on)
+	7z a -mhe=on -pmy_password archive.7z a_directory
+Adds  all  files  from  directory  "dir1" to archive archive.7z
+using "ultra settings"
+	7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1
+       -t7z   7z archive
+
+       -m0=lzma
+              lzma method
+
+       -mx=9  level of compression = 9 (Ultra)
+
+       -mfb=64
+              number of fast bytes for LZMA = 64
+
+       -md=32m
+              dictionary size = 32 megabytes
+
+       -ms=on solid archive = on
+
 Extract file
+	7z x file.7z -o /tmp
 	7z x file.zip -o outputdir/
+Extract certain files, like camrec files
+https://superuser.com/questions/321829/extract-a-certain-file-from-an-archive-with-7-zip-from-the-command-line
+	7z x file.camrec *.avi -r
+Even extracts tar files
+https://stackoverflow.com/questions/1359793/programmatically-extract-tar-gz-in-a-single-step-on-windows-with-7zip
+	7z e example.tar.gz && 7z x example.tar
+	7z x "somename.tar.gz" -so | 7z x -aoa -si -ttar -o"somename"
+x    = Extract with full paths command
+-so  = write to stdout switch
+-si  = read from stdin switch
+-aoa = Overwrite all existing files without prompt. 
+-o   = output directory

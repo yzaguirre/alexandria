@@ -1,0 +1,6 @@
+https://steamcommunity.com/app/730/discussions/0/620703493318521847/
+To reset to the default config type in console:
+	exec config_default
+	host_writeconfig
+Bind
+	bind t sm_p90

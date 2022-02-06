@@ -1,3 +1,5 @@
+https://www.ssh.com/academy/ssh/sshd_config
+
 https://gravitational.com/blog/ssh-handshake-explained/
 https://news.ycombinator.com/item?id=21429697
 https://hackertarget.com/ssh-examples-tunnels/
@@ -18,7 +20,11 @@ Mac: Turning on and Connecting to the SSH Server
 https://www.youtube.com/watch?v=OBWgpUmRhPY
 System Preferences -> Sharing -> Remote Login
 
+5 Easy Ways to Secure Your SSH Server
+https://www.youtube.com/watch?v=l1iu3iZq1aQ
+
 Secure SSH
+https://www.ssh-audit.com
 https://stribika.github.io/2015/01/04/secure-secure-shell.html
 http://sysconfig.org.uk/two-factor-authentication-with-ssh.html
 if you need to forcibly exit your ssh session, type the escape sequence of a tilde followed by a period

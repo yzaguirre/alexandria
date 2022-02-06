@@ -1,0 +1,84 @@
+Web File Browser
+https://filebrowser.org/features
+https://github.com/filebrowser/filebrowser
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-amd64-filebrowser.tar.gz
+	tar xf linux-amd64-filebrowser.tar.gz -C /usr/local/bin filebrowser
+Raspberry Pi 2
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-armv6-filebrowser.tar.gz
+	tar xf linux-armv6-filebrowser.tar.gz -C /usr/local/bin filebrowser
+Termux
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-arm64-filebrowser.tar.gz
+	tar xf linux-arm64-filebrowser.tar.gz -C /usr/local/bin filebrowser
+Windows
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/windows-amd64-filebrowser.zip
+	unzip windows-amd64-filebrowser.zip -d ~/bin filebrowser.exe
+Or
+	iwr -useb https://raw.githubusercontent.com/filebrowser/get/master/get.ps1 | iex
+Open port 8080
+	New-NetFirewallRule -Name filebrowser -DisplayName "filebrowser.exe (Share files HTTP)" -Enabled True -Direction Inbound -Protocol TCP -Profile Domain -Program "C:\Users\dyzag\bin\filebrowser.exe" -RemoteAddress LocalSubnet -Action Allow
+Homebrew
+	brew tap filebrowser/tap
+	brew install filebrowser
+
+How to Access Server Files in a Web Browser (with filebrowser)
+https://tonyteaches.tech/filebrowser-tutorial/
+https://www.youtube.com/watch?v=92rzgw00YMo&t=0s
+
+Default user and password
+admin:admin
+
+Usage
+	filebrowser -p -a 134.122.27.34 -r /var/www
+
+Make configuration file
+	vim /etc/filebrowser.json
+{
+	"port": 8080,
+	"baseURL": "",
+	"address": "134.122.274.34",
+	"log": "stdout",
+	"database": "/etc/filebrowser.db",
+	"root": "/var/www"
+}
+
+Run with configuration file
+	filebrowser -c /etc/filebrowser.json
+Change owner
+	chown www-data:www-data /etc/filebrowser.*
+Make system service
+	vim /etc/systemd/system/filebrowser.service
+[Unit]
+Description=File Browser
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/filebrowser -c /etc/filebrowser.json
+
+[Install]
+WantedBy=multi-user.target
+
+Enable the service
+	systemctl enable filebrowser.service
+Start the service
+	systemctl start filebrowser.service
+Check status
+	systemctl status filebrowser.service
+
+How to Install a Free SSL Certificate for filebrowswer
+https://www.youtube.com/watch?v=u5x5sl5FxSs
+
+Install CertBot
+	apt install snapd
+	sudo snap install core
+	sudo snap refresh core
+	sudo snap install --classic certbot
+Create symbolic link
+	ln -s /snap/bin/certbot /usr/bin/certbot
+Issue TLS certificate
+	certbot certonly --nginx
+Edit configuration file
+	vim /etc/filebrowser.json
+	"cert": "/etc/letsencrypt/live/site.com/fullchain.pem",
+	"key": "/etc/letsencrypt/live/site.com/privkey.pem"
+Restart filebrowser
+	systemctl restart filebrowser.service

@@ -18,3 +18,18 @@ To read a file into the X selection:
 	xsel < file
 To write the X selection to a file:
 	xsel > file
+
+Diodon
+Clipboard manager. Replacement to ClipIt, before that Parcellite
+https://launchpad.net/diodon
+https://esite.ch/2022/01/long-outstanding-diodon-issues-resolved/
+https://esite.ch/2015/07/using-custom-shortcuts-of-de-as-diodon-hotkey/
+https://github.com/CristianHenzel/ClipIt
+https://github.com/rickyrockrat/parcellite
+	sudo apt-add-repository ppa:diodon-team/stable
+	apt update
+	apt install diodon
+
+Clipboard data is stored in ZeitGeist
+https://gitlab.freedesktop.org/zeitgeist
+	litecli ~/.local/share/zeitgeist/activity.sqlite
