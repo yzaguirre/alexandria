@@ -13,4 +13,6 @@ https://github.com/NikitaIvanovV/snake-asm
 https://www.reddit.com/r/commandline/comments/sixafz/i_wanted_to_learn_some_assembly_so_i_made_this/
 	git clone https://github.com/NikitaIvanovV/snake-asm
 	cd snake-asm
+	make -j8
 	sudo make install
+	snake-asm

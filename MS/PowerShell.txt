@@ -1,6 +1,9 @@
 https://github.com/powershell/powershell
-https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7#ubuntu-1804
-	wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+https://devblogs.microsoft.com/powershell/general-availability-of-powershell-7-2/
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7
+https://docs.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7
+	apt install wget apt-transport-https software-properties-common
+	wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
 Register the Microsoft repository GPG keys
 	sudo dpkg -i packages-microsoft-prod.deb
 Update the list of products
@@ -13,10 +16,10 @@ Start PowerShell
 	pwsh
 
 Manual install
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/powershell_7.2.1-1.ubuntu.18.04_amd64.deb
-	sha256sum powershell_7.2.1-1.ubuntu.18.04_amd64.deb
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/powershell_7.2.1-1.deb_amd64.deb
+	sha256sum powershell_7.2.1-1.deb_amd64.deb
 11756A6265BDC1EBD14D678AB08A6999C03E24157B26B2C2E40640E44CB46ACD
-	dpkg -i powershell_7.2.1-1.ubuntu.18.04_amd64.deb
+	dpkg -i powershell_7.2.1-1.deb_amd64.deb
 	apt install -f
 
 http://blogs.technet.com/b/heyscriptingguy/archive/2013/06/02/weekend-scripter-install-powershell-3-0-on-windows-7.aspx
@@ -38,22 +41,9 @@ Crear Profile
 http://www.howtogeek.com/126469/how-to-create-a-powershell-profile/
 	New-Item -Path $Profile -Type File -Force
 	notepad $Profile
-crear Zip e descomprimir
-http://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
-function Expand-ZIPFile($file, $destination)
-{
-$shell = new-object -com shell.application
-$zip = $shell.NameSpace($file)
-foreach($item in $zip.items())
-{
-$shell.Namespace($destination).copyhere($item)
-}
-}
 
 Eject USB
 Dismount-DiskImage G:\
-
-Expand-ZIPFile 
 
 Shortcuts
 https://superuser.com/questions/392061/how-to-make-a-shortcut-from-cmd
@@ -71,3 +61,28 @@ https://github.com/SQLvariant/Demos/blob/master/Presentations/Ignite2018-THR2114
 
 https://stackoverflow.com/questions/9086880/t-sql-export-to-new-excel-file
 	Invoke-Sqlcmd -Query $Query -Database $Database -ServerInstance $Server | Export-Csv $FilePath
+
+Compress ZIP
+See ~/compression/powershell.txt
+
+TLS Certificate
+See ~/tls/tls-powershell.txt
+
+Log the processes
+	Get-Process | Out-File C:\Users\dyzag\ProcessesPS.txt
+Log the services
+	Get-Service | Out-File C:\Users\dyzag\ServicesPS.txt
+Log in CSV
+	Get-Process | Out-Csv C:\Users\dyzag\ProcessesPS.csv
+
+Compare 2 files
+	$ListReferencia = Get-Content "C:\PowerShell\ListaOrigen.txt"
+	$ListDiferencia = Get-Content "C:\PowerShell\ListaDestino.txt"
+	Compare-Object $ListReferencia $ListDiferencia
+
+List DNS cache
+	Get-DnsClientCache
+Clean DNS cache
+	Clear-DnsClientCache
+Replaces
+	ipconfig /flushdns

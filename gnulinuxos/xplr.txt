@@ -5,14 +5,15 @@ https://arijitbasu.in/xplr/en/
 https://github.com/sayanarijit/xplr
 https://github.com/sayanarijit/xplr/wiki/Alternatives
 https://news.ycombinator.com/item?id=26708089
+https://www.reddit.com/r/commandline/comments/shqg1p/xplr_minimal_yet_hackable_tui_file_explorer/
 Install
-	wget https://github.com/sayanarijit/xplr/releases/download/v0.14.3/xplr-linux.tar.gz
-	wget https://github.com/sayanarijit/xplr/releases/download/v0.14.3/xplr-linux.sha256
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.17.2/xplr-linux.tar.gz
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.17.2/xplr-linux.sha256
 	sha256sum -c xplr-linux.sha256
 	sudo tar xf xplr-linux.tar.gz -C /usr/local/bin
 MacOS
-	wget https://github.com/sayanarijit/xplr/releases/download/v0.14.3/xplr-macos.tar.gz
-	wget https://github.com/sayanarijit/xplr/releases/download/v0.14.3/xplr-macos.sha256
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.17.2/xplr-macos.tar.gz
+	wget https://github.com/sayanarijit/xplr/releases/download/v0.17.2/xplr-macos.sha256
 	shasum -a 256 -c xplr-macos.sha256
 	tar xf xplr-macos.tar.gz -C ~/bin
 Homebrew

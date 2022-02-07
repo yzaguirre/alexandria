@@ -1,7 +1,7 @@
 https://github.com/Byron/dua-cli
 	wget https://github.com/Byron/dua-cli/releases/download/v2.17.0/dua-v2.17.0-x86_64-unknown-linux-musl.tar.gz
 	tar xf dua-v2.17.0-x86_64-unknown-linux-musl.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.17.0-x86_64-unknown-linux-musl/dua
-ARM
+Raspberry Pi
 	wget https://github.com/Byron/dua-cli/releases/download/v2.17.0/dua-v2.17.0-arm-unknown-linux-gnueabihf.tar.gz
 	tar xf dua-v2.17.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.17.0-arm-unknown-linux-gnueabihf/dua
 Windows
@@ -10,3 +10,6 @@ Windows
 Homebrew
 	brew update
 	brew install dua-cli
+
+Usage
+	dua i

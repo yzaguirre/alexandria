@@ -25,7 +25,7 @@ Check the $EDITOR environment variable (all OS platform)
 Windows
 Alternative binary download
 	wget https://dystroy.org/broot/download/x86_64-pc-windows-gnu/broot.exe
-	mv build/x86_64-pc-windows-gnu/broot.exe ~/bin
+	move build/x86_64-pc-windows-gnu/broot.exe C:\Users\dyzag\bin
 	broot.exe --install
 	vim ~/.bashrc
 source /c/Users/dyzag/AppData/Roaming/dystroy/broot/config/launcher/bash/br

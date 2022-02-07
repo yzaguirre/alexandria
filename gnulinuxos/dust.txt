@@ -1,9 +1,12 @@
 A more intuitive version of du in rust
 https://github.com/bootandy/dust
-	wget https://github.com/bootandy/dust/releases/download/v0.5.3/dust-v0.5.3-x86_64-unknown-linux-gnu.tar.gz
-	tar xfv dust-v0.5.3-x86_64-unknown-linux-gnu.tar.gz
-	chmod u+x dust
-	mv dust /usr/local/bin
+	wget https://github.com/bootandy/dust/releases/download/v0.7.5/dust-v0.7.5-x86_64-unknown-linux-gnu.tar.gz
+	tar xf dust-v0.7.5-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C /usr/local/bin dust-v0.7.5-x86_64-unknown-linux-gnu/dust
+Termux
+	apt install dust
+Raspberry Pi 2
+	wget https://github.com/bootandy/dust/releases/download/v0.7.5/dust-v0.7.5-arm-unknown-linux-gnueabihf.tar.gz
+	tar xf dust-v0.7.5-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/bin dust-v0.7.5-arm-unknown-linux-gnueabihf/dust
 Windows
 	choco install dust
 Homebrew

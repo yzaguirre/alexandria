@@ -622,7 +622,11 @@ https://www.reddit.com/r/commandline/comments/si5ok6/command_line_for_the_21st_c
 https://ileriseviye.wordpress.com/2018/10/30/command-line-for-the-21-century-the-low-hanging-fruit/
 https://www.reddit.com/r/commandline/comments/sekd0w/ncdu_ncurses_disk_usage_see_which_directories_and/
 gdu
+dutree
 dua
+godu
+pdu
+dutree
 xplr
 xh
 ripgrep

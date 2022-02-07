@@ -1,0 +1,22 @@
+Simple golang utility helping to discover large files/folders.
+https://github.com/viktomas/godu
+	wget https://github.com/viktomas/godu/releases/download/v1.3/godu-linux-amd64-1.3.tgz
+	tar xf godu-linux-amd64-1.3.tgz -C /usr/local/bin
+Windows
+	wget https://github.com/viktomas/godu/releases/download/v1.3/godu-windows-amd64-1.3.zip
+	unzip godu-windows-amd64-1.3.zip -d ~/bin
+Homebrew
+	brew tap viktomas/taps
+	brew install godu
+Configuration at ~/.goduignore
+Usage
+	godu ~
+	godu -l 100 / # walks the whole root but shows only files larger than 100MB
+	godu -print0 ~ | xargs -0 rm # use with caution! Will delete all marked files!
+
+Alias
+After you exit godu, all selected files get deleted
+	alias gd="godu -print0 | xargs -0 rm -rf"
+Usage gm ~/destination/folder
+After you exit godu, all selected files get moved to ~/destination/folder
+	alias gm="godu -print0 | xargs -0 -I _ mv _ "

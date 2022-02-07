@@ -7,5 +7,31 @@ From source code
 	git checkout 0.12.0
 	cargo build --release
 Install
-	wget https://github.com/Peltoche/lsd/releases/download/0.12.0/lsd_0.12.0_amd64.deb
-	sudo dpkg -i lsd_0.12.0_amd64.deb # adapt version number and architecture
+	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd_0.21.0_amd64.deb
+	sudo dpkg -i lsd_0.21.0_amd64.deb
+Termux
+	apt install lsd
+Raspberry Pi 2
+	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz
+	tar xf lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/bin lsd-0.21.0-arm-unknown-linux-gnueabihf/lsd
+	tar xf lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/share/man/man1 lsd-0.21.0-arm-unknown-linux-gnueabihf/lsd.1
+Completions
+	tar xf lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=2 -C /usr/local/share/bash-completion/completions lsd-0.21.0-arm-unknown-linux-gnueabihf/autocomplete/lsd.bash-completion
+	tar xf lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=2 -C /usr/local/share/fish/vendor_completions.d lsd-0.21.0-arm-unknown-linux-gnueabihf/autocomplete/lsd.fish
+	tar xf lsd-0.21.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=2 -C /usr/local/share/zsh/site-functions lsd-0.21.0-arm-unknown-linux-gnueabihf/autocomplete/_lsd
+Windows
+	choco install lsd
+Binary
+	wget https://github.com/Peltoche/lsd/releases/download/0.21.0/lsd-0.21.0-x86_64-pc-windows-msvc.zip
+	7z e -oC:\Users\dyzag\bin lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/lsd.exe
+	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/lsd.bash-completion
+	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/lsd.fish
+	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/_lsd
+Edit .bashrc
+source /c/Users/dyzag/AppData/Roaming/lsd/lsd.bash-completion
+Homebrew
+	brew install lsd
+
+Configuration at
+~/.config/lsd/config.yaml
+%APPDATA%\lsd\config.yaml

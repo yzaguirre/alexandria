@@ -1,0 +1,20 @@
+Compress and decompress .ZIP files with PowerShell in Windows 10
+https://www.youtube.com/watch?v=E9yhRr9W1R8
+Comprimir
+	Compress-Archive -Path C:\Temp\Archivo -DestinationPath C:\Temp\Comp\ArchivoComprimido.zip
+Descomprimir
+	Expand-Archive -Path C:\Temp\Comp\ArchivoComprimido.zip -DestinationPath C:\Temp\Desc
+
+Crear Zip e descomprimir
+http://www.howtogeek.com/tips/how-to-extract-zip-files-using-powershell/
+function Expand-ZIPFile($file, $destination)
+{
+	$shell = new-object -com shell.application
+	$zip = $shell.NameSpace($file)
+	foreach($item in $zip.items())
+	{
+		$shell.Namespace($destination).copyhere($item)
+	}
+}
+
+Expand-ZIPFile 

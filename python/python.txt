@@ -225,6 +225,8 @@ PS C:\> <venv>\Scripts\Activate.ps1
 	pytest
 Exit
 	deactivate
+Save requirements
+	pip freeze > requirements.txt
 
 Create copy of array
 a = [1, 2, 3, 4]

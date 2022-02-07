@@ -44,3 +44,7 @@ Local Users and Groups > Users
 	wmic useraccount get name
 PS
 	Get-LocalUser
+
+Respaldar licencia de sistema operativo
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+BackupProductKeyDefault

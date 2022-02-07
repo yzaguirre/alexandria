@@ -1,0 +1,31 @@
+Highly parallelized, blazing fast directory tree analyzer
+https://crates.io/crates/parallel-disk-usage
+https://github.com/KSXGitHub/parallel-disk-usage
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/pdu-x86_64-unknown-linux-gnu
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/sha1sum.txt
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/sha256sum.txt
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/sha512sum.txt
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/completion.bash
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/completion.fish
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/completion.zsh
+	sha1sum -c --ignore-missing sha1sum.txt
+	sha256sum -c --ignore-missing sha256sum.txt
+	sha512sum -c --ignore-missing sha512sum.txt
+	chmod u+x pdu-x86_64-unknown-linux-gnu
+	mv pdu-x86_64-unknown-linux-gnu /usr/local/bin/pdu
+	sudo cp completion.bash /usr/share/bash-completion/completions/pdu.bash
+	sudo cp completion.fish /usr/share/fish/completions/pdu.fish
+	sudo cp completion.zsh /usr/share/zsh/vendor-completions/_pdu
+Windows
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/pdu-x86_64-pc-windows-msvc.exe
+	wget https://github.com/KSXGitHub/parallel-disk-usage/releases/download/0.6.1/completion.ps1
+	move pdu-x86_64-pc-windows-msvc.exe C:\Users\dyzag\bin\pdu.exe
+	move completion.ps1 C:\Users\dyzag\Documents\WindowsPowerShell\_pdu.ps1
+
+Usage
+	pdu --align-left
+	pdu dir1 dir2
+	pdu dir1 --progress --top-down
+	pdu dir1 --progress --quality=blksize
+	pdu dir1 --progress --quantity=blksize --bytes-format=binary
+	pdu dir1 --progress --quantity=blksize --bytes-format=plain

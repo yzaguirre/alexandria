@@ -1,0 +1,8 @@
+https://docs.python-requests.org/en/latest/
+https://github.com/psf/requests
+	apt install python3-requests
+Latest version through pypi
+https://pypi.org/project/requests/
+	sudo -H pip install -U requests
+Virtual env
+	pip install requests

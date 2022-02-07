@@ -1,23 +1,24 @@
 https://dev.yorhel.nl/ncdu
 Ncdu is entirely written in C and available under a liberal MIT license.
+https://www.reddit.com/r/commandline/comments/sekd0w/ncdu_ncurses_disk_usage_see_which_directories_and/
 Download
-	wget https://dev.yorhel.nl/download/ncdu-1.15.1.tar.gz
-	wget https://dev.yorhel.nl/download/ncdu-1.15.1.tar.gz.asc
-	wget https://dev.yorhel.nl/download/ncdu-1.15.1.tar.gz.sha1
-	wget https://dev.yorhel.nl/download/ncdu-1.15.1.tar.gz.md5
+	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.asc
+	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.sha1
+	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.md5
 Verify
-	md5sum ncdu-1.15.1.tar.gz
-	cat ncdu-1.15.1.tar.gz.md5
-	sha1sum ncdu-1.15.1.tar.gz
-	cat ncdu-1.15.1.tar.gz.sha1
+	md5sum ncdu-2.0.1.tar.gz
+	cat ncdu-2.0.1.tar.gz.md5
+	sha1sum ncdu-2.0.1.tar.gz
+	cat ncdu-2.0.1.tar.gz.sha1
 PGP fingerprint
 7446 0D32 B808 10EB A9AF A2E9 6239 4C69 8C27 39FA
 	wget https://yorhel.nl/key.asc
 	gpg --import key.asc
-	gpg --verify ncdu-1.15.1.tar.gz.asc
+	gpg --verify ncdu-2.0.1.tar.gz.asc
 Extract
-	tar xf ncdu-1.15.1.tar.gz
-	cd ncdu-1.15.1
+	tar xf ncdu-2.0.1.tar.gz
+	cd ncdu-2.0.1
 	./configure
 	make
 	make install
@@ -26,9 +27,33 @@ Extract
 /bin/mkdir -p '/usr/local/share/man/man1'
 /usr/bin/install -c -m 644 ncdu.1 '/usr/local/share/man/man1'
 
+Binary
+	wget https://dev.yorhel.nl/download/ncdu-2.0-linux-x86_64.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.0-linux-x86_64.tar.gz.asc
+	gpg --verify ncdu-2.0-linux-x86_64.tar.gz.asc
+	md5sum ncdu-2.0-linux-x86_64.tar.gz
+00920a7613e033f573929a991391b9b6
+	sha1sum ncdu-2.0-linux-x86_64.tar.gz
+5b729955597b7b96bf99103aee7236476aa1fbdd
+	sha256sum ncdu-2.0-linux-x86_64.tar.gz
+f5e16062a330f5c7fbe27b2bf0d507caeb61195d5b956d13c6eea63fb08685b5x86_64
+	tar xf ncdu-2.0-linux-x86_64.tar.gz -C /usr/local/bin
+Termux
+	wget https://dev.yorhel.nl/download/ncdu-2.0-linux-aarch64.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.0-linux-aarch64.tar.gz.asc
+	gpg --verify ncdu-2.0-linux-aarch64.tar.gz.asc
+	md5sum ncdu-2.0-linux-aarch64.tar.gz
+108f1eda8d93dcd283db4f010129f7b9
+	sha1sum ncdu-2.0-linux-aarch64.tar.gz
+afcff29e23f4ff2f6661030f0b2e6427b7f5ddb9
+	sha256sum ncdu-2.0-linux-aarch64.tar.gz
+ff6fff97a46f7692ee31706085218b7d72f3f02b90335409ebc1397955e054beAArch64
+	tar xf ncdu-2.0-linux-aarch64.tar.gz -C /data/data/com.termux/files/usr/bin
 MacOS
 	brew install ncdu
 
+Alias
+	alias ncdu='ncdu -e --color=dark'
 https://dev.yorhel.nl/ncdu/changes
 "Extended information" mode
 	ncdu -e

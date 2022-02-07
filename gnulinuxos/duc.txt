@@ -1,3 +1,19 @@
 https://duc.zevv.nl
+https://github.com/zevv/duc
+Ubuntu and Termux
 	apt install duc
+Usage
 	duc
+Create index at ~/.duc.db
+	duc index /usr
+	duc ui /usr
+	duc gui /usr
+Compile
+	apt install libncursesw5-dev libcairo2-dev libpango1.0-dev build-essential
+	wget https://github.com/zevv/duc/releases/download/1.4.4/duc-1.4.4.tar.gz
+	wget https://github.com/zevv/duc/releases/download/1.4.4/duc-1.4.4.tar.gz.asc
+	gpg --verify duc-1.4.4.tar.gz.asc
+	cd duc-1.4.1
+	./configure
+	make -j 12
+	sudo make install
