@@ -1,0 +1,6 @@
+https://github.com/studioimaginaire/phue
+	sudo -H pip install -U phue
+
+Writing a Python Script to Control my Lights | Five Minute Python Scripts
+https://www.youtube.com/watch?v=kSruoqDTYt0
+https://github.com/Derrick-Sherrill/DerrickSherrill.com/blob/master/hue_lights.py

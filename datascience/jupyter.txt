@@ -15,6 +15,8 @@ https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
 	sudo -H pip install -U jupyterlab
 Optional libraries
 	sudo -H pip install -U tensorflow pandas scipy
+Git plugin
+	sudo -H pip install -U jupyterlab-git
 Check version
 	jupyter notebook --version
 https://jupyter-notebook.readthedocs.io/en/stable/config.html
@@ -23,6 +25,7 @@ Start JupyterLab
 https://github.com/jupyter/notebook/issues/1318
 	unset XDG_RUNTIME_DIR
 	jupyter lab
+or	jupyter-lab
 Visit http://localhost:8888/
 Because JupyterLab is a server extension of the classic Jupyter Notebook server,
 you can also use JupyterLab by starting the classic Jupyter Noteboook
