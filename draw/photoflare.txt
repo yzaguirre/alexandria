@@ -8,3 +8,7 @@ Chocolately
 Manual install
 	wget https://launchpad.net/photofiltre-lx/trunk/v1.6.9/+download/Photoflare_CE_v1.6.9_amd64.exe
 
+Infatica SDK runs in the background
+https://github.com/PhotoFlare/photoflare/commit/ff3e92349e3bf44fab057b25e6fead062eb38800
+https://www.freefixer.com/library/file/infatica-service-app.exe-308773/
+C:\Program Files\PhotoFlare.io\PhotoFlare\external\SDK

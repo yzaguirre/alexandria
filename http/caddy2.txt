@@ -30,7 +30,12 @@ Or, if you don't want/need a background service you can just run:
 
 Set up a custom local HTTPS URL for Next.js/React using @caddyserver to
 get a callback URL that Twitter authentication wouldn't complain about
+https://caddyserver.com/docs/quick-starts/reverse-proxy
+https://caddyserver.com/docs/caddyfile/directives/reverse_proxy
+https://caddyserver.com/docs/caddyfile/directives/header
 https://twitter.com/joostschuur/status/1389167762191360005
+Reverse Proxy and Automatic SSL for Free with Open Source Caddy!
+https://www.youtube.com/watch?v=CzdenRkjMQY
 	vim Caddyfile
 weather.local {
 	reverse_proxy localhost:3000
@@ -42,4 +47,3 @@ weather.local {
 
 Static files
 	caddy file-server --browse --listen :2015 --root ~/mysite
-

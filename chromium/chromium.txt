@@ -100,3 +100,7 @@ ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in
 	chromium --disable-gpu --disable-software-rasterizer
 	chromium --use-gl=swiftshader
 	export MESA_GLSL_CACHE_DISABLE=true
+
+Disable the Desktop Sharing Hub
+https://www.reddit.com/r/chrome/comments/qv1c5k/how_do_i_remove_this_annoying_share_this_page/
+	chrome://flags

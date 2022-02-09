@@ -1,0 +1,16 @@
+https://gyroflow.xyz
+https://github.com/gyroflow/gyroflow
+https://docs.gyroflow.xyz
+https://news.ycombinator.com/item?id=30259771
+
+Install
+https://docs.gyroflow.xyz/guide/installation/
+	wget https://github.com/gyroflow/gyroflow/releases/download/v1.0.0-rc1/Gyroflow-linux64.tar.gz
+	tar xf Gyroflow-linux64.tar.gz -C /opt
+Add /opt/Gyroflow to PATH environment variable
+Windows
+	wget https://github.com/gyroflow/gyroflow/releases/download/v1.0.0-rc1/Gyroflow-windows64.zip
+	7z x Gyroflow-windows64.zip -o"C:\Program Files\Gyroflow"
+
+Usage
+	gyroflow

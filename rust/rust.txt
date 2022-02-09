@@ -16,6 +16,9 @@ Install
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
 
+Getting Started with Rust on Windows and Visual Studio Code
+https://www.youtube.com/watch?v=aYsUBddY7KY
+
 Src
 	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz
 	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.asc

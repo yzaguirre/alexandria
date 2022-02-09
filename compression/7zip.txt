@@ -64,8 +64,8 @@ using "ultra settings"
        -ms=on solid archive = on
 
 Extract file
-	7z x file.7z -o /tmp
-	7z x file.zip -o outputdir/
+	7z x file.7z -o/tmp
+	7z x file.zip -ooutputdir/
 Extract certain files, like camrec files
 https://superuser.com/questions/321829/extract-a-certain-file-from-an-archive-with-7-zip-from-the-command-line
 	7z x file.camrec *.avi -r

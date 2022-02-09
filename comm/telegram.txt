@@ -2,6 +2,10 @@ version 3.1.3
 Source code
 https://telegram.org/apps#source-code
 
+Telegram Became the Anti-Facebook
+https://www.wired.com/story/how-telegram-became-anti-facebook/
+https://news.ycombinator.com/item?id=30267787
+
 TDesktop
 https://tdesktop.com/
 	tar xf tsetup.1.3.10.tar.xz -C /opt

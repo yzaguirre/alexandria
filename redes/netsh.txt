@@ -1,0 +1,7 @@
+https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh
+https://www.ionos.com/digitalguide/server/tools/netsh/
+Add rule
+	netsh http add urlacl url=http://*:62555/ user=everyone listen=yes
+	netsh http add urlacl url=http://+:44886/ user="NT SERVICE\TermService" listen=yes delegate=no sddl="D:(A;;GX;;;S-1-5-80-446051430-1559341753-4161941529-1950928533-810483104)"
+Remove rule
+	netsh http delete urlacl url=http://*:62555/

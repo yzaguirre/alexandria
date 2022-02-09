@@ -1,0 +1,19 @@
+https://flask.palletsprojects.com/en/2.0.x/
+	python -m venv venvf
+	source venvf/bin/activate
+	pip install "flask[async]" Flask-SQLAlchemy flask-login
+
+https://palletsprojects.com/blog/flask-2-0-released/
+
+Flask SQLite Web Application Step by Step Tutorial - HTML, Jinja, CSS, JavaScript, Python
+https://www.youtube.com/watch?v=v3CSQkPJtAc
+
+Run a flask server
+	export FLASK_APP=my_app
+	export FLASK_ENV=development
+	flask run
+
+How to Deploy a Flask App to Linux (Apache and WSGI)
+https://www.youtube.com/watch?v=w0QDAg85Oow
+	apt install libapache2-mod-wsgi-py3
+	a2enmod wsgi

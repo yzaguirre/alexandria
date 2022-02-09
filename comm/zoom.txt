@@ -18,3 +18,7 @@ zoom_amd64.deb
 Stop using Zoom, Hamburg's data protection agency warns state government
 https://techcrunch.com/2021/08/17/stop-using-zoom-hamburgs-dpa-warns-state-government/
 https://news.ycombinator.com/item?id=28210076
+
+Why is the Zoom app listening on my microphone when not in a meeting?
+https://community.zoom.com/t5/Meetings/Why-is-the-Zoom-app-listening-on-my-microphone-when-not-in-a/td-p/29019
+https://news.ycombinator.com/item?id=30266894
