@@ -10,3 +10,11 @@ Open an Explorer window at the root of the system drive C:\
 Open an Explorer window at 'My Documents'
 	explorer \\
 	explorer /
+Open a window view with the specified folder, file or application selected.
+	explorer /select,object
+
+Use bat file from bash
+	vim C:\Users\dyzag\bin\open.bat
+@echo off
+explorer.exe /select,"%1"
+@echo on

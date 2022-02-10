@@ -31,3 +31,9 @@ https://superuser.com/questions/300815/grep-equivalent-for-windows-7#300820
 CMD colors
 https://stackoverflow.com/questions/2048509/how-to-echo-with-different-colors-in-the-windows-command-line
 https://gist.github.com/mlocati/fdabcaeb8071d5c75a2d51712db24011#file-win10colors-cmd
+
+Get date in variable
+https://stackoverflow.com/questions/1192476/format-date-and-time-in-a-windows-batch-script
+https://devblogs.microsoft.com/oldnewthing/20120731-00/?p=7003
+https://oscarliang.com/change-date-ouput-format-windows-batch-script/
+for /f %%a in ('powershell -Command "Get-Date -format yyyy-MM-dd_HH-mm-ss"') do set FECHA=%%a
