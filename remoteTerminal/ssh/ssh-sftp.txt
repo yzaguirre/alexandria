@@ -1,1 +1,12 @@
 http://www.taringa.net/posts/linux/17915283/Configurar-SFTP-con-OpenSSH.html
+GET/PUT Command - Transfer Files/Folders in Linux
+https://www.youtube.com/watch?v=-FFSM3bHrFE
+
+Upload a file
+	PUT flower.jpg
+Upload a directory
+	put -r img
+Download a file
+	get brandon-hopkins.jpg
+Exit session
+	bye

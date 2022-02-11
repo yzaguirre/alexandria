@@ -1,4 +1,4 @@
-https://www.wireguard.com/
+https://www.wireguard.com
 https://news.ycombinator.com/item?id=11994265
 https://www.digitalocean.com/community/tutorials/how-to-create-a-point-to-point-vpn-with-wireguard-on-ubuntu-16-04
 

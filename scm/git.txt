@@ -335,8 +335,11 @@ https://stackoverflow.com/questions/43762338/how-to-remove-file-from-git-history
 
 Zip file
 https://stackoverflow.com/questions/3423540/zip-latest-committed-changes-only
+017 Introduction to Git Archive
+https://www.youtube.com/watch?v=HQU8Y38KgdA
 	git archive -o ../latest.zip some-commit
 	git archive -o ../latest.zip some-commit $(git diff --name-only earlier-commit some-commit)
+	git archive --prefix=trick_15.0.0/ -o trick15.tar.gz 15.0.0 trick_source/
 Make zip of changed files
 https://stackoverflow.com/questions/23115777/git-archive-with-unstaged-changes
 	git diff --name-only -a | xargs zip myUnstagedChanges.zip
