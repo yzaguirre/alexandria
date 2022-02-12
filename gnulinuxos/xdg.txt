@@ -13,4 +13,3 @@ Shortcut location
 Choosing a browser profile with xdg-open
 https://www.youtube.com/watch?v=IiafBlweCbs
 https://dabase.com/tips/archlinux/2021/Setting-the-default-browser/
-

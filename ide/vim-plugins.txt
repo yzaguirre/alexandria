@@ -48,3 +48,7 @@ https://github.com/dhruvasagar/vim-zoom
 
 Vim wiki
 https://vimwiki.github.io/
+
+Csv.vim: A Filetype plugin for CSV files
+https://github.com/chrisbra/csv.vim
+https://news.ycombinator.com/item?id=30301058

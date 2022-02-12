@@ -173,3 +173,8 @@ Passing the credentials on stdin to curl to avoid them
 being in the proc table.
 	curl -s -K- http://192.168.0.99:8081/ <<<"--user httpuser:httppass" | mpv -
 https://twitter.com/climagic/status/1409525480705904642
+
+How to make GET, PUT, POST requests with curl
+https://www.youtube.com/watch?v=fz-vxoGk0Wg
+https://github.com/yasuf/curl-tutorial/blob/master/commands.txt
+	curl -X POST -d '{"test": 123}' -H "Content-Type:application/json" localhost:3000/

@@ -20,6 +20,8 @@ Configuring Windows Server 2019 Open SSH Server to support Key Based Authenticat
 https://www.youtube.com/watch?v=Cs3wBl_mMH0
 Windows 10 Native SSH Server Install
 https://www.youtube.com/watch?v=E8A8SRrHwQY
+How to Install SSH Server on Windows 10 - Remote into your computer using a Command Line [OpenSSH]
+https://www.youtube.com/watch?v=HCmEB5qtkSY
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
 https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/

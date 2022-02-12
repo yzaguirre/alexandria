@@ -38,7 +38,7 @@ Create based on file list
 https://superuser.com/questions/657859/7-zip-how-to-use-command-line-to-include-exclude-large-list-of-files
 	7z a -t7z -ir@"files_to_include.txt" -xr@"files_to_exclude.txt" ....
 https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
-	7z a -ttar -so my_files | ncat --send-only ip port
+	7z a -ttar -so archive.tar my_files | ncat --send-only ip port
 Add all files from directory "dir1" to SFX archive  archive.exe
 (Remark : SFX archive MUST end with ".exe")
 	7z a -sfx archive.exe dir1

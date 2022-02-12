@@ -337,9 +337,13 @@ Zip file
 https://stackoverflow.com/questions/3423540/zip-latest-committed-changes-only
 017 Introduction to Git Archive
 https://www.youtube.com/watch?v=HQU8Y38KgdA
+Using Git Archive to Export Files
+https://www.youtube.com/watch?v=QddBztXi2o8
 	git archive -o ../latest.zip some-commit
 	git archive -o ../latest.zip some-commit $(git diff --name-only earlier-commit some-commit)
 	git archive --prefix=trick_15.0.0/ -o trick15.tar.gz 15.0.0 trick_source/
+Available formats
+	git archive -l
 Make zip of changed files
 https://stackoverflow.com/questions/23115777/git-archive-with-unstaged-changes
 	git diff --name-only -a | xargs zip myUnstagedChanges.zip
@@ -376,3 +380,22 @@ https://www.atlassian.com/git/tutorials/rewriting-history
 	git add file.txt
 	git commit --amend
 	git commit --amend --no-edit
+
+Root directory of a repository
+https://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command
+	git rev-parse --show-toplevel
+Make an alias
+	git config --global alias.root 'rev-parse --show-toplevel'
+	git root
+This adds the whole working tree from any directory in the repo
+	git add :/
+
+FS Monitor
+Activate
+	git config core.useBuiltinFSMonitor true
+	git config core.untrackedCache true
+Usage
+	git fsmonitor--daemon start
+	git fsmonitor--daemon run
+	git fsmonitor--daemon stop
+	git fsmonitor--daemon status

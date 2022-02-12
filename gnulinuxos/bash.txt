@@ -206,3 +206,8 @@ https://twitter.com/nixcraft/status/1477012146877710337
 Ctrl + x + ( To start recording a macro
 Ctrl + x + ) To stop recording a macro
 Ctrl + x + e To execute the last recorded macro
+
+Read PATH environment variable
+https://twitter.com/lauren_n_roth/status/1491865185254006790
+Best way to print $PATH so you can really read it:
+	echo $PATH | sed 's/:/\n/g' | sort | uniq -c

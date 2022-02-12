@@ -23,9 +23,11 @@ https://www.youtube.com/watch?v=xPFLAAhuGy0
 Usage
 Set up Git LFS for your user account
 	git lfs install
+Check .git/hooks/ directory
 In each Git repository where you want to use Git LFS,
 select the file types you'd like Git LFS to manage
 (or directly edit your .gitattributes).
 You can configure additional file extensions at anytime.
 	git lfs track "*.psd"
 	git add .gitattributes
+*.psd Files gets added to .git/lfs/ directory

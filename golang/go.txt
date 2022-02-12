@@ -11,18 +11,35 @@ https://news.ycombinator.com/item?id=16957307
 
 https://talks.golang.org/2016/applicative.slide
 http://engineroom.teamwork.com/go-learn/
-https://golang.org/dl/
+
 https://golang.org/doc/install
-	wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
-	wget https://redirector.gvt1.com/edgedl/go/go1.9.2.linux-amd64.tar.gz
-	sha256sum go1.9.2.linux-amd64.tar.gz
-de874549d9a8d8d8062be05808509c09a88a248e77ec14eb77453530829ac02b
-	tar xf go1.9.2.linux-amd64.tar.gz -C /opt
-	mkdir /opt/go/libs
+Go 1.17.7 and Go 1.16.14 are released
+https://groups.google.com/g/golang-announce/c/SUsQn0aSgPQ/m/gx45t8JEAgAJ?pli=1
+https://twitter.com/golang/status/1491914601948233731
+https://go.dev/dl/#go1.17.7
+	wget https://go.dev/dl/go1.17.7.linux-amd64.tar.gz
+	sha256sum go1.17.7.linux-amd64.tar.gz
+02b111284bedbfa35a7e5b74a06082d18632eff824fd144312f6063943d49259
+	tar xf go1.17.7.linux-amd64.tar.gz -C /usr/local
+	mkdir /usr/local/go/libs
 	vim + ~/.profile
-export GOROOT=/opt/go
+export GOROOT=/usr/local/go
 export GOPATH=$GOROOT/libs
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+Windows
+	winget install GoLang.Go
+	choco install go
+	wget https://go.dev/dl/go1.17.7.windows-amd64.msi
+	sha256sum go1.17.7.windows-amd64.msi
+7aa1a850ddaedb2f1a54e97848b40d84bf9521d5e5e5bca96684dc60a6503f1e
+	explorer.exe go1.17.7.windows-amd64.msi
+Binary at
+%USERPROFILE%\go\bin
+C:\Program Files\Go\bin
+
+Usage
+	go version
+	
 
 Test your installation
 	vim hello.go
