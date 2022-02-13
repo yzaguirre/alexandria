@@ -1,0 +1,15 @@
+The Private and Open Voice Assistant
+https://mycroft.ai
+
+Hey Jarvis | Mycroft | PiCroft Setup on Raspberry Pi
+https://www.youtube.com/watch?v=4luTnRpfgbs
+
+Download Picroft Stable 2020-09-07 image
+https://github.com/MycroftAI/enclosure-picroft/
+	sha256sum Picroft_v20.08_2020-09-07.img.zip
+3d3c99c53793224b84de02e816435230f2bbe6272b71d8909afee43e5ef9a402
+
+Install Raspberry Pi OS using Raspberry Pi Imager
+https://www.raspberrypi.com/software/
+	wget https://downloads.raspberrypi.org/imager/imager_1.7.1_amd64.deb
+	wget https://downloads.raspberrypi.org/imager/imager_1.7.1_amd64.deb.sig

@@ -367,7 +367,7 @@ https://www.endpoints.dev/
 https://news.ycombinator.com/item?id=23079121
 
 Benchmarking
-tsung, see ~/web/tsung.txt
+tsung, see ./web/tsung.txt
 
 https://appthwack.com/
 transcoder

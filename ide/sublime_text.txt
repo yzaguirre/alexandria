@@ -152,8 +152,21 @@ php-cs-fixer
 
 # Git
 https://www.sublimetext.com/blog/articles/sublime-text-3-point-2
-https://www.sublimetext.com/docs/3/git_integration.html
-https://www.sublimetext.com/docs/3/incremental_diff.html
+https://www.sublimetext.com/docs/git_integration.html
+Index vs HEAD
+https://stackoverflow.com/questions/3689838/whats-the-difference-between-head-working-tree-and-index-in-git
+https://www.sublimetext.com/docs/incremental_diff.html
+Navigation
+Ctrl+.
+Ctrl+,
+diffs may be toggled via keyboard shortcut:
+Ctrl+K, Ctrl+/
+To toggle the diff for a region, while hiding all other diffs, press:
+Ctrl+K, Ctrl+;
+Reverting
+A modification may be reverted to the original text by the keyboard shortcut:
+Alternatively, the menu Edit ▶ Text ▶ Revert Modification may be used.
+Ctrl+K, Ctrl+Z
 
 https://laravel-news.com/minimalist-sublime-text-3-setup-for-php
 

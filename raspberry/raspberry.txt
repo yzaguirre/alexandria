@@ -138,3 +138,9 @@ Using IceWM and a Raspberry Pi as my main PC, sharing my theme, config and some
 https://news.ycombinator.com/item?id=27796443
 
 https://www.cnx-software.com/2021/07/13/diy-raspberry-pi-4-mini-server-includes-ups-and-oled-information-display/s
+
+How to Solder Header Pins to a Raspberry Pi Pico Board
+https://www.youtube.com/watch?v=YhdrowzzEjo
+
+Grove Base Kit for Raspberry Pi - Unboxing + Getting Started + Video Tutorials
+https://www.youtube.com/watch?v=lsaXVRk6mKE

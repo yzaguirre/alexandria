@@ -4,16 +4,27 @@ https://news.ycombinator.com/item?id=9809427
 NTP=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
 
 http://xmodulo.com/use-systemd-system-administration-debian.html
-	systemctl - list all loaded units and their state (where unit is the term for a job/service)
-	systemctl list-units - list all units
-	systemctl status [NAME...] - service status
-	systemctl start [NAME...] - start (activate) one or more units
-	systemctl stop [NAME...] - stop (deactivate) one or more units
-	systemctl disable [NAME...] - disable one or more unit files
-	systemctl list-unit-files - show all installed unit files and their state
-	systemctl --failed - show which units failed during boot
-	systemctl --type=mount - filter for types; types could be: service, mount, device, socket, target
-	systemctl enable debug-shell.service - start a root shell on TTY 9 for debugging 
+List all loaded units and their state (where unit is the term for a job/service)
+	systemctl
+List all units
+	systemctl list-units
+Service status
+	systemctl status [NAME...]
+Start (activate) one or more units
+	systemctl start [NAME...]
+Stop (deactivate) one or more units
+	systemctl stop [NAME...]
+Disable one or more unit files
+	systemctl disable [NAME...]
+Show all installed unit files and their state
+	systemctl list-unit-files
+	systemctl list-unit-files --type=service
+Show which units failed during boot
+	systemctl --failed
+Filter for types; types could be: service, mount, device, socket, target
+	systemctl --type=mount
+Start a root shell on TTY 9 for debugging
+	systemctl enable debug-shell.service
 	
 	systemctl enable telnet.sockets
 	systemctl enable telnet
@@ -57,11 +68,16 @@ Log levels can also be edited in /etc/systemd/system.conf.
 
 Analyzing the Boot Process with systemd
 systemd allows you to effectively analyze and optimize your boot process:
-	systemd-analyze - show how long the last boot took for kernel and userspace
-	systemd-analyze blame - show details of how long each service took to start
-	systemd-analyze critical-chain - print a tree of the time-critical chain of units
-	systemd-analyze dot | dot -Tsvg > systemd.svg - put a vector graphic of your boot process (requires graphviz package)
-	systemd-analyze plot > bootplot.svg - generate a graphical timechart of the boot process 
+Show how long the last boot took for kernel and userspace
+	systemd-analyze
+Show details of how long each service took to start
+	systemd-analyze blame
+Print a tree of the time-critical chain of units
+	systemd-analyze critical-chain
+Put a vector graphic of your boot process (requires graphviz package)
+	systemd-analyze dot | dot -Tsvg > systemd.svg
+Generate a graphical timechart of the boot process
+	systemd-analyze plot > bootplot.svg
 
 More information
 http://0pointer.de/blog/projects/systemd.html
@@ -75,3 +91,7 @@ Add a nice to a unit file
 Nice=-10
 Systemd can actually create the necessary directories and files for you
 	systemctl edit nginx.service
+
+Services atLinux Essentials - systemd: Using the systemctl command
+https://www.youtube.com/watch?v=5JVBpXiYMKo
+/usr/lib/systemd/system

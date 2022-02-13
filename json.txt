@@ -92,3 +92,12 @@ https://github.com/kellyjonbrazil/jtbl
 Extracting Objects Recursively with Jq
 https://til.simonwillison.net/jq/extracting-objects-recursively
 https://news.ycombinator.com/item?id=28026712
+
+A command-line pager for JSON data.
+https://pauljuliusmartinez.github.io
+https://github.com/PaulJuliusMartinez/jless
+	wget https://github.com/PaulJuliusMartinez/jless/releases/download/v0.7.1/jless-v0.7.1-x86_64-unknown-linux-gnu.zip
+	7z x -o/usr/local/bin jless-v0.7.1-x86_64-unknown-linux-gnu.zip
+Usage
+	jless file.json
+	cat commits.json | jless

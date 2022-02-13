@@ -24,3 +24,7 @@ Verify download
 	gpg --verify geany-plugins-1.38_setup.exe.sig
 
 Add "C:\Program Files\Geany\bin" to PATH
+
+https://stackoverflow.com/questions/36561216/geany-can-we-open-a-website-link-from-geany-text-editor
+<Primary><Shift>k to open links
+Context: chromium %s

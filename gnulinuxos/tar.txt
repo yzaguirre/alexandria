@@ -24,6 +24,10 @@ Suggests use xf
 --strip-components=NUMBER
 	Strip NUMBER leading components from file names on extraction.
 
+Extract and rename the files
+https://stackoverflow.com/questions/9729793/rename-directory-name-before-tar-happens
+	tar -zxf my-dir.tar.gz --transform s/my-dir/your-dir/
+
 7z. See ~/compression/7zip.txt
 	tar cf - directory | 7za a -si directory.tar.7z
 https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
@@ -52,45 +56,39 @@ new-tar-file-name.tar.gz - the name of the tar.gz to create.
 file-or-folder-to-archive - the name of the folder we want to archive.
 
 http://arxiv.org/help/tar
-	$ tar -cvf mystuff.tar foo.tex fig1.eps fig2.eps
-	$ gzip mystuff.tar
+	tar cvf mystuff.tar foo.tex fig1.eps fig2.eps
+	gzip mystuff.tar
 o también
-	$ tar -cvzf mystuff.tar.gz foo.tex fig1.eps fig2.eps
+	tar cvzf mystuff.tar.gz foo.tex fig1.eps fig2.eps
 
 xz http://unix.stackexchange.com/questions/28976/how-to-xz-a-directory-with-tar-using-maximum-compression
 lzma http://www.fileinfo.com/extension/lzma
 http://martin.ankerl.com/2006/06/22/lzma-compression-in-linux/
 http://superuser.com/questions/540042/how-do-i-compress-multiple-files-into-one-archive-using-lzma
-	$ tar -cv gimp |lzma e -d25 -si -so >gimp.tar.lzma
-	$ tar cf gimp.tar.lzma --lzma files
+	tar -cv gimp | lzma e -d25 -si -so >gimp.tar.lzma
+	tar cf gimp.tar.lzma --lzma files
 Append
 http://unix.stackexchange.com/questions/13093/add-update-a-file-to-an-existing-tar-gz-archive
-	$ gunzip archive.tar.gz
-	$ tar rf archive.tar data/data/com.myapp.backup/./files/settings.txt
-	$ gzip archive.tar
+	gunzip archive.tar.gz
+	tar rf archive.tar data/data/com.myapp.backup/./files/settings.txt
+	gzip archive.tar
 
 Multi Volume tar
 http://www.linuxquestions.org/questions/linux-software-2/multi-volume-tar-278989/
 You need to use the multi-archive flags, and to give it a tape length which is N*1024 bytes
 
 So to split a large archive you can use: ( note 4505600 is a guess it maybe a little smaller size that you need )
-
-tar -c -M -L=4505600 --file=part1.tar largefile.tar.gz
-
+	tar -c -M -L=4505600 --file=part1.tar largefile.tar.gz
 It will stop after creating the first part and ask you:
-
 Prepare volume #2 for part1.tar and hit return:
-
 What you need to do is enter:
-n part2.tar
+	n part2.tar
 
 You will then get the prompt
 Prepare volume #2 for part2.tar and hit return:
-
 and you can hit return. You can of couse repeat this for as many parts as you want.
 
 Putting the parts back together is a matter of
-
-tar -x -M --file=part1.tar largefile.tar.gz
+	tar -x -M --file=part1.tar largefile.tar.gz
 Prepare volume #2 for part1.tar and hit return: n part2.tar
 Prepare volume #2 for part2.tar and hit return:

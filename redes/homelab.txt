@@ -1,2 +1,5 @@
+Self-Hosting Security Guide for your HomeLab
+https://www.youtube.com/watch?v=Cs8yOmTJNYQ
+
 https://www.reddit.com/r/homelab/comments/ltyt0h/network_diagram_v2_a_cleaned_up_layout_plus_new/
 https://www.reddit.com/r/homelab/comments/lo8mol/network_diagram_to_represent_my_one_year/

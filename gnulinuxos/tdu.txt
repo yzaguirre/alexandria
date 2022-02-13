@@ -1,0 +1,18 @@
+https://bitbucket.org/josephpaul0/tdu/src/master/
+https://bitbucket.org/josephpaul0/tdu/downloads/
+	wget https://bitbucket.org/josephpaul0/tdu/downloads/tdu_linux_x64_v1.32.tar.xz
+	tar xf tdu_linux_x64_v1.32.tar.xz -C /usr/local/bin --strip-components=1 tdu_linux_x64_v1.32/tdu
+News version
+	wget https://bitbucket.org/josephpaul0/tdu/downloads/tdu_linux_v1.34.tar.xz
+	tar xf tdu_linux_v1.34.tar.xz -C /usr/local/bin --strip-components=1 --transform s/.linux.amd64// tdu_linux_v1.34/tdu.linux.amd64
+	tar -zxf my-dir.tar.gz 
+	tar xf tdu_linux_v1.34.tar.xz -C /usr/local/share/man/man1 --strip-components=2 tdu_linux_v1.34/doc/tdu.1
+Raspberry Pi 2 arm6	
+	tar xf tdu_linux_v1.34.tar.xz -C /usr/local/bin --strip-components=1 --transform s/.linux.armv6.rpi// tdu_linux_v1.34/tdu.linux.armv6.rpi
+Windows
+	wget https://bitbucket.org/josephpaul0/tdu/downloads/tdu_windows_v1.34.zip
+	7z e tdu_windows_v1.34.zip -oC:\Users\dyzag\bin tdu_windows_v1.34/tdu.windows.amd64.exe
+	cd bin
+	move tdu.windows.amd64.exe tdu.exe
+Usage
+	tdu /usr/local/bin

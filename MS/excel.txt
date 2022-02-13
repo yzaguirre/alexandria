@@ -1,6 +1,6 @@
 https://www.excel-easy.com
 
-See xlsx2csv @ ~/csv.txt
+See xlsx2csv @ ../csv.txt
 https://www.reifyworks.com/writing/2017-01-25-i-was-wrong-about-spreadsheets-and-im-sorry
 https://news.ycombinator.com/item?id=20417967
 
@@ -25,8 +25,13 @@ https://lucidgen.com/en/how-to-merge-multiple-excel-and-csv-files-into-1-sheet/
 
 csv2xlsx
 https://github.com/impercz/csv2xlsx
-	sudo -H pip install csv2xlsx
+	sudo -H pip install -U csv2xlsx
 	csv2xlsx 'utf-8' test < ~/test.csv > ~/test.xlsx
 
 https://github.com/nmolinos/csv2excel
 	csv2excel.exe -i input.csv
+
+Command line interface for reading spreadsheets
+https://github.com/Lauriat/texel
+https://www.reddit.com/r/commandline/comments/smuk08/texel_command_line_interface_for_reading/
+	sudo -H pip install -U texel

@@ -125,6 +125,9 @@ sudo sh <<SCRIPT
 
 SCRIPT
 
+Bash Shell Scripting Tutorial for Beginners | String Operators & Comparison | Ep#3 (Linux)
+https://www.youtube.com/watch?v=FZ_Uwc43Oo8
+
 Check if var is empty
 http://serverfault.com/questions/7503/how-to-determine-if-a-bash-variable-is-empty
 if [[ $variable ]]
