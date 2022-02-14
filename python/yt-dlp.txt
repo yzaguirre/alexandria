@@ -1,0 +1,27 @@
+https://docs.yt-dlp.org/en/latest/README.html#embedding-yt-dlp
+See ../downloads/yt-dlp.txt
+from yt_dlp import YoutubeDL
+
+ydl_opts = {'format': 'bestaudio'}
+with YoutubeDL(ydl_opts) as ydl:
+	ydl.download(['https://www.youtube.com/watch?v=BaW_jenozKc'])
+
+https://stackoverflow.com/questions/70583652/grabbing-video-title-from-yt-dlp-command-line-output
+https://stackoverflow.com/questions/23727943/how-to-get-information-from-youtube-dl-in-python/31184514#31184514
+from yt_dlp import YoutubeDL
+
+with YoutubeDL() as ydl: 
+	info_dict = ydl.extract_info('https://youtu.be/0KFSuoHEYm0', download=False)
+	video_url = info_dict.get("url", None)
+	video_id = info_dict.get("id", None)
+	video_title = info_dict.get('title', None)
+	print("Title: " + video_title) # <= Here, you got the video title
+Filename
+	requested_downloads = info_dict.get('requested_downloads')[0]
+	filename = requested_downloads.get("_filename")
+	print("Filename: " + filename) # <= Here, you got the video title
+
+Dump the information extraction
+with open('info_dict.json', 'w') as f:
+	f.write(json.dumps(info_dict))
+See ./info_dict.json

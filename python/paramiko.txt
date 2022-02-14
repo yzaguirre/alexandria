@@ -1,0 +1,39 @@
+paramiko
+http://www.lag.net/paramiko/docs/paramiko-module.html
+
+https://github.com/paramiko/paramiko/
+https://pypi.python.org/pypi/paramiko/1.12.0
+ver AeroFS/a/python/ssh
+https://pypi.python.org/pypi/paramiko
+
+On *nix remove the package (python-crypto too, if necessary)
+	apt remove python3-paramiko
+Compile dependencies rust. See ../rust/rust.txt
+https://github.com/pyca/cryptography/issues/6679
+	rustc --print target-list
+	export CARGO_BUILD_TARGET=aarch64-linux-android
+Install with pip
+	sudo -H pip install -U paramiko
+	python -c "import paramiko"
+
+SSH with tor
+https://stackoverflow.com/questions/17681031/python-ssh-using-tor-proxy
+
+http://www.lag.net/paramiko/
+https://github.com/paramiko/paramiko
+https://docs.paramiko.org/en/stable/
+
+Python SSH Client - Paramiko. SSH with Python.
+https://www.youtube.com/watch?v=AkcxJWbHV0w
+Paramiko Tutorial : Paramiko detailed explanation with Example for Network Engineers
+https://www.youtube.com/playlist?list=PLOocymQm7YWYc73phqzbZ1S3ANrVVpUFN
+
+Configuration
+	config = SSHConfig()
+	config.parse(open("some-path.config")
+
+from paramiko import SSHClient, AutoAddPolicy
+client = SSHClient()
+client.load_system_host_keys()
+client.set_missing_host_key_policy(AutoAddPolicy())
+client.connect(hostname='ip', port=22, username="user")

@@ -107,6 +107,16 @@ http://michelanders.blogspot.com/2011/10/implementing-https-server-in-python.htm
 http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python
 http://code.activestate.com/recipes/442473-simple-http-server-supporting-ssl-secure-communica/
 
+Read from command line arguments
+https://www.tutorialspoint.com/python/python_command_line_arguments.htm
+	import sys
+	print(sys.argv[1])
+
+Read from stdin
+https://docs.python.org/3/library/functions.html
+https://stackoverflow.com/questions/1450393/how-do-you-read-from-stdin
+name = input("Enter your name: ")
+
 https://stackoverflow.com/questions/12400256/python-converting-epoch-time-into-the-datetime
 	time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1347517370))
 	import datetime
@@ -145,7 +155,8 @@ if my_file.is_dir():
 if my_file.exists():
 
 Create a nested directory
-form pathlib import Path
+https://docs.python.org/3/library/pathlib.html
+from pathlib import Path
 Path("./data/subdir").mkdir(parents=True, exist_ok=True)
 Old method
 import os
@@ -240,6 +251,7 @@ from itertools import filterfalse
 a[:] = filterfalse(even, a)
  
 Subprocess
+https://docs.python.org/3/library/subprocess.html
 https://youtu.be/qUeud6DvOWI?t=360
 import subprocess
 subprocess.run(["ls", "-l"])
@@ -270,5 +282,34 @@ https://realpython.com/iterate-through-dictionary-python/
 for key, value in a_dict.items():
 	print(key, '->', value)
 
+Dictionary to string
+https://www.askpython.com/python/string/dictionary-to-a-string
+	str(my_dict)
+String to dictionary
+https://www.tutorialspoint.com/How-to-convert-a-string-to-dictionary-in-Python
+	import json
+	x = json.loads("{'foo' : 'bar', 'hello' : 'world'}")
+Dictionary to json
+https://www.geeksforgeeks.org/how-to-convert-python-dictionary-to-json/
+	json.dumps(dict, indent=4)
+Write the dictionary as json file
+with open("sample.json", "w") as outfile:
+    json.dump(dictionary, outfile)
+
+Tuple
+Length
+https://www.oraask.com/wiki/python-tuple-length
+len(my_tuple)
+
 F-Strings
 https://datagy.io/python-f-strings/
+
+Docstring
+https://www.geeksforgeeks.org/python-docstrings/
+help(YoutubeDL)
+print(YoutubeDL.__doc__)
+
+Ternary
+https://www.tutorialspoint.com/ternary-operator-in-python
+	[on_true] if [expression] else [on_false]
+	a if (a>b) else b

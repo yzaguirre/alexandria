@@ -1,0 +1,4 @@
+A minor nit: Rust didn't start "as a research project at Mozilla in 2010".
+It started as a personal project (on my own laptop, on my own time) in 2006.
+It was a small but real 17kloc native compiler for linux, mac and windows by the time Mozilla began sponsoring it in 2009-10.
+https://twitter.com/graydon_pub/status/1492634815748739077

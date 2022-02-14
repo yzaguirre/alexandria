@@ -4,3 +4,6 @@ https://rich.readthedocs.io/en/latest/
 https://hackaday.com/2022/01/19/make-your-python-cli-tools-pop-with-rich/
 https://news.ycombinator.com/item?id=30017154
 	sudo -H pip install -U rich
+
+Inspect an object
+	inspect(client, methods=True)

@@ -1,0 +1,8 @@
+Diagram as Code for prototyping cloud system architectures
+See ../documents/graphviz.txt
+https://github.com/mingrammer/diagrams
+https://diagrams.mingrammer.com/docs/getting-started/examples
+	sudo -H pip install -U diagrams
+
+Python Diagrams - Make incredible Diagrams using Python
+https://www.youtube.com/watch?v=Oa-_EUg44cQ

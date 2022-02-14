@@ -1,5 +1,8 @@
 https://filezilla-project.org
 
+Advanced FileZilla Usage: Directory Comparison & Synchronized Browsing
+https://www.youtube.com/watch?v=Fn0XbceYNpg
+
 FileZilla now contains adware if you download from the official homepage 
 https://twitter.com/nixcraft/status/1375389973742948355
 https://news.ycombinator.com/item?id=26601533

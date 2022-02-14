@@ -1,0 +1,12 @@
+Create curses based interactive selection list in the terminal
+https://github.com/wong2/pick
+https://stackoverflow.com/questions/56723852/console-select-menu-in-python
+	sudo -H pip install -U pick
+Usage
+
+from pick import pick
+
+title = 'Please choose your favorite programming language: '
+options = ['Java', 'JavaScript', 'Python', 'PHP', 'C++', 'Erlang', 'Haskell']
+
+option, index = pick(options, title, indicator='=>', default_index=2)

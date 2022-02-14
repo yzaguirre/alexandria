@@ -2,6 +2,16 @@ https://www.wireguard.com
 https://news.ycombinator.com/item?id=11994265
 https://www.digitalocean.com/community/tutorials/how-to-create-a-point-to-point-vpn-with-wireguard-on-ubuntu-16-04
 
+Server installation
+Included in linux kernel since 5.6
+	apt install wireguard linux-image-amd64
+Enable ipv4 forwarding
+	vim /etc/sysctl.d/99-sysctl.conf
+net.ipv4.ip_forward=1
+
+Client installation
+	apt install wireguard-tools
+
 https://lwn.net/SubscriberLink/748582/75c743d0eb3aae0f/
 https://news.ycombinator.com/item?id=16541409
 

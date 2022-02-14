@@ -1,0 +1,28 @@
+https://github.com/shajul/termux-api
+See ../android/termux.txt
+	pip install -U termux-api
+	python -i
+API
+	import termux
+	termux.API.vibrate()
+	help(termux.API) #for available methods
+
+Media
+	from termux import Media
+	help(Media)
+Media scan
+	Media.scan(file, verbose=True)
+
+Clipboard
+Set clipboard
+	from termux import Clipboard as cb
+	cb.setclipboard("new string")
+Get clipboard
+	cb.getclipboard()
+(0, 'from termux import Clipboard as cb', '')
+
+Toast
+	from termux import UI
+	UI.toast(text="Hi there!", bgcolor="grey", color="yellow", position="top")
+Radio
+	UI.radio(opts=(), title="Choose video quality")

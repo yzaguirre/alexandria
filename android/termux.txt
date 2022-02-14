@@ -18,6 +18,7 @@ https://wiki.termux.com/wiki/Sharing_Data
 https://wiki.termux.com/wiki/Intents_and_Hooks
 share URLs to Termux, place your youtube-dl script invocation here.
 	~/bin/termux-url-opener
+See ../python/termux.txt and ../python/yt-dlp.txt
 Share a single file with Termux to edit it.
 	~/bin/termux-file-editor
 You can save that file as a script
