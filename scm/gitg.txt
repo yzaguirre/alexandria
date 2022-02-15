@@ -1,0 +1,5 @@
+https://wiki.gnome.org/Apps/Gitg
+	apt install gitg
+Windows
+	winget install gnome.gitg
+	choco install gitg

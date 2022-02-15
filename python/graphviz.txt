@@ -1,3 +1,5 @@
 https://graphviz.readthedocs.io/en/stable/
-https://pypi.org/project/graphviz/
+https://pypi.org/project/graphviz
 	sudo -H pip install -U graphviz
+
+See ../documents/graphviz.txt and ./pydot.txt

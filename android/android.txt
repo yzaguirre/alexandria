@@ -1,3 +1,7 @@
+Android 13 virtualization lets Pixel 6 run Windows 11, Linux distributions
+https://www.cnx-software.com/2022/02/14/android-13-virtualization-lets-pixel-6-run-windows-11-linux-distributions/
+https://news.ycombinator.com/item?id=30328692
+
 Android P will strengthen requirements for TLS traffic in apps, blocking all non-TLS traffic if a developer doesn’t explicitly opt-in for unencrypted traffic.
 https://android-developers.googleblog.com/2018/03/previewing-android-p.html
 

@@ -3,6 +3,9 @@ https://foss.heptapod.net/openpyxl/openpyxl
 openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
 	sudo -H pip install -U openpyxl
 
+Automate Excel With Python - Python Excel Tutorial (OpenPyXL)
+https://www.youtube.com/watch?v=7YS6YDQKFh0
+
 Become an Excel Wizard With Python
 https://www.youtube.com/watch?v=q6Mc_sAPZ2Y
 

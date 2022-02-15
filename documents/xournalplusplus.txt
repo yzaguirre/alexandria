@@ -1,0 +1,11 @@
+https://xournalpp.github.io
+https://github.com/xournalpp/xournalpp
+	add-apt-repository ppa:apandada1/xournalpp-stable
+	apt update
+	apt install xournalpp
+	wget https://github.com/xournalpp/xournalpp/releases/download/v1.1.1/xournalpp-1.1.1-Ubuntu-focal-x86_64.deb
+Windows
+	choco install xournalplusplus
+
+https://xournal.online
+https://github.com/xournalpp/xournalpp_mobile

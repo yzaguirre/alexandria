@@ -1,4 +1,4 @@
-See ~/compression/zip.txt
+See ../compression/zip.txt
 http://gnuwin32.sourceforge.net/packages.html
 
 For use in other languajes, see java/jtar.txt and js/js-tar.txt

@@ -2,6 +2,11 @@ https://mermaid-js.github.io/mermaid/#/
 https://github.com/mermaid-js/mermaid
 https://news.ycombinator.com/item?id=18788244
 
+Now available in GitHub markdown
+https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/
+https://twitter.com/github/status/1493271204303708164
+https://news.ycombinator.com/item?id=30334338
+
 CLI
 https://github.com/mermaid-js/mermaid-cli
 	npm install -g @mermaid-js/mermaid-cli

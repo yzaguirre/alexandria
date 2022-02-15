@@ -226,3 +226,7 @@ Add-on TPM which can auto-decrypt the disk if it detects
 that the Raspberry Pi and SD card it is connected to have not changed
 https://www.zymbit.com/zymkey/
 https://news.ycombinator.com/item?id=29966539
+
+A baby saved 'Toy Story 2' from near complete deletion (2021)
+https://insidethemagic.net/2021/09/toy-story-2-saved-from-deletion-ks1/
+https://news.ycombinator.com/item?id=30330740

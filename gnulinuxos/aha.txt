@@ -1,4 +1,11 @@
 Ansi HTML Adapter
+Converts ANSI escape sequences of a unix terminal to HTML code.
 https://github.com/theZiz/aha
 https://news.ycombinator.com/item?id=24302896
-   git wdiff | aha > ~/Desktop/mydiff.html
+	apt install aha
+Homebrew
+	brew install aha
+
+Usage
+	git wdiff | aha > ~/Desktop/mydiff.html
+	lsd --long --color always | aha --black --title "Listing"> listing.htm

@@ -1,4 +1,9 @@
-https://graphviz.org/
+https://graphviz.org
+	apt install graphviz
+Windows
+	choco install graphviz
+
+https://graphviz.it
 https://www.guyrutenberg.com/2008/11/09/drawing-finite-automata-and-state-machines/
 https://smusamashah.github.io/text-to-diagram
 
@@ -17,3 +22,7 @@ https://edotor.net/
 https://sketchviz.com/new
 
 See ../python/pydot.txt, ../python/diagram.txt and ../python/graphviz.txt
+
+Graphviz's DOT - quick introduction
+https://www.youtube.com/watch?v=uA2coCHpH0A
+Graphvizs DOT language for fun and profit.pdf

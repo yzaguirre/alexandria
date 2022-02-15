@@ -114,3 +114,8 @@ using System.Net.Http.Json;
 var stock = await httpClient.GetFromJsonAsync<Stock>($"https://localhost:12345/stocks/{symbol}");
 //Send JSON
 await httpClient.PostAsJsonAsync<Stock>("https://localhost:12345/stocks/", stock);
+
+Documentation
+https://eduardstefanescu.dev/2021/08/25/asp-dotnet-core-swagger-documentation/
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/

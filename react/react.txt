@@ -26,7 +26,11 @@ Update tool
 	npm update -g create-react-app
 
 Using react router
+https://github.com/remix-run/react-router#readme
 	npm install -S react-router-dom
+
+React Router 6 - What Changed & Upgrading Guide
+https://www.youtube.com/watch?v=zEQiNFAwDGo
 
 Redux
 	npm install -S redux react-redux redux-thunk

@@ -5,14 +5,15 @@ For Python 3.10
 Windows
 	winget install Python.Python.3
 Installs at C:\Users\%HOME%\AppData\Local\Programs\Python\Python310
-For Python 3.9.9
+For Python 3.9.10
 https://www.python.org/downloads/release/python-399/
-	wget https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe
-	wget https://www.python.org/ftp/python/3.9.9/python-3.9.9-amd64.exe.asc
-	gpg --verify python-3.9.9-amd64.exe.asc
-	md5sum python-3.9.9-amd64.exe
-a09ef64c9ea2e7d9a04a2cafb833aa7b
-	explorer python-3.9.9-amd64.exe
+https://www.python.org/downloads/release/python-3910/
+	wget https://www.python.org/ftp/python/3.9.10/python-3.9.10-amd64.exe
+	wget https://www.python.org/ftp/python/3.9.10/python-3.9.10-amd64.exe.asc
+	gpg --verify python-3.9.10-amd64.exe.asc
+	md5sum python-3.9.10-amd64.exe
+747ac35ae667f4ec1ee3b001e9b7dbc6
+	explorer python-3.9.10-amd64.exe
 Disable the MAX_PATH path length limitation
 https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
 https://stackoverflow.com/questions/27680647/does-max-path-issue-still-exists-in-windows-10

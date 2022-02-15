@@ -1,4 +1,9 @@
-https://plantuml.com/
+https://plantuml.com
+https://github.com/plantuml/plantuml
+	wget https://github.com/plantuml/plantuml/releases/download/v1.2022.1/plantuml-1.2022.1.jar
+	java -jar plantuml-1.2022.1.jar sequenceDiagram.txt
+Windows
+	choco install plantuml
 https://news.ycombinator.com/item?id=23269697
 Bob->Alice : hello
 https://news.ycombinator.com/item?id=26976520
