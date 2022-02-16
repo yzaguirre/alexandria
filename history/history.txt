@@ -1,3 +1,11 @@
 Lynx
 https://www.reddit.com/r/commandline/comments/sqodxi/the_lynx_browser_30_years_later_still_the_best/
 See ../web/lynx.txt
+
+A Small Ode to the CRT
+https://axio.ms/projects/2022/02/08/CRTBox.html
+https://news.ycombinator.com/item?id=30350495
+
+Lorinda Cherry, author of dc, bc, eqn has died
+https://ncwit.org/profile/lorinda-cherry/
+https://news.ycombinator.com/item?id=30354391

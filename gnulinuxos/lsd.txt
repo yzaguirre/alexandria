@@ -35,3 +35,9 @@ Homebrew
 Configuration at
 ~/.config/lsd/config.yaml
 %APPDATA%\lsd\config.yaml
+
+Usage
+	lsd --long -A
+With dates. See ../gnulinuxos/date.txt
+	ll *sql *txt -tr --date "+%a %b %e %F %X"
+	ll *sql *txt -tr --date "+%F %X %b %a"

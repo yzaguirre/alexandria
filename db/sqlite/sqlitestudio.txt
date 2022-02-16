@@ -1,0 +1,26 @@
+A free, open source, multi-platform SQLite database manager
+written in C++, with use of Qt framework.
+https://sqlitestudio.pl
+https://github.com/pawelsalawa/sqlitestudio
+	wget https://github.com/pawelsalawa/sqlitestudio/releases/download/3.3.3/sqlitestudio-3.3.3.tar.xz
+	sha256sum sqlitestudio-3.3.3.tar.xz
+6EB644641E425A2EDDA9F9A632F53EF686A2EFC7734BECA608E8654AE8EA8C70
+Windows
+	choco install sqlitestudio
+Installed at
+C:\tools\sqlite-studio.portable\SQLiteStudio
+Move its contents to parent folder (C:\tools\sqlite-studio.portable) to fix shim.
+	cd C:\tools
+	move sqlite-studio.portable\SQLiteStudio .
+	rmdir sqlite-studio.portable
+	move SQLiteStudio sqlite-studio.portable
+
+Configuration location
+%APPDATA%\SalSoft\sqlitestudio\settings3
+$HOME/.config/sqlitestudio
+Also available at
+C:\tools\sqlite-studio.portable\sqlitestudio-cfg\settings3
+
+Usage
+	SQLiteStudio.exe
+	sqlitestudiocli.exe

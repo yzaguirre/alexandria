@@ -4,7 +4,7 @@ For Python 3.10
 	apt install python3.10
 Windows
 	winget install Python.Python.3
-Installs at C:\Users\%HOME%\AppData\Local\Programs\Python\Python310
+Installs at %USERPROFILE%\AppData\Local\Programs\Python\Python310
 For Python 3.9.10
 https://www.python.org/downloads/release/python-399/
 https://www.python.org/downloads/release/python-3910/
