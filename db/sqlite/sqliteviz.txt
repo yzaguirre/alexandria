@@ -1,3 +1,4 @@
 Instant offline SQL-powered data visualisation in your browser
+https://lana-k.github.io/sqliteviz/
 https://github.com/lana-k/sqliteviz
 https://news.ycombinator.com/item?id=27165192

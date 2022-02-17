@@ -1,11 +1,14 @@
-https://sqlitebrowser.org/
+https://sqlitebrowser.org
 https://github.com/sqlitebrowser/sqlitebrowser
+	apt install sqlitebrowser
+Ubuntu
+	add-apt-repository -y ppa:linuxgndu/sqlitebrowser
 	apt install sqlitebrowser
 Compile
 	apt install libsqlite3-dev build-essential cmake qttools5-dev
-	wget https://github.com/sqlitebrowser/sqlitebrowser/archive/v3.12.1.tar.gz
-	tar xf v3.12.1.tar.gz
-	cd sqlitebrowser-3.12.1
+	wget https://github.com/sqlitebrowser/sqlitebrowser/archive/v3.12.2.tar.gz
+	tar xf v3.12.2.tar.gz
+	cd sqlitebrowser-3.12.2
 	cmake .
 	make
 	sudo make install
@@ -18,13 +21,17 @@ Compile
 AppImage
 	cd ~/appimage
 	wget https://github.com/sqlitebrowser/sqlitebrowser/releases/download/continuous/DB_Browser_for_SQLite--x86_64.AppImage
+	sha256sum DB_Browser_for_SQLite--x86_64.AppImage
+ea14c7439f7e666f3e9d8cbffe9048134b87db3e2d7bf65f4146b0649536de5c
 	chmod u+x DB_Browser_for_SQLite--x86_64.AppImage
 Shortcut at ~/.local/share/applications/
 	ln -s ~/appimage/DB_Browser_for_SQLite--x86_64.AppImage /usr/local/bin/sqlitebrowser
-
 Windows
+	winget install DBBrowserForSQLite.DBBrowserForSQLite
+Scoop
 	scoop bucket add extras
 	scoop install sqlitebrowser
-
+Chocolately
+	choco install sqlitebrowser
 MacOS
 	brew install --cask db-browser-for-sqlite

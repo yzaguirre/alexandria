@@ -13,6 +13,12 @@ https://www.youtube.com/watch?v=mP_Ln-Z9-XY
 How to send Email with Attachment using Python
 https://www.youtube.com/watch?v=J96AFzl8qpE
 
+3 Python Automation Projects - For Beginners
+https://www.youtube.com/watch?v=Oz3W-LKfafE
+https://github.com/techwithtim/3-Python-Automation-Projects/blob/main/send_email.py
+
+import smtplib
+import ssl
 from email.message import EmailMessage
 import imghdr
 
@@ -30,6 +36,17 @@ msg.add_alternative("""\
 <html>
 """, subtype='html')
 
+html = f"""
+<html>
+	<body>
+		<h1>{subject}</ht>
+		<p>{body}</p>
+	</body>
+</html>
+"""
+
+msg.add_alternative(html, subtype="html")
+
 Open the file to attach:
 files = ['image.jpg', 'resume.pdf']
 for file in files:
@@ -39,6 +56,11 @@ for file in files:
 		file_name = f.name
 	# msg.add_attachment(file_data, maintype='image', subtype=file_type, filename=file_name)
 	msg.add_attachment(file_data, maintype='application', subtype='octet-stream', filename=file_name)
+
+context = ssl.create_default_context()
+with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+	server.login(sender_email, password)
+	server.sendmail(sender_mail, password, msg.as_string())
 
 How to Send Emails Using Python - Plain Text, Adding Attachments, HTML Emails, and More
 https://www.youtube.com/watch?v=JRCJ6RtE3xU

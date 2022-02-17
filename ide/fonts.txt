@@ -10,12 +10,14 @@ Manual install linux and macos
 Fira Code font
 https://github.com/tonsky/FiraCode
 https://www.youtube.com/watch?v=Dnq5QhY7lOQ
-	wget https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
-	unzip Fira_Code_v5.2.zip -d ~/.fonts
+	wget https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
+	unzip Fira_Code_v6.2.zip -d ~/.fonts
+Windows
+	choco install firacode
 
 https://fonts.google.com/specimen/Roboto+Mono
 
-https://github.com/daylerees/colour-schemes
+https://github.com/daylerees/colour-schemes+
 
 https://github.com/ryanoasis/nerd-fonts
 

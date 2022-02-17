@@ -1,5 +1,25 @@
-https://htop.dev/
+https://htop.dev
+https://github.com/htop-dev/htop
 https://twitter.com/nixcraft/status/1365755965807628288
+
+Linux Essentials - htop
+https://www.youtube.com/watch?v=tU9cO9FwDx0
+
+Install
 	apt install htop
+Compile
+	apt remove htop
+	apt install libncursesw5-dev autotools-dev autoconf build-essential
+	apt install libsensors-dev libcap-dev libnl-3-dev libnl-genl-3-dev
+	wget https://github.com/htop-dev/htop/releases/download/3.1.2/htop-3.1.2.tar.xz
+	wget https://github.com/htop-dev/htop/releases/download/3.1.2/htop-3.1.2.tar.xz.sha256
+	sha256sum -c --ignore-missing htop-3.1.2.tar.xz.sha256
+	tar xf htop-3.1.2.tar.xz
+	cd htop-3.1.2
+	./autogen.sh && ./configure --enable-sensors --enable-capabilities --enable-delayacct
+	make -j 12
+Install
+	make install
+Installed at /usr/local
 MacOS
 	brew install htop

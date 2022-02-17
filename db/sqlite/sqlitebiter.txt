@@ -1,4 +1,10 @@
+sqlitebiter is a CLI tool to convert CSV / Excel / HTML / JSON / Jupyter Notebook / LDJSON / LTSV / Markdown / SQLite / SSV / TSV / Google-Sheets to a SQLite database file.
 https://sqlitebiter.readthedocs.io/en/latest/
-	sudo -H pip3 install sqlitebiter
+	sudo -H pip install -U sqlitebiter
+Setup command completion for bash:
+    sqlitebiter completion bash >> ~/.bashrc
+Setup command completion for zsh:
+    sqlitebiter completion zsh >> ~/.zshrc
+
 https://sqlitebiter.readthedocs.io/en/latest/pages/usage/file/index.html#examples
 	sqlitebiter -o sample.sqlite file call_log.json

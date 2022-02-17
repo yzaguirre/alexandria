@@ -10,6 +10,8 @@ See ../../secure/hash.txt
 	openssl dgst -sha3-256 sqlite-tools-linux-x86-3370200.zip
 	rhash --sha3-256 sqlite-tools-linux-x86-3370200.zip
 52e940db6ee099028be48869b4c7415a9c181b3431f7c4303fbddbd2503b05da
+	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3370200.zip
+Installs sqlite3, sqlite3_analyzer and sqldiff
 Windows
 Android Studio inclues sqlite version 3.32.2
 	choco install sqlite
