@@ -1,11 +1,13 @@
-https://litecli.com/
+https://litecli.com
 https://www.pgcli.com/launching-litecli.html
 https://news.ycombinator.com/item?id=18831470
-	sudo -H pip3 install -U litecli
-	litecli sqlite_db_name
-A config file is automatically created at ~/.config/litecli/config at first launch.
-
-MacOS
+	sudo -H pip install -U litecli
+A config file is automatically created at first launch.
+~/.config/litecli/config
+%LOCALAPPDATA%\dbcli\litecli\config
+Homebrew
 	brew tap dbcli/tap
 	brew install litecli
+
+Usage
 	litecli <db_name>

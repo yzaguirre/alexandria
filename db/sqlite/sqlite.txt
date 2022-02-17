@@ -1,10 +1,28 @@
-https://www.sqlite.org/
+https://www.sqlite.org
+
+Install common tools
+	apt install sqlite3 php-sqlite
+Restart apache2 web server
+	service apache2 restart
+Binary
+See ../../secure/hash.txt
+	wget https://www.sqlite.org/2022/sqlite-tools-linux-x86-3370200.zip
+	openssl dgst -sha3-256 sqlite-tools-linux-x86-3370200.zip
+	rhash --sha3-256 sqlite-tools-linux-x86-3370200.zip
+52e940db6ee099028be48869b4c7415a9c181b3431f7c4303fbddbd2503b05da
+Windows
+Android Studio inclues sqlite version 3.32.2
+	choco install sqlite
+	
 http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
 https://news.ycombinator.com/item?id=8033210
 https://www.sqlite.org/whentouse.html
 
 https://antonz.org/sqlite-is-not-a-toy-database/
 https://news.ycombinator.com/item?id=26580614
+
+Datatypes
+https://www.sqlite.org/datatypes.html
 
 IFNULL
 https://www.sqlite.org/lang_corefunc.html#ifnull
@@ -19,11 +37,6 @@ https://www.sqlitetutorial.net/sqlite-string-functions/
 https://www.sqlite.org/cli.html
 https://www.sqlite.org/lang.html
 https://www.sqlite.org/lang_createtable.html
-
-Install common tools
-	apt install sqlite3 php-sqlite
-Restart apache2 web server
-	sudo service apache2 restart
 
 Abrir la base de datos (se crea en caso de no existir)
 	sqlite3 parqueo_fi.db

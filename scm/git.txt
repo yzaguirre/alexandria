@@ -104,6 +104,7 @@ System config: /etc/gitconfig
 Global config: ~/.gitconfig
 	git config --global user.name "David Y. Gonzalez"
 	git config --global user.email "dvdyzag@gmail.com"
+	git config --global init.defaultBranch main
 https://stackoverflow.com/questions/46992596/configure-gpg-for-git-on-windows
 https://neurotechnics.com/blog/configure-gpg-to-sign-git-commits-in-windows/
 	git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"

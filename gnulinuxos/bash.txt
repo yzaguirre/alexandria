@@ -1,3 +1,7 @@
+Bash Pitfalls
+http://mywiki.wooledge.org/BashPitfalls
+https://news.ycombinator.com/item?id=30345487
+
 https://www.reddit.com/r/linux/comments/nvaolb/bash_turns_32_today_which_is_the_default_shell_on/
 $! ALT+. ALT+_
 $_ => last argument after shell expansion

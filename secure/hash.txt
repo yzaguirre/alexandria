@@ -1,2 +1,40 @@
 https://github.com/in3rsha/sha256-animation
 https://news.ycombinator.com/item?id=23165333
+
+RHash (Recursive Hasher) is a console utility for computing and
+verifying hash sums of files. It supports CRC32, MD4, MD5, SHA1,
+SHA256, SHA512, Tiger, DC++ TTH, BitTorrent BTIH, ED2K, AICH,
+GOST R 34.11-94, RIPEMD-160, HAS-160, EDON-R 256/512, Whirlpool
+and Snefru-128/256 algorithms. Hash sums are used to ensure and
+verify integrity of large volumes of data for a long-term
+storing or transferring.
+http://rhash.anz.ru
+http://rhash.sourceforge.net
+https://github.com/rhash/RHash
+Windows
+	choco install rhash
+
+Usage
+	rhash -h
+Calculate sha3
+https://unix.stackexchange.com/questions/347295/how-can-i-generate-sha3-if-there-is-no-sha3sum-command-in-coreutils#347297
+	rhash --sha3-256 yourfile
+
+sha3sum - compute and check sha3xxx message digest.
+The command is similar to the GNU commands shaXXXsum.
+It use and wrap the RustCrypto/hashes lib.
+https://gitlab.com/kurdy/sha3sum
+	cargo install sha3sum
+Binary
+https://gitlab.com/kurdy/sha3sum/-/tags/V1.0.1
+	wget https://gitlab.com/kurdy/sha3sum/uploads/7e7b977628b56e32e63c9da5d029652a/sha3sum-x86_64-Linux-1.0.1.tar.gz
+	tar xf sha3sum-x86_64-Linux-1.0.1.tar.gz -c /tmp
+	cd /tmp
+	./sha3sum -c sha3sum.hash
+	./install.sh
+Windows
+	wget https://gitlab.com/kurdy/sha3sum/uploads/c999b0ca276300d5929ba3a45a7b536d/sha3sum-x86_64-Windows-1.0.1.zip
+	7z x -oC:\Users\dyzag\bin sha3sum-x86_64-Windows-1.0.1.zip
+	cd C:\Users\dyzag\bin
+	sha3sum -c sha3sum.hash
+	del sha3sum.hash
