@@ -22,6 +22,9 @@ Windows 10 Native SSH Server Install
 https://www.youtube.com/watch?v=E8A8SRrHwQY
 How to Install SSH Server on Windows 10 - Remote into your computer using a Command Line [OpenSSH]
 https://www.youtube.com/watch?v=HCmEB5qtkSY
+How to SSH into Windows from Windows (and copy files remotely)
+https://www.youtube.com/watch?v=pFTC4Rt-EDQ
+
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
 https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/
@@ -63,11 +66,10 @@ https://stackoverflow.com/questions/16212816/setting-up-openssh-for-windows-usin
 Alternative
 	icacls administrators_authorized_keys /inheritance:r /grant "Administradores:F" /grant "SYSTEM:F"
 Start server
-	sc start sshd
 	Start-Service sshd
 	Get-Service sshd
 Stop server
-	sc stop sshd
+	Stop-Service sshd
 
 Firewall
 https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/

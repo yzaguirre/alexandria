@@ -1,0 +1,12 @@
+https://tracker.debian.org/pkg/w3m
+	apt install w3m
+
+Usage
+	w3m
+	w3m https://duckduckgo.com/
+
+Shift+T Open new tab
+SHift+U go to URL
+
+How to Surf the Web in Terminal (with a text-based browser)
+https://www.youtube.com/watch?v=rbYHH7UJE3Y

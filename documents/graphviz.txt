@@ -26,3 +26,17 @@ See ../python/pydot.txt, ../python/diagram.txt and ../python/graphviz.txt
 Graphviz's DOT - quick introduction
 https://www.youtube.com/watch?v=uA2coCHpH0A
 Graphvizs DOT language for fun and profit.pdf
+GraphViz and DotFiles (Vlog) | What the tech is that?
+https://www.youtube.com/watch?v=QjUaNXNuNMs
+
+Usage
+dot files
+	vim new.gv
+graph foo {
+	a -- b;
+	a -- c;
+	c -- b;
+}
+	dot -Tpng new.gv -o new.png
+	neato -Tpng new.gv -o new.png
+	circo -Tpng new.gv -o new.png

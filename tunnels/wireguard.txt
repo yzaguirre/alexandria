@@ -1,6 +1,6 @@
 https://www.wireguard.com
 https://news.ycombinator.com/item?id=11994265
-https://www.digitalocean.com/community/tutorials/how-to-create-a-point-to-point-vpn-with-wireguard-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04
 
 Server installation
 Included in linux kernel since 5.6
@@ -44,21 +44,65 @@ Create a private key
 	wg genkey | sudo tee -a /etc/wireguard/wg0.conf | wg pubkey | sudo tee /etc/wireguard/publickey
 We will need to exchange the key in this file (/etc/wireguard/publickey) with the second server as we define our configuration.
 
-Open configuration file
+Create key pair a different way, on client
+	sudo bash -c "umask 077; wg genkey > /etc/wireguard/client.key"
+	sudo bash -c "wg pubkey < /etc/wireguard/client.key > /etc/wireguard/client.pub"
+Create key pair on server
+	umask 077; wg genkey > /etc/wireguard/server.key
+	wg pubkey < /etc/wireguard/server.key > /etc/wireguard/server.pub
+	cp /etc/wireguard/server.key /etc/wireguard/wg0.conf
+Open configuration file on server
 	sudo vim /etc/wireguard/wg0.conf
 Configuring the Interface Section
 We need to define the VPN IP address this node will use and the port that it will listen on for connections from peers
 [Interface]
+Address = 172.16.0.1/24
 PrivateKey = generated_private_key
-ListenPort = 5555
+ListenPort = 51820
 SaveConfig = true
+# Firewall rules
+PostUp   = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
+[Peer]
+# Client #1 details
+PublicKey = (client's public key goes here)
+# Traffic to route to this client
+AllowedIPs = 172.16.0.2/32
+
+On client
+	vim /etc/wireguard/wg0.conf
+[Interface]
+Address = 172.16.0.2/24
+PrivateKey = (client's private key goes here)
+# Set to your desired DNS server
+DNS = 8.8.8.8
+
+[Peer]
+PublicKey = (server's public key goes here)
+# Endpoint (server) can be a domain name or IP address
+Endpoint = (server's IP address goes here):51820
+# Traffic to route to server
+AllowedIPs = 0.0.0.0/0, ::/0
+# Keepalive (use if you're behind NAT)
+PersistentKeepalive = 25
+
+Start the service on the server
+	sudo systemctl enable --now wg-quick@wg0.service
+Start the client
+	sudo wg-quick up wg0
+Stop the client
+	sudo wg-quick down wg0
+
+Digital Ocean tutorial, for end to end
+https://www.digitalocean.com/community/tutorials/how-to-create-a-point-to-point-vpn-with-wireguard-on-ubuntu-16-04
 We will use the 10.0.0.0/24 subnet as the address space for our VPN.
 For each computer, you will need to pick a unique address within this range (10.0.0.1 to 10.0.0.254)
 and specify the address and subnet using CIDR notation.
 Address = 10.0.0.1/24
 
-/etc/wireguard/wg0.conf on second server
+wg0.conf on second server
+	vim /etc/wireguard/wg0.conf
 [Interface]
 PrivateKey = generated_private_key
 ListenPort = 5555
@@ -77,7 +121,7 @@ Endpoint = public_IP_of_first_server:5555
 To route to the server LAN:
 AllowedIPs = 192.168.2.1/24, 192.168.1.1/24
 
-To route all traffice to server:
+To route all traffic to server:
 AllowedIPs = 0.0.0.0/0, ::/0
 
 Add the following to the server config:
@@ -87,7 +131,7 @@ PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACC
 Opening the Firewall and Starting the VPN
 	sudo ufw allow 5555
 Now, start the wg-quick service using the wg0 interface file we defined:
-	sudo systemctl start wg-quick@wg0
+	sudo systemctl enable --now wg-quick@wg0.service
 This will start of the wg0 network interface on the machine. We can confirm this by typing:
 	ip addr show wg0
 We can use the wg tool to view information about the active configuration of the VPN:

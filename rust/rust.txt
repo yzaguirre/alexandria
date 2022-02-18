@@ -1,4 +1,4 @@
-https://www.rust-lang.org/
+https://www.rust-lang.org
 https://github.com/rust-lang/rust
 https://www.rust-lang.org/downloads.html
 	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz
@@ -66,6 +66,7 @@ exa
 lsd
 sk
 hx
+wasmer
 
 https://rustup.rs/
 https://ayende.com/blog/185665-A/writing-my-network-protocol-in-rust
@@ -117,6 +118,9 @@ or
 It creates Cargo.lock
 If you're building a library, put Cargo.lock in your .gitignore.
 If you're building an executable, check Cargo.lock into git.
+
+Check if code is correct
+	cargo check
 
 Once you're ready for release, you can use
 	cargo build --release

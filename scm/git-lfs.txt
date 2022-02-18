@@ -19,6 +19,10 @@ Homebrew
 
 045 Introduction to Git LFS (Large File Storage)
 https://www.youtube.com/watch?v=xPFLAAhuGy0
+How to upload large files in Github (Short tutorial on git - lms)
+https://www.youtube.com/watch?v=W4RCeVSs1Fg
+How To setup Git with Git LFS for Unity
+https://www.youtube.com/watch?v=09McJ2NL7YM
 
 Usage
 Set up Git LFS for your user account
@@ -29,5 +33,16 @@ select the file types you'd like Git LFS to manage
 (or directly edit your .gitattributes).
 You can configure additional file extensions at anytime.
 	git lfs track "*.psd"
+	git lfs track "*.so"
+	git lfs track "*.assets"
+	git lfs track "*.map"
+	git lfs track "*.fbx"
+When there is no file extention, you can add the whole directory
+	git lfs track "assets/*"
 	git add .gitattributes
 *.psd Files gets added to .git/lfs/ directory
+List files tracked by lfs
+	git lfs ls-files
+
+Sample .gitattributes file
+https://gist.github.com/Srfigie/77b5c15bc5eb61733a74d34d10b3ed87

@@ -1,0 +1,4 @@
+https://github.com/juergenpf/Geodesy
+https://www.nuget.org/packages/Geodesy/4.1.0
+<PackageReference Include="Geodesy" Version="4.1.0" />
+	Install-Package Geodesy -Version 4.1.0

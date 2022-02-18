@@ -28,3 +28,15 @@ Pandas Line Graph
 https://www.youtube.com/watch?v=P4F3PzCMrtk
 
 https://codeburst.io/plotting-with-pandas-dates-and-bar-plots-227f25351274
+
+Python Pandas Write to Excel Sheet
+https://www.youtube.com/watch?v=IcnYgh1bdIo
+
+import pandas as pd
+excel_header = ["Router hostname", "IP address"]
+data = [['hostname1', '1.1.1.1'],['hostname2', '2.2.2.2']]
+df = pdf.DataFrame(data, columns=excel_header)
+writer = pd.ExcelWriter('file1.xlsx', engine='xlsxwriter')
+
+df.to_excel(writer, sheet_name = "router_list")
+writer.save()

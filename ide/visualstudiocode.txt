@@ -1,13 +1,13 @@
-https://code.visualstudio.com/
+https://code.visualstudio.com
 https://code.visualstudio.com/updates/
 https://code.visualstudio.com/Docs/supporting/FAQ
 Install folder at
-C:\Users\Rlemus\AppData\Local\Programs\Microsoft VS Code
+C:\Users\dyzag\AppData\Local\Programs\Microsoft VS Code
 
 https://github.com/Microsoft/vscode
 Windows
 	winget install Microsoft.VisualStudioCode
-Install
+	choco install vscode vscode-python
 MacOS
 	wget "https://code.visualstudio.com/sha/download?build=stable&os=darwin" -O VSCode-darwin.zip
 	unzip VSCode-darwin.zip -d /Applications/
@@ -164,6 +164,12 @@ Snipped
 https://github.com/jeffersonlicet/snipped
 https://marketplace.visualstudio.com/items?itemName=jeffersonlicet.snipped
 https://www.reddit.com/r/webdev/comments/oqgq4f/snipped_my_first_vs_code_extension_create_fancy/
+
+Remote Development
+https://github.com/Microsoft/vscode-remote-release
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+VSCode for Remote development (vlog) | IT and DevOps Career Secrets
+https://www.youtube.com/watch?v=aaCpOBCrww0
 
 Visual Studio Code v1.60.0 now supports native bracket pair colorization!
 "editor.bracketPairColorization.enabled: true" is all you need to enable this 🧑‍💻

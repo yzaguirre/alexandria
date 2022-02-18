@@ -1,5 +1,10 @@
 See ./gitforwindows.txt
 
+Inside the Hidden Git Folder - Computerphile
+https://www.youtube.com/watch?v=bSA91XTzeuA
+13 Advanced (but useful) Git Techniques and Shortcuts
+https://www.youtube.com/watch?v=ecK3EnyGD8o
+
 https://bakkenbaeck.github.io/a-random-walk-through-git/
 
 https://akrabat.com/a-few-git-tips/
@@ -118,6 +123,10 @@ Local config: .git/config
 	git config core.autocrlf true
 Push options
 	git config --global push.default simple
+git proxy
+http://stackoverflow.com/questions/128035/how-do-i-pull-from-a-git-repository-through-an-http-proxy
+	git config --global http.proxy $http_proxy
+	git config --global https.proxy $http_proxy
 
 https://stackoverflow.com/questions/10018533/is-it-possible-to-git-status-only-modified-files#10018728
 	git ls-files -m
@@ -227,11 +236,6 @@ clone via SSH
 clone via HTTPS
 	git clone https://github.com/dvdyzag/alec.git
 
-git proxy
-http://stackoverflow.com/questions/128035/how-do-i-pull-from-a-git-repository-through-an-http-proxy
-git config --global http.proxy $http_proxy
-git config --global https.proxy $http_proxy
-
 https://help.github.com/articles/using-ssh-over-the-https-port
 Probar si tienes conexion ssh
 	ssh -T -p 443 git@ssh.github.com
@@ -267,8 +271,9 @@ http://stackoverflow.com/questions/927358/ddg#927386
 	<< edit files as necessary >>
 	git add ...
 	git commit -c ORIG_HEAD
-Email for git
-https://news.ycombinator.com/item?id=17441060
+Recover from remote
+	git fetch origin
+	git reset --hard origin/main
 
 List files in a commit
 https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
@@ -296,10 +301,13 @@ Make sure to edit the cover letter before sending
 	git format-patch --cover -letter HEAD^^^^^
 To send a patch series
 	git send-email
-To accept a set of patch files into your repositoyr, use git am
+To accept a set of patch files into your repositoy, use git am
 This will append the set of patches into your commit history on your current branch
 git am preserves the author names present in the patches
 	git am *.patch
+
+Email for git
+https://news.ycombinator.com/item?id=17441060
 
 Stashing
 Git maintains the stash list (a stack) of stashed diffs.

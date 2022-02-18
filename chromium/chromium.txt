@@ -1,4 +1,4 @@
-https://www.chromium.org/
+https://www.chromium.org
 
 https://www.reddit.com/r/linux/comments/l1xzah/multiple_distros_considering_removal_of_chromium/
 Google's software development mentality is everything should be run isolated.
@@ -30,6 +30,8 @@ Pin-Priority: 1
 Download .deb
 	wget http://packages.linuxmint.com/pool/upstream/c/chromium/chromium_90.0.4430.93~linuxmint1%2bdebbie_amd64.deb -O chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
+Windows
+	choco install chromium
 
 Use Debian package
 Let's Install Chromium in Ubuntu Without Snap
