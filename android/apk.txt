@@ -27,5 +27,10 @@ Read fingerprint off an APK
 A tool for reverse engineering Android apk files
 https://ibotpeaches.github.io/Apktool/
 https://github.com/iBotPeaches/Apktool
+https://ibotpeaches.github.io/Apktool/install/
 https://news.ycombinator.com/item?id=29962356
 	apktool d test.apk
+
+https://www.youtube.com/watch?v=9QxQmDx1wms
+apkversion - Display Android Version of the APK file - Linux CLI
+https://github.com/gotbletu/shownotes/blob/master/apkversion.md

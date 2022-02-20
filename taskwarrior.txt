@@ -1,6 +1,22 @@
 https://taskwarrior.org/download/
 https://gitpitch.com/GothenburgBitFactory/taskserver-setup#/16/6
 	apt install taskwarrior ptask tasksh
+Compile
+	wget https://github.com/GothenburgBitFactory/taskwarrior/releases/download/v2.6.1/task-2.6.1.tar.gz
+	rhash --sha3-224 task-2.6.1.tar.gz
+227926cee3af705e662466f9d5a6eac5a6fabbea810079f47039f4ed
+See ./secure/hash.txt
+	tar xf task-2.6.1.tar.gz
+	cd task-2.6.1
+	cmake -DCMAKE_BUILD_TYPE=release .
+	make -j12
+	sudo make install
+MSYS2
+	pacman -S task
+Configuration at
+~/.taskrc
+C:\Users\dyzag\.taskrc
+
 Usage
 	task add Say Hello due:friday
 	task list
@@ -12,8 +28,18 @@ Usage
 http://blog.polettix.it/setup-a-taskwarrior-server/#securing-the-communications
 https://gist.github.com/polettix/e8007a7f2064e7f133d93e060032a880
 https://taskwarrior.org/docs/taskserver/prep.html
+https://github.com/GothenburgBitFactory/taskserver
 taskwarrior server
 	apt install taskd
+Compile
+	wget https://taskwarrior.org/download/taskd-1.1.0.tar.gz
+	sha1sum taskd-1.1.0.tar.gz
+ded339deeee65277e4712f71a9159502f8b20b52
+	tar xf taskd-1.1.0.tar.gz
+	cd taskd-1.1.0
+	cmake .
+	make -j12
+	sudo make install
 Port tcp 53589
 Create user (debian uses Debian-taskd)
 Configuration

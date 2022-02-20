@@ -1,0 +1,7 @@
+Pyrite - open-source video conferencing
+https://garage44.org/posts/pyrite/pyrite-conferencing.html
+https://news.ycombinator.com/item?id=30398192
+Pyrite is a web(RTC) client for the Galène videoconference server.
+https://github.com/garage44/pyrite
+User passwords in
+	cat ~/code/galene/data/users.json

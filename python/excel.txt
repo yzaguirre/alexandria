@@ -1,3 +1,6 @@
+See ../datascience/pandas.txt and ../MS/excel.txt
+https://www.python-excel.org
+
 https://openpyxl.readthedocs.io/en/stable/
 https://foss.heptapod.net/openpyxl/openpyxl
 openpyxl is a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -25,4 +28,85 @@ https://www.youtube.com/watch?v=q6Mc_sAPZ2Y
 
 How to automate Excel using Python - Online Workshop
 https://www.youtube.com/watch?v=DxPL4SwzXVw
+https://github.com/Sven-Bo/automate-excel-workshop
+xlwings is a smart wrapper around pywin32 on Windows and appscript on Mac
+Works with Pandas
+Excel is not ideal when dealing with larger datasets
+Write user-defined-functions (UDF) in Python
+Run Python directly in Excel
 	sudo -H pip install -U plotly-express xlwings
+INPUT_DIR = Path.cwd() / "3-Merge-Excel-Files-Real-Life" / "INPUT"
+OUTPUT_DIR = Path.cwd() / "3-Merge-Excel-Files-Real-Life"
+# Create an empty workbook. This wb will be our final output
+summary_wb = wx.Book()
+summary_sht = summary_wb.sheets[0]
+summary_sht.name = "Summary"
+# Iterate over each file in directory. Copy cell range & paste it into summary workbook
+for file in INPUT_DIR.iterdir():
+	if file.suffix == ".xlsx":
+		wb = xw.Book(file)
+		wb.app.display_alerts = False
+		#wb.app.visible = False
+		sht = wb.sheets("Overview")
+		values = sht.range("B5").expand().copy()
+		dest_last_row = summary_sht.range("A1").expand().last_cell.row + 1
+		summary_sht.range(f"A{dest_last_row}").past()
+		wb.close()
+# Insert & style header of our summary workbook
+header = [
+	"Segment",
+	"Country",
+	"Product",
+	"Discount Band",
+	"Units Sold",
+	"Sale Price",
+	"Gross Sales",
+	"Discounts",
+	"Sales",
+	"COGS",
+	"Profit"
+]
+header_row = summary_sht.range("A1:K1")
+header_row.value = header
+header_row.font.bold = True
+header_row.font.color = (255, 255, 255)
+header_row.color = (119, 136, 153)
+
+# Use pandas to perform calculations, e.g. data aggregation
+df = summary_sht.range("A1").options(pd.DataFrame, expand="table").value
+data_by_country = df.groupby(by="Country").sum()[["Sales"]]
+data_by_country
+
+# Insert grouped dataframe into our summary workbook
+summary_sht.range("M1").value = data_by_country
+
+# Insert EXCEL chart
+chart = summary_sht.charts.add(
+	left=summary_sht.range("M8").left,
+	top=summary_sht.range("M8").top,
+	width=400,
+	height=200,
+)
+chart.set_source_data(summary_sht.range("M1").expand())
+chart.chart_type = "bar_stacked"
+ 
+# Insert PANDAS chart
+ax = data_by_country.sort_values(by="Sales").plot(kind="barh")
+fig = ax.get_figure()
+summary_sht.pictures.add(
+	fig,
+	name="Sales",
+	update=True,
+	left=summary_sht.range("M23").left,
+	top=summary_sht.range("M23").top,
+	width=400,
+	height=200,
+)
+
+# Clean up workbook, save workbook & quit Excel instance (if it is the only wb open)
+summary_sht.autofit()
+summary_wb.save(OUTPUT_DIT / "summary.xlsx")
+if len(summary_wb.app.books) == 1:
+	summary_wb.app.quit()
+else:
+	summary_wb.close()

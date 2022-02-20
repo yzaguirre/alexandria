@@ -48,6 +48,9 @@ https://www.youtube.com/watch?v=fpYbJCqpPS4
 
 Tremc
 https://github.com/tremc/tremc
+	git clone https://github.com/tremc/tremc
+	cd tremc
+	sudo make install
 
 Stig
 https://github.com/rndusr/stig

@@ -1,4 +1,4 @@
-https://vifm.info/
+https://vifm.info
 Vifm is a file manager with curses interface,
 which provides Vi[m]-like environment for managing objects within
 file systems, extended with some useful ideas from mutt.

@@ -658,6 +658,7 @@ dog
 broot
 procs
 Starship Prompt
+vifm
 
 Rust Programs Every Linux User Should Know About
 https://www.youtube.com/watch?v=dQa9mveTSV4

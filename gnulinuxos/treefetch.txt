@@ -1,4 +1,11 @@
-https://github.com/angelofallars/treefetch/
+A plant-based system fetch tool made with Rust.
+https://github.com/angelofallars/treefetch
 https://www.reddit.com/r/programming/comments/rqy1n6/comment/hqeyp24/
-	wget https://github.com/angelofallars/treefetch/releases/download/v1.2.1/treefetch
+	wget https://github.com/angelofallars/treefetch/releases/download/v2.0.0/treefetch
+	chmod u+x treefetch
 	mv treefetch /usr/local/bin
+
+Usage
+	treefetch
+	treefetch -b
+	treefetch -x

@@ -11,6 +11,16 @@ storing or transferring.
 http://rhash.anz.ru
 http://rhash.sourceforge.net
 https://github.com/rhash/RHash
+	apt install rhash
+Compile
+	wget https://github.com/rhash/RHash/archive/refs/tags/v1.4.2.tar.gz
+	wget https://github.com/rhash/RHash/releases/download/v1.4.2/v1.4.2.tar.gz.asc
+	gpg --verify  v1.4.2.tar.gz.asc
+	tar xf v1.4.2.tar.gz
+	cd RHash-1.4.2
+	./configure
+	make -j12
+	make install
 Windows
 	choco install rhash
 

@@ -1,3 +1,6 @@
+MariaDB SQL over SSL/TLS
+https://www.youtube.com/watch?v=wDVYaaNy2k8
+
 PP MariaDB Cookbook Mar 2014 page 249
 
 Certificates signed by a recognized and trusted certificate authority are preferred, but we

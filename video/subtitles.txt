@@ -1,6 +1,13 @@
 https://yessubtitles.com
-https://yts-subs.com/
+https://yts-subs.com
 See ~/python/webvtt-py.txt
 
 Subtitle and captions editor
-https://subtitle-horse.com/
+https://subtitle-horse.com
+
+Subliminal
+http://subliminal.readthedocs.org
+	sudo -H pip install -U subliminal
+
+Usage
+	subliminal download -l en FILE

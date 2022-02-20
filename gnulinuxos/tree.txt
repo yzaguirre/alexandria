@@ -1,0 +1,15 @@
+http://mama.indstate.edu/users/ice/tree/
+	apt install tree
+Latest
+	wget http://mama.indstate.edu/users/ice/tree/src/tree-2.0.2.tgz
+	tar xf tree-2.0.2.tgz
+	cd tree-2.0.2
+Edit Makefile
+	vim Makefile
+	make -j12
+	make install
+
+Usage
+	tree
+Print html page with color. No trailing slash for the base site.
+	tree -H ftp://davidyzaguirre.com -C -T "Files on dy" -o ../files.html

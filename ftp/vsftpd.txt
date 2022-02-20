@@ -1,0 +1,13 @@
+https://security.appspot.com/vsftpd.html
+	apt install vsftpd
+Compile
+	wget https://security.appspot.com/downloads/vsftpd-3.0.5.tar.gz
+	wget https://security.appspot.com/downloads/vsftpd-3.0.5.tar.gz.asc
+	gpg --verify vsftpd-3.0.5.tar.gz.asc
+	tar xf vsftpd-3.0.5.tar.gz
+	cd vsftpd-3.0.5
+	vim builddefs.h
+	mkdir /usr/share/empty
+	make -j12
+	make install
+	cp vsftpd.conf /etc

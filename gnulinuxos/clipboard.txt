@@ -1,12 +1,16 @@
+Command line interface to the X11 clipboard
 https://github.com/astrand/xclip
+Copy your password file for pasting
+	xclip /etc/passwd
 Copy Image to clipboard
 https://superuser.com/questions/199285/how-to-copy-image-to-clipboard-to-paste-to-another-application/1098582#1098582
 	xclip -selection clipboard -target image/png -i
 	adb shell screencap -p | xclip -selection clipboard -target image/png
-
 Paste into file
 https://www.reddit.com/r/linuxmasterrace/comments/ozc178/bash_is_the_worst_powershell_ftw/
 	xclip -o >> f
+Open a URL selected in an email client
+	mozilla `xclip -o`
 
 dead simple program that generates qr codes from your clipboard
 https://github.com/toasterrepairman/qlip

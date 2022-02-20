@@ -1,4 +1,4 @@
-http://www.workrave.org/
+http://www.workrave.org
 
 See taskwarrior.txt
 
@@ -16,7 +16,7 @@ Todolist
 https://github.com/gammons/todolist
 
 Orgmode
-http://orgmode.org/
+http://orgmode.org
 
 Devtodo
 https://github.com/alecthomas/devtodo2
@@ -24,3 +24,26 @@ https://github.com/alecthomas/devtodo2
 https://github.com/climech/grit
 A multitree-based personal task manager
 https://news.ycombinator.com/item?id=26673221
+
+http://todotxt.org
+https://github.com/todotxt/todo.txt-cli
+	wget https://github.com/todotxt/todo.txt-cli/releases/download/v2.12.0/todo.txt_cli-2.12.0.tar.gz
+	mkdir ~/.todo
+	tar xf todo.txt_cli-2.12.0.tar.gz -C /usr/local/bin --strip-components=1 --transform s/.sh// todo.txt_cli-2.12.0/todo.sh
+	tar xf todo.txt_cli-2.12.0.tar.gz -C /usr/local/share/bash-completion/completions --strip-components=1 --transform s/_completion// todo.txt_cli-2.12.0/todo_completion
+	tar xf todo.txt_cli-2.12.0.tar.gz -C ~/.todo --strip-components=1 --transform s/todo.cfg/config/ todo.txt_cli-2.12.0/todo.cfg
+	vim ~/.todo/config
+Homebrew
+	brew install todo-txt
+For macOS on x86 CPU 
+	cp -n /usr/local/opt/todo-txt/todo.cfg ~/.todo.cfg
+For macOS on arm CPU
+	cp -n /opt/homebrew/opt/todo-txt/todo.cfg ~/.todo.cfg
+
+Usage
+	todo a send reports
+	todo.sh add "THING I NEED TO DO +project @context"
+	todo ls
+
+Todo.txt - Todo List Manager - Linux CLI
+https://www.youtube.com/watch?v=rm12kDVM1ps

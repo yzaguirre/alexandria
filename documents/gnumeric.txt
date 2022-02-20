@@ -1,4 +1,17 @@
+http://www.gnumeric.org
+	apt install gnumeric
+Compile
+	apt install intltool libgoffice-0.10-dev
+	wget http://ftp.gnome.org/pub/GNOME/sources/gnumeric/1.12/gnumeric-1.12.51.tar.xz
+	wget https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.51.sha256sum
+	sha256sum -c --ignore-missing gnumeric-1.12.51.sha256sum
+	tar xf gnumeric-1.12.51.tar.xz
+	cd gnumeric-1.12.51
+	./configure
+	make -j12
+	make install
 Convert Excel Spreadsheets xlsx to csv Gnumeric
-See libreoffice/libreoffice.txt "To csv"
 https://www.youtube.com/watch?v=mviMZnXaXWA
 	ssconvert people.ods people.csv
+
+See ../libreoffice/libreoffice.txt "To csv"

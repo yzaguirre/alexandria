@@ -15,7 +15,10 @@ http://blog.infertux.com/2012/12/20/properly-close-a-frozen-ssh-session/
     .
 http://sandrinodimattia.net/posting-successful-ssh-logins-to-slack/
 
-Activate SSH Server on MacOS. See ~/macos/macos.txt
+Setting Up SSH Keys
+https://www.youtube.com/watch?v=ZKZbPZCnHRE
+
+Activate SSH Server on MacOS. See ../../macos/macos.txt
 Mac: Turning on and Connecting to the SSH Server
 https://www.youtube.com/watch?v=OBWgpUmRhPY
 System Preferences -> Sharing -> Remote Login
@@ -32,7 +35,6 @@ if you need to forcibly exit your ssh session, type the escape sequence of a til
 Key type
 https://security.stackexchange.com/questions/23383/ssh-key-type-rsa-dsa-ecdsa-are-there-easy-answers-for-which-to-choose-when
 https://askubuntu.com/questions/363207/what-is-the-difference-between-the-rsa-dsa-and-ecdsa-keys-that-ssh-uses
-
 
 Disable root login
 http://www.howtogeek.com/howto/linux/security-tip-disable-root-ssh-login-on-linux/

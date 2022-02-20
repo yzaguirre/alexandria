@@ -1,0 +1,16 @@
+http://stftp.sourceforge.net
+	tar xf stftp-1.1.0.tar.gz
+	cd stftp-1.1.0
+	make
+	make install
+	mv stftp /usr/local/bin
+stftp - Simple Terminal FTP Client - Linux TUI
+https://www.youtube.com/watch?v=PXag6nETFCk
+
+Usage
+	stftp android-2.local -p 12345 -u david
+q/p = toggle between views
+arrow keys = navigate and upload files
+d = delete
+q = quit
+h = help

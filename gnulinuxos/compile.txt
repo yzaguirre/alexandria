@@ -8,3 +8,16 @@ Compile diction
 Make only compiles what changes.
 Istall
 	sudo make install
+
+https://jensd.be/1126/linux/cross-compiling-for-arm-or-aarch64-on-debian-or-ubuntu
+For 32 bit ARM (arm):
+	apt install gcc make gcc-arm-linux-gnueabi binutils-arm-linux-gnueabi
+	arm-linux-gnueabi-gcc helloworld.c -o helloworld-arm -static
+For 64 bit ARM (aarch64)
+	apt install gcc make gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu
+	aarch64-linux-gnu-gcc helloworld.c -o helloworld-aarch64 -static
+
+Configure for armv6 or armv7
+	./configure --build x86_64-pc-linux-gnu --host arm-linux-gnueabi LDFLAGS="-static -pthread" --enable-mpers=check
+Configure for aarch64
+	./configure --build x86_64-pc-linux-gnu --host aarch64-linux-gnu LDFLAGS="-static -pthread" --enable-mpers=check

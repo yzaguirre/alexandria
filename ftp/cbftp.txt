@@ -1,0 +1,16 @@
+https://cbftp.eu
+	wget https://cbftp.eu/cbftp-r1200.tar.gz
+	tar xf cbftp-r1200.tar.gz
+	cd cbftp-r1200
+	make -j12
+	mv bin/* /usr/local/bin
+/usr/local/bin/cbftp
+/usr/local/bin/cbftp-debug
+/usr/local/bin/datafilecat
+/usr/local/bin/datafilewrite
+
+Configuration
+/home/david/.cbftp
+
+cbftp - Ncurses FTP and FXP Client - Linux TUI
+https://www.youtube.com/watch?v=dOIwg9nMF10

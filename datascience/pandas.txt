@@ -31,6 +31,11 @@ https://codeburst.io/plotting-with-pandas-dates-and-bar-plots-227f25351274
 
 Python Pandas Write to Excel Sheet
 https://www.youtube.com/watch?v=IcnYgh1bdIo
+Combine Excel Files with Python | Beginner Friendly | Excel Python Automate with Pandas
+https://www.youtube.com/watch?v=x_k1N1ZjJFM
+https://github.com/LauraMarcela505/AutomateExcelFile
+Create and Distribute Excel Files using Python and Outlook | Automate Excel with Python
+https://www.youtube.com/watch?v=RGR048I5ZDE
 
 import pandas as pd
 excel_header = ["Router hostname", "IP address"]
@@ -40,3 +45,6 @@ writer = pd.ExcelWriter('file1.xlsx', engine='xlsxwriter')
 
 df.to_excel(writer, sheet_name = "router_list")
 writer.save()
+
+https://stackoverflow.com/questions/38560748/python-pandas-dataframe-reading-exact-specified-range-in-an-excel-sheet_name
+pd.read_excel('resultat-elections-2012.xls', index_col = None, skiprows= 2, nrows= 5, sheet_name='France entière T1T2', usecols=range(0,8))
