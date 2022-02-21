@@ -26,3 +26,6 @@ Toast
 	UI.toast(text="Hi there!", bgcolor="grey", color="yellow", position="top")
 Radio
 	UI.radio(opts=(), title="Choose video quality")
+
+Dialog
+	UI.text(hint="filename.mp4", title="Type the filename")

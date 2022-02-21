@@ -144,3 +144,9 @@ https://www.youtube.com/watch?v=YhdrowzzEjo
 
 Grove Base Kit for Raspberry Pi - Unboxing + Getting Started + Video Tutorials
 https://www.youtube.com/watch?v=lsaXVRk6mKE
+
+DHCP broken
+https://forums.raspberrypi.com/viewtopic.php?t=320392
+https://forums.raspberrypi.com/viewtopic.php?f=36&t=320383
+https://raspberrypi.stackexchange.com/questions/121609/rfkill-cannot-open-dev-rfkill-permission-denied
+Disable "wait for network" on raspi-config
