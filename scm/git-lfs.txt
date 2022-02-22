@@ -23,6 +23,8 @@ How to upload large files in Github (Short tutorial on git - lms)
 https://www.youtube.com/watch?v=W4RCeVSs1Fg
 How To setup Git with Git LFS for Unity
 https://www.youtube.com/watch?v=09McJ2NL7YM
+You can upload a larger file to GitHub using Git LFS!
+https://www.youtube.com/watch?v=o2toX-8_3bs
 
 Usage
 Set up Git LFS for your user account

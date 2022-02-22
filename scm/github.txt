@@ -84,15 +84,15 @@ https://help.github.com/en/github/writing-on-github/autolinked-references-and-ur
 https://stackoverflow.com/questions/8910271/how-can-i-reference-a-commit-in-an-issue-comment-on-github
 Username/Repository@SHA	
 
-https://github.com/cli/cli/
+https://github.com/cli/cli
 https://github.com/cli/cli/releases/tag/v0.8.0
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
 https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_amd64.deb
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
-	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
-	dpkg -i gh_2.4.0_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_linux_amd64.deb
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_checksums.txt
+	sha256sum --ignore-missing -c gh_2.5.1_checksums.txt
+	dpkg -i gh_2.5.1_linux_amd64.deb
 Package manager
 	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
@@ -101,17 +101,17 @@ Package manager
 Termux
 	apt install gh
 ARM64
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_arm64.tar.gz
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
-	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
-	tar xf gh_2.4.0_linux_arm64.tar.gz
-	cd gh_2.4.0_linux_arm64/bin
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_linux_arm64.tar.gz
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_checksums.txt
+	sha256sum --ignore-missing -c gh_2.5.1_checksums.txt
+	tar xf gh_2.5.1_linux_arm64.tar.gz
+	cd gh_2.5.1_linux_arm64/bin
 	./gh
 ARM6
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_linux_armv6.deb
-	wget https://github.com/cli/cli/releases/download/v2.4.0/gh_2.4.0_checksums.txt
-	sha256sum --ignore-missing -c gh_2.4.0_checksums.txt
-	dpkg -i gh_2.4.0_linux_armv6.deb
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_linux_armv6.deb
+	wget https://github.com/cli/cli/releases/download/v2.5.1/gh_2.5.1_checksums.txt
+	sha256sum --ignore-missing -c gh_2.5.1_checksums.txt
+	dpkg -i gh_2.5.1_linux_armv6.deb
 MacOS
 	brew install gh
 Update

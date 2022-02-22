@@ -190,3 +190,23 @@ Fix rotation to 0
 	ffmpeg -i h1920_w1080_f30_a9-16_r90.mp4 -c copy -metadata:s:v:0 rotate=0 temp.mp4
 Rotate
 	ffmpeg -i temp.mp4 -vf "transpose=cclock" -crf 23 -c:a copy rotated.mp4
+
+Chroma key
+Replace green background
+https://stackoverflow.com/questions/8299252/ffmpeg-chroma-key-greenscreen-filter-for-images-video/32291842#32291842
+Where <color> is the rgb color to match in hex (ex: 0x000000 for black),
+<similarity> is a tolerance on the color-match (ex: 0.3),
+and <blend> (ex: 0.2) controls whether the opacity is on-off
+or how gradual it is. (See the documentation for more).
+	ffmpeg -i <base-video> -i <overlay-video> -filter_complex '[1:v]colorkey=0x<color>:<similarity>:<blend>[ckout];[0:v][ckout]overlay[out]' -map '[out]' <output-file>
+Making Transparent Video with FFMPEG by Chroma Keying | Tutorial
+https://www.youtube.com/watch?v=0tA4fauFykw
+	ffmpeg -f lavfi -i color=c=#00000000:s=606x1080 -i C:/Users/(Your Username)/Desktop/input.mp4 -c: png -filter_complex "[1:v]chromakey=0x00FF00:similarity=.455[out]" -map "[out]" C:/Users/(Your Username)/Desktop/output.mov
+
+https://stackoverflow.com/questions/8299252/ffmpeg-chroma-key-greenscreen-filter-for-images-video/65610927#65610927
+Resize the background image. Ej. 1024x1024, 1920x1080, etc.
+	convert background-original.jpg -resize 1024x1024! background.jpg
+Conversion
+	ffmpeg -i background.jpg -i opengl-rotating-triangle.mp4 -filter_complex '[1:v]colorkey=0x000000:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]' out.mp4
+or
+	ffmpeg -hwaccel videotoolbox -i background.jpg -i out.mp4 -filter_complex "[1:v]colorkey=0x34d454:0.3:0.15[ckout];[0:v][ckout]overlay[despill];[despill] despill=green[colorspace];[colorspace]format=yuv420p[out]" -map "[out]" output.mp4

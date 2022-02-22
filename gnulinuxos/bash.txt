@@ -1,3 +1,9 @@
+Source
+https://opensource.com/article/20/6/bash-source-command
+for i in $HOME/.local/include/*;
+  do source $i
+done
+
 Bash Pitfalls
 http://mywiki.wooledge.org/BashPitfalls
 https://news.ycombinator.com/item?id=30345487

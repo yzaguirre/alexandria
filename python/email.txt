@@ -15,6 +15,8 @@ How to Send Email from Python (with attachments)
 https://www.youtube.com/watch?v=V6hQfGxlPgw
 How To Send an Email in Python With Attachments Easy for Beginners
 https://www.youtube.com/watch?v=bXRYJEKjqIM
+Sending Email using Python in 5 statements
+https://www.youtube.com/watch?v=BsVQ_cBmEwg
 
 import smtplib
 import ssl
@@ -79,3 +81,22 @@ https://www.youtube.com/watch?v=uAfeB4jMLXg
 Flask (Python)
 Sending Automated Emails in Flask
 https://www.youtube.com/watch?v=ejLGwHiyqGU
+
+How to Send Emails with Python: Plain text, HTML with attachments
+https://www.youtube.com/watch?v=NvtjLXSY-hE
+https://github.com/liannewriting/YouTube-videos-public/tree/main/send-email-with-python-plain-text-html
+def attach_file_to_email(email_message, filename):
+    # Open the attachment file for reading in binary mode, and make it a MIMEApplication class
+    with open(filename, "rb") as f:
+        file_attachment = MIMEApplication(f.read())
+    # Add header/name to the attachments    
+    file_attachment.add_header(
+        "Content-Disposition",
+        f"attachment; filename= {filename}",
+    )
+    # Attach the file to the message
+    email_message.attach(file_attachment)
+
+attach_file_to_email(email_message, 'chart.png')
+attach_file_to_email(email_message, 'excel_report.xlsx')
+attach_file_to_email(email_message, 'fpdf_pdf_report.pdf')

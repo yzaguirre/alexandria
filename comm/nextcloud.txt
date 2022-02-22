@@ -15,17 +15,17 @@ After adding the PPA to your system as described below, the client can be instal
 - Other, or if you don't want/need the file manager integration:
 	apt install nextcloud-desktop nextcloud-desktop-cmd
 AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1-x86_64.AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1-x86_64.AppImage.asc
-	gpg --verify Nextcloud-3.4.1-x86_64.AppImage.asc
-	chmod u+x Nextcloud-3.4.1-x86_64.AppImage
-	mv Nextcloud-3.4.1-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.4.2-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.4.2-x86_64.AppImage
+	mv Nextcloud-3.4.2-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 MacOS
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1.pkg
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.1/Nextcloud-3.4.1.pkg.asc
-	gpg --verify Nextcloud-3.4.1.pkg.asc
-	open Nextcloud-3.4.1.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2.pkg.asc
+	gpg --verify Nextcloud-3.4.2.pkg.asc
+	open Nextcloud-3.4.2.pkg
 	ln -s /Applications/nextcloud.app/Contents/MacOS/nextcloudcmd /usr/local/bin/nextcloudcmd
 Homebrew
 	brew install nextcloud
@@ -36,7 +36,7 @@ Off maintenance mode
 	php occ maintenance:mode --off
 
 Dependencies for php 7
-	apt install php7.0-sqlite3 php7.0-zip php7.0-xml php7.0-mbstring php7.0-gd php7.0-curl
+	apt install php7.2-sqlite3 php7.2-zip php7.2-xml php7.2-mbstring php7.2-gd php7.2-curl
 Change file owner
 	chown www-data:www-data -R /var/www/nextcloud
 Migrate from owncloud
@@ -52,25 +52,30 @@ To update nc, make backup first
 	tar cfz /tmp/"$name".tar.gz nextcloud
 Change nextcloud folders name for future reference
 	mv nextcloud nc-reference
-	
-Download the latest nc build
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.ascm
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.md5
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.sha256
-	wget https://download.nextcloud.com/server/releases/nextcloud-18.0.4.tar.bz2.sha512
+
+Nextcloud: Full Setup & Implementation Guide (Updated for 2022!)
+https://www.youtube.com/watch?v=2OsNGj2n2zc
+
+Server install
+https://github.com/nextcloud/server
+https://docs.nextcloud.com/server/latest/admin_manual/
+	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2
+	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.asc
+	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.md5
+	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.sha256
+	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.sha512
 	
 	wget https://nextcloud.com/nextcloud.asc
 Verify the files
-	md5sum -c nextcloud-18.0.4.tar.bz2.md5
-	sha256sum -c nextcloud-18.0.4.tar.bz2.sha256
-	sha512sum -c nextcloud-18.0.4.tar.bz2.sha512
+	md5sum -c nextcloud-23.0.2.tar.bz2.md5
+	sha256sum -c nextcloud-23.0.2.tar.bz2.sha256
+	sha512sum -c nextcloud-23.0.2.tar.bz2.sha512
 	gpg2 --with-fingerprint nextcloud.asc
 2880 6A87 8AE4 23A2 8372  792E D758 99B9 A724 937A
 	gpg2 --import nextcloud.asc
-	gpg2 --verify nextcloud-18.0.4.tar.bz2.asc
+	gpg2 --verify nextcloud-23.0.2.tar.bz2.asc
 Extraction
-	tar xf nextcloud-18.0.4.tar.bz2 -C /var/www/
+	tar xf nextcloud-23.0.2.tar.bz2 -C /var/www/
 Move old data files back in
 	mv nc-reference/data nextcloud
 	mv nc-reference/config/config.php nextcloud/config/

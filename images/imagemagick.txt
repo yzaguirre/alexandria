@@ -180,7 +180,7 @@ INSERTAR TEXTO
 https://stackoverflow.com/questions/23236898/add-text-on-image-at-specific-point-using-imagemagick#23238369
 	convert temp.jpg -gravity North -pointsize 30 -annotate +0+100 'Love you mom' temp1.jpg
 Shapes
-mogrify -fill white -stroke black -draw "rectangle 30,10 200,100" file.png
+	mogrify -fill white -stroke black -draw "rectangle 30,10 200,100" file.png
 
 CAMBIAR EL ESPACIO DE COLOR
 	convert -colorspace {espacio} {entrada} {salida}

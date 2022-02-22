@@ -113,3 +113,7 @@ Self signed without CSR
 
 Verify the certificate
 	openssl x509 -noout -text -in www.blackmoreops.com.crt 
+
+Using curl to Check an SSL Certificate's Expiration Date and Details
+https://www.youtube.com/watch?v=hnnF8iEcC7g
+	curl https://davidyzaguirre.com -Iv --stderr - | grep "expire date" | cut -d":" -f 2-

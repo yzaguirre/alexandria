@@ -1,4 +1,4 @@
-https://tmux.github.io/
+https://tmux.github.io
 https://www.arp242.net/tmux.html
 https://news.ycombinator.com/item?id=21951679
 https://stackoverflow.com/questions/58739867/how-to-target-a-particular-tmux-session

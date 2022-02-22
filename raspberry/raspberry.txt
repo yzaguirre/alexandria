@@ -1,3 +1,8 @@
+Raspberry Pi does what Microsoft can't!
+The new beta of Network Install is here, and I'll tell you how it works,
+which Pis are compatible, and why it matters.
+https://www.youtube.com/watch?v=qlBIfpBwqKY
+
 The curious case of the Raspberry Pi in the network closet (2019)
 https://blog.haschek.at/2019/the-curious-case-of-the-RasPi-in-our-network.html
 https://news.ycombinator.com/item?id=29965110
