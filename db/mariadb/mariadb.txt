@@ -36,3 +36,11 @@ reload
 
 https://www.hellodevops.blog/posts/database-character-sets-and-collations-explained/
 https://news.ycombinator.com/item?id=29793916
+
+List users
+https://www.osradar.com/list-all-users-on-mysql-mariadb/
+	SELECT User, Host, Password FROM mysql.user;
+List without duplicates
+	SELECT DISTINCT User FROM mysql.user;
+Current user information
+	SELECT user();

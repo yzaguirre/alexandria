@@ -194,6 +194,7 @@ Rotate
 Chroma key
 Replace green background
 https://stackoverflow.com/questions/8299252/ffmpeg-chroma-key-greenscreen-filter-for-images-video/32291842#32291842
+https://ffmpeg.org/ffmpeg-filters.html#colorkey
 Where <color> is the rgb color to match in hex (ex: 0x000000 for black),
 <similarity> is a tolerance on the color-match (ex: 0.3),
 and <blend> (ex: 0.2) controls whether the opacity is on-off
@@ -209,4 +210,5 @@ Resize the background image. Ej. 1024x1024, 1920x1080, etc.
 Conversion
 	ffmpeg -i background.jpg -i opengl-rotating-triangle.mp4 -filter_complex '[1:v]colorkey=0x000000:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]' out.mp4
 or
+https://gist.github.com/kerbeh/fbe0cd0d89c424708c119e0a0d00ca88
 	ffmpeg -hwaccel videotoolbox -i background.jpg -i out.mp4 -filter_complex "[1:v]colorkey=0x34d454:0.3:0.15[ckout];[0:v][ckout]overlay[despill];[despill] despill=green[colorspace];[colorspace]format=yuv420p[out]" -map "[out]" output.mp4

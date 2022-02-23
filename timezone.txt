@@ -1,5 +1,6 @@
 https://linuxwebdevelopment.com/change-time-zone-debian-ubuntu/
 https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-18-04/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-timezone-and-ntp-synchronization-on-ubuntu-14-04-quickstart
 	timedatectl
 	ls -l /etc/localtime
 	cat /etc/timezone
@@ -10,3 +11,6 @@ https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-18-04/
 Using tzdata
 	echo "Europe/Rome" | sudo tee /etc/timezone
 	sudo dpkg-reconfigure --frontend noninteractive tzdata
+Install NTP
+	apt update
+	apt install ntp

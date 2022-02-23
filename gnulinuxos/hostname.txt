@@ -16,7 +16,8 @@ Centos
 	vim /etc/hosts
 	
 127.0.1.1	osuse64
-
+or
+127.0.1.1	files.davidyzaguirre.com files
 3.)
 	hostname osuse64
 	hostname

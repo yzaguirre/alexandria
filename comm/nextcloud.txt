@@ -32,13 +32,6 @@ Homebrew
 Windows
 	winget install Nextcloud.NextcloudDesktop
 
-Off maintenance mode
-	php occ maintenance:mode --off
-
-Dependencies for php 7
-	apt install php7.2-sqlite3 php7.2-zip php7.2-xml php7.2-mbstring php7.2-gd php7.2-curl
-Change file owner
-	chown www-data:www-data -R /var/www/nextcloud
 Migrate from owncloud
 Make oc backup!
 	name=owncloud_`date +'%F %H.%M.%S'`
@@ -55,6 +48,7 @@ Change nextcloud folders name for future reference
 
 Nextcloud: Full Setup & Implementation Guide (Updated for 2022!)
 https://www.youtube.com/watch?v=2OsNGj2n2zc
+https://www.learnlinux.tv/nextcloud-full-setup-implementation-guide/
 
 Server install
 https://github.com/nextcloud/server
@@ -64,7 +58,6 @@ https://docs.nextcloud.com/server/latest/admin_manual/
 	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.md5
 	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.sha256
 	wget https://download.nextcloud.com/server/releases/nextcloud-23.0.2.tar.bz2.sha512
-	
 	wget https://nextcloud.com/nextcloud.asc
 Verify the files
 	md5sum -c nextcloud-23.0.2.tar.bz2.md5
@@ -80,7 +73,24 @@ Move old data files back in
 	mv nc-reference/data nextcloud
 	mv nc-reference/config/config.php nextcloud/config/
 	chown www-data:www-data -R /var/www/nextcloud
-
+Database
+See ../db/mariadb/mariadb.txt
+	apt install mariadb-server
+	sudo mysql_secure_install
+	sudo mariadb
+	CREATE DATABASE nc;
+	GRANT ALL ON nextcloud.* TO 'nextcloud'@'localhost' IDENTIFIED BY 'P4ASSW0RD';
+	FLUSH PRIVILEGES;
+Dependencies for php 7
+	apt install php php-apcu php-bcmath php-cli php-common php-curl php-gd php-gmp php-imagick php-intl php-mbstring php-mysql php-zip php-xml
+Enable php modules
+	phpenmod bcmath gmp imagick intl
+Enable apache2 modules
+	a2enmod dir env headers mime rewrite ssl
+Change file owner
+	chown www-data:www-data -R /var/www/nextcloud
+PHP configuration
+	vim /etc/php/7.2/apache2/php.ini
 Desktop client
 https://github.com/nextcloud/client_theming
 	git clone https://github.com/nextcloud/client_theming.git
@@ -100,6 +110,8 @@ https://askubuntu.com/questions/942630/how-to-synchronize-hidden-dot-files-in-ow
 	vim ~/.config/Nextcloud/nextcloud.cfg
 OCC command line client
 	su www-data -s /bin/bash
+Off maintenance mode
+	php occ maintenance:mode --off
 List users
 	php occ user:list
 List apps

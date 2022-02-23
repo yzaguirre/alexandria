@@ -1,16 +1,18 @@
 Web File Browser
 https://filebrowser.org/features
 https://github.com/filebrowser/filebrowser
-	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-amd64-filebrowser.tar.gz
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/linux-amd64-filebrowser.tar.gz
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/filebrowser_2.21.1_checksums.txt
+	sha256sum -c --ignore-missing filebrowser_2.21.1_checksums.txt
 	tar xf linux-amd64-filebrowser.tar.gz -C /usr/local/bin filebrowser
 Raspberry Pi 2
-	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-armv6-filebrowser.tar.gz
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/linux-armv6-filebrowser.tar.gz
 	tar xf linux-armv6-filebrowser.tar.gz -C /usr/local/bin filebrowser
 Termux
-	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/linux-arm64-filebrowser.tar.gz
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/linux-arm64-filebrowser.tar.gz
 	tar xf linux-arm64-filebrowser.tar.gz -C /usr/local/bin filebrowser
 Windows
-	wget https://github.com/filebrowser/filebrowser/releases/download/v2.20.1/windows-amd64-filebrowser.zip
+	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/windows-amd64-filebrowser.zip
 	unzip windows-amd64-filebrowser.zip -d ~/bin filebrowser.exe
 Or
 	iwr -useb https://raw.githubusercontent.com/filebrowser/get/master/get.ps1 | iex

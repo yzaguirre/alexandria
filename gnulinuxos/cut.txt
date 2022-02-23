@@ -1,10 +1,10 @@
 https://www.gnu.org/software/coreutils/manual/html_node/The-cut-command.html
-
+	cut -dT -f2,3 removetr.log
 A sharp cut(1) clone.
 https://github.com/sstadick/hck
 https://news.ycombinator.com/item?id=27794188
-	wget https://github.com/sstadick/hck/releases/download/v0.4.2/default.hck-linux-amd64.deb
-	sudo dpkg -i default.hck-linux-amd64.deb
+	wget https://github.com/sstadick/hck/releases/download/v0.7.1/hck-linux-amd64.deb
+	sudo dpkg -i hck-linux-amd64.deb
 Homebrew
 	brew tap sstadick/hck
 	brew install hck

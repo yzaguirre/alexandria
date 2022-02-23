@@ -1,4 +1,4 @@
-https://github.com/TheWaWaR/simple-http-server/
+https://github.com/TheWaWaR/simple-http-server
 Windows
 	scoop install simple-http-server
 Installer
