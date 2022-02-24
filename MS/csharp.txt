@@ -9,6 +9,15 @@ https://stackoverflow.com/questions/406485/array-slices-in-c-sharp
 Join an array to String
 https://docs.microsoft.com/en-us/dotnet/api/system.string.join?view=net-6.0
 	String.Join(",", array);
+foreach with index
+https://stackoverflow.com/questions/521687/foreach-with-index
+foreach (var (x, i) in someCollection.Select((x, i) => (x, i)) ) { ... }
+int i = -1;
+foreach (Widget w in widgets)
+{
+   i++;
+   // do something
+}
 
 Given a collection of elements, you can access any part of the collection
 using the Index type.
