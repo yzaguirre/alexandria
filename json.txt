@@ -118,3 +118,15 @@ https://github.com/PaulJuliusMartinez/jless
 Usage
 	jless file.json
 	cat commits.json | jless
+
+Powershell ConvertTo-Json
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7.2
+	ConvertTo-Json
+	  [-InputObject] <Object>
+	  [-Depth <Int32>]
+	  [-Compress][-EnumsAsStrings]
+	  [-AsArray]
+	(Get-UICulture).Calendar | ConvertTo-Json
+	@{Account="User01";Domain="Domain01";Admin="True"} | ConvertTo-Json -Compress
+	Get-Date | Select-Object -Property * | ConvertTo-Json
+	Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json

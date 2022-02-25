@@ -1,11 +1,13 @@
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-3.1&tabs=linux
-https://docs.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-3.1&tabs=linux
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-6.0&tabs=linux
+https://docs.microsoft.com/en-us/aspnet/core/getting-started/?view=aspnetcore-6.0&tabs=windows
 	dotnet new webapp -o aspnetcoreapp
+Trust the HTTPS development certificate
+	dotnet dev-certs https --trust
 Run the app
 	cd aspnetcoreapp
 	dotnet watch run
-https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1#recommended-learning-path
-https://docs.microsoft.com/en-us/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-3.1
+https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0#recommended-learning-path
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/tools/dotnet-aspnet-codegenerator?view=aspnetcore-6.0
 Global install
 	dotnet tool install -g dotnet-aspnet-codegenerator
 
@@ -30,3 +32,44 @@ https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-ne
 Get username
 https://stackoverflow.com/questions/21616951/get-the-current-user-within-an-apicontroller-action-without-passing-the-userid
 HttpContext.Current.Request.LogonUserIdentity.Name
+
+Web API
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code
+	dotnet new webapi -o TodoApi
+	cd TodoApi
+	dotnet new gitignore
+	dotnet add package Microsoft.EntityFrameworkCore.InMemory
+	code -r ../TodoApi
+
+CTRL + F5 to run
+Open
+https://localhost:7240/swagger/index.html
+	curl https://localhost:7240/weatherforecast
+
+Model
+	mkdir Models
+	code Models/TodoItem.cs
+	code Models/TodoContext.cs
+
+Controller
+	dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+	dotnet add package Microsoft.EntityFrameworkCore.Design
+	dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+	dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+Test the web API. See ../http/httprepl.txt
+	dotnet tool install -g Microsoft.dotnet-httprepl
+	DOTNET_HTTPREPL_TELEMETRY_OPTOUT=1
+	httprepl https://localhost:7240/api/todoitems
+	post -h Content-Type=application/json -c "{"name":"walk dog","isComplete":true}"
+Test the location header URI
+	connect https://localhost:7240/api/todoitems/1
+	get
+	connect https://localhost:7240/api/todoitems
+	get
+Test the PutTodoItem method
+	connect https://localhost:7240/api/todoitems/1
+	put -h Content-Type=application/json -c "{"id":1,"name":"feed fish","isComplete":true}"
+Test the DeleteTodoItem method
+	connect https://localhost:7240/api/todoitems/1
+	delete

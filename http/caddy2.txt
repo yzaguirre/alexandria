@@ -47,3 +47,18 @@ weather.local {
 
 Static files
 	caddy file-server --browse --listen :2015 --root ~/mysite
+
+Reverse proxy for IIS express
+	vim Caddyfile
+http://192.168.0.5:8080 {
+	reverse_proxy localhost:62555 {
+		header_up Host localhost:62555
+	}
+	log {
+		output file .\proxylog.log
+		format console
+		level INFO
+	}
+}
+Run
+	caddy.exe run --config Caddyfile

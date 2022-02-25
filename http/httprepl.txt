@@ -1,0 +1,27 @@
+HttpRepl
+https://docs.microsoft.com/en-us/aspnet/core/web-api/http-repl/?view=aspnetcore-6.0&tabs=linux
+	dotnet tool install -g Microsoft.dotnet-httprepl
+Make DOTNET_HTTPREPL_TELEMETRY_OPTOUT environment variable equal to 1
+DOTNET_HTTPREPL_TELEMETRY_OPTOUT=1
+Configuration at
+%HOME%/.httpreplprefs
+%USERPROFILE%\.httpreplprefs
+
+Usage
+	httprepl
+	httprepl -h
+Connect to the web API
+	httprepl <ROOT URI>
+	httprepl https://localhost:7240
+Or
+	httprel
+	connect https://localhost:7240
+	connect https://localhost:7240 --openapi /swagger/v1/swagger.json
+Navigate
+	ls
+	cd people
+View settings
+	pref get
+Post
+	httprepl https://localhost:7240/api/todoitems
+	post -h Content-Type=application/json -c "{"name":"walk dog","isComplete":true}"

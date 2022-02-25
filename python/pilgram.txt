@@ -1,0 +1,25 @@
+A python library for instagram filters
+https://github.com/akiomik/pilgram
+	sudo -H pip install -U pilgram pillow
+
+Image Filters & Effects in Python
+https://www.youtube.com/watch?v=FVUJWbs9tzw
+
+Usage
+Available instagram filters on pilgram:
+
+from PIL import Image
+import pilgram
+
+im = Image.open('sample.jpg')
+pilgram.aden(im).save('sample-aden.jpg')
+
+
+Available blend modes on pilgram.css.blending:
+
+from PIL import Image
+import pilgram.css.blending
+
+backdrop = Image.open('backdrop.jpg')
+source = Image.open('source.jpg')
+pilgram.css.blending.color(backdrop, source).save('blending.jpg')
