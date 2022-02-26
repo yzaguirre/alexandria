@@ -30,6 +30,8 @@ Append to PATH C:\Program Files\7-Zip
 Create ZIP file
 https://stackoverflow.com/questions/18180060/how-to-zip-a-file-using-cmd-line
 	7z a -tzip {yourfile.zip} {yourfolder}
+Using 4 threads
+	7z a -mmt4 directory.zip directory/
 Include only files with txt extension. It starts with current directory.
 	7z a -tzip -i"!*.txt" file.zip additional_dirs/
 Read a tar from stdin to save as 7z

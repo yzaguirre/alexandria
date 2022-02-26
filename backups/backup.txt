@@ -1,3 +1,9 @@
+An almost perfect rsync over ssh backup script
+https://blog.zazu.berlin/software/a-almost-perfect-rsync-over-ssh-backup-script.html
+https://news.ycombinator.com/item?id=30465581
+
+Remember, RAID is not a backup. Also /backups/ directory on the same bare metal server is not backup. Your verified backup must be offsite with a 3-2-1 policy. Do you know how much time it takes to restore your data? If not, find out. DR is a serious business. https://twitter.com/nixcraft/status/1495282091608608771
+
 Backup strategies are a defense against data loss.
 
 They are made up of multiple different components, like:

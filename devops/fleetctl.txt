@@ -1,0 +1,12 @@
+Open source device management, built on osquery.
+See ../web/fleet.txt
+https://fleetdm.com
+https://github.com/fleetdm/fleet
+	wget https://github.com/fleetdm/fleet/releases/download/fleet-v4.10.0/fleetctl_v4.10.0_linux.tar.gz
+	wget https://github.com/fleetdm/fleet/releases/download/fleet-v4.10.0/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+Windows
+	wget https://github.com/fleetdm/fleet/releases/download/fleet-v4.10.0/fleetctl_v4.10.0_windows.zip
+	7z e -oC:\Users\dyzag\bin fleetctl_v4.10.0_windows.zip fleetctl_v4.10.0_windows\fleetctl.exe
+
+https://fleetdm.com/docs/using-fleet/fleetctl-cli

@@ -1,0 +1,25 @@
+A dead simple tool to sign files and verify digital signatures.
+https://jedisct1.github.io/minisign/
+https://github.com/jedisct1/minisign
+Windows
+	choco install minisign
+Binary
+	wget https://github.com/jedisct1/minisign/releases/download/0.10/minisign-0.10-win64.zip
+	wget https://github.com/jedisct1/minisign/releases/download/0.10/minisign-0.10-win64.zip.minisig
+	minisign -Vm minisign-0.10-win64.zip -P RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+	7z e -oC:\Users\dyzag\bin minisign-0.10-win64.zip
+
+Public key for binaries
+RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+
+Usage
+Signing a file
+The signature is put into myfile.txt.minisig.
+	minisign -Sm myfile.txt
+	minisign -Sm myfile.txt -t 'This comment will be signed as well'
+Sign multiple files
+	minisign -Sm file1.txt file2.txt *.jpg
+Verify signature.
+This requires the signature myfile.txt.minisig to be present in the same directory.
+	minisign -Vm myfile.txt -P RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+	minisign -Vm myfile.txt -p signature.pub

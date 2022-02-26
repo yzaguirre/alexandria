@@ -1,0 +1,9 @@
+Synbak - Universal Backup System
+https://github.com/ugoviti/synbak
+	wget https://github.com/ugoviti/synbak/archive/refs/tags/3.8.2.tar.gz
+	tar xf 3.8.2.tar.gz
+	cd synbak-3.8.2/
+	./autogen.sh
+	./configure (--prefix=/your/path to relocate the destination base dir)
+	make -j12
+	make install

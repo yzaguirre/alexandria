@@ -15,4 +15,3 @@ https://www.reddit.com/r/linux/comments/oqqj8q/peazip_810_released/
 Windows
 	winget install Giorgiotani.Peazip
 Add C:\Program Files\PeaZip to PATH
-

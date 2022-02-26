@@ -1,0 +1,4 @@
+The 7-Zip derivative intended for the modern Windows experience.
+https://github.com/M2Team/NanaZip
+NanaZip which is a fork which works with windows 11 new context menu and adds in some other niceties.
+	winget install M2Team.NanaZip

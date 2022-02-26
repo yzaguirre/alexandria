@@ -1,0 +1,14 @@
+https://github.com/ameshkov/dnslookup
+	wget https://github.com/ameshkov/dnslookup/releases/download/v1.5.1/dnslookup-linux-amd64-v1.5.1.tar.gz
+	tar xf dnslookup-linux-amd64-v1.5.1.tar.gz
+	mv linux-amd64/dnslookup /usr/local/bin
+Homebrew
+	brew install ameshkov/tap/dnslookup
+Windows
+	wget https://github.com/ameshkov/dnslookup/releases/download/v1.5.1/dnslookup-windows-amd64-v1.5.1.zip
+	7z e -oC:\Users\dyzag\bin dnslookup-windows-amd64-v1.5.1.zip windows-amd64\dnslookup.exe
+
+Usage
+	dnslookup example.org 94.140.14.14
+
+See dog.txt

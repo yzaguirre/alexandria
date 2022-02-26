@@ -30,3 +30,9 @@ https://diasp.eu/posts/3890839
 
 Uncompress
 	unrar x file.rar
+
+Don't Use RAR
+https://group.miletic.net/en/blog/2022-02-24-dont-use-rar/
+https://news.ycombinator.com/item?id=30465933
+Features: Encryption, Redundancy.
+Disk, NFS, USB-Stick didn't matter.

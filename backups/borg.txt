@@ -1,1 +1,4 @@
 https://borgbackup.readthedocs.io/en/stable/
+
+Using borg for backing up nuxx.net
+https://nuxx.net/blog/2019/11/10/using-borg-for-backing-up-nuxx-net/

@@ -1,3 +1,5 @@
+https://duplicity.gitlab.io/duplicity-web/
+https://gitlab.com/duplicity/duplicity
 http://duplicity.nongnu.org/index.html
 http://duplicity.nongnu.org/duplicity.1.html
 https://www.digitalocean.com/community/tutorials/how-to-use-duplicity-with-gpg-to-back-up-data-to-digitalocean-spaces

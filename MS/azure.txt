@@ -29,3 +29,6 @@ https://adamtheautomator.com/azure-pipelines-tutorial/
 
 Azure Storage Walk-through | Azure Disks, Managed Disks and Disk Performance
 https://www.youtube.com/watch?v=KIys1MKAvSQ
+
+Azure Blob Storage
+https://azure.microsoft.com/en-us/services/storage/blobs/#features
