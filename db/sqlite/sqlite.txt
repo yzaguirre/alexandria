@@ -1,3 +1,4 @@
+SQLite by D. Richard Hipp
 https://www.sqlite.org
 
 Install common tools
@@ -6,11 +7,11 @@ Restart apache2 web server
 	service apache2 restart
 Binary
 See ../../secure/hash.txt
-	wget https://www.sqlite.org/2022/sqlite-tools-linux-x86-3370200.zip
-	openssl dgst -sha3-256 sqlite-tools-linux-x86-3370200.zip
-	rhash --sha3-256 sqlite-tools-linux-x86-3370200.zip
-52e940db6ee099028be48869b4c7415a9c181b3431f7c4303fbddbd2503b05da
-	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3370200.zip
+	wget https://www.sqlite.org/2022/sqlite-tools-linux-x86-3380000.zip
+	openssl dgst -sha3-256 sqlite-tools-linux-x86-3380000.zip
+	rhash --sha3-256 sqlite-tools-linux-x86-3380000.zip
+64c487a27a3db9d7683654e43510682e6c5f6a65316593eead499fc11626201b
+	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3380000.zip
 Installs sqlite3, sqlite3_analyzer and sqldiff
 Windows
 Android Studio inclues sqlite version 3.32.2

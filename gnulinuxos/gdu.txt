@@ -19,3 +19,8 @@ More recent
 	mv /usr/local/bin/{gdu_linux_armv6l,gdu}
 Windows
 	choco install gdu
+
+Usage
+	gdu
+List partitions
+	gdu -d

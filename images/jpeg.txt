@@ -1,2 +1,5 @@
 The Unreasonable Effectiveness of JPEG: A Signal Processing Approach
 https://www.youtube.com/watch?v=0me3guauqOU
+
+STOP Using JPEG? JPEG vs PNG in Depth!
+https://www.youtube.com/watch?v=0jNIYWBDULI

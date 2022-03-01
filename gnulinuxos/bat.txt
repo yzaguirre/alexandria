@@ -9,8 +9,8 @@ Alias
 	mkdir -p ~/.local/bin
 	ln -s /usr/bin/batcat ~/.local/bin/bat
 https://github.com/sharkdp/bat/releases
-	wget https://github.com/sharkdp/bat/releases/download/v0.19.0/bat_0.19.0_amd64.deb
-	dpkg -i bat_0.19.0_amd64.deb
+	wget https://github.com/sharkdp/bat/releases/download/v0.20.0/bat_0.20.0_amd64.deb
+	dpkg -i bat_0.20.0_amd64.deb
 	BATCONFIG=$(bat --config-file)
 	mkdir ~/.config/bat && cd ~/.config/bat
 	vim config

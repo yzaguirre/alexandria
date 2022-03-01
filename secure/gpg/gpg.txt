@@ -1,3 +1,6 @@
+Creating and Managing a GPG Key Pair
+https://www.youtube.com/watch?v=1vVIpIvboSg
+
 https://gnupg.org/blog/20220102-a-new-future-for-gnupg.html
 https://news.ycombinator.com/item?id=29791056
 
@@ -36,11 +39,12 @@ http://www.gossamer-threads.com/lists/gnupg/users/51288
 Automating
 	gpg --batch --yes --logger-file filename --passphrase-file filename -s
 
-see secure/LUKS.txt
+See ../LUKS.txt
 Create a directory for GnuPG to use as its 'home' directory, and set an environment variable to point to it
 	mkdir -p /mnt/gpg-key-backup/gnupghome
 	chmod go= /mnt/gpg-key-backup/gnupghome
 	export GNUPGHOME=/mnt/gpg-key-backup/gnupghome
+	chmod 700 /mnt/gpg-key-backup/gnupghome
 
 View fingerprint, list the keys in a file without actually importing them:
 gpg --import-options show-only --import FILE
@@ -202,6 +206,8 @@ use the old key to sign your new key before you revoke
 the old one.
 	other way to do it (not recomended)
 		gpg --revoke-keys keyID
+Change passphrase
+	gpg --passwd ID
 
 clearsigned signature
 The --clearsign option will wrap the message in an ASCII-armored signature but will not otherwise modify its contents.

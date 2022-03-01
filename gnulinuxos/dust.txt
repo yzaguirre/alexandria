@@ -19,3 +19,7 @@ Usage:
 	dust -n 30  <dir>  (Shows 30 directories not 20)
 	dust -d 3  <dir>  (Shows 3 levels of subdirectories)
 	dust -r  <dir>  (Reverse order of output, with root at the lowest)
+Filter by regex
+	dust -e "(png|jpg)$"
+Group by filetype
+	dust -t

@@ -1,0 +1,9 @@
+Excalibur is a web interface to extract tabular data from PDFs,
+written in Python 3! It powered by Camelot.
+https://excalibur-py.readthedocs.io/en/master/
+https://github.com/camelot-dev/excalibur
+	sudo -H pip install -U excalibur-py
+Initialize the metadata database
+	excalibur initdb
+Start the webserver
+	excalibur webserver

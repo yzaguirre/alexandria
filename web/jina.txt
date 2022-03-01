@@ -1,0 +1,4 @@
+Cloud-native neural search framework for any kind of data
+https://github.com/jina-ai/jina
+https://www.reddit.com/r/selfhosted/comments/t33rx5/just_released_jina_30_selfhosted_ai_powered/
+	sudo -H pip install -U jina

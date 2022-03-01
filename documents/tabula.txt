@@ -1,0 +1,4 @@
+Tabula is a tool for liberating data tables trapped inside PDF files
+https://tabula.technology
+https://github.com/tabulapdf/tabula
+https://news.ycombinator.com/item?id=30475784

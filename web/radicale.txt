@@ -1,2 +1,7 @@
-https://radicale.org/
+https://radicale.org
 Radicale is a small but powerful CalDAV (calendars, todo-lists) and CardDAV (contacts) server
+See baikal.txt
+	sudo -H pip install -U radicale
+	python3 -m radicale --storage-filesystem-folder=~/.var/lib/radicale/collections
+When the server is launched, open http://localhost:5232 in your browser!
+You can login with any username and password.

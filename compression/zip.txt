@@ -1,5 +1,5 @@
 zip
-https://zlib.net/
+https://zlib.net
 https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
 https://manpages.ubuntu.com/manpages/bionic/man3/zlib.3tcl.html
 	apt install zlib1g

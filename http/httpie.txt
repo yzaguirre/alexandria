@@ -1,10 +1,22 @@
-httpie.org
+HTTPie: human-friendly CLI HTTP client for the API era
+https://httpie.io
+https://httpie.io/docs
 https://www.tecmint.com/httpie-http-client-for-linux/
 http://radek.io/2015/10/20/httpie/
 https://news.ycombinator.com/item?id=10418882
-https://github.com/jakubroztocil/httpie
+https://github.com/httpie/httpie
 https://news.ycombinator.com/item?id=21674729
-	sudo -H pip3 install httpie
+	sudo -H pip install -U httpie
+Windows
+	choco install httpie
+Homebrew
+	brew install httpie
+
+Config file
+https://httpie.io/docs/cli/config-file-directory
+	~/.config/httpie/config.json
+	%APPDATA%\httpie\config.json
+
 Usage
 	http [OPTS] [METHOD] URL [REQUEST_ITEMS...]
 Custom HTTP method, HTTP headers and JSON data:
@@ -22,9 +34,11 @@ Download a file and save it via redirected output:
 	http example.org/file > file
 Download a file wget style:
 	http --download example.org/file
-Config file
-	~/.httpie/config.json
-	%APPDATA%\httpie\config.json
+Build and print a request without sending it using offline mode:
+	http --offline pie.dev/post hello=offline
+Bearer auth
+	https -A bearer -a token pie.dev/bearer
+
 Scripting
 #!/bin/bash
 

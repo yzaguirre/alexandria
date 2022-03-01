@@ -1,3 +1,8 @@
+https://hackaday.com/2022/02/28/its-official-the-raspberry-pi-is-now-10/
+The Life of Pi: Ten Years of Raspberry Pi
+https://www.cam.ac.uk/stories/raspberrypi
+https://news.ycombinator.com/item?id=30502862
+
 Raspberry Pi does what Microsoft can't!
 The new beta of Network Install is here, and I'll tell you how it works,
 which Pis are compatible, and why it matters.

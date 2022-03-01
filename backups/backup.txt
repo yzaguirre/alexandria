@@ -1,3 +1,6 @@
+Backups: You're doing 'em wrong!
+https://www.youtube.com/watch?v=S0KZ5iXTkzg
+
 An almost perfect rsync over ssh backup script
 https://blog.zazu.berlin/software/a-almost-perfect-rsync-over-ssh-backup-script.html
 https://news.ycombinator.com/item?id=30465581

@@ -6,8 +6,11 @@ https://www.fossil-scm.org/home/doc/trunk/www/chat.md
 https://news.ycombinator.com/item?id=26578581
 	apt install fossil
 Binary
-	wget https://fossil-scm.org/home/uv/fossil-linux-x64-2.17.tar.gz
-	tar xf fossil-linux-x64-2.17.tar.gz -C /usr/local/bin
+	wget https://www.fossil-scm.org/home/uv/fossil-linux-x64-2.18.tar.gz
+	tar xf fossil-linux-x64-2.18.tar.gz -C /usr/local/bin
+Raspberry Pi
+	wget https://www.fossil-scm.org/home/uv/fossil-pi-2.18.tar.gz
+	tar xf fossil-pi-2.18.tar.gz -C /usr/local/bin
 Windows
 	choco install fossil
 Usage

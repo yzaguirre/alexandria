@@ -2,23 +2,23 @@ https://dev.yorhel.nl/ncdu
 Ncdu is entirely written in C and available under a liberal MIT license.
 https://www.reddit.com/r/commandline/comments/sekd0w/ncdu_ncurses_disk_usage_see_which_directories_and/
 Download
-	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz
-	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.asc
-	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.sha1
-	wget https://dev.yorhel.nl/download/ncdu-2.0.1.tar.gz.md5
+	wget https://dev.yorhel.nl/download/ncdu-2.1.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.1.tar.gz.asc
+	wget https://dev.yorhel.nl/download/ncdu-2.1.tar.gz.sha1
+	wget https://dev.yorhel.nl/download/ncdu-2.1.tar.gz.md5
 Verify
-	md5sum ncdu-2.0.1.tar.gz
-	cat ncdu-2.0.1.tar.gz.md5
-	sha1sum ncdu-2.0.1.tar.gz
-	cat ncdu-2.0.1.tar.gz.sha1
+	md5sum ncdu-2.1.tar.gz
+	cat ncdu-2.1.tar.gz.md5
+	sha1sum ncdu-2.1.tar.gz
+	cat ncdu-2.1.tar.gz.sha1
 PGP fingerprint
 7446 0D32 B808 10EB A9AF A2E9 6239 4C69 8C27 39FA
 	wget https://yorhel.nl/key.asc
 	gpg --import key.asc
-	gpg --verify ncdu-2.0.1.tar.gz.asc
+	gpg --verify ncdu-2.1.tar.gz.asc
 Extract
-	tar xf ncdu-2.0.1.tar.gz
-	cd ncdu-2.0.1
+	tar xf ncdu-2.1.tar.gz
+	cd ncdu-2.1
 	./configure
 	make
 	make install
