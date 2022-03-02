@@ -1,3 +1,7 @@
+Privacy in email communication: we should use encryption by default
+https://notes.nicfab.it/en/posts/privacycom/#gnupg---openpgp
+https://news.ycombinator.com/item?id=30512491
+
 Helm: Personal Email Server
 https://news.ycombinator.com/item?id=18238581
 

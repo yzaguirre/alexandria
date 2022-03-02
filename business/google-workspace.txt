@@ -2,3 +2,7 @@ https://blog.google/products/workspace/google-workspace-everyone/
 
 Google Workspace Tutorial for Beginners | Introduction & Getting Started for Small Business [2021]
 https://www.youtube.com/watch?v=jZjJ54ehgrM
+
+Less secure apps and your Google Account
+https://support.google.com/accounts/answer/6010255?hl=en
+https://news.ycombinator.com/item?id=30513825

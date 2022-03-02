@@ -1,0 +1,11 @@
+Terminal file manager
+https://github.com/gokcehan/lf
+	wget https://github.com/gokcehan/lf/releases/download/r26/lf-linux-amd64.tar.gz
+	tar xf lf-linux-amd64.tar.gz -C /usr/local/bin
+Termux
+	apt install lf
+Windows
+	choco install lf
+	scoop install lf
+Homebrew
+	brew install lf

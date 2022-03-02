@@ -1,3 +1,7 @@
+OpenSSH 8.9
+https://www.openssh.com/txt/release-8.9
+https://news.ycombinator.com/item?id=30513246
+
 https://www.ssh.com/academy/ssh/sshd_config
 
 https://gravitational.com/blog/ssh-handshake-explained/

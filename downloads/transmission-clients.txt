@@ -10,7 +10,7 @@ http://www.webupd8.org/2009/12/setting-up-transmission-remote-gui-in.html
 NCurses interface with transmission daemon
 https://github.com/fagga/transmission-remote-cli
 Install ncurses client
-	sudo apt install transmission-remote-cli
+	apt install transmission-remote-cli
 Create config file
 	transmission-remote-cli -c johndoe:secretbirthday@homeserver:1234 --create-config
 	transmission-remote-cli -c david:dvd@localhost --create-config
@@ -18,7 +18,7 @@ Create config file
 After that, just
 	transmission-remote-cli
 
-Kettu - Web client 
+Kettu - Web client
 https://github.com/endor/kettu
 	wget https://github.com/endor/kettu/archive/master.zip
 	unzip master.zip && rm master.zip
@@ -48,10 +48,13 @@ https://www.youtube.com/watch?v=fpYbJCqpPS4
 
 Tremc
 https://github.com/tremc/tremc
-	git clone https://github.com/tremc/tremc
+	git clone https://github.com/tremc/tremc.git
 	cd tremc
 	sudo make install
 
 Stig
 https://github.com/rndusr/stig
-	sudo -H pip3 install stig
+	sudo -H pip install -U stig
+
+Configuration at
+cd ~/.config/stig/rc
