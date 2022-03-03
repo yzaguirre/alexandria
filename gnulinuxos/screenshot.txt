@@ -14,16 +14,22 @@ https://github.com/ksnip/ksnip
 The following NEW packages will be installed:
 ksnip libkcolorpicker0 libkimageannotator-common libkimageannotator0
 DEB
-	wget https://github.com/ksnip/ksnip/releases/download/v1.9.0/ksnip-1.9.0.deb
-	dpkg -i ksnip-1.9.0.deb
+	wget https://github.com/ksnip/ksnip/releases/download/v1.9.2/ksnip-1.9.2.deb
+	dpkg -i ksnip-1.9.2.deb
 Ubuntu
 	add-apt-repository ppa:nemonein/ksnip
 	apt install ksnip
+Windows
+	winget install ksnip
+Installed at C:\Program Files\ksnip
 Homebrew
 	brew install --cask ksnip
 MacOS
-	wget https://github.com/ksnip/ksnip/releases/download/v1.9.0/ksnip-1.9.0.dmg
-	open ksnip-1.9.0.dmg
+	wget https://github.com/ksnip/ksnip/releases/download/v1.9.2/ksnip-1.9.2.dmg
+	open ksnip-1.9.2.dmg
+
+Edit image
+	ksnip -e image.png
 
 gpicann
 Screenshot annotation tool

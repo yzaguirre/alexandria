@@ -1,7 +1,13 @@
+See etl2pcapng.txt and npcap.txt
+https://gaia.cs.umass.edu/kurose_ross/wireshark.php
+https://news.ycombinator.com/item?id=30519977
+All 8.0 PDFs and the zip of traces: paste the following in your browser's console.
+    $('td:nth-child(3) a:nth-child(1)')
+
 OSI
 http://null-byte.wonderhowto.com/how-to/spy-your-buddys-network-traffic-intro-wireshark-and-osi-model-0133807/
 
-https://www.wireshark.org/	
+https://www.wireshark.org
 	apt install wireshark tshark
 The following NEW packages will be installed:
 libbcg729-0 libsmi2ldbl libspandsp2 libwireshark-data libwireshark14 libwiretap11 libwsutil12 wireshark wireshark-common wireshark-qt
@@ -9,6 +15,9 @@ libbcg729-0 libsmi2ldbl libspandsp2 libwireshark-data libwireshark14 libwiretap1
 Termux
 	apt install root-repo
 	apt install tshark
+Windows
+	winget install WiresharkFoundation.Wireshark
+	choco install wireshark
 
 http://securityblog.gr/1195/run-wireshark-as-a-user-rather-than-root-ubuntu/
 	chgrp adm /usr/bin/dumpcap

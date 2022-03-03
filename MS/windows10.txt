@@ -48,3 +48,12 @@ PS
 Respaldar licencia de sistema operativo
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
 BackupProductKeyDefault
+
+DIR
+https://www.howtogeek.com/363639/how-to-use-the-dir-command-in-windows/
+Sort by date
+	DIR /OD
+Reverse order
+	DIR /O-D
+Pause results
+	DIR /P

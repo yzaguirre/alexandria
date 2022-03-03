@@ -1,0 +1,17 @@
+https://www.qbittorrent.org
+https://github.com/qbittorrent/qBittorrent
+	apt install libqt5svg5-dev
+	wget -O qbittorrent-4.4.1.tar.gz https://sourceforge.net/projects/qbittorrent/files/qbittorrent/qbittorrent-4.4.1/qbittorrent-4.4.1.tar.gz/download
+	wget -O qbittorrent-4.4.1.tar.gz.asc https://sourceforge.net/projects/qbittorrent/files/qbittorrent/qbittorrent-4.4.1/qbittorrent-4.4.1.tar.gz.asc/download
+	sha256sum qbittorrent-4.4.1.tar.gz
+581c81806da12b681332901e8ac90d878d132b085dcd011763972541eeac08d2
+	gpg --verify qbittorrent-4.4.1.tar.gz.asc
+	tar xf qbittorrent-4.4.1.tar.gz
+	cd qbittorrent-4.4.1
+	./configure
+	make -j12
+	make install
+	qbittorrent
+Windows
+	winget install qBittorrent.qBittorrent
+	choco install qBittorrent

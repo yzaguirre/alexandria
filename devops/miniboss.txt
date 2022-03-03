@@ -1,0 +1,9 @@
+The most versatile way to manage containers locally
+miniboss is a Python application for locally running
+a collection of interdependent docker services,
+individually rebuilding and restarting them,
+and managing application state with lifecycle hooks.
+Services definitions can be written in Python,
+allowing the use of programming logic instead of markup.
+https://github.com/afroisalreadyinu/miniboss
+https://news.ycombinator.com/item?id=30528167

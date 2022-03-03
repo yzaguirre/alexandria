@@ -1,0 +1,5 @@
+Web Extension for Firefox/Chrome/MS Edge
+and CLI tool to save a faithful copy of
+an entire web page in a single HTML file
+https://github.com/gildas-lormeau/SingleFile
+https://news.ycombinator.com/item?id=30527999

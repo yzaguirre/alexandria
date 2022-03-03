@@ -1,0 +1,10 @@
+Utility that converts an .etl file containing
+a Windows network packet capture into .pcapng format.
+https://github.com/microsoft/etl2pcapng
+	wget https://github.com/microsoft/etl2pcapng/releases/download/v1.7.0/etl2pcapng.zip
+	7z e -oC:\Users\dyzag\bin etl2pcapng.zip etl2pcapng\x64\etl2pcapng.pdb etl2pcapng\x64\etl2pcapng.exe
+Capture can be collected with:
+	netsh trace start capture=yes report=disabled
+	netsh trace stop
+Run Tool
+	etl2pcapng.exe in.etl out.pcapng

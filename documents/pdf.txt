@@ -47,3 +47,12 @@ https://gitlab.com/eang/diffpdf/
 
 https://www.simplepdf.eu
 https://news.ycombinator.com/item?id=29837895
+
+Convert to PNG
+https://www.cyberciti.biz/faq/how-to-convert-pdf-to-image-on-linux-command-line/
+	apt install poppler-utils
+Termux
+	apt install poppler
+	pdftoppm {input.pdf} {output.file} -png
+	wget https://www.cyberciti.biz/media/new/faq/2020/11/Bulldog.pdf
+	pdftoppm Bulldog.pdf Bulldog.pdf -png
