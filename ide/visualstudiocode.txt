@@ -178,3 +178,8 @@ https://twitter.com/Mastapegs/status/1433812713638072325
 Navigation
 https://stackoverflow.com/questions/41998311/how-to-go-to-next-changes-in-vs-code-side-by-side-view
 
+Thunder Client
+Thunder Client is a lightweight Rest API Client Extension for VS Code.
+https://www.thunderclient.com
+https://github.com/rangav/thunder-client-support
+https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client

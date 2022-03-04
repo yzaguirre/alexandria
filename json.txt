@@ -1,4 +1,8 @@
-https://stedolan.github.io/jq/
+Speeding up Go's built-in JSON encoder for large arrays of objects
+https://datastation.multiprocess.io/blog/2022-03-03-improving-go-json-encoding-performance-for-large-arrays-of-objects.html
+https://news.ycombinator.com/item?id=30547067
+
+https://stedolan.github.io/jq
 https://github.com/stedolan/jq
 https://mosermichael.github.io/jq-illustrated/dir/content.html
 https://news.ycombinator.com/item?id=22626080

@@ -21,3 +21,6 @@ Conversion to html
 	pandoc --self-contained -t slidy -o output-slidy.html yourInput.mkd
 Conversion to Word
 	pandoc -f markdown -t docx -o output.docx document.md
+
+Using SVG in source document to PDF
+https://github.com/jgm/pandoc/issues/265

@@ -1,0 +1,39 @@
+https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work
+https://developers.yubico.com/PGP/Git_signing.html
+Git is cryptographically secure, but it’s not foolproof. 
+If you're taking work from others on the internet and want to verify that commits
+are actually from a trusted source, Git has a few ways to sign and verify work using GPG.
+	git config --global user.signingkey 0A46826A
+Allways sign everything
+	git config --local commit.gpgSign true
+	git config --global tag.gpgSign true
+Verify signatures for every invocation of git log.
+	git config --global log.showSignature true
+Specify a key to sign
+	git config --local user.signingKey = 0x00000000
+Signing Tags
+If you have a GPG private key setup, you can now use it to sign new tags.
+All you have to do is use -s instead of -a:
+	git tag -sm 'my signed 1.5 tag' v1.5
+If you run
+	git show
+on that tag, you can see your GPG signature attached to it:
+
+Verifying Tags
+	git tag -v [tag-name]
+You need the signer's public key in your keyring for this to work properly:
+	git tag -v v1.4.2.1
+
+Signing Commits
+	git commit -a -S -m 'signed commit'
+To see and verify these signatures, there is also a --show-signature option to git log.
+Additionally, you can configure git log to check any signatures it finds and list them in its output with the %G? format.
+	git log --pretty="format:%h %G? %aN  %s"
+
+In Git 1.8.3 and later, "git merge" and "git pull" can be told to inspect and
+reject when merging a commit that does not carry a trusted GPG signature with the --verify-signatures command.
+	git merge --verify-signatures non-verify
+	git merge --verify-signatures signed-branch
+
+You can also use the -S option with the git merge command itself to sign the resulting merge commit itself.
+	git merge --verify-signatures -S signed-branch

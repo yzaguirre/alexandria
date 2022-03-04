@@ -87,3 +87,39 @@ Write results to txt file
 sqlite> .output test_file_1.txt
 sqlite> select * from tbl1;
 	cat test_file_1.txt
+
+ZIP
+https://www.sqlite.org/cli.html#zipdb
+https://www.reddit.com/r/programming/comments/t58hax/sqlite_cli_accessing_zip_archives_as_database/
+Schema
+CREATE TABLE zip(
+  name,     // Name of the file
+  mode,     // Unix-style file permissions
+  mtime,    // Timestamp, seconds since 1970
+  sz,       // File size after decompression
+  rawdata,  // Raw compressed file data
+  data,     // Uncompressed file content
+  method    // ZIP compression method code
+);
+See the compression efficiency
+(expressed as the size of the compressed content relative to the original uncompressed file size)
+for all files in the ZIP archive, sorted from most compressed to least compressed
+	sqlite> SELECT name, (100.0*length(rawdata))/sz FROM zip ORDER BY 2;
+Using file I/O functions, you can extract elements of the ZIP archive:
+sqlite> SELECT writefile(name,content) FROM zip
+   ...> WHERE name LIKE 'docProps/%';
+Extract ZIP file
+	sqlite3 -Axf archive.zip
+List ZIP file contents
+	sqlite3 -Atvf archive.zip
+Create ZIP file
+	sqlite3 -Acf archive2.zip dir
+
+Convert database to a text file
+	sqlite3 ex1 .dump | gzip -c >ex1.dump.gz
+Restore database from a text file
+	zcat ex1.dump.gz | sqlite3 ex2
+The text format is pure SQL so you can also use the .dump command
+to export an SQLite database into other popular SQL database engines.
+	createdb ex2
+	sqlite3 ex1 .dump | psql ex2

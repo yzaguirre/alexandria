@@ -115,6 +115,7 @@ https://neurotechnics.com/blog/configure-gpg-to-sign-git-commits-in-windows/
 	git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 	git config --global user.signingkey DA03396D49F620F3
 	git config --global commit.gpgsign true
+	git config --global tag.gpgSign true
 Optionally, you may need to disable TTY if your IDE doesn't like talking to gpg properly:
 	echo 'no-tty' >> ~/.gnupg/gpg.conf
 Local config: .git/config

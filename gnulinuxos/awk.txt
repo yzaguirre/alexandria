@@ -5,6 +5,11 @@ An interactive introduction to Awk
 https://www.n8ta.com/projects/awk.html
 https://news.ycombinator.com/item?id=27437401
 
+https://www.gnu.org/software/gawk/
+	apt install gawk
+Windows
+	choco install gawk
+
 Explain the following statement:
 ls -lhrS | grep -i $USER | tail -3 | awk '{ print $5, $9; }'
 Answer:

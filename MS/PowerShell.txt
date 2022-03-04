@@ -22,6 +22,14 @@ Manual install
 	dpkg -i powershell_7.2.1-1.deb_amd64.deb
 	apt install -f
 
+Windows
+How to install latest version of powershell in Windows 11 | Upgrade Powershell to 7.2.0
+https://www.youtube.com/watch?v=bWw7f5yVvGQ
+	winget install Microsoft.PowerShell
+Installed at C:\Program Files\PowerShell\7
+Run
+	pwsh.exe
+
 http://blogs.technet.com/b/heyscriptingguy/archive/2013/06/02/weekend-scripter-install-powershell-3-0-on-windows-7.aspx
 $psversiontable
 Make shortcut to Desktop
