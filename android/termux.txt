@@ -44,3 +44,10 @@ Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
 	passwd
 	sshd
 	ssh -p 8022 user@address
+
+Repositories
+https://packages-cf.termux.org
+https://wiki.termux.com/wiki/FAQ#Repositories_are_down_and_return_403_404_errors
+https://github.com/termux/termux-packages/issues/9234
+https://github.com/termux/termux-app/issues/2628
+	termux-change-repo

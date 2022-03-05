@@ -56,3 +56,15 @@ Termux
 	pdftoppm {input.pdf} {output.file} -png
 	wget https://www.cyberciti.biz/media/new/faq/2020/11/Bulldog.pdf
 	pdftoppm Bulldog.pdf Bulldog.pdf -png
+
+pdftk
+https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
+	apt install pdftk
+The following NEW packages will be installed:
+ca-certificates-java default-jre-headless java-common libapache-pom-java libbcprov-java libcommons-lang3-java libcommons-parent-java
+openjdk-11-jre-headless pdftk pdftk-java
+Combine multiple pdf documents
+	pdftk img?.pdf cat output documento.pdf
+Concatenates PDF files while preserving all bookmarks
+https://gist.github.com/foonathan/9375720ec6da7c23ad874014bd5e4be8
+https://www.reddit.com/r/commandline/comments/t6glb1/i_made_a_script_that_concatenates_pdf_files_while/

@@ -1,3 +1,4 @@
+See ../gnulinuxos/screenshot.txt
 https://docs.microsoft.com/en-us/windows/uwp/launch-resume/launch-screen-snipping
 https://www.askvg.com/tip-different-ways-to-open-screen-snip-sketch-in-windows-10/
 	explorer ms-screenclip:

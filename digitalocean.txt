@@ -1,3 +1,7 @@
+https://www.digitalocean.com/community/questions/minor-upgrade-to-basic-premium-or-regular
+The Premium AMD Droplets feature a memory frequency of 3200 MHz,
+and Premium Intel 2933 MHz.
+
 https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2#how-to-generate-a-personal-access-token
 https://developers.digitalocean.com/documentation/v2/
 - How to generate personal access tokens, which will be used for authentication.

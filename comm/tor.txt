@@ -22,10 +22,13 @@ https://www.torproject.org/docs/debian.html.en
 	mv /opt/{tor-browser_*,tor}
 	ln -s /opt/tor/Browser/start-tor-browser /usr/local/bin/tor
 Windows
-	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe
-	wget https://www.torproject.org/dist/torbrowser/9.0.10/torbrowser-install-win64-9.0.10_en-US.exe.asc
-	gpg --verify torbrowser-install-win64-9.0.10_en-US.exe.asc
-	explorer torbrowser-install-win64-9.0.10_en-US.exe
+	winget install TorProject.TorBrowser
+	choco install tor
+Binary
+	wget https://www.torproject.org/dist/torbrowser/11.0.6/torbrowser-install-win64-11.0.6_en-US.exe
+	wget https://www.torproject.org/dist/torbrowser/11.0.6/torbrowser-install-win64-11.0.6_en-US.exe.asc
+	gpg --verify torbrowser-install-win64-11.0.6_en-US.exe.asc
+	explorer torbrowser-install-win64-11.0.6_en-US.exe
 Installs in "~/Desktop/Tor Browser"
 
 As a service
@@ -48,7 +51,7 @@ HiddenServicePort 80 127.0.0.1:80
 Restart tor
 	systemctl restart tor
 
-Inside the 
+Inside the
 	/home/ubuntu/tor/hidden_service
 directory you will now find two files, a private_key file and a hostname file.
 Inside the private_key file is your services' private key and is vitally important to keep safe.

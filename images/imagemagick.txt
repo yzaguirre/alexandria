@@ -21,9 +21,9 @@ https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
 https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
 https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
 	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev libttfautohint-dev
-	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-19.tar.gz
-	tar xf 7.1.0-19.tar.gz
-	cd ImageMagick-7.1.0-19
+	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-26.tar.gz
+	tar xf 7.1.0-26.tar.gz
+	cd ImageMagick-7.1.0-26
 	./configure --with-modules --with-fontconfig=yes --with-freetype=yes --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
 If using jpeg-xl. See ~/images/jpegxl.txt
 https://github.com/ImageMagick/ImageMagick/issues/3236
@@ -217,7 +217,7 @@ Resize image if height greater than 1000 pixels
 		mogrify -resize 40% $line
 	fi
 
-Convert to PDF
+Convert to PDF. See ../documents/pdf.txt
 https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
 	apt install pdftk
 The following NEW packages will be installed:

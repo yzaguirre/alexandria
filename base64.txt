@@ -8,3 +8,6 @@ div.image {
   background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...);
 }
 see js/base64.txt
+
+https://medium.com/@tomerdbz/lets-understand-base64-a67c1831dfc0
+https://www.reddit.com/r/programming/comments/t5zjjo/lets_understand_base64_why_is_it_important_and/

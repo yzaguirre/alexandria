@@ -7,3 +7,7 @@ However if it is normal account you need some sort of intelligence to recognise 
 Citrix said the hackers "removed files from our systems,
 which may have included files containing information about our current and former employees and,
 in limited cases, information about beneficiaries and/or dependents."
+
+A GitHub repository was public-viewable
+https://blog.adafruit.com/2022/03/04/a-github-repository-was-public-viewable/
+https://news.ycombinator.com/item?id=30554723

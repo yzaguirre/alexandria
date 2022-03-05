@@ -1,3 +1,6 @@
+https://blog.devgenius.io/6-net-myths-dispelled-celebrating-21-years-of-net-652795c2ea27
+https://www.reddit.com/r/programming/comments/t5yvjx/6_net_myths_dispelled_celebrating_21_years_of_net/
+
 Announcing .NET 5.0
 https://devblogs.microsoft.com/dotnet/announcing-net-5-0/
 https://news.ycombinator.com/item?id=25047409
