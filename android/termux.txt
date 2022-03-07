@@ -2,12 +2,20 @@ https://termux.com
 https://github.com/termux/termux-app
 https://github.com/termux/termux-packages
 https://news.ycombinator.com/item?id=24979258
-	apt install figlet mutt tcpdump php openssl-tool tty-clock irssi pv mosh wget python jq htop taskwarrior newsbeuter
-	apt install gnupg curl
-	apt install termux-api
+	pkg install openssh python tmux php openssl openssl-tool clang rust golang android-tools vim file bat ncurses-utils nmap-ncat
+	apt install figlet mutt tty-clock irssi pv mosh jq htop taskwarrior newsboat gnupg curl wget termux-api
+	apt install ripgrep fd exa binutils p7zip
 	termux-setup-storage
-
-	pip install youtube_dl httpie mycli haxor-news
+	pip install -U pip wheel setuptools
+	pip install -U lxml
+	export CARGO_BUILD_TARGET=aarch64-linux-android
+	pip install -U yt-dlp pick rich rich-cli paramiko termux-api httpie openpyxl pandas pandas-datareader
+	pip install -U pilgram pillow
+	apt install libzmq
+	pip install -U jupyterlab
+	cd $PREFIX/lib
+	ln -s openssl-1.1/libssl.so.1.1 libssl.so.1.1
+	ln -s openssl-1.1/libcrypto.so.1.1 libcrypto.so.1.1
 
 Use the ESC key
 	echo "back-key=escape" > .termux/termux.properties
@@ -51,3 +59,15 @@ https://wiki.termux.com/wiki/FAQ#Repositories_are_down_and_return_403_404_errors
 https://github.com/termux/termux-packages/issues/9234
 https://github.com/termux/termux-app/issues/2628
 	termux-change-repo
+
+How to fix libssl.so.1.1 error in Termux
+https://www.youtube.com/watch?v=N9Hq8JjSWJI
+	rm -rf $PREFIX
+Close and restart termux. Change repository
+	termux-change-repo
+	pkg up
+
+Android ADB
+How to install adb in Termux
+https://www.youtube.com/watch?v=Hl9EXBQ1KWA
+	adb connect 127.0.0.1:5555

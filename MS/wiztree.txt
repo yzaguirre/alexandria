@@ -1,0 +1,2 @@
+https://diskanalyzer.com
+	winget install AntibodySoftware.WizTree

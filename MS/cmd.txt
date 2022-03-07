@@ -6,3 +6,17 @@ cd /d [path]
 
 (Drive_Letter):
 	D:
+
+Compress ZIP
+See ../compression/cmd.txt
+
+"Super Hidden" Files in Windows (Even Experts Don't Know About)
+https://www.youtube.com/watch?v=3BWTo87oCwc
+Create filestream
+	notepad myfile.txt:stream_name
+Save a file into a filesream
+	type image.jpg > imagetest.txt:picture.jpg
+List filestreams
+	dir /r
+Open filestream
+	expand imagetext.txt:picture.jpg extracted.jpg

@@ -1,5 +1,6 @@
 https://github.com/Textualize/rich-cli
 https://news.ycombinator.com/item?id=30150219
+See ../python/rich.txt
 	sudo -H pip install -U rich-cli
 Usage
 	rich loop.py

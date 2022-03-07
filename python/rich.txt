@@ -1,4 +1,5 @@
 Make Your Python CLI Tools Pop with Rich
+See ../gnulinuxos/rich-cli.txt
 https://github.com/Textualize/rich
 https://rich.readthedocs.io/en/latest/
 https://hackaday.com/2022/01/19/make-your-python-cli-tools-pop-with-rich/

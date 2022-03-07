@@ -25,23 +25,23 @@ Both commands accept additional arguments to influence their behavior:
 
 wormhole-william
 https://github.com/psanford/wormhole-william
-	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-amd64
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.6/wormhole-william-linux-amd64
 	chmod u+x wormhole-william-linux-amd64
 	mkdir /opt/wormhole-william/
 	mv wormhole-william-linux-amd64 /opt/wormhole-william/
 	ln -s /opt/wormhole-william/wormhole-william-linux-amd64 /usr/local/bin/wormhole-william
 Termux
-	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-arm64
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.6/wormhole-william-linux-arm64
 	chmod u+x wormhole-william-linux-arm64
 	mv wormhole-william-linux-arm64 /data/data/com.termux/files/usr/bin/wormhole-william
 Raspberry Pi
-	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-linux-arm6
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.6/wormhole-william-linux-arm6
 	chmod u+x wormhole-william-linux-arm6
 	mkdir /opt/wormhole-william/
 	mv wormhole-william-linux-arm6 /opt/wormhole-william/
 	ln -s /opt/wormhole-william/wormhole-william-linux-arm6 /usr/local/bin/wormhole-william
 MacOS
-	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.5/wormhole-william-darwin-amd64
+	wget https://github.com/psanford/wormhole-william/releases/download/v1.0.6/wormhole-william-darwin-amd64
 	chmod u+x wormhole-william-darwin-amd64
 	mv wormhole-william-darwin-amd64 ~/bin/wormhole-william
 

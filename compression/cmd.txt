@@ -1,0 +1,24 @@
+https://ss64.com/nt/expand.html
+Expande uno o varios archivos comprimidos.
+List help
+	expand /?
+	EXPAND [-R] Origen Destino
+	EXPAND -R Origen [Destino]
+	EXPAND -I Origen [Destino]
+	EXPAND -D Origen.cab [-F:Archivos]
+	EXPAND Origen.cab -F:Archivos Destino
+
+  -R           Cambia el nombre de los archivos expandidos.
+  -I           Cambia el nombre de archivos expandidos pero omite la estructura
+               de directorios.
+  -D           Muestra una lista de archivos en el origen
+  Origen       Especificación del archivo de origen. Se pueden usar comodines.
+  -F:Archivos  Nombre de los archivos que se expanden desde un .CAB.
+  Destino      Archivo de destino | ruta de acceso.
+               El destino puede ser un directorio.
+               Si el origen son varios archivos y no se especifica -r,
+               el destino debe ser un directorio.
+Unzip
+	expand file.zip file
+Open filestream
+	expand imagetext.txt:picture.jpg extracted.jpg
