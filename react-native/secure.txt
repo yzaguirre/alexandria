@@ -14,3 +14,8 @@ https://www.reddit.com/r/reactnative/comments/o3rc7h/react_native_vault_a_persis
 	yarn pod
 
 See ~/ios/keychain.txt
+
+AES-GCM encryption/decryption for React Native
+https://github.com/craftzdog/react-native-aes-gcm-crypto
+I made my React Native app 50x faster
+https://www.youtube.com/watch?v=vj723NlrIQc

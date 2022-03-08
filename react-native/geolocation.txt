@@ -66,3 +66,5 @@ https://github.com/gulsher7/SMOOTH_TRACKING
 https://www.reddit.com/r/reactnative/comments/s8dqel/google_maps_related_icons_emerge_on_selecting_the/
 Get rid of them by setting:
 <MapView toolbarEnabled={false} />
+
+https://github.com/react-native-maps/react-native-maps/issues/3715

@@ -37,3 +37,6 @@ Subir línea actual
 CTRL+SHIFT+UP
 Bajar línea actual
 CTRL+SHIFT+DOWN
+https://superuser.com/questions/447978/open-links-in-notepad-with-keyboard
+	vim %appdata%\notepad++\shortcuts.xml
+<Command name="Open Link" Ctrl="no" Alt="no" Shift="no" Key="0">explorer &quot;$(CURRENT_WORD)&quot;</Command>

@@ -17,3 +17,5 @@ https://www.reddit.com/r/programming/comments/sawkw3/marak_the_guy_behind_the_re
 
 Linux's GPLv2 licence is routinely violated (2015)
 https://news.ycombinator.com/item?id=30400510
+
+https://www.reddit.com/r/programming/comments/t7xvjo/no_open_source_does_not_mean_includes_free_support/

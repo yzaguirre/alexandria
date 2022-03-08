@@ -1,0 +1,4 @@
+Elementary is an open-source data observability framework
+for modern data teams. Move fast and be confident about your data.
+https://docs.elementary-data.com
+https://github.com/elementary-data/elementary

@@ -1,7 +1,23 @@
-https://geany.org/
+https://geany.org
 https://github.com/geany/geany
 https://news.ycombinator.com/item?id=23524336
 	apt install geany
+Compile with plugins
+	wget https://download.geany.org/geany-1.38.tar.gz
+	wget https://download.geany.org/geany-1.38.tar.gz.sig
+	wget https://plugins.geany.org/geany-plugins/geany-plugins-1.38.tar.gz
+	wget https://plugins.geany.org/geany-plugins/geany-plugins-1.38.tar.gz.sig
+	wget https://download.geany.org/colombanw-pubkey.txt
+	gpg --verify geany-1.38.tar.gz.sig
+	gpg --verify geany-plugins-1.38.tar.gz.sig
+	tar xf geany-1.38.tar.gz
+	./configure
+	make -j12
+	make install
+	tar xf geany-plugins-1.38.tar.gz
+	./configure
+	make -j12
+	make install
 MS Windows install
 	winget install Geany.Geany
 Installer

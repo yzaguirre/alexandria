@@ -1,44 +1,53 @@
 https://www.rust-lang.org
 https://github.com/rust-lang/rust
 https://www.rust-lang.org/downloads.html
-	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz
-	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
-	wget https://static.rust-lang.org/dist/rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz
+	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.sha256
 Verify
-	gpg2 --verify rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc
-	sha256sum -c rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.sha256
-	sha256sum -c rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	gpg2 --verify rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	sha256sum -c rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	sha256sum -c rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
 Install
-	tar xf rust-1.58.1-x86_64-unknown-linux-gnu.tar.gz
-	cd rust-1.58.1-x86_64-unknown-linux-gnu
+	tar xf rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz
+	cd rust-1.59.0-x86_64-unknown-linux-gnu
 	sudo ./install.sh
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
-
+Windows
+	winget install Rustlang.Rust.MSVC
+	choco install rust
 Getting Started with Rust on Windows and Visual Studio Code
 https://www.youtube.com/watch?v=aYsUBddY7KY
 
 Src
-	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz
-	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.sha256
-	wget https://static.rust-lang.org/dist/rustc-1.58.1-src.tar.gz.asc.sha256
-	gpg2 --verify rustc-1.58.1-src.tar.gz.asc
-	sha256sum -c rustc-1.58.1-src.tar.gz.sha256
-	sha256sum -c rustc-1.58.1-src.tar.gz.asc.sha256
-	tar xf rustc-1.58.1-src.tar.gz -C /usr/local/src
+	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz
+	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.asc.sha256
+	gpg2 --verify rustc-1.59.0-src.tar.gz.asc
+	sha256sum -c rustc-1.59.0-src.tar.gz.sha256
+	sha256sum -c rustc-1.59.0-src.tar.gz.asc.sha256
+	tar xf rustc-1.59.0-src.tar.gz -C /usr/local/src
 Install racer (may take a while)
 	cargo install racer
 Edit 
 	vim + ~/.profile
-export RUST_SRC_PATH=/usr/local/src/rustc-1.58.1/src
+export RUST_SRC_PATH=/usr/local/src/rustc-1.59.0/src
 PATH=$PATH:/home/david/.cargo/bin
 
 Rustup
+https://rustup.rs
+https://www.rust-lang.org/tools/install
 https://news.ycombinator.com/item?id=11691760
 http://blog.rust-lang.org/2016/05/13/rustup.html
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Windows
+	choco install rustup.install
+	rustup --version
+	rustup toolchain list
+	rustup toolchain install stable-x86_64-pc-windows-msvc
 Update to latest rust
 	rustup update stable
 Uninstall
@@ -68,7 +77,6 @@ sk
 hx
 wasmer
 
-https://rustup.rs/
 https://ayende.com/blog/185665-A/writing-my-network-protocol-in-rust
 https://zsiciarz.github.io/24daysofrust/book/vol1/day20.html
 http://blog.rust-lang.org/2015/12/10/Rust-1.5.html

@@ -1,0 +1,6 @@
+https://github.com/faizalshap/react-native-otp-verify
+https://github.com/naveenvignesh5/react-native-otp-textinput
+	yarn add react-native-otp-verify react-native-otp-textinput
+
+React Native : How to use react-native-otp-textinput and customize it
+https://www.youtube.com/watch?v=HM5Oxk5UAgE

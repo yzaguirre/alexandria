@@ -1,0 +1,5 @@
+utt is the universal text transformer
+https://github.com/queer/utt
+https://news.ycombinator.com/item?id=30592311
+	wget https://github.com/queer/utt/releases/download/0.0.1/utt
+	mv utt /usr/local/bin

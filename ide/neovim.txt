@@ -17,8 +17,13 @@ https://media.pragprog.com/titles/modvim/intro.pdf
 Install
 	apt install neovim
 	nvim
+Windows
+	choco install neovim
 Homebrew
 	brew install neovim
+Config at
+~/.config/nvim/init.vim
+%LOCALAPPDATA%\nvim\init.vim
 
 https://media.pragprog.com/titles/modvim/switch.pdf
 	vim ~/.bash_aliases

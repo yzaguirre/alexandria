@@ -1,0 +1,23 @@
+Professional Photo Management with the Power of Open Source
+https://www.digikam.org
+https://docs.kde.org/trunk5/en/digikam-doc/digikam/index.html
+Signing key
+	wget https://keys.openpgp.org/vks/v1/by-fingerprint/D1CF2444A7858C5F2FB095B74A77747BC2386E50
+Windows
+	winget install KDE.digikam
+Latest version
+https://download.kde.org/stable/digikam/7.6.0/digiKam-7.6.0-Win64.exe.mirrorlist
+	wget https://mirrors.ocf.berkeley.edu/kde/stable/digikam/7.6.0/digiKam-7.6.0-Win64.exe
+	wget https://mirrors.ocf.berkeley.edu/kde/stable/digikam/7.6.0/digiKam-7.6.0-Win64.exe.sig
+	md5sum digiKam-7.6.0-Win64.exe
+041e01f8b9b5245d8bd73f98341ebe97
+	sha1sum digiKam-7.6.0-Win64.exe
+0925c70c1b9941cc61db54360874ae4d2291752d
+	sha256sum digiKam-7.6.0-Win64.exe
+25b07971a0995f6440abb0084f3a3e2c40e01746282c45f60e076eb8cd4edda9
+	gpg --verify digiKam-7.6.0-Win64.exe.sig
+	explorer.exe digiKam-7.6.0-Win64.exe
+Installed at C:\Program Files\digiKam
+Sqlite database location can be C:\Users\dyzag\digikam-db
+Plugin at %APPDATA%\digikam\faceengine
+%APPDATA%

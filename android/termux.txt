@@ -2,7 +2,7 @@ https://termux.com
 https://github.com/termux/termux-app
 https://github.com/termux/termux-packages
 https://news.ycombinator.com/item?id=24979258
-	pkg install openssh python tmux php openssl openssl-tool clang rust golang android-tools vim file bat ncurses-utils nmap-ncat
+	pkg install openssh python tmux php openssl openssl-tool clang rust golang android-tools vim file bat ncurses-utils nmap-ncat git ffmpeg imagemagick
 	apt install figlet mutt tty-clock irssi pv mosh jq htop taskwarrior newsboat gnupg curl wget termux-api
 	apt install ripgrep fd exa binutils p7zip
 	termux-setup-storage
