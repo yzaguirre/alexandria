@@ -4,3 +4,6 @@ https://www.youtube.com/watch?v=ad7SUyN5V7A
 https://github.com/lexfridman/mit-deep-learning
 
 https://www.reddit.com/r/learnprogramming/comments/bu6645/cornells_entire_machine_learning_class_cs_4780_is/
+
+https://www.microsoft.com/en-us/research/blog/%C2%B5transfer-a-technique-for-hyperparameter-tuning-of-enormous-neural-networks/
+https://www.reddit.com/r/programming/comments/t9wuxl/%C2%B5transfer_a_technique_for_hyperparameter_tuning/

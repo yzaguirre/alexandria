@@ -1,0 +1,18 @@
+The successor of GNU Wget.
+https://gitlab.com/gnuwget/wget2/-/wikis/home
+https://rockdaboot.github.io/wget2/md_wget2_manual.html
+https://github.com/rockdaboot/wget2
+x	wget https://gnuwget.gitlab.io/wget2/wget2-latest.tar.gz
+	wget https://ftp.gnu.org/gnu/wget/wget2-2.0.0.tar.gz
+	wget https://ftp.gnu.org/gnu/wget/wget2-2.0.0.tar.gz.sig
+Signed with 0x08302DB6A2670428 key
+	gpg --verify wget2-2.0.0.tar.gz.sig
+	tar xf wget2-latest.tar.gz
+	cd wget2-*
+	./configure
+	make -j12
+	make check
+	sudo make install
+
+Windows
+https://www.lumito.net/2020/12/05/released-wget2-1-99-2-for-windows/

@@ -1,0 +1,7 @@
+Signtool
+https://docs.microsoft.com/en-us/windows/win32/seccrypto/cryptography-tools
+https://docs.microsoft.com/en-us/windows/win32/seccrypto/signtool
+	signtool [command] [options] [file_name | ...]
+Verify
+https://docs.microsoft.com/en-us/windows/win32/seccrypto/using-signtool-to-verify-a-file-signature
+	SignTool verify MyControl.exe

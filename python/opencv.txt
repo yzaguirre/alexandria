@@ -1,2 +1,5 @@
 Draw with OpenCV - No more Photoshop! Graphic Design with Python!
 https://www.youtube.com/watch?v=PtvN8ad9N3g
+
+https://magamig.github.io/posts/accurate-image-alignment-and-registration-using-opencv/
+https://news.ycombinator.com/item?id=30613745

@@ -1,0 +1,5 @@
+Windows SDK
+https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
+	winget install Microsoft.WindowsSDK
+
+See ../secure/signtool.txt

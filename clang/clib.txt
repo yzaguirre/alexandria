@@ -1,0 +1,28 @@
+Package manager for the C programming language.
+https://www.clibs.org
+https://github.com/clibs/clib
+https://news.ycombinator.com/item?id=30596005
+	wget https://github.com/clibs/clib/releases/download/2.7.0/clib-linux-2.7.0.zip
+	7z e -o~/.local/bin clib-linux-2.7.0.zip
+Compile
+	apt install libcurl4-gnutls-dev
+	git clone https://github.com/clibs/clib.git /tmp/clib
+	cd /tmp/clib
+	make -j12
+	make install
+Windows
+	wget https://github.com/clibs/clib/releases/download/2.7.0/clib-win-2.7.0.zip
+	7z e -o"C:\Users\dyzag\.clib\bin" clib-win-2.7.0.zip
+Add C:\Users\dyzag\.clib\bin to PATH environment variable
+Homebrew
+	brew install clib
+
+Examples
+Install a few dependencies to ./deps
+	clib install clibs/ms clibs/commander
+Install them to ./src instead
+	clib install clibs/ms clibs/commander -o src
+When installing libraries from the clibs org you can omit the name
+	clib install ms file hash
+Install some executables
+	clib install visionmedia/mon visionmedia/every visionmedia/watch

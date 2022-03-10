@@ -1,0 +1,5 @@
+https://www.sqlite.org/csv.html
+https://news.ycombinator.com/item?id=30610532
+	.load ./csv
+	CREATE VIRTUAL TABLE temp.t1 USING csv(filename='thefile.csv');
+	SELECT * FROM t1;

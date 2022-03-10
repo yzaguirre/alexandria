@@ -1,11 +1,11 @@
 https://github.com/dmerejkowsky/ruplacer
 .deb installer not available form https://github.com/TankerHQ/ruplacer
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.2/ruplacer-linux
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.4/ruplacer-linux
 	chmod u+x ruplacer-linux
 	mv ruplacer-linux /usr/local/bin/ruplacer
 Windows
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.2/ruplacer-windows.exe
-	mv ruplacer-windows.exe ~/bin/ruplacer.exe
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.4/ruplacer-windows.exe
+	move ruplacer-windows.exe C:\Users\dyzag\bin\ruplacer.exe
 MacOS
 Use formula
 	brew install yzaguirre/homebrew-repo/ruplacer

@@ -100,3 +100,7 @@ def attach_file_to_email(email_message, filename):
 attach_file_to_email(email_message, 'chart.png')
 attach_file_to_email(email_message, 'excel_report.xlsx')
 attach_file_to_email(email_message, 'fpdf_pdf_report.pdf')
+
+Sending notifications programmatically: let me count the ways
+https://www.trickster.dev/post/sending-notifications-programmatically/
+https://news.ycombinator.com/item?id=30612817

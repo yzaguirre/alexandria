@@ -1,0 +1,30 @@
+https://qalculate.github.io/index.html
+https://www.reddit.com/r/programming/comments/ta0yk6/qalculate_the_ultimate_desktop_calculator/
+
+Qalculate! library and CLI
+https://github.com/Qalculate/libqalculate
+	wget https://github.com/Qalculate/libqalculate/releases/download/v4.0.0/qalculate-4.0.0-x86_64.tar.xz
+	tar xf qalculate-4.0.0-x86_64.tar.xz
+	cd qalculate-4.0.0
+	./install
+Windows
+	winget install Qalculate.Qalculate
+	choco install qalculate
+
+Usage
+	1A * 20V * 30s
+	1A * 20V * 5minute -> Wh
+
+See rink.txt
+
+Calculator
+	qalc "10Gigabyte/300(Kibyte/second) to hours"
+	qalc "3 megabit/s to kibytes/s"
+	qalc "2048(Kibit/s) to KiByte/s"
+	qalc "2048(Kibit/s) to KiloByte/s"
+	qalc "((78*30)+(13*19))/2"
+	qalc "addDays(2014-06-18, 50)"
+	qalc "500 EUR to GBP
+	qalc "1300 feet to metres"
+	qalc "70 mph to kmh"
+Check out directory /usr/share/qalculate/

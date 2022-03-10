@@ -1,0 +1,20 @@
+Apprise - Push Notifications that work with just about every platform!
+https://github.com/caronc/apprise
+https://hub.docker.com/r/caronc/apprise
+	sudo -H pip install -U apprise
+
+Send a notification to as many servers as you want
+as you can easily chain one after another (the -vv provides some
+additional verbosity to help let you know what is going on):
+	apprise -vv -t 'my title' -b 'my notification body' \
+   'mailto://myemail:mypass@gmail.com' \
+   'pbul://o.gn5kj6nfhv736I7jC3cj3QLRiyhgl98b'
+
+If you don't specify a --body (-b) then stdin is used allowing
+you to use the tool as part of your every day administration:
+	cat /proc/cpuinfo | apprise -vv -t 'cpu info' \
+   'mailto://myemail:mypass@gmail.com'
+
+The title field is totally optional
+uptime | apprise -vv \
+	'discord:///4174216298/JHMHI8qBe7bk2ZwO5U711o3dV_js'

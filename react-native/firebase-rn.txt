@@ -1,4 +1,4 @@
-https://firebase.google.com/
+https://firebase.google.com
 https://firebase.google.com/docs
 https://console.firebase.google.com/u/0/?pli=1
 
@@ -6,7 +6,7 @@ https://dev.to/kartiknair/learn-how-to-build-a-fast-responsive-markdown-editor-w
 https://github.com/armand1m/react-with-firebase-auth#readme
 	yarn add firebase react-with-firebase-auth
 
-https://rnfirebase.io/
+https://rnfirebase.io
 https://github.com/invertase/react-native-firebase
 https://invertase.io/blog/getting-started-with-cloud-firestore-on-react-native
 https://heartbeat.fritz.ai/chat-app-with-react-native-part-2-firebase-user-authentication-with-react-native-firebase-533352870497

@@ -1,4 +1,4 @@
-https://reanimated.funcs.io/
+https://reanimated.funcs.io
 https://github.com/funcsio/reanimated.playground
 https://www.reddit.com/r/reactnative/comments/m61crt/introducing_reanimated_playground/
 
@@ -24,3 +24,6 @@ https://github.com/funcsio/react-native-swipe-button-tutorial
 
 https://github.com/uragirii/react-native-spotify-lyrics
 https://www.reddit.com/r/reactnative/comments/ndxsyj/a_made_spotifys_lyrics_screen_using_reanimated_2/
+
+The magic of Layout Animations in Reanimated (React Native)
+https://www.youtube.com/watch?v=p3BLiloo2UM

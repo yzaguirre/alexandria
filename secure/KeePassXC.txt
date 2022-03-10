@@ -67,3 +67,6 @@ https://github.com/keepassxreboot/keepassxc/pull/5538
 
 KeePassXC Browser Extension
 https://github.com/keepassxreboot/keepassxc-browser
+
+KeePassXC Advanced Usage // 8 features you might have not heard about
+https://www.youtube.com/watch?v=o6Bk0HLPLzo&t=18s

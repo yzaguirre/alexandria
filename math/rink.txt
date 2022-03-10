@@ -1,0 +1,15 @@
+https://rinkcalc.app
+https://github.com/tiffany352/rink-rs
+https://github.com/tiffany352/rink-rs/wiki/Rink-Manual
+	wget https://github.com/tiffany352/rink-rs/releases/download/v0.6.2/Rink.CLI.Linux.zip
+	unzip Rink.CLI.Linux.zip -d /usr/local/bin/
+	chmod u+x /usr/local/bin/rink
+Rust
+	cargo install rink
+Windows
+	scoop install rink
+Binary
+	wget https://github.com/tiffany352/rink-rs/releases/download/v0.6.2/Rink.CLI.Windows.zip
+	7z x -oC:\Users\dyzag\bin Rink.CLI.Windows.zip
+
+See qalculate.txt

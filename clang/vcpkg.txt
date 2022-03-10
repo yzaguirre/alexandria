@@ -1,0 +1,4 @@
+C/C++ dependency manager from Microsoft
+For all platforms, buildsystems, and workflows
+https://vcpkg.io
+https://github.com/microsoft/vcpkg

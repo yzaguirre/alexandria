@@ -1,6 +1,6 @@
 https://github.com/kitplummer/clikan
 https://news.ycombinator.com/item?id=22890955
-	sudo -H pip3 install clikan
+	sudo -H pip install -U clikan
 	clikan configure
 	vim ~/.clikan.yaml
 clikan_data: /Users/david/.clikan.dat

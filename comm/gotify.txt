@@ -1,0 +1,13 @@
+A simple server for sending and receiving messages
+https://gotify.net
+https://github.com/gotify
+https://gotify.net/docs/
+
+A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)
+https://github.com/gotify/server
+
+A command line interface for pushing messages to gotify/server.
+https://github.com/gotify/cli
+
+The Gotify Website
+https://github.com/gotify/website

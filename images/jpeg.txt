@@ -3,3 +3,9 @@ https://www.youtube.com/watch?v=0me3guauqOU
 
 STOP Using JPEG? JPEG vs PNG in Depth!
 https://www.youtube.com/watch?v=0jNIYWBDULI
+
+Interactively edit individual DCT blocks in any JPEG image in the browser.
+https://github.com/OmarShehata/jpeg-sandbox
+https://news.ycombinator.com/item?id=30595617
+Live demo
+https://jpeg-sandbox.glitch.me

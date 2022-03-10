@@ -77,6 +77,7 @@ https://www.sqlitetutorial.net/tryit/query/sqlite-date/#11
 	strftime('%Y-%m-%d', ...)
 
 CSV
+See sqlite-csv.txt
 Practical SQL for Data Analysis
 https://hakibenita.com/sql-for-data-analysis
 https://news.ycombinator.com/item?id=27025829

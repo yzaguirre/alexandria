@@ -230,6 +230,15 @@ Lists all ignored files in this project
 	git ls-files --other --ignored --exclude-standard
 https://laravel-news.com/debugging-gitignore
 	git check-ignore -v path/to/ignored/file
+Include files
+https://stackoverflow.com/questions/11852558/gitignore-only-allow-certain-extensions-and-files
+*
+!.gitattributes
+!.gitignore
+!readme.md
+!.gitkeep
+!*.php
+!*/
 	
 clone via SSH
 	git clone git@github.com:dvdyzag/alec.git
