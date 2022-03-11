@@ -4,7 +4,7 @@ https://github.com/viktomas/godu
 	tar xf godu-linux-amd64-1.3.tgz -C /usr/local/bin
 Windows
 	wget https://github.com/viktomas/godu/releases/download/v1.3/godu-windows-amd64-1.3.zip
-	unzip godu-windows-amd64-1.3.zip -d ~/bin
+	7z e -oC:\Users\dyzag\bin godu-windows-amd64-1.3.zip
 Homebrew
 	brew tap viktomas/taps
 	brew install godu

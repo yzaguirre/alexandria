@@ -13,3 +13,5 @@ Usage
 	tree
 Print html page with color. No trailing slash for the base site.
 	tree -H ftp://davidyzaguirre.com -C -T "Files on dy" -o ../files.html
+
+See dust.txt pdu.txt dua.txt

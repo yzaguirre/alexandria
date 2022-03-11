@@ -69,3 +69,7 @@ Now that the new OnionShare has better command line support,
 I just wrote a guide explaining how to run your own anonymous
 Tor dropbox on a Raspberry Pi. Check it out
 https://twitter.com/micahflee/status/1364754929416601601
+
+Why offer an Onion Address rather than just encourage browsing-over-Tor?
+https://alecmuffett.com/article/16007
+https://news.ycombinator.com/item?id=30617118

@@ -20,3 +20,9 @@ List filestreams
 	dir /r
 Open filestream
 	expand imagetext.txt:picture.jpg extracted.jpg
+
+Restart process
+https://www.softwareok.com/?seite=faq-Windows-Console&faq=24
+	vim C:\Users\dyzag\bin\restartExplorer.bat
+taskkill /IM explorer.exe /F
+explorer.exe

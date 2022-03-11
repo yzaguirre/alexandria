@@ -13,3 +13,5 @@ Homebrew
 
 Usage
 	dua i
+
+See dust.txt pdu.txt tree.txt

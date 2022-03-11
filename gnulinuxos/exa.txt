@@ -1,4 +1,4 @@
-https://the.exa.website/
+https://the.exa.website
 https://github.com/ogham/exa
 Package install
 	apt install exa

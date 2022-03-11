@@ -4,3 +4,7 @@ https://www.infoq.com/articles/gdpr-for-operations?utm_source=infoqEmail&utm_med
 Using GDPR to obtain one's data as JSON
 https://mazzo.li/posts/gdpr-success-story.html
 https://news.ycombinator.com/item?id=27104587
+
+Consent-O-Matic: Automatic handling of GDPR consent forms
+https://github.com/cavi-au/Consent-O-Matic
+https://news.ycombinator.com/item?id=30625218

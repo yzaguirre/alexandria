@@ -1,4 +1,4 @@
-https://caddyserver.com/
+https://caddyserver.com
 https://github.com/caddyserver/caddy
 https://news.ycombinator.com/item?id=23070567
 	echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list

@@ -57,3 +57,6 @@ Reverse order
 	DIR /O-D
 Pause results
 	DIR /P
+
+How to Fix File Explorer Open Very Slow in Windows 10
+https://www.youtube.com/watch?v=wkuGll2-omI
