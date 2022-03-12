@@ -1,0 +1,3 @@
+Cron best practices
+https://blog.sanctum.geek.nz/cron-best-practices/
+https://news.ycombinator.com/item?id=30636872

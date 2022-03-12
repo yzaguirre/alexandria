@@ -1,6 +1,6 @@
-http://www.privoxy.org/
-http://proxy-list.org/
-http://www.checkedproxylists.com/
+http://www.privoxy.org
+http://proxy-list.org
+http://www.checkedproxylists.com
 http://proxy-list.org/english/index.php?pp=any&pt=any&pc=Mexico&ps=any#proxylist
 
 http://www.redpill-linpro.com/sysadvent//2015/12/13/socks-proxy-as-poor-mans-vpn.html
@@ -53,10 +53,10 @@ https://github.com/Kickball/awesome-selfhosted#proxy
 miniProxy
 https://github.com/joshdick/miniProxy/
 php-proxy
-https://www.php-proxy.com/
+https://www.php-proxy.com
 https://github.com/Athlon1600/php-proxy-app
 swiperproxy
-https://swiperproxy.github.io/
+https://swiperproxy.github.io
 
 https://github.com/fatedier/frp
 see ~/http/frp.txt
@@ -68,4 +68,3 @@ https://news.ycombinator.com/item?id=26476894
 cURL
 https://askubuntu.com/questions/1327783/can-you-set-socks5-proxy-from-linux-command-line
 	curl -x socks5h://localhost:9090 google.com -o output.curl
-

@@ -14,3 +14,7 @@ Installer
 
 Usage
 	hurl --progress --summary --html . test1.hurl
+
+Export hurl file
+	hurlfmt test.hurl --format json | jq
+	hurlfmt access_file_list.hurl --format json -o access_file_list_POSTMAN.json

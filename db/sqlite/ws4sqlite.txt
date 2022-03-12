@@ -1,0 +1,26 @@
+Query sqlite via http
+https://germ.gitbook.io/ws4sqlite/
+https://github.com/proofrock/ws4sqlite
+https://news.ycombinator.com/item?id=30636796
+	wget https://github.com/proofrock/ws4sqlite/releases/download/v0.11.1/ws4sqlite-v0.11.1-linux-x86_64.7z
+	7z e -o/usr/local/bin ws4sqlite-v0.11.1-linux-x86_64.7z
+Windows
+	wget https://github.com/proofrock/ws4sqlite/releases/download/v0.11.1/ws4sqlite-v0.11.1-win-x86_64.7z
+	7z e -oC:\Users\dyzag\bin ws4sqlite-v0.11.1-win-x86_64.7z
+Usage
+	ws4sqlite --db mydatabase.db
+Web Service listening on 0.0.0.0:12321
+Open http://localhost:12321
+
+Hurl file
+	vim select.hurl
+POST http://hpgs.local:12321/hello
+Content-Type: application/json
+{
+    "transaction": [
+        {
+            "query": "SELECT * FROM usuarios"
+        }
+    ]
+}
+	hurl select.hurl
