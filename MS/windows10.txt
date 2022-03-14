@@ -60,3 +60,20 @@ Pause results
 
 How to Fix File Explorer Open Very Slow in Windows 10
 https://www.youtube.com/watch?v=wkuGll2-omI
+
+https://twitter.com/rj_chap/status/1502354627903123458
+#DFIR Tip: Don't forget to check out the files sitting in
+C:\ProgramData\Microsoft\Windows\Power Efficiency Diagnostics\*
+These XML files are snapshotted daily and denote processes
+using high CPU cycles.
+See screenshot for a command to review process names/files.
+	cat *.xml | egrep -i -A 1 '<name>(module|process name)</name>' | grep -i '<value>' | sort | uniq -c
+To remove the '<Value>' tags:
+	cat *.xml | egrep -i -A 1 '<name>(module|process name)</name>' | grep -i '<value>' | perl -pe 's/<\/?Value>//g' | sort | uniq -c
+You might find the output file srumutil.csv from running Powercfg
+https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options#option_srumutil
+Dumps Energy Estimation data from System Resource Usage Monitor (SRUM).
+	Powercfg /srumutil
+	powercfg /batteryreport /output "srumreport.xml" /xml
+	powercfg /batteryreport /output "srumreport.csv" /csv
+interesting.
