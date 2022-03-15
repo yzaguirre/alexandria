@@ -1,0 +1,5 @@
+Free Motion Capture for Everyone 💀✨
+https://freemocap.org
+https://github.com/freemocap/freemocap
+https://www.reddit.com/r/opensource/comments/tbvemb/freemocap_a_free_open_source_markerless_motion/
+	sudo -H pip install -U freemocap

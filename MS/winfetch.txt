@@ -1,0 +1,14 @@
+🛠 A command-line system information utility written in PowerShell.
+Like Neofetch, but for Windows.
+https://github.com/kiedtl/winfetch
+	Install-Script -Name pwshfetch-test-1
+Installation path: C:\Users\dyzag\Documents\PowerShell\Scripts
+Put this in $PROFILE
+	vim $PROFILE
+Set-Alias winfetch pwshfetch-test-1
+Chocolately
+	choco install winfetch
+Configuration at C:\Users\dyzag\.config\winfetch\config.ps1
+
+Usage
+	winfetch

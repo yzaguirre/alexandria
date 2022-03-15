@@ -1,0 +1,16 @@
+nbpreview: a terminal viewer for Jupyter notebooks
+https://github.com/paw-lu/nbpreview
+https://nbpreview.readthedocs.io/en/latest/index.html#
+https://www.reddit.com/r/commandline/comments/tb1hfo/nbpreview_a_terminal_viewer_for_jupyter_notebooks/
+	sudo -H pip install -U nbpreview
+
+Configuration
+	vim ~/.bashrc
+export NBPREVIEW_THEME='material'
+
+Usage
+	nbpreview --help
+	nbpreview [OPTIONS] [FILE]...
+	nbpreview notebook.ipynb
+	nbp notebook.ipynb
+	nbpreview --theme material --image-drawing braille notebook.ipynb

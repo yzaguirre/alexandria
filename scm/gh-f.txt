@@ -1,0 +1,14 @@
+gh-f is the ultimate, compact and snappy fzf extension for gh cli.
+It addresses most of your daily GitHub workflow,
+if not all of it: f stands for filter, fzf or fomething felse.
+https://github.com/gennaro-tedesco/gh-f
+https://www.reddit.com/r/commandline/comments/tam4gt/ghf_now_grep_through_revision_history/
+	gh extension install gennaro-tedesco/gh-f
+
+Requirements
+fzf
+gnu core utils
+bat (optional, if not detected it uses less as a pager, instead)
+
+Usage
+	gh f

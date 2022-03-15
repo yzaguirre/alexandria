@@ -1,6 +1,21 @@
 https://github.com/in3rsha/sha256-animation
 https://news.ycombinator.com/item?id=23165333
 
+Generate 128-bit Blake hashes
+https://blake2.net
+https://github.com/BLAKE2/BLAKE2
+https://www.reddit.com/r/commandline/comments/t9b9o9/better_way_of_verifying_file_hash_matches_a_known/
+	b2sum -l 128 *.xml > HASHES
+BLAKE3
+https://github.com/BLAKE3-team/BLAKE3
+	wget https://github.com/BLAKE3-team/BLAKE3/releases/download/1.3.1/b3sum_linux_x64_bin
+	chmod u+x b3sum_linux_x64_bin
+	mv b3sum_linux_x64_bin /usr/local/bin/b3sum
+Windows
+	wget -OC:\Users\dyzag\bin\b3sum.exe https://github.com/BLAKE3-team/BLAKE3/releases/download/1.3.1/b3sum_windows_x64_bin.exe
+Rust
+	cargo install b3sum
+
 RHash (Recursive Hasher) is a console utility for computing and
 verifying hash sums of files. It supports CRC32, MD4, MD5, SHA1,
 SHA256, SHA512, Tiger, DC++ TTH, BitTorrent BTIH, ED2K, AICH,

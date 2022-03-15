@@ -51,16 +51,16 @@ https://www.youtube.com/watch?v=CQuRAIN9nJk
 
 gojq
 https://github.com/itchyny/gojq
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.6/gojq_v0.12.6_linux_amd64.tar.gz
-	tar xf gojq_v0.12.6_linux_amd64.tar.gz -C /usr/local/bin --strip-components=1 gojq_v0.12.6_linux_amd64/gojq
-	tar xf gojq_v0.12.6_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --stripe-component=1 gojq_v0.12.6_linux_amd64/_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_linux_amd64.tar.gz
+	tar xf gojq_v0.12.7_linux_amd64.tar.gz -C /usr/local/bin --strip-components=1 gojq_v0.12.7_linux_amd64/gojq
+	tar xf gojq_v0.12.7_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --stripe-component=1 gojq_v0.12.7_linux_amd64/_gojq
 Termux
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.6/gojq_v0.12.6_linux_arm64.tar.gz
-	tar xf gojq_v0.12.6_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin --strip-components=1 gojq_v0.12.6_linux_arm64/gojq
-	tar xf gojq_v0.12.6_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.6_linux_arm64/_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_linux_arm64.tar.gz
+	tar xf gojq_v0.12.7_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin --strip-components=1 gojq_v0.12.7_linux_arm64/gojq
+	tar xf gojq_v0.12.7_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.7_linux_arm64/_gojq
 Windows
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.6/gojq_v0.12.6_windows_amd64.zip
-	7z e gojq_v0.12.6_windows_amd64.zip -oC:\Users\dyzag\bin gojq_v0.12.6_windows_amd64\gojq.exe gojq_v0.12.6_windows_amd64\_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_windows_amd64.zip
+	7z e gojq_v0.12.7_windows_amd64.zip -oC:\Users\dyzag\bin gojq_v0.12.7_windows_amd64/gojq.exe gojq_v0.12.7_windows_amd64\_gojq
 Homebrew
 	brew install gojq
 

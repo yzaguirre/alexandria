@@ -1,0 +1,20 @@
+https://kakoune.org
+https://github.com/mawww/kakoune
+	apt install kakoune
+Compile
+	git clone https://github.com/mawww/kakoune.git
+	cd kakoune/src
+	make -j12
+	PREFIX=$HOME/.local make install
+Termux
+	pkg install kakoune
+Homebrew
+	brew install kakoune
+
+Configuration
+$XDG_CONFIG_HOME/kak/
+If $XDG_CONFIG_HOME is not set
+$HOME/.config/kak/
+
+Usage
+	kak

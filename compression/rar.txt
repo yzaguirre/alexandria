@@ -1,6 +1,14 @@
 Rar Files
 https://www.win-rar.com
-https://winrar.es/
+https://winrar.es
+	wget https://www.win-rar.com/fileadmin/winrar-versions/rarlinux-x64-611.tar.gz
+x	tar xf rarlinux-x64-611.tar.gz -C /usr/local/bin --strip-components=1 rar/rar rar/unrar
+	tar xf rarlinux-x64-611.tar.gz
+	cd rar
+	make install
+	rar -iver
+	unrar -iver
+Windows
 	winget install RARLab.WinRAR
 Add C:\Program Files\WinRAR to PATH
 Print comment and extract
@@ -9,6 +17,21 @@ Extract modified files (freshen files)
 	rar x -f file.rar
 Extract modified files (update files)
 	rar x -u file.rar
+Extract from stdin with -si
+Prompts requiring user interaction are not allowed.
+Use -o[+|-|r], -p<pwd> or -mes switches to suppress such prompts.
+	cat docs.rar | rar x -si -o+ -pmypwd dummy docs/
+-o[+|-] Set the overwrite mode. Can be used both when extracting
+            and updating archived files. Following modes are available:
+
+-o           Ask before overwrite
+		   (default for extracting files);
+
+-o+          Overwrite all
+		   (default for updating archived files);
+
+-o-          Skip existing files.
+-mes switch skips encrypted files when extracting or testing.
 Show file list
 	unrar l file.rar
 	rar vt file.rar

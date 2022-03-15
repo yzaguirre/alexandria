@@ -1,0 +1,25 @@
+The minimal, blazing-fast, and
+infinitely customizable prompt for any shell!
+https://starship.rs
+https://github.com/starship/starship
+	wget https://starship.rs/install.sh
+	./install.sh
+Manual
+	wget https://github.com/starship/starship/releases/download/v1.4.2/starship-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/starship/starship/releases/download/v1.4.2/starship-x86_64-unknown-linux-gnu.tar.gz.sha256
+	sha256sum starship-x86_64-unknown-linux-gnu.tar.gz
+	cat starship-x86_64-unknown-linux-gnu.tar.gz.sha256
+	tar xf starship-x86_64-unknown-linux-gnu.tar.gz -C /usr/local/bin
+Termux
+	apt install starship
+Windows
+	choco install starship
+Homebrew
+	brew install starship
+
+Bash
+	vim ~/.bashrc
+eval "$(starship init bash)"
+Powershell
+	vim $PROFILE
+Invoke-Expression (&starship init powershell)

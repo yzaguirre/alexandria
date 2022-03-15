@@ -1,0 +1,18 @@
+https://github.com/maxmahlke/ads-cli
+https://www.reddit.com/r/commandline/comments/t9fhg6/adscli_a_command_line_interface_for_nasas_online/
+	sudo -H pip install -U fuzzy-ads
+
+Dependencies
+A command-line fuzzy-finder: fzf, version 0.27 or higher
+An account at the astrophysics data system and an API token,
+https://ui.adsabs.harvard.edu/
+stored either in ~/.ads/dev_key or
+in the ADS_DEV_KEY shell environment variable as per
+the ads python package's instructions
+
+Usage
+Make queries from the command line as in the webbrowser:
+	ads -q "author:^livingston year:2010-2022"
+Common query elements are implemented as short-hands
+such as -y|--year,-fa|--first-author, -a|--author:
+	ads -fa jenkins -y 2020

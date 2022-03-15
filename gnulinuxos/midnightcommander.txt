@@ -1,0 +1,9 @@
+https://midnight-commander.org
+https://github.com/MidnightCommander/mc
+	apt install mc
+Windows
+	winget install GNU.MidnightCommander
+Installed at C:\Program Files (x86)\Midnight Commander
+
+Usage
+	mc

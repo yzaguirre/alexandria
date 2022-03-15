@@ -1,0 +1,10 @@
+🙌 Shows every open-source dependency you use in your system
+that accept donations. 💝
+https://github.com/mufeedvh/paydept
+https://www.reddit.com/r/commandline/comments/t8ni37/i_made_paydept_a_cli_utility_that_shows_every/
+	wget https://github.com/mufeedvh/paydept/releases/download/v0.1.0/paydept_amd64
+	chmod u+x paydept_amd64
+	mv paydept_amd64 /usr/local/bin/paydept
+Windows
+	wget -OC:\Users\dyzag\bin\paydept.exe https://github.com/mufeedvh/paydept/releases/download/v0.1.0/paydept.exe
+See ../business/opensource.txt

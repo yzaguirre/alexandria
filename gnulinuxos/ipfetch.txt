@@ -1,0 +1,10 @@
+Neofetch like tool that can lookup IPs. 🌎
+https://github.com/trakBan/ipfetch
+https://www.reddit.com/r/linuxmasterrace/comments/tdj483/new_neofetch_just_dropped/
+	git clone https://github.com/trakBan/ipfetch.git
+	cd ipfetch
+You will need sudo to move the programm to /usr/bin/
+	sh setup.sh
+
+Usage
+	ipfetch -ip 31.92.97.255

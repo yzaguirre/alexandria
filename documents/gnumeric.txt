@@ -10,6 +10,9 @@ Compile
 	./configure
 	make -j12
 	make install
+Windows
+	choco install gnumeric
+
 Convert Excel Spreadsheets xlsx to csv Gnumeric
 https://www.youtube.com/watch?v=mviMZnXaXWA
 	ssconvert people.ods people.csv

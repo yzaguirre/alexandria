@@ -1,0 +1,24 @@
+Fast multi-threaded DataFrame library
+in Rust | Python | Node.js
+https://www.pola.rs
+https://github.com/pola-rs/polars
+https://www.reddit.com/r/rust/comments/te0o1q/polars_0200_release/
+https://pola-rs.github.io/polars-book/user-guide/index.html
+Python
+https://pola-rs.github.io/polars/py-polars/html/reference/index.html
+	sudo -H pip install -U polars
+
+NodeJS
+https://pola-rs.github.io/polars/nodejs-polars/html/index.html
+	yarn install nodejs-polars
+
+import polars as pl
+
+q = (
+    pl.scan_csv("iris.csv")
+    .filter(pl.col("sepal_length") > 5)
+    .groupby("species")
+    .agg(pl.all().sum())
+)
+
+df = q.collect()
