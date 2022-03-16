@@ -10,6 +10,6 @@ http://www.unixuser.org/~euske/python/pdfminer/index.html#tools
 https://euske.github.io/pdfminer/index.html
 https://github.com/euske/pdfminer
 https://github.com/pdfminer/pdfminer.six
-	sudo -H pip3 install pdfminer.six
+	sudo -H pip install -U pdfminer.six
 Use command-line interface to extract text from pdf:
 	python pdf2txt.py samples/simple1.pdf

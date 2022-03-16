@@ -1,0 +1,10 @@
+LiteIDE is a simple, open source, cross-platform Go IDE.
+https://github.com/visualfc/liteide
+	wget https://github.com/visualfc/liteide/releases/download/x37.4/liteidex37.4.linux64-qt5.5.1.tar.gz
+	tar xf liteidex37.4.linux64-qt5.5.1.tar.gz --strip-components=1 -C /usr/local
+Windows
+	choco install liteide
+Binary
+	wget https://github.com/visualfc/liteide/releases/download/x37.4/liteidex37.4.win64-qt5.14.2.zip
+	7z x -o"C:\Program Files\" liteidex37.4.win64-qt5.14.2.zip
+Add C:\Program Files\liteide\bin to PATH environment variable.

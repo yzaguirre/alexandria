@@ -1,0 +1,15 @@
+Sloc, Cloc and Code:
+scc is a very fast accurate code counter with complexity calculations
+and COCOMO estimates written in pure Go
+https://github.com/boyter/scc
+	wget https://github.com/boyter/scc/releases/download/v3.0.0/scc-3.0.0-x86_64-unknown-linux.zip
+	unzip scc-3.0.0-x86_64-unknown-linux.zip -d /usr/local/bin
+Termux
+	apt install scc
+Windows
+	choco install scc
+Homebrew
+	brew install scc
+
+Usage
+	scc

@@ -1,0 +1,32 @@
+Tools for taking automated screenshots of websites
+https://github.com/simonw/shot-scraper
+	sudo -H pip install -U shot-scraper
+	shot-scraper install
+
+Usage
+	shot-scraper https://datasette.io/
+	shot-scraper https://datasette.io/ -o datasette.png
+	shot-scraper https://datasette.io/ -o - > datasette.png
+The browser window used to take the screenshots defaults
+to 1280px wide and 780px tall.
+	shot-scraper https://datasette.io/ -o small.png --width 400 --height 800
+To take a screenshot of a specific element on the page, use --selector or -s with its CSS selector:
+	shot-scraper https://simonwillison.net/ -s '#bighead'
+Adding a delay in milliseconds
+	shot-scraper https://simonwillison.net/ --wait 2000
+Customize JavaScript
+	shot-scraper https://simonwillison.net/ -o simonwillison-pink.png --javascript "document.body.style.backgroundColor = 'pink';"
+Using JPEGs instead of PNGs
+	shot-scraper https://simonwillison.net/ -h 800 -o simonwillison.jpg --quality 80	
+Retina images. Double resolution
+This example will produce an image that is 800px wide and 1200px high.
+	shot-scraper https://simonwillison.net/ -o simon.png --width 400 --height 600 --retina
+
+https://simonwillison.net/2022/Mar/14/shot-scraper-template/
+https://news.ycombinator.com/item?id=30675357
+Interacting with the page
+Add the --interactive option to open a browser window
+that you can interact with.
+Then hit <enter> in the terminal when you are ready
+to take the shot and close the window.
+	shot-scraper https://simonwillison.net/ -o after-interaction.png --height 800 --interactive

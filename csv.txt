@@ -123,3 +123,24 @@ https://github.com/dcmoura/spyql
 https://news.ycombinator.com/item?id=30074787
 	spyql "SELECT 'Hello world' as Message TO pretty"
 	spyql "SELECT 'Hello world' as message, 1+2 as three TO json"
+
+pushcsv
+Push csv/tsv data to database
+https://github.com/eirannejad/pushcsv
+	choco install pushcsv
+
+Supported Backends
+Database	Driver
+postgresql	github.com/lib/pq
+mongodb	gopkg.in/mgo.v2
+mysql	github.com/go-sql-driver/mysql
+sqlserver	github.com/denisenkom/go-mssqldb
+sqlite3	github.com/mattn/go-sqlite3
+
+Examples of pushing users.csv into table (collection in case of mongodb)
+users on supported databases:
+	pushcsv postgres://user:pass@data.mycompany.com/mydb users ~/users.csv --headers --purge
+	pushcsv mongodb://user:pass@localhost:27017/mydb users ~/users.csv --map=name:fullname --map=email:userid
+	pushcsv "mysql:user:pass@tcp(localhost:3306)/tests" users ~/users.csv --purge --map=name:fullname --map=email:userid
+	pushcsv sqlserver://user:pass@my-azure-db.database.windows.net?database=mydb users ~/users.csv --purge --map=name:fullname --map=email:userid
+	pushcsv sqlite3:data.db users ~/users.csv

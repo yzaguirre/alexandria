@@ -5,14 +5,15 @@ Recent version
 https://packagecloud.io/github/git-lfs/install#bash-deb
 	curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 Binary
-	wget https://github.com/git-lfs/git-lfs/releases/download/v3.0.2/git-lfs-linux-amd64-v3.0.2.tar.gz
-	sha256sum git-lfs-linux-amd64-v3.0.2.tar.gz
-796f5ea0259eabe57f94a8ad1bb0d46806168df30b135a65d88f8a7ee1409e0b
+	wget https://github.com/git-lfs/git-lfs/releases/download/v3.1.2/git-lfs-linux-amd64-v3.1.2.tar.gz
+	sha256sum git-lfs-linux-amd64-v3.1.2.tar.gz
+a10bb562658a65ad0e22f331bc43f2cb292a57d21c5b26f52794257e48fcbe10
 	mkdir git-lfs
-	tar xf git-lfs-linux-amd64-v3.0.2.tar.gz -C git-lfs
+	tar xf git-lfs-linux-amd64-v3.1.2.tar.gz -C git-lfs
 	cd git-lfs
 	./install
 Included in git for windows. Latest available with chocolately
+	winget install GitHub.GitLFS
 	choco install git-lfs
 Homebrew
 	brew install git-lfs

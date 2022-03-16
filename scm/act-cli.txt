@@ -1,0 +1,16 @@
+Run your GitHub Actions locally 🚀
+https://github.com/nektos/act
+	wget https://github.com/nektos/act/releases/download/v0.2.25/act_Linux_x86_64.tar.gz
+	wget https://github.com/nektos/act/releases/download/v0.2.25/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+	tar xf act_Linux_x86_64.tar.gz -C /usr/local/bin act
+Termux
+	wget https://github.com/nektos/act/releases/download/v0.2.25/act_Linux_arm64.tar.gz
+	tar xf act_Linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin act
+Windows
+	choco install act-cli
+Binary
+	wget https://github.com/nektos/act/releases/download/v0.2.25/act_Windows_x86_64.zip
+	7z x -oC:\Users\dyzag\bin act_Windows_x86_64.zip act.exe
+Homebrew
+	brew install act
