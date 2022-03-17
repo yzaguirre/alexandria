@@ -1,0 +1,4 @@
+ueberzug is a command line util which allows to display images
+in combination with X11
+https://github.com/seebye/ueberzug
+	sudo -H pip install -U ueberzug

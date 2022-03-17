@@ -22,3 +22,7 @@ https://www.reddit.com/r/programming/comments/ta0epz/stay_tuned_for_kaspersky_so
 
 Gmail account
 https://news.ycombinator.com/item?id=30677471
+
+More than 6k credentials were exposed in leaked Samsung source code
+https://www.reddit.com/r/programming/comments/tfm9q1/more_than_6k_credentials_were_exposed_in_leaked/
+https://www.youtube.com/watch?v=17JlTJ8BDsE

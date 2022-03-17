@@ -1,0 +1,49 @@
+https://alacritty.org
+https://github.com/alacritty/alacritty
+	apt install alacritty
+Rust
+	cargo install alacritty
+Compile
+	apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+	wget https://github.com/alacritty/alacritty/archive/refs/tags/v0.10.1.tar.gz
+	tar xf v0.10.1.tar.gz
+	cd alacritty-0.10.1
+	cargo build --release
+Force support for only Wayland
+	cargo build --release --no-default-features --features=wayland
+Force support for only X11
+	cargo build --release --no-default-features --features=x11
+Binary at target/release/alacritty
+Post Build
+	infocmp alacritty
+	sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+Desktop Entry
+	cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+	cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+	desktop-file-install extra/linux/Alacritty.desktop
+	update-desktop-database
+Install man page
+	mkdir -p /usr/local/share/man/man1
+	gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+	gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
+Shell completions
+	cp extra/completions/_alacritty /usr/share/zsh/vendor-completions
+	cp extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
+	cp extra/completions/alacritty.fish /usr/share/fish/completions
+Windows
+	winget install Alacritty.Alacritty
+Scoop
+	scoop bucket add extras
+	scoop install alacritty
+Config file at
+$XDG_CONFIG_HOME/alacritty/alacritty.yml
+$XDG_CONFIG_HOME/alacritty.yml
+$HOME/.config/alacritty/alacritty.yml
+$HOME/.alacritty.yml
+%APPDATA%\alacritty\alacritty.yml
+
+Configuration file example
+https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
+Using mysys2 (or git bash)
+https://github.com/alacritty/alacritty/issues/3301

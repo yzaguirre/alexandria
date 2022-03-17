@@ -1,4 +1,4 @@
-https://www.birdfont.org/
+https://www.birdfont.org
 	apt-get install valac
 	wget http://www.birdfont.org/releases/birdfont-2.16.6.tar.gz
 	tar xf birdfont-2.16.6.tar.gz

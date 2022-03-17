@@ -15,6 +15,10 @@ https://www.youtube.com/watch?v=Dnq5QhY7lOQ
 Windows
 	choco install firacode
 
+https://www.nerdfonts.com
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraMono.zip
+	unzip FiraMono.zip -d ~/.fonts
+
 https://fonts.google.com/specimen/Roboto+Mono
 
 https://github.com/daylerees/colour-schemes+
@@ -26,4 +30,4 @@ https://www.youtube.com/watch?v=6ohOB52RpYE
 Place .ttf files at ~/.fonts, then
 	sudo fc-cache -fv
 
-https://www.pairandcompare.net/
+https://www.pairandcompare.net

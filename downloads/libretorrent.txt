@@ -1,0 +1,5 @@
+Free and Open Source, full-featured torrent client for Android.
+https://gitlab.com/proninyaroslav/libretorrent
+https://github.com/proninyaroslav/libretorrent
+	wget https://github.com/proninyaroslav/libretorrent/releases/download/3.4/LibreTorrent-3.4-arm64-v8a.apk
+	adb install LibreTorrent-3.4-arm64-v8a.apk

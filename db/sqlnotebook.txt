@@ -1,0 +1,22 @@
+Casual data exploration in SQL
+Open source app for casual data exploration in SQL
+Import your data from CSV, Excel, Microsoft SQL Server, PostgreSQL, and MySQL.
+Then use a Jupyter-style notebook interface for exploratory queries,
+and write stored procedures for reusable logic.
+SQL Notebook is powered by an extended SQLite engine,
+supporting both standard SQL queries and SQL Notebook-specific commands and functions.
+https://sqlnotebook.com
+https://sqlnotebook.com/doc.html
+https://github.com/electroly/sqlnotebook
+	wget https://github.com/electroly/sqlnotebook/releases/download/v1.1.0/SQLNotebook-1.1.0.msi
+	explorer.exe SQLNotebook-1.1.0.msi
+Portable
+	wget https://github.com/electroly/sqlnotebook/releases/download/v1.1.0/SQLNotebook-1.1.0.zip
+	7z x -o"C:\Program Files\SQL Notebook" SQLNotebook-1.1.0.zip
+Windows
+	choco install sqlnotebook
+Installed at C:\Program Files\SQL Notebook\
+
+Usage
+	SqlNotebook.exe
+	createdump.exe

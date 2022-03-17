@@ -1,0 +1,36 @@
+GraphicsMagick is a fork of ImageMagick, emphasizing stability of both
+programming API and command-line options.
+It was branched off ImageMagick's version 5.5.2 in 2002 after
+irreconcilable differences emerged in the developers' group.
+http://www.graphicsmagick.org
+	apt install graphicsmagick
+Compile
+See imagemagick.txt
+http://www.graphicsmagick.org/INSTALL-unix.html#build-configuration
+	wget -OGraphicsMagick-1.4.020220311.tar.xz https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick-snapshots/GraphicsMagick-1.4.020220311.tar.xz/download
+	wget -OGraphicsMagick-1.4.020220311.tar.xz.sig https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick-snapshots/GraphicsMagick-1.4.020220311.tar.xz.sig/download
+Key at
+http://www.graphicsmagick.org/security.html
+	gpg --verify GraphicsMagick-1.4.020220311.tar.xz.sig
+	tar xf GraphicsMagick-1.4.020220311.tar.xz
+	cd GraphicsMagick-1.4.020220311
+	./configure
+or	./configure --with-modules --with-jxl --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
+or	./configure --with-modules --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
+	make -j12
+	make install
+
+Usage
+	gm display
+Verify that the expected image formats are supported by executing
+	gm convert -list formats
+Verify that the expected fonts are available by executing
+	gm convert -list fonts
+Verify that delegates (external programs) are configured as expected by executing
+	gm convert -list delegates
+Verify that color definitions may be loaded by executing
+	gm convert -list colors
+If GraphicsMagick is built to use loadable coder modules, then verify that the modules load via
+	gm convert -list modules
+Verify that GraphicsMagick is properly identifying the resources of your machine via
+	gm convert -list resources

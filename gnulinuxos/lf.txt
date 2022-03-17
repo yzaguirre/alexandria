@@ -9,3 +9,30 @@ Windows
 	scoop install lf
 Homebrew
 	brew install lf
+
+Configuration
+Example file
+	mkdir ~/.config/lf
+	wget -O ~/.config/lf/lfrc https://github.com/gokcehan/lf/raw/master/etc/lfrc.example
+	vim ~/.config/lf/lfrc
+
+How to Set Up and Configure LF (The Best Terminal File Manager)
+https://www.youtube.com/watch?v=2oWqD3JCXuI
+
+Add icons
+https://github.com/gokcehan/lf/wiki/Icons
+See ../ide/fonts.txt to install nerd icons
+https://www.nerdfonts.com
+
+Image and video preview
+See ../images/graphicsmagick.txt and ueberzug.txt
+https://github.com/slavistan/lf-gadgets
+https://github.com/slavistan/lf-gadgets/tree/master/lf-ueberzug
+	git clone https://github.com/slavistan/lf-gadgets.git
+	cd lf-gadgets/lf-ueberzug
+	cp lf-* /usr/local/bin
+	mkdir ~/.config/lf-ueberzug
+	cp lfrc-ueberzug ~/.config/lf-ueberzug
+New alias
+	vim ~/.bash_aliases
+alias lf=lf-ueberzug

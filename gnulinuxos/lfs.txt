@@ -1,7 +1,10 @@
 A linux utility to get information on filesystems, like df but better
 https://dystroy.org/lfs/
 https://github.com/Canop/lfs
-	wget https://github.com/Canop/lfs/releases/download/v2.4.0/lfs_2.4.0.zip
-	7z e -o/usr/local/bin lfs_2.4.0.zip build/x86_64-linux/lfs
+	wget https://github.com/Canop/lfs/releases/download/v2.5.0/lfs_2.5.0.zip
+	7z e -o/usr/local/bin lfs_2.5.0.zip build/x86_64-linux/lfs
 Termux
-	7z e -o/data/data/com.termux/files/usr/bin lfs_2.4.0.zip build/aarch64-linux-android/lfs
+	7z e -o/data/data/com.termux/files/usr/bin lfs_2.5.0.zip build/aarch64-linux-android/lfs
+
+Usage
+	lfs

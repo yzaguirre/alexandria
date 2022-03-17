@@ -1,0 +1,50 @@
+https://www.schemacrawler.com
+https://github.com/schemacrawler/SchemaCrawler
+https://stackoverflow.com/questions/59654755/how-to-generate-sqlite-entity-relationship-diagram-from-database-file
+	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.11/schemacrawler-16.16.11-distribution.zip
+	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.11/schemacrawler-16.16.11-distribution.zip.SHA-512
+	sha512sum schemacrawler-16.16.11-distribution.zip
+	cat schemacrawler-16.16.11-distribution.zip.SHA-512
+	7z x -o/opt schemacrawler-16.16.11-distribution.zip
+Add /opt/schemacrawler-16.16.11-distribution/_schemacrawler/bin to PATH environment variable
+	chown david:david -R /opt/schemacrawler-16.16.11-distribution
+Windows
+	winget install schemacrawler.schemacrawler
+	choco install schemacrawler
+Installed at C:\Program Files\SchemaCrawler\
+
+Usage
+Linux
+	schemacrawler --interactive
+Windows
+	SchemaCrawler.exe --interactive
+	"SchemaCrawler Interactive Shell.exe"
+While in interactive session
+	connect --server=sqlite --database=sc.db
+	load --info-level=standard
+	execute --command=schema --no-info --output-file=./share/schema.txt
+To JSON file
+	execute --command=serialize --serialization-format=json --output-file=./share/schema.json
+To YAML file
+	execute --command=serialize --serialization-format=yaml --output-file=./share/schema.yaml
+To HTML file
+	execute --command=schema --output-file=./share/schema.html
+To PNG file
+	execute --command=schema --output-file=./share/schema.png
+Run JavaScript Against Schema Metadata
+This step shows you how to run a JavaScript program using database metadata provided by SchemaCrawler.
+	execute --command=script --script=./share/tables.js --scripting-language=javascript --output-file=./share/tables.js.txt
+Run Python Against Schema Metadata
+This step shows you how to run a Python program using database metadata provided by SchemaCrawler.
+	execute --command=script --script=./share/tables.py --scripting-language=python --output-file=./share/tables.py.txt
+Render a Mustache Template Against Schema Metadata
+	execute --command=template --template=./share/tables.mustache --templating-language=mustache --output-file=./share/tables.mustache.txt
+
+https://dev.to/sualeh/how-to-visualize-your-sqlite-database-with-one-command-and-nothing-to-install-1f4m
+	SchemaCrawler.exe --server=sqlite --database="chinook-database-2.0.1.sqlite" --info-level=standard --command=schema --output-file=output.png
+Mermeid ER diagram
+https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram
+See ../documents/mermaid.txt
+	wget https://github.com/schemacrawler/SchemaCrawler/raw/master/schemacrawler-scripting/src/test/resources/mermaid.py
+	SchemaCrawler.exe --server=sqlite --database="chinook-database-2.1.3.sqlite" --info-level=standard --command script --script-language python --script mermaid.py --output-file=schema.mmd
+	mmdc -i schema.mmd -o output.pdf

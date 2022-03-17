@@ -33,5 +33,6 @@ Scoop
 	scoop install sqlitebrowser
 Chocolately
 	choco install sqlitebrowser
+Installed at C:\Program Files\DB Browser for SQLite\
 MacOS
 	brew install --cask db-browser-for-sqlite

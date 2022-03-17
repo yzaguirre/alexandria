@@ -1,0 +1,18 @@
+BiglyBT is a feature filled, open source, ad-free, bittorrent client.
+Azureus and Vuze fork
+Android client available
+https://www.biglybt.com
+https://github.com/BiglySoftware/BiglyBT
+https://news.ycombinator.com/item?id=30695734
+Requires GTK and java-headless.
+	wget https://files.biglybt.com/installer/BiglyBT_unix.tar.gz
+	tar xf BiglyBT_unix.tar.gz -C /opt
+Add /opt/biglybt to PATH environment variable.
+Windows
+	winget install BiglySoftware.BiglyBT
+Binary
+	wget https://files.biglybt.com/installer/BiglyBT_Installer64.exe
+	explorer BiglyBT_Installer64.exe
+
+Usage
+	biglybt

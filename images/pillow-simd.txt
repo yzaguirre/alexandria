@@ -1,0 +1,8 @@
+The friendly PIL fork
+https://python-pillow.org/pillow-perf/
+https://github.com/uploadcare/pillow-simd
+Remove previous pillow
+	sudo -H pip uninstall -y pillow
+Install pillow-simd
+https://pillow.readthedocs.io/en/stable/installation.html#building-from-source
+	sudo -H pip install -U pillow-simd

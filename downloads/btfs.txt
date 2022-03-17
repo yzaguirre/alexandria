@@ -1,0 +1,22 @@
+A bittorrent filesystem based on FUSE.
+https://github.com/johang/btfs
+	apt install btfs
+Compile
+	apt install autoconf automake libfuse-dev libtorrent-rasterbar-dev libcurl4-openssl-dev g++
+	git clone https://github.com/johang/btfs.git btfs
+x	wget https://github.com/johang/btfs/archive/refs/tags/v2.24.tar.gz
+	cd btfs
+	autoreconf -i
+	./configure
+	make -j12
+	make install
+Homebrew
+	brew install btfs
+
+Usage
+	mkdir mnt
+	btfs video.torrent mnt
+	cd mnt
+	vlc video.mp4
+Unmount
+	fusermount -u mnt

@@ -1,2 +1,12 @@
-https://schemaexplorer.io/
+Schema, relationships & data in your browser.
+https://timabell.github.io/schema-explorer/
 https://github.com/timabell/schema-explorer
+	wget https://github.com/timabell/schema-explorer/releases/download/v0.67/sse.zip
+	7z x -o/opt/ sse.zip sse/linux
+	ln -s /opt/sse/linux/schemaexplorer /usr/local/bin/
+Windows
+	7z x -o"C:\Program Files" sse.zip sse/windows
+Add C:\Program Files\sse\windows to PATH environment variable.
+
+Usage
+	schemaexplorer

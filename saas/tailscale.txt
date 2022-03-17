@@ -1,0 +1,7 @@
+https://tailscale.com
+How our free plan stays free
+https://news.ycombinator.com/item?id=30701451
+
+headscale
+An open source, self-hosted implementation of the Tailscale control server
+https://github.com/juanfont/headscale
