@@ -1,0 +1,5 @@
+Customizable Windows terminal with tabs, splits, quake-style, hotkeys and more
+https://conemu.github.io
+https://github.com/Maximus5/ConEmu
+	winget install Maximus5.ConEmu
+	choco install conemu

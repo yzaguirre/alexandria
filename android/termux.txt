@@ -4,7 +4,7 @@ https://github.com/termux/termux-packages
 https://news.ycombinator.com/item?id=24979258
 	pkg install openssh python tmux php openssl openssl-tool clang rust golang android-tools vim file bat ncurses-utils nmap-ncat git ffmpeg imagemagick libxml2 libxslt lsd qalc
 	apt install figlet mutt tty-clock irssi pv mosh jq htop taskwarrior newsboat gnupg curl wget termux-api
-	apt install ripgrep fd exa binutils p7zip duf dust tree duc kakoune
+	apt install ripgrep fd exa binutils p7zip duf dust tree duc kakoune glow
 	termux-setup-storage
 	pip install -U pip wheel setuptools
 	pip install -U lxml

@@ -1,0 +1,21 @@
+This project is an independent fork of Firefox,
+with the primary goals of privacy, security and user freedom.
+https://librewolf.net
+https://news.ycombinator.com/item?id=30720301
+This only works if you use Debian 11, Ubuntu 20/21 or Mint 20.2/20.3.
+If you don't use one of these distros,
+see Other Debian based distributions
+	echo "deb [arch=amd64] http://deb.librewolf.net $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+	sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+	sudo apt update
+	sudo apt install librewolf -y
+Other Debian based distributions
+	echo "deb [arch=amd64] http://deb.librewolf.net focal main" | sudo tee /etc/apt/sources.list.d/librewolf.list
+	sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg
+	sudo apt update
+	sudo apt install librewolf -y
+Windows
+	winget install LibreWolf.LibreWolf
+	choco install librewolf
+	scoop bucket add extras
+	scoop install librewolf

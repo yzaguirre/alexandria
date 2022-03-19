@@ -2,6 +2,8 @@ https://duc.zevv.nl
 https://github.com/zevv/duc
 Ubuntu and Termux
 	apt install duc
+Se instalarán los siguientes paquetes NUEVOS:
+  duc libtokyocabinet9
 Usage
 	duc
 Create index at ~/.duc.db

@@ -1,0 +1,13 @@
+Sublime-like terminal-based text editor
+https://github.com/slap-editor/slap
+	curl -sL https://raw.githubusercontent.com/slap-editor/slap/master/install.sh | sh
+With NodeJS
+	sudo npm install -g slap@latest
+
+Usage
+	slap fish.c
+	slap fish1.c fish2.c
+Open directory
+	slap redfish/
+New file
+	slap

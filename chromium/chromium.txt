@@ -26,7 +26,8 @@ Pin-Priority: 1
 
 	apt update
 	apt install chromium
-	
+Se instalarán los siguientes paquetes NUEVOS:
+  chromium libgl1-mesa-glx
 Download .deb
 	wget http://packages.linuxmint.com/pool/upstream/c/chromium/chromium_90.0.4430.93~linuxmint1%2bdebbie_amd64.deb -O chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb

@@ -1,0 +1,47 @@
+Render markdown on the CLI, with pizzazz! 💅🏻
+https://github.com/charmbracelet/glow
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.deb
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt.sig
+	gpg --verify checksums.txt.sig
+	sha256sum -c --ignore-missing checksums.txt
+	dpkg -i glow_1.4.1_linux_amd64.deb
+Termux
+	pkg install glow
+Raspbery Pi armv6
+	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.deb
+	dpkg -i glow_1.4.1_linux_armv6.deb
+Windows
+	choco install glow
+	scoop install glow
+Homebrew
+	brew install glow
+
+Configuration
+%LOCALAPPDATA%\glow\Config\glow.yml
+	mkdir %LOCALAPPDATA%\glow\Config\
+	glow config
+
+Usage
+	glow
+Read from file
+	glow README.md
+Read from stdin
+	glow -
+Fetch README from GitHub / GitLab
+	glow github.com/charmbracelet/glow
+Fetch markdown from HTTP
+	glow https://host.tld/file.md
+
+Stashing
+You can also stash documents from the CLI:
+	glow stash README.md
+Then, when you run glow without arguments will you can
+browse through your stashed documents.
+This is a great way to keep track of things that you need to reference often.
+
+Word Wrapping
+	glow -w 60
+
+Styles
+	glow -s [dark|light]

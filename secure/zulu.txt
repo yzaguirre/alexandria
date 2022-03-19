@@ -1,13 +1,21 @@
-https://github.com/mhogomchungu/zuluCrypt/releases/
-https://code.google.com/p/zulucrypt/	
-	apt-get install libqt4-dev libblkid-dev gcc g++ libcryptsetup-dev cmake libgcrypt11-dev pkg-config uuid-dev hrpath bzip2 debhelper
+https://github.com/mhogomchungu/zuluCrypt
+https://code.google.com/p/zulucrypt/
+	apt install zulucrypt-cli
+Se instalarán los siguientes paquetes NUEVOS:
+  libzulucrypt-exe1.2.0 libzulucrypt1.2.0 libzulucryptpluginmanager1.0.0 zulucrypt-cli
+Compile
+	apt install libqt4-dev libblkid-dev gcc g++ libcryptsetup-dev cmake libgcrypt11-dev pkg-config uuid-dev hrpath bzip2 debhelper
 Might want to keep the following with debian stable
-	apt-get install libdevmapper-dev libudev-dev
+	apt install libdevmapper-dev libudev-dev
 optional dependencies
 	libpwquality-devel libtcplay-dev libsecret-dev qtbase5-dev
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0.tar.bz2
-	tar xf zuluCrypt-5.0.0.tar.bz2
-	cd zuluCrypt-5.0.0
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0.tar.xz
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0.tar.xz.asc
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0.tar.xz.sha256
+	gpg --verify zuluCrypt-6.0.0.tar.xz.asc
+	sha256sum -c --ignore-missing zuluCrypt-6.0.0.tar.xz.sha256
+	tar xf zuluCrypt-6.0.0.tar.bz2
+	cd zuluCrypt-6.0.0
 	mkdir build
 	cd build
 	cmake -DQT5=true -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_BUILD_TYPE=RELEASE . ..
@@ -15,19 +23,19 @@ For Raspberry pi
 	cmake -DCMAKE_INSTALL_PREFIX=/usr/ -DNOGUI=yes -DCMAKE_BUILD_TYPE=RELEASE . ..
 Volumes by default are mounted in "/run/media/private/$USER".A compile time option of "-DHOMEMOUNTPREFIX=true" will cause volumes to be mounted
 instead in user's home directory.
-	make -j2
+	make -j12
 	sudo make install
 After you have it installed,run "zuluCrypt-test" to make sure everything is working as expected.
 	zuluCrypt-test
 
 Binary install
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.asc
-	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/5.0.0/zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.sha256
-	sha256sum -c zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.sha256
-	gpg2 --verify zuluCrypt-5.0.0-debian-8-Jessie.tar.xz.asc
-	tar xf zuluCrypt-5.0.0-debian-8-Jessie.tar.xz
-	cd zuluCrypt-5.0.0-debian-8-Jessie/amd64
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0-debian-10-Buster.tar.xz
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0-debian-10-Buster.tar.xz.asc
+	wget https://github.com/mhogomchungu/zuluCrypt/releases/download/6.0.0/zuluCrypt-6.0.0-debian-10-Buster.tar.xz.sha256
+	sha256sum -c zuluCrypt-6.0.0-debian-10-Buster.tar.xz.sha256
+	gpg --verify zuluCrypt-6.0.0-debian-10-Buster.tar.xz.asc
+	tar xf zuluCrypt-6.0.0-debian-10-Buster.tar.xz
+	cd zuluCrypt-6.0.0-debian-10-Buster/amd64
 	sudo dpkg -i *.deb
 
 Open a zulu drive

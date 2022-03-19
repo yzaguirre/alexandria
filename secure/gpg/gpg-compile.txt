@@ -1,26 +1,78 @@
 https://gnupg.org/download/
 https://lists.gnupg.org/pipermail/gnupg-announce/2015q1/000361.html
 https://gnupg.org/faq/whats-new-in-2.1.html
-Download source
-	wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.4.tar.bz2
-	wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.1.4.tar.bz2.sig
 Grab pub keys of the developers
 https://gnupg.org/signature_key.html
-	gpg --recv-keys 249B39D24F25E3B6 04376F3EE0856959 2071B08A33BD3F06 8A861B1C7EFD60D9
-Check integrity with gpg
-	gpg --verify gnupg-2.1.4.tar.bz2.sig
-Check integrity with sha1
-	sha1sum gnupg-2.1.4.tar.bz2
-Must match
-ad68d65c54698e3c781e17864ab5918442df155a  gnupg-2.1.4.tar.bz2
+	sudo ldd /usr/bin/gpg
+	apt update
+	apt install libassuan-dev libksba-dev libnpth0-dev libgpg-error-dev libgcrypt20-dev libgcrypt11-dev
 
-Extract
-	tar xf gnupg-2.1.4.tar.bz2
-	cd gnupg-2.1.4
-	apt-get update
-	apt-get install libassuan-dev libksba-dev libnpth0-dev libgpg-error-dev libgcrypt20-dev libgcrypt11-dev
+libgcrypt
+https://gnupg.org/ftp/gcrypt/libgcrypt/
+	wget https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.0.tar.bz2
+	wget https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.10.0.tar.bz2.sig
+	gpg --verify libgcrypt-1.10.0.tar.bz2.sig
+	tar xf libgcrypt-1.10.0.tar.bz2
+	cd libgcrypt-1.10.0
 	./configure
-	make
+	make -j12
 	make install
+
+libgpg-error
+https://gnupg.org/ftp/gcrypt/gpgrt
+	wget https://gnupg.org/ftp/gcrypt/gpgrt/libgpg-error-1.44.tar.bz2
+	wget https://gnupg.org/ftp/gcrypt/gpgrt/libgpg-error-1.44.tar.bz2.sig
+	gpg --verify libgpg-error-1.44.tar.bz2.sig
+	tar xf libgpg-error-1.44.tar.bz2
+	cd libgpg-error-1.44
+	./configure
+	make -j12
+	make install
+
+libksba
+https://gnupg.org/ftp/gcrypt/libksba/
+	wget https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.0.tar.bz2
+	wget https://gnupg.org/ftp/gcrypt/libksba/libksba-1.6.0.tar.bz2.sig
+	gpg --verify libksba-1.6.0.tar.bz2.sig
+	tar xf libksba-1.6.0.tar.bz2
+	cd libksba-1.6.0
+	./configure
+	make -j12
+	make install
+
+https://gnupg.org/ftp/gcrypt/npth/
+	wget https://gnupg.org/ftp/gcrypt/npth/npth-1.6.tar.bz2
+	wget https://gnupg.org/ftp/gcrypt/npth/npth-1.6.tar.bz2.sig
+	gpg --verify npth-1.6.tar.bz2.sig
+	tar xf npth-1.6.tar.bz2
+	cd npth-1.6
+	./configure
+	make -j12
+	make install
+
+Download source
+	wget https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.4.tar.bz2
+	wget https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.4.tar.bz2.sig
+	gpg --verify gnupg-2.3.4.tar.bz2.sig
+	tar xf gnupg-2.3.4.tar.bz2
+	cd gnupg-2.3.4
+	./configure
+	make -j12
+	make install
+https://askubuntu.com/questions/846957/gpg-fatal-libgcrypt-is-too-old-need-1-7-0-have-1-6-5
+	sudo ldconfig /usr/local/bin/gpg
+https://unix.stackexchange.com/questions/536812/gpg-agent-is-older-than-us-warning-message-even-after-running-gpgconf-kill-a
+	apt remove gpg-agent
+	gpgconf --kill all
 Uninstall
 	make uninstall
+
+Ubuntu: gpg: Fatal: libgcrypt is too old (need 1.7.0, have 1.6.5)
+https://www.youtube.com/watch?v=6IAMYtnzsik
+Ubuntu: gnupg-2.2.10 gpg: Fatal: libgcrypt is too old (need 1.7.0, have 1.6.5)
+https://www.youtube.com/watch?v=jHSP9Fvry5Q
+
+Dev library
+	apt install libgpgme-dev
+Se instalarán los siguientes paquetes NUEVOS:
+  libassuan-dev libgpg-error-dev libgpgme-dev

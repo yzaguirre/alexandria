@@ -1,3 +1,8 @@
+https://rst2pdf.org
+	apt install rst2pdf
+Se instalarán los siguientes paquetes NUEVOS:
+  docutils-common python3-docutils python3-jinja2 python3-packaging python3-pygments python3-pyparsing python3-roman python3-smartypants rst2pdf
+
 A command-line tool to turn web pages into beautiful,
 readable PDF, EPUB, or HTML docs.
 https://github.com/danburzo/percollate

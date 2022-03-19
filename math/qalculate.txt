@@ -3,9 +3,9 @@ https://www.reddit.com/r/programming/comments/ta0yk6/qalculate_the_ultimate_desk
 
 Qalculate! library and CLI
 https://github.com/Qalculate/libqalculate
-	wget https://github.com/Qalculate/libqalculate/releases/download/v4.0.0/qalculate-4.0.0-x86_64.tar.xz
-	tar xf qalculate-4.0.0-x86_64.tar.xz
-	cd qalculate-4.0.0
+	wget https://github.com/Qalculate/libqalculate/releases/download/v4.1.0/qalculate-4.1.0-x86_64.tar.xz
+	tar xf qalculate-4.1.0-x86_64.tar.xz
+	cd qalculate-4.1.0
 	./install
 Windows
 	winget install Qalculate.Qalculate

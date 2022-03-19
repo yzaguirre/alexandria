@@ -1,0 +1,14 @@
+World's fastest and most advanced password recovery utility
+https://hashcat.net/hashcat/
+https://github.com/hashcat/hashcat
+https://sidshome.wordpress.com/2020/10/13/using-gpg/
+Signing key on PGP keyservers: RSA, 2048-bit.
+Key ID: 2048R/8A16544F.
+Fingerprint:
+A70833229D040B4199CC00523C17DA8B8A16544F
+	wget https://hashcat.net/files/hashcat-6.2.5.7z
+	wget https://hashcat.net/files/hashcat-6.2.5.7z.asc
+	gpg --keyserver keyserver.ubuntu.com  --recv-keys 8A16544F
+	gpg --verify hashcat-6.2.5.7z.asc
+	7z x -o"C:\Program Files\" hashcat-6.2.5.7z
+Add C:\Program Files\hashcat-6.2.5 to PATH environment variable

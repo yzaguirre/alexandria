@@ -1,7 +1,10 @@
 http://www.gnumeric.org
 	apt install gnumeric
 Compile
-	apt install intltool libgoffice-0.10-dev
+	apt install intltool libgoffice-0.10-dev bison
+Se instalarán los siguientes paquetes NUEVOS:
+  bzip2-doc gir1.2-goffice-0.10 gir1.2-gsf-1 gir1.2-rsvg-2.0 libbz2-dev
+  libgoffice-0.10-dev libgsf-1-dev librsvg2-dev libxslt1-dev
 	wget http://ftp.gnome.org/pub/GNOME/sources/gnumeric/1.12/gnumeric-1.12.51.tar.xz
 	wget https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.51.sha256sum
 	sha256sum -c --ignore-missing gnumeric-1.12.51.sha256sum

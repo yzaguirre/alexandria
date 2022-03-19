@@ -1,4 +1,8 @@
-Download
+https://nmap.org
+	apt install nmap
+Se instalarán los siguientes paquetes NUEVOS:
+  liblinear4 lua-lpeg nmap nmap-common
+Compile
 https://nmap.org/download.html
 https://nmap.org/dist/sigs/?C=M&O=D
 	wget https://nmap.org/dist/nmap-7.92.tgz
@@ -36,8 +40,7 @@ configure directives
 --prefix=<directoryname>
 --prefix=/usr/local
 --without-zenmap
-	make
-	su root
+	make -j12
 	make install
 
 Compile ncat
@@ -48,7 +51,7 @@ http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-My
 	cd libpcap
 	make
 	cd ../ncat/
-	make
+	make -j12
 	apt install liblua5.2-0 libc6
 
 Scan a trace for open ports

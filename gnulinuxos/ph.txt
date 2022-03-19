@@ -1,0 +1,10 @@
+ph - the tabular data shell tool
+https://pypi.org/project/ph/
+https://github.com/pgdr/ph
+	sudo -H pip install -U ph[plot]
+
+Usage
+	cat iris.csv | ph columns
+	cat iris.csv | ph describe
+Plot
+	cat covid.csv | ph plot

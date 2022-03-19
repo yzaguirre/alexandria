@@ -1,8 +1,20 @@
 https://geany.org
 https://github.com/geany/geany
 https://news.ycombinator.com/item?id=23524336
-	apt install geany
+See ../gnulinuxos/gtk.txt
+	apt install geany geany-plugins
+Se instalarán los siguientes paquetes NUEVOS:
+  geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav geany-plugin-commander geany-plugin-ctags geany-plugin-debugger
+  geany-plugin-defineformat geany-plugin-doc geany-plugin-extrasel geany-plugin-gendoc geany-plugin-geniuspaste geany-plugin-git-changebar
+  geany-plugin-gproject geany-plugin-insertnum geany-plugin-keyrecord geany-plugin-latex geany-plugin-lineoperations geany-plugin-lipsum geany-plugin-lua
+  geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript geany-plugin-numberedbookmarks geany-plugin-overview geany-plugin-pairtaghighlighter
+  geany-plugin-pg geany-plugin-pohelper geany-plugin-prettyprinter geany-plugin-prj geany-plugin-projectorganizer geany-plugin-scope geany-plugin-sendmail
+  geany-plugin-shiftcolumn geany-plugin-spellcheck geany-plugin-tableconvert geany-plugin-treebrowser geany-plugin-updatechecker geany-plugin-vc
+  geany-plugin-vimode geany-plugin-workbench geany-plugin-xmlsnippets geany-plugins-common libctpl2 libgit2-1.1 libgtkspell3-3-0 libhttp-parser2.9
+  liblua5.1-0 libmbedcrypto3 libmbedtls12 libmbedx509-0 universal-ctags
 Compile with plugins
+	apt install libgtk-3-dev intltool libgpgme-dev libgit2-dev
+See ../documents/pdf.txt for rst2pdf
 	wget https://download.geany.org/geany-1.38.tar.gz
 	wget https://download.geany.org/geany-1.38.tar.gz.sig
 	wget https://plugins.geany.org/geany-plugins/geany-plugins-1.38.tar.gz
@@ -11,11 +23,14 @@ Compile with plugins
 	gpg --verify geany-1.38.tar.gz.sig
 	gpg --verify geany-plugins-1.38.tar.gz.sig
 	tar xf geany-1.38.tar.gz
-	./configure
+	cd geany-1.38
+	./configure --enable-html-docs --enable-pdf-docs
 	make -j12
 	make install
+	cd ..
 	tar xf geany-plugins-1.38.tar.gz
-	./configure
+	cd geany-plugins-1.38
+	./configure --enable-markdown --enable-geanypg --enable-gitchangebar
 	make -j12
 	make install
 MS Windows install

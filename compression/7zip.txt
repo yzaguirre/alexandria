@@ -80,3 +80,7 @@ x    = Extract with full paths command
 -si  = read from stdin switch
 -aoa = Overwrite all existing files without prompt. 
 -o   = output directory
+
+https://www.redhat.com/sysadmin/encrypting-decrypting-7zip
+Encrypt
+	7z a -p -mhe=on directory.tar.7z directory.tar

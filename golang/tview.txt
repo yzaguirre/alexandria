@@ -1,0 +1,4 @@
+Terminal UI library with rich, interactive widgets
+- written in Golang
+https://github.com/rivo/tview
+	go get github.com/rivo/tview

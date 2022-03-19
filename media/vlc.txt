@@ -2,6 +2,11 @@ https://www.videolan.org/vlc/
 https://videolan.org/vlc/download-debian.html
 https://www.taringa.net/posts/linux/17438046/Conociendo-a-fondo-VLC.html
 	apt install vlc
+Se instalarán los siguientes paquetes NUEVOS:
+  libaribb24-0 libcddb2 libdca0 libdvbpsi10 libebml5 libfaad2 libixml10 libkate1 libmad0 libmatroska7 libmpcdec6 libopenmpt-modplug1 libprotobuf-lite23
+  libproxy-tools libresid-builder0c2a libsdl-image1.2 libsdl1.2debian libsidplay2 libspatialaudio0 libssh2-1 libupnp13 libvlc-bin libvlc5 libvlccore9
+  libvncclient1 libxcb-xv0 vlc vlc-bin vlc-data vlc-l10n vlc-plugin-access-extra vlc-plugin-base vlc-plugin-notify vlc-plugin-qt vlc-plugin-samba
+  vlc-plugin-skins2 vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization
 MacOS
 https://www.videolan.org/vlc/download-macosx.html
 	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg

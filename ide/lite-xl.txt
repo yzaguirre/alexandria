@@ -1,0 +1,23 @@
+A lightweight, simple, fast, feature-filled, and
+extremely extensible text editor written in C, and Lua,
+adapted from lite.
+https://lite-xl.com
+https://github.com/lite-xl/lite-xl
+	wget https://github.com/lite-xl/lite-xl/releases/download/v2.0.5/lite-xl-luajit-linux-x86_64.tar.gz
+	tar xf lite-xl-luajit-linux-x86_64.tar.gz --strip-components=1 -C ~/.local
+or	mkdir -p ~/.local/bin
+	cp bin/lite-xl ~/.local/bin
+	cp -r share ~/.local
+Windows
+	wget https://github.com/lite-xl/lite-xl/releases/download/v2.0.5/lite-xl-luajit-windows-x86_64.zip
+	7z x -o"C:\Program Files\" lite-xl-luajit-windows-x86_64.zip
+Or
+	wget https://github.com/lite-xl/lite-xl/releases/download/v2.0.5/lite-xl-windows-x86_64.zip
+	7z x -o"C:\Program Files\" lite-xl-windows-x86_64.zip
+
+Configuration at
+C:\Users\dyzag\.config\lite-xl\init.lua
+MacOS
+/Users/dyzag/.config/lite-xl/init.lua
+Linux:
+/home/david/.config/lite-xl/init.lua

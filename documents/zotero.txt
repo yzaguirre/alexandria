@@ -1,3 +1,13 @@
+https://www.zotero.org
+https://github.com/zotero/zotero
 https://news.ycombinator.com/item?id=17606929
-https://www.zotero.org/
-https://github.com/zotero/zotero/
+Windows
+	winget install Zotero.Zotero
+	choco install zotero
+Latest Binary
+	wget https://download.zotero.org/client/release/6.0/Zotero-6.0_setup.exe
+	explorer.exe Zotero-6.0_setup.exe
+Installed at C:\Program Files (x86)\Zotero\
+
+https://www.zotero.org/blog/zotero-6/
+https://news.ycombinator.com/item?id=30714121

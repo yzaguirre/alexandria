@@ -26,6 +26,7 @@ eval "$(oh-my-posh.exe --init --shell bash --config ~/AppData/Local/Programs/oh-
 
 Oh My Posh
 https://ohmyposh.dev
+https://github.com/jandedobbeleer/oh-my-posh
 	winget install JanDeDobbeleer.OhMyPosh
 Powershell
 	cd C:\Users\dyzag\Documents\PowerShell

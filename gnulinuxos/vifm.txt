@@ -1,5 +1,39 @@
+Vifm is a file manager with curses interface,
+which provides Vim-like environment for managing objects
+within file systems, extended with some useful ideas from mutt.
 https://vifm.info
+https://github.com/vifm/vifm
 Vifm is a file manager with curses interface,
 which provides Vi[m]-like environment for managing objects within
 file systems, extended with some useful ideas from mutt.
 	apt install vifm
+Compile
+	apt install libmagic-dev libglib2.0-dev libgtk-3-dev
+The following NEW packages will be installed:
+  libatk-bridge2.0-dev libatk1.0-dev libatspi2.0-dev libcairo-script-interpreter2 libcairo2-dev libdatrie-dev libegl1-mesa-dev libepoxy-dev libfribidi-dev
+  libgraphite2-dev libgtk-3-dev libharfbuzz-dev libharfbuzz-gobject0 libice-dev libpango1.0-dev libpixman-1-dev libsm-dev libthai-dev libxcb-shm0-dev
+  libxcomposite-dev libxdamage-dev libxft-dev libxinerama-dev libxrandr-dev libxtst-dev pango1.0-tools wayland-protocols x11proto-randr-dev
+  x11proto-record-dev x11proto-xinerama-dev
+	wget https://github.com/vifm/vifm/releases/download/v0.12/vifm-0.12.tar.bz2
+	wget https://github.com/vifm/vifm/releases/download/v0.12/vifm-0.12.tar.bz2.asc
+	gpg --verify vifm-0.12.tar.bz2.asc
+	tar xf vifm-0.12.tar.bz2
+	cd vifm-0.12
+	./configure --with-libmagic --without-gtk
+	make -j12
+	make install
+Windows
+	choco install vifm
+Binary
+	wget https://github.com/vifm/vifm/releases/download/v0.12/vifm-w64-se-0.12-binary.zip
+	wget https://github.com/vifm/vifm/releases/download/v0.12/vifm-w64-se-0.12-binary.zip.asc
+	gpg --verify vifm-w64-se-0.12-binary.zip.asc
+	md5sum vifm-w64-se-0.12-binary.zip
+70dfa1a901a3fc4b3001bb8e445f66e8
+	sha1sum vifm-w64-se-0.12-binary.zip
+7ca97537b96d51456ca67ba62895eaaf646e7caf
+	7z x -o"C:\Program Files\" vifm-w64-se-0.12-binary.zip
+	move "C:\Program Files\vifm-w64-se-0.12-binary" "C:\Program Files\vifm"
+
+COnfiguration at
+~/.vifm/vifmrc

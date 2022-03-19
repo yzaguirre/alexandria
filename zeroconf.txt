@@ -1,5 +1,7 @@
 https://avahi.org/
 	apt install avahi-discover
+Se instalarán los siguientes paquetes NUEVOS:
+  avahi-discover python3-avahi
 http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi-rpi-windows/
 	apt install libnss-mdns avahi-utils
 

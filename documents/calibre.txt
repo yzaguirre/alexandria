@@ -8,9 +8,8 @@ Disable calibre as default PDF viewer
 
 Binary install
 https://calibre-ebook.com/download_linux
-	sudo su
 	wget https://download.calibre-ebook.com/linux-installer.sh
-	./linux-installer.sh
+	sudo sh linux-installer.sh
 
 Uninstall
 	/usr/bin/calibre-uninstall
@@ -19,4 +18,3 @@ CTRL+M	Toggle between paged and flow mode
 CTRL+ALT+B	Bookmarks
 
 https://github.com/janeczku/calibre-web
-

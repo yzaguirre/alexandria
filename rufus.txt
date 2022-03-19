@@ -1,13 +1,16 @@
+The Reliable USB Formatting Utility
 https://rufus.ie
-https://github.com/pbatard/rufus/
+https://github.com/pbatard/rufus
 Windows (Behind on release)
 	winget install Rufus.Rufus
 Installer
-	wget https://github.com/pbatard/rufus/releases/download/v3.17/rufus-3.17.exe
-	mv rufus-3.17.exe ~/bin
-	explorer.exe rufus-3.17.exe
+	wget https://github.com/pbatard/rufus/releases/download/v3.18/rufus-3.18.exe
+	wget https://github.com/pbatard/rufus/releases/download/v3.18/rufus-3.18.exe.sig
+	gpg --verify rufus-3.18.exe.sig
+	move rufus-3.18.exe C:\Users\dyzag\bin\rufus.exe
 https://askubuntu.com/questions/927924/how-to-install-ubuntu-in-uefi-mode
 http://www.rodsbooks.com/efi-bootloaders/csm-good-bad-ugly.html
 	When trying to create the bootable USB, I opted for GPT instead of MBR
 	(you'll see the setting when you'll see the Rufus GUI).
-See ~/gnulinuxos/hardware.txt and ~/gnulinuxos/uefi.txt
+See gnulinuxos/hardware.txt
+and gnulinuxos/uefi.txt

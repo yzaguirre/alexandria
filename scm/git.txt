@@ -1,4 +1,12 @@
+https://www.git-scm.com
+https://github.com/blog/2242-git-2-10-has-been-released
+http://www.systutorials.com/366/set-up-git-server-through-ssh-connection/
+https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 See ./gitforwindows.txt
+	apt install git
+Ubuntu
+	add-apt-repository ppa:git-core/ppa
+	apt install git
 
 Inside the Hidden Git Folder - Computerphile
 https://www.youtube.com/watch?v=bSA91XTzeuA
@@ -91,11 +99,6 @@ https://chris.beams.io/posts/git-commit/
 https://news.ycombinator.com/item?id=13889155
 
 https://news.ycombinator.com/item?id=14045787
-
-https://git-scm.com/
-https://github.com/blog/2242-git-2-10-has-been-released
-http://www.systutorials.com/366/set-up-git-server-through-ssh-connection/
-https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 
 https://codewords.recurse.com/issues/two/git-from-the-inside-out
 https://news.ycombinator.com/item?id=12802949

@@ -54,7 +54,7 @@ http://mundomkiki.es/servidor-web-con-raspberry-pi-y-raspbian-proyecto-completo/
 
 	sudo apt install tar less wget curl slurm nmap pv tmux tinc mosh transmission-daemon vim openssh-server python python-pip avahi-daemon bash coreutils
 	sudo apt install irssi gpgv ntp sox transmission-remote-cli tty-clock locales libnotify-bin ncdu git
-	sudo pip install youtube_dl transmissionrpc deluge-client
+	sudo pip install -U yt-dlp transmissionrpc deluge-client
 
 SHA-1:  3a34e7b05e1e6e9042294b29065144748625bea8
 SD SDHC

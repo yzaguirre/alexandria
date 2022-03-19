@@ -1,3 +1,7 @@
+https://pip.pypa.io/en/stable/
+	apt install python3-pip
+The following NEW packages will be installed:
+  libpython3-dev libpython3.9-dev python-pip-whl python3-dev python3-pip python3-wheel python3.9-dev
 PyPI In a box: Using a Raspberry Pi as a portable PyPI server
 https://vuyisile.com/pypi-in-a-box-using-a-raspberry-pi-as-a-portable-pypi-server/
 https://news.ycombinator.com/item?id=30472044

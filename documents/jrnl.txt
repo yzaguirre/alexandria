@@ -1,0 +1,3 @@
+Collect your thoughts and notes without leaving the command line.
+https://jrnl.sh
+https://github.com/jrnl-org/jrnl

@@ -1,26 +1,28 @@
+https://dbeaver.io
 https://github.com/dbeaver/dbeaver
-https://dbeaver.io/
+https://github.com/dbeaver/dbeaver/wiki
 https://news.ycombinator.com/item?id=18935138
-	wget https://github.com/dbeaver/dbeaver/releases/download/21.3.4/dbeaver-ce_21.3.4_amd64.deb
+	wget https://github.com/dbeaver/dbeaver/releases/download/22.0.0/dbeaver-ce_22.0.0_amd64.deb
 	
-	wget https://dbeaver.io/files/21.3.4/dbeaver-ce_21.3.4_amd64.deb
+	wget https://dbeaver.io/files/22.0.0/dbeaver-ce_22.0.0_amd64.deb
 or	wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-or	wget https://github.com/dbeaver/dbeaver/releases/download/21.3.4/dbeaver-ce_21.3.4_amd64.deb
-	wget https://dbeaver.io/files/21.3.4/checksum/dbeaver-ce_21.3.4_amd64.deb.sha256
-	wget https://dbeaver.io/files/21.3.4/checksum/dbeaver-ce_21.3.4_amd64.deb.sha1
-	wget https://dbeaver.io/files/21.3.4/checksum/dbeaver-ce_21.3.4_amd64.deb.md5
+or	wget https://github.com/dbeaver/dbeaver/releases/download/22.0.0/dbeaver-ce_22.0.0_amd64.deb
+	wget https://dbeaver.io/files/22.0.0/checksum/dbeaver-ce_22.0.0_amd64.deb.sha256
+	wget https://dbeaver.io/files/22.0.0/checksum/dbeaver-ce_22.0.0_amd64.deb.sha1
+	wget https://dbeaver.io/files/22.0.0/checksum/dbeaver-ce_22.0.0_amd64.deb.md5
 	
-	sha256sum dbeaver-ce_21.3.4_amd64.deb
-	cat dbeaver-ce_21.3.4_amd64.deb.sha256
-	sha1sum dbeaver-ce_21.3.4_amd64.deb
-	cat dbeaver-ce_21.3.4_amd64.deb.sha1
-	md5sum dbeaver-ce_21.3.4_amd64.deb
-	cat dbeaver-ce_21.3.4_amd64.deb.md5
-	dpkg -i dbeaver-ce_21.3.4_amd64.deb
+	sha256sum dbeaver-ce_22.0.0_amd64.deb
+	cat dbeaver-ce_22.0.0_amd64.deb.sha256
+	sha1sum dbeaver-ce_22.0.0_amd64.deb
+	cat dbeaver-ce_22.0.0_amd64.deb.sha1
+	md5sum dbeaver-ce_22.0.0_amd64.deb
+	cat dbeaver-ce_22.0.0_amd64.deb.md5
+	dpkg -i dbeaver-ce_22.0.0_amd64.deb
 Windows
 	winget install dbeaver.dbeaver
 or	choco install dbeaver
 Installed at C:\Program Files\DBeaver
+or C:\Users\dyzag\AppData\Local\DBeaver
 Homebrew
 	brew install --cask dbeaver-community
 
@@ -28,3 +30,10 @@ Line numbers
 https://stackoverflow.com/questions/45236346/the-line-number-on-the-sql-editor-in-dbeaver
 Window / Preferences / General / Editors / Text Editors
 There is a shortcut in the context menu when you right-click the left gutter of the editor.
+
+Command Line
+https://github.com/dbeaver/dbeaver/wiki/Command-Line
+	dbeaver-cli.exe -con "driver=sqlite|database=C:\db\SQLite\Chinook.db|name=SQLiteChin|openConsole=true|folder=SQLite"
+
+ER diagrams
+https://github.com/dbeaver/dbeaver/wiki/ER-Diagrams

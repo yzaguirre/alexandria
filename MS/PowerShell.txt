@@ -19,16 +19,22 @@ $PROFILE
 ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 
 Manual install
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/powershell_7.2.1-1.deb_amd64.deb
-	sha256sum powershell_7.2.1-1.deb_amd64.deb
-11756A6265BDC1EBD14D678AB08A6999C03E24157B26B2C2E40640E44CB46ACD
-	dpkg -i powershell_7.2.1-1.deb_amd64.deb
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.1/powershell_7.2.2-1.deb_amd64.deb
+	sha256sum powershell_7.2.2-1.deb_amd64.deb
+800C8676B1B346DF51B68E564E5C3B08A5F1B4ADC66DCF304004CE8E7D747C72
+	dpkg -i powershell_7.2.2-1.deb_amd64.deb
 	apt install -f
 
 Windows
 How to install latest version of powershell in Windows 11 | Upgrade Powershell to 7.2.0
 https://www.youtube.com/watch?v=bWw7f5yVvGQ
 	winget install Microsoft.PowerShell
+Binary
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.2/PowerShell-7.2.2-win-x64.msi
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.2/hashes.sha256
+	dos2unix hashes.sha256
+	sha256sum -c --ignore-missing hashes.sha256
+	explorer.exe PowerShell-7.2.2-win-x64.msi
 Installed at C:\Program Files\PowerShell\7
 Run
 	pwsh.exe

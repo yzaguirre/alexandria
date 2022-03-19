@@ -1,4 +1,16 @@
 https://store.steampowered.com/about/
+	wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+	dpkg -i steam_latest.deb
+	steam
+The following NEW packages will be installed:
+  gcc-11-base:i386 i965-va-driver:i386 intel-media-va-driver:i386 krb5-locales libapparmor1:i386 libasound2:i386 libasound2-plugins:i386 libasyncns0:i386 libatomic1:i386 libbsd0:i386 libc6:i386 libcap2:i386 libcom-err2:i386 libcrypt1:i386 libdb5.3:i386 libdbus-1-3:i386 libdrm-amdgpu1:i386 libdrm-intel1:i386
+  libdrm-nouveau2:i386 libdrm-radeon1:i386 libdrm2:i386 libedit2:i386 libegl-mesa0:i386 libegl1:i386 libelf1:i386 libexpat1:i386 libffi8:i386 libflac8:i386 libgbm1:i386 libgcc-s1:i386 libgcrypt20:i386 libgl1:i386 libgl1-mesa-dri:i386 libglapi-mesa:i386 libglvnd0:i386 libglx-mesa0:i386 libglx0:i386 libgpg-error-l10n
+  libgpg-error0:i386 libgssapi-krb5-2:i386 libicu67:i386 libidn2-0:i386 libigdgmm11:i386 libjack-jackd2-0:i386 libk5crypto3:i386 libkeyutils1:i386 libkrb5-3:i386 libkrb5support0:i386 libllvm12:i386 liblz4-1:i386 liblzma5:i386 libmd0:i386 libnsl2:i386 libnss-nis:i386 libnss-nisplus:i386 libogg0:i386 libopus0:i386
+  libpciaccess0:i386 libpulse0:i386 libsamplerate0:i386 libsensors5:i386 libsndfile1:i386 libssl1.1:i386 libstdc++6:i386 libsystemd0:i386 libtinfo6:i386 libtirpc3:i386 libudev1:i386 libunistring2:i386 libva2:i386 libvorbis0a:i386 libvorbisenc2:i386 libvulkan1:i386 libwayland-client0:i386 libwayland-server0:i386
+  libwrap0:i386 libx11-6:i386 libx11-xcb1:i386 libxau6:i386 libxcb-dri2-0:i386 libxcb-dri3-0:i386 libxcb-glx0:i386 libxcb-present0:i386 libxcb-randr0:i386 libxcb-shm0:i386 libxcb-sync1:i386 libxcb-xfixes0:i386 libxcb1:i386 libxdmcp6:i386 libxext6:i386 libxfixes3:i386 libxinerama1:i386 libxml2:i386 libxshmfence1:i386
+  libxss1:i386 libxxf86vm1:i386 libzstd1:i386 mesa-va-drivers:i386 mesa-vulkan-drivers:i386 steam-libs-amd64 steam-libs-i386:i386 va-driver-all:i386 zlib1g:i386
+
+Deprecated installation
 	apt install steam-launcher
 The following NEW packages will be installed:
   i965-va-driver:i386 intel-media-va-driver:i386 libegl-mesa0:i386 libegl1:i386 libgbm1:i386 libigdgmm11:i386 libva2:i386 libwayland-server0:i386

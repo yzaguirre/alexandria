@@ -1,0 +1,5 @@
+https://smxi.org/docs/inxi.htm
+https://github.com/smxi/inxi
+https://www.tecmint.com/inxi-command-to-find-linux-system-information/
+	apt install inxi
+	inxi --recommends

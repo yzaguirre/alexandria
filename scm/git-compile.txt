@@ -1,21 +1,29 @@
 http://www.git-scm.com/downloads
-https://github.com/git/git/releases
-	apt-get install libcurl4-openssl-dev
-	wget https://github.com/git/git/archive/v2.3.3.tar.gz -O git-2.3.3.tar.gz
-	tar xf git-2.3.3.tar.gz
-	cd git-2.3.3
-	
-	make prefix=/usr all doc info
-	make prefix=/usr install install-doc install-html install-info
+https://github.com/git/git/tags
+	apt install libcurl4-openssl-dev
+	wget https://github.com/git/git/archive/v2.35.1.tar.gz -O git-2.35.1.tar.gz
+	wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.35.1.tar.sign
+	tar xf git-2.35.1.tar.gz
+	cd git-2.35.1
+	cd git-2.35.1
+x	make prefix=/usr all doc info
+	make prefix=/usr/local install install-doc install-html install-info
 Or
 	make prefix=/usr profile-fast
-x	make prefix=/usr profile
-	make prefix=/usr PROFILE=BUILD install
+x	make prefix=/usr/local profile
+	make prefix=/usr/local PROFILE=BUILD install
 http://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 method not used
-	tar -zxf git-2.3.3.tar.gz
-	cd git-2.3.3
+	tar -zxf git-2.35.1.tar.gz
+	cd git-2.35.1
 	make configure
 	./configure --prefix=/usr
 	make all doc info
 	sudo make install install-doc install-html install-info
+
+Dev libraries
+	apt install libgit2-dev
+Se instalarán los siguientes paquetes NUEVOS:
+  libgit2-dev libhttp-parser-dev libmbedtls-dev libssh2-1-dev libssl-dev
+Se actualizarán los siguientes paquetes:
+  libssl1.1

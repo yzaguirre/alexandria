@@ -25,7 +25,6 @@ Install
 	wget https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz
 	wget https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz.asc
 	gpg --verify sublime_text_build_4126_x64.tar.xz.asc
-
 	tar xf sublime_text_build_4126_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 Windows

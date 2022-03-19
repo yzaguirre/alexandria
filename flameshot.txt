@@ -1,5 +1,6 @@
 Powerful yet simple to use screenshot software.
 https://flameshot.org
+https://github.com/flameshot-org/flameshot
 Flameshot v11.0.0
 https://github.com/flameshot-org/flameshot/releases/tag/v11.0.0
 https://news.ycombinator.com/item?id=30071766
@@ -40,6 +41,8 @@ Fullscreen capture with custom save path (no GUI) and delayed:
 	flameshot full --path ~/myStuff/captures --delay 5000
 Fullscreen capture with custom save path copying to clipboard:
 	flameshot full --clipboard --path ~/myStuff/captures
+https://www.reddit.com/r/commandline/comments/tfyrae/create_image_with_rounded_corner_and_drop_shadow/
+	flameshot gui --raw > /tmp/image.png
 
 Disable Imgur upload
 https://github.com/flameshot-org/flameshot/issues/1529

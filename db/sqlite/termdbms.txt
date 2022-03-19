@@ -1,0 +1,11 @@
+A TUI for viewing and editing databases, written in pure Go
+https://github.com/mathaou/termdbms
+SQLite
+CSV* (see note below)
+	wget https://github.com/mathaou/termdbms/releases/download/v0.9-alpha/termdbms_linux_x86.zip
+Windows
+	wget https://github.com/mathaou/termdbms/releases/download/v0.9-alpha/termdbms_windows_x64.zip
+	7z e -oC:\Users\dyzag\bin termdbms_windows_x64.zip
+
+Usage
+	termdbms -p C:\Users\dyzag\Downloads\Database.db -d sqlite

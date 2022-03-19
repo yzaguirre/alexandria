@@ -5,8 +5,12 @@ https://github.com/timabell/schema-explorer
 	7z x -o/opt/ sse.zip sse/linux
 	ln -s /opt/sse/linux/schemaexplorer /usr/local/bin/
 Windows
-	7z x -o"C:\Program Files" sse.zip sse/windows
+	7z x -o"C:\Users\dyzag\" sse.zip sse/windows
 Add C:\Program Files\sse\windows to PATH environment variable.
 
 Usage
+	cd C:\Users\dyzag\sse\windows
 	schemaexplorer
+
+A file path can be
+file:///C:/Users/dyzag/Documents/Database%202021-04-26.db

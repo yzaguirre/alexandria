@@ -621,6 +621,10 @@ https://github.com/ibraheemdev/modern-unix
 https://www.reddit.com/r/commandline/comments/si5ok6/command_line_for_the_21st_century_the_low_hanging/
 https://ileriseviye.wordpress.com/2018/10/30/command-line-for-the-21-century-the-low-hanging-fruit/
 https://www.reddit.com/r/commandline/comments/sekd0w/ncdu_ncurses_disk_usage_see_which_directories_and/
+
+https://github.com/rothgar/awesome-tuis
+https://news.ycombinator.com/item?id=30704923
+
 gdu
 dutree
 dua

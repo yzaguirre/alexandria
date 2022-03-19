@@ -1,3 +1,4 @@
+See db/sqlite/termdbms.txt
 csvtk
 A cross-platform, efficient and practical CSV/TSV toolkit in Golang
 https://bioinf.shenwei.me/csvtk/

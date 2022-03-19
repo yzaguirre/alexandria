@@ -1,7 +1,7 @@
 Terminal file manager
 https://github.com/gokcehan/lf
 	wget https://github.com/gokcehan/lf/releases/download/r26/lf-linux-amd64.tar.gz
-	tar xf lf-linux-amd64.tar.gz -C /usr/local/bin
+	tar xf lf-linux-amd64.tar.gz -C ~/.local/bin
 Termux
 	apt install lf
 Windows
@@ -18,6 +18,8 @@ Example file
 
 How to Set Up and Configure LF (The Best Terminal File Manager)
 https://www.youtube.com/watch?v=2oWqD3JCXuI
+Lf File Manager Will Always Be My Favourite
+https://www.youtube.com/watch?v=6Gq6wsz8o_k
 
 Add icons
 https://github.com/gokcehan/lf/wiki/Icons

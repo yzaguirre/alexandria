@@ -1,23 +1,26 @@
-https://termshark.io/
+A terminal UI for tshark, inspired by Wireshark
+https://termshark.io
 https://github.com/gcla/termshark
 https://news.ycombinator.com/item?id=19725290
+See wireshark.txt
 Compile installation
 	go get github.com/gcla/termshark/cmd/termshark
 Download binaries
-	wget https://github.com/gcla/termshark/releases/download/v2.2.0/termshark_2.2.0_linux_x64.tar.gz
-	wget https://github.com/gcla/termshark/releases/download/v2.2.0/checksums.txt
-	wget https://github.com/gcla/termshark/releases/download/v2.2.0/checksums.txt.sig
-	sha256sum --ignore-missing -c checksums.txt
+	wget https://github.com/gcla/termshark/releases/download/v2.3.0/termshark_2.3.0_linux_x64.tar.gz
+	wget https://github.com/gcla/termshark/releases/download/v2.3.0/checksums.txt
+	wget https://github.com/gcla/termshark/releases/download/v2.3.0/checksums.txt.sig
 	gpg --verify checksums.txt.sig checksums.txt
-	tar xf termshark_2.2.0_linux_x64.tar.gz
-	mv termshark_2.2.0_linux_x64/termshark /usr/local/bin
+	sha256sum --ignore-missing -c checksums.txt
+	tar xf termshark_2.3.0_linux_x64.tar.gz -C /usr/local/bin --strip-components=1
 Termux
 	apt install root-repo
 	apt install tshark
-	wget https://github.com/gcla/termshark/releases/download/v2.2.0/termshark_2.2.0_linux_arm64.tar.gz
-	tar xf termshark_2.2.0_linux_arm64.tar.gz
-	scp termshark_2.2.0_linux_arm64/termshark phone:bin
-
+	wget https://github.com/gcla/termshark/releases/download/v2.3.0/termshark_2.3.0_linux_arm64.tar.gz
+	tar xf termshark_2.3.0_linux_arm64.tar.gz
+	scp termshark_2.3.0_linux_arm64/termshark phone:bin
+Windows
+	wget https://github.com/gcla/termshark/releases/download/v2.3.0/termshark_2.3.0_windows_x64.zip
+	7z e -oC:\Users\dyzag\bin termshark_2.3.0_windows_x64.zip
 Inspect a local pcap:
 	termshark -r test.pcap
 

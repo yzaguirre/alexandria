@@ -1,0 +1,5 @@
+https://x0.at
+https://github.com/Rouji/single_php_filehost
+https://www.reddit.com/r/commandline/comments/tcqll6/x0at_sshable_netcatable_curlable_pastebin/
+You can upload files to this site via a simple HTTP POST, e.g. using curl
+	curl -F "file=@/path/to/your/file.jpg" https://x0.at/

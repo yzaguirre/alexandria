@@ -56,8 +56,19 @@ A very minimal GUI app that can write compressed disk images to USB drives
 https://gitlab.com/bztsrc/usbimager
 https://news.ycombinator.com/item?id=28904309
 
-https://www.balena.io/etcher/
 Flash OS images to SD cards & USB drives, safely and easily.
+https://www.balena.io/etcher/
+https://github.com/balena-io/etcher
+curl -1sLf \
+   'https://dl.cloudsmith.io/public/balena/etcher/setup.deb.sh' \
+   | sudo -E bash
+Update and install:
+	apt update
+	apt install balena-etcher-electron
+Windows
+	choco install etcher
+Homebrew
+	brew install balenaetcher
 
 woeusb on Linux
 Works for Windows ISO
@@ -66,4 +77,4 @@ https://github.com/WoeUSB/WoeUSB-ng
 	sudo -H pip3 install WoeUSB-ng
 
 rufus on Windows
-See ~/rufus.txt
+See rufus.txt

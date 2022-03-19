@@ -1,9 +1,9 @@
 http://shutter-project.org
 https://github.com/shutter-project/shutter
 	apt install libnumber-bytes-human-perl libglib-object-introspection-perl libcarp-always-perl
-	wget https://github.com/shutter-project/shutter/archive/refs/tags/v0.97.tar.gz
-	tar xf v0.97.tar.gz
-	cd shutter-0.97
+	wget https://github.com/shutter-project/shutter/archive/refs/tags/v0.99.2.tar.gz
+	tar xf v0.99.2.tar.gz
+	cd shutter-0.99.2
 	make install
 Uninstall
 	make uninstall

@@ -1,0 +1,10 @@
+GRV is a terminal interface for viewing git repositories
+https://github.com/rgburke/grv
+	wget -O grv https://github.com/rgburke/grv/releases/download/v0.3.2/grv_v0.3.2_linux64
+	chmod +x ./grv
+	mv grv /usr/local/bin
+Homebrew
+	brew install grv
+
+Usage
+	grv -repoFilePath /path/to/repo

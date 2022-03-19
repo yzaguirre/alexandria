@@ -1,0 +1,23 @@
+A cross-platform TUI database management tool written in Rust
+https://github.com/TaKO8Ki/gobang
+	wget https://github.com/TaKO8Ki/gobang/releases/download/v0.1.0-alpha.5/gobang-0.1.0-alpha.5-x86_64-unknown-linux-musl.tar.gz
+	tar xf gobang-0.1.0-alpha.5-x86_64-unknown-linux-musl.tar.gz -C /usr/local/bin --strip-components=1 gobang-0.1.0-alpha.5-x86_64-unknown-linux-musl/gobang
+Windows
+	scoop install gobang
+Binary
+	wget https://github.com/TaKO8Ki/gobang/releases/download/v0.1.0-alpha.5/gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc.zip
+	7z e -oC:\Users\dyzag\bin gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc.zip gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc/gobang.exe
+Homebrew
+	brew install tako8ki/tap/gobang
+
+Configuration at
+https://github.com/TaKO8Ki/gobang#Configuration
+macOS
+$HOME/.config/gobang/config.toml
+Linux
+$HOME/.config/gobang/config.toml
+Windows
+%APPDATA%/gobang/config.toml
+
+Usage
+	gobang

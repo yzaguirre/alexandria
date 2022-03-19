@@ -18,6 +18,11 @@ install gnome3 http://www.filiwiese.com/installing-gnome-on-ubuntu-12-04-precise
 
 	apt install terminator geany vim openssh-client synaptic alien nmap tmux mat coreutils ncdu calcurse
 
+https://launchpad.net/intltool
+	apt install intltool
+Se instalarán los siguientes paquetes NUEVOS:                                                                                                                  
+  autoconf automake autotools-dev intltool libsigsegv2 m4
+
 Generar una lista de programas instalados en Ubuntu
     dpkg --get-selections | grep -v deinstall > ubuntu-files
 tips
@@ -25,3 +30,7 @@ Instalar los mismos programas en un nuevo ubuntu
     sudo apt update
     sudo apt dist-upgrade
     dpkg --set-selections < ubuntu-files
+
+no version information available /usr/local/lib/libselinux.so.1
+https://superuser.com/questions/735736/no-version-information-available-required-by-usr-bin-ssh
+	mv /usr/local/lib/libselinux.so.1 /tmp

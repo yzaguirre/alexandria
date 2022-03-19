@@ -1,28 +1,28 @@
 https://orhun.dev/blog/introducing-gpg-tui/
 https://github.com/orhun/gpg-tui
 https://news.ycombinator.com/item?id=27329598
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.6.1/gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.6.1/gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz.sha512
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.6.1/gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz.sig
-	sha512sum -c --ignore-missing gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz.sha512
-	gpg --verify gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz.sig
-	tar xf gpg-tui-0.6.1-x86_64-unknown-linux-gnu.tar.gz
-	mv gpg-tui-0.6.1/gpg-tui /usr/local/bin
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sha512
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sig
+	sha512sum -c --ignore-missing gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sha512
+	gpg --verify gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sig
+	tar xf gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz
+	mv gpg-tui-0.8.3/gpg-tui /usr/local/bin
 Terminal completions
-	sudo mv -v gpg-tui-0.6.1/completions/gpg-tui.bash /usr/share/bash-completion/completions/gpg-tui
-	sudo mv -v gpg-tui-0.6.1/completions/gpg-tui.fish /usr/share/fish/completions
-	sudo mv -v gpg-tui-0.6.1/completions/_gpg-tui /usr/share/zsh/vendor-completions
+	sudo mv -v gpg-tui-0.8.3/completions/gpg-tui.bash /usr/share/bash-completion/completions/gpg-tui
+	sudo mv -v gpg-tui-0.8.3/completions/gpg-tui.fish /usr/share/fish/completions
+	sudo mv -v gpg-tui-0.8.3/completions/_gpg-tui /usr/share/zsh/vendor-completions
 Instruction manual
-	sudo mv gpg-tui-0.6.1/man/gpg-tui.1 /usr/share/man/man1
-
+	sudo mv gpg-tui-0.8.3/man/gpg-tui.1 /usr/share/man/man1
 Rust
 	cargo install gpg-tui
-
 Compile
 Clone the repository
 	git clone https://github.com/orhun/gpg-tui.git && cd gpg-tui/
 Build and install
 	cargo install --root "$HOME/.cargo" --path .
+Homebrew
+	brew install gpg-tui
 
 Usage
 	gpg-tui [FLAGS] [OPTIONS]

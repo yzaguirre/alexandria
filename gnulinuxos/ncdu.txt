@@ -20,7 +20,7 @@ Extract
 	tar xf ncdu-2.1.tar.gz
 	cd ncdu-2.1
 	./configure
-	make
+	make -j12
 	make install
 /bin/mkdir -p '/usr/local/bin'
 /usr/bin/install -c ncdu '/usr/local/bin'

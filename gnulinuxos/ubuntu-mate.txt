@@ -1,16 +1,35 @@
 https://ubuntu-mate.org
-	apt remove ubuntu-web-launchers
-	apt remove whoopsie
+	gpg --verify SHA256SUMS.gpg SHA256SUMS
+	sha256sum -c --ignore-missing SHA256SUMS
 Live USB
+https://ubuntu-mate.org/faq/usb-image/#gnulinux
+	apt install gnome-disk-utility
 https://ubuntu-mate.community/t/create-a-bootable-usb-stick-from-an-iso/12335
 	sudo dd if=/home/username/Downloads/example.iso of=/dev/sdc bs=1M status=progress conv=fdatasync;sudo eject /dev/sdc
-see ~/rufus.txt
+see ../rufus.txt
 https://ubuntu-mate.community/t/install-ubuntu-mate-using-something-else-method/651/5
 
 Software
-	apt install synaptic shutter gparted gpart xsane hplip-gui deluge pepperflashplugin-nonfree bleachbit libreoffice me-tv kaffeine linux-firmware-nonfree devede handbrake libxine2-all-plugins transcode ubuntu-restricted-extras vamps videotrans playonlinux mono-complete p7zip-rar winbind kshisen amarok kontact skype faac flac chameleon-cursor-theme clamtk mate-desktop-environment-extras alien k3b chromium-browser browser-plugin-freshplayer-pepperflash nvidia-352
+	apt install fish zsh guake git terminator pinentry-curses keepassxc gnumeric fd-find ripgrep exa meld kdeconnect vlc openssl vim zulucrypt-cli net-tools avahi-discover openssh-server ncat nmap cryptsetup intltool
+	apt install python3-pip curl
+	sudo -H pip install -U litecli yt-dlp httpie ddgr
+Temporal install
+	apt install geany geany-plugins
+	apt remove chromium-codecs-ffmpeg-extra gstreamer1.0-vaapi libgstreamer-plugins-bad1.0-0 geany-common libctpl2 libgtkspell3-3-0 liblua5.1-0
+	apt remove whoopsie
+Optional
+	apt install mate-desktop-environment-extras ubuntu-restricted-extras
+	apt install linux-firmware-nonfree handbrake transcode vamps videotrans p7zip-rar winbind faac flac chameleon-cursor-theme clamtk alien k3b hplip-gui xsane gparted gpart deluge evince
 # startup scripts
 geany
 terminator
 keepassxc
 guake
+See ../ide/zim.txt
+../shutter.txt
+../ide/geany.txt
+../chromium/chromium.txt
+../sync/syncthing.txt
+../scm/git.txt
+../flameshot.txt
+../gnulinuxos/ncdu.txt

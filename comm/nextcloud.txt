@@ -14,18 +14,24 @@ After adding the PPA to your system as described below, the client can be instal
 - Ubuntu Mint with Nemo: sudo apt install nemo-nextcloud
 - Other, or if you don't want/need the file manager integration:
 	apt install nextcloud-desktop nextcloud-desktop-cmd
+Se instalarán los siguientes paquetes NUEVOS:
+  libcloudproviders0 libjs-sphinxdoc libjs-underscore libminizip1 libnextcloudsync0 libqt5keychain1 libqt5positioning5 libqt5webchannel5 libqt5webengine-data
+  libqt5webenginecore5 libqt5webenginewidgets5 libqt5websockets5 libre2-9 nextcloud-desktop nextcloud-desktop-cmd nextcloud-desktop-common
+  nextcloud-desktop-doc nextcloud-desktop-l10n
+Paquetes sugeridos:                                                                                                                                    [74/712]
+  dolphin-nextcloud nautilus-nextcloud nemo-nextcloud caja-nextcloud
 AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2-x86_64.AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2-x86_64.AppImage.asc
-	gpg --verify Nextcloud-3.4.2-x86_64.AppImage.asc
-	chmod u+x Nextcloud-3.4.2-x86_64.AppImage
-	mv Nextcloud-3.4.2-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.4.4-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.4.4-x86_64.AppImage
+	mv Nextcloud-3.4.4-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 MacOS
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2.pkg
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.2/Nextcloud-3.4.2.pkg.asc
-	gpg --verify Nextcloud-3.4.2.pkg.asc
-	open Nextcloud-3.4.2.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4.pkg.asc
+	gpg --verify Nextcloud-3.4.4.pkg.asc
+	open Nextcloud-3.4.4.pkg
 	ln -s /Applications/nextcloud.app/Contents/MacOS/nextcloudcmd /usr/local/bin/nextcloudcmd
 Homebrew
 	brew install nextcloud

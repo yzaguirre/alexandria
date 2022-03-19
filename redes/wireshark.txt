@@ -18,6 +18,7 @@ Termux
 Windows
 	winget install WiresharkFoundation.Wireshark
 	choco install wireshark
+Installed at C:\Program Files\Wireshark
 
 http://securityblog.gr/1195/run-wireshark-as-a-user-rather-than-root-ubuntu/
 	chgrp adm /usr/bin/dumpcap

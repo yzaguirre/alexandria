@@ -1,4 +1,4 @@
-https://www.zim-wiki.org/
+https://www.zim-wiki.org
 	apt install zim
 DEB
 	wget https://zim-wiki.org/downloads/zim_0.74.3_all.deb
@@ -12,4 +12,3 @@ Windows
 Styles
 https://superuser.com/questions/1260661/change-font-color-of-headers-in-zim-wiki
 C:\Program Files\Zim Desktop Wiki\share\zim
-
