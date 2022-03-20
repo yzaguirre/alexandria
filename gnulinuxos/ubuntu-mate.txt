@@ -11,7 +11,7 @@ https://ubuntu-mate.community/t/install-ubuntu-mate-using-something-else-method/
 
 Software
 	apt install fish zsh guake git terminator pinentry-curses keepassxc gnumeric fd-find ripgrep exa meld kdeconnect vlc openssl vim zulucrypt-cli net-tools avahi-discover openssh-server ncat nmap cryptsetup intltool
-	apt install python3-pip curl
+	apt install python3-pip curl xclip slurm
 	sudo -H pip install -U litecli yt-dlp httpie ddgr
 Temporal install
 	apt install geany geany-plugins

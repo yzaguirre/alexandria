@@ -1,0 +1,8 @@
+Pokete - Grey Edition
+A terminal based Pokemon like game
+https://lxgr-linux.github.io/pokete/
+https://github.com/lxgr-linux/pokete
+https://news.ycombinator.com/item?id=30732942
+	sudo -H pip install -U scrap_engine
+	git clone https://github.com/lxgr-linux/pokete.git
+	./pokete/pokete.py

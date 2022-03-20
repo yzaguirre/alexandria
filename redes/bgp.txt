@@ -1,0 +1,32 @@
+BGP Implemented in Go
+https://github.com/osrg/gobgp
+https://news.ycombinator.com/item?id=30734712
+	wget https://github.com/osrg/gobgp/releases/download/v3.0.0/gobgp_3.0.0_linux_amd64.tar.gz
+	wget https://github.com/osrg/gobgp/releases/download/v3.0.0/gobgp_3.0.0_checksums.txt
+	sha256sum -c --ignore-missing gobgp_3.0.0_checksums.txt
+	tar xf gobgp_3.0.0_linux_amd64.tar.gz -C /usr/local/bin gobgp gobgpd
+Raspberry Pi armv6
+	wget https://github.com/osrg/gobgp/releases/download/v3.0.0/gobgp_3.0.0_linux_armv6.tar.gz
+	tar xf gobgp_3.0.0_linux_armv6.tar.gz -C /usr/local/bin gobgp gobgpd
+
+A modern BGP server implementation
+https://github.com/net-control-plane/bgp
+
+BGP implemented in the Rust Programming Language
+https://github.com/osrg/rustybgp
+	git clone https://github.com/osrg/rustybgp.git
+	cd rustybgp
+	docker run --rm -it -v "$(pwd)":/home/rust/src ekidd/rust-musl-builder cargo build --release
+	ls -lh target/x86_64-unknown-linux-musl/release/rustybgpd
+-rwxr-xr-x 2 ubuntu ubuntu 12M May 10 14:52 target/x86_64-unknown-linux-musl/release/rustybgpd
+RustyBGP supports the gRPC APIs same as GoBGP;
+your code to manage GoBGP via the APIs should work with RustyBGP.
+If you need CLI, GoBGP CLI tool allows you to manage RustyBGP.
+RustyBGP also supports the same configuration file format as GoBGP
+(only toml for now).
+
+SCION Internet Architecture
+SCALABILITY, CONTROL, AND ISOLATION ON NEXT-GENERATION NETWORKS.
+https://scion-architecture.net
+https://github.com/scionproto/scion
+https://scion.docs.anapaya.net/en/latest/
