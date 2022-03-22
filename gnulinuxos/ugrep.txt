@@ -1,0 +1,37 @@
+🔍NEW ugrep v3.7: ultra fast grep with interactive TUI,
+fuzzy search, boolean queries, hexdumps and more:
+search file systems, source code, text, binary files,
+archives (cpio/tar/pax/zip),
+compressed files (gz/Z/bz2/lzma/xz/lz4/zstd),
+documents etc. A faster, user-friendly
+and compatible grep replacement.
+https://github.com/Genivia/ugrep
+https://github.com/Genivia/ugrep/wiki
+https://github.com/Genivia/ugrep#table-of-contents
+https://www.reddit.com/r/commandline/comments/tdfk4i/ugrep_375_released_announcing_the_google_ospb/
+	apt install ugrep
+	vim ~/.bash_aliases
+alias uq='ug -Q'
+Windows
+	choco install ugrep
+	copy C:\ProgramData\chocolatey\bin\ugrep.exe C:\ProgramData\chocolatey\bin\ug.exe
+	scoop install ugrep
+Homebrew
+	brew install ugrep
+
+Usage
+Search with basic regular expressions (BRE)
+	ugrep -G "apt install"
+	ugrep "apt install"
+Option -t searches files by file type and predefined
+source code search patterns can be specified with option -f:
+	ug -r -C -n -tjava -fjava/methods
+Option -z searches archives (cpio, pax, tar, zip) and compressed files
+and tarballs (zip, gz, bz2, xz, lzma, Z, lz4, zstd):
+	ug -z -n -tjava,shell,batch 'Hello World!' archive.tgz
+Options -U, -W and -X search binary files, displayed as hexdumps:
+	ug -U -X -C '\xca\xfe\xba\xbe' Hello.class
+Option --filter searches pdf, office documents, and more:
+	ug --filter='pdf:pdftotext % -' -iw 'consectetur' *.pdf
+Option -Z searches for fuzzy (approximate) matches within an optionally specified max error:
+	ug -Z -i -n example data/words

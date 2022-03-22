@@ -42,7 +42,7 @@ C:\Program Files\Go\bin
 
 Usage
 	go version
-	
+
 Test your installation
 	vim hello.go
 package main

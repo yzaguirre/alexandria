@@ -1,13 +1,13 @@
 https://www.schemacrawler.com
 https://github.com/schemacrawler/SchemaCrawler
 https://stackoverflow.com/questions/59654755/how-to-generate-sqlite-entity-relationship-diagram-from-database-file
-	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.11/schemacrawler-16.16.11-distribution.zip
-	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.11/schemacrawler-16.16.11-distribution.zip.SHA-512
-	sha512sum schemacrawler-16.16.11-distribution.zip
-	cat schemacrawler-16.16.11-distribution.zip.SHA-512
-	7z x -o/opt schemacrawler-16.16.11-distribution.zip
-Add /opt/schemacrawler-16.16.11-distribution/_schemacrawler/bin to PATH environment variable
-	chown david:david -R /opt/schemacrawler-16.16.11-distribution
+	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.12/schemacrawler-16.16.12-distribution.zip
+	wget https://github.com/schemacrawler/SchemaCrawler/releases/download/v16.16.12/schemacrawler-16.16.12-distribution.zip.SHA-512
+	sha512sum schemacrawler-16.16.12-distribution.zip
+	cat schemacrawler-16.16.12-distribution.zip.SHA-512
+	7z x -o/opt schemacrawler-16.16.12-distribution.zip
+Add /opt/schemacrawler-16.16.12-distribution/_schemacrawler/bin to PATH environment variable
+	chown david:david -R /opt/schemacrawler-16.16.12-distribution
 Windows
 	winget install schemacrawler.schemacrawler
 	choco install schemacrawler

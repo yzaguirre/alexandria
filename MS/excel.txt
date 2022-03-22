@@ -35,3 +35,6 @@ Command line interface for reading spreadsheets
 https://github.com/Lauriat/texel
 https://www.reddit.com/r/commandline/comments/smuk08/texel_command_line_interface_for_reading/
 	sudo -H pip install -U texel
+
+https://mcpmag.com/articles/2014/06/10/exe-alias-in-powershell.aspx
+	set-alias xl "C:\Programfiles\Microsoft Office\Office16\Excel.exe" -option ReadOnly

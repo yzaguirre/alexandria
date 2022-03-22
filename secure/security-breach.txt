@@ -26,3 +26,8 @@ https://news.ycombinator.com/item?id=30677471
 More than 6k credentials were exposed in leaked Samsung source code
 https://www.reddit.com/r/programming/comments/tfm9q1/more_than_6k_credentials_were_exposed_in_leaked/
 https://www.youtube.com/watch?v=17JlTJ8BDsE
+
+Node-IPC supply-chain attack
+https://www.reddit.com/r/programming/comments/tinsq7/unity_ships_nodeipc_vulnerability/
+Popular JS Package node-ipc Adds Malicious "Protest-ware" On Purpose
+https://www.youtube.com/watch?v=2M-L0yPbtPE

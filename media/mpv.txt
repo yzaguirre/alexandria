@@ -1,8 +1,11 @@
+https://mpv.io
 https://mpv.io/installation
 https://github.com/mpv-player/mpv
 	apt install rst2pdf
 	apt install libgnutls28-dev libopus-dev libsmbclient-dev
-MacOS
+Windows
+	choco install mpv
+Homebrew
 	brew install mpv
 https://github.com/mpv-player/mpv-build
 	git clone https://github.com/mpv-player/mpv-build.git

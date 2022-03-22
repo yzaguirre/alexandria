@@ -54,13 +54,17 @@ http://www.codealias.info/technotes/the_tshark_capture_and_filter_example_page
 	tshark -f "HTTP" -i eth0 -w capture.cap
 
 Capture firefox TLS traffic 
+https://www.trickster.dev/post/decrypting-your-own-https-traffic-with-wireshark/
 https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/
 https://news.ycombinator.com/item?id=9040876
 Mount memory partition
 	mkdir /mnt/memo
 	mount -t tmpfs -o size=10M tmpfs /mnt/memo
 	export SSLKEYLOGFILE=/mnt/memo/sslkeylogs.log
+On Windows create SSLKEYLOGFILE environment variable
+	SETX.exe SSLKEYLOGFILE C:\Users\dyzag\.sslkeyfile
 	firefox-dev &
 	wireshark &
 In wireshark do
-edit -> Preferences -> Protocols -> SSL
+edit -> Preferences -> Protocols -> TLS
+and put the value of SSLKEYLOGFILE into "(Pre-)Master Secret Log filename".

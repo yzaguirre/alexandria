@@ -1,0 +1,34 @@
+Command-line tool to manage PATH environment variable
+https://github.com/ssg/path
+https://twitter.com/esesci/status/1505605794816962562
+See dotnet.txt
+	git clone https://github.com/ssg/path.git
+	cd path
+Edit project
+	vim Path\Path.csproj
+<ToolCommandName>cpath</ToolCommandName>
+	dotnet pack
+	cd .\Path\bin\
+	dotnet tool install -g --add-source ./Debug Path --version 0.1.2-alpha
+Or download package
+	dotnet tool install -g --add-source ./package.nupkg Path --version 0.1.2-alpha
+
+Usage
+Add a directory to user PATH
+	path add C:\some\new\path
+Want to add it to the machine-level PATH? Run this on an elevated prompt instead
+	path add C:\some\new\path --global
+Want to remove all instances of a directory from a PATH with a single command
+	path remove C:\some\existing\path\
+Directories in PATH are searched in the order of addition. Want to move a directory higher up in the PATH? This command will move the directory to the beginning of the PATH:
+	path move C:\some\new\path top
+Want to move a directory after another directory?
+	path move C:\some\new\path after C:\Windows
+or before?
+	path move C:\som\new\path before C:\Windows
+Over time, PATH might get cluttered with empty, orphaned folders without any executables in them. Use "analyze" command to find them:
+	path analyze
+Analyze can also automatically fix the problems for you:
+	path analyze --fix
+You might be scared of what fix will do, so you can run the same fix command with the --whatif argument:
+	path analyze --fix --whatif

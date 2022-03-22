@@ -27,6 +27,14 @@ Binary
 	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/lsd.bash-completion
 	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/lsd.fish
 	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc.zip lsd-0.21.0-x86_64-pc-windows-msvc/autocomplete/_lsd
+PowerShell Alias
+	vim $PROFILE
+function List-LSD()
+{ 
+    lsd.exe --long
+}
+Set-Alias ll List-LSD
+
 Edit .bashrc
 source /c/Users/dyzag/AppData/Roaming/lsd/lsd.bash-completion
 Homebrew

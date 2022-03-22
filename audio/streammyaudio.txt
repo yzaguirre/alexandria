@@ -1,0 +1,19 @@
+Easily stream audio from any computer to the internet.
+https://streammyaudio.com
+https://schollz.com/blog/stream/
+https://github.com/schollz/streammyaudio
+https://www.reddit.com/r/programming/comments/tj0ero/stream_your_audio/
+	wget https://github.com/schollz/streammyaudio/releases/download/v0.2.1/streammyaudio_linux_amd64.zip
+	unzip streammyaudio_linux_amd64.zip -d /usr/local/bin streammyaudio
+Windows
+	wget https://github.com/schollz/streammyaudio/releases/download/v0.2.1/streammyaudio_windows_amd64.zip
+	7z x -oC:\Users\dyzag\bin streammyaudio_windows_amd64.zip streammyaudio.exe
+
+Usage
+	streammyaudio.exe
+Server mode
+	streammyaudio.exe -server
+Connect to custom server
+	streammyaudio.exe -cast-server http://computer.local:9222
+Send audio
+	ffmpeg -f alsa -i hw:0 -f mp3 - | curl -s -k -H "Transfer-Encoding: chunked" -X POST -T - "https://streamyouraudio.com/YOURSTATIONNAME.mp3?stream=true&advertise=true"

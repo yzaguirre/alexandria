@@ -1,2 +1,27 @@
+https://streamlink.github.io
 https://streamlink.github.io/install.html
-	sudo -H pip3 install streamlink
+	sudo -H pip install -U streamlink
+Windows
+	winget install Streamlink.Streamlink
+	choco install streamlink
+Homebrew
+	brew install streamlink
+
+Configuration
+Linux
+${XDG_CONFIG_HOME:-${HOME}/.config}/streamlink/config
+MacOS
+${HOME}/Library/Application Support/streamlink/config
+Windows
+%APPDATA%\streamlink\config
+
+Example configuration file
+# Player options
+player=mpv --cache 2048
+player-no-close
+
+player="C:\mpv-x86_64\mpv"
+
+Usage
+	streamlink twitch.tv/day9tv
+	streamlink hls://file://C:/hls/playlist.m3u8

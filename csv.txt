@@ -111,6 +111,7 @@ Windows
 	choco install miller
 Usage
 	mlr --csv sort -f name input.csv
+	mlr --icsv --opprint cat input.csv
 
 tsv-utils
 https://ebay.github.io/tsv-utils/

@@ -37,3 +37,11 @@ https://stackoverflow.com/questions/1192476/format-date-and-time-in-a-windows-ba
 https://devblogs.microsoft.com/oldnewthing/20120731-00/?p=7003
 https://oscarliang.com/change-date-ouput-format-windows-batch-script/
 for /f %%a in ('powershell -Command "Get-Date -format yyyy-MM-dd_HH-mm-ss"') do set FECHA=%%a
+
+Change environment variables
+https://ss64.com/nt/setx.html
+	SETX.exe SSLKEYLOGFILE C:\Users\dyzag\.sslkeyfile
+See ../path.txt
+Because SETX writes variables to the master environment in the registry,
+edits will only take effect when a new command window
+is opened - They do not affect the current CMD or PowerShell session.
