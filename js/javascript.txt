@@ -58,6 +58,14 @@ https://dev.to/johnpaulada/synchronous-fetch-with-asyncawait
 Tips For Using Async/Await in JavaScript
 https://www.youtube.com/watch?v=_9vgd9XKlDQ
 
+Wrong
+const user = await getUser();
+const products = await getProducts();
+
+const [user, products] = await Promise.all([
+	getUser(), getProducts()
+]);
+
 Float
 https://stackoverflow.com/questions/34057595/allow-2-decimal-places-in-input-type-number
 Step 1: Hook your HTML number input box to an onchange event

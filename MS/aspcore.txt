@@ -31,6 +31,8 @@ Authentication. See ../secure/jwt.txt
 https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/
 Get username
 https://stackoverflow.com/questions/21616951/get-the-current-user-within-an-apicontroller-action-without-passing-the-userid
+User.Identity.Name
+WindowsIdentity
 HttpContext.Current.Request.LogonUserIdentity.Name
 ASP.NET Core Web API Authentication and Authorization with JWT (Json Web Token)
 https://www.youtube.com/watch?v=kM1fPt1BcLc

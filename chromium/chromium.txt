@@ -33,6 +33,7 @@ Download .deb
 	sudo dpkg -i chromium_90.0.4430.93_linuxmint1_debbie_amd64.deb
 Windows
 	choco install chromium
+Installed at C:\Program Files\Chromium\Application
 
 Use Debian package
 Let's Install Chromium in Ubuntu Without Snap

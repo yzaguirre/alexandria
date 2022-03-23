@@ -1,4 +1,5 @@
 gpg-agent
+See gpg.txt
 Change time-to-ilve of the cache
 https://wiki.archlinux.org/index.php/GnuPG#gpg-agent
 	echo use-agent >> ~/.gnupg/gpg.conf
@@ -16,3 +17,9 @@ http://www.fsij.org/doc-gnuk/gpg-settings.html
 Deactivate seahorse-agent and gnome-keyring
 	gconftool-2 --type bool --set /apps/gnome-keyring/daemon-components/ssh false
 Edit the file /etc/X11/Xsession.options and comment out use-ssh-agent line.
+
+Autotype compat
+https://town-and-cooking.com/usage-of-pinentry-with-keepass2-for-gpg-mail-encryption
+	vim ~/.gnupg/gpg-agent.conf 
+or	vim %APPDATA%\gnupg\gpg-agent.conf
+no-grab

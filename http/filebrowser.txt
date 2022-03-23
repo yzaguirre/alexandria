@@ -13,7 +13,7 @@ Termux
 	tar xf linux-arm64-filebrowser.tar.gz -C /usr/local/bin filebrowser
 Windows
 	wget https://github.com/filebrowser/filebrowser/releases/download/v2.21.1/windows-amd64-filebrowser.zip
-	unzip windows-amd64-filebrowser.zip -d ~/bin filebrowser.exe
+	7z x -oC:\Users\dyzag\bin windows-amd64-filebrowser.zip filebrowser.exe
 Or
 	iwr -useb https://raw.githubusercontent.com/filebrowser/get/master/get.ps1 | iex
 Open port 8080

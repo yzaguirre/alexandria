@@ -1,6 +1,7 @@
 https://keepassxc.org
 https://github.com/keepassxreboot/keepassxc/blob/develop/INSTALL.md
 https://github.com/keepassxreboot/keepassxc/wiki/Building-KeePassXC
+https://keepassxc.org/blog/2022-03-21-2.7.0-released/
 https://keepassxc.org/blog/2021-06-11-2.6.6-released/
 https://keepassxc.org/blog/2021-02-07-2.6.5-released/
 https://keepassxc.org/blog/2019-06-11-2.6.6-released/
@@ -8,11 +9,11 @@ https://news.ycombinator.com/item?id=20164051
 	apt install qttools5-dev g++ cmake libgcrypt11-dev libsodium-dev libargon2-0-dev libcurl4-openssl-dev libqt5x11extras5-dev libxi-dev libxtst-dev qtbase5-dev qttools5-dev-tools libgcrypt20-dev
 	git clone https://github.com/keepassxreboot/keepassxc.git
 	cd keepassxc
-	git checkout 2.6.6
+	git checkout 2.7.0
 	mkdir build
 	cd build
 	cmake -DWITH_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_BUILD_TYPE=Release -DWITH_XC_HTTP=ON -DWITH_TESTS=OFF ..
-	make -j 2
+	make -j12
 	sudo make install
 Install in /usr/local/share/keepassxc/
 Ubuntu PPA
@@ -24,29 +25,31 @@ libquazip5-1 libykpers-1-1 libyubikey-udev libyubikey0 libzxcvbn0
 AppImage
 https://news.ycombinator.com/item?id=23768819
 	apt install xdotool
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.AppImage
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.AppImage.DIGEST
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.AppImage.sig
-	gpg --verify KeePassXC-2.6.6-x86_64.AppImage.sig KeePassXC-2.6.6-x86_64.AppImage
-	sha256sum -c KeePassXC-2.6.6-x86_64.AppImage.DIGEST
-	chmod u+x KeePassXC-2.6.6-x86_64.AppImage
-	mv KeePassXC-2.6.6-x86_64.AppImage ~/appimage
-	ln -s ~/appimage/KeePassXC-2.6.6-x86_64.AppImage /usr/local/bin/keepassxc
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.AppImage
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.AppImage.DIGEST
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.AppImage.sig
+	gpg --verify KeePassXC-2.7.0-x86_64.AppImage.sig KeePassXC-2.7.0-x86_64.AppImage
+	sha256sum -c KeePassXC-2.7.0-x86_64.AppImage.DIGEST
+	chmod u+x KeePassXC-2.7.0-x86_64.AppImage
+	mv KeePassXC-2.7.0-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/KeePassXC-2.7.0-x86_64.AppImage /usr/local/bin/keepassxc
 Windows
 	winget install KeePassXCTeam.KeePassXC
+	choco install keepassxc
 Installer
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi.sig
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-Win64.msi.DIGEST
-	sha256sum.exe -c --ignore-missing KeePassXC-2.6.6-Win64.msi.DIGEST
-	gpg --verify KeePassXC-2.6.6-Win64.msi.sig
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-Win64.msi
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-Win64.msi.sig
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-Win64.msi.DIGEST
+	sha256sum.exe -c --ignore-missing KeePassXC-2.7.0-Win64.msi.DIGEST
+	gpg --verify KeePassXC-2.7.0-Win64.msi.sig
+	start KeePassXC-2.7.0-Win64.msi
 Add C:\Program Files\KeePassXC to PATH
 MacOS
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.dmg
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.dmg.sig
-	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.6.6/KeePassXC-2.6.6-x86_64.dmg.DIGEST
-	gpg --verify KeePassXC-2.6.6-x86_64.dmg.sig
-	shasum -a 256 -c KeePassXC-2.6.6-x86_64.dmg.DIGEST
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.dmg
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.dmg.sig
+	wget https://github.com/keepassxreboot/keepassxc/releases/download/2.7.0/KeePassXC-2.7.0-x86_64.dmg.DIGEST
+	gpg --verify KeePassXC-2.7.0-x86_64.dmg.sig
+	shasum -a 256 -c KeePassXC-2.7.0-x86_64.dmg.DIGEST
 Homebrew
 	brew install --cask keepassxc
 CLI
@@ -61,9 +64,19 @@ Show password
 Lock databases
 	keepassxc --lock
 
-Attachments, coming soon
+Attachments
+https://github.com/keepassxreboot/keepassxc/blob/develop/docs/man/keepassxc-cli.1.adoc#commands
 https://github.com/keepassxreboot/keepassxc/pull/5538
-	keepassxc-cli attachment-export mysafe.kdbx "token" > token.json
+Exports the content of an attachment to a specified file.
+Use --stdout option to instead output the contents of the attachment to stdout.
+attachment-export [options] <database> <entry> <attachment_name> <export_file>
+	keepassxc-cli attachment-export mysafe.kdbx GMail "token" token.json
+Imports the attachment into an entry.
+An existing attachment with the same name may be overwritten
+if the -f option is specified.
+attachment-import [options] <database> <entry> <attachment_name> <import_file>
+Removes the named attachment from an entry.
+attachment-rm <database> <entry> <attachment_name>
 
 KeePassXC Browser Extension
 https://github.com/keepassxreboot/keepassxc-browser

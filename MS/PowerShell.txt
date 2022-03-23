@@ -25,9 +25,10 @@ https://www.youtube.com/watch?v=bWw7f5yVvGQ
 Binary
 	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.2/PowerShell-7.2.2-win-x64.msi
 	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.2/hashes.sha256
+	& 'C:\Program Files\Git\bin\bash.exe'
 	dos2unix hashes.sha256
 	sha256sum -c --ignore-missing hashes.sha256
-	explorer.exe PowerShell-7.2.2-win-x64.msi
+	start PowerShell-7.2.2-win-x64.msi
 Installed at C:\Program Files\PowerShell\7
 
 Usage
@@ -69,6 +70,8 @@ Set clipboard
 	scb
 
 Load scripts
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.2
+Import-Module -Name c:\ps-test\modules\test.ps1
 https://www.donnfelker.com/loading-powershell-profiles-from-other-script-files/
 $fileContents = [string]::join([environment]::newline, (get-content -path C:\Users\dyzag\Documents\PowerShell\completion.ps1))
 invoke-expression $fileContents
@@ -117,3 +120,11 @@ Clean DNS cache
 	Clear-DnsClientCache
 Replaces
 	ipconfig /flushdns
+
+Date
+	date
+https://ss64.com/ps/get-date.html
+	Get-Date
+https://ss64.com/ps/syntax-dateformats.html
+	Get-Date -format yyyy-MM-dd_HH.mm.ss
+2019-02-20_15.33.17
