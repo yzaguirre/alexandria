@@ -1,3 +1,6 @@
+https://reactnative.dev/docs/flatlist
+See sectionlist.txt
+
 Loading and pagination
 https://aboutreact.com/react-native-flatlist-pagination-to-load-more-data-dynamically-infinite-list/
 https://reactnativecode.com/infinite-list-flatlist-pagination-load-more-data/

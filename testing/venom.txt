@@ -1,0 +1,10 @@
+🐍 Manage and run your integration tests with efficiency
+Venom run executors (script, HTTP Request, web, imap, etc... ) and assertions
+https://github.com/ovh/venom
+	curl https://github.com/ovh/venom/releases/download/v1.0.1/venom.linux-amd64 -L -o /usr/local/bin/venom
+	chmod +x /usr/local/bin/venom
+Windows
+	wget -O C:\Users\dyzag\bin\venom.exe https://github.com/ovh/venom/releases/download/v1.0.1/venom.windows-amd64
+
+Usage
+	venom -h

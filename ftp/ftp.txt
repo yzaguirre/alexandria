@@ -51,7 +51,10 @@ Descomentar DefaultRoot
 	# service proftpd restart
 
 lftp
-https://lftp.yar.ru/
+sophisticated command line file transfer program
+(ftp, http, sftp, fish, torrent)
+https://lftp.yar.ru
+https://github.com/lavv17/lftp
 https://lftp.yar.ru/lftp-man.html
 http://www.russbrooks.com/2010/11/19/lftp-cheetsheet
 https://www.commandlinefu.com/commands/using/lftp
@@ -59,6 +62,10 @@ https://linoxide.com/linux-how-to/lftp-commands/
 https://www.cyberciti.biz/faq/lftp-mirror-example/
 https://smyl.es/using-lftp-ftp-to-mirrortransfer-files-from-one-server-to-another/
 	apt install lftp
+Windows
+	choco install lftp
+
+Usage
 	lftp ftp://miki@192.168.122.65
 	lftp -u 'USER,PASS' SITE
 Mirror

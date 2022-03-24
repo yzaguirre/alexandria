@@ -1,0 +1,6 @@
+GEF (GDB Enhanced Features) - a modern experience for GDB
+with advanced debugging features for exploit developers & reverse engineers
+https://gef.readthedocs.io/en/master/
+https://github.com/hugsy/gef
+	wget -O ~/.gdbinit-gef.py -q https://gef.blah.cat/py
+	echo source ~/.gdbinit-gef.py >> ~/.gdbinit

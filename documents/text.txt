@@ -1,0 +1,19 @@
+Figlet
+http://www.figlet.org
+	apt install figlet
+Windows
+	lftp ftp://ftp.figlet.org/pub/figlet/program/windows/
+	get readme.txt
+	get fgwnbeta.zip
+	get figed.exe.gz
+	exit
+
+Figlet in Go
+https://github.com/lukesampson/figlet
+Windows
+	choco install figlet-go
+
+Usage
+figlet [ -lcrhR ] [ -f fontfile ]
+       [ -w outputwidth ] [ -m smushmode ]
+       [ message ]
