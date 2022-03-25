@@ -1,0 +1,16 @@
+bpython - A fancy curses interface to the Python interactive interpreter
+https://bpython-interpreter.org
+https://github.com/bpython/bpython
+	apt install bpython
+PIP
+	sudo -H pip install -U bpython
+Windows
+	pip install bpython windows-curses
+
+Configuration
+$XDG_CONFIG_HOME/bpython/config
+/home/david/.config/bpython/config
+
+Usage
+	bpython
+	bpython-curses.exe

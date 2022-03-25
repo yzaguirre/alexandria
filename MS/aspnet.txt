@@ -1,0 +1,10 @@
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
+[RoutePrefix("api/books")]
+public class BooksController : ApiController
+{
+    // GET /api/authors/1/books
+    [Route("~/api/authors/{authorId:int}/books")]
+    public IEnumerable<Book> GetByAuthor(int authorId) { ... }
+
+    // ...
+}

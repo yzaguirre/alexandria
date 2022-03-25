@@ -3,11 +3,19 @@ https://www.pgcli.com/launching-litecli.html
 https://news.ycombinator.com/item?id=18831470
 	sudo -H pip install -U litecli
 A config file is automatically created at first launch.
-~/.config/litecli/config
 %LOCALAPPDATA%\dbcli\litecli\config
+C:\Users\dyzag\AppData\Local\dbcli\litecli\config
+~/.config/litecli/config
 Homebrew
 	brew tap dbcli/tap
 	brew install litecli
 
 Usage
 	litecli <db_name>
+Output to stdout stream
+	litecli -e "SELECT * FROM MyTable LIMIT 3;" data.db | subl -
+Output to Table
+	litecli -te "SELECT * FROM MyTable LIMIT 3;" data.db | subl -
+Output to CSV
+See ../../csv.txt
+	litecli --csv -e "SELECT * FROM MyTable LIMIT 3;" data.db > MyTable.csv

@@ -1,0 +1,11 @@
+https://github.com/prompt-toolkit/python-prompt-toolkit
+	sudo -H pip install -U prompt-toolkit
+
+Amjith Ramanujam Awesome Command Line Tools PyCon 2017
+https://www.youtube.com/watch?v=hJhZhLg3obk
+
+from prompt_toolkit import prompt
+
+if __name__ == '__main__':
+    answer = prompt('Give me some input: ')
+    print('You said: %s' % answer)

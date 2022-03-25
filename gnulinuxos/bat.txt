@@ -1,20 +1,22 @@
-https://github.com/sharkdp/bat
 A cat(1) clone with wings.
-Install
+https://github.com/sharkdp/bat
 	apt install bat
+	mkdir -p ~/.local/bin
+	ln -s /usr/bin/batcat ~/.local/bin/bat
+DEB package
+	wget https://github.com/sharkdp/bat/releases/download/v0.20.0/bat_0.20.0_amd64.deb
+	dpkg -i bat_0.20.0_amd64.deb
 Windows
 	scoop install bat
 	choco install bat
-Alias
-	mkdir -p ~/.local/bin
-	ln -s /usr/bin/batcat ~/.local/bin/bat
-https://github.com/sharkdp/bat/releases
-	wget https://github.com/sharkdp/bat/releases/download/v0.20.0/bat_0.20.0_amd64.deb
-	dpkg -i bat_0.20.0_amd64.deb
+Homebrew
+	brew install bat
+
+Configuration
 	BATCONFIG=$(bat --config-file)
-	mkdir ~/.config/bat && cd ~/.config/bat
-	vim config
+%APPDATA%\bat\config
+C:\Users\dyzag\AppData\Roaming\bat\config
+/home/david/.config/bat/config
+
 --pager="less -RS"
 --wrap=never
-Windows
-C:\Users\dyzag\AppData\Roaming\bat\config

@@ -20,6 +20,7 @@ Part of the SQL Server SDK. https://www.microsoft.com/en-us/download/details.asp
 Config file at
 https://github.com/dbcli/mssql-cli/blob/master/mssqlcli/mssqlclirc
 %LOCALAPPDATA%\dbcli\mssqlcli\config
+C:\Users\dyzag\AppData\Local\dbcli\mssqlcli\config
 ~/.config/mssqlcli/config
 
 Disable telemetry collection by setting environment variable

@@ -1,3 +1,18 @@
+http://www.greenwoodsoftware.com/less/
+	apt install less
+Compile
+	wget http://www.greenwoodsoftware.com/less/less-590.tar.gz
+	wget http://www.greenwoodsoftware.com/less/less-590.sig
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xF153A7C833235259
+	gpg --verify less-590.sig less-590.tar.gz
+	tar xf less-590.tar.gz
+	cd less-590
+	autoconf configure.ac > configure2
+	chmod u+x configure2
+	./configure2
+	make -j12
+	make install
+
 https://superuser.com/questions/272818/how-to-turn-off-word-wrap-in-less#272826
 	less -S
 Git setup
