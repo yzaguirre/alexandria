@@ -1,3 +1,4 @@
+See keys.txt
 Smartcards
 https://www.reddit.com/r/homelab/comments/cuefc1/anyone_using_smartcards_in_their_lab_for_pkipiv/
 

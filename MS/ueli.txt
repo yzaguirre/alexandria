@@ -1,0 +1,5 @@
+Keystroke launcher for Windows and macOS
+https://ueli.app
+https://github.com/oliverschwendener/ueli
+See powertoys.txt
+	winget install OliverSchwendener.ueli

@@ -1,0 +1,5 @@
+A modern and privacy-friendly platform to establish your decentralized
+online identity
+See keys.txt
+https://keyoxide.org
+https://codeberg.org/keyoxide/keyoxide-web

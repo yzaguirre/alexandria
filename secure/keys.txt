@@ -1,3 +1,41 @@
-https://keys.pub/
-https://github.com/keys-pub
+https://keys.pub
+https://github.com/keys-pub/keys-ext
 https://news.ycombinator.com/item?id=22995792
+See keyoxide.txt
+	echo "deb https://storage.googleapis.com/aptly.keys.pub current main" \
+    | sudo tee -a /etc/apt/sources.list.d/keys.list
+	wget -qO - https://storage.googleapis.com/aptly.keys.pub/keys.asc | sudo apt-key add -
+	apt update
+	apt install keys
+Windows
+	choco install keys
+Command line utilities at 
+%USERPROFILE%\AppData\Local\Programs\keys\resources\bin
+C:\Users\dyzag\AppData\Local\Programs\keys\resources\bin
+	path add C:\Users\dyzag\AppData\Local\Programs\keys\resources\bin
+See ../MS/path.txt
+Homebrew
+	brew tap keys-pub/tap
+	brew install keys
+
+Usage
+https://keys.pub/docs/cli/keys.html
+	keys | less -S
+	keys generate
+	keys auth
+Powershell
+	$env:KEYS_AUTH = (keys auth -token)
+	keys list
+Show key information
+	keys key kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
+Remove a key
+	keys remove kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
+Export key
+	keys export kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
+Import a key
+	keys import -in key.txt
+
+https://keybase.io
+https://news.ycombinator.com/item?id=7235634
+API-0.core.keybaseapi.com has expired certificate
+https://news.ycombinator.com/item?id=30806102

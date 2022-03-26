@@ -1,0 +1,13 @@
+A cross-platform minigolf game written in C.
+https://github.com/mgerdes/Open-Golf
+	git clone https://github.com/mgerdes/Open-Golf.git
+	cd Open-Golf
+	./build/build-linux.sh
+Windows
+	build\build-win64.bat
+This also creates out\win64\golf.sln which can be opened
+in Visual Studio to compile / run everything
+
+Usage
+	out/linux/golf
+	out\win64\golf.exe

@@ -210,3 +210,6 @@ Valid permission is one of: pull, triage, push, maintain, admin.
 
 ¿Quieres tener un commit en GitHub el día que naciste? 🐣
 https://twitter.com/carlosazaustre/status/1494197961185759234
+
+Complaints mount after GitHub launches new algorithmic feed
+https://news.ycombinator.com/item?id=30788364

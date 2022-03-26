@@ -1,0 +1,30 @@
+https://pidgin.im
+https://keep.imfreedom.org/pidgin/pidgin
+https://news.ycombinator.com/item?id=30802832
+https://otr.cypherpunks.ca
+	apt install pidgin-otr
+Windows
+	winget install Pidgin.Pidgin
+	choco install pidgin PidginOtrPlugin
+
+https://github.com/segler-alex/Pidgin-GPG/wiki/
+	apt install libpurple-dev libgpgme11-dev
+The following NEW packages will be installed:
+  gstreamer1.0-nice gstreamer1.0-plugins-bad libdbus-glib-1-dev libdbus-glib-1-dev-bin libfarstream-0.2-5 libfluidsynth2 libgadu3
+  libgstreamer-plugins-bad1.0-0 libgupnp-igd-1.0-4 libinstpatch-1.0-2 libltc11 libmeanwhile1 libmjpegutils-2.1-0 libmodplug1 libmpeg2encpp-2.1-0
+  libmplex2-2.1-0 libnice10 libofa0 libopenni2-0 libprotobuf-c1 libpurple-bin libpurple-dev libpurple0 libsoundtouch1 libspandsp2 libsrtp2-1 libvo-aacenc0
+  libvo-amrwbenc0 libwildmidi2 libzbar0 libzephyr4 pidgin-data timgm6mb-soundfont
+	autoreconf -i
+	./configure
+	make -j12
+	mkdir -p ~/.purple/plugins
+	cp src/.libs/pidgin_gpg.so ~/.purple/plugins/
+Select Tools > Plugins, and enable the GPG/OpenGPG plugin. Select configure and choose your GPG key.
+
+pidgin-openpgpg (Obsolete)
+This is an experimental extension and potentially buggy.
+https://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg1371715.html
+	apt install pidgin-openpgp
+Encryption (obsolete)
+http://pidgin-encrypt.sourceforge.net
+	apt install pidgin-encryption

@@ -1,0 +1,4 @@
+Adium is an open source and free instant messaging application
+for macOS that can connect to XMPP (Jabber), IRC and more.
+https://adium.im
+https://github.com/adium/adium

@@ -31,3 +31,7 @@ Node-IPC supply-chain attack
 https://www.reddit.com/r/programming/comments/tinsq7/unity_ships_nodeipc_vulnerability/
 Popular JS Package node-ipc Adds Malicious "Protest-ware" On Purpose
 https://www.youtube.com/watch?v=2M-L0yPbtPE
+
+Open source 'protestware' harms Open Source
+https://opensource.org/open-source-protestware-harms-open-source
+https://news.ycombinator.com/item?id=30789256

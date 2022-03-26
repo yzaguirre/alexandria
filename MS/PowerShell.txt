@@ -55,6 +55,8 @@ Create function
 Function List-LSD {lsd.exe --long}
 
 Alias
+Setting up aliases in Powershell
+https://www.youtube.com/watch?v=0Rl_V079HEw
 https://dev.to/seankilleen/how-to-create-a-powershell-alias-with-parameters-3g53
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_aliases?view=powershell-7.2
 	Get-Alias ls
@@ -128,3 +130,6 @@ https://ss64.com/ps/get-date.html
 https://ss64.com/ps/syntax-dateformats.html
 	Get-Date -format yyyy-MM-dd_HH.mm.ss
 2019-02-20_15.33.17
+
+List network adapters
+	Get-NetAdapter
