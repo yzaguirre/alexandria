@@ -1,5 +1,5 @@
-https://github.com/jgm/pandoc
 https://pandoc.org
+https://github.com/jgm/pandoc
 Install
 	apt install latex-beamer pandoc liblua5.1-0 texlive-math-extra
 Ubuntu

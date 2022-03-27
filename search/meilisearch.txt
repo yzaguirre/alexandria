@@ -1,0 +1,18 @@
+Powerful, fast, and an easy to use search engine
+https://www.meilisearch.com
+https://docs.meilisearch.com
+https://github.com/meilisearch/MeiliSearch
+	echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" > /etc/apt/sources.list.d/fury.list
+	apt update
+	apt install meilisearch-http
+Homebrew
+	brew update
+	brew install meilisearch
+
+Usage
+	meilisearch
+You can access the web interface in your web browser at the root of the server.
+The default URL is http://127.0.0.1:7700
+
+Search for Documents
+	curl 'http://127.0.0.1:7700/indexes/movies/search?q=botman+robin&limit=2' | jq

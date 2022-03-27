@@ -1,0 +1,9 @@
+https://kate-editor.org
+https://invent.kde.org/utilities/kate
+	apt install kate
+The following NEW packages will be installed:
+  kate kate5-data ktexteditor-data ktexteditor-katepart kuserfeedback-doc libeditorconfig0 libkf5attica5 libkf5newstuff-data libkf5newstuff5
+  libkf5newstuffcore5 libkf5syndication5abi1 libkf5syntaxhighlighting-data libkf5syntaxhighlighting5 libkf5texteditor-bin libkf5texteditor5
+  libkuserfeedbackcore1 libkuserfeedbackwidgets1 qml-module-org-kde-newstuff qml-module-org-kde-userfeedback
+Windows
+	choco install kate

@@ -3,7 +3,7 @@ PrintScreen
 Alt+PrintScreen
 	mate-screenshot
 	mate-screenshot -w --delay=1 -B
-See ~/flameshot.txt
+See ../flameshot.txt
 ImageMagick
 	import image.png
 	import -window root image.png
@@ -58,3 +58,23 @@ https://www.reddit.com/r/kde/comments/ib3p86/is_there_a_way_to_make_kdeconnectcl
 Send to mobile phone with kdeconnect
 file="$HOME/Pictures/Screenshots/KDEconnect_screenshot_share_$(date "+%Y%m%d_%H%M%S").jpg"; escrotum "${file}" && kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share "${file}"
 
+scrot
+SCReenshOT - command line screen capture utility
+https://github.com/resurrecting-open-source-projects/scrot
+	apt install scrot
+The following NEW packages will be installed:
+  giblib1 scrot
+Compile
+	apt install libimlib2-dev libbsd-dev
+The following NEW packages will be installed:
+  libgif-dev libid3tag0-dev libimlib2-dev libltdl-dev libtool libwebp-dev
+  libbsd-dev libmd-dev
+	wget https://github.com/resurrecting-open-source-projects/scrot/releases/download/1.7/scrot-1.7.tar.bz2
+	tar xf scrot-1.7.tar.bz2
+	cd scrot-1.7
+	autogen.sh
+	./configure
+	make -j12
+	make install
+Clean project
+	make distclean

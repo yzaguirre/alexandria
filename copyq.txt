@@ -1,7 +1,11 @@
 https://hluk.github.io/CopyQ/
 https://github.com/hluk/CopyQ
-	wget https://github.com/hluk/CopyQ/releases/download/v3.11.1/copyq_3.11.1_Debian_10-1_amd64.deb
-	dpkg -i copyq_3.11.1_Debian_10-1_amd64.deb
+	wget https://github.com/hluk/CopyQ/releases/download/v6.1.0/copyq_6.1.0_Debian_11-1_amd64.deb
+	dpkg -i copyq_6.1.0_Debian_11-1_amd64.deb
+Ubuntu
+	sudo add-apt-repository ppa:hluk/copyq
+	apt install copyq
 Windows
 	scoop bucket add extras
 	scoop install copyq
+	choco install copyq

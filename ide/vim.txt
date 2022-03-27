@@ -235,3 +235,19 @@ vmap <C-_> <plug>NERDCommenterToggle<CR>
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+5 Essential Vim Commands
+https://www.youtube.com/watch?v=AZmEK1cjTgA
+
+List files
+:Explore
+Split with explorer
+:Sex
+Vertical split with explorer
+:Sex!
+:Vex
+
+Goto file
+gf
+Use ctrl+o and ctrl+i to navigate the jump stack and go back
+Use ctrl+t for the tag stack and go back that way

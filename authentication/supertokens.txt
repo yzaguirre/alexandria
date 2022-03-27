@@ -1,0 +1,4 @@
+Open source alternative to Auth0 / Firebase Auth / AWS Cognito
+https://supertokens.com
+https://supertokens.com/docs/guides
+https://github.com/supertokens/supertokens-core

@@ -4,6 +4,10 @@ Se instalarán los siguientes paquetes NUEVOS:
   avahi-discover python3-avahi
 http://peterlaszlo.wordpress.com/2013/06/27/bonjour-avahi-rpi-windows/
 	apt install libnss-mdns avahi-utils
+Termux
+	apt install avahi
+The following NEW packages will be installed:
+  attr avahi dbus libcap libdaemon
 
 Install in centos
 http://theengguy.blogspot.com/2013/02/mdns-centos-63.html

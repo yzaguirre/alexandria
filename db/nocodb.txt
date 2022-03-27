@@ -1,0 +1,5 @@
+Open Source Airtable Alternative
+https://www.nocodb.com
+https://docs.nocodb.com
+https://github.com/nocodb/nocodb
+https://www.reddit.com/r/selfhosted/comments/ql13zw/just_released_nocodb_081_allows_you_to_download/
