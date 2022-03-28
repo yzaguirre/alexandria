@@ -1,9 +1,11 @@
+https://apparmor.net
 https://www.youtube.com/watch?v=zPkrcTidwQI
 https://www.youtube.com/watch?v=O04bBQGIfm0
-
-apt install apparmor-profiles
-apt install apparmor-utils
+	apt install apparmor-profiles apparmor-utils
+The following NEW packages will be installed:
+  apparmor-profiles apparmor-utils python3-apparmor python3-libapparmor
 	sudo apparmor_status
+	sudo aa-status
 
 Enable apparmor:
 If using grup
@@ -27,3 +29,6 @@ To modify a rule by hand
 	cd /etc/apparmor.d
 	vim usr.lib.apache2.mpm-prefork.apache2
 Add any directory to the file. It accepts wildcards
+
+Enfore all profiles
+	sudo aa-enforce /etc/apparmor.d/*

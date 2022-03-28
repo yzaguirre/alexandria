@@ -1,0 +1,18 @@
+Unprivileged sandboxing tool
+https://github.com/containers/bubblewrap
+	apt install bubblewrap
+Compile
+	wget https://github.com/containers/bubblewrap/releases/download/v0.6.1/bubblewrap-0.6.1.tar.xz
+	sha256sum bubblewrap-0.6.1.tar.xz
+9609c7dc162bc68abc29abfab566934fdca37520a15ed01b675adcf3a4303282
+	tar xf bubblewrap-0.6.1.tar.xz
+	cd bubblewrap-0.6.1
+	./autogen.sh
+	make -j12
+	make install
+
+Usage
+	bwrap
+	bwrap --ro-bind /usr /usr --symlink usr/lib64 /lib64 --proc /proc --dev /dev --unshare-pid bash
+
+See firejail.txt

@@ -1,0 +1,8 @@
+https://hwmon.wiki.kernel.org/lm_sensors
+https://github.com/lm-sensors/lm-sensors
+https://www.cyberciti.biz/faq/install-sensors-lm-sensors-on-ubuntu-debian-linux/
+	apt install lm-sensor
+	sudo sensors-detect
+Restart the kmod service using the systemctl command:
+	sudo systemctl restart kmod
+	sensors

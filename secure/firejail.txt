@@ -1,0 +1,130 @@
+Linux namespaces and seccomp-bpf sandbox
+https://firejail.wordpress.com
+https://github.com/netblue30/firejail
+https://news.ycombinator.com/item?id=30820387f
+http://l3net.wordpress.com/projects/firejail/firejail-usage/
+	apt install firejail
+DEB package
+	wget https://github.com/netblue30/firejail/releases/download/0.9.68/firejail-0.9.68.asc
+	wget https://github.com/netblue30/firejail/releases/download/0.9.68/firejail_0.9.68-apparmor_1_amd64.deb
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xF951164995F5C4006A73411E2CCB36ADFC5849A7
+	gpg --verify firejail-0.9.68.asc
+	sha256sum -c --ignore-missing firejail-0.9.68.asc
+	dpkg -i firejail_0.9.68-apparmor_1_amd64.deb
+
+Introduction to FireJail
+https://www.youtube.com/watch?v=MVLrclfbS4U
+
+Profiles
+/etc/firejail
+
+Usage
+	firejail --list
+	firejail --seccomp --debug firefox
+	firejail netstat -rn
+Secure computing, no write priviledges, temporal folder
+	firejail --seccomp --nonewprivs --private-tmp firefox
+Create a profile for every app
+	sudo firecfg
+	sudo firecfg --list 
+	sudo firecfg --clean
+Configuring symlinks in /usr/local/bin based on firecfg.config
+   atril created           
+   atril-previewer created
+   atril-thumbnailer created
+   calibre created
+   celluloid created
+   chromium created      
+   cvlc created      
+Warning: cannot create /usr/local/bin/ddgr - already exists! Skipping...       
+   dig created  
+   display created 
+   display-im6.q16 created                                                     
+   dnsmasq created                   
+   ebook-convert created  
+   ebook-edit created       
+   ebook-meta created     
+   ebook-polish created                                                        
+   ebook-viewer created
+   enchant-2 created                                                           
+   enchant-lsmod-2 created
+   engrampa created                                                            
+   eom created                                                                 
+   evince created                
+   evince-previewer created
+   evince-thumbnailer created
+   ffmpegthumbnailer created
+   ffplay created
+   ffprobe created
+   firefox created
+   flameshot created
+   ftp created
+   gapplication created
+Warning: cannot create /usr/local/bin/geany - already exists! Skipping...
+   gucharmap created
+   host created
+   img2txt created
+   keepassxc created
+   keepassxc-cli created
+   keepassxc-proxy created
+   libreoffice created
+   localc created
+   lodraw created
+   loffice created
+   lofromtemplate created
+   loimpress created
+   lomath created
+   loweb created
+   lowriter created
+   man created
+   mate-calc created
+   mate-calculator created
+   mate-color-select created
+   mate-dictionary created
+   meld created
+   mpv created
+Warning: cannot create /usr/local/bin/ncdu - already exists! Skipping...
+   nextcloud created
+   nslookup created
+   onboard created
+   patch created
+   pdftotext created
+   pluma created
+   qt-faststart created
+   redshift created
+   rhythmbox created
+   rhythmbox-client created
+   seahorse created
+   seahorse-daemon created
+   shotwell created
+   simple-scan created
+   soffice created
+   ssh created
+   steam created
+   strings created
+   telnet created
+   transmission-gtk created
+   vlc created
+   w3m created
+   wget created
+   xcalc created
+   yelp created
+   youtube-dl created
+Warning: cannot create /usr/local/bin/yt-dlp - already exists! Skipping...
+   zim created
+Adding user david to Firejail access database in /etc/firejail/firejail.users
+Creating /etc/firejail/firejail.users
+
+Loading AppArmor profile
+
+Fixing desktop files in /home/david/.local/share/applications
+   vlc.desktop created
+   steam.desktop created
+   caja.desktop created
+   io.github.celluloid_player.Celluloid.desktop created
+   org.flameshot.Flameshot.desktop created
+
+See bubblewrap.txt
+
+Introduction to FireJail
+https://www.youtube.com/watch?v=MVLrclfbS4U

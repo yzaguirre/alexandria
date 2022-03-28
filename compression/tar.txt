@@ -1,4 +1,4 @@
-See ../compression/zip.txt
+See zip.txt
 http://gnuwin32.sourceforge.net/packages.html
 
 For use in other languajes, see java/jtar.txt and js/js-tar.txt
@@ -28,7 +28,7 @@ Extract and rename the files
 https://stackoverflow.com/questions/9729793/rename-directory-name-before-tar-happens
 	tar -zxf my-dir.tar.gz --transform s/my-dir/your-dir/
 
-7z. See ~/compression/7zip.txt
+7z. See 7zip.txt
 	tar cf - directory | 7za a -si directory.tar.7z
 https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
 	7z a -ttar -so my_files | ncat --send-only ip port

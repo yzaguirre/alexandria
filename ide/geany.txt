@@ -59,3 +59,12 @@ Add "C:\Program Files\Geany\bin" to PATH
 https://stackoverflow.com/questions/36561216/geany-can-we-open-a-website-link-from-geany-text-editor
 <Primary><Shift>k to open links
 Context: chromium %s
+
+A collection of colour schemes for Geany.
+https://github.com/codebrainz/geany-themes
+	git clone https://github.com/codebrainz/geany-themes.git
+	cd geany-themes
+	./install.sh
+Color schemes go in
+~/.config/geany/colorschemes/
+C:\Users\dyzag\AppData\Roaming\geany\colorschemes

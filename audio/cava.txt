@@ -1,0 +1,24 @@
+Console-based Audio Visualizer for Alsa
+https://github.com/karlstav/cava
+	apt install cava
+Compile
+	apt install libfftw3-dev libasound2-dev libncursesw5-dev libpulse-dev libtool automake libiniparser-dev libsdl2-2.0-0 libsdl2-dev
+The following NEW packages will be installed:
+  gir1.2-ibus-1.0 libasound2-dev libfftw3-bin libfftw3-dev libfftw3-long3 libfftw3-quad3 libgl1-mesa-dev libglu1-mesa-dev libibus-1.0-5
+  libibus-1.0-dev libiniparser-dev libiniparser-doc libiniparser1 libpulse-dev libsdl2-dev libsndio-dev libudev-dev libxss-dev libxt-dev
+  libxv-dev libxxf86vm-dev x11proto-scrnsaver-dev x11proto-xf86vidmode-dev
+	wget https://github.com/karlstav/cava/archive/refs/tags/0.7.5.tar.gz
+	tar xf 0.7.5.tar.gz
+	cd cava-0.7.5
+	./autogen.sh
+	./configure
+	make -j12
+	make install
+
+Configuration
+/home/david/.config/cava/config
+Edit config file
+	vim ~/.config/cava/config
+
+Usage
+	cava

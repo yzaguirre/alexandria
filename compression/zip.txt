@@ -1,12 +1,40 @@
+http://infozip.sourceforge.net/Zip.html
 zip
+	
+
 https://zlib.net
 https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
 https://manpages.ubuntu.com/manpages/bionic/man3/zlib.3tcl.html
 	apt install zlib1g
-http://infozip.sourceforge.net/
+Compile
+	wget https://zlib.net/zlib-1.2.12.tar.xz
+	wget https://zlib.net/zlib-1.2.12.tar.xz.asc
+	gpg --verify zlib-1.2.12.tar.xz.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x5ED46A6721D365587791E2AA783FCD8E58BCAFBA
+	sha256sum zlib-1.2.12.tar.xz
+7db46b8d7726232a621befaab4a1c870f00a90805511c0e0090441dac57def18
+	tar xf zlib-1.2.12.tar.xz
+	./configure
+	make -j12
+	make install
+/usr/local/lib/libz.a
+/usr/local/lib/libz.so.1.2.12
+/usr/local/share/man/man3/zlib.3
+/usr/local/lib/pkgconfig/zlib.pc
+/usr/local/include/zlib.h /usr/local/include/zconf.h
+
+http://infozip.sourceforge.net
 http://infozip.sourceforge.net/mans/
+	apt install zip unzip
+Binary
 	wget https://r15ch13.keybase.pub/scoop/zip/zip300xn-x64.zip
 	wget https://r15ch13.keybase.pub/scoop/unzip/unz600xn.exe#/dl.7z
+Compile
+	wget -O zip30.tar.gz https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/zip30.tar.gz/download
+	tar xf zip30.tar.gz
+	cd zip30
+	make -f unix/Makefile -j12 generic
+	make -f unix/Makefile install
 http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-directory-via-terminal-without-hidden
 	zip -r file.zip file1.txt files/
 	unzip file.zip -d exdir

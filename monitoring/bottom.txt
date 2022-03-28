@@ -1,0 +1,21 @@
+Yet another cross-platform graphical process/system monitor.
+https://clementtsang.github.io/bottom/nightly/
+https://github.com/ClementTsang/bottom
+	wget https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
+	dpkg -i bottom_0.6.8_amd64.deb
+Windows
+	winget install Clement.bottom
+	choco install bottom
+The version number may be required for newer releases during the approval process:
+	choco install bottom --version=0.6.8
+	scoop install bottom
+Homebrew
+	brew install bottom
+
+Configuration
+~/.config/bottom/bottom.toml
+$XDG_CONFIG_HOME/bottom/bottom.toml
+C:\Users\dyzag\AppData\Roaming\bottom\bottom.toml
+
+Usage
+	btm

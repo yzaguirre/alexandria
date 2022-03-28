@@ -1,0 +1,21 @@
+Performance monitoring tools for Linux
+http://sebastien.godard.pagesperso-orange.fr
+https://github.com/sysstat/sysstat
+	apt install sysstat
+	vim /etc/default/sysstat
+ENABLED="true"
+	service sysstat restart
+
+Usage
+	sudo sar -u -f /var/log/sysstat/sa22
+Current usage of the server
+	sar -u
+Memory usage
+	sar -r
+Swap usage
+	sar -S
+I/O
+	sar -b
+
+Linux Essentials - The sar Command
+https://www.youtube.com/watch?v=_4WVPSfGqos

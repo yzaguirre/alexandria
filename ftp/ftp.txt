@@ -49,38 +49,3 @@ chown -R {juan,paco,luis,pedro} /var/www/{juan,paco,luis,pedro}
 Descomentar DefaultRoot
 
 	# service proftpd restart
-
-lftp
-sophisticated command line file transfer program
-(ftp, http, sftp, fish, torrent)
-https://lftp.yar.ru
-https://github.com/lavv17/lftp
-https://lftp.yar.ru/lftp-man.html
-http://www.russbrooks.com/2010/11/19/lftp-cheetsheet
-https://www.commandlinefu.com/commands/using/lftp
-https://linoxide.com/linux-how-to/lftp-commands/
-https://www.cyberciti.biz/faq/lftp-mirror-example/
-https://smyl.es/using-lftp-ftp-to-mirrortransfer-files-from-one-server-to-another/
-	apt install lftp
-Windows
-	choco install lftp
-
-Usage
-	lftp ftp://miki@192.168.122.65
-	lftp -u 'USER,PASS' SITE
-Mirror
-	lftp -e "mirror -c" http://example.com/foobar/
-Only mirror html, css and js
-	lftp -u olduser,oldpassword -e 'mirror -i "\.(html?|css|js)$" /home/olduser/public_html /home/newuser/public_html' ftp.oldserver.com
-Download
-	lftp -e 'set net:timeout 10; get yourfile.mp4; bye' -u user,password ftp.foo.com
-	lftp -e 'set net:timeout 10; get yourfile.mp4 -o /local/path/yourfile.mp4; bye' -u user,password ftp.foo.com
-Exit the shell with
-	bye
-Run a command
-	lftp -e 'mirror /home/miki/ /home/miki/Videos/' -u miki,password
-Run a script
-	cat script.txt
-
-	lftp -f script.txt
-	open
