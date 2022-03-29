@@ -26,6 +26,8 @@ The following NEW packages will be installed:
 adwaita-icon-theme-full inkscape libimage-magick-perl libimage-magick-q16-perl libmagick++-6.q16-8 libpotrace0 libwmf-bin perlmagick python3-bs4
 python3-cssselect python3-html5lib python3-lxml python3-numpy python3-scour python3-soupsieve python3-webencodings
 Windows
+	winget install Inkscape.Inkscape
+	choco install InkScape
 	scoop bucket add extras
 	scoop install inkscape
 Homebrew

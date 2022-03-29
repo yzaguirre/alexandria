@@ -30,11 +30,11 @@ https://github.com/jandedobbeleer/oh-my-posh
 	winget install JanDeDobbeleer.OhMyPosh
 Powershell
 	cd C:\Users\dyzag\Documents\PowerShell
-	wget https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/v7.39.0/themes/jandedobbeleer.omp.json
+	wget https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/v7.52.1/themes/jandedobbeleer.omp.json
 	vim $PROFILE
 oh-my-posh prompt init pwsh --config C:\Users\dyzag\Documents\PowerShell\jandedobbeleer.omp.json | Invoke-Expression
 OR
-oh-my-posh prompt init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/v7.39.0/themes/jandedobbeleer.omp.json | Invoke-Expression
+oh-my-posh prompt init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/v7.52.1/themes/jandedobbeleer.omp.json | Invoke-Expression
 
 Como Agregar GitBash a la terminal de windows [OhMyPosh]
 https://www.youtube.com/watch?v=_yWb-DukI4k

@@ -32,3 +32,6 @@ Analyze can also automatically fix the problems for you:
 	path analyze --fix
 You might be scared of what fix will do, so you can run the same fix command with the --whatif argument:
 	path analyze --fix --whatif
+
+Refresh environment variables in PowerShell
+	refreshenv

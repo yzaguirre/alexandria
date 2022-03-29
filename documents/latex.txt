@@ -10,6 +10,7 @@ fonts-texgyre libapache-pom-java libcommons-logging-java libcommons-parent-java 
 texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended texlive-pictures texlive-plain-generic texlive-xetex tipa
 
 https://miktex.org
+https://github.com/MiKTeX/miktex
 https://miktex.org/howto/install-miktex
 Windows
 	winget install ChristianSchenk.MiKTeX

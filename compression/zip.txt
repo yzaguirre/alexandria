@@ -1,6 +1,14 @@
-http://infozip.sourceforge.net/Zip.html
-zip
-	
+zlib replacement with optimizations for "next generation" systems.
+https://github.com/zlib-ng/zlib-ng
+	wget https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.0.6.tar.gz
+	tar xf 2.0.6.tar.gz
+	cd zlib-ng-2.0.6
+	./configure
+	make
+	make test
+Windows
+	wget https://github.com/zlib-ng/zlib-ng/releases/download/2.0.6/zlib-ng-win-x86-64.zip
+	7z x -o"C:\Program Files\zlib" zlib-ng-win-x86-64.zip
 
 https://zlib.net
 https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
@@ -22,6 +30,10 @@ Compile
 /usr/local/share/man/man3/zlib.3
 /usr/local/lib/pkgconfig/zlib.pc
 /usr/local/include/zlib.h /usr/local/include/zconf.h
+
+Re: Zlib memory corruption on deflate
+https://www.openwall.com/lists/oss-security/2022/03/28/1
+https://news.ycombinator.com/item?id=30828743
 
 http://infozip.sourceforge.net
 http://infozip.sourceforge.net/mans/

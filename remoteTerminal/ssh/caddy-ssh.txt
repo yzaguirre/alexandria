@@ -1,0 +1,8 @@
+Caddy-SSH is a general-purpose, extensible, modular,
+memory-safe SSH server built in Go
+https://github.com/mohammed90/caddy-ssh
+https://www.caffeinatedwonders.com/2022/03/28/new-ssh-server/
+https://news.ycombinator.com/item?id=30830749
+	wget https://github.com/mohammed90/caddy-ssh/releases/download/v0.0.1/caddy-ssh_0.0.1_linux_amd64.tar.gz
+	https://github.com/mohammed90/caddy-ssh/releases/download/v0.0.1/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt

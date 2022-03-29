@@ -1,4 +1,4 @@
-https://reactnativepaper.com/
+https://reactnativepaper.com
 https://callstack.github.io/react-native-paper/
 https://callstack.github.io/react-native-paper/getting-started.html
 https://github.com/callstack/react-native-paper

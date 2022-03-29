@@ -11,6 +11,11 @@ Install
 	apt install imagemagick
 Termux
 	apt install imagemagick ghostscript
+Windows
+	winget install ImageMagick.ImageMagick
+	choco install imagemagick
+Installed at
+C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\
 MacOs
 	brew install ghostscript
 	brew install imagemagick

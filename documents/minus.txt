@@ -1,0 +1,8 @@
+A small, asynchronous paging library for Rust
+https://crates.io/crates/minus/
+https://github.com/arijit79/minus
+https://www.reddit.com/r/rust/comments/tems58/release_minus_50/
+Source code
+	wget https://github.com/arijit79/minus/archive/refs/tags/v5.0.1.tar.gz
+	tar xf v5.0.1.tar.gz
+	cd minus-5.0.1

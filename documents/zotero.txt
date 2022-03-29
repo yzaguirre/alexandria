@@ -1,3 +1,5 @@
+Zotero is a free, easy-to-use tool to help you collect, organize,
+cite, and share your research sources.
 https://www.zotero.org
 https://github.com/zotero/zotero
 https://news.ycombinator.com/item?id=17606929
@@ -5,8 +7,8 @@ Windows
 	winget install Zotero.Zotero
 	choco install zotero
 Latest Binary
-	wget https://download.zotero.org/client/release/6.0/Zotero-6.0_setup.exe
-	explorer.exe Zotero-6.0_setup.exe
+	wget https://download.zotero.org/client/release/6.0.4/Zotero-6.0.4_setup.exe
+	explorer.exe Zotero-6.0.4_setup.exe
 Installed at C:\Program Files (x86)\Zotero\
 
 https://www.zotero.org/blog/zotero-6/

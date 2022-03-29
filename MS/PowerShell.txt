@@ -133,3 +133,6 @@ https://ss64.com/ps/syntax-dateformats.html
 
 List network adapters
 	Get-NetAdapter
+
+Refresh environment variables
+	refreshenv

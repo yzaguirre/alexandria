@@ -9,3 +9,5 @@ Download binary
 	wget https://github.com/junegunn/fzf/releases/download/0.29.0/fzf_0.29.0_checksums.txt
 	sha256sum -c --ignore-missing fzf_0.29.0_checksums.txt
 	tar xf fzf-0.29.0-linux_amd64.tar.gz -C /usr/local/bin
+Windows
+	choco install fzf
