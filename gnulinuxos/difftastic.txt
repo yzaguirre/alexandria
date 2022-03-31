@@ -1,0 +1,5 @@
+Difftastic is a diff tool that understands syntax.
+https://difftastic.wilfred.me.uk
+https://github.com/Wilfred/difftastic
+https://news.ycombinator.com/item?id=30841244
+	cargo install difftastic

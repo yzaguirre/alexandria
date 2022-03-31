@@ -212,6 +212,9 @@ https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-
 https://developer.android.com/guide/topics/manifest/application-element#usesCleartextTraffic
 https://guides.codepath.com/ios/App-Transport-Security
 
+Limit fetch
+https://www.npmjs.com/package/node-fetch#fetchurl-options
+
 Upload image page in React Native
 https://www.youtube.com/watch?v=79WtnkL_XsM
 

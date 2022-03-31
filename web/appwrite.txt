@@ -1,0 +1,4 @@
+Secure Open-Source Backend Server for Web, Mobile & Flutter Developers
+https://appwrite.io
+https://github.com/appwrite/appwrite
+https://www.reddit.com/r/selfhosted/comments/tm3pof/a_self_hosted_and_open_source_alternative_to/

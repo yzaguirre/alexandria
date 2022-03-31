@@ -3,3 +3,5 @@ phpstorm
 	cd /VMs/opt
 	mv PhpStorm{-138.2001.2328,}
 	ln -s /VMs/opt/PhpStorm/bin/phpstorm.sh /usr/local/bin/phpstorm
+
+https://www.reddit.com/r/programming/comments/tbqy0y/jetbrains_statement_on_ukraine/

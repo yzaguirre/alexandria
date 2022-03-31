@@ -1,0 +1,3 @@
+Drift is a self-hostable Gist alternative and paste service
+https://drift.maxleiter.com
+https://github.com/MaxLeiter/Drift

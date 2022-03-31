@@ -7,6 +7,11 @@ C:\Users\dyzag\AppData\Local\Programs\Microsoft VS Code
 https://github.com/Microsoft/vscode
 Windows
 	winget install Microsoft.VisualStudioCode
+Add to PATH environment variable. See ../MS/path.txt
+	path add -g "C:\Users\dyzag\AppData\Local\Programs\Microsoft VS Code\bin"
+Conflict with findutils
+	path move -g "C:\Users\dyzag\AppData\Local\Programs\Microsoft VS Code\bin" before "C:\ProgramData\Chocolatley\bin"
+
 	choco install vscode vscode-python
 MacOS
 	wget "https://code.visualstudio.com/sha/download?build=stable&os=darwin" -O VSCode-darwin.zip

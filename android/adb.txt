@@ -174,3 +174,7 @@ adb pull "sdcard/DCIM/Camera/$file"
 
 https://ivrodriguez.com/installing-self-signed-certificates-on-android/
 https://stackoverflow.com/questions/44942851/install-user-certificate-via-adb
+
+If encrypted
+https://stackoverflow.com/questions/45409854/adb-command-to-check-if-the-device-is-encrypted#45419068
+	adb shell getprop ro.crypto.state

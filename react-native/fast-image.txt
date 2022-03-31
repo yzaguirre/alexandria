@@ -1,5 +1,9 @@
+🚩 FastImage, performant React Native image component.
 https://github.com/DylanVann/react-native-fast-image
 	yarn add react-native-fast-image
+
+https://www.reddit.com/r/reactnative/comments/tqctd1/caching_images_in_react_native_a_tutorial_with/
+See react-native-image-cache.txt
 
 https://www.reddit.com/r/reactnative/comments/mllvra/best_way_to_savecache_images_in_app/
 I am fetching several arrays of objects (id, title, image url),

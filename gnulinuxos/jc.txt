@@ -1,4 +1,8 @@
-https://github.com/kellyjonbrazil/jc
-This tool converts the output of popular command-line tools and file-types to JSON.
+This tool converts the output of popular command-line tools and
+file-types to JSON.
 This allows piping of output to tools like jq.
-	sudo -H pip3 install jc
+https://github.com/kellyjonbrazil/jc
+https://blog.kellybrazil.com/2022/03/26/a-new-way-to-parse-plain-text-tables/
+https://www.reddit.com/r/commandline/comments/tqchov/a_new_way_to_parse_plain_text_tables/
+	apt install jc
+	sudo -H pip install -U jc

@@ -1,0 +1,14 @@
+https://ytmdl.deepjyoti30.dev/ytmdl
+Download songs with audio from youtube and metadata from sources
+like Itunes, Deezer etc. Latest version moves to yt-dlp for
+better support and other featuers.
+https://github.com/deepjyoti30/ytmdl-web-v2
+https://news.ycombinator.com/item?id=26274022
+https://www.reddit.com/r/commandline/comments/tex6px/oc_ytmdl_download_songs_with_audio_from_youtube/
+	sudo -H pip install -U ytmdl
+
+Configuration
+~/.config/ytmdl/config
+
+Usage
+	ytmdl Cradles --format m4a

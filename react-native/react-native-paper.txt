@@ -4,6 +4,7 @@ https://callstack.github.io/react-native-paper/getting-started.html
 https://github.com/callstack/react-native-paper
 https://github.com/oblador/react-native-vector-icons
 https://soshace.com/build-real-world-react-native-app-2-react-navigation-and-react-native-vector-icons/
+https://levelup.gitconnected.com/integrating-react-native-vector-icon-with-react-native-0-60-and-above-4cad9b9c61c5
 Do a commit on ios/ before adding RN Paper
 	yarn add react-native-paper
 If you're on a vanilla React Native project, you also need to install react-native-vector-icons

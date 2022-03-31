@@ -1,13 +1,18 @@
-https://www.passwordstore.org/
+https://www.passwordstore.org
+https://git.zx2c4.com/password-store/
 All passwords live in ~/.password-store
 	apt install pass
 	echo "source /etc/bash_completion.d/password-store" >> ~/.profile
+Homebrew
+	brew install pass
 
 Setup
 	pass init "ZX2C4 Password Storage Key"
 We can additionally initialize the password store as a git repository:
 	pass git init
 	pass git remote add origin kexec.com:pass-store
+https://www.reddit.com/r/commandline/comments/tnl87l/simple_password_manager/
+	export MYSQL_PASSWORD=$(pass mysql_password)
 
 install zsh completetion
 install fish completetion

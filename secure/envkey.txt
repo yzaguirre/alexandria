@@ -1,0 +1,13 @@
+End-To-End Encrypted Environments
+https://www.envkey.com
+	LATEST_VERSION=$(curl https://envkey-releases.s3.amazonaws.com/latest/cli-version.txt)
+	ARTIFACT_URL=https://envkey-releases.s3.amazonaws.com/cli/release_artifacts/$LATEST_VERSION/install.sh
+	curl -O $ARTIFACT_URL -O $ARTIFACT_URL.minisig
+	{ minisign -Vm install.sh -P "RWQ5lgVbbidOxaoIEsqZjbI6hHdS5Ri/SrDk9rNFFgiQZ4COuk6Li2HK" || { rm install.sh && install.sh.minisig &&  echo "Error: install.sh signature invalid. Exiting with error." >&2; exit 1; }; }
+	echo install.sh verified
+	chmod +x install.sh
+	./install.sh
+	rm install.sh install.sh.minisig
+Windows
+	wget https://envkey-releases.s3.amazonaws.com/desktop/release_artifacts/2.0.46/EnvKey_Windows_Installer-2.0.46.exe
+	start EnvKey_Windows_Installer-2.0.46.exe
