@@ -19,9 +19,10 @@ Termux
 	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_linux_arm64.tar.gz
 	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
 	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
-	tar xf gohttpserver_1.1.0_linux_arm64.tar.gz -C ~/bin
-	cd $!
-	rm LICENSE README.md
+	tar xf gohttpserver_1.1.0_linux_arm64.tar.gz -C ~/bin gohttpserver
+Windows
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_windows_amd64.tar.gz
+	tar xf gohttpserver_1.1.0_windows_amd64.tar.gz -C C:\Users\dyzag\bin gohttpserver.exe
 MacOS
 	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_darwin_amd64.tar.gz
 	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
@@ -31,6 +32,14 @@ MacOS
 	rm LICENSE README.md
 Make alias
 	alias gohttpserver='gohttpserver --google-tracker-id ""'
+
+Compile
+	git clone https://github.com/codeskyblue/gohttpserver.git
+	cd gohttpserver
+	git checkout 1.1.0
+	./build.sh
+	cp gohttpserver-win-amd64.exe
+
 Usage
 	gohttpserver -r ./ --port 8000 --upload
 	gohttpserver --help

@@ -1,0 +1,51 @@
+Install repo server
+	apt install proftpd-basic apt-mirror
+Install as standalone system
+	ps aux|grep ftp
+	
+	ftp localhost
+Normal user account have access to the system
+
+Get to the ubuntu launchpad, mirror archive
+https://launchpad.net/ubuntu/+archivemirrors
+https://launchpad.net/ubuntu/+mirror/mirror.lstn.net-archive
+
+	ftp://mirror.lstn.net/ubuntu/
+
+Download the mirror
+Edit the mirror list (ubuntu)
+	vim /etc/apt/mirror.list
+deb http://mirror.lstn.net/ubuntu/ trusty main
+deb-src http://mirror.lstn.net/ubuntu/ trusty main
+
+	sudo apt-mirror
+It will download the repo with 20 threads
+The mirror is in /opt/dist-mirror
+Setup a mirror path for proftp
+	sudo mount --bind /opt/dist-mirror/mirror/mirror.lstn.net/ /srv/ftp
+	systemctl enable proftp
+Add the mount command on a script that runs on system startup
+	vim /etc/rc.local
+# mount the ftp bind to the apt-mirror
+mount --bind /opt/dist-mirror/mirror/mirror.lstn.net/ /srv/ftp
+
+Setup a cronjob
+	cronjob -e
+0 3 * * * /usr/bin/apt-mirror >> /home/david/mirror.log
+
+Configure the client
+	cd /etc/apt
+	vim sources.list
+## Custom Repositories for Main
+deb [arch=amd64] ftp://192.168.1.243/ubuntu trusty main
+deb-src [arch=amd64] ftp://192.168.1.243/ubuntu trusty main
+
+	apt update
+	apt install subversion
+
+https://twitter.com/nixcraft/status/1509433700630491137
+alias update='sudo -- sh -c "apt update && apt -y upgrade && apt -y --purge autoremove && sudo apt -y clean"'
+	apt update
+	apt -y upgrade
+	apt -y --purge autoremove
+	sudo apt -y clean

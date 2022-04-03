@@ -3,3 +3,9 @@ https://conemu.github.io
 https://github.com/Maximus5/ConEmu
 	winget install Maximus5.ConEmu
 	choco install conemu
+
+Change current tab name with script in ConEmu
+https://conemu.github.io/en/GuiMacro.html#Rename
+https://superuser.com/questions/1000235/change-current-tab-name-with-script-in-conemu
+	$tabName = "Thing1"
+	& "C:\Program Files\ConEmu\ConEmu\ConEmuC.exe" -GUIMacro Rename(0,"Stuff-$tabName")

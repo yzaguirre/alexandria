@@ -17,6 +17,7 @@ Move its contents to parent folder (C:\tools\sqlite-studio.portable) to fix shim
 
 Configuration location
 %APPDATA%\SalSoft\sqlitestudio\settings3
+C:\Users\dyzag\AppData\Roaming\SalSoft\sqlitestudio\settings3
 $HOME/.config/sqlitestudio
 Also available at
 C:\tools\sqlite-studio.portable\sqlitestudio-cfg\settings3

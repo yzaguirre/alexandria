@@ -2,7 +2,7 @@ https://github.com/simon-budig/woof/
 http://www.home.unix-ag.org/simon/woof.html
 https://www.tecmint.com/share-files-over-a-local-network-in-linux/
 	apt install woof
-or	sudo -H pip3 install woof
+or	sudo -H pip install -U woof
 	woof myfile.txt
 Another computer
 	wget http://ip:8080

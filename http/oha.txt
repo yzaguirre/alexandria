@@ -6,7 +6,7 @@ https://github.com/hatoo/oha
 	apt update
 	apt install oha
 Windows
-	wget -OC:\Users\dyzag\bin\oha.exe https://github.com/hatoo/oha/releases/download/v0.5.0/oha-windows-amd64.exe
+	wget -OC:\Users\dyzag\bin\oha.exe https://github.com/hatoo/oha/releases/download/v0.5.1/oha-windows-amd64.exe
 Homebrew
 	brew install oha
 

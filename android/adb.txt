@@ -157,6 +157,17 @@ Information an app has on a device
 	run-as bk.yt.example
 	pwd
 
+Run commands
+https://stackoverflow.com/questions/18471780/retrieve-database-or-any-other-file-from-the-internal-storage-using-run-as
+	adb shell
+	run-as com.myapp
+Install a script
+	echo "tar c databases/ | nc 192.168.0.7 8080" > pass.sh
+Listen to ncat on regular computer
+	ncat -lp 8080 | tar xv
+Then
+	adb shell run-as com.myapp sh pass.sh
+
 Control your device from your computer - ADB tutorial
 https://www.youtube.com/watch?v=uOPcUjVl2YQ
 

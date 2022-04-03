@@ -36,3 +36,18 @@ Chocolately
 Installed at C:\Program Files\DB Browser for SQLite\
 MacOS
 	brew install --cask db-browser-for-sqlite
+
+PowerShell function
+	vim $PROFILE
+function sqlitebrowser([string]$params)
+{
+	& "C:\Program Files\DB Browser for SQLite\DB Browser for SQLite.exe" $params
+}
+
+Usage
+Open a project file using the font DejaVu for the data browser
+	sqlitebrowser -o databrowser/font=DejaVu sample.sqbpro
+Open the Library DB read-only and browse the table loans
+	sqlitebrowser -R -t loans Library.db
+Open the Aquariums DB, execute the Aquariums_preload.sql file and quit:
+	sqlitebrowser -s Aquariums_preload.sql -q Aquariums.db

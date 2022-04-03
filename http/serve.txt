@@ -1,7 +1,10 @@
 https://github.com/philippgille/serve
 Windows
 	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Windows_x64.zip
-	unzip serve_v0.3.2_Windows_x64.zip -d ~/bin
+	wget https://github.com/philippgille/serve/releases/download/v0.3.2/serve_v0.3.2_Windows_x64.zip.sha256
+	cat serve_v0.3.2_Windows_x64.zip.sha256
+	sha256sum serve_v0.3.2_Windows_x64.zip
+	7z x -oC:\Users\dyzag\bin serve_v0.3.2_Windows_x64.zip
 Or use scoop.sh or chocolately
 	scoop install serve
 	choco install serve
@@ -21,3 +24,13 @@ Authentication
 	serve -a "david:123"
 Most secure
 	serve -a "david:123" -p 443 -s
+
+https://github.com/syntaqx/serve
+Windows
+	wget https://github.com/syntaqx/serve/releases/download/v0.5.0/serve_0.5.0_windows_x86_64.zip
+	wget https://github.com/syntaqx/serve/releases/download/v0.5.0/serve_0.5.0_checksums.txt
+	sha256sum -c --ignore-missing serve_0.5.0_checksums.txt
+	7z x -oC:\Users\dyzag\bin\serve2.exe serve_0.5.0_windows_x86_64.zip serve.exe
+
+https://github.com/rhardih/serve
+	go install github.com/rhardih/serve@v1.1.1

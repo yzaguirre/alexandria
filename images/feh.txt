@@ -1,0 +1,18 @@
+imlib2 based image viewer
+https://feh.finalrewind.org
+https://github.com/derf/feh
+	apt install feh
+Compile
+See ../metadata.txt
+	apt install libcurl4-openssl-dev libx11-dev libxt-dev libimlib2-dev libxinerama-dev libjpeg-progs libexif-dev libexif12
+The following NEW packages will be installed:
+  libcurl4-openssl-dev libjpeg-progs libjpeg9
+  libexif-dev libexif-doc
+	wget https://feh.finalrewind.org/feh-3.8.tar.bz2
+	wget https://feh.finalrewind.org/feh-3.8.tar.bz2.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x781BB7071C6BF648EAEB08A1100D5BFB5166E005
+	gpg --verify feh-3.8.tar.bz2.asc
+	tar xf feh-3.8.tar.bz2
+	cd feh-3.8
+	make -j12 exif=1 help=1 inotify=1 xinerama=1
+	sudo make install

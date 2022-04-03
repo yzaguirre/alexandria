@@ -1,6 +1,32 @@
+⚡ Transfer files over wifi from your computer to your mobile device
+by scanning a QR code without leaving the terminal.
 https://claudiodangelis.com/qrcp/
 https://github.com/claudiodangelis/qrcp
-	wget https://github.com/claudiodangelis/qrcp/releases/download/0.6.2/qrcp_0.6.2_linux_x86_64.deb
-	dpkg -i qrcp_0.6.2_linux_x86_64.deb
+	wget https://github.com/claudiodangelis/qrcp/releases/download/0.9.1/qrcp_0.9.1_linux_x86_64.deb
+	wget https://github.com/claudiodangelis/qrcp/releases/download/0.9.1/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+	dpkg -i qrcp_0.9.1_linux_x86_64.deb
 Windows
 	scoop install qrcp
+Binary
+	wget https://github.com/claudiodangelis/qrcp/releases/download/0.9.1/qrcp_0.9.1_Windows_x86_64.tar.gz
+	tar xf qrcp_0.9.1_Windows_x86_64.tar.gz -C C:\Users\dyzag\bin qrcp.exe
+
+Dotnet version
+https://github.com/pearl2201/qrcp
+
+Configuration
+The default configuration file is stored in
+$HOME/qrcp.json
+, however, you can specify the location of the config file by passing
+the --config flag:
+	qrcp --config /tmp/qrcp.json MyDocument.pdf
+
+Usage
+	qrcp dog.jpg
+Zip a file before transferring it
+	qrcp --zip LongVideo.avi
+Receive files to the current directory
+	qrcp receive
+Receive files to a specific directory
+	qrcp receive --output=/tmp/dir

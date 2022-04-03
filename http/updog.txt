@@ -1,5 +1,8 @@
 https://github.com/sc0tfree/updog
 https://www.reddit.com/r/netsec/comments/f5vqqj/introducing_updog_a_replacement_for_pythons/
-	pip install updog
+	sudo -H pip install -U updog
 	updog [-d DIRECTORY] [-p PORT] [--password PASSWORD] [--ssl]
 
+Upload with curl
+	curl -v -XPOST -F "file=@/etc/passwd;filename=passwd" -F "path=/path/to/store/file/on/updog" http://127.0.0.1:9090/upload
+	curl -v -XPOST -F "file=@hello.txt;filename=hello2.txt" -F "path=updog" http://127.0.0.1:9090/upload

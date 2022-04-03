@@ -4,8 +4,9 @@ Windows
 Installer
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-pc-windows-msvc-simple-http-server.exe
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-pc-windows-msvc-simple-http-server.exe.sha256
-	sha256sum -c --ignore-missing x86_64-pc-windows-msvc-simple-http-server.exe.sha256
-	mv x86_64-pc-windows-msvc-simple-http-server.exe bin/simple-http-server.exe
+	cat x86_64-pc-windows-msvc-simple-http-server.exe.sha256
+	sha256sum x86_64-pc-windows-msvc-simple-http-server.exe
+	move x86_64-pc-windows-msvc-simple-http-server.exe C:\Users\dyzag\bin\simple-http-server.exe
 Linux
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server
 	wget https://github.com/TheWaWaR/simple-http-server/releases/download/v0.6.1/x86_64-unknown-linux-musl-simple-http-server.sha256
@@ -40,3 +41,8 @@ linker = "arm-linux-gnueabi-gcc"
 	git checkout 108275b
 	PKG_CONFIG_ALLOW_CROSS=1 cargo build --target=arm-unknown-linux-gnueabi
 	scp target/arm-unknown-linux-gnueabi/debug/simple-http-server pi:bin
+
+Usage
+	simple-http-server
+Upload
+	simple-http-server -u

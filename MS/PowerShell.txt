@@ -136,3 +136,26 @@ List network adapters
 
 Refresh environment variables
 	refreshenv
+
+How to Remove the Banner Message in PowerShell
+https://stackoverflow.com/questions/49840525/how-to-remove-the-banner-message-in-powershell
+	pwsh.exe -NoLogo
+
+Select a file
+https://stackoverflow.com/questions/43273178/powershell-to-list-files-and-have-the-user-select-one
+Print
+	Get-ChildItem C:\PROD\transfert | Out-GridView -Title 'Choose a file' -PassThru | ForEach-Object { $_.FullName }
+Store it in file
+	$filenames = @(Get-ChildItem C:\PROD\transfert | Out-GridView -Title 'Choose a file' -PassThru)
+
+$files = Get-ChildItem -Path C:\PROD\transfert -File
+$fileChoices = @()
+
+for ($i=0; $i -lt $files.Count; $i++) {
+  $fileChoices += [System.Management.Automation.Host.ChoiceDescription]("$($files[$i].Name) &$($i+1)")
+}
+
+$userChoice = $host.UI.PromptForChoice('Select File', 'Choose a file', $fileChoices, 0) + 1
+
+# do something more useful here...
+Write-Host "you chose $($files.Get($userChoice - 1).FullName)"

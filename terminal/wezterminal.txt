@@ -15,3 +15,17 @@ Windows
 Configuration at
 ~/.config/wezterm/wezterm.lua
 ~/.wezterm.lua
+C:\Program Files\WezTerm\wezterm.lua
+
+	vim C:\Program Files\WezTerm\wezterm.lua
+return {
+	default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"},
+	default_cwd = "C:\\Users\\dyzag\\Downloads",
+}
+
+Bell
+https://wezfurlong.org/wezterm/config/lua/config/text_blink_ease_out.htmlno
+
+SSH client
+https://wezfurlong.org/wezterm/ssh.html
+	wezterm ssh wez@my.server
