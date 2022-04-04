@@ -8,15 +8,22 @@ the GUI application), you would enter the command like this:
 
 Extraer, crear, borrar y modificar metadatos con Exiftool. 
 https://exiftool.org
+https://www.exiftool.org/install.html#Unix
 https://github.com/exiftool/exiftool
 https://linux.die.net/man/1/exiftool
 https://ninedegreesbelow.com/photography/exiftool-commands.html#examine
 http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-metadatos-con-Exiftool.html
 http://www.avpreserve.com/exiftool-tutorial-series/ 
-	sudo apt install libimage-exiftool-perl
-	exiftool 413511-1920x1080.jpg 
+	apt install libimage-exiftool-perl
+Compile
+	wget https://www.exiftool.org/Image-ExifTool-12.40.tar.gz
+	cd Image-ExifTool-12.40
+	perl Makefile.PL
+    sudo make install
 Homebrew
 	brew install exiftool
+Usage
+	exiftool 413511-1920x1080.jpg 
 
 Crear metadatos
 Para crear metadatos basta con escribir el "tag" que queremos crear. En este caso le añadimos el metadato copyright.

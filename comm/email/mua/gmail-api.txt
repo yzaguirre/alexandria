@@ -25,8 +25,8 @@ Not working:
 https://github.com/steve970/g7_gmail_capstone
 
 https://developers.google.com/gmail/api/quickstart/python
-	sudo -H pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-	sudo -H pip3 install --upgrade google-api-python-client
+	sudo -H pip install -U google-api-python-client google-auth-httplib2 google-auth-oauthlib
+	sudo -H pip install -U google-api-python-client
 
 Check credentials in API dashboard
 https://console.cloud.google.com/apis/dashboard

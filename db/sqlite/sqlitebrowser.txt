@@ -4,6 +4,8 @@ https://github.com/sqlitebrowser/sqlitebrowser
 Ubuntu
 	add-apt-repository -y ppa:linuxgndu/sqlitebrowser
 	apt install sqlitebrowser
+The following NEW packages will be installed:
+  libsqlcipher0 sqlitebrowser
 Compile
 	apt install libsqlite3-dev build-essential cmake qttools5-dev
 	wget https://github.com/sqlitebrowser/sqlitebrowser/archive/v3.12.2.tar.gz

@@ -13,7 +13,7 @@ Windows
 	choco install wezterm
 
 Configuration at
-~/.config/wezterm/wezterm.lua
+/home/david/.config/wezterm/wezterm.lua
 ~/.wezterm.lua
 C:\Program Files\WezTerm\wezterm.lua
 
@@ -24,7 +24,7 @@ return {
 }
 
 Bell
-https://wezfurlong.org/wezterm/config/lua/config/text_blink_ease_out.htmlno
+https://wezfurlong.org/wezterm/config/lua/config/text_blink_ease_out.html
 
 SSH client
 https://wezfurlong.org/wezterm/ssh.html

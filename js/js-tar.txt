@@ -1,0 +1,11 @@
+https://github.com/beatgammit/tar-js
+http://fhtr.blogspot.com/2010/05/parsing-tarballs-with-javascript.html
+
+https://thiscouldbebetter.wordpress.com/2014/04/13/extracting-the-contents-of-a-tar-file-in-javascript/
+The JavaScript code given below, when run, 
+	prompts the user to select a TAR file,
+	displays its contents,
+	and allows the user to download its component files if desired.
+https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+https://stackoverflow.com/questions/5301643/how-can-i-make-event-srcelement-work-in-firefox-and-what-does-it-mean
+~/sandbox/a/js/tar

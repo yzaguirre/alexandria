@@ -1,0 +1,51 @@
+Python Logging in 10 minutes
+https://www.youtube.com/watch?v=W1vOdzHCa-I
+
+Logging in Python || Learn Python Programming (Computer Science)
+https://www.youtube.com/watch?v=g8nQ90Hk328
+
+Logging Tutorial in Python | DON'T use Print for logging | How to Log messages in Python
+https://www.youtube.com/watch?v=gsa1oFn9n0M
+
+Python Tutorial: Logging Advanced - Loggers, Handlers, and Formatters
+https://www.youtube.com/watch?v=jxmzY9soFXg
+
+Python Logging Done Right
+https://www.youtube.com/watch?v=cMRn0NJho84
+
+https://docs.python.org/3.9/library/logging.html
+import logging
+help(logging)
+logging.basicConfig(filename="logs.log", filemode="w", level=logging.DEBUG)
+logging.info("Started program execution")
+logging.debug("Checking for full name...")
+
+Disable logging
+logging.disable()
+
+Other debugging levels
+logging.debug()
+logging.info()
+logging.warning()
+logging.error()
+logging.critical()
+
+Format
+https://docs.python.org/3.9/library/logging.html#formatter-objects
+logging.basicConfig(filename="logs.log", filemode="w", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+Specify our own logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+f = logger.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+fh = logging.FileHandler('saveToFile.log')
+fh.setFormatter(f)
+
+sh = logging.StreamHandler()
+sh.setFormatter(f)
+
+logger.addHandler(fh)
+logger.addHandler(sh)
+
+logger.info('Start of program')

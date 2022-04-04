@@ -228,3 +228,6 @@ SSH quoting
 https://www.chiark.greenend.org.uk/~cjwatson/blog/ssh-quoting.html
 https://news.ycombinator.com/item?id=27483077
 https://www.reddit.com/r/linux/comments/ny6jpo/ssh_quoting/
+
+Set up your SSH security key in less than two minutes - GitHub Checkout
+https://www.youtube.com/watch?v=EbsmqUJy5ag

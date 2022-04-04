@@ -1,5 +1,10 @@
+GNU bc arbitrary precision calculator language
+https://ftp.gnu.org/gnu/bc/
 Calculator
 	bc
 obase=2
 6
 110
+
+Is there any way to tell bc to use commas in numbers during calculation on Linux? 
+https://twitter.com/nixcraft/status/1509951097279946758

@@ -1,8 +1,15 @@
-https://www.mycli.net/
+A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
+https://www.mycli.net
+https://github.com/dbcli/mycli
+	sudo -H pip install -U mycli
+Homebrew
+	brew install mycli
+
+Usage
 	mycli --help
-	
 	mycli my_database
-    
-    mycli -u my_user -h my_host.com my_database
-    
+	mycli -u my_user -h my_host.com my_database
     mycli mysql://my_user@my_host.com:3306/my_database
+
+MYCLI - A command line interface for MYSQL
+https://www.youtube.com/watch?v=HodCTm37Zwo

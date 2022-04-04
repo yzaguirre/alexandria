@@ -1,0 +1,20 @@
+JTar is a simple Java Tar library, that provides an easy way to create and read tar files using IO streams.
+The API is very simple to use and similar to the java.util.zip package.
+https://code.google.com/p/jtar/
+https://github.com/kamranzafar/jtar
+
+Include a dependency in pom.xml (see maven.txt)
+  <dependency>
+    <groupId>org.kamranzafar</groupId>
+    <artifactId>jtar</artifactId>
+    <version>2.2</version>
+  </dependency>
+
+Tip: Always use buffered streams with jtar to speed up IO. 
+example
+https://code.google.com/p/jtar/source/browse/trunk/jtar/src/test/java/org/xeustechnologies/jtar/JTarTest.java
+
+Download the jar
+	mvn dependency:copy-dependencies
+Run
+	java -cp "target/dependency/jtar-2.2.jar:target/namaste-1.0-SNAPSHOT.jar:." me.yzaguirre.namaste.App

@@ -47,3 +47,6 @@ For Arch
 	PKCS11Provider /usr/lib/opensc-pkcs11.so
 For Fedora 
 	PCKS11Provider /usr/lib64/opensc-pkcs11.so
+
+Set up your SSH security key in less than two minutes - GitHub Checkout
+https://www.youtube.com/watch?v=EbsmqUJy5ag

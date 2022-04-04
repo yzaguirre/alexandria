@@ -1,10 +1,14 @@
-Debian repo
-	apt install adb android-libadb android-libbase android-libboringssl android-libcrypto-utils android-libcutils android-liblog android-sdk-platform-tools-common
+https://android.googlesource.com/platform/system/core
+	apt install adb
+The following NEW packages will be installed:
+  adb android-libadb android-libbase android-libboringssl android-libcrypto-utils android-libcutils android-liblog
+  android-sdk-platform-tools-common
 Symlink
-	ln -s /VMs/opt/android-sdk-linux/platform-tools/adb /usr/local/bin/adb
+	ln -s /opt/android-sdk/platform-tools/adb /usr/local/bin/adb
+Or	alias adb='/opt/android-sdk/platform-tools/adb'
 Homebrew
 	brew cask install android-platform-tools
-http://www.emoticode.net/bash/launch-app-sh.html
+
 key
 http://forum.xda-developers.com/showthread.php?t=2247471
 

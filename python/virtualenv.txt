@@ -1,0 +1,13 @@
+Install
+http://iamzed.com/2009/05/07/a-primer-on-virtualenv
+	sudo -H pip install -U virtualenv
+
+Initialize environment
+	python3 -m venv venv
+Activate
+	. venv/bin/activate
+Activate in Windows
+	venv\Scripts\activate.bat
+
+Deactivate
+	deactivate

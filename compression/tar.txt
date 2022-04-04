@@ -1,7 +1,7 @@
 See zip.txt
 http://gnuwin32.sourceforge.net/packages.html
 
-For use in other languajes, see java/jtar.txt and js/js-tar.txt
+For use in other languajes, see ../java/jtar.txt and ../js/js-tar.txt
 
 http://how-to.wikia.com/wiki/How_to_untar_a_tar_file_or_gzip-bz2_tar_file
 Type at the command prompt 
@@ -92,3 +92,6 @@ Putting the parts back together is a matter of
 	tar -x -M --file=part1.tar largefile.tar.gz
 Prepare volume #2 for part1.tar and hit return: n part2.tar
 Prepare volume #2 for part2.tar and hit return:
+
+How I Work: tar
+https://www.youtube.com/watch?v=oiSahje9T0A
