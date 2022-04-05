@@ -1,4 +1,4 @@
-https://mitmproxy.org/
+https://mitmproxy.org
 
 Mitmproxy 7
 https://mitmproxy.org/posts/releases/mitmproxy7/

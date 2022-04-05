@@ -14,8 +14,10 @@ Homebrew
 
 Config file
 https://httpie.io/docs/cli/config-file-directory
-	~/.config/httpie/config.json
-	%APPDATA%\httpie\config.json
+~/.config/httpie/config.json
+/home/david/.config/httpie/config.json
+%APPDATA%\httpie\config.json
+C:\Users\dyzag\AppData\Roaming\httpie\config.json
 
 Usage
 	http [OPTS] [METHOD] URL [REQUEST_ITEMS...]

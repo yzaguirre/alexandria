@@ -1,3 +1,8 @@
+🔒 A curated checklist of 300+ tips for protecting digital security and
+privacy in 2021
+https://github.com/Lissy93/personal-security-checklist
+https://news.ycombinator.com/item?id=30902426
+
 See keys.txt
 Smartcards
 https://www.reddit.com/r/homelab/comments/cuefc1/anyone_using_smartcards_in_their_lab_for_pkipiv/

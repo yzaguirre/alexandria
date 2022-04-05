@@ -1,1 +1,3 @@
-https://owntracks.org/
+OwnTracks - keep track of your own location
+https://owntracks.org
+https://news.ycombinator.com/item?id=30904003

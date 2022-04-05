@@ -1,7 +1,9 @@
 https://winscp.net
+https://github.com/winscp/winscp
 Windows
 	winget install WinSCP.WinSCP
 Add C:\Users\dyzag\AppData\Local\Programs\WinSCP to PATH
+	choco install winscp
 
 https://superuser.com/questions/239860/how-do-i-send-a-file-with-filezilla-from-the-command-line
 https://winscp.net/eng/docs/guide_automation

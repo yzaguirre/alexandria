@@ -159,3 +159,15 @@ $userChoice = $host.UI.PromptForChoice('Select File', 'Choose a file', $fileChoi
 
 # do something more useful here...
 Write-Host "you chose $($files.Get($userChoice - 1).FullName)"
+
+Escape new lines
+https://devblogs.microsoft.com/scripting/powertip-new-lines-with-powershell/
+Use the `n character
+Note
+If you need a carriage return, use `r
+For a carriage return and a new line, use `r`n
+
+Echo
+https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-7
+	Write-Output "Hello World"
+	Write-Output "Home directory: $HOME"

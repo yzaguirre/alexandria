@@ -103,6 +103,12 @@ using the command
 Python 3
 https://appdividend.com/2019/02/06/python-simplehttpserver-tutorial-with-example-http-request-handler/
 	python3 -m http.server 9000
+Simple Python 3 HTTP server for logging all GET and POST requests
+https://gist.github.com/mdonkers/63e115cc0c79b4f6b8b3a6b797e485c7#file-server-py
+https://pypi.org/project/pyserv/
+	sudo -H pip install -U pyserv
+	serv [port]
+	serv 8080
 
 http://michelanders.blogspot.com/2011/10/implementing-https-server-in-python.html
 http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python

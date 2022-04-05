@@ -1,0 +1,9 @@
+TLS/SSL and crypto library
+https://www.openssl.org
+https://github.com/openssl/openssl
+	apt install openssl
+Windows
+https://slproweb.com/products/Win32OpenSSL.html
+	winget install ShiningLight.OpenSSL.Light
+	choco install openssl.light
+See ../tunnels/openssl.txt

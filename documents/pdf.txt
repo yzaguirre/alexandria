@@ -73,3 +73,32 @@ Combine multiple pdf documents
 Concatenates PDF files while preserving all bookmarks
 https://gist.github.com/foonathan/9375720ec6da7c23ad874014bd5e4be8
 https://www.reddit.com/r/commandline/comments/t6glb1/i_made_a_script_that_concatenates_pdf_files_while/
+
+QPDF
+QPDF is a command-line tool and C++ library that performs
+content-preserving transformations on PDF files.
+https://qpdf.sourceforge.io
+https://github.com/qpdf/qpdf
+https://qpdf.readthedocs.io/en/stable/
+	apt install qpdf
+Binary
+	wget https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3.0cmake1/qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
+	unzip -d /usr/local qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
+Archive:  qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
+  inflating: /usr/local/bin/qpdf     
+  inflating: /usr/local/bin/fix-qdf  
+  inflating: /usr/local/bin/zlib-flate  
+  inflating: /usr/local/lib/libffi.so.6  
+  inflating: /usr/local/lib/libgnutls.so.30  
+  inflating: /usr/local/lib/libhogweed.so.4  
+  inflating: /usr/local/lib/libidn2.so.0  
+  inflating: /usr/local/lib/libjpeg.so.8  
+  inflating: /usr/local/lib/libnettle.so.6  
+    linking: /usr/local/lib/libqpdf.so.28  -> libqpdf.so.28.6.3 
+  inflating: /usr/local/lib/libqpdf.so.28.6.3  
+  inflating: /usr/local/lib/libtasn1.so.6  
+  inflating: /usr/local/lib/libunistring.so.2  
+finishing deferred symbolic links:
+  /usr/local/lib/libqpdf.so.28 -> libqpdf.so.28.6.3
+Windows
+	choco install qpdf

@@ -1,0 +1,61 @@
+lftp
+sophisticated command line file transfer program
+(ftp, http, sftp, fish, torrent)
+https://lftp.yar.ru
+https://github.com/lavv17/lftp
+https://lftp.yar.ru/lftp-man.html
+http://www.russbrooks.com/2010/11/19/lftp-cheetsheet
+https://www.commandlinefu.com/commands/using/lftp
+https://linoxide.com/linux-how-to/lftp-commands/
+https://www.cyberciti.biz/faq/lftp-mirror-example/
+https://smyl.es/using-lftp-ftp-to-mirrortransfer-files-from-one-server-to-another/
+	apt install lftp
+Compile
+https://www.linuxquestions.org/questions/slackware-14/configure-error-cannot-find-install-sh-or-install-sh-in-4175474739/
+https://askubuntu.com/questions/27677/cannot-find-install-sh-install-sh-or-shtool-in-ac-aux
+	apt install gnulib shtool libreadline-dev zlib1g-dev libssl-dev libexpat1-dev libgnutls28-dev
+The following NEW packages will be installed:
+  autopoint gnulib gperf libtext-unidecode-perl tex-common texinfo
+  shtool libreadline-dev
+  autogen autogen-doc guile-2.2-libs libopts25 libopts25-dev
+  libgmp-dev libgmpxx4ldbl libgnutls-dane0 libgnutls-openssl27 libgnutlsxx28 libidn2-dev libp11-kit-dev libtasn1-6-dev libtasn1-doc libunbound8
+  nettle-dev
+	wget https://github.com/lavv17/lftp/archive/refs/tags/v4.9.2.tar.gz
+	tar xf v4.9.2.tar.gz
+	cd lftp-4.9.2
+	vim bootstrap
+default_gnulib_url=https://git.savannah.gnu.org/git/gnulib.git
+	vim configure.ac
+AC_PREREQ([2.64])
+	sh bootstrap
+x	./autogen.sh
+x	libtoolize --force
+x	aclocal
+x	autoheader
+x	automake --force-missing --add-missing
+x	autoconf
+	./configure
+	make -j12
+	make install
+Windows
+	choco install lftp
+
+Usage
+	lftp ftp://miki@192.168.122.65
+	lftp -u 'USER,PASS' SITE
+Mirror
+	lftp -e "mirror -c" http://example.com/foobar/
+Only mirror html, css and js
+	lftp -u olduser,oldpassword -e 'mirror -i "\.(html?|css|js)$" /home/olduser/public_html /home/newuser/public_html' ftp.oldserver.com
+Download
+	lftp -e 'set net:timeout 10; get yourfile.mp4; bye' -u user,password ftp.foo.com
+	lftp -e 'set net:timeout 10; get yourfile.mp4 -o /local/path/yourfile.mp4; bye' -u user,password ftp.foo.com
+Exit the shell with
+	bye
+Run a command
+	lftp -e 'mirror /home/miki/ /home/miki/Videos/' -u miki,password
+Run a script
+	cat script.txt
+
+	lftp -f script.txt
+	open

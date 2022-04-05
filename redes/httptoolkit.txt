@@ -1,3 +1,5 @@
-https://httptoolkit.tech/
+https://httptoolkit.tech
+https://github.com/httptoolkit/httptoolkit
+	winget install HTTPToolKit.HTTPToolKit
 	scoop bucket add extras
 	scoop install httptoolkit

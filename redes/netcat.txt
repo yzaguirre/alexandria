@@ -1,0 +1,80 @@
+http://nmap.org/ncat/
+	apt install ncat
+Se instalarán los siguientes paquetes NUEVOS:
+  liblua5.3-0 ncat
+Termux
+	apt install nmap-ncat
+
+http://nmap.org/ncat/guide/ncat-file-transfer.html
+http://supportex.net/2011/06/ncat-transfer-files-ssh/
+Transfer a file, receiver listens
+	host2$ ncat -l > outputfile
+	host1$ ncat --send-only host2 < inputfile
+Transfer a file, sender listens
+x	host1$ ncat -l --send-only < inputfile
+x	host2$ ncat host1 > outputfile
+Chat
+	server$ ncat -l -p 55556
+	client$ ncat osuse64.local 55556
+	
+http://www.commandlinefu.com/commands/view/13460/simple-multi-user-encrypted-chat-server-for-5-users
+	ncat -vlm 5 --ssl --chat 9876
+Client
+	ncat --ssl localhost 9876
+
+http://mylinuxbook.com/linux-netcat-command/
+Create Server
+	$ nc -l -p 55556
+If netcat openbsd
+	$ nc -l 55556
+Connect to Server
+	$ nc localhost 55556
+
+http://www.linuxquestions.org/questions/linux-general-1/copy-disk-to-disk-between-servers-4175512857/
+#On the new VM, start a listener:
+  nc -l 8888|bzip2 -d|dd bs=16M of=/dev/sda
+#On the old computer start a sender:
+  dd bs=16M if=/dev/sda|bzip2 -c|nc VM.SERVER.IP 8888
+
+For Windows
+http://joncraton.org/blog/46/netcat-for-windows/
+Paste it at the following directory
+	C:\Program Files\nc111nt_rodneybeede
+Append it to the PATH en Variable
+Send a file using netcat
+	$ cat file | netcat < targethost-IP > 1234
+Listing on the target machine
+	$ netcat -lp 1234 | cat
+
+Using netcat to Transfer Data
+http://nakkaya.com/2009/04/15/using-netcat-for-file-transfers/
+x	recipient$ netcat -l -p 55556 | pv -t > fedora.iso.gz
+	recipient$ netcat -l -p 55556 > fedora.iso.gz
+x	sender$ cat /iso/Fedora-14-i686-Live-Desktop.iso.gz | pv -b | netcat recipient 55556
+	sender$ cat /iso/Fedora-14-i686-Live-Desktop.iso.gz | netcat recipient 55556
+Using tar.gz
+recipient$ netcat -l -p 55556 | pv -t | tar xvf -
+sender$ tar cvf - /iso | pv -b | netcat recipient 55556
+
+http://beatofthegeek.com/2014/01/5-cool-things-to-do-with-netcat.html
+	nc -e "/bin/sh" 127.0.0.1 -lp 8080
+http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks/
+	nc -lp 1337 -e /bin/bash 10.7.7.1
+
+SSL Encription
+Include the --ssl option to turn on the SSL protocol for TCP connections.
+	ncat --ssl --verbose deadliestwebattacks.wordpress.com 443
+Use the --ssl-cert and --ssl-key options for enabling SSL when Ncat is in listen mode:
+	ncat --ssl-cert cert.pem --ssl-key key.pem --verbose -l 24601
+Connect to the port
+	ncat --ssl-verify host port
+
+Busybox
+https://news.ycombinator.com/item?id=12631417
+
+https://blog.ikuamike.io/posts/2021/netcat/
+https://news.ycombinator.com/item?id=27973020
+
+https://blog.niklasottosson.com/mac/using-netcat-to-catch-request-data-from-curl/
+	nc -l 8000
+	curl -F attachment=@file.csv http://localhost:8000
