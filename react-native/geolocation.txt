@@ -68,3 +68,12 @@ Get rid of them by setting:
 <MapView toolbarEnabled={false} />
 
 https://github.com/react-native-maps/react-native-maps/issues/3715
+
+KML
+https://github.com/react-native-maps/react-native-maps/issues/967
+https://github.com/react-native-maps/react-native-maps/issues/2438
+https://stackoverflow.com/questions/54289417/react-google-maps-how-do-i-create-a-clickable-kml-map-that-shows-me-meta-data-o
+https://www.ydhnwb.dev/2021/10/load-kml-file-to-your-react-native-maps.html
+Google Earth KML Into React Native Maps
+https://www.youtube.com/watch?v=Nd-WGY4cHHo
+https://stackoverflow.com/questions/51240013/i-have-the-kml-and-csv-file-and-want-to-load-file-in-the-react-native
