@@ -1,0 +1,8 @@
+Progress indicators and spinners for React Native
+https://github.com/oblador/react-native-progress
+	yarn add react-native-progress react-native-svg
+	npx react-native link react-native-svg
+
+Progress indicator for networked images in React Native
+https://github.com/oblador/react-native-image-progress
+	yarn add react-native-image-progress

@@ -1,0 +1,6 @@
+bzip2 is a free and open-source file compression program
+http://www.bzip.org
+https://sourceforge.net/projects/bzip2/
+	apt install bzip2
+Windows
+	choco install bzip2

@@ -53,3 +53,8 @@ be able to recover
 Encrypt, rescue, transfer
 http://www.linuxquestions.org/questions/linux-newbie-8/learn-the-dd-command-362506/
 check encryption.txt
+
+HFSExplorer - An application for accessing HFS/HFS+/HFSX file systems.
+https://www.catacombae.org/hfsexplorer/
+https://github.com/unsound/hfsexplorer
+	choco install hfsexplorer

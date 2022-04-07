@@ -5,9 +5,11 @@ Create one of a kind data visualizations with fully customizable styles and beha
 Victory uses the same API for web and React Native applications for easy cross-platform charting.
 https://formidable.com/open-source/victory/
 https://formidable.com/open-source/victory/docs/native/
-https://github.com/FormidableLabs/victory-native
+https://github.com/FormidableLabs/victory/tree/main/packages/victory-native
 	yarn add victory-native
 	yarn add react-native-svg
+https://stackoverflow.com/questions/53326897/invariant-violation-requirenativecomponent-rnsvgpath-was-not-found-in-the-ui
+	npx react-native link react-native-svg
 
 LCRN EP10 - Cryptocurrency App - React Native UI
 https://youtu.be/xBmx2eaozck?t=5005

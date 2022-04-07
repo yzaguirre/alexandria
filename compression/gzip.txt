@@ -1,0 +1,25 @@
+gzip is a single-file/stream lossless data compression utility,
+where the resulting compressed file generally has the suffix .gz.
+gzip also refers to the associated compressed data format used
+by the utility.
+https://www.gzip.org
+GNU Gzip is a popular data compression program originally written by
+Jean-loup Gailly for the GNU project. Mark Adler wrote
+the decompression part.
+https://www.gnu.org/software/gzip/
+Compile
+	wget https://ftp.gnu.org/gnu/gzip/gzip-1.11.tar.xz
+	wget https://ftp.gnu.org/gnu/gzip/gzip-1.11.tar.xz.sig
+	gpg --verify gzip-1.11.tar.xz.sig
+	tar xf gzip-1.11.tar.xz
+Windows
+gzip version 1.3.12
+http://gnuwin32.sourceforge.net/packages/gzip.htm
+	choco install gzip
+https://sourceforge.net/projects/gzip-for-windows/files/
+	7z e -oC:\Users\dyzag\bin '.\Gzip-1.10_Win32(static).zip'
+
+See pigz.txt
+
+Compress
+	gzip mystuff.tar

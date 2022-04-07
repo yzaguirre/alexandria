@@ -1,0 +1,8 @@
+open-source binary diff, differential compression tools,
+VCDIFF (RFC 3284) delta compression
+http://xdelta.org
+https://github.com/jmacd/xdelta
+	wget https://github.com/jmacd/xdelta/archive/refs/tags/v3.1.0.tar.gz
+	tar xf v3.1.0.tar.gz
+Windows
+	choco install xdelta3

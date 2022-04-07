@@ -1,0 +1,9 @@
+https://www.nongnu.org/lzip/
+	apt install lzip2
+Compile
+	wget http://download.savannah.nongnu.org/releases/lzip/lzip-1.23.tar.gz
+	wget http://download.savannah.nongnu.org/releases/lzip/lzip-1.23.tar.gz.sig
+	gpg --verify lzip-1.23.tar.gz.sig
+	tar xf lzip-1.23.tar.gz
+Windows
+	choco install lzip2

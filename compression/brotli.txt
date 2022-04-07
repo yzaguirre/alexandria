@@ -1,0 +1,3 @@
+Brotli compression format
+https://www.brotli.org
+https://github.com/google/brotli

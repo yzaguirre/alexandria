@@ -65,6 +65,9 @@ The || operator is "concatenate" - it joins together the two strings of its oper
 
 https://www.sqlitetutorial.net/sqlite-primary-key/
 
+String Format
+https://www.sqlite.org/printf.html
+
 Dates
 https://sqlite.org/lang_datefunc.html
 https://www.sqlitetutorial.net/sqlite-date/
@@ -75,6 +78,11 @@ https://www.sqlitetutorial.net/tryit/query/sqlite-date/#11
 	julianday(time-value, modifier, modifier, ...)
 	strftime(format, time-value, modifier, modifier, ...)
 	strftime('%Y-%m-%d', ...)
+
+Porcentages
+https://stackoverflow.com/questions/9628645/use-printf-to-format-floats-without-decimal-places-if-only-trailing-0s
+https://stackoverflow.com/questions/14499579/use-sprintf-to-format-floats-with-no-decimal-places-if-integer
+"%g\n"
 
 CSV
 See sqlite-csv.txt

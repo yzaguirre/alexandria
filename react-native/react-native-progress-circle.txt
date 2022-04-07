@@ -1,3 +1,4 @@
+Archived
 https://github.com/MrToph/react-native-progress-circle
 	yarn add react-native-progress-circle
 import ProgressCircle from 'react-native-progress-circle'
@@ -16,3 +17,15 @@ render() {
         </ProgressCircle>
     )
 }
+
+React Native component for creating animated, circular progress
+with ReactART
+https://github.com/bartgryszko/react-native-circular-progress
+	yarn add react-native-circular-progress react-native-svg
+	npx react-native link react-native-svg
+
+A React Native animated progress circle component with no dependencies
+(aside from react-native)
+https://github.com/simonsteer/rn-animated-progress-circle
+
+See react-native-progress.txt

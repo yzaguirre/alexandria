@@ -1,3 +1,17 @@
 https://gitforwindows.org
 	winget install Git.Git
 Uses ~/.bashrc
+
+https://www.develves.net/blogs/asd/articles/using-git-with-powershell-on-windows-10/
+A PowerShell environment for Git
+http://dahlbyk.github.io/posh-git/
+https://github.com/dahlbyk/posh-git
+	cd C:\Users\dyzag\Documents\GitHub\public
+	git clone https://github.com/dahlbyk/posh-git.git
+	cd posh-git
+Or
+	wget https://github.com/dahlbyk/posh-git/archive/refs/tags/v1.1.0.zip
+	7z x v1.1.0.zip
+	rm v1.1.0.zip
+	cd posh-git-1.1.0
+	.\install.ps1

@@ -1,2 +1,12 @@
 https://zlib.net/pigz/
+https://github.com/madler/pigz
 	apt install pigz
+Compile
+	wget https://zlib.net/pigz/pigz-2.7.tar.gz
+	wget https://zlib.net/pigz/pigz-2.7-sig.txt
+	gpg --verify pigz-2.7-sig.txt pigz-2.7.tar.gz
+	sha256sum pigz-2.7.tar.gz
+b4c9e60344a08d5db37ca7ad00a5b2c76ccb9556354b722d56d55ca7e8b1c707
+Windows
+https://sourceforge.net/projects/pigz-for-windows/
+https://sourceforge.net/projects/pigzforwindows/
