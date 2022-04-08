@@ -36,6 +36,7 @@ https://www.sqlitetutorial.net/sqlite-sum/
 
 String functions
 https://www.sqlitetutorial.net/sqlite-string-functions/
+https://www.sqlitetutorial.net/sqlite-functions/sqlite-substr/
 
 https://www.sqlite.org/cli.html
 https://www.sqlite.org/lang.html

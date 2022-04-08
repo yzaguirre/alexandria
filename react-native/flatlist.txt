@@ -36,3 +36,9 @@ The FlatList/ScrollView contentContainerStyle prop wraps all the
 child components-what's "inside" the FlatList if you will-and should
 never have a defined height or flex value. If you need to set a
 flex: 1 for the FlatList itself use style={{flex: 1}} instead. Cheers!
+
+Delay
+https://github.com/facebook/react-native/issues/18135
+https://reactnative.dev/docs/optimizing-flatlist-configuration#avoid-anonymous-function-on-renderitem
+https://medium.com/swlh/how-to-use-flatlist-with-hooks-in-react-native-and-some-optimization-configs-7bf4d02c59a0
+https://github.com/computerjazz/react-native-draggable-flatlist/issues/120

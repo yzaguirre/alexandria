@@ -1,5 +1,6 @@
 🚩 FastImage, performant React Native image component.
 https://github.com/DylanVann/react-native-fast-image
+https://reactnative.dev/docs/optimizing-flatlist-configuration#use-cached-optimized-images
 	yarn add react-native-fast-image
 
 https://www.reddit.com/r/reactnative/comments/tqctd1/caching_images_in_react_native_a_tutorial_with/

@@ -48,6 +48,7 @@ https://reactnavigation.org/docs/stack-navigator/
 https://stackoverflow.com/questions/45734664/react-navigation-get-stack-header-height
 import { useHeaderHeight, } from '@react-navigation/stack'
 const headerHeight = useHeaderHeight()
+https://reactnavigation.org/docs/headers/#using-params-in-the-title
 
 https://reactnavigation.org/docs/use-scroll-to-top/
 https://www.reddit.com/r/reactnative/comments/nlastt/scrollview_position/
