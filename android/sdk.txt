@@ -13,7 +13,7 @@ Download old sdk tools
 	wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 	mkdir /opt/android-sdk
 	unzip -q sdk-tools-linux-4333796.zip -d /opt/android-sdk
-Download tools
+Download commandline tools
 	wget https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip
 	sha256sum commandlinetools-linux-8092744_latest.zip
 d71f75333d79c9c6ef5c39d3456c6c58c613de30e6a751ea0dbd433e8f8b9cbf
@@ -21,15 +21,15 @@ Setup
 https://android.tutorials24x7.com/blog/how-to-install-android-sdk-tools-on-ubuntu
 https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se
 https://groups.google.com/g/kivy-users/c/2C7mzjZyj2M?pli=1
-	mkdir -p /opt/android-sdk/cmdline-tools
-	unzip commandlinetools-linux-8092744_latest.zip -d /opt/android-sdk/cmdline-tools
-	mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-sdk/cmdline-tools/tools
+	mkdir -p /opt/android-studio/cmdline-tools
+	unzip commandlinetools-linux-8092744_latest.zip -d /opt/android-studio/cmdline-tools
+	mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-studio/cmdline-tools/latest
 	vim ~/.profile
-PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
+PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 
 Download platform tools. Usually installed using sdkmanager.
 	wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
-	unzip platform-tools-latest-linux.zip -d /opt/android-sdk
+	unzip platform-tools-latest-linux.zip -d /opt/android-studio
 	PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 Android Studio
 	wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/android-studio-2021.1.1.22-linux.tar.gz

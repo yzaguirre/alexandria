@@ -1,0 +1,8 @@
+Explorer++ is a lightweight and fast file manager for Windows.
+https://explorerplusplus.com
+https://github.com/derceg/explorerplusplus
+	choco install explorerplusplus
+Beta
+	wget https://github.com/derceg/explorerplusplus/releases/download/version-1.4.0-beta-2/explorerpp_x64.zip
+	wget https://github.com/derceg/explorerplusplus/releases/download/version-1.4.0-beta-2/explorerpp_x64_symbols.zip
+	7z x -oC:\Users\dyzag\bin explorerpp_x64.zip Explorer++.exe

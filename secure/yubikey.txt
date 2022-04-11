@@ -50,3 +50,9 @@ For Fedora
 
 Set up your SSH security key in less than two minutes - GitHub Checkout
 https://www.youtube.com/watch?v=EbsmqUJy5ag
+
+Configuring YubiKey 5 for SSH/GPG access to GitHub
+https://www.youtube.com/watch?v=fEftwheNMm8
+
+Setting up the YubiKey on Ubuntu (Desktop and Server)
+https://www.youtube.com/watch?v=pfVhAtJt5_o

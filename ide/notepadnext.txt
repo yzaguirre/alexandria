@@ -1,0 +1,6 @@
+A cross-platform, reimplementation of Notepad++
+https://github.com/dail8859/NotepadNext
+https://news.ycombinator.com/item?id=30959025
+	wget https://github.com/dail8859/NotepadNext/releases/download/v0.4.9/NotepadNext-v0.4.9-Installer.exe
+	start NotepadNext-v0.4.9-Installer.exe
+Installed at C:\Program Files\Notepad Next

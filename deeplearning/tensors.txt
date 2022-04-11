@@ -1,3 +1,6 @@
 What I wish someone had told me about tensor computation libraries
 https://eigenfoo.xyz/tensor-computation-libraries/
 https://news.ycombinator.com/item?id=25435028
+
+What's a Tensor?
+https://www.youtube.com/watch?v=f5liqUk0ZTw

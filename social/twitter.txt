@@ -56,3 +56,14 @@ https://github.com/draftbit/twitter-lite
 Search
 https://www.teachthought.com/technology/how-to-search-for-tweets-by-date/
 from:username since:yyyy-mm-dd until:yyyy-mm-dd
+
+https://twitter.com/TessaRDavis/status/1512402354435510276
+- from:twittername
+- keyword1 OR keyword2
+- min_faves:2000
+- min_retweets:2000
+- filter:links
+- filter:images
+- until:YYYY-MM-DD
+- since:YYYY-MM-DD
+- near:location within:15mi

@@ -1,0 +1,19 @@
+Notepad2-zufuliu is a light-weight Scintilla-based text editor for Windows
+with syntax highlighting, code folding, auto-completion and API list
+for about 80 programming languages/documents, bundled with file
+browser plugin metapath.
+https://github.com/zufuliu/notepad2
+	wget https://github.com/zufuliu/notepad2/releases/download/v4.22.03r4130/Notepad2_en_x64_v4.22.03r4130.zip
+	7z x -o'C:\Program Files\Notepad2' Notepad2_en_x64_v4.22.03r4130.zip
+	path add -g 'C:\Program Files\Notepad2'
+See ../MS/path.txt
+
+A fast and light-weight Notepad-like text editor with syntax highlighting.
+http://www.flos-freeware.ch/notepad2.html
+	choco install notepad2
+	
+
+https://xhmikosr.github.io/notepad2-mod/
+https://github.com/XhmikosR/notepad2-mod
+	winget install Notepad2mod.Notepad2mod
+	choco install notepad2-mod
