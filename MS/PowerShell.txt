@@ -171,3 +171,7 @@ Echo
 https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-7
 	Write-Output "Hello World"
 	Write-Output "Home directory: $HOME"
+
+Save to file
+	Tee-Object file.txt
+	Out-File file.txt

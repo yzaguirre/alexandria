@@ -1,0 +1,9 @@
+https://wiki.gnome.org/Projects/Vala/
+https://wiki.gnome.org/Projects/Vala/ValaOnLinux
+	apt install valac
+The following NEW packages will be installed:
+  libvala-0.52-0 libvalacodegen-0.52-0 valac valac-0.52-vapi valac-bin
+Ubuntu
+	add-apt-repository ppa:vala-team
+	apt install software-properties-common
+	apt install valac

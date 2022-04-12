@@ -13,14 +13,14 @@ https://news.ycombinator.com/item?id=17381184
 Install
 	apt install filezilla
 https://filezilla-project.org/download.php?show_all=1
-	wget -O FileZilla_3.58.0_x86_64-linux-gnu.tar.bz2 "https://dl1.cdn.filezilla-project.org/client/FileZilla_3.58.0_x86_64-linux-gnu.tar.bz2?h=qOXWI9dXz_SmKWYiF2CORg&x=1649091453"
-	sha512sum FileZilla_3.58.0_x86_64-linux-gnu.tar.bz2
-ec38e783dd4e65ce983dfb52399ca2166e90598c8eafaaf2e55217163fdb035879f6e057c4f703d0d9ece90a03ea5fe1b8f1c2ccce7e47ffb9b0d65d6d6bf717
-	wget -O FileZilla_3.58.0.sha512 "https://dl1.cdn.filezilla-project.org/client/FileZilla_3.58.0.sha512?h=lWnxz1CP6QGgEM-mJv6a0Q&x=1649091453"
-	sha512sum -c --ignore-missing FileZilla_3.58.0.sha512
-	sha512sum FileZilla_3.58.0.sha512
-51f67ecc70670ae0bfbc7865ded525e81c494a580552266de4e4f7347f8762b9ae397cebfcbf738f106524dd16ab8e3b777def112e27d883ff676e6df28c2c8a
-	tar xf FileZilla_3.58.0_x86_64-linux-gnu.tar.bz2 -C /opt
+	wget -O FileZilla_3.59.0_x86_64-linux-gnu.tar.bz2 "https://dl1.cdn.filezilla-project.org/client/FileZilla_3.59.0_x86_64-linux-gnu.tar.bz2?h=lifL55c0AM6AZtJnfAwVsg&x=1649691951"
+	sha512sum FileZilla_3.59.0_x86_64-linux-gnu.tar.bz2
+89995219f6cde383bef5c1cee8536790a0602d4f4d8ec92650b794549e9c4a4ab9525ec34a2d63fc26d3ddbba6c67db60c51ddc8fe5322211026cf3dbd228db0
+	wget -O FileZilla_3.59.0.sha512 "https://dl1.cdn.filezilla-project.org/client/FileZilla_3.59.0.sha512?h=XBcDZuvlj4UkM8_l4IMRtA&x=1649691951"
+	sha512sum -c --ignore-missing FileZilla_3.59.0.sha512
+	sha512sum FileZilla_3.59.0.sha512
+5556f37cfe7887199a29948301b85423c2d701f12572d973a405740d4db5cfbe73a4a4e18d97f6d9c9e170f3910b974005bc43e5ac1b964994a0461650678706
+	tar xf FileZilla_3.59.0_x86_64-linux-gnu.tar.bz2 -C /opt
 	ln -s /opt/FileZilla3/bin/filezilla /usr/local/bin/filezilla
 Windows
 	winget install TimKosse.FileZilla.Client

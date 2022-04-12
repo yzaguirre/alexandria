@@ -1,0 +1,18 @@
+https://mesonbuild.com
+https://github.com/mesonbuild/meson
+https://ninja-build.org/
+	apt install meson ninja-build
+Pip
+	sudo -H pip install -U meson ninja
+Compile
+	wget https://github.com/mesonbuild/meson/releases/download/0.62.0/meson-0.62.0.tar.gz
+	wget https://github.com/mesonbuild/meson/releases/download/0.62.0/meson-0.62.0.tar.gz.asc
+	gpg --verify meson-0.62.0.tar.gz.asc
+	tar xf meson-0.62.0.tar.gz
+	cd meson-0.62.0
+Windows
+	wget https://github.com/mesonbuild/meson/releases/download/0.62.0/meson-0.62.0-64.msi
+	explorer.exe meson-0.62.0-64.msi
+
+What is Meson (and Ninja)? [Build system for C/C++, Rust, and Java]
+https://www.youtube.com/watch?v=A3Pq3E1S8ss

@@ -1,0 +1,28 @@
+Animated collapsible component for React Native, good for accordions,
+toggles etc
+https://github.com/oblador/react-native-collapsible
+https://stackoverflow.com/questions/54055950/sort-and-group-react-native-sectionlist-by-key
+	yarn add react-native-collapsible
+import Collapsible from 'react-native-collapsible';
+
+() => (
+  <Collapsible collapsed={isCollapsed}>
+    <SomeCollapsedView />
+  </Collapsible>
+);
+
+An expandable View element implemented using react-native-collapsible
+https://eliav2.github.io/react-native-collapsible-view/
+https://github.com/Eliav2/react-native-collapsible-view
+	yarn add @eliav2/react-native-collapsible-view
+import React from "react";
+import { Text } from "react-native";
+import CollapsibleView from "@eliav2/react-native-collapsible-view";
+
+export default () => {
+  return (
+    <CollapsibleView title="Simple Collapsible View">
+      <Text>hey there!</Text>
+    </CollapsibleView>
+  );
+};

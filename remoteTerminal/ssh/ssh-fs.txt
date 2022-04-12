@@ -1,16 +1,30 @@
- Using the SSH filesystem (sshfs), you can mount any directory from an SSH
+A network filesystem client to connect to SSH servers
+https://github.com/libfuse/sshfs
+Using the SSH filesystem (sshfs), you can mount any directory from an SSH
 server that your user account can access from your local Linux system. sshfs pro-
 vides encryption of the mount operation as well as of all the data being transferred.
-
-Install sshfs software
-	# apt-get install sshfs
+	apt install sshfs
+Compile
+	apt install libfuse3-dev
+See ../../gnulinuxos/meson.txt
+The following NEW packages will be installed:
+  libfuse3-3 libfuse3-dev
+	wget https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.2/sshfs-3.7.2.tar.xz
+	wget https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.2/sshfs-3.7.2.tar.xz.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xED31791B2C5C1613AF388B8AD113FCAC3C4E599F
+	gpg --verify sshfs-3.7.2.tar.xz.asc
+	tar xf sshfs-3.7.2.tar.xz
+	cd sshfs-3.7.2
+	meson build
+	ninja -C build
+	sudo ninja install -C build
 Create mount point
-	$ mkdir /var/tmp/chris
+	mkdir /var/tmp/chris
 añadirse al grupo fuse
-http://www.taringa.net/posts/linux/17914915/Como-montar-carpetas-remotamente-con-SSHFS.html
-	# gpasswd -a $USER fuse
+https://www.taringa.net/posts/linux/17914915/Como-montar-carpetas-remotamente-con-SSHFS.html
+	sudo gpasswd -a $USER fuse
 Mount remote directory
-	$ sshfs chris@10.0.0.5:/home/chris /var/tmp/chris
+	sshfs chris@10.0.0.5:/home/chris /var/tmp/chris
 When you are done using the remote directory, you can unmount it with the fuser-
 mount command (part of the fuse-utils package):
-	$ fusermount -u /var/tmp/chris
+	fusermount -u /var/tmp/chris

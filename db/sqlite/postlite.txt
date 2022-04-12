@@ -1,0 +1,13 @@
+Postgres wire compatible SQLite proxy.
+https://github.com/benbjohnson/postlite
+https://news.ycombinator.com/item?id=30875837
+Compile
+	git clone https://github.com/benbjohnson/postlite.git
+	cd postlite
+	go build -tags vtable ./cmd/postlite
+
+Usage
+Execute the command with the directory that contains your SQLite databases:
+	postlite -data-dir /data
+On another machine, you can connect via the regular Postgres port of 5432:
+	psql --host HOSTNAME my.db

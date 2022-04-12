@@ -1,5 +1,23 @@
 https://wiki.gnome.org/Apps/Gitg
+https://gitlab.gnome.org/GNOME/gitg/
 	apt install gitg
+Compile
+	apt install valac libgee-0.8-dev gobject-introspection libgirepository1.0-dev gsettings-desktop-schemas-dev libgspell-1-dev libgtksourceview-4-dev libgit2-glib-1.0-dev
+The following NEW packages will be installed:
+  gir1.2-gee-0.8 libgee-0.8-dev
+  gobject-introspection python3-markdown
+  gir1.2-gdesktopenums-3.0 gsettings-desktop-schemas-dev
+  gir1.2-gspell-1 libenchant-2-dev libgspell-1-dev
+  gir1.2-ggit-1.0 libgit2-glib-1.0-0 libgit2-glib-1.0-dev
+See clang/valac.txt
+	wget -O LATEST-IS-41.tar.xz https://download.gnome.org/sources/gitg/41/LATEST-IS-41
+	wget https://download.gnome.org/sources/gitg/41/gitg-41.tar.xz
+	wget https://download.gnome.org/sources/gitg/41/gitg-41.news
+	wget https://download.gnome.org/sources/gitg/41/gitg-41.sha256sum
+	sha256sum -c --ignore-missing gitg-41.sha256sum
+	tar xf gitg-41.tar.xz
+	cd gitg-41
+	meson build
 Windows
 	winget install gnome.gitg
 	choco install gitg
