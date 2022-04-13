@@ -1,0 +1,4 @@
+The  proc  filesystem  is  a  pseudo-filesystem which provides an
+interface to kernel data structures
+
+https://twitter.com/nixcraft/status/1513620289279594496

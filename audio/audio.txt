@@ -91,3 +91,7 @@ An automated SoX recording will continue to run until the Pi runs out of SD card
 space. We can use the trim effect to stop the recording (or playback) after a certain
 amount of time has elapsed:
 	sox -t alsa plughw:1 myrec.wav trim 0 00:30:00
+
+Super fast fixed-point MP3 encoder.
+https://github.com/toots/shine
+https://news.ycombinator.com/item?id=30998693
