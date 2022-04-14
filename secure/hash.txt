@@ -63,3 +63,18 @@ Windows
 	cd C:\Users\dyzag\bin
 	sha3sum -c sha3sum.hash
 	del sha3sum.hash
+
+PowerShell hashing
+See ../MS/PowerShell.txt
+	Get-FileHash [-Path] String[]
+         [-Algorithm {SHA1 | SHA256 | SHA384 | SHA512 | MACTripleDES | MD5 | RIPEMD160}]
+            [CommonParameters]
+	Get-FileHash -LiteralPath String[]
+         [-Algorithm {SHA1 | SHA256 | SHA384 | SHA512 | MACTripleDES | MD5 | RIPEMD160}]
+            [CommonParameters]
+      Get-FileHash -InputStream Stream
+         [-Algorithm {SHA1 | SHA256 | SHA384 | SHA512 | MACTripleDES | MD5 | RIPEMD160}]
+            [CommonParameters]
+Example
+	Get-FileHash *db -Algorithm SHA256 | Format-List
+	Get-FileHash *db -Algorithm SHA256 | Sort-Object -Property Hash

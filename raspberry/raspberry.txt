@@ -160,3 +160,6 @@ https://forums.raspberrypi.com/viewtopic.php?t=320392
 https://forums.raspberrypi.com/viewtopic.php?f=36&t=320383
 https://raspberrypi.stackexchange.com/questions/121609/rfkill-cannot-open-dev-rfkill-permission-denied
 Disable "wait for network" on raspi-config
+
+https://gwolf.org/2022/04/how-is-the-free-firmware-for-the-raspberry-progressing.html
+https://news.ycombinator.com/item?id=31000725

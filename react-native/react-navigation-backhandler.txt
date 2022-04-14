@@ -1,5 +1,5 @@
 Easily handle Android back button behavior with React-Navigation.
-See ~/react-native/react-native-alert-async.txt
+See react-native-alert-async.txt
 https://github.com/vonovak/react-navigation-backhandler
 https://aboutreact.com/handling-android-back-button-press/
 https://farzadyz.com/useBackButton-hook-react-native/

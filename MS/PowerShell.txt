@@ -175,3 +175,7 @@ https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/
 Save to file
 	Tee-Object file.txt
 	Out-File file.txt
+
+Sort-Object
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-7.2
+	Get-FileHash *db -Algorithm SHA256 | Sort-Object -Property Hash
