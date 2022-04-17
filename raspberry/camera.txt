@@ -1,0 +1,40 @@
+Compare Pi Camera NoIR v1 vs V2
+https://www.youtube.com/watch?v=iQdLqF5XtcM
+
+How to Setup the Raspberry Pi NoIR Camera V2 8MP
+https://community.element14.com/products/raspberry-pi/raspberrypi_projects/b/blog/posts/noir-v2---video-streaming-baby-monitor
+https://www.youtube.com/watch?v=bpzGN35oaJ4
+
+Raspberry Pi - NoIR Camera V2 - Unboxing and Initial Test
+https://www.youtube.com/watch?v=POUdbzW5m6s
+
+Raspberry Pi Project | NoIR Camera V2 | 3D Print Project
+https://www.thingiverse.com/thing:1864117
+https://www.youtube.com/watch?v=1VG_J5iW5Ws
+
+Raspberry Pi Camera Group Test
+https://www.youtube.com/watch?v=-NxpCirSqm4
+
+Raspberry Pi Cameras - The BIG Picture
+https://www.youtube.com/watch?v=MVgr302PNwY
+
+Enable camera module
+	sudo raspi-config
+Under configure connections peripherals
+
+Save picture
+	raspistill -o test.jpg
+Save 15 second video
+	raspvid -o video-test.h264 -t 15000
+Play video
+	omxplayer video-test.h264
+
+Python
+import picamera import PiCamera
+from time import sleep
+camera = PiCamera()
+camera.start_preview()
+camera.start_recording('/home/pi/Desktop/video.h264')
+sleep(5)
+camera.stop_recording()
+camera.stop_preview()

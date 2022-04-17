@@ -1,0 +1,26 @@
+https://ziglang.org
+https://github.com/ziglang/zig
+https://ziglearn.org
+https://github.com/ziglang/zig/wiki/Install-Zig-from-a-Package-Manager
+Binary
+	wget https://ziglang.org/download/0.9.1/zig-linux-x86_64-0.9.1.tar.xz
+	sha256sum zig-linux-x86_64-0.9.1.tar.xz
+be8da632c1d3273f766b69244d80669fe4f5e27798654681d77c992f17c237d7
+	tar xf zig-linux-x86_64-0.9.1.tar.xz -C /opt
+Add to PATH environment variable
+/opt/zig-linux-x86_64-0.9.1
+Termux
+	apt install zig
+Windows
+	choco install zig
+Homebrew
+	brew install zig
+
+Getting started
+	mkdir hello-world
+	cd hello-world
+	zig init-exe
+
+Zig self hosted compiler is now capable of building itself
+https://github.com/ziglang/zig/pull/11442
+https://news.ycombinator.com/item?id=31052029

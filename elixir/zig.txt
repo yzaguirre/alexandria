@@ -1,3 +1,5 @@
 Zig monthly, October 2021: Games, gamedev, Elixir, tools and more
 https://zigmonthly.org/letters/2021/october/
 https://news.ycombinator.com/item?id=29091947
+
+See ../ziglang/zig.txt

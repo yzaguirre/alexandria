@@ -1,0 +1,11 @@
+https://retropie.org.uk
+https://retropie.org.uk/download/#Raspbian_on_a_Raspberry_Pi
+	wget https://github.com/RetroPie/RetroPie-Setup/releases/download/4.8/retropie-buster-4.8-rpi1_zero.img.gz
+	md5sum retropie-buster-4.8-rpi1_zero.img.gz
+95a6f84453df36318830de7e8507170e
+	gunzip retropie-buster-4.8-rpi1_zero.img.gz
+
+https://retropie.org.uk/docs/First-Installation/
+Write image with Raspberry Pi Imager, Etcher or dd
+
+https://retropie.org.uk/docs/Transferring-Roms/

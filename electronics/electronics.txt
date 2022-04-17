@@ -21,3 +21,8 @@ open-source #artificialnose to build a device that can find the signs
 of fungal pneumonia in someone's breath by detecting the
 Volatile Organic Compounds that are markers for the disease. 🤯
 https://twitter.com/kartben/status/1485999765959684107
+
+Solar harvesting board that stores solar energy in a
+lithium ion capacitor and has a 3.3V/400mA output,
+it uses E-peas AEM10941 harvesting chip and TPS63900 buck booster
+https://twitter.com/jrsikken/status/1506731267290767360
