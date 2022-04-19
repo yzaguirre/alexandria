@@ -1,7 +1,9 @@
 https://www.gnu.org/software/findutils/
 https://savannah.gnu.org/projects/findutils/
 Windows
-	choco install xargs
+	choco install findutils
+https://sourceforge.net/projects/ezwinports/files/
+https://sourceforge.net/projects/ezwinports/files/findutils-4.2.30-5-w64-bin.zip/download
 
 https://www.cyberciti.biz/faq/linux-unix-bsd-xargs-construct-argument-lists-utility/
 	find . -iname "*.mp3" -print0 | xargs -0 -I mp3file mplayer mp3file

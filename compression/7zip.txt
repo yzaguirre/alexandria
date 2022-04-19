@@ -85,3 +85,7 @@ x    = Extract with full paths command
 https://www.redhat.com/sysadmin/encrypting-decrypting-7zip
 Encrypt
 	7z a -p -mhe=on directory.tar.7z directory.tar
+
+7-Zip up to 21.07 on Windows allows privilege escalation and command execution
+https://github.com/kagancapar/CVE-2022-29072
+https://news.ycombinator.com/item?id=31070256

@@ -1,3 +1,7 @@
+If you're not using SSH certificates you're doing SSH wrong (2019)
+https://smallstep.com/blog/use-ssh-certificates/
+https://news.ycombinator.com/item?id=30788544
+
 https://ibug.io/blog/2019/12/manage-servers-with-ssh-ca/
 https://community.hetzner.com/tutorials/simple-ca-for-ssh
 

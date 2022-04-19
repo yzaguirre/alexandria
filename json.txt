@@ -76,12 +76,12 @@ Windows
 Make JSON greppable!
 https://github.com/tomnomnom/gron
 gron
-	wget https://github.com/tomnomnom/gron/releases/download/v0.6.1/gron-linux-amd64-0.6.1.tgz
-	tar xzf gron-linux-amd64-0.6.1.tgz
+	wget https://github.com/tomnomnom/gron/releases/download/v0.7.1/gron-linux-amd64-0.7.1.tgz
+	tar xzf gron-linux-amd64-0.7.1.tgz
 	mv gron /usr/local/bin/
 Termux
-	wget https://github.com/tomnomnom/gron/releases/download/v0.6.1/gron-linux-arm64-0.6.1.tgz
-	tar xzf gron-linux-arm64-0.6.1.tgz
+	wget https://github.com/tomnomnom/gron/releases/download/v0.7.1/gron-linux-arm64-0.7.1.tgz
+	tar xzf gron-linux-arm64-0.7.1.tgz
 	mv gron ~/bin/
 Homebrew
 	brew install gron

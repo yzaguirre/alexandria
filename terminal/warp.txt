@@ -1,0 +1,6 @@
+Show HN: Warp, a Rust-based terminal
+https://news.ycombinator.com/item?id=30921231
+- Outgoing request to googleapis.com
+- Outgoing request to segment.io
+- Outgoing request to sentry.io
+- Requires sign up (only via Github, mind you)
