@@ -7,5 +7,10 @@ https://retropie.org.uk/download/#Raspbian_on_a_Raspberry_Pi
 
 https://retropie.org.uk/docs/First-Installation/
 Write image with Raspberry Pi Imager, Etcher or dd
+See ../iso.txt
 
 https://retropie.org.uk/docs/Transferring-Roms/
+retropie/roms/$CONSOLE
+Where $CONSOLE is the name of the target console:
+snes
+arcage

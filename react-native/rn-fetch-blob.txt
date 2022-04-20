@@ -10,6 +10,6 @@ A project committed to making file access and data transfer easier, efficient fo
 https://github.com/RonRadtke/react-native-blob-util
 	yarn add react-native-blob-util
 
-See :./document.txt
+See document.txt
 
 https://www.reddit.com/r/reactnative/comments/os9erc/is_it_still_ok_to_use_the_unmaintained_library/
