@@ -18,6 +18,9 @@ https://www.youtube.com/watch?v=-NxpCirSqm4
 Raspberry Pi Cameras - The BIG Picture
 https://www.youtube.com/watch?v=MVgr302PNwY
 
+Raspberry Pi High Quality Camera Review w/ interchangeable lenses
+https://www.youtube.com/watch?v=_Oh7sITnwMU
+
 Enable camera module
 	sudo raspi-config
 Under configure connections peripherals
