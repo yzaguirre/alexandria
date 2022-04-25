@@ -19,8 +19,9 @@ https://news.ycombinator.com/item?id=20164051
 Install in /usr/local/share/keepassxc/
 Ubuntu PPA
 	sudo add-apt-repository ppa:phoerious/keepassxc
-	sudo apt update
 	apt install keepassxc
+The following NEW packages will be installed:
+  libbotan-2-17 libtspi1
 Installs following packages
 libquazip5-1 libykpers-1-1 libyubikey-udev libyubikey0 libzxcvbn0
 AppImage

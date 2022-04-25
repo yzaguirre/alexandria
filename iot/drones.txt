@@ -9,3 +9,9 @@ https://twitter.com/EmilioMorenatti/status/1466162353142128640
 
 https://github.com/nasa/ogma
 https://news.ycombinator.com/item?id=29528295
+
+This is what DJI's Drone-ID packets look like. every drone broadcasts
+this data all the time.
+we managed to receive + decode the packets over the air. no encryption.
+(We saw some confusion around that before)
+https://twitter.com/74ck_0/status/1517483406518591490
