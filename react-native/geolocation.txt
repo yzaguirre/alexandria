@@ -70,6 +70,9 @@ Get rid of them by setting:
 
 https://github.com/react-native-maps/react-native-maps/issues/3715
 
+Is supportLibVersion required for react-native-maps?
+https://github.com/react-native-maps/react-native-maps/issues/4018
+
 KML
 https://github.com/react-native-maps/react-native-maps/issues/967
 https://github.com/react-native-maps/react-native-maps/issues/2438

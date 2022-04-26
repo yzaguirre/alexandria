@@ -1,6 +1,9 @@
-https://www.gimp.org/
+https://www.gimp.org
 Install
 	apt install gimp
+The following NEW packages will be installed:
+  gimp gimp-data graphviz libamd2 libann0 libbabl-0.1-0 libcamd2 libccolamd2 libcdt5 libcgraph6 libcholmod3 libgegl-0.4-0 libgegl-common
+  libgimp2.0 libgts-0.7-5 libgts-bin libgvc6 libgvpr2 liblab-gamut1 libmetis5 libmng2 libmypaint-1.5-1 libmypaint-common libpathplan4 libumfpack5
 Windows
 	scoop bucket add extras
 	scoop install gimp

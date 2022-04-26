@@ -16,7 +16,9 @@ Installs sqlite3, sqlite3_analyzer and sqldiff
 Windows
 Android Studio inclues sqlite version 3.32.2
 	choco install sqlite
-	
+
+Ask HN: Have you used SQLite as a primary database?
+https://news.ycombinator.com/item?id=31152490
 http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
 https://news.ycombinator.com/item?id=8033210
 https://www.sqlite.org/whentouse.html

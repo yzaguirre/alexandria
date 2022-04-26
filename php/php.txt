@@ -1,3 +1,7 @@
+Whats New in PHP 8.2
+https://stitcher.io/blog/new-in-php-82
+https://news.ycombinator.com/item?id=31153698
+
 My Favorite Language Has Changed to PHP
 https://withinboredom.info/blog/2022/03/16/my-favorite-language-has-changed-to-php/
 https://news.ycombinator.com/item?id=30697055
