@@ -1,3 +1,6 @@
+Ask HN: Why can't I host my own email
+https://news.ycombinator.com/item?id=31180379
+
 Privacy in email communication: we should use encryption by default
 https://notes.nicfab.it/en/posts/privacycom/#gnupg---openpgp
 https://news.ycombinator.com/item?id=30512491

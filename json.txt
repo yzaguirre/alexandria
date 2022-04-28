@@ -143,3 +143,18 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/
 	@{Account="User01";Domain="Domain01";Admin="True"} | ConvertTo-Json -Compress
 	Get-Date | Select-Object -Property * | ConvertTo-Json
 	Get-Date | Select-Object -Property * | ConvertTo-Json | ConvertFrom-Json
+
+Zed
+https://www.brimdata.io/blog/introducing-zq/
+https://github.com/brimdata/zed
+https://news.ycombinator.com/item?id=31166956
+	wget https://github.com/brimdata/zed/releases/download/v1.0.0/zed-v1.0.0.linux-amd64.tar.gz
+	wget https://github.com/brimdata/zed/releases/download/v1.0.0/zed-checksums.txt
+	sha256sum -c --ignore-missing zed-checksums.txt
+	tar xf zed-v1.0.0.linux-amd64.tar.gz -C /usr/local/bin zed zq
+Windows
+	wget https://github.com/brimdata/zed/releases/download/v1.0.0/zed-v1.0.0.windows-amd64.zip
+	Get-FileHash zed-v1.0.0.windows-amd64.zip -Algorithm SHA256 | Format-List
+	7z x -oC:\Users\dyzag\bin zed-v1.0.0.windows-amd64.zip zed.exe zq.exe
+Homebrew
+	brew install brimdata/tap/zq

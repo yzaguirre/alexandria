@@ -1,0 +1,21 @@
+https://github.com/orhun/git-cliff
+https://www.reddit.com/r/commandline/comments/uaub3o/new_version_of_gitcliff_is_out/
+	wget https://github.com/orhun/git-cliff/releases/download/v0.7.0/git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/orhun/git-cliff/releases/download/v0.7.0/git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz.sha512
+	wget https://github.com/orhun/git-cliff/releases/download/v0.7.0/git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz.sig
+	sha512sum -c --ignore-missing git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz.sha512
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x1D2D410A741137EBC544826F4A92FA17B6619297
+	gpg --verify git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz.sig
+	tar xf git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz -C /usr/local/bin --strip-components=1 git-cliff-0.7.0/git-cliff
+	tar xf git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz -C /usr/local/bin --strip-components=1 git-cliff-0.7.0/man/git-cliff.1
+	tar xf git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz -C /usr/share/fish/completions --strip-components=2 git-cliff-0.7.0/completions/git-cliff.fish
+	tar xf git-cliff-0.7.0-x86_64-unknown-linux-gnu.tar.gz -C /usr/share/bash-completion/completions/ --strip-components=2 git-cliff-0.7.0/completions/git-cliff.bash
+Windows
+	wget https://github.com/orhun/git-cliff/releases/download/v0.7.0/git-cliff-0.7.0-x86_64-pc-windows-msvc.zip
+	7z e -oC:\Users\dyzag\bin git-cliff-0.7.0-x86_64-pc-windows-msvc.zip git-cliff-0.7.0/git-cliff.exe
+	7z e -oC:\Users\dyzag\Documents\PowerShell git-cliff-0.7.0-x86_64-pc-windows-msvc.zip git-cliff-0.7.0/completions/_git-cliff.ps1
+Edit powershell profile
+	notepad++ $PROFILE
+Import-Module -Name C:\Users\dyzag\Documents\PowerShell\_git-cliff.ps1
+Homebrew
+	brew install git-cli

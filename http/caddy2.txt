@@ -1,21 +1,24 @@
 https://caddyserver.com
 https://github.com/caddyserver/caddy
 https://news.ycombinator.com/item?id=23070567
+Show HN: Caddy v2.5.0
+https://github.com/caddyserver/caddy/releases/tag/v2.5.0
+https://news.ycombinator.com/item?id=31170280
 	echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
     apt update && apt install caddy
 Systemd config file 
 https://github.com/caddyserver/dist/tree/master/init
 
 Install
-	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_amd64.deb
-	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_checksums.txt
-	sha512sum -c --ignore-missing caddy_2.4.6_checksums.txt
-	dpkg -i caddy_2.4.6_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_checksums.txt
+	sha512sum -c --ignore-missing caddy_2.5.0_checksums.txt
+	dpkg -i caddy_2.5.0_linux_amd64.deb
 	systemctl disable caddy
 	systemctl stop caddy
 Raspberry Pi
-	wget https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_armv6.deb
-	dpkg -i caddy_2.4.6_linux_armv6.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_linux_armv6.deb
+	dpkg -i caddy_2.5.0_linux_armv6.deb
 Logs
 	journalctl --no-pager -u caddy
 Configuration at /etc/caddy/Caddyfile

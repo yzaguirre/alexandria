@@ -70,6 +70,17 @@ http://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 	gpg --verify 2020-02-13-raspbian-buster-lite.zip.sig
 Unmount the SD card and copy the OS image
 	dd bs=4M if=2014-12-24-wheezy-raspbian.img of=/dev/sdd; sync
+Raspberry Pi OS
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.torrent
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.info
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sha1
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sha256
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sig
+	sha256sum 2022-04-04-raspios-bullseye-arm64.img.xz.torrent
+5adcab7a063310734856adcdd2041c8d58f65c185a3383132bc758886528a93d
+	sha1sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha1
+	sha256sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha256
+	gpg --verify 2022-04-04-raspios-bullseye-arm64.img.xz.sig
 
 Recover /dev/sdb1
 Unmount sdbx
@@ -163,3 +174,7 @@ Disable "wait for network" on raspi-config
 
 https://gwolf.org/2022/04/how-is-the-free-firmware-for-the-raspberry-progressing.html
 https://news.ycombinator.com/item?id=31000725
+
+Cooling
+Raspberry Pi 4 Coolers: Which one is best?
+https://www.youtube.com/watch?v=qa3YnWhzPsw
