@@ -35,6 +35,7 @@ https://www.tradegeniusacademy.com
 https://github.com/herrbischoff/awesome-command-line-apps
 https://github.com/alebcay/awesome-shell
 https://github.com/anderspitman/awesome-tunneling
+https://github.com/sqlsite/awesome-sqlite
 Passwords
 KeepassX
 apg

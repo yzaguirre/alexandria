@@ -26,3 +26,7 @@ Solar harvesting board that stores solar energy in a
 lithium ion capacitor and has a 3.3V/400mA output,
 it uses E-peas AEM10941 harvesting chip and TPS63900 buck booster
 https://twitter.com/jrsikken/status/1506731267290767360
+
+Reversing 2.4GHz remote control
+https://xakcop.com/post/re-2.4ghz/
+https://news.ycombinator.com/item?id=31168052

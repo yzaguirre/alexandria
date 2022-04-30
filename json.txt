@@ -53,7 +53,7 @@ gojq
 https://github.com/itchyny/gojq
 	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_linux_amd64.tar.gz
 	tar xf gojq_v0.12.7_linux_amd64.tar.gz -C /usr/local/bin --strip-components=1 gojq_v0.12.7_linux_amd64/gojq
-	tar xf gojq_v0.12.7_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --stripe-component=1 gojq_v0.12.7_linux_amd64/_gojq
+	tar xf gojq_v0.12.7_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.7_linux_amd64/_gojq
 Termux
 	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_linux_arm64.tar.gz
 	tar xf gojq_v0.12.7_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin --strip-components=1 gojq_v0.12.7_linux_arm64/gojq
@@ -63,6 +63,10 @@ Windows
 	7z e gojq_v0.12.7_windows_amd64.zip -oC:\Users\dyzag\bin gojq_v0.12.7_windows_amd64/gojq.exe gojq_v0.12.7_windows_amd64\_gojq
 Homebrew
 	brew install gojq
+Parse chrome debug json
+https://www.codegrepper.com/code-examples/shell/jq+to+array
+See chromium/chromium.txt
+	gojq '.[]|select(.type=="page")|{title: .title, url: .url}' chrome-2022-04-29_18.16.28.json
 
 https://github.com/fiatjaf/jqview
 simplest possible native GUI for inspecting JSON objects with jq

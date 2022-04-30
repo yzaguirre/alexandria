@@ -1,0 +1,4 @@
+A local-first personal finance system
+https://github.com/actualbudget/actual
+https://actualbudget.com/open-source
+https://news.ycombinator.com/item?id=31206536

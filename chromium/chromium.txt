@@ -108,3 +108,11 @@ ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in
 Disable the Desktop Sharing Hub
 https://www.reddit.com/r/chrome/comments/qv1c5k/how_do_i_remove_this_annoying_share_this_page/
 	chrome://flags
+
+Debug mode
+https://github.com/DAFF0D11/dafmenu/blob/master/scripts/fzf-chromium
+https://www.reddit.com/r/commandline/comments/udd89h/control_your_browser_with_fzf_fzfchromium/
+	chromium --remote-debugging-port=9222
+	DATETXT=$(date '+%Y%m%d_%H%M%S')
+	curl -o chromium-${DATETXT}.json -s localhost:9222/json/list
+	gojq '.[]|select(.type=="page")|{title: .title, url: .url}' chrome-${DATETXT}.json

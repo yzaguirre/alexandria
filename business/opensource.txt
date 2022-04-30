@@ -22,3 +22,6 @@ https://www.reddit.com/r/programming/comments/t7xvjo/no_open_source_does_not_mea
 
 https://opensourcedesign.net
 https://news.ycombinator.com/item?id=30696610
+
+Public Money, Public Code
+https://news.ycombinator.com/item?id=31183882

@@ -80,8 +80,9 @@ Raspberry Pi OS
 5adcab7a063310734856adcdd2041c8d58f65c185a3383132bc758886528a93d
 	sha1sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha1
 	sha256sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha256
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x54C3DD610D9D1B4AF82A37758738CD6B956F460C
 	gpg --verify 2022-04-04-raspios-bullseye-arm64.img.xz.sig
-
+	unxz 2022-04-04-raspios-bullseye-arm64.img.xz.sig
 Recover /dev/sdb1
 Unmount sdbx
 	e2fsck /dev/sdb1
@@ -159,9 +160,6 @@ Using IceWM and a Raspberry Pi as my main PC, sharing my theme, config and some
 https://news.ycombinator.com/item?id=27796443
 
 https://www.cnx-software.com/2021/07/13/diy-raspberry-pi-4-mini-server-includes-ups-and-oled-information-display/s
-
-How to Solder Header Pins to a Raspberry Pi Pico Board
-https://www.youtube.com/watch?v=YhdrowzzEjo
 
 Grove Base Kit for Raspberry Pi - Unboxing + Getting Started + Video Tutorials
 https://www.youtube.com/watch?v=lsaXVRk6mKE

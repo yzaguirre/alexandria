@@ -79,3 +79,10 @@ Dumps Energy Estimation data from System Resource Usage Monitor (SRUM).
 	powercfg /batteryreport /output "srumreport.xml" /xml
 	powercfg /batteryreport /output "srumreport.csv" /csv
 interesting.
+
+https://twitter.com/NinjaParanoid/status/1516442028963659777
+Unable to extract credentials via DPAPI or Mimikatz? Don't worry.
+Microsoft got your back. Just use 'rundll32 keymgr.dll, KRShowKeyMgr'
+to extract all the stored passwords on the host, be it a target server,
+FTP or chrome's HTTP creds, microsoft has you covered. #redteam
+	rundll32 keymgr.dll, KRShowKeyMgr

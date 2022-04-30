@@ -1,3 +1,5 @@
+https://github.com/sqlsite/awesome-sqlite
+
 SQLite by D. Richard Hipp
 https://www.sqlite.org
 

@@ -179,3 +179,17 @@ Save to file
 Sort-Object
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object?view=powershell-7.2
 	Get-FileHash *db -Algorithm SHA256 | Sort-Object -Property Hash
+
+Loop through CSV
+https://stackoverflow.com/questions/11885246/how-do-i-loop-through-a-line-from-a-csv-file-in-powershell#11885405
+Import-Csv $path | Foreach-Object {
+    foreach ($property in $_.PSObject.Properties)
+    {
+        doSomething $property.Name, $property.Value
+    }
+}
+https://techexpert.tips/powershell/powershell-read-lines-from-csv-file/
+
+Remove last line in file
+https://stackoverflow.com/a/51450241/1905092
+	Get-Content $file | Select-Object -SkipLast 1 | Set-Content out.csv -Encoding UTF8

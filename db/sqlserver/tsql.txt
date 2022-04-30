@@ -53,3 +53,10 @@ If you want nulls to show as '000'
 It might be an integer -- then you would want
 
 	SELECT RIGHT('000'+CAST(field AS VARCHAR(3)),3)
+
+Get row where datetime column = today
+https://stackoverflow.com/questions/2583228/get-row-where-datetime-column-today
+SELECT (list of fields)
+FROM dbo.YourTable
+WHERE dateValue BETWEEN 
+   CAST(GETDATE() AS DATE) AND DATEADD(DAY, 1, CAST(GETDATE() AS DATE))
