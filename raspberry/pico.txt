@@ -1,3 +1,7 @@
 RPi uncut/getstartedwithmicropythononraspberrypipico.pdf
 How to Solder Header Pins to a Raspberry Pi Pico Board
 https://www.youtube.com/watch?v=YhdrowzzEjo
+
+https://www.tomshardware.com/news/raspberry-pi-pico-drone-piwings-v2
+DIY Tricopter | Raspberry Pi Pico | PiWings Maiden Flight | RP2040 Drone | STEM Education
+https://www.youtube.com/watch?v=0BZHFHRuc5s

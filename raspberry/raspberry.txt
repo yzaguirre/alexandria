@@ -1,3 +1,6 @@
+Ask HN: Does anyone use a Raspberry Pi as your main computer?
+https://news.ycombinator.com/item?id=31191817
+
 https://hackaday.com/2022/02/28/its-official-the-raspberry-pi-is-now-10/
 The Life of Pi: Ten Years of Raspberry Pi
 https://www.cam.ac.uk/stories/raspberrypi
@@ -176,3 +179,10 @@ https://news.ycombinator.com/item?id=31000725
 Cooling
 Raspberry Pi 4 Coolers: Which one is best?
 https://www.youtube.com/watch?v=qa3YnWhzPsw
+
+Raspberry Shake
+https://raspberryshake.org
+https://twitter.com/patricknorton/status/1520446144261894144
+
+SD Card
+https://twitter.com/sahajsarup/status/1515938046793105410
