@@ -1,0 +1,9 @@
+https://kitronik.co.uk/products/5335-autonomous-robotics-platform-for-pico?variant=39517608247359
+https://kitronik.co.uk/blogs/resources/online-tutorial-autonomous-robotics-platform-for-pico-motors
+https://kitronik.co.uk/blogs/resources/online-tutorial-autonomous-robotics-platform-pico-buzzer-button-lights
+https://kitronik.co.uk/blogs/resources/online-tutorial-autonomous-robotics-platform-pico-line-following
+https://kitronik.co.uk/blogs/resources/online-tutorial-autonomous-robotics-platform-pico-ultrasonic-sensor
+https://kitronik.co.uk/blogs/resources/online-tutorial-autonomous-robotics-platform-for-pico-using-the-servo-connections
+	git clone https://github.com/KitronikLtd/Kitronik-Pico-Autonomous-Robotics-Platform-MicroPython.git
+    import PicoAutonomousRobotics
+    robot = PicoAutonomousRobotics.KitronikPicoRobotBuggy()

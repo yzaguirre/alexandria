@@ -186,3 +186,14 @@ https://twitter.com/patricknorton/status/1520446144261894144
 
 SD Card
 https://twitter.com/sahajsarup/status/1515938046793105410
+
+Overclock
+	vim /boot/config.txt
+force_turbo=1
+arm_freq=2200
+over_voltage=8
+gpu_freq=750
+
+Highest stable
+arm_freq=2410
+over_voltage=12
