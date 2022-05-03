@@ -1,5 +1,6 @@
 https://fritzing.org
 https://github.com/fritzing/fritzing-app
+https://news.ycombinator.com/item?id=31235109
 	wget https://github.com/fritzing/fritzing-app/releases/download/CD-498/fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2
 	wget https://github.com/fritzing/fritzing-app/releases/download/CD-498/fritzing-a1ffcea08814801903b1a9515b18cf97067968ae-master-498.bionic.linux.AMD64.tar.bz2.md5
 Edit the md5 file

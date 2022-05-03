@@ -4,9 +4,9 @@ Install
 	apt install curl
 Binary
 https://github.com/moparisthebest/static-curl
-	wget https://github.com/moparisthebest/static-curl/releases/download/v7.82.0/curl-amd64
-	wget https://github.com/moparisthebest/static-curl/releases/download/v7.82.0/sha256sum.txt
-	wget https://github.com/moparisthebest/static-curl/releases/download/v7.82.0/sha256sum.txt.asc
+	wget https://github.com/moparisthebest/static-curl/releases/download/v7.83.0/curl-amd64
+	wget https://github.com/moparisthebest/static-curl/releases/download/v7.83.0/sha256sum.txt
+	wget https://github.com/moparisthebest/static-curl/releases/download/v7.83.0/sha256sum.txt.asc
 	wget https://github.com/moparisthebest/static-curl/raw/master/mykey.asc
 	gpg --import mykey.asc
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x9E2BBAE623F80966A460691E456A1D32748FCEBD
@@ -16,12 +16,12 @@ https://github.com/moparisthebest/static-curl
 	chmod u+x curl-amd64
 	mv curl-amd64 /usr/local/bin/curl
 Compile
-	wget https://curl.se/download/curl-7.82.0.tar.gz
-	wget https://curl.se/download/curl-7.82.0.tar.gz.asc
+	wget https://curl.se/download/curl-7.83.0.tar.gz
+	wget https://curl.se/download/curl-7.83.0.tar.gz.asc
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2
-	gpg --verify curl-7.82.0.tar.gz.asc
-	tar xf curl-7.82.0.tar.gz
-	cd curl-7.82.0
+	gpg --verify curl-7.83.0.tar.gz.asc
+	tar xf curl-7.83.0.tar.gz
+	cd curl-7.83.0
 	./configure --with-openssl [--with-gnutls --with-wolfssl] --prefix=$HOME
 Without ssl support
 	./configure --without-ssl
@@ -29,19 +29,19 @@ Without ssl support
 	make install
 Windows
 	choco install curl
-curl 7.82.0 (x86_64-pc-win32) libcurl/7.82.0 OpenSSL/3.0.1 (Schannel) zlib/1.2.11 brotli/1.0.9 libidn2/2.3.2 libssh2/1.10.0 nghttp2/1.47.0 libgsasl/1.10.0
+curl 7.83.0 (x86_64-pc-win32) libcurl/7.83.0 OpenSSL/3.0.1 (Schannel) zlib/1.2.11 brotli/1.0.9 libidn2/2.3.2 libssh2/1.10.0 nghttp2/1.47.0 libgsasl/1.10.0
 Installed at
 C:\ProgramData\chocolatey\lib\curl\tools
 Available in Windows 10
 https://curl.se/windows/microsoft.html
 curl 7.79.1 (Windows) libcurl/7.79.1 Schannel
 https://curl.se/windows/
-	wget https://curl.se/windows/dl-7.82.0_2/curl-7.82.0_2-win64-mingw.zip
+	wget https://curl.se/windows/dl-7.83.0_2/curl-7.83.0_2-win64-mingw.zip
 or	wget https://curl.se/windows/curl-win64-latest.zip
-	sha256sum curl-7.82.0_2-win64-mingw.zip
+	sha256sum curl-7.83.0_2-win64-mingw.zip
 8741fc3cf3f26c9fc1dc760d406db36c8519d470ebce75634715a355a323e3af
-	7x x -o"C:\Program Files\" curl-7.82.0_2-win64-mingw.zip
-	path add -g "C:\Program Files\curl-7.82.0-win64-mingw\bin"
+	7x x -o"C:\Program Files\" curl-7.83.0_2-win64-mingw.zip
+	path add -g "C:\Program Files\curl-7.83.0-win64-mingw\bin"
 See ../MS/path.txt
 
 Remove PowerShell Alias

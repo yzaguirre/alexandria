@@ -1,3 +1,26 @@
+https://thonny.org
+Install Thonny
+	apt install python3-tk
+The following NEW packages will be installed:
+  blt libtk8.6 python3-tk tk8.6-blt2.5
+	sudo -H pip install -U thonny
+Add MicroPython to PICO
+Name it main.py
+Upload codes
+
+from machine import Pin, Timer
+
+led = Pin(25, Pin.OUT)
+LED_state = True
+tim = Timer()
+
+def tick(timer):
+	global led, LED_state
+	LED_state = not LED_state
+	led.value(LED_state)
+tim.init(freq=1, mode=Timer.PERIODIC, callback=tick)
+
+https://github.com/raspberrypi/picotool
 https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html
 
 RPi uncut/getstartedwithmicropythononraspberrypipico.pdf
@@ -10,3 +33,11 @@ https://www.youtube.com/watch?v=0BZHFHRuc5s
 
 Raspberry Pi Pico Basic Starter Kit.
 https://www.youtube.com/watch?v=vTHqoUJGxBM
+
+Raspberry Pi PICO | Starting With MicroPython + Examples | I2C OLED, ADC, PWM
+https://www.youtube.com/watch?v=zlKJ5hvfs6s
+
+Raspberry Pi Pico - Getting Started with MicroPython REPL (on Windows)
+https://www.youtube.com/watch?v=yzsEr2QCGPw
+
+See ../electronics/autonomous-robotics.txt

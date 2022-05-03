@@ -1,9 +1,10 @@
-https://kicad.org/
-
+https://kicad.org
 	sudo add-apt-repository --yes ppa:kicad/kicad-5.1-releases
 	sudo apt update
 	sudo apt install --install-recommends kicad
 If you want demo projects
 	sudo apt install kicad-demos
 Windows
+	winget install KiCad.KiCad
+	choco install kicad
 	scoop install kicad
