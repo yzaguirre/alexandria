@@ -5,6 +5,16 @@ The following NEW packages will be installed:
   blt libtk8.6 python3-tk tk8.6-blt2.5
 	sudo -H pip install -U thonny
 Add MicroPython to PICO
+	wget https://datasheets.raspberrypi.com/soft/picoprobe.uf2
+Or use circuitpython version
+https://github.com/adafruit/circuitpython
+https://circuitpython.org/board/raspberry_pi_pico/
+	wget https://downloads.circuitpython.org/bin/raspberry_pi_pico/es/adafruit-circuitpython-raspberry_pi_pico-es-7.2.5.uf2
+Additional library for HID
+https://github.com/adafruit/Adafruit_CircuitPython_HID
+Download compressed version
+	wget https://github.com/adafruit/Adafruit_CircuitPython_HID/releases/download/5.2.2/adafruit-circuitpython-hid-7.x-mpy-5.2.2.zip
+
 Name it main.py
 Upload codes
 
@@ -20,10 +30,20 @@ def tick(timer):
 	led.value(LED_state)
 tim.init(freq=1, mode=Timer.PERIODIC, callback=tick)
 
+print('hello world')
+help('modules')
+
 https://github.com/raspberrypi/picotool
 https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html
 
 RPi uncut/getstartedwithmicropythononraspberrypipico.pdf
+
+Raspberry Pi Pico - Getting Started with MicroPython with Thonny and rShell
+https://www.youtube.com/watch?v=a7BUz0wA5ek
+See ../terminal/rshell.txt
+Permission to use serial device
+	usermod -aG dialout david
+
 How to Solder Header Pins to a Raspberry Pi Pico Board
 https://www.youtube.com/watch?v=YhdrowzzEjo
 
@@ -39,5 +59,11 @@ https://www.youtube.com/watch?v=zlKJ5hvfs6s
 
 Raspberry Pi Pico - Getting Started with MicroPython REPL (on Windows)
 https://www.youtube.com/watch?v=yzsEr2QCGPw
+
+Intro to Raspberry Pi Pico and RP2040 - MicroPython Part 1: Blink | Digi-Key Electronics
+https://www.youtube.com/watch?v=JCk9QaCH5QU
+
+Raspberry Pi Pico - USB HID Auto Clicker with Circuit Python
+https://www.youtube.com/watch?v=onBkPkaqDnk
 
 See ../electronics/autonomous-robotics.txt

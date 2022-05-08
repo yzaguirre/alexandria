@@ -12,3 +12,14 @@ https://www.youtube.com/watch?v=e9U58V8aJBE
 
 OVERCLOCKED! Raspberry Pi 400 does 2.2 GHz!
 https://www.youtube.com/watch?v=b7_RkCkaJjE
+
+Overclock
+	vim /boot/config.txt
+force_turbo=1
+arm_freq=2200
+over_voltage=8
+gpu_freq=750
+
+Highest stable
+arm_freq=2410
+over_voltage=12

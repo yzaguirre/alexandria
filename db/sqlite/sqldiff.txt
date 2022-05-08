@@ -1,0 +1,8 @@
+https://www.sqlite.org/sqldiff.html
+https://news.ycombinator.com/item?id=31256704
+Homebrew
+	brew install sqldiff
+
+Usage
+	sqldiff [options] database1.sqlite database2.sqlite
+	sqldiff.exe --schema .\AppDatabase-2022-04-05_10-41-51.db .\AppDatabase-2022-05-02_16-17-19.db

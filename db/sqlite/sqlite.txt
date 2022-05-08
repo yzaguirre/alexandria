@@ -15,6 +15,7 @@ See ../../secure/hash.txt
 44f48bdb147d8db5f42d06e7cc25a95154ecaef1e6a4db5d1a5deb7b6341e2f5
 	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3380300.zip
 Installs sqlite3, sqlite3_analyzer and sqldiff
+See sqldiff.txt
 Windows
 Android Studio inclues sqlite version 3.32.2
 	choco install sqlite

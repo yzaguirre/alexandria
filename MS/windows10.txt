@@ -86,3 +86,11 @@ Microsoft got your back. Just use 'rundll32 keymgr.dll, KRShowKeyMgr'
 to extract all the stored passwords on the host, be it a target server,
 FTP or chrome's HTTP creds, microsoft has you covered. #redteam
 	rundll32 keymgr.dll, KRShowKeyMgr
+
+When I tell the Windows Terminal team something is simple,
+I am "misguided", being "somewhat combative" and
+am "impugning the reader".
+But a year later when they call the exact same thing "trivial",
+that is just, you know, them writing a blog post:
+https://twitter.com/cmuratori/status/1522468481135902725
+https://www.reddit.com/r/programming/comments/ujo73g/microsoft_insults_dev_then_takes_credit_for_their/
