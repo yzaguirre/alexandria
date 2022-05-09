@@ -1,5 +1,9 @@
 https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
+Best Raspberry Pi Projects
+https://www.tomshardware.com/features/best-raspberry-pi-projects
+https://news.ycombinator.com/item?id=31246337
+
 Power
 https://raspi.tv/2019/how-much-power-does-the-pi4b-use-power-measurements
 https://www.pidramble.com/wiki/benchmarks/power-consumption

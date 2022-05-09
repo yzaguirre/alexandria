@@ -115,4 +115,4 @@ https://www.reddit.com/r/commandline/comments/udd89h/control_your_browser_with_f
 	chromium --remote-debugging-port=9222
 	DATETXT=$(date '+%Y%m%d_%H%M%S')
 	curl -o chromium-${DATETXT}.json -s localhost:9222/json/list
-	gojq '.[]|select(.type=="page")|{title: .title, url: .url}' chrome-${DATETXT}.json
+	gojq '.[]|select(.type=="page")|{title: .title, url: .url}' chromium-${DATETXT}.json
