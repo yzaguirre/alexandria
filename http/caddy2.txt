@@ -10,15 +10,15 @@ Systemd config file
 https://github.com/caddyserver/dist/tree/master/init
 
 Install
-	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_linux_amd64.deb
-	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_checksums.txt
-	sha512sum -c --ignore-missing caddy_2.5.0_checksums.txt
-	dpkg -i caddy_2.5.0_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.1/caddy_2.5.1_linux_amd64.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.1/caddy_2.5.1_checksums.txt
+	sha512sum -c --ignore-missing caddy_2.5.1_checksums.txt
+	dpkg -i caddy_2.5.1_linux_amd64.deb
 	systemctl disable caddy
 	systemctl stop caddy
 Raspberry Pi
-	wget https://github.com/caddyserver/caddy/releases/download/v2.5.0/caddy_2.5.0_linux_armv6.deb
-	dpkg -i caddy_2.5.0_linux_armv6.deb
+	wget https://github.com/caddyserver/caddy/releases/download/v2.5.1/caddy_2.5.1_linux_armv6.deb
+	dpkg -i caddy_2.5.1_linux_armv6.deb
 Logs
 	journalctl --no-pager -u caddy
 Configuration at /etc/caddy/Caddyfile

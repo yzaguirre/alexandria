@@ -19,6 +19,9 @@ https://httpie.io/docs/cli/config-file-directory
 %APPDATA%\httpie\config.json
 C:\Users\dyzag\AppData\Roaming\httpie\config.json
 
+Automatic release update warnings
+https://github.com/httpie/httpie/pull/1336
+
 Usage
 	http [OPTS] [METHOD] URL [REQUEST_ITEMS...]
 Custom HTTP method, HTTP headers and JSON data:
