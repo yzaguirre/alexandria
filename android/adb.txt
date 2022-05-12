@@ -69,6 +69,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c03", MODE="0600", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c03", MODE="0600", OWNER="david"
 
 Change storage unit
+http://adbcommand.com/adbshell/pm
 	adb shell pm set-install-location 1
 Remove apps
 https://stackoverflow.com/questions/25927124/android-studio-how-to-uninstall-apk-or-execute-adb-command-automatically-bef
@@ -99,9 +100,14 @@ https://varunbarad.com/blog/testing-deep-link-urls-using-adb
 	adb shell am start -a android.intent.action.VIEW -d "https://varunbarad.com/blog"
 
 Start an app
+http://adbcommand.com/adbshell/am
 https://stackoverflow.com/questions/4567904/how-to-start-an-application-using-android-adb-tools
 	adb shell am start -n com.package.name/com.package.name.ActivityName
 	adb shell am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName 
+Stop first then start
+	adb shell am start -S -n com.package.name/com.package.name.ActivityName
+Close an app
+	adb shell am force-stop package
 
 Screenshots
 https://developer.android.com/studio/command-line/adb#screencap

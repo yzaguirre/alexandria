@@ -62,6 +62,8 @@ https://www.youtube.com/watch?v=yzsEr2QCGPw
 
 Intro to Raspberry Pi Pico and RP2040 - MicroPython Part 1: Blink | Digi-Key Electronics
 https://www.youtube.com/watch?v=JCk9QaCH5QU
+Intro to Raspberry Pi Pico and RP2040 - MicroPython Part 2: I2C Sensor | Digi-Key Electronics
+https://www.youtube.com/watch?v=b4KdzsAz6kE
 
 Raspberry Pi Pico - USB HID Auto Clicker with Circuit Python
 https://www.youtube.com/watch?v=onBkPkaqDnk

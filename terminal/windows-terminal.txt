@@ -1,0 +1,4 @@
+https://github.com/microsoft/terminal
+https://news.ycombinator.com/item?id=31343461
+	choco install microsoft-windows-terminal
+	winget install --id=Microsoft.WindowsTerminal -e

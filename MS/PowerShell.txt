@@ -193,3 +193,11 @@ https://techexpert.tips/powershell/powershell-read-lines-from-csv-file/
 Remove last line in file
 https://stackoverflow.com/a/51450241/1905092
 	Get-Content $file | Select-Object -SkipLast 1 | Set-Content out.csv -Encoding UTF8
+
+Comparison Operatos
+https://www.educba.com/comparison-operators-in-powershell/
+-eq
+
+Error level
+https://www.shellhacks.com/windows-get-exit-code-errorlevel-cmd-powershell/
+	$LastExitCode

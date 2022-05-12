@@ -1,3 +1,4 @@
+See ../terminal/windows-terminal.txt
 https://monovm.com/blog/cd-command-windows/
 Change the current working directory to another directory present
 within another drive.
