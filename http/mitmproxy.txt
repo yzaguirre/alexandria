@@ -8,11 +8,15 @@ https://docs.mitmproxy.org/stable/overview-installation/
 https://mitmproxy.org/doc/howmitmproxy.html
 https://github.com/mitmproxy/mitmproxy
 	apt install python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev
-	pip3 install mitmproxy
+	sudo -H pip install -U mitmproxy
+Windows
+	choco install mitmproxy
+	winget install mitmproxy
 Homebrew
 	brew install mitmproxy
 Download and install TLS certificates at http://mitm.it
 Copy of certificate is in ~/.mitmproxy/mitmproxy-ca-cert.cer
+See ../android/android.txt
 
 https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/
 https://medium.com/testvagrant/intercept-ios-android-network-calls-using-mitmproxy-4d3c94831f62
@@ -75,3 +79,6 @@ Convert .cer to .crt
 
 mitmweb
 	mitmweb --web-port 8090 --web-host 192.168.0.7
+Using cert manually
+	curl --proxy 127.0.0.1:8080 --cacert ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/
+	wget -e https_proxy=127.0.0.1:8080 --ca-certificate ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/

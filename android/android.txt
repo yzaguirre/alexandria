@@ -79,3 +79,7 @@ https://twitter.com/0KF0X/status/1437058579866046471
 
 MTP
 https://www.reddit.com/r/linux/comments/tq8lib/why_is_mtp_such_a_horrible_piece_of_technology/
+
+https://stackoverflow.com/questions/36289125/react-native-fetch-from-https-server-with-self-signed-certificate
+	vim res/xml/network_security_config.xml
+	vim AndroidManifest.xml
