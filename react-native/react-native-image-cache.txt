@@ -2,6 +2,9 @@ React-Native image caching in file system with
 progressive loading for iOS and Android
 https://github.com/georstat/react-native-image-cache
 https://www.reddit.com/r/reactnative/comments/n6u7qu/reactnativeimagecache_on_file_system/
+	yarn add @georstat/react-native-image-cache
+https://github.com/alpha0010/react-native-file-access
+	yarn add react-native-file-access
 
 Use with pinchable
 https://github.com/oblador/react-native-pinchable
