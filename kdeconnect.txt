@@ -63,3 +63,6 @@ https://userbase.kde.org/KDE_Connect/Tutorials/Useful_commands
 https://rafaelc.org/posts/mounting-kde-connect-filesystem-via-cli/
 
 https://doronbehar.com/articles/using-kdeconnect-to-comfortably-send-sms-messages-from-the-shell/
+
+KDE Connect Now Available on iOS
+https://news.ycombinator.com/item?id=31382663
