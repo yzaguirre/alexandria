@@ -6,6 +6,7 @@ It's low power so you can run it for a month on a single charge.
 Update wirelessly using WiFi, Bluetooth.
 Display your calendar, to-do list, weather, custom images, whatever you want.
 Code using micropython, Arduino, or ESP-IDF.
-https://paperd.ink/
+https://paperd.ink
 https://www.indiegogo.com/projects/paperd-ink--2#/
 https://news.ycombinator.com/item?id=27331311
+https://news.ycombinator.com/item?id=31347286

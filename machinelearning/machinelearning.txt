@@ -1,3 +1,7 @@
+Learning to think critically about machine learning
+https://news.mit.edu/2022/ethical-machine-learning-course-0415
+https://news.ycombinator.com/item?id=31236180
+
 https://renanmf.com/machine-learning-and-deep-learning-software-engineers/
 https://www.reddit.com/r/learnmachinelearning/comments/g7409a/if_you_people_are_looking_for_datasets_to_play/
 This UCI website is the dataset repository. You can find a lot of datasets here.

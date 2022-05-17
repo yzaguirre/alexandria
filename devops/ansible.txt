@@ -1,4 +1,9 @@
-https://ansible.com/
+https://ansible.com
+
+Ansible 2.13
+https://github.com/ansible/ansible/blob/stable-2.13/changelogs/CHANGELOG-v2.13.rst
+https://news.ycombinator.com/item?id=31398516
+
 https://www.reddit.com/r/linuxadmin/comments/a95uzi/toying_around_with_ansible_any_exercises_or/
 irc.freenode.net #ansible IRC chat channel
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04#install-ansible-on-ubuntu-1404

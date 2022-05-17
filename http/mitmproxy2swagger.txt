@@ -1,0 +1,3 @@
+Mitmproxy2swagger - Automagically reverse-engineer REST APIs
+https://github.com/alufers/mitmproxy2swagger
+https://news.ycombinator.com/item?id=31354130

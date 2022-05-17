@@ -1,3 +1,5 @@
 https://www.reddit.com/r/web_design/comments/mijycp/theres_no_such_thing_as_a_website_or_web_app_that/
 
 https://www.giacomocerquone.com/blog/accessibility-on-mobile-build-uis-that-dont-break
+
+See web/web.txt

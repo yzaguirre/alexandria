@@ -1,3 +1,10 @@
+New DigitalOcean Pricing
+https://www.digitalocean.com/try/new-pricing
+https://news.ycombinator.com/item?id=31396794
+DigitalOcean: New $4 Droplet and updated pricing
+https://www.digitalocean.com/blog/new-4-dollar-droplet-updated-pricing
+https://news.ycombinator.com/item?id=31396810
+
 https://www.digitalocean.com/community/questions/minor-upgrade-to-basic-premium-or-regular
 The Premium AMD Droplets feature a memory frequency of 3200 MHz,
 and Premium Intel 2933 MHz.

@@ -73,6 +73,8 @@ https://www.sqlitetutorial.net/sqlite-primary-key/
 
 String Format
 https://www.sqlite.org/printf.html
+https://database.guide/format-numbers-with-a-comma-in-sqlite/
+SQLite 3.38.0 (released 22 Feb 2022) renamed the printf() function to format().
 
 Dates
 https://sqlite.org/lang_datefunc.html

@@ -1,8 +1,11 @@
-https://www.zsh.org/
+https://www.zsh.org
 http://ohmyz.sh/
 https://github.com/robbyrussell/oh-my-zsh
 	apt install zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Zsh 5.9
+https://news.ycombinator.com/item?id=31394420
 
 Git plugin
 https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
