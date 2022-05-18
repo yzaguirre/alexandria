@@ -140,3 +140,16 @@ The text format is pure SQL so you can also use the .dump command
 to export an SQLite database into other popular SQL database engines.
 	createdb ex2
 	sqlite3 ex1 .dump | psql ex2
+
+JSON and virtual columns in SQLite
+https://antonz.org/json-virtual-columns/
+https://news.ycombinator.com/item?id=31396578
+
+Simple declarative schema migration for SQLite
+https://david.rothlis.net/declarative-schema-migration-for-sqlite/
+https://news.ycombinator.com/item?id=31249823
+
+Indices SQLite
+https://www.youtube.com/watch?v=c9bUP996nX8
+[SQLite] What is SQLite Index?
+https://www.youtube.com/watch?v=kY0pDG15JGc

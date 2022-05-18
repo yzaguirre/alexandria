@@ -46,7 +46,8 @@ Clientes Windows pueden conectarse a un sistema con xrdp sin instalar software a
 	wget https://github.com/neutrinolabs/xrdp/releases/download/v0.9.15/xrdp-0.9.15.tar.gz
 	wget https://github.com/neutrinolabs/xrdp/releases/download/v0.9.15/xrdp-0.9.15.tar.gz.asc
 
-https://www.remmina.org/
+https://www.remmina.org
+https://gitlab.com/Remmina/Remmina/
 Cliente para GNU/Linux es Remmina, soporta protocolos RDP (Remote Desktop Protocol), VNC (Virtual Network Computing), NX, XDMCP y SSH
 	apt install remmina
 	snap install remmina
