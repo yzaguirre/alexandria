@@ -1,5 +1,5 @@
 Erlang/OTP
-https://www.erlang.org/
+https://www.erlang.org
 https://github.com/erlang/otp
 https://www.erlang.org/news/140
 https://news.ycombinator.com/item?id=23166554
@@ -7,6 +7,9 @@ https://news.ycombinator.com/item?id=23166554
 Erlang/OTP 24 Highlights
 https://blog.erlang.org/My-OTP-24-Highlights/
 https://news.ycombinator.com/item?id=27128994
+Erlang/OTP 25.0 Release
+https://www.erlang.org/news/157
+https://news.ycombinator.com/item?id=31421961
 
 Install
 	apt install erlang

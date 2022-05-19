@@ -13,3 +13,25 @@ https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-act
 Ok(object);
 NotFound();
 [Route("{id:int}/details")]
+
+Logging ELMAH
+https://elmah.github.io
+Using Elmah for Error Logging in Mvc
+https://www.youtube.com/watch?v=ZSWdmlp5qaY
+How to Configure Elmah in ASP.net MVC
+https://www.youtube.com/watch?v=oqheVBZR0PM
+Error Logging utilizando ELMAH no ASP.NET MVC | Error Logging using ELMAH and ASP.NET MVC
+https://www.youtube.com/watch?v=hbtVkA9OJLY
+How to use exception log mechanism elmah in Asp.net MVC
+https://www.youtube.com/watch?v=ld0_z0xe2Xw
+	Install-Package elmah
+Add to web.config
+<elmah>
+	<errorLog type="Elmah.XmlFileErrorLog, Elmah" logPath="~/App_Data" />
+</elmah>
+Look at <httpHandlers>, <httpModules>, <elmah>, <sectionGroup>
+Edit Global.asax.cs
+public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("elmah.axd");
+        }
