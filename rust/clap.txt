@@ -1,0 +1,3 @@
+A full featured, fast Command Line Argument Parser for Rust
+https://github.com/clap-rs/clap
+https://docs.rs/clap/latest/clap/

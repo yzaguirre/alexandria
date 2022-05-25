@@ -13,3 +13,5 @@ Homebrew
 
 Usage
 	scc
+
+See ../gnulinuxos/tokei.txt

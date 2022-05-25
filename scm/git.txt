@@ -424,3 +424,6 @@ Usage
 	git fsmonitor--daemon run
 	git fsmonitor--daemon stop
 	git fsmonitor--daemon status
+
+Proper Use of Git Tags
+https://news.ycombinator.com/item?id=31480306

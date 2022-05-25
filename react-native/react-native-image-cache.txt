@@ -8,3 +8,7 @@ https://github.com/alpha0010/react-native-file-access
 
 Use with pinchable
 https://github.com/oblador/react-native-pinchable
+
+Store pictures locally
+https://www.reddit.com/r/reactnative/comments/uuol7c/how_to_store_chat_user_pictures_locally/
+https://stackoverflow.com/questions/56264942/how-to-render-images-with-react-native-fs

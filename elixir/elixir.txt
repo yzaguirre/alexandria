@@ -1,7 +1,7 @@
-https://elixir-lang.org/
+https://elixir-lang.org
 https://github.com/elixir-lang/elixir
 https://elixirschool.com/en/
-https://elixir-lang.slack.com/
+https://elixir-lang.slack.com
 
 Elixir 1.12
 https://elixir-lang.org/blog/2021/05/19/elixir-v1-12-0-released/
@@ -26,18 +26,18 @@ The following NEW packages will be installed:
 elixir erlang-asn1 erlang-base erlang-crypto erlang-ftp erlang-inets erlang-mnesia erlang-parsetools erlang-public-key erlang-runtime-tools erlang-ssl
 erlang-syntax-tools erlang-tftp erlang-tools libsctp1
 Binary
-	wget https://github.com/elixir-lang/elixir/releases/download/v1.12.1/Precompiled.zip
-	wget https://github.com/elixir-lang/elixir/releases/download/v1.12.1/Docs.zip
+	wget https://github.com/elixir-lang/elixir/releases/download/v1.13.4/Precompiled.zip
+	wget https://github.com/elixir-lang/elixir/releases/download/v1.13.4/Docs.zip
 	sha512sum Precompiled.zip
-66e877486606f232f36cbe76cdd63bc4ee5e75e27d6292bb602ab2c88b4dd7da6684e6ff9cdb2020e7f916ee2d58016e2d1e2cbd5e579f297ab8eae660cb5dcb
+e64c714e80cd9657b8897d725f6d78f251d443082f6af5070caec863c18068c97af6bdda156c3b3390e0a2b84f77c2ad3378a42913f64bb583fb5251fa49e619
 	sha512sum Docs.zip
-260ce9bf8a0d4ddc5b6af67f5b970624cafd5aa1571a97d10573500f5722ab44fb4f49ebfc686003d2cc2b8eaf1e19b1cc176b0b6f121d3e405a3fea052e99f4
+faa66a9543344728f2ffa7de0855747526e8c2dc7f710875bad5335c87d4d3be3eb5963c152a1ed7a0f021308f877e3c81a8a4479db26ca77679317574912d21
 	sha1sum Precompiled.zip
-4a1269b95c719e0295cd6b57a1c447e1b91563ef
+325fbdde4f0a5701bb8b9d455175b85ff41470d7
 	sha1sum Docs.zip
-32da77e41f28ad5fa08a1c8f166f44fc09b1cbfd
-	unzip Precompiled.zip
-	unzip Docs.zip
+2ae1b2e4c9a62fe8fc36b5da23c6d9ab8646463f
+	unzip Precompiled.zip -d /usr/local
+	unzip Docs.zip -d /usr/local/share
 Windows
 	scoop install elixir
 Homebrew

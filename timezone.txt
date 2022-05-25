@@ -14,3 +14,40 @@ Using tzdata
 Install NTP
 	apt update
 	apt install ntp
+
+gotz
+CLI timezone info
+https://github.com/merschformann/gotz
+https://www.reddit.com/r/commandline/comments/usm12s/gotz_cli_tool_for_cross_timezone_teams/
+	wget https://github.com/merschformann/gotz/releases/download/v0.1.1/gotz_linux_amd64
+	chmod u+x gotz_linux_amd64
+	mv gotz_linux_amd64 /usr/local/bin
+Arm 64
+	wget https://github.com/merschformann/gotz/releases/download/v0.1.1/gotz_linux_arm64
+	chmod u+x gotz_linux_arm64
+	mv gotz_linux_arm64 /usr/local/bin
+Windows
+	wget -O C:\Users\dyzag\bin\gotz.exe https://github.com/merschformann/gotz/releases/download/v0.1.1/gotz_windows_amd64.exe
+
+Configuration
+$HOME/.gotz.config.json
+C:\Users\dyzag\.gotz.config.json
+Set the timezones to be used by default:
+	gotz --timezones "Office:America/New_York,Home:Europe/Berlin"
+	gotz --timezones "Office:Asia/Jerusalem,Home:America/Guatemala"
+Set 12-hour format:
+	gotz --hours12 true
+
+Usage
+Show arbitrary time
+	gotz 23
+Time can be one of the following formats:
+15
+15:04
+15:04:05
+3:04pm
+3:04:05pm
+3pm
+1504
+150405
+2006-01-02T15:04:05

@@ -177,3 +177,6 @@ Swap panels
 https://superuser.com/questions/879190/how-does-one-swap-two-panes-in-tmux
 CTRL+B {
 CTRL+B }
+
+Session manager and task runner for tmux. Start your development environment within one command.
+https://github.com/ivaaaan/smug

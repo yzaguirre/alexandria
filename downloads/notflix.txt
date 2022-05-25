@@ -1,0 +1,3 @@
+script to stream or download torrent website contents
+https://github.com/inline-arc/pirate-notflix
+https://www.reddit.com/r/commandline/comments/uqxtwq/bash_script_to_search_torrent_stream_or_download/

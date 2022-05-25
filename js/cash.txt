@@ -1,0 +1,2 @@
+An absurdly small jQuery alternative for modern browsers.
+https://github.com/fabiospampinato/cash

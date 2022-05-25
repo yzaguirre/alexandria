@@ -85,3 +85,7 @@ Teams
 https://www.digitalocean.com/docs/accounts/teams/
 
 https://news.ycombinator.com/item?id=20064169
+
+DigitalOcean Functions: A powerful serverless computing solution
+https://news.ycombinator.com/item?id=31491029
+https://github.com/apache/openwhisk

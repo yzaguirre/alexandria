@@ -10,3 +10,10 @@ https://www.reddit.com/r/reactnative/comments/mllvra/best_way_to_savecache_image
 I am fetching several arrays of objects (id, title, image url),
 and need to download and save the image when the app is first opened.
 What would be the best way to approach this?
+
+https://www.reddit.com/r/reactnative/comments/uuvmpo/howwhen_do_you_clear_the_cached_images_by/
+react-native-fast-image uses SDWebImage for iOS and Glide for Android
+under the hood. You'll have to dig into native code to access/clear
+the cache. Glide and SDWebImage are popular and well documented libraries.
+
+https://www.reddit.com/r/reactnative/comments/uvab8g/how_long_does_reactnativefastimage_caches_images/

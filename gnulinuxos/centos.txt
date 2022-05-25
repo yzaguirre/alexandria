@@ -25,3 +25,5 @@ https://forums.centos.org/viewtopic.php?t=11747
 	vim /etc/sysconfig/network-scripts/ifcfg-eth0
 	/etc/resolv.conf
 	service network restart
+
+Alternative AlmaLinux 9 and Rocky

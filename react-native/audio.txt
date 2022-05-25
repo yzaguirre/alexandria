@@ -5,3 +5,32 @@ https://www.reddit.com/r/reactnative/comments/lluli0/meditation_react_native_app
 https://github.com/thehanimo/react-native-audiokit
 
 https://github.com/repodio/react-native-trimmer
+
+Recording
+https://blog.bitsrc.io/the-best-audio-player-library-for-react-native-apps-6048a742eb68
+https://www.reddit.com/r/reactnative/comments/p1ibjn/is_there_any_way_to_record_audio_through_the/
+
+https://github.com/goodatlas/react-native-audio-record
+	yarn add react-native-audio-record
+
+React Native audio recording module used for DSP with Android + iOS
+https://github.com/qiuxiang/react-native-recording
+	yarn add react-native-recording
+
+React Native module for playing sound clips
+https://github.com/zmxv/react-native-sound
+	yarn add react-native-sound
+
+Audio recorder library for React Native
+https://github.com/Shinetechchina/react-native-audio-player-recorder
+
+
+A fully fledged audio module created for music apps.
+Provides audio playback, external media controls, chromecast support,
+background mode and more!
+https://react-native-track-player.js.org
+https://github.com/DoubleSymmetry/react-native-track-player
+	yarn add react-native-track-player
+
+Deprecated
+https://github.com/jsierles/react-native-audio

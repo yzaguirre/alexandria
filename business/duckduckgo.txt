@@ -6,3 +6,6 @@ See ../http/ddgr.txt
 
 "YouTube-dl" and "Pirate Bay" back on DDG
 https://news.ycombinator.com/item?id=31061163
+
+DuckDuckGo's Microsoft deal disallows blocking MS trackers on 3rd party sites
+https://news.ycombinator.com/item?id=31490515

@@ -29,3 +29,7 @@ https://github.com/ansilove/ansilove
 Powerful ASCII art editor designed for the Mac.
 https://monodraw.helftone.com
 https://news.ycombinator.com/item?id=27832910
+
+🧜🏼‍♀️ beauty of text art meets functionality of clock/timer ⏰
+https://github.com/reportaman/arttime
+https://news.ycombinator.com/item?id=31475739

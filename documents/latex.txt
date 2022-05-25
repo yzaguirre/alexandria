@@ -1,3 +1,7 @@
+I hate LaTeX. I love LaTeX.
+https://commutative.xyz/~miguelmurca/blog/x/illihl.html
+https://news.ycombinator.com/item?id=31490136
+
 Taking notes in mathematics lectures using LaTeX and Vim (2019)
 https://castel.dev/post/lecture-notes-1/
 https://news.ycombinator.com/item?id=29143707

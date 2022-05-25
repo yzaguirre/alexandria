@@ -1,0 +1,4 @@
+Find relevant emoji from text on the command-line 😮 ✨ 🙌 🐴 💥 🙈
+https://github.com/sindresorhus/emoj
+https://www.reddit.com/r/commandline/comments/uqb0tl/emoj_find_relevant_emoji_from_commandline/
+	npm install --global emoj

@@ -68,3 +68,11 @@ https://news.ycombinator.com/item?id=26476894
 cURL
 https://askubuntu.com/questions/1327783/can-you-set-socks5-proxy-from-linux-command-line
 	curl -x socks5h://localhost:9090 google.com -o output.curl
+
+Adblocking / tracker blocking by MITMing HTTPS traffic
+https://github.com/Barre/privaxy
+https://news.ycombinator.com/item?id=31432848
+
+Extracting TLS keys from an unwilling application
+http://m1el.github.io/oculus-tls-extract/
+https://news.ycombinator.com/item?id=31494825

@@ -39,3 +39,7 @@ https://store.arduino.cc/digital/create
 This project aims to simplify creation of basic Arduino programs by just editing a UI on Android.
 https://github.com/targist/ardui
 https://news.ycombinator.com/item?id=28035039
+
+Running Julia bare-metal on an Arduino
+https://seelengrab.github.io/articles/Running%20Julia%20baremetal%20on%20an%20Arduino/
+https://news.ycombinator.com/item?id=31481895

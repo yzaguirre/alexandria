@@ -11,3 +11,7 @@ with a 32-bit RISC-V core, for securely connected devices.
 NodeMCU ESP32-C3 WiFi & BLE IoT boards show up for about $4
 https://www.cnx-software.com/2021/07/12/nodemcu-esp32-c3-wifi-ble-iot-boards/
 https://news.ycombinator.com/item?id=27809802
+
+Control Esp32 from a web panel over MQTT protocol
+https://github.com/fdisotto/esp32-mqtt
+

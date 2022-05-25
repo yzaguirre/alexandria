@@ -1,0 +1,6 @@
+Scalable, high-performance WebRTC SFU.
+SDKs in JavaScript, React, React Native, Flutter, Swift, Kotlin,
+Unity/C#, Go, Ruby and Node.
+https://docs.livekit.io
+https://github.com/livekit/livekit
+https://news.ycombinator.com/item?id=31447046

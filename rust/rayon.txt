@@ -1,0 +1,2 @@
+Rayon: A data parallelism library for Rust
+https://github.com/rayon-rs/rayon

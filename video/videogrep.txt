@@ -1,0 +1,29 @@
+automatic video supercuts with python
+https://antiboredom.github.io/videogrep
+https://github.com/antiboredom/videogrep
+https://news.ycombinator.com/item?id=31483548
+https://lav.io/notes/videogrep-tutorial/
+	sudo -H pip install -U videogrep
+Vosk for transcribing
+	sudo -H pip install -U vosk
+
+Download video with subs
+	yt-dlp "https://www.youtube.com/watch?v=gElfIo6uw4g" --write-auto-sub -f 22 -o meta.mp4
+
+Usage
+	videogrep --input path/to/video --search 'search phrase'
+	videogrep --input meta.mp4 --search 'experience' --output experience1.mp4
+If you want to just cut to individual words you can change the
+--search-type argument from the default (--sentence) to fragment:
+	videogrep --input meta.mp4 --search 'experience' --search-type fragment --output experience2.mp4
+Note: --search-type fragment requires that subtitle files have timestamps
+for each word. Frequently .vtt files will have these timestamps,
+but .srt files will not.
+
+Frequent words and phrases
+	videogrep --input meta.mp4 --ngrams 1
+To print out the most common two word phrases:
+	videogrep --input meta.mp4 --ngrams 2
+
+To save a supercut as individual clips, just pass the --export-clips option.
+	videogrep --input meta.mp4 --search experience --output experience.mp4 --export-clips

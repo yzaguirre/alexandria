@@ -7,3 +7,6 @@ https://es.postermywall.com/index.php/posterbuilder/copy/fc4851bb432a65cc609f0e9
 simplest 2.4 ghz detector from a uhf diode backwards across an ultrabright red led. trim the leads to resonate at 2.45, and you can see the output from wifi access points -- shown here -- as well as microwave oven leakage
 found it in a box of junk that's getting purged today
 https://twitter.com/tedyapo/status/1445067813308321793
+
+https://github.com/inline-arc/wifi-sh
+https://www.reddit.com/r/commandline/comments/urqktc/wifi_qrcode_generator_in_bash/

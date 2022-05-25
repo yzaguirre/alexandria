@@ -1,3 +1,14 @@
 https://email.faircode.eu
 https://github.com/M66B/FairEmail
 https://news.ycombinator.com/item?id=26386374
+
+EFF and EU should respond to Google taking FairEmail off the Play store
+https://social.platypush.tech/@blacklight/108328001116500718
+https://news.ycombinator.com/item?id=31433051
+FairEmail terminated after Google falsely flagged as spyware
+https://news.ycombinator.com/item?id=31434372
+FairEmail stopping development after Google falsely flags app as spyware
+https://forum.xda-developers.com/t/closed-app-5-0-fairemail-fully-featured-open-source-privacy-oriented-email-app.3824168/page-1087#post-86909853
+https://news.ycombinator.com/item?id=31432334
+Scraping contacts
+https://news.ycombinator.com/item?id=31434975

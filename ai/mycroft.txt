@@ -13,3 +13,6 @@ Install Raspberry Pi OS using Raspberry Pi Imager
 https://www.raspberrypi.com/software/
 	wget https://downloads.raspberrypi.org/imager/imager_1.7.1_amd64.deb
 	wget https://downloads.raspberrypi.org/imager/imager_1.7.1_amd64.deb.sig
+
+https://mycroft.ai/blog/founders-resignation/
+https://news.ycombinator.com/item?id=31477741
