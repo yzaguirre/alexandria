@@ -43,6 +43,7 @@ $XDG_CONFIG_HOME/alacritty.yml
 $HOME/.config/alacritty/alacritty.yml
 $HOME/.alacritty.yml
 %APPDATA%\alacritty\alacritty.yml
+C:\Users\dyzag\AppData\Roaming\alacritty\alacritty.yml
 
 Configuration file example
 https://github.com/alacritty/alacritty/blob/master/alacritty.yml
