@@ -27,3 +27,7 @@ https://forums.centos.org/viewtopic.php?t=11747
 	service network restart
 
 Alternative AlmaLinux 9 and Rocky
+
+AlmaLinux 9
+https://almalinux.org/blog/almalinux-9-now-available/
+https://news.ycombinator.com/item?id=31522842

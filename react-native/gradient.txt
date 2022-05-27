@@ -1,0 +1,5 @@
+Radial gradient library for react native
+https://github.com/surajitsarkar19/react-native-radial-gradient
+https://www.w3schools.com/CSSref/func_radial-gradient.asp
+https://developer.mozilla.org/en-US/docs/web/css/gradient/radial-gradient
+	yarn add react-native-radial-gradient
