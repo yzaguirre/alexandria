@@ -1,0 +1,4 @@
+Understand your Git history!
+https://murmele.github.io/Gittyup/
+https://github.com/Murmele/Gittyup
+	wget https://github.com/Murmele/Gittyup/releases/download/stable/Gittyup-win64-1.1.0.exe

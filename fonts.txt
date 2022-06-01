@@ -1,4 +1,4 @@
-See ~/ide/fonts.txt ~/react-native/configure.txt ~/react-native/react-native-paper.txt
+See ide/fonts.txt react-native/configure.txt react-native/react-native-paper.txt
 https://fontawesome.com/?from=io
 https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html
 	fc-list -V

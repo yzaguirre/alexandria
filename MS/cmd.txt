@@ -27,3 +27,6 @@ https://www.softwareok.com/?seite=faq-Windows-Console&faq=24
 	vim C:\Users\dyzag\bin\restartExplorer.bat
 taskkill /IM explorer.exe /F
 explorer.exe
+
+https://www.windows-commandline.com/taskkill-kill-process/
+	taskkill /IM tmux.exe /F

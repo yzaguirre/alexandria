@@ -17,6 +17,9 @@ Download commandline tools
 	wget https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip
 	sha256sum commandlinetools-linux-8092744_latest.zip
 d71f75333d79c9c6ef5c39d3456c6c58c613de30e6a751ea0dbd433e8f8b9cbf
+	wget https://dl.google.com/android/repository/commandlinetools-win-8512546_latest.zip
+	sha1sum commandlinetools-win-8512546_latest.zip
+1bdd32ac4b9fffea04f5bc341108e8b4fea6f32c
 Setup
 https://android.tutorials24x7.com/blog/how-to-install-android-sdk-tools-on-ubuntu
 https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se

@@ -12,7 +12,7 @@ https://github.com/dotnet/sdk
 https://www.microsoft.com/net/core
 https://dotnet.microsoft.com/download
 Windows
-	winget install Microsoft.dotnet
+	winget install Microsoft.DotNet.SDK.6
 Installation at C:\Program Files\dotnet
 
 Binaries
@@ -23,6 +23,12 @@ ca21345400bcaceadad6327345f5364e858059cfcbc1759f05d7df7701fec26f1ead297b6928afa0
 	tar xf dotnet-sdk-6.0.101-linux-x64.tar.gz -C /opt/dotnet
 export DOTNET_ROOT=/opt/dotnet
 export PATH=$PATH:/opt/dotnet
+
+Check installations
+https://docs.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions?pivots=os-windows
+	dotnet --info
+	dotnet --list-sdks
+	dotnet --list-runtimes
 
 Package manager
 https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu

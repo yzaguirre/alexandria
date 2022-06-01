@@ -1,4 +1,4 @@
-https://jupyter.org/
+https://jupyter.org
 JupyterHub
 https://blog.jupyter.org/announcing-jupyterhub-1-0-8fff78acad7f
 https://news.ycombinator.com/item?id=19826169

@@ -28,6 +28,8 @@ Install
 	tar xf sublime_text_build_4126_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 Windows
+	winget install SublimeHQ.SublimeText.4
+Binary
 	wget https://download.sublimetext.com/sublime_text_build_4126_x64_setup.exe
 Add to PATH C:\Program Files\Sublime Text
 	explorer.exe sublime_text_build_4126_x64_setup.exe
