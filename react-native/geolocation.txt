@@ -1,4 +1,4 @@
-See ~/android/location.txt
+See ../android/location.txt
 https://github.com/react-native-geolocation/react-native-geolocation
 https://dzone.com/articles/how-to-use-geo-location-geo-coding-in-react-native
 https://github.com/facebook/react-native/issues/7495
@@ -81,3 +81,9 @@ https://www.ydhnwb.dev/2021/10/load-kml-file-to-your-react-native-maps.html
 Google Earth KML Into React Native Maps
 https://www.youtube.com/watch?v=Nd-WGY4cHHo
 https://stackoverflow.com/questions/51240013/i-have-the-kml-and-csv-file-and-want-to-load-file-in-the-react-native
+
+Convert to GeoJSON
+	npm install -g @mapbox/togeojson
+	togeojson map.kml > map.geojson
+Compact output
+	gojq -c . map.geojson > map\ compact.geojson

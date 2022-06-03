@@ -1,0 +1,3 @@
+Build your own FPGA
+http://blog.notdot.net/2012/10/Build-your-own-FPGA
+https://news.ycombinator.com/item?id=31557041

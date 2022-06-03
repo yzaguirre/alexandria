@@ -443,3 +443,6 @@ https://tsh.io/blog/react-native-latest-version/
 
 https://twitter.com/markdalgleish/status/1438301552410873859
 TIL StyleSheet.create in React Native literally just hands your styles back to you, offering no perf optimisation at all.
+
+Round View
+https://stackoverflow.com/questions/62695757/how-to-design-semi-circle-oval-in-react-native

@@ -1,0 +1,3 @@
+https://okular.kde.org
+	winget KDE.Okular
+	choco install okular

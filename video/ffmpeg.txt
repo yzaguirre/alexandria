@@ -212,3 +212,7 @@ Conversion
 or
 https://gist.github.com/kerbeh/fbe0cd0d89c424708c119e0a0d00ca88
 	ffmpeg -hwaccel videotoolbox -i background.jpg -i out.mp4 -filter_complex "[1:v]colorkey=0x34d454:0.3:0.15[ckout];[0:v][ckout]overlay[despill];[despill] despill=green[colorspace];[colorspace]format=yuv420p[out]" -map "[out]" output.mp4
+
+ffmpeg buddy
+https://evanhahn.github.io/ffmpeg-buddy/
+https://news.ycombinator.com/item?id=31557809

@@ -1,0 +1,5 @@
+Modern TUI calendar and task manager with minimal and customizable UI.
+https://github.com/anufrievroman/calcure
+https://news.ycombinator.com/item?id=31577960
+	pip install windows-curses calcure
+	pip install holidays jdatetime
