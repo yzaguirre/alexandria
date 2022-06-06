@@ -1,0 +1,5 @@
+http://www.gaia-gis.it/gaia-sins/
+https://github.com/indec-it/react-native-spatialite
+	yarn add react-native-spatialite
+
+See ../db/sqlite/spatialite.txt
