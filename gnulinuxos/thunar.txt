@@ -1,0 +1,3 @@
+GSoC 22: Adding features to Thunar file manager
+https://hi-im-buggy.github.io/blog/gsoc-22-first-blog-post
+https://news.ycombinator.com/item?id=31606011

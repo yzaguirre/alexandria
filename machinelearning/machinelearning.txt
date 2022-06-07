@@ -29,3 +29,7 @@ https://www.reddit.com/r/learnmachinelearning/comments/f9i317/i_want_to_learn_ml
 
 Hands on Machine Learning - Chapter 4 - Training Models
 https://www.youtube.com/watch?v=kfyzggSVAhI
+
+Some thoughts on machine learning with small data
+https://niklasriewald.com/2022/06/02/some-thoughts-on-machine-learning-with-small-data/
+https://news.ycombinator.com/item?id=31592769

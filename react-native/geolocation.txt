@@ -82,8 +82,18 @@ Google Earth KML Into React Native Maps
 https://www.youtube.com/watch?v=Nd-WGY4cHHo
 https://stackoverflow.com/questions/51240013/i-have-the-kml-and-csv-file-and-want-to-load-file-in-the-react-native
 
+https://geojson.org
 Convert to GeoJSON
 	npm install -g @mapbox/togeojson
 	togeojson map.kml > map.geojson
 Compact output
 	gojq -c . map.geojson > map\ compact.geojson
+
+Zero dependency library to provide some basic geo functions
+https://github.com/manuelbieh/geolib
+	yarn add geolib
+
+GEOJSON library for maps
+https://github.com/frankrowe/react-native-geojson
+
+See spacialite.txt

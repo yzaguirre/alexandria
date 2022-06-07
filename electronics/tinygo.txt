@@ -1,0 +1,6 @@
+Go compiler for small places.
+Microcontrollers, WebAssembly (WASM/WASI), and command-line tools.
+Based on LLVM.
+https://tinygo.org
+https://github.com/tinygo-org/tinygo
+https://news.ycombinator.com/item?id=31636642
