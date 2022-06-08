@@ -446,3 +446,6 @@ TIL StyleSheet.create in React Native literally just hands your styles back to y
 
 Round View
 https://stackoverflow.com/questions/62695757/how-to-design-semi-circle-oval-in-react-native
+
+Memory
+https://stackoverflow.com/questions/39655791/out-of-memory-application-crash-react-native

@@ -1,0 +1,3 @@
+https://twitch.js.org
+https://github.com/twitchapis/twitch.js
+	npm install @twitchapis/twitch.js
