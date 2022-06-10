@@ -83,6 +83,8 @@ https://www.youtube.com/watch?v=Nd-WGY4cHHo
 https://stackoverflow.com/questions/51240013/i-have-the-kml-and-csv-file-and-want-to-load-file-in-the-react-native
 
 https://geojson.org
+https://mapbox.github.io/togeojson/
+https://github.com/mapbox/togeojson
 Convert to GeoJSON
 	npm install -g @mapbox/togeojson
 	togeojson map.kml > map.geojson

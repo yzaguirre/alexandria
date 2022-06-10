@@ -28,3 +28,7 @@ https://stackoverflow.com/questions/14946647/google-maps-sample-code-not-running
 http://logicify.github.io/jquery-locationpicker-plugin/
 <script src="js/locationpicker.jquery.js"></script>
 $('#somecomponent').locationpicker();
+
+Geocoding
+https://stackoverflow.com/questions/46775244/google-place-api-city-search-by-coordinates
+https://developers.google.com/maps/documentation/geocoding/overview#ReverseGeocoding

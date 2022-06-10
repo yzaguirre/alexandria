@@ -449,3 +449,7 @@ https://stackoverflow.com/questions/62695757/how-to-design-semi-circle-oval-in-r
 
 Memory
 https://stackoverflow.com/questions/39655791/out-of-memory-application-crash-react-native
+
+https://github.com/react-native-community/jsc-android-buildscripts
+Get version
+	adb logcat | rg JavaScriptCore.Version
