@@ -1,12 +1,12 @@
 A modern replacement for ps written in Rust
 https://github.com/dalance/procs
-	wget https://github.com/dalance/procs/releases/download/v0.12.1/procs-v0.12.1-x86_64-lnx.zip
-	unzip procs-v0.12.1-x86_64-lnx.zip -d /usr/local/bin
+	wget https://github.com/dalance/procs/releases/download/v0.12.3/procs-v0.12.3-x86_64-lnx.zip
+	unzip procs-v0.12.3-x86_64-lnx.zip -d /usr/local/bin
 Windows
 	scoop install procs
 Binary
-	wget https://github.com/dalance/procs/releases/download/v0.12.1/procs-v0.12.1-x86_64-win.zip
-	7z e -oC:\Users\dyzag\bin procs-v0.12.1-x86_64-win.zip
+	wget https://github.com/dalance/procs/releases/download/v0.12.3/procs-v0.12.3-x86_64-win.zip
+	7z e -oC:\Users\dyzag\bin procs-v0.12.3-x86_64-win.zip
 
 Configuration
 Linux
