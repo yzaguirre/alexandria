@@ -1,1 +1,5 @@
 http://www.claws-mail.org/news.php
+https://news.ycombinator.com/item?id=31691783
+Windows
+	winget install ClawsMail.ClawsMail
+	choco install claws-mail

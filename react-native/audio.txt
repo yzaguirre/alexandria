@@ -30,6 +30,7 @@ Provides audio playback, external media controls, chromecast support,
 background mode and more!
 https://react-native-track-player.js.org
 https://github.com/DoubleSymmetry/react-native-track-player
+https://github.com/doublesymmetry/react-native-track-player/issues/1235
 	yarn add react-native-track-player
 
 Deprecated

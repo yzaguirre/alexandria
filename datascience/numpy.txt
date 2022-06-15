@@ -10,3 +10,5 @@ https://www.youtube.com/playlist?list=PL1FgJUcJJ03vXmv0nUOxJd1TL7C1JBHNV
 Windows
 https://github.com/numpy/numpy/issues/7532
 
+Algebra
+https://numpy.org/doc/stable/reference/routines.linalg.html
