@@ -1,4 +1,5 @@
 https://github.com/react-native-video/react-native-video
+https://stackoverflow.com/questions/70821680/could-not-find-com-yqritcandroid-scalablevideoview1-0-4-react-native-video-in
 	yarn add react-native-video
 
 https://medium.com/better-programming/add-video-to-your-react-native-app-using-react-native-video-f020e90059de
