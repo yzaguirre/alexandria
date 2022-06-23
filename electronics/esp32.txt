@@ -15,3 +15,6 @@ https://news.ycombinator.com/item?id=27809802
 Control Esp32 from a web panel over MQTT protocol
 https://github.com/fdisotto/esp32-mqtt
 
+ESP32-C5: Espressif’s First Dual-Band Wi-Fi 6 MCU
+https://www.espressif.com/en/news/ESP32-C5
+https://news.ycombinator.com/item?id=31837479

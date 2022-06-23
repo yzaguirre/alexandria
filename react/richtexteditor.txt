@@ -1,0 +1,3 @@
+Verbum is a fully flexible text editor based on lexical framework.
+https://github.com/ozanyurtsever/verbum
+https://news.ycombinator.com/item?id=31822619

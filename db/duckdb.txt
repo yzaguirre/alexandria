@@ -1,0 +1,15 @@
+DuckDB is an in-process SQL OLAP Database Management System
+https://duckdb.org
+https://github.com/duckdb/duckdb
+	wget https://github.com/duckdb/duckdb/releases/download/v0.4.0/duckdb_cli-linux-amd64.zip
+	unzip duckdb_cli-linux-amd64.zip -d /usr/local/bin
+Windows
+	wget https://github.com/duckdb/duckdb/releases/download/v0.4.0/duckdb_cli-windows-amd64.zip
+	7z x -oC:\Users\dyzag\bin duckdb_cli-windows-amd64.zip
+
+Usage
+	duckdb
+https://news.ycombinator.com/item?id=31824494
+Select * from 'bob.CSV' a
+    Join Mary.parquet' b
+    On a.Id = b.Id

@@ -1,5 +1,7 @@
 A network filesystem client to connect to SSH servers
 https://github.com/libfuse/sshfs
+Sshfs Is Orphaned
+https://news.ycombinator.com/item?id=31812506
 Using the SSH filesystem (sshfs), you can mount any directory from an SSH
 server that your user account can access from your local Linux system. sshfs pro-
 vides encryption of the mount operation as well as of all the data being transferred.

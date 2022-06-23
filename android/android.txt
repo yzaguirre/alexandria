@@ -83,3 +83,7 @@ https://www.reddit.com/r/linux/comments/tq8lib/why_is_mtp_such_a_horrible_piece_
 https://stackoverflow.com/questions/36289125/react-native-fetch-from-https-server-with-self-signed-certificate
 	vim res/xml/network_security_config.xml
 	vim AndroidManifest.xml
+
+Install HAXM
+	cd C:\Users\dyzag\AppData\Local\Android\Sdk\extras\intel\Hardware_Accelerated_Execution_Manager
+	start haxm-7.6.5-setup.exe
