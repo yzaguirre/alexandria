@@ -1,2 +1,4 @@
 https://labs.tomasino.org/gnu-recutils/
 https://news.ycombinator.com/item?id=22153665
+https://www.gnu.org/software/recutils/
+https://news.ycombinator.com/item?id=31832564

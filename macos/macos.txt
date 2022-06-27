@@ -3,6 +3,9 @@ See ~/video/ffmpeg.txt, ~/terminal/iterm.txt, ~/ide/xcode.txt
 https://www.macincloud.com/
 https://www.macstadium.com/
 
+https://www.bejarano.io/hardening-macos/
+https://news.ycombinator.com/item?id=31864974
+
 The secret of the macOS Monterey network quality tool
 https://danpetrov.xyz/macos/2021/11/14/analysing-network-quality-macos.html
 https://news.ycombinator.com/item?id=29225308
