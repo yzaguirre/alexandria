@@ -38,3 +38,6 @@ https://krebsonsecurity.com/2022/04/you-can-now-ask-google-to-remove-your-phone-
 https://rethinkdns.com/app
 https://github.com/celzero/rethink-app
 https://news.ycombinator.com/item?id=31555505
+
+Tim Hortons app violated laws in collection of 'vast amounts' of location data
+https://news.ycombinator.com/item?id=31585612

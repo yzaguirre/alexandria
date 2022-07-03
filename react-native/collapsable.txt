@@ -15,6 +15,7 @@ An expandable View element implemented using react-native-collapsible
 https://eliav2.github.io/react-native-collapsible-view/
 https://github.com/Eliav2/react-native-collapsible-view
 	yarn add @eliav2/react-native-collapsible-view
+	yarn add react-native-svg
 import React from "react";
 import { Text } from "react-native";
 import CollapsibleView from "@eliav2/react-native-collapsible-view";

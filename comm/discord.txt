@@ -1,0 +1,4 @@
+https://discord.com
+	wget -O discord.deb https://discord.com/api/download?platform=linux&format=deb
+	dpkg -i discord.deb
+	apt install gconf-service gconf-service-backend gconf2-common libc++1 libc++1-13 libc++abi1-13 libgconf-2-4 libunwind-13
