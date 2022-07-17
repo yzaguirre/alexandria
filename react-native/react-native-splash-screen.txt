@@ -1,4 +1,4 @@
-See ~/react-native/app-icons.txt
+See app-icons.txt
 
 2000 width 3000 height
 launch_screen.png

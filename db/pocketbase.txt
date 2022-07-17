@@ -1,0 +1,15 @@
+Open Source realtime backend in 1 file
+https://pocketbase.io
+https://github.com/pocketbase/pocketbase
+https://news.ycombinator.com/item?id=32013330
+	wget https://github.com/pocketbase/pocketbase/releases/download/v0.2.3/checksums.txt
+	wget https://github.com/pocketbase/pocketbase/releases/download/v0.2.3/pocketbase_0.2.3_linux_amd64.zip
+	sha256sum -c --ignore-missing checksums.txt
+	unzip pocketbase_0.2.3_linux_amd64.zip -d /usr/local/bin pocketbase
+Windows
+	wget https://github.com/pocketbase/pocketbase/releases/download/v0.2.3/pocketbase_0.2.3_windows_amd64.zip
+	sha256sum -c --ignore-missing checksums.txt
+	7z x -o'C:\Users\dyzag\bin' pocketbase_0.2.3_windows_amd64.zip pocketbase.exe
+
+Usage
+	pocketbase serve

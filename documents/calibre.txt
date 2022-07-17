@@ -18,3 +18,7 @@ CTRL+M	Toggle between paged and flow mode
 CTRL+ALT+B	Bookmarks
 
 https://github.com/janeczku/calibre-web
+
+New in Calibre 6.0
+https://calibre-ebook.com/new-in/fifteen
+https://news.ycombinator.com/item?id=32052669

@@ -199,3 +199,21 @@ https://stackoverflow.com/questions/44942851/install-user-certificate-via-adb
 If encrypted
 https://stackoverflow.com/questions/45409854/adb-command-to-check-if-the-device-is-encrypted#45419068
 	adb shell getprop ro.crypto.state
+
+Screen size
+https://nerdschalk.com/change-screen-resolution-adb-android/
+https://stackoverflow.com/questions/33931612/how-to-use-adb-to-change-resolution-of-device
+	adb shell wm size
+Physical size: 800x1280
+	adb shell wm size-density
+Physical size: 800x1280
+Physical density: 213
+Change screen resolution to 1080 x 1920 and density to 390:
+	adb shell wm size 1080x1920
+	adb shell wm density 390
+Reboot phone
+	adb reboot
+
+https://www.bugsnag.com/blog/errors-android-apps-high-memory-pressure
+https://stackoverflow.com/questions/14042687/cpu-usage-per-application-in-android/19889090#19889090
+	adb shell top -m 10

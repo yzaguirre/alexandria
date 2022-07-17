@@ -1,0 +1,14 @@
+https://xn--1-zfa.com/youtube/
+https://news.ycombinator.com/item?id=31990043
+	To improve search results on YouTube, use the search prefix "intitle:"
+https://seosly.com/youtube-search-operators/
+Date operators:
+	before:[date]
+	after:[date]
+	[search term], today
+	[search term], last hour
+	[search term], this month
+	[search term], this year
+I tried the search:
+	tesla, before:2019-01-02, after:2019-01-01
+And it appeared to work like you'd expect.

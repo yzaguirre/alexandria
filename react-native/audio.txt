@@ -25,7 +25,14 @@ https://github.com/hyochan/react-native-audio-recorder-player
 https://instamobile.io/react-native-tutorials/react-native-record-audio-play/
 https://medium.com/dooboolab/react-native-audio-player-and-recorder-v3-7697e25cd07
 	yarn add react-native-audio-recorder-player
+Record audio in mp3 format #28
 https://github.com/hyochan/react-native-audio-recorder-player/issues/28
+iOS Error occured during initiating recorder #442
+https://github.com/hyochan/react-native-audio-recorder-player/issues/442
+Error occured during initiating recorder #374
+https://github.com/hyochan/react-native-audio-recorder-player/issues/374
+iOS Sending rn-recordback with no listeners registered. stop record not working #291
+https://github.com/hyochan/react-native-audio-recorder-player/issues/291
 
 Audio recorder library for React Native
 https://github.com/Shinetechchina/react-native-audio-player-recorder

@@ -25,6 +25,7 @@ https://suelan.github.io/2020/02/05/iOS-Simulator-from-the-Command-Line/
 List devices
 	xcrun simctl list | less -S
 	applesimutils --list
+	xcrun xctrace list devices
 Filter
 	xcrun simctl list devices "iPhone X"
 Erase simulator cache

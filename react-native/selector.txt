@@ -31,6 +31,6 @@ https://github.com/expo/react-native-action-sheet
 	yarn add @expo/react-native-action-sheet
 
 See
-~/react-native/react-native-bottom-sheet.txt
-~/react-native/react-native-floating-action.txt
-~/react-native/react-native-action-button.txt
+react-native-bottom-sheet.txt
+react-native-floating-action.txt
+react-native-action-button.txt

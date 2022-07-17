@@ -151,7 +151,8 @@ var sharedBlacklist = [
 
 Generating Signed APK
 https://reactnative.dev/docs/signed-apk-android#generating-the-release-apk
-	keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+	cd android/app
+	keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 Copy your keystore in the following directory: android/app
 Edit android/gradle.properties
 	vim android/gradle.properties
@@ -453,3 +454,13 @@ https://stackoverflow.com/questions/39655791/out-of-memory-application-crash-rea
 https://github.com/react-native-community/jsc-android-buildscripts
 Get version
 	adb logcat | rg JavaScriptCore.Version
+
+https://stackoverflow.com/questions/41912313/element-overflow-hidden-in-react-native-android
+https://github.com/facebook/react-native/commit/b81c8b51fc6fe3c2dece72e3fe500e175613c5d4
+
+Memory leaks
+https://blog.swmansion.com/hunting-js-memory-leaks-in-react-native-apps-bd73807d0fde
+https://enquero.com/solving-memory-leaks-with-react-native/
+
+https://stackoverflow.com/questions/18675557/what-is-the-maximum-amount-of-ram-an-app-can-use
+

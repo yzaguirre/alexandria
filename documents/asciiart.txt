@@ -1,3 +1,10 @@
+Create beautiful SVG renderings of ASCII diagrams.
+https://github.com/asciitosvg/asciitosvg
+https://news.ycombinator.com/item?id=32024804
+	go get github.com/asciitosvg/asciitosvg/cmd/a2s
+Usage
+	a2s -h
+
 https://unix.stackexchange.com/questions/126630/creating-diagrams-in-ascii
 http://asciiflow.com/
 

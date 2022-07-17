@@ -7,3 +7,8 @@ https://www.reddit.com/r/learnprogramming/comments/bu6645/cornells_entire_machin
 
 https://www.microsoft.com/en-us/research/blog/%C2%B5transfer-a-technique-for-hyperparameter-tuning-of-enormous-neural-networks/
 https://www.reddit.com/r/programming/comments/t9wuxl/%C2%B5transfer_a_technique_for_hyperparameter_tuning/
+
+https://ali-design.github.io/deepcreativity/
+https://twitter.com/hardmaru/status/1545755621684830208
+
+Logistic Regression
