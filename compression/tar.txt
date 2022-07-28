@@ -95,3 +95,6 @@ Prepare volume #2 for part2.tar and hit return:
 
 How I Work: tar
 https://www.youtube.com/watch?v=oiSahje9T0A
+
+https://mort.coffee/home/tar/
+https://www.reddit.com/r/programming/comments/w6yfl6/the_tar_archive_format_its_extensions_and_why_gnu/

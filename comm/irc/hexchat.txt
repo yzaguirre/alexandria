@@ -1,5 +1,8 @@
 https://hexchat.github.io
+https://github.com/hexchat/hexchat
 https://hexchat.readthedocs.io/en/latest/addons.html
+Windows
+	winget install HexChat.HexChat
 
 Configuration in
 %HOME%/AppData/Roaming/HexChat

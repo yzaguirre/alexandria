@@ -1,0 +1,31 @@
+https://github.com/ariasmn/ugm
+	wget https://github.com/ariasmn/ugm/releases/download/v1.1.0/checksums.txt
+	wget https://github.com/ariasmn/ugm/releases/download/v1.1.0/ugm_1.1.0_linux_amd64
+	sha256sum -c --ignore-missing checksums.txt
+	chmod u+x ugm_1.1.0_linux_amd64
+	mv ugm_1.1.0_linux_amd64 /usr/local/bin/ugm
+Raspberry Pi
+	wget https://github.com/ariasmn/ugm/releases/download/v1.1.0/ugm_1.1.0_linux_arm64
+	chmod u+x ugm_1.1.0_linux_arm64
+	mv ugm_1.1.0_linux_arm64 /usr/local/bin/ugm
+Termux
+	mv ugm_1.1.0_linux_arm64 /data/data/com.termux/files/usr/bin/ugm
+
+Usage
+	ugm
+Exit
+	Ctrl+c / q / Esc
+Switch between user and group view
+	Tab
+Previous item
+	↑ / k
+Next item
+	↓ / j
+Previous page
+	← / h
+Next page
+	→ / l
+Enter search keywords
+	/
+Apply search
+	Enter

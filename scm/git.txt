@@ -427,3 +427,7 @@ Usage
 
 Proper Use of Git Tags
 https://news.ycombinator.com/item?id=31480306
+
+Things I wish everyone knew about Git (Part II)
+https://blog.plover.com/prog/git/tips-2.html
+https://news.ycombinator.com/item?id=32161247

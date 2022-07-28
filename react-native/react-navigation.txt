@@ -69,3 +69,7 @@ https://reactnavigation.org/docs/header-buttons/#adding-a-button-to-the-header
 
 How to handle AuthStack/MainStack Redux Login/Signup Api Integration in React Native | Gulsher Khan
 https://www.youtube.com/watch?v=CQYYcYhJMoQ
+
+Memory Leak
+https://github.com/react-navigation/react-navigation/issues/7686
+https://github.com/react-navigation/react-navigation/issues/7078

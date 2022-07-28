@@ -1,3 +1,13 @@
+https://litestream.io
+https://github.com/benbjohnson/litestream
+Raspberry Pi arm6
+	wget https://github.com/benbjohnson/litestream/releases/download/v0.3.9/litestream-v0.3.9-linux-arm6.deb
+	dpkg -i litestream-v0.3.9-linux-arm6.deb
+Raspberry Pi
+	wget https://github.com/benbjohnson/litestream/releases/download/v0.3.9/litestream-v0.3.9-linux-arm64.deb
+	dpkg -i litestream-v0.3.9-linux-arm64.deb
+
 I'm All-In on Server-Side SQLite
 https://fly.io/blog/all-in-on-sqlite-litestream/
 https://news.ycombinator.com/item?id=31318708
+https://tailscale.com/blog/database-for-2022/

@@ -5,5 +5,6 @@ https://github.com/openssl/openssl
 Windows
 https://slproweb.com/products/Win32OpenSSL.html
 	winget install ShiningLight.OpenSSL.Light
+	choco install openssl
 	choco install openssl.light
 See ../tunnels/openssl.txt

@@ -30,3 +30,8 @@ Deploy this. Simple text file that allows security researchers to
 reach the right people fast.
 Used by the world's biggest companies already.
 https://twitter.com/GossiTheDog/status/1519502619034673154
+
+https://httpstatuses.io
+
+https://github.com/sterchelen/hssp
+https://news.ycombinator.com/item?id=32164667

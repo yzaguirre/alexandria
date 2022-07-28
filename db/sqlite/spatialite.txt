@@ -1,3 +1,4 @@
 http://www.gaia-gis.it/gaia-sins/
+https://news.ycombinator.com/item?id=32195541
 
 See ../../react-native/spatialite.txt

@@ -6,8 +6,8 @@ and ensures that the gems you need are present in development,
 staging, and production.
 Starting work on a project is as simple as bundle install.
 
-See ~/ruby/ruby.txt
-https://bundler.io/
+See ruby.txt
+https://bundler.io
 Install
 	gem install bundler
 	rbenv rehash

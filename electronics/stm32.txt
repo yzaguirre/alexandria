@@ -6,3 +6,8 @@ https://www.youtube.com/watch?v=t5phi3nT8OU
 
 KiCad STM32 + RF + USB Hardware Design
 https://www.youtube.com/watch?v=14_jh3nLSsU
+
+https://github.com/nviennot/stm32-emulator
+	git clone https://github.com/nviennot/stm32-emulator.git
+	cd stm32-emulator/monox
+	cargo run --release -- config.yaml -v

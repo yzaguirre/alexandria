@@ -13,6 +13,17 @@ Windows
 	winget install octave
 	scoop install octave
 	choco install octave
+Installed at
+C:\Program Files\GNU Octave
+Configuration at
+AppData\Roaming\octave\octave-gui.ini
+
 Docs
 https://www.gnu.org/software/octave/octave.pdf
 https://www.gnu.org/software/octave/doc/interpreter/index.html
+https://octave.org/octave.pdf
+
+Lista packages
+	pkg list
+Load a package
+	pkg load PACKAGENAME

@@ -23,3 +23,8 @@ Cross-platform Toast component for React Native, supports Android, IOS and Web
 https://github.com/arnnis/react-native-fast-toast
 https://www.reddit.com/r/reactnative/comments/obo3gw/reactnativefasttoast_updated_to_version_3_with/
 	yarn add react-native-fast-toast
+
+https://github.com/backpackapp-io/react-native-toast
+https://www.reddit.com/r/reactnative/comments/w651ve/backpackappioreactnativetoast_a_complete_topnotch/
+	yarn add @backpackapp-io/react-native-toast
+	yarn add react-native-reanimated react-native-safe-area-context react-native-gesture-handler

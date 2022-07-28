@@ -112,6 +112,8 @@ Windows
 Usage
 	mlr --csv sort -f name input.csv
 	mlr --icsv --opprint cat input.csv
+https://www.reddit.com/r/commandline/comments/w766b8/convert_a_single_line_of_json_to_csv_using_jq_in/
+	mlr --ijson --ocsv cut -f dailysteps,weeklysteps,monthlysteps data.json
 
 tsv-utils
 https://ebay.github.io/tsv-utils/

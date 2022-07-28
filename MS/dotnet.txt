@@ -75,7 +75,7 @@ https://stackoverflow.com/questions/46815546/how-to-add-external-assembly-dll-to
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
 https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
-	dotnet add package System.Data.SqlClient
+	dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-strings-and-configuration-files
 https://stackoverflow.com/questions/43510983/porting-system-configuration-to-net-core-via-pocos#43512837
 https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration

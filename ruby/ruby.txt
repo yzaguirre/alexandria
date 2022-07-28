@@ -1,4 +1,4 @@
-https://rubyinstaller.org/
+https://rubyinstaller.org
 https://www.ruby-lang.org/en/
 
 Install via rbenv
@@ -13,7 +13,10 @@ Or
 	echo 'export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 Run rbenv-doctor
 	wget -q https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor -O- | bash
-
+Windows
+	winget install RubyInstallerTeam.Ruby.3.1
+	choco install ruby
+Installed at C:\tools\ruby31\
 MacOS
 	brew install rbenv ruby-build
 ruby-build installs a non-Homebrew OpenSSL for each Ruby version installed and these are never upgraded.

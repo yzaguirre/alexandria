@@ -87,3 +87,8 @@ https://stackoverflow.com/questions/36289125/react-native-fetch-from-https-serve
 Install HAXM
 	cd C:\Users\dyzag\AppData\Local\Android\Sdk\extras\intel\Hardware_Accelerated_Execution_Manager
 	start haxm-7.6.5-setup.exe
+
+largeHeap
+https://stackoverflow.com/questions/13799623/androidlargeheap-true-not-working
+https://stackoverflow.com/questions/17054454/androidlargeheap-true-convention
+https://stackoverflow.com/questions/27396892/what-are-advantages-of-setting-largeheap-to-true

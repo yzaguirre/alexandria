@@ -1,6 +1,8 @@
 https://reactnative.dev
 https://reactnative.directory
 
+https://twitter.com/RebeccaSlatkin/status/1551369873573412865
+
 Wireless adb
 https://bobbertoc.medium.com/debugging-android-wirelessly-for-react-native-made-easy-6461c36ac38b
 https://www.reddit.com/r/reactnative/comments/noy5xy/debugging_android_wirelessly_for_react_native/
@@ -459,8 +461,17 @@ https://stackoverflow.com/questions/41912313/element-overflow-hidden-in-react-na
 https://github.com/facebook/react-native/commit/b81c8b51fc6fe3c2dece72e3fe500e175613c5d4
 
 Memory leaks
+https://www.bugsnag.com/blog/errors-android-apps-high-memory-pressure
 https://blog.swmansion.com/hunting-js-memory-leaks-in-react-native-apps-bd73807d0fde
 https://enquero.com/solving-memory-leaks-with-react-native/
 
 https://stackoverflow.com/questions/18675557/what-is-the-maximum-amount-of-ram-an-app-can-use
+https://stackoverflow.com/questions/55239876/how-to-find-out-memory-leaks-in-react-native-app
+https://stackoverflow.com/questions/63409041/how-to-fix-memory-leak-issue-in-react-native
+https://www.linkedin.com/pulse/solving-memory-leaks-react-native-muthukumaraswamy-b
+https://www.loginradius.com/blog/engineering/how-to-fix-memory-leaks-in-react/
 
+An alternative mobile client for Israel Railways
+https://better-rail.co.il
+https://github.com/guytepper/better-rail
+https://www.reddit.com/r/reactnative/comments/w7pibg/i_made_an_alternative_mobile_app_for_israel/

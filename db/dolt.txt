@@ -1,0 +1,3 @@
+Dolt - It's Git for Data
+https://github.com/dolthub/dolt
+https://www.dolthub.com/blog/2022-07-11-dolt-case-studies/

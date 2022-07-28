@@ -48,3 +48,10 @@ https://github.com/doublesymmetry/react-native-track-player/issues/1235
 
 Deprecated
 https://github.com/jsierles/react-native-audio
+
+Create Complete Music Player App in React Native
+https://www.youtube.com/watch?v=-F8twDee9rA
+How to do Speech Recognition in React Native || Voice Recording || Voice Typing || By Gulsher Khan
+https://www.youtube.com/watch?v=66fWSaV9xIA
+Mobile App - Make Your Own Music Player 📱 APP | React Native | React Native CLI
+https://www.youtube.com/watch?v=dPw5vCXhrmc
