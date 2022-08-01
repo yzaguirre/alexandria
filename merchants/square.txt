@@ -1,0 +1,1 @@
+https://developer.squareup.com/reference/square/payments-api
