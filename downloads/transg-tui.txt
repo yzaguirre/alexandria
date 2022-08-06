@@ -1,0 +1,7 @@
+Terminal UI for transmission torrent client
+https://github.com/PanAeon/transg-tui
+https://www.reddit.com/r/commandline/comments/wc0php/transgtui_command_line_interface_for_transmission/
+	wget https://github.com/PanAeon/transg-tui/archive/refs/heads/master.zip
+	unzip master.zip
+	cd transg-tui-master
+	cargo build --release

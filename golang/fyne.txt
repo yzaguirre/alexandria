@@ -1,0 +1,12 @@
+https://fyne.io
+https://github.com/fyne-io/fyne
+Initialize the module
+	go mod init fynedemo
+Add the framework
+	go get fyne.io/fyne/v2
+
+Run program
+	go mod tidy
+	go run main.go
+
+https://www.youtube.com/watch?v=T5kLuxmVVVg

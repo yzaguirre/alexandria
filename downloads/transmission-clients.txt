@@ -1,11 +1,23 @@
+Official Transmission BitTorrent client repository
+https://transmissionbt.com
+https://github.com/transmission/transmission
+Windows
+	winget install Transmission.Transmission
+	choco install transmission
+Installed at
+C:\Program Files\Transmission\
+
 transdroid
 https://www.transdroid.org/download/
 
 transmission-gui
+https://github.com/transmission-remote-gui/transgui
 http://www.webupd8.org/2009/12/setting-up-transmission-remote-gui-in.html
 	mkdir /opt/transmission-gui
 	unzip transgui-5.0.1-x86_64-linux.zip -d /VMs/opt/transmission-gui
 	ln -s /opt/transmission-gui/transgui /usr/local/bin
+Windows
+	choco install transgui
 
 NCurses interface with transmission daemon
 https://github.com/fagga/transmission-remote-cli
@@ -58,3 +70,8 @@ https://github.com/rndusr/stig
 
 Configuration at
 cd ~/.config/stig/rc
+
+See transg-tui.txt
+
+Fragments
+https://gitlab.gnome.org/World/Fragments

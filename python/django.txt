@@ -1,6 +1,9 @@
 Gitignore
 https://gist.github.com/jisungs/e14615a0c52b2f81ad88fb6b332b6ba7
 
+Django 4.1
+https://www.djangoproject.com/weblog/2022/aug/03/django-41-released/
+https://news.ycombinator.com/item?id=32329399
 Django 3.2
 https://news.ycombinator.com/item?id=26710013
 https://news.ycombinator.com/item?id=12093182

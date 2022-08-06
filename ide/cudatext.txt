@@ -3,6 +3,7 @@ https://cudatext.github.io
 https://github.com/Alexey-T/CudaText
 https://www.fosshub.com/CudaText.html
 https://www.reddit.com/r/linux/comments/oqcazj/cudatext_an_open_source_alternative_to_sublimetext/
+https://news.ycombinator.com/item?id=32360341
 Verify
 	md5sum cudatext_1.139.2.1-1_qt5_amd64.deb 
 12e0e33ece0ee99865d1380cc55d1da5  cudatext_1.139.2.1-1_qt5_amd64.deb

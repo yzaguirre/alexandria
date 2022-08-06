@@ -1,3 +1,6 @@
 Zellij - A Terminal Workspace and Multiplexer Written in Rust 
 https://zellij.dev/news/beta/#
+https://github.com/zellij-org/zellij
 https://news.ycombinator.com/item?id=26902430
+https://zellij.dev/news/sixel-search-statusbar/
+https://www.reddit.com/r/commandline/comments/wb101x/zellij_a_terminal_workspace_and_multiplexer/

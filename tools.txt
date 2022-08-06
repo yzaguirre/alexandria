@@ -32,6 +32,8 @@ trading networks
 https://www.etoro.com/
 https://www.tradegeniusacademy.com
 
+https://www.reddit.com/r/commandline/comments/wbfxsz/any_cool_curlwget_tools_that_you_use/
+https://github.com/chubin/awesome-console-services
 https://github.com/herrbischoff/awesome-command-line-apps
 https://github.com/alebcay/awesome-shell
 https://github.com/anderspitman/awesome-tunneling

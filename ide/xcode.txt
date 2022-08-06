@@ -68,3 +68,6 @@ xcodebuild -exportArchive -archivePath Archive/TestBuidApp.xcarchive -exportPath
 
 Install and update your Xcodes
 https://github.com/xcpretty/xcode-install
+
+https://stackoverflow.com/questions/49606831/how-to-clear-userdefaults-for-xcode-build-of-mac-app
+	defaults delete com.bundle.identifier

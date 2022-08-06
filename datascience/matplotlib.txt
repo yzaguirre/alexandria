@@ -1,5 +1,5 @@
 matplotlib: plotting with Python
-https://matplotlib.org/
+https://matplotlib.org
 https://github.com/matplotlib/matplotlib
 	sudo -H pip install matplotlib
 

@@ -1,3 +1,7 @@
+IntelliJ Platform is an OSS platform developed by JetBrains for building IDEs and language-aware developer tools.
+https://www.jetbrains.com
+	winget install JetBrains.IntelliJIDEA.Community
+	choco install intellijidea-community
 phpstorm
 	tar xf PhpStorm-8.0.1.tar.gz -C /VMs/opt/
 	cd /VMs/opt

@@ -3,6 +3,9 @@ https://github.com/elixir-lang/elixir
 https://elixirschool.com/en/
 https://elixir-lang.slack.com
 
+https://news.livebook.dev/introducing-the-livebook-desktop-app-4C8dpu
+https://news.ycombinator.com/item?id=32320531
+
 Elixir 1.12
 https://elixir-lang.org/blog/2021/05/19/elixir-v1-12-0-released/
 https://news.ycombinator.com/item?id=27206656

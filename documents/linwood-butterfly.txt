@@ -1,0 +1,14 @@
+🎨 Powerful, minimalistic, cross-platform, opensource note-taking app
+https://docs.butterfly.linwood.dev
+https://github.com/LinwoodCloud/Butterfly
+https://www.reddit.com/r/opensource/comments/wh0vkn/linwood_butterfly_powerful_minimalistic/
+	wget https://github.com/LinwoodCloud/butterfly/releases/download/stable/linwood-butterfly-linux.deb
+	dpkg -i linwood-butterfly-linux.deb
+Windows
+	winget install LinwoodCloud.Butterfly
+Installed at
+C:\Program Files (x86)\LinwoodCloud\Butterfly
+
+Android
+	wget https://github.com/LinwoodCloud/Butterfly/releases/download/v1.4.1/linwood-butterfly-android.apk
+	adb install linwood-butterfly-android.apk

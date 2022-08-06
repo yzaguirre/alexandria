@@ -7,10 +7,16 @@ Installer
 	wget https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.3-64-install.exe
 	explorer.exe SumatraPDF-3.3.3-64-install.exe
 Dark mode
+https://www.sumatrapdfreader.org/settings/settings3-4-6
 https://oak.dev/2020/05/06/dark-mode-for-sumatra-pdf/
 TextColor = #eeeeee
 BackgroundColor = #111111
 GradientColors = #000000
+
+Light mode
+TextColor = #000000
+BackgroundColor = #ffffff
+GradientColors =
 
 SumatraPDF 3.4 Released
 https://www.sumatrapdfreader.org/docs/Version-history

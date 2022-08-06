@@ -1,6 +1,8 @@
 https://reactnative.dev
 https://reactnative.directory
 
+https://blog.esteetey.dev/a-quick-guide-to-building-good-react-native-mobile-apps#heading-screen-mirroring
+
 https://twitter.com/RebeccaSlatkin/status/1551369873573412865
 
 Wireless adb
@@ -475,3 +477,9 @@ An alternative mobile client for Israel Railways
 https://better-rail.co.il
 https://github.com/guytepper/better-rail
 https://www.reddit.com/r/reactnative/comments/w7pibg/i_made_an_alternative_mobile_app_for_israel/
+
+https://github.com/infinitered/ignite
+# for vanilla React Native
+npx ignite-cli new PizzaApp
+# to provide a custom bundle identifier (Android only):
+npx ignite-cli new PizzaApp --bundle=com.infinitered.pizzaapp

@@ -17,6 +17,8 @@ Installed at
 C:\Program Files\GNU Octave
 Configuration at
 AppData\Roaming\octave\octave-gui.ini
+PowerShell alias
+Set-Alias octave 'C:\Program Files\GNU Octave\Octave-7.1.0\mingw64\bin\octave-7.1.0.exe'
 
 Docs
 https://www.gnu.org/software/octave/octave.pdf

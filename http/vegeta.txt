@@ -1,0 +1,12 @@
+HTTP load testing tool and library. It's over 9000!
+https://pkg.go.dev/github.com/tsenart/vegeta/lib
+https://github.com/tsenart/vegeta
+	go get -u github.com/tsenart/vegeta
+Binary
+	wget https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_checksums.txt
+	wget https://github.com/tsenart/vegeta/releases/download/v12.8.4/vegeta_12.8.4_linux_amd64.tar.gz
+	sha256sum -c --ignore-missing vegeta_12.8.4_checksums.txt
+	tar xf vegeta_12.8.4_linux_amd64.tar.gz -C /usr/local/bin
+Homebrew
+	brew update
+	brew install vegeta

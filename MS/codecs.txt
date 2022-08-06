@@ -1,0 +1,6 @@
+https://www.youtube.com/shorts/ieXrw5ammYo
+HEIF Image Extensions
+	winget install --id 9PMMSR1CGPWG
+
+https://apps.microsoft.com/store/detail/hevc-video-extensions-from-device-manufacturer/9N4WGH0Z6VHQ
+	winget install --id 9N4WGH0Z6VHQ

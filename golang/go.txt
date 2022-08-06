@@ -13,6 +13,9 @@ https://talks.golang.org/2016/applicative.slide
 http://engineroom.teamwork.com/go-learn/
 
 https://golang.org/doc/install
+Go 1.19 Released
+https://go.dev/blog/go1.19
+https://news.ycombinator.com/item?id=32321499
 Go 1.18 Released
 https://go.dev/blog/go1.18
 https://news.ycombinator.com/item?id=30688208

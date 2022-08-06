@@ -180,3 +180,8 @@ CTRL+B }
 
 Session manager and task runner for tmux. Start your development environment within one command.
 https://github.com/ivaaaan/smug
+
+⚙️ Python API / wrapper for tmux
+https://libtmux.git-pull.com
+https://github.com/tmux-python/libtmux
+	pip install -U --user ptpython

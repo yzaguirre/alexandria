@@ -18,12 +18,14 @@ Install
 	apt install neovim
 	nvim
 Windows
+	winget install Neovim.Neovim
 	choco install neovim
 Homebrew
 	brew install neovim
 Config at
 ~/.config/nvim/init.vim
 %LOCALAPPDATA%\nvim\init.vim
+	:edit $MYVIMRC
 
 https://media.pragprog.com/titles/modvim/switch.pdf
 	vim ~/.bash_aliases
@@ -36,3 +38,5 @@ let &packpath = &runtimepath
 source ~/.vim/vimrc
 
 https://media.pragprog.com/titles/modvim/terminal.pdf
+
+https://neovim.io/doc/user/usr_05.html#05.1

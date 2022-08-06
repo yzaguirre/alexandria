@@ -1,0 +1,3 @@
+A python module to enhance terminal/text based interfaces with window-like borders and formatting
+https://codeberg.org/LinuxPropaganda/FancyBoxes
+https://www.reddit.com/r/commandline/comments/wgeqrb/stop_making_ugly_terminal_interfaces_use_fancy/

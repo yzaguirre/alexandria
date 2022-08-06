@@ -56,3 +56,6 @@ $Filename,${FileModifyDate#;DateFmt("%Y/%m/%d %H:%M:%S")},${FileAccessDate#;Date
 -r: Recursive on /d/ drive
 
 https://explainshell.com/explain?cmd=+exiftool+-d+%27%25r+%25a%2C+%25B+%25e%2C+%25Y%27+-DateTimeOriginal+-S+-s+-ext+jpg+%2Fhome%2Fmarcos%2FDCIM%2F347CANON
+
+ExifLooter finds geolocation on all image urls and directories also integrates with OpenStreetMap
+https://github.com/aydinnyunus/exifLooter

@@ -1,0 +1,7 @@
+A paint and ASCII art application for the terminal.
+https://fi-le.net/programming/#kakikun
+https://github.com/file-acomplaint/kakikun
+https://www.reddit.com/r/commandline/comments/wfuxvz/kakikun_a_little_rust_cli_program_to_paint_and/
+Windows
+	wget -O bin/kakikun.exe https://github.com/file-acomplaint/kakikun/releases/download/v0.1.0/kakikun.exe
+	

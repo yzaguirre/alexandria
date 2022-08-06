@@ -1,0 +1,4 @@
+Safe, simple and fast JSON Web Tokens for Go
+https://github.com/cristalhq/jwt
+Install
+	go get github.com/cristalhq/jwt/v4
