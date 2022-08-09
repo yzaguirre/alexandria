@@ -120,6 +120,7 @@ Keep the transparency
 	convert partial-trans.png -fuzz 1% -trim +repage trimmed.jpg
 In order to modify and not save a new file, use mogrify
 Redimensionar
+https://blog.chapagain.com.np/imagemagick-convert-edit-image-via-command-line/
 	convert -resize {dimensión} {entrada} {salida}
 	convert -resize x200 {entrada} {salida}
 	convert -resize 150x300 {entrada} {salida}

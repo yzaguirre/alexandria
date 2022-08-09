@@ -27,3 +27,7 @@ https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 const article = document.querySelector('#electric-cars');
 article.dataset.columns // "3"
+
+Disable Zoom
+https://www.w3docs.com/snippets/css/how-to-disable-zoom-on-a-mobile-web-page-using-html-and-css.html
+<meta name="viewport" content="width=device-width, user-scalable=no">

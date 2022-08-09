@@ -2,6 +2,9 @@ https://neovim.io
 https://github.com/neovim/neovim
 https://pragprog.com/book/modvim/modern-vim
 
+Awesome Neovim Setup From Scratch - Full Guide
+https://www.youtube.com/watch?v=JWReY93Vl6g
+
 Neovim 0.5 Is Overpowering 
 https://crispgm.com/page/neovim-is-overpowering.html
 https://news.ycombinator.com/item?id=27291302
@@ -40,3 +43,6 @@ source ~/.vim/vimrc
 https://media.pragprog.com/titles/modvim/terminal.pdf
 
 https://neovim.io/doc/user/usr_05.html#05.1
+
+Find, Filter, Preview, Pick. All lua, all the time.
+https://github.com/nvim-telescope/telescope.nvim
