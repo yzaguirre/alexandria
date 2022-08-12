@@ -2,3 +2,10 @@
 https://hpjansson.org/chafa/
 https://github.com/hpjansson/chafa
 	apt install chafa
+Windows
+https://hpjansson.org/chafa/releases/static/
+	wget https://hpjansson.org/chafa/releases/static/chafa-1.12.3-1-x86_64-windows.zip
+	wget https://hpjansson.org/chafa/releases/static/chafa-1.12.3-1-x86_64-windows.zip.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xC01EDE5BB0D91E26D003662EC76BB9FEEAD12EA7
+	gpg --verify chafa-1.12.3-1-x86_64-windows.zip.asc
+	7z e -obin/ chafa-1.12.3-1-x86_64-windows.zip chafa-1.12.3-1-x86_64-win\Chafa.exe

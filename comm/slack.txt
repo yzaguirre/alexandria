@@ -1,4 +1,15 @@
-https://slack.com/
+https://slack.com
+	winget install SlackTechnologies.Slack
+	choco install slack
 
 Building Your First Slackbot With Python
 https://www.youtube.com/watch?v=CtsDkcSYHe0
+
+https://api.slack.com
+https://api.slack.com/future/tools/cli
+
+A command line interface for Slack implemented using node.
+https://candrholdings.github.io/slack-cli/
+https://github.com/candrholdings/slack-cli
+	npm install -g slack-cli
+	SET SLACK_TOKEN=xoxo-12345678-12345678-12345678-123abc

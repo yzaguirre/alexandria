@@ -1,28 +1,29 @@
 http://www.mozilla.org/en-US/thunderbird/all.html
+	wget -O ThunderbirdSetup.exe "https://download.mozilla.org/?product=thunderbird-latest&os=win&lang=es-MX"
+	wget -O ThunderbirdSetup.exe "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=es-MX"
 	
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/linux-i686/es-ES/thunderbird-38.0.1.tar.bz2
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/KEY
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/MD5SUMS
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/MD5SUMS.asc
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/SHA1SUMS
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/SHA1SUMS.asc
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/SHA512SUMS
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/38.0.1/SHA512SUMS.asc
+	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/102.1.1/linux-x86_64/es-MX/thunderbird-102.1.1.tar.bz2
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/KEY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA256SUMMARY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA256SUMS
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA256SUMS.asc
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA512SUMMARY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA512SUMS
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.1.1/SHA512SUMS.asc
 Verify
-	gpg2 --with-fingerprint KEY
-	gpg2 --import KEY
-	gpg2 --verify MD5SUMS.asc
-	gpg2 --verify SHA1SUMS.ascs
-	gpg2 --verify SHA512SUMS.asc
-	md5sum thunderbird-38.0.1.tar.bz2
-	sha1sum thunderbird-38.0.1.tar.bz2
-	sha512sum thunderbird-38.0.1.tar.bz2
-	grep "linux-i686/es-ES/thunderbird-38.0.1" MD5SUMS
-	grep "linux-i686/es-ES/thunderbird-38.0.1" SHA1SUMS
-	grep "linux-i686/es-ES/thunderbird-38.0.1" SHA512SUMS
-	tar xf thunderbird-38.0.1.tar.bz2 -C /VMs/opt
+	gpg --with-fingerprint KEY
+	gpg --import KEY
+	gpg --verify SHA256SUMS.asc
+	gpg --verify SHA512SUMS.asc
+	sha256sum thunderbird-102.1.1.tar.bz2
+	sha512sum thunderbird-102.1.1.tar.bz2
+	grep "linux-x86_64/es-ES/thunderbird-102.1.1" MD5SUMS
+	grep "linux-x86_64/es-ES/thunderbird-102.1.1" SHA1SUMS
+	grep "linux-x86_64/es-ES/thunderbird-102.1.1" SHA512SUMS
+	tar xf thunderbird-102.1.1.tar.bz2 -C /VMs/opt
 	ln -s /VMs/opt/thunderbird/thunderbird-bin /usr/local/bin/thunderbird
-
+Windows
+	winget install Mozilla.Thunderbird
 gmail
 https://support.mozillamessaging.com/en-US/kb/Thunderbird-and-Gmail
 

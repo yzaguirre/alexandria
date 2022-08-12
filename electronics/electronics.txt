@@ -1,3 +1,7 @@
+From Oscilloscope to Wireshark: A UDP Story
+https://www.mattkeeter.com/blog/2022-08-11-udp/
+https://news.ycombinator.com/item?id=32428032
+
 Oscillator
 The 1000 OSCILLATOR MEGADRONE Is Complete! The KiloDrone Is ALIVE
 https://www.youtube.com/watch?v=c3wk9WWTfNs&t=420s

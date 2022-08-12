@@ -177,7 +177,7 @@ si no se quiere usar "separadores" se debe declarar +0+0
 	montage -label "My caption" image.jpg -geometry +0+0 -pointsize 30 newimage.jpg
 This creates a white rectangle with a 1-pixel black border, 200 pixels wide and 100
 pixels tall, and places it at 30 pixels across and 10 pixels down on file.png.
-See www.imagemagick.org/script/command-line-options.php
+See https://www.imagemagick.org/script/command-line-options.php
 
 INSERTAR TEXTO
 	convert -font {fuente} -pointsize {tamaño} -gravity {posicion} -fill {color} -draw 'text {horizontal} {vertical} "{texto}"' {entrada} {salida}

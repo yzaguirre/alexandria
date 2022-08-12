@@ -1,3 +1,4 @@
+https://developer.android.com/studio/releases/platform-tools
 https://android.googlesource.com/platform/system/core
 	apt install adb
 The following NEW packages will be installed:
@@ -220,3 +221,12 @@ Reboot phone
 https://www.bugsnag.com/blog/errors-android-apps-high-memory-pressure
 https://stackoverflow.com/questions/14042687/cpu-usage-per-application-in-android/19889090#19889090
 	adb shell top -m 10
+
+Font Scalling
+https://stackoverflow.com/questions/32692459/how-to-change-font-size-by-adb-command
+	adb shell settings put system font_scale 1.0
+	adb shell settings put system font_scale 1.30
+Small - 0.85
+Default - 1.0
+Large - 1.15
+Largest - 1.30

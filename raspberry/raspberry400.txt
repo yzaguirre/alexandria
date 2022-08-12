@@ -1,3 +1,6 @@
+Install
+	apt install neofetch kdeconnect wget tar less curl slurm nmap pv tmux vim neovim tty-clock fd-find ripgrep keepassxc
+
 The Raspberry Pi 400 is Awesome! Review, Overclock, Emulation, Tear Down
 https://www.youtube.com/watch?v=h86D_6yh1nk
 

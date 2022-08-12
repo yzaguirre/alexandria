@@ -4,6 +4,7 @@ https://pragprog.com/book/modvim/modern-vim
 
 Awesome Neovim Setup From Scratch - Full Guide
 https://www.youtube.com/watch?v=JWReY93Vl6g
+https://github.com/NeuralNine/config-files/blob/master/init.vim
 
 Neovim 0.5 Is Overpowering 
 https://crispgm.com/page/neovim-is-overpowering.html

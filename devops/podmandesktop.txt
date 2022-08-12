@@ -1,3 +1,4 @@
 Podman desktop companion
 https://iongion.github.io/podman-desktop-companion/
 https://github.com/iongion/podman-desktop-companion
+https://news.ycombinator.com/item?id=32421793

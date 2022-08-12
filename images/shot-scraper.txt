@@ -1,7 +1,10 @@
 Tools for taking automated screenshots of websites
 https://github.com/simonw/shot-scraper
+https://news.ycombinator.com/item?id=32409632
 	sudo -H pip install -U shot-scraper
 	shot-scraper install
+Installed at
+\AppData\Local\ms-playwright\
 
 Usage
 	shot-scraper https://datasette.io/
@@ -17,7 +20,7 @@ Adding a delay in milliseconds
 Customize JavaScript
 	shot-scraper https://simonwillison.net/ -o simonwillison-pink.png --javascript "document.body.style.backgroundColor = 'pink';"
 Using JPEGs instead of PNGs
-	shot-scraper https://simonwillison.net/ -h 800 -o simonwillison.jpg --quality 80	
+	shot-scraper https://simonwillison.net/ -h 800 -o simonwillison.jpg --quality 80
 Retina images. Double resolution
 This example will produce an image that is 800px wide and 1200px high.
 	shot-scraper https://simonwillison.net/ -o simon.png --width 400 --height 600 --retina
