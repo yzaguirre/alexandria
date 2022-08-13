@@ -1,0 +1,37 @@
+🔥 [WIP] Feature-rich interactive Jira command line.
+https://github.com/ankitpokhrel/jira-cli
+https://news.ycombinator.com/item?id=32435259
+Windows
+	wget https://github.com/ankitpokhrel/jira-cli/releases/download/v1.0.0/jira_1.0.0_windows_amd64.zip
+	wget https://github.com/ankitpokhrel/jira-cli/releases/download/v1.0.0/checksums.txt
+	Get-FileHash .\jira_1.0.0_windows_amd64.zip -Algorithm SHA256 | Format-List
+	sha256sum -c --ignore-missing checksums.txt
+	7z e -o'bin' jira_1.0.0_windows_amd64.zip bin\jira.exe
+Homebrew
+	brew tap ankitpokhrel/jira-cli
+	brew install jira-cli
+
+Configuration
+Get token at
+https://id.atlassian.com/manage-profile/security/api-tokens
+Save it as environment variable JIRA_API_TOKEN 
+	jira init
+Configuration file at
+~/.config/.jira/
+
+Usage
+	jira issue list
+View
+	jira issue view ISSUE-1
+Add
+The add command lets you add a comment to an issue.
+The command supports both Github-flavored and Jira-flavored markdown for writing comment.
+You can load pre-defined templates using --template flag.
+	jira issue comment add
+	jira issue comment add ISSUE-1 "My comment body"
+
+GoJira
+simple jira command line client in Go
+https://github.com/go-jira/jira
+
+https://github.com/andygrunwald/go-jira

@@ -1,3 +1,8 @@
 https://h30434.www3.hp.com/t5/Gaming-Notebooks/Omen-16-2022-Intel-I7-12700H-quot-Windows-quot-key-not/td-p/8444604
 https://h30434.www3.hp.com/t5/Notebook-Operating-System-and-Recovery/windows-key-not-working/td-p/6721539
 https://www.youtube.com/watch?v=jSGuQXSoewM
+
+Remove Omen Gaming Hub
+https://www.reddit.com/r/HPOmen/comments/oisvzv/remove_gaming_hub/
+Install
+	winget install 9NQDW009T0T5

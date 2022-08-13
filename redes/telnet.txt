@@ -1,0 +1,9 @@
+Windows
+How to Enable / Install Telnet in Windows 10 - Tutorial
+https://www.youtube.com/watch?v=M_DeT2pjZhk
+https://www.shellhacks.com/windows-install-telnet-client-cmd-powershell/
+	dism /online /Enable-Feature /FeatureName:TelnetClient
+Powershell
+https://ss64.com/ps/add-windowsfeature.html
+Install both Telnet Server and Telnet Client:
+	Add-WindowsFeature Telnet-Server,Telnet-Client
