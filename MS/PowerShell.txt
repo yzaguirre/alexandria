@@ -203,3 +203,19 @@ https://www.educba.com/comparison-operators-in-powershell/
 Error level
 https://www.shellhacks.com/windows-get-exit-code-errorlevel-cmd-powershell/
 	$LastExitCode
+
+String
+https://stackoverflow.com/questions/25383263/powershell-split-a-string-on-first-occurrence-of-substring-character
+$array="Header text,Text 1,Text 2,Text 3,Text 4," -split ','
+$array[0],($array[1..($array.Length -1)] -join ",")
+https://docs.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-string-substitutions?view=powershell-7.2
+$test = "Bet"
+$tester = "Better"
+Write-Host "$test $tester ${test}ter"
+Write-Host "$test $tester $($test)ter"
+Write-Host "{0} {1} {0}ter" -f $test, $tester
+https://shellgeek.com/powershell-split-string/
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_split?view=powershell-7.2
+$testString = "Hello,Welcome,to,Shell Geek"
+# Split string by comma as single delimiter
+$testString.Split(',')

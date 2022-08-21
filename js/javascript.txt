@@ -34,6 +34,10 @@ if(loc_array[loc_array.length-1] == 'index.html'){
 Splice
 var removedItem = fruits.splice(pos, 1);
 
+Reduce for sequential processing
+https://advancedweb.hu/how-to-use-async-functions-with-array-map-in-javascript/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
 Upload files
 https://www.script-tutorials.com/pure-html5-file-upload/
 

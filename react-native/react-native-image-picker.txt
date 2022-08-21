@@ -1,4 +1,5 @@
 https://github.com/react-native-image-picker/react-native-image-picker
 https://blog.crowdbotics.com/how-to-use-react-native-image-picker/
-Rivals ./react-native-image-crop-picker
+Rivals ./react-native-image-crop-picker.txt
+See ./react-native-image-resizer.txt
 	yarn add react-native-image-picker

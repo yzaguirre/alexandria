@@ -488,3 +488,6 @@ Font scalling
 https://stackoverflow.com/questions/32692459/how-to-change-font-size-by-adb-command
 if(Text.defaultProps == null) Text.defaultProps = {};
 Text.defaultProps.allowFontScaling = false;
+
+https://stackoverflow.com/questions/33378884/how-to-hide-status-bar-in-android-w-react-native
+<StatusBar backgroundColor={'transparent'} translucent={true} />

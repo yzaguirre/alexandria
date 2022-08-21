@@ -1,6 +1,7 @@
 Resize local images with React Native
 https://github.com/bamlab/react-native-image-resizer
 https://stackoverflow.com/questions/60566603/image-compression-in-react-native
+https://stackoverflow.com/questions/59452991/how-to-resize-image-files-sizes-in-react-native
 	yarn add react-native-image-resizer
 	cd ios && pod install
 import ImageResizer from 'react-native-image-resizer';

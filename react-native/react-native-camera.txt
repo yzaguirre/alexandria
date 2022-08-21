@@ -10,10 +10,20 @@ https://github.com/teslamotors/react-native-camera-kit
 https://www.reddit.com/r/reactnative/comments/lt32p1/react_native_qr_code_scan/
 	yarn add react-native-camera-kit
 import { Camera } from 'react-native-camera-kit';
+https://github.com/RonRadtke/react-native-blob-util/wiki/MediaStore
+React Native Camera Kit | How to capture Images in React Native | React Native Tutorial
+https://www.youtube.com/watch?v=AocV0zdouF4
 
 Gallery
 https://github.com/teslamotors/react-native-camera-kit/pull/329
 https://github.com/react-native-cameraroll/react-native-cameraroll
+https://github.com/react-native-cameraroll/react-native-cameraroll/issues/397
+	yarn add @react-native-community/cameraroll fbjs
+
+https://github.com/idrisssakhi/photoGallery
+
+https://github.com/teslamotors/react-native-camera-kit/issues/415
+https://github.com/ibitcy/react-native-hole-view
 
 Ver ~/react-native/react-native-image-crop-picker.txt
 

@@ -1,0 +1,2 @@
+React Native BLE library
+https://github.com/dotintent/react-native-ble-plx

@@ -1,3 +1,7 @@
+.NET 6 is now in Ubuntu 22.04
+https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/
+https://news.ycombinator.com/item?id=32482323
+
 https://blog.devgenius.io/6-net-myths-dispelled-celebrating-21-years-of-net-652795c2ea27
 https://www.reddit.com/r/programming/comments/t5yvjx/6_net_myths_dispelled_celebrating_21_years_of_net/
 

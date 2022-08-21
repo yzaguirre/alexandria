@@ -230,3 +230,8 @@ Small - 0.85
 Default - 1.0
 Large - 1.15
 Largest - 1.30
+
+Serial number
+https://android.stackexchange.com/questions/222355/device-serial-number-using-adb-commands#222357
+	adb get-serialno
+	adb shell service call iphonesubinfo 1
