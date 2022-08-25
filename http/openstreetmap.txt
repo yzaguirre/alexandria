@@ -8,3 +8,4 @@ https://umap.openstreetmap.fr/en/
 Easy to use OpenStreetMap editor for Android
 https://github.com/streetcomplete/StreetComplete
 https://news.ycombinator.com/item?id=27549300
+See ../gis/maps.txt

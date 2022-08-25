@@ -18,10 +18,10 @@ Binary
 	unzip linux-p7zip.zip -d /usr/local/lib/p7zip 7z 7za 7zr 7z.so 7zCon.sfx Codecs/Rar.so
 Modifify 7z, 7za and 7zr in /usr/bin
 7z Binary
-	wget https://www.7-zip.org/a/7z2200-linux-x64.tar.xz
-	tar xf 7z2200-linux-x64.tar.xz -C /usr/local/bin 7zz 7zzs
+	wget https://www.7-zip.org/a/7z2201-linux-x64.tar.xz
+	tar xf 7z2201-linux-x64.tar.xz -C /usr/local/bin 7zz 7zzs
 	mkdir /usr/local/share/doc/7zip
-	tar xf 7z2200-linux-x64.tar.xz -C /usr/local/share/doc/7zip --strip-components=1 MANUAL
+	tar xf 7z2201-linux-x64.tar.xz -C /usr/local/share/doc/7zip --strip-components=1 MANUAL
 Termux
 	apt install p7zip
 Windows

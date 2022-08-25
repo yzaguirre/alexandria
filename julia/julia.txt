@@ -1,3 +1,7 @@
+Julia 1.8
+https://julialang.org/blog/2022/08/julia-1.8-highlights/
+https://news.ycombinator.com/item?id=32508158
+
 https://julialang.org
 https://github.com/JuliaLang/julia
 	apt install julia

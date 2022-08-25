@@ -1,6 +1,6 @@
 https://www.visidata.org
 https://github.com/saulpw/visidata
-	sudo -H pip install -U visidata
+	sudo -H pip install -U visidata xlrd
 Windows dependency
 https://stackoverflow.com/questions/35850362/importerror-no-module-named-curses-when-trying-to-import-blessings
 	pip install windows-curses

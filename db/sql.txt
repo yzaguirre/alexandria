@@ -1,0 +1,3 @@
+Parsing SQL
+https://tomassetti.me/parsing-sql/
+https://news.ycombinator.com/item?id=32560039

@@ -1,3 +1,6 @@
+Inky Impression 5.7" - Colour e-ink display for Raspberry Pi
+https://news.ycombinator.com/item?id=32545785
+
 From Oscilloscope to Wireshark: A UDP Story
 https://www.mattkeeter.com/blog/2022-08-11-udp/
 https://news.ycombinator.com/item?id=32428032

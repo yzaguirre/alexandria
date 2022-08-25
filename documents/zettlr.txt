@@ -1,17 +1,21 @@
 ZETTLR: A MARKDOWN EDITOR FOR THE 21ST CENTURY
-https://www.zettlr.com/
+https://www.zettlr.com
 https://github.com/Zettlr/Zettlr
 https://news.ycombinator.com/item?id=23723775
 Debian
-	wget https://github.com/Zettlr/Zettlr/releases/download/v1.8.9/Zettlr-1.8.9-amd64.deb
-	wget https://github.com/Zettlr/Zettlr/releases/download/v1.8.9/SHA256SUMS.txt
+	wget https://github.com/Zettlr/Zettlr/releases/download/v2.3.0/Zettlr-2.3.0-amd64.deb
+	wget https://github.com/Zettlr/Zettlr/releases/download/v2.3.0/SHA256SUMS.txt
 	sha256sums -c --ignore-missing SHA256SUMS.txt
-	sudo dpkg -i Zettlr-1.8.9-amd64.deb
+	sudo dpkg -i Zettlr-2.3.0-amd64.deb
 Windows
+	winget install Zettlr.Zettlr
+	choco install zettlr
 	scoop bucket add extras
 	scoop install zettlr
 App Image
-	wget https://github.com/Zettlr/Zettlr/releases/download/v1.8.9/Zettlr-1.8.9-x86_64.AppImage
-	chmod u+x Zettlr-1.8.9-x86_64.AppImage
-	mv Zettlr-1.8.9-x86_64.AppImage ~/appimage
-	ln -s ~/appimage/Zettlr-1.8.9-x86_64.AppImage /usr/local/bin/zettlr
+	wget https://github.com/Zettlr/Zettlr/releases/download/v2.3.0/Zettlr-2.3.0-x86_64.AppImage
+	chmod u+x Zettlr-2.3.0-x86_64.AppImage
+	mv Zettlr-2.3.0-x86_64.AppImage ~/appimage
+	ln -s ~/appimage/Zettlr-2.3.0-x86_64.AppImage /usr/local/bin/zettlr
+Homebrew
+	brew install --cask Zettlr

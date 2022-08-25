@@ -7,4 +7,7 @@ https://www.wealthfront.com/cash
 
 https://wise.com/us/
 
+https://www.moderntreasury.com/journal/accounting-for-developers-part-i
+https://news.ycombinator.com/item?id=32495724
+
 See ../web/actual.txt ../web/lago.txt

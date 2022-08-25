@@ -130,6 +130,9 @@ https://blog.chapagain.com.np/imagemagick-convert-edit-image-via-command-line/
 Force the image to be 300 x 300 pixels and ignore the aspect ratio,
 add blackslash-exclamation to the dimensions
 	convert -resize 300x300\! image.png image.jpg
+Agrandar
+https://stackoverflow.com/questions/27954017/resize-image-with-imagemagick-and-set-background-color
+	convert -extent "1284x2778!" image.png out.png
 VOLTEAR
 Horizontalmente
 	convert -flop {entrada} {salida}

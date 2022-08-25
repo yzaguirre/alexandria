@@ -1,24 +1,16 @@
-Just the qt creator
-http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.mirrorlist
-    Filename: qt-creator-opensource-linux-x86_64-3.6.0.run
-    Size: 97M (101655798 bytes)
-    Last modified: Mon, 14 Dec 2015 13:42:05 GMT (Unix time: 1450100525)
-    SHA-256 Hash: 9a09ca20128db96bd27618dcccfeb2b66bd2b9ae69c6f9a19820a06226bf717e
-    SHA-1 Hash: a8e9131874e37d12ca003c07c7b838ada5fec51a
-    MD5 Hash: 79471dec0c326a7b632af84c30bf4fa8
+https://www.qt.io/developers/
 
-	wget https://download.qt.io/official_releases/qtcreator/3.6/3.6.0/md5sums.txt
-	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run
-	
-	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.sha256
-	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.sha1
-	wget http://download.qt.io/official_releases/qtcreator/3.6/3.6.0/qt-creator-opensource-linux-x86_64-3.6.0.run.md5
-Verify
-	sha1sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.sha1
-	sha256sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.sha256
-	md5sum -c qt-creator-opensource-linux-x86_64-3.6.0.run.md5
-	md5sum -c md5sums.txt | grep coincide
-Install
-	chmod u+x qt-creator-opensource-linux-x86_64-3.6.0.run
-	./qt-creator-opensource-linux-x86_64-3.6.0.run
-	ln -s /DVD/opt/qtcreator-3.6.0/bin/qtcreator.sh /usr/local/bin/qtcreator
+http://qmlbook.org/index.html
+https://qmlbook.github.io
+https://console.qtcloudservices.com
+https://developer.qtcloudservices.com/qtc/getting-started
+https://www.qt.io/offline-installers
+    Filename: Mirrors for qt-creator-opensource-linux-x86_64-8.0.1.run
+	Filename: qt-creator-opensource-linux-x86_64-8.0.1.run
+	Path: /official_releases/qtcreator/8.0/8.0.1/qt-creator-opensource-linux-x86_64-8.0.1.run
+	Size: 177M (185385381 bytes)
+	Last modified: Thu, 11 Aug 2022 05:32:10 GMT (Unix time: 1660195930)
+	SHA-256 Hash: 8b10696acbc5a1a39de6378dad321e2d4f9c99695b1f0140f57db025e2f0f373
+	SHA-1 Hash: 390f538131f697c31bb497b3a62cd3948628da0a
+	MD5 Hash: cf36faf5fd934bca2dafcb1e2ba7e7ce
+	BitTorrent Information Hash: 2de2225d946744e68ac4204a5767ab404981f416

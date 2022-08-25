@@ -1,4 +1,6 @@
 https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
+https://social.technet.microsoft.com/wiki/contents/articles/1073.robocopy-and-a-few-examples.aspx#File_Selection_Options
+https://ss64.com/nt/robocopy.html
 	robocopy <Source> <Destination> [<File>[ ...]] [<Options>]
 	robocopy files/ E: /e
 
@@ -9,3 +11,11 @@ Using 16 threads (logical processors)
 	robocopy "\\192.168.0.5\files" "D:\Folder" /e /r:0 /w:0 /COPY:DAT /DCOPY:DAT /mt:16
 Append to log. The + appends to the log file
 	robocopy "\\192.168.0.5\files" "D:\Folder" /e /r:0 /w:0 /COPY:DAT /DCOPY:DAT /mt:16 /LOG+:C:\robocopy.log
+Move files
+	robocopy "\\192.168.0.5\files" "D:\Folder" /mov /e /r:0 /w:0 /COPY:DAT /DCOPY:DAT /mt:16
+Batch
+https://serverfault.com/questions/652119/robocopy-from-list-txt
+Foreach ($Directory In Get-Content .\directories.txt)
+{
+    robocopy "$Directory" "h:\UserHome" /E /SEC /Copy:DATSOU /log:c:\logfile.txt 
+}

@@ -11,3 +11,6 @@ http://subliminal.readthedocs.org
 
 Usage
 	subliminal download -l en FILE
+
+vtt to srt
+https://toolbuz.com/en/vtt-to-srt

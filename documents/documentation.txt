@@ -18,6 +18,6 @@ and anyone else who needs to know how your product works.
 
 docz
 It's never been easier to document your things!
-https://www.docz.site/
+https://www.docz.site
 https://github.com/pedronauck/docz
-See ~/documents/docz.txt
+See ./docz.txt

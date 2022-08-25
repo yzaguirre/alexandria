@@ -2,3 +2,6 @@ https://www.python-httpx.org
 https://github.com/encode/httpx
 https://news.ycombinator.com/item?id=22000507
 	sudo -H pip install -U httpx
+
+HTTPX Tutorial -  A next-generation HTTP client for Python
+https://www.youtube.com/watch?v=qAh5dDODJ5k

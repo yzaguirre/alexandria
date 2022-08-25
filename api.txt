@@ -1,3 +1,6 @@
+Ask HN: Nested Resources in REST/HTTP API URLs?
+https://news.ycombinator.com/item?id=32506784
+
 https://twitter.com/degranda10/status/1295371218909040641
 
 https://developer.marvel.com/

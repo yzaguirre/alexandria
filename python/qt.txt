@@ -4,3 +4,15 @@ The following NEW packages will be installed:
   libqt5location5 libqt5positioningquick5 libqt5xmlpatterns5 python3-mock python3-pyqt5.qtmultimedia python3-pyqt5.qtopengl python3-pyqt5.qtpositioning
   python3-pyqt5.qtquick python3-pyqt5.qtsql python3-pyqt5.qtsvg python3-pyqt5.qtwebchannel python3-pyqt5.qtwebkit python3-pyqt5.qtwebsockets
   python3-pyqt5.qtxmlpatterns python3-qtpy
+
+https://github.com/KhamisiKibet/QT-PyQt-PySide-Custom-Widgets
+	sudo -H pip install -U QT-PyQt-PySide-Custom-Widgets
+	python
+	# Run this from your terminal or create a python file, 
+	# paste this code, then run
+	from Custom_Widgets.ProgressIndicator import test
+	test.main()
+
+Python GUI Development Using PyQt5
+https://www.youtube.com/watch?v=MOItX2aKTGc
+	sudo -H pip install -U PyQt5

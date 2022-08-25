@@ -3,6 +3,8 @@ csvtk
 A cross-platform, efficient and practical CSV/TSV toolkit in Golang
 https://bioinf.shenwei.me/csvtk/
 https://github.com/shenwei356/csvtk
+	wget https://github.com/shenwei356/csvtk/releases/download/v0.24.0/csvtk_linux_amd64.tar.gz
+	tar xf csvtk_linux_amd64.tar.gz -C /usr/local/bin
 MacOS
 	brew install csvtk
 Windows
@@ -61,6 +63,8 @@ xsv
 https://github.com/BurntSushi/xsv
 	choco install xsv
 or	scoop install xsv
+Select
+	xsv select File -o cleaned.csv input.csv
 
 http://thomasburette.com/blog/2014/05/25/so-you-want-to-write-your-own-CSV-code/
 https://news.ycombinator.com/item?id=23190517

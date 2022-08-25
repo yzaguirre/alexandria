@@ -1,6 +1,6 @@
 docz
 It's never been easier to document your things!
-https://www.docz.site/
+https://www.docz.site
 https://github.com/pedronauck/docz
 
 Start a New Project

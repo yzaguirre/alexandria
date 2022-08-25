@@ -61,3 +61,6 @@ Visualiza Zona 9
 https://justgetflux.com/faq.html
 https://news.ycombinator.com/item?id=30626803
 	winget install flux.flux
+
+How to Use Eye Drops PROPERLY! - Eye Drop Tutorial
+https://www.youtube.com/watch?v=SQ7NXQcUomM
