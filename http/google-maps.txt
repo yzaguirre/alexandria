@@ -32,3 +32,10 @@ $('#somecomponent').locationpicker();
 Geocoding
 https://stackoverflow.com/questions/46775244/google-place-api-city-search-by-coordinates
 https://developers.google.com/maps/documentation/geocoding/overview#ReverseGeocoding
+
+https://developers.google.com/maps/documentation/roads
+Send coordinates to get a road
+https://developers.google.com/maps/documentation/roads/nearest
+https://roads.googleapis.com/v1/nearestRoads?parameters&key=YOUR_API_KEY
+Example
+https://roads.googleapis.com/v1/nearestRoads?path=60.170880,24.942795|60.170879,24.942796|60.170877,24.942796&key=YOUR_API_KEY
