@@ -10,3 +10,5 @@ https://github.com/rofl0r/gdb
 I wrote my own RTS game engine in C
 https://github.com/eduard-permyakov/permafrost-engine
 https://news.ycombinator.com/item?id=27132334
+
+See ../carbon/carbon.txt

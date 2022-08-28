@@ -222,3 +222,54 @@ $testString.Split(',')
 
 3 USEFULL TIPS IN 1 VIDEO | PowerShell Tips and Tricks
 https://www.youtube.com/watch?v=v7jScENUgoI
+
+Powershell Tips For Developers and Admins
+https://www.youtube.com/watch?v=YImPCFD18yo
+Generate unique id
+	(New-Guid).ToString()
+Read last 5 lines
+	Get-Content -Tail 5 .\file.log
+Create large file
+	$file = New-Object -TypeName System.IO.FileStream -ArgumentList C:\YouTube\file.bin,Create,ReadWrite
+	$file.SetLength(1Gb)
+	$file.Close()
+Create file
+	New-Item -ItemType Directory -Path C:\ -Name Test2
+	New-Item -ItemType File -Path C:\Test2 -Name testfile1.txt -Value "This is my file"
+Edit file
+	Set-Content -Path C:\Test2\testfile1.txt -Value "This is Replaced Value"
+See contents in external window
+	Get-Content C:\Test2\testfile1.txt | Out-GridView
+Print file
+	Get-Content C:\Test2\testfile1.txt | Out-Print er
+Math
+	1073741824/1Mb
+	1073741824/1Gb
+Print hex
+	Format-Hex .\file.bin | less
+15 Useful PowerShell Commands for Beginners | Learn Microsoft PowerShell
+https://www.youtube.com/watch?v=VFuobJbbDtU
+List drives
+	Get-PSDrive
+	Get-PSDrive -PSProvider FileSystem
+Get help
+	Get-Help Move-Item
+	Get-Help Move-Item -Example
+Stop Process
+	Stop-Process -Name Notepad++
+	Get-Process Notepad++
+	Stop-Process -Id 108576 -Confirm -PassThru
+Get list of drivers
+	Get-WindowsDriver -Online -All
+Backup drivers
+	Export-WindowsDriver -Online -Destination E:\Test\DriverBackup
+Scan for malware
+	Start-MPScan -ScanType QuickScan -ScanPath E:\OldDocs
+How to Remove All Built in Apps from Windows 10?
+https://www.youtube.com/watch?v=XRYOJe4P9zs
+Get App list
+	Get-AppxPackage | Out-File apps.txt
+Remove App
+	Get-AppxPackage Microsoft.Zune* | Remove-AppxPackage
+Remove all builtin apps
+	Get-AppxPackage | Remove-AppxPackage

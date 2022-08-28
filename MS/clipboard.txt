@@ -1,0 +1,6 @@
+Set clipboard
+	echo "hello" | scb
+	echo "hello" | clip.exe
+	echo "hello" | Set-Clipboard
+Get clipboard
+	gcb

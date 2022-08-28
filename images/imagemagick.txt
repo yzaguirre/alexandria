@@ -154,7 +154,9 @@ POLAROID
 APLICAR EFECTOS
 	convert -sepia-tone {porcentaje} {entrada} {salida}
 	convert -sepia-tone 75% {entrada} {salida}
-
+Pixelate
+https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=33957
+	convert -region WxH+X+Y -scale 10% -scale 1000% +region in.png out.png
 Blur
 	mogrify -blur 5x2 image.jpg
 The first number here is the radius, while the second is the sigma

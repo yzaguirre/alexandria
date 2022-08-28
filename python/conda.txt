@@ -1,0 +1,12 @@
+https://www.anaconda.com/products/distribution
+https://github.com/ContinuumIO
+Windows
+	choco install anaconda3 --params '"/AddToPath:1 /DoNotRegister"'
+	winget install Anaconda.Anaconda3
+Installed at
+C:\Tools\Anaconda3
+
+Miniconda
+http://conda.pydata.org/miniconda.html
+	choco install miniconda3 --params="'/AddToPath:1'"
+	winget install Anaconda.Miniconda3

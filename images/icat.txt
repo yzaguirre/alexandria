@@ -1,0 +1,2 @@
+icat (Image cat) outputs images in 256-color capable terminals.
+https://github.com/atextor/icat

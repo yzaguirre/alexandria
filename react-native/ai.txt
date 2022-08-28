@@ -7,3 +7,7 @@ https://www.reddit.com/r/reactnative/comments/n70itd/eye_blinksmile_detection_wi
 
 TensorFlow Platform Adapter for React Native
 https://github.com/tensorflow/tfjs/tree/master/tfjs-react-native
+
+How to use Tensorflow image processing with React Native
+https://www.youtube.com/watch?v=9sRM_VtARug
+	yarn add "@tensorflow/tfjs" "@tensorflow/tfjs-react-native"

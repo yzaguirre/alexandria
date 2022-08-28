@@ -1,0 +1,5 @@
+https://www.pinta-project.com
+https://github.com/PintaProject/Pinta
+	apt install pinta
+How to pixelate
+https://learnubuntumate.weebly.com/pixelate.html

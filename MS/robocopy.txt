@@ -19,3 +19,10 @@ Foreach ($Directory In Get-Content .\directories.txt)
 {
     robocopy "$Directory" "h:\UserHome" /E /SEC /Copy:DATSOU /log:c:\logfile.txt 
 }
+
+No logging
+/NFL /NDL /NJH /NJS
+NFL = No File List
+NDL = No Directory List
+NJH = No Job Header
+NJS = No Job Summary

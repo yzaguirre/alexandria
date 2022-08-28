@@ -45,6 +45,7 @@ Start service
 
 Config at
 ~/.config/syncthing/config.xml
+AppData\Local\Syncthing
 
 Install MacOS
 	unzip syncthing-macos-universal-v1.19.1.zip

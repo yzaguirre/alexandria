@@ -1,8 +1,21 @@
-https://www.tensorflow.org/
+https://www.tensorflow.org
 https://www.freecodecamp.org/learn/machine-learning-with-python/
-
-# Installation
 	sudo -H pip install tensorflow
+Windows
+https://www.tensorflow.org/install/pip#windows-native
+Load 'cudart64_110.dll'
+Nvidia software
+	choco install cuda # nvidia-display-driver
+	winget install Nvidia.CUDA
+https://www.nvidia.com/drivers
+https://developer.nvidia.com/cudnn
+Conda
+	conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+If already have cuda
+	conda install -c conda-forge cudnn=8.1.0
+	python3 -m pip install tensorflow
+Verify install
+	python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 Manual install with CPU support
 https://www.tensorflow.org/install/source
@@ -46,3 +59,6 @@ Swift for TensorFlow
 https://news.ycombinator.com/item?id=16719615
 Watch from 1h 47m to 2h 1m
 https://www.youtube.com/watch?v=gplTc2F5Wvk&feature=youtu.be&t=1h47m20s
+
+Create models here
+https://teachablemachine.withgoogle.com

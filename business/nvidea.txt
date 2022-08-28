@@ -2,3 +2,10 @@ Nvidia transitioning to official, open-source Linux GPU kernel driver
 https://developer.nvidia.com/blog/nvidia-releases-open-source-gpu-kernel-modules/
 https://news.ycombinator.com/item?id=31344981
 https://github.com/NVIDIA/open-gpu-kernel-modules
+
+Drivers at
+https://www.nvidia.com/drivers
+CUDA Toolkit
+https://developer.nvidia.com/cuda-toolkit-archive
+	choco install cuda
+	winget install Nvidia.CUDA
