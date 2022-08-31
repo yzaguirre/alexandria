@@ -5,7 +5,7 @@ https://news.ycombinator.com/item?id=29871358
 https://trashserver.net/en/about-this-server/
 https://news.ycombinator.com/item?id=19894314
 ejabberd
-https://www.ejabberd.im/
+https://www.ejabberd.im
 https://www.process-one.net/en/ejabberd/downloads
 	apt install ejabberd
 SSL certificate in /etc/ejabberd/ejabberd.pem
@@ -24,4 +24,4 @@ https://xmpp.net/directory.php
 
 https://blog.process-one.net/ejabberd-16-06/
 
-See comm/jackal.txt
+See jackal.txt

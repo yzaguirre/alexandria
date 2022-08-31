@@ -33,7 +33,9 @@ Windows
 	winget install OpenJS.NodeJS
 LTS
 	winget install OpenJS.NodeJS.LTS
-
+	cd C:\Users
+	dir /x
+	npm config set cache "C:/Users/<shortname-you-found-with-dir/x>/AppData/Roaming/npm-cache" --global
 https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
 	vim ~/.npmrc
 prefix=/opt/npm

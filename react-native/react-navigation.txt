@@ -1,4 +1,4 @@
-https://reactnavigation.org/
+https://reactnavigation.org
 React navigation 6
 https://reactnavigation.org/blog/2021/08/14/react-navigation-6.0/
 React navigation 5

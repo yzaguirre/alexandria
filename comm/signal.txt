@@ -1,4 +1,4 @@
-https://signal.org/
+https://signal.org
 Signal's Double Ratchet
 https://github.com/signalapp/Signal-Android
 https://github.com/signalapp/Signal-Server

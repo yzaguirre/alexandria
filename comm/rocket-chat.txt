@@ -1,4 +1,4 @@
-http://rocket.chat/
+http://rocket.chat
 https://github.com/RocketChat/Rocket.Chat
 Install
 	wget https://github.com/RocketChat/Rocket.Chat/archive/master.zip

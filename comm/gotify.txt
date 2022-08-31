@@ -5,9 +5,53 @@ https://gotify.net/docs/
 
 A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui)
 https://github.com/gotify/server
+	wget https://github.com/gotify/server/releases/download/v2.1.5/gotify-linux-amd64.zip
+	7zz x -o/usr/local/bin/ gotify-linux-amd64.zip gotify-linux-amd64
+Raspberry Pi / Termux
+	wget https://github.com/gotify/server/releases/download/v2.1.5/gotify-linux-arm64.zip
+	unzip gotify-linux-arm64.zip -d bin gotify-linux-arm64
+Windows
+	wget https://github.com/gotify/server/releases/download/v2.1.5/gotify-windows-amd64.exe.zip
+	7z x -obin gotify-windows-amd64.exe.zip gotify-windows-amd64.exe
+	mv bin/gotify-windows-amd64.exe bin/gotify.exe
+Config file in
+https://gotify.net/docs/config
+./config.yml
+/etc/gotify/config.yml
+Download example
+	wget -O config.yml https://raw.githubusercontent.com/gotify/server/master/config.example.yml
 
 A command line interface for pushing messages to gotify/server.
 https://github.com/gotify/cli
-
+	wget -O ~/bin/gotify https://github.com/gotify/cli/releases/download/v2.2.2/gotify-cli-linux-amd64
+	chmod u+x ~/bin/gotify
+Raspberry Pi / Termux
+	wget -O bin/gotify https://github.com/gotify/cli/releases/download/v2.2.2/gotify-cli-linux-arm64
+	chmod u+x bin/gotify
+Windows
+	wget -O bin/gotify.exe https://github.com/gotify/cli/releases/download/v2.2.2/gotify-cli-windows-amd64.exe
+Homebrew
+	brew install gotify
+Config file in
+/etc/gotify/cli.json
+$XDG_CONFIG_HOME/gotify/cli.json
+~/.gotify/cli.json
+./cli.json
+{
+  "token": "A4ZudDRdLT40L5X",
+  "url": "https://gotify.example.com",
+  "defaultPriority": 6
+}
+Usage
+	gotify version
+	gotify help push
+Initialize
+	gotify init
+	gotify push my message
+	gotify push "my message"
+	echo my message | gotify push
+	gotify push < somefile
+	gotify push -t "my title" -p 10 "my message"
+	gotify watch "curl http://example.com/api | jq '.data'"
 The Gotify Website
 https://github.com/gotify/website
