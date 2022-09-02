@@ -36,6 +36,8 @@ Installed at C:\Program Files\PowerShell\7
 Usage
 	pwsh.exe
 
+Reference
+https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.2
 Profile at
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2
 https://lazyadmin.nl/powershell/powershell-profile/
@@ -72,6 +74,11 @@ Get clipboard
 	gcb
 Set clipboard
 	scb
+
+Environment variables
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
+	$Env:<variable-name> = "<new-value>"
+	$Env:Foo = 'An example'
 
 Load scripts
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.2
@@ -273,3 +280,17 @@ Remove App
 	Get-AppxPackage Microsoft.Zune* | Remove-AppxPackage
 Remove all builtin apps
 	Get-AppxPackage | Remove-AppxPackage
+
+Get IP address
+https://adamtheautomator.com/powershell-get-ip-address/
+	(Get-NetIPAddress -AddressFamily IPv4 -InterfaceAlias Ethernet).IPAddress
+Using a session
+	$remoteComputer = 'REMOTECOMPUTER'
+	$cimSession = New-CimSession -ComputerName $remoteComputer
+Remove session
+	$cimSession | Remove-CimSession
+	(Get-CimInstance -CimSession $cimSession -ClassName Win32_NetworkAdapterConfiguration -Filter "IPEnabled = 'True'").IPAddress
+
+Xargs
+https://stackoverflow.com/questions/36428949/whats-the-equivalent-of-xargs-in-powershell
+	myapp.exe @(Get-ChildItem -Recurse -Filter *.jpg | Another-Step)

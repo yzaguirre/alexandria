@@ -1,4 +1,4 @@
-https://avahi.org/
+https://avahi.org
 	apt install avahi-discover
 Se instalarán los siguientes paquetes NUEVOS:
   avahi-discover python3-avahi
@@ -50,3 +50,14 @@ Then you can check that everything goes okay with avahi-browse-domain utility:
 
 templates
 http://wiki.xbmc.org/index.php?title=Avahi_Zeroconf
+
+Windows
+https://www.ibm.com/docs/en/snips/4.6.0?topic=uzcn-using-bonjour-from-windows-command-line-discover-services
+	dns-sd -G v4 computer.local
+List all available service types
+https://apple.stackexchange.com/questions/65673/can-i-list-all-the-bonjour-enabled-services-that-are-running
+	dns-sd -B _services._dns-sd._udp
+Request information about the individual services types
+	dns-sd -B _adb-tls-connect
+Lookup information for a particular instance
+	dns-sd -L "adb-R9WM80E229J-mAPsMJ (2)" _adb-tls-connect

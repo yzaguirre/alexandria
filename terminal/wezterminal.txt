@@ -29,3 +29,6 @@ https://wezfurlong.org/wezterm/config/lua/config/text_blink_ease_out.html
 SSH client
 https://wezfurlong.org/wezterm/ssh.html
 	wezterm ssh wez@my.server
+
+Image
+	wezterm imgcat terminal.png

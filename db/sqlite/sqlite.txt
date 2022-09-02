@@ -161,3 +161,7 @@ https://news.ycombinator.com/item?id=31824030
 SQLite Internals: Pages and B-trees
 https://fly.io/blog/sqlite-internals-btree/
 https://news.ycombinator.com/item?id=32250426
+
+SQLite: Past, Present, and Future
+https://vldb.org/pvldb/volumes/15/paper/SQLite%3A%20Past%2C%20Present%2C%20and%20Future
+https://news.ycombinator.com/item?id=32675861

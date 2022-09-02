@@ -59,7 +59,7 @@ swiperproxy
 https://swiperproxy.github.io
 
 https://github.com/fatedier/frp
-see ~/http/frp.txt
+see http/frp.txt
 
 Migrating Millions of Concurrent WebSockets to Envoy
 https://slack.engineering/migrating-millions-of-concurrent-websockets-to-envoy/
@@ -76,3 +76,12 @@ https://news.ycombinator.com/item?id=31432848
 Extracting TLS keys from an unwilling application
 http://m1el.github.io/oculus-tls-extract/
 https://news.ycombinator.com/item?id=31494825
+
+Set android proxy
+https://android.stackexchange.com/questions/98287/how-to-set-wifi-proxy-via-adb-shell
+	adb shell settings put global http_proxy <address>:<port>
+Exclusion list separated by comma
+	adb shell settings put global global_http_proxy_exclusion_list localhost
+Remove proxy
+	adb shell settings put global http_proxy :0
+See android/adb.txt

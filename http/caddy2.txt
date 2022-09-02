@@ -65,3 +65,10 @@ http://192.168.0.5:8080 {
 }
 Run
 	caddy.exe run --config Caddyfile
+
+Use environment variables
+https://caddyserver.com/docs/caddyfile-tutorial#environment-variables
+export SITE_ADDRESS=localhost:9055
+$Env:SITE_ADDRESS = "localhost:9055"
+
+{$SITE_ADDRESS}

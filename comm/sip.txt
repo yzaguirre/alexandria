@@ -1,0 +1,5 @@
+Blink
+A state of the art, easy to use SIP client
+https://icanblink.com
+http://devel.ag-projects.com/repositories/blink-qt/
+	choco install blink

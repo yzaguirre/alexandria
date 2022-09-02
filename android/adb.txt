@@ -44,7 +44,7 @@ Pull everything
 	
 	# adb pull /data/data pesky_data
 	# rm -r com.whatsapp
-
+https://technastic.com/adb-shell-commands-list/
 Close ADB
 	adb reboot    (to reboot your Nook Tablet)
 	adb kill-server     (to stop adb server)
@@ -128,6 +128,8 @@ https://programmer.group/adb-screen-capture-and-recording-commands.html
 	adb shell screenrecord /mnt/sdcard/Download/test.mp4
 	adb shell screenrecord /storage/emulated/0/DCIM/Screenshots/filename.mp4
 	adb pull /sdcard/DCIM/Screenshots/filename.mp4
+Set bitrate
+	adb shell screenrecord --bit-rate 6000000 /storage/emulated/0/DCIM/Screenshots/filename.mp4
 Record with scrcpy. See ./guiscrcpy.txt
 	scrcpy --no-display --record file.mp4
 	scrcpy -Nr file.mkv
@@ -235,3 +237,17 @@ Serial number
 https://android.stackexchange.com/questions/222355/device-serial-number-using-adb-commands#222357
 	adb get-serialno
 	adb shell service call iphonesubinfo 1
+
+Set proxy
+https://android.stackexchange.com/questions/98287/how-to-set-wifi-proxy-via-adb-shell
+	adb shell settings put global http_proxy <address>:<port>
+Exclusion list separated by comma
+	adb shell settings put global global_http_proxy_exclusion_list localhost
+PowerShell way
+	$LANPROXYSRV = (Get-NetIPAddress -AddressFamily IPv4 -InterfaceAlias Ethernet).IPAddress + ":8091"
+	adb shell settings put global http_proxy $LANPROXYSRV
+Remove proxy
+https://stackoverflow.com/questions/31807559/undo-setting-proxy-via-settings-global-in-android/47476009#47476009
+	adb shell settings put global http_proxy :0
+Get settings
+	adb shell settings list global | subl -
