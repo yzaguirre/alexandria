@@ -1,17 +1,17 @@
 https://www.rust-lang.org
 https://github.com/rust-lang/rust
 https://www.rust-lang.org/downloads.html
-	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz
-	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
-	wget https://static.rust-lang.org/dist/rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz
+	wget https://static.rust-lang.org/dist/rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	wget https://static.rust-lang.org/dist/rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.sha256
 Verify
-	gpg2 --verify rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	sha256sum -c rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.sha256
-	sha256sum -c rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	gpg2 --verify rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	sha256sum -c rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	sha256sum -c rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
 Install
-	tar xf rust-1.59.0-x86_64-unknown-linux-gnu.tar.gz
-	cd rust-1.59.0-x86_64-unknown-linux-gnu
+	tar xf rust-1.63.0-x86_64-unknown-linux-gnu.tar.gz
+	cd rust-1.63.0-x86_64-unknown-linux-gnu
 	sudo ./install.sh
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
@@ -22,19 +22,19 @@ Getting Started with Rust on Windows and Visual Studio Code
 https://www.youtube.com/watch?v=aYsUBddY7KY
 
 Src
-	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz
-	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.sha256
-	wget https://static.rust-lang.org/dist/rustc-1.59.0-src.tar.gz.asc.sha256
-	gpg2 --verify rustc-1.59.0-src.tar.gz.asc
-	sha256sum -c rustc-1.59.0-src.tar.gz.sha256
-	sha256sum -c rustc-1.59.0-src.tar.gz.asc.sha256
-	tar xf rustc-1.59.0-src.tar.gz -C /usr/local/src
+	wget https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz
+	wget https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rustc-1.63.0-src.tar.gz.asc.sha256
+	gpg2 --verify rustc-1.63.0-src.tar.gz.asc
+	sha256sum -c rustc-1.63.0-src.tar.gz.sha256
+	sha256sum -c rustc-1.63.0-src.tar.gz.asc.sha256
+	tar xf rustc-1.63.0-src.tar.gz -C /usr/local/src
 Install racer (may take a while)
 	cargo install racer
 Edit 
 	vim + ~/.profile
-export RUST_SRC_PATH=/usr/local/src/rustc-1.59.0/src
+export RUST_SRC_PATH=/usr/local/src/rustc-1.63.0/src
 PATH=$PATH:/home/david/.cargo/bin
 
 Rustup
@@ -119,10 +119,12 @@ http://doc.crates.io/guide.html
 
 Compile (This will fetch all of the dependencies and then build them, along with the project)
 	cargo build
+	cargo b
 Run
 	./target/debug/hello_world
 or
 	cargo run
+	cargo r
 It creates Cargo.lock
 If you're building a library, put Cargo.lock in your .gitignore.
 If you're building an executable, check Cargo.lock into git.
@@ -136,6 +138,7 @@ to compile your files with optimizations turned on
 
 If your project contains unit tests, it can execute them for you by using
 	cargo test
+	cargo t
 
 Add dependencies
 https://crates.io/
@@ -235,3 +238,9 @@ Push it to Android or ssh server
 Rust analizer
 https://rust-analyzer.github.io/blog/2020/04/20/first-release.html
 https://news.ycombinator.com/item?id=22995466
+
+Rust Tutorial #1 - Introduction To Rust Programming
+https://www.youtube.com/watch?v=T_KrYLW4jw8
+
+Format code
+	rustfmt main.rs

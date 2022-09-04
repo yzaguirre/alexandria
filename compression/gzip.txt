@@ -23,3 +23,11 @@ See pigz.txt
 
 Compress
 	gzip mystuff.tar
+Print compression ratio
+	gzip -l mystuff.tar.gz
+Decompress
+http://www.cyberciti.biz/faq/howto-compress-expand-gz-files/
+	gzip -d mystuff.tar.gz
+	gunzip mystuff.tar.gz
+	gunzip < file.tgz | tar xvf
+	gunzip < mystuff.tar.gz | tar xvf -

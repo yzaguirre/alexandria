@@ -7,6 +7,11 @@ Windows
 Installed at C:\Users\dyzag\AppData\Local\bin\NASM
 mysys2
 	pacman -S make nasm gcc
+Compile to object file
+	nasm -felf64 app.asm
+Linker to convert to executable
+	ld app.o -o app
+	./app
 
 Tiny snake game made in x86_64 assembly for Linux
 https://github.com/NikitaIvanovV/snake-asm

@@ -52,15 +52,6 @@ http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-d
 	unzip file.zip -d exdir
 See powershell.txt
 
-http://www.cyberciti.biz/faq/howto-compress-expand-gz-files/
-gunzip one file
-	gzip bashrc
-	gunzip < file.tgz | tar xvf 
-Decompress
-	gzip -d file.gz
-	gunzip bashrc.gz
-	gunzip < file.tar.gz | tar xvf -
-
 Details
 	zipdetails archive.zip
 

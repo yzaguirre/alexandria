@@ -1,9 +1,14 @@
-https://kotlinlang.org/
+https://kotlinlang.org
 https://github.com/JetBrains/kotlin
 https://try.kotlinlang.org/#/Examples/Hello,%20world!/Simplest%20version/Simplest%20version.kt
 https://kotlinlang.org/docs/tutorials/command-line.html
-	wget https://github.com/JetBrains/kotlin/releases/download/v1.4.10/kotlin-compiler-1.4.10.zip
-	unzip kotlin-compiler-1.4.10.zip -d /opt
+	wget https://github.com/JetBrains/kotlin/releases/download/v1.7.10/kotlin-compiler-1.7.10.zip
+	sha256sum kotlin-compiler-1.7.10.zip
+7683f5451ef308eb773a686ee7779a76a95ed8b143c69ac247937619d7ca3a09
+	unzip kotlin-compiler-1.7.10.zip -d /opt
+Homebrew
+	brew update
+	brew install kotlin
 Compile
 	kotlinc HelloWorld.kt -include-runtime -d HelloWorld.jar
 Run

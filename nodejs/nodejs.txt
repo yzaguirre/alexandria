@@ -11,24 +11,41 @@ https://github.com/nodesource/distributions
 https://nodejs.org/en/download/package-manager/
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
 Ubuntu install
+v8.x
 	wget https://deb.nodesource.com/setup_8.x
 	sudo bash setup_8.x
 	rm setup_8.x
 	apt install nodejs=8.14.0-1nodesource1
-	
+v6.x
 	wget https://deb.nodesource.com/setup_6.x
 	sudo bash setup_6.x
 	rm setup_6.x
 	apt install nodejs=6.14.3-1nodesource1
-
 v17.x
 	curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 	sudo apt-get install -y nodejs
-
+v18.x
+	curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+	apt install nodejs
 Using Debian, as root
 	curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 	apt-get install -y nodejs
-
+Binary
+	wget https://nodejs.org/download/release/latest-v18.x/node-v18.8.0-linux-x64.tar.xz
+	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt
+	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt.asc
+	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt.sig
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x108F52B48DB57BB0CC439B2997B01419BD92F80A
+	gpg --verify SHASUMS256.txt.asc
+	gpg --verify SHASUMS256.txt.sig
+	sha256sum -c --ignore-missing SHASUMS256.txt
+	mkdir -p /usr/local/lib/nodejs
+	tar xf node-v18.8.0-linux-x64.tar.xz -C /usr/local/lib/nodejs
+	export PATH=/usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin:$PATH
+or symlink
+	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/node /usr/bin/node
+	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/npm /usr/bin/npm
+	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/npx /usr/bin/npx
 Windows
 	winget install OpenJS.NodeJS
 LTS
@@ -37,8 +54,11 @@ LTS
 	dir /x
 	npm config set cache "C:/Users/<shortname-you-found-with-dir/x>/AppData/Roaming/npm-cache" --global
 https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
+	mkdir -p /opt/npm/lib
+	chown david:david -R /opt/npm/lib
 	vim ~/.npmrc
 prefix=/opt/npm
+	npm install -g npm@8.19.1
 
 	node --inspect --debug-brk server.js
 Print Objects

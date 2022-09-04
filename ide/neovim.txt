@@ -11,6 +11,7 @@ https://crispgm.com/page/neovim-is-overpowering.html
 https://news.ycombinator.com/item?id=27291302
 
 Compile
+https://github.com/neovim/neovim/wiki/Building-Neovim
 	wget https://github.com/neovim/neovim/archive/master.zip
 	apt-get install libtool-bin autoconf automake cmake libncurses5-dev g++
 	unzip master.zip
@@ -21,6 +22,11 @@ https://media.pragprog.com/titles/modvim/intro.pdf
 Install
 	apt install neovim
 	nvim
+DEB
+	wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
+	wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb.sha256sum
+	sha256sum -c nvim-linux64.deb.sha256sum
+	dpkg -i nvim-linux64.deb
 Windows
 	winget install Neovim.Neovim
 	choco install neovim

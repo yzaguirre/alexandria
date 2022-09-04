@@ -2,8 +2,10 @@ WezTerm is a GPU-accelerated cross-platform terminal emulator
 and multiplexer written by @wez and implemented in Rust
 https://wezfurlong.org/wezterm/
 https://github.com/wez/wezterm
-	wget https://github.com/wez/wezterm/releases/download/20220408-101518-b908e2dd/wezterm-20220408-101518-b908e2dd.Ubuntu20.04.deb
-	dpkg -i wezterm-20220408-101518-b908e2dd.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb.sha256
+	sha256sum -c wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb.sha256
+	dpkg -i wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb
 The package installs
 /usr/bin/wezterm
 and

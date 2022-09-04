@@ -3,3 +3,9 @@ Build smaller, faster, and more secure desktop applications with a web frontend.
 https://tauri.studio/en/
 https://github.com/tauri-apps/tauri
 https://news.ycombinator.com/item?id=29807022
+See ../nodejs/nodejs.txt ../js/yarn.txt
+Create new tauri app
+	npx create-tauri-app
+	cd tauri-app
+	yarn
+	yarn tauri dev
