@@ -244,3 +244,9 @@ https://www.youtube.com/watch?v=T_KrYLW4jw8
 
 Format code
 	rustfmt main.rs
+
+A Tour of Rust
+https://www.youtube.com/watch?v=iU21KZ4i6bU
+
+Parsing JSON in Rust using serde and reqwest
+https://www.youtube.com/watch?v=ogpE4hviXyA
