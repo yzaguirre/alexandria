@@ -2,10 +2,10 @@ WezTerm is a GPU-accelerated cross-platform terminal emulator
 and multiplexer written by @wez and implemented in Rust
 https://wezfurlong.org/wezterm/
 https://github.com/wez/wezterm
-	wget https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb
-	wget https://github.com/wez/wezterm/releases/download/20220807-113146-c2fee766/wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb.sha256
-	sha256sum -c wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb.sha256
-	dpkg -i wezterm-20220807-113146-c2fee766.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220904-064125-9a6cee2b/wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220904-064125-9a6cee2b/wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb.sha256
+	sha256sum -c wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb.sha256
+	dpkg -i wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb
 The package installs
 /usr/bin/wezterm
 and
@@ -34,3 +34,9 @@ https://wezfurlong.org/wezterm/ssh.html
 
 Image
 	wezterm imgcat terminal.png
+
+CTRL-SHIFT-U activates a new Emoij/Unicodes/NerdFont character picker modal overlay.
+Fuzzy search by name or hex unicode codepoint value, or browse with keys.
+CTRL-r to cycle the browser between categories.
+Enter to select an item, copy it to the clipboard and send it to the active pane as input.
+Esc to cancel. CharSelect.

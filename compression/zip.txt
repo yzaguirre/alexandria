@@ -92,3 +92,9 @@ Split multiple parts (in bytes)
 
 Zipping Your Files In Linux
 https://www.youtube.com/watch?v=zjI-A3EYzQ4
+
+The Dark History of Zip Files
+https://www.youtube.com/watch?v=1sV-3-vPx3I
+
+The Troubled Origins of .ZIP | Nostalgia Nerd
+https://www.youtube.com/watch?v=lu7sY1LOWiI

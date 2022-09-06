@@ -1,0 +1,32 @@
+https://developers.google.com/speed/webp/docs/cwebp
+https://github.com/webmproject/libwebp/
+https://developers.google.com/speed/webp/docs/cwebp
+https://developers.google.com/speed/webp/download
+https://developers.google.com/speed/webp/docs/precompiled
+	wget https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.2.4-linux-x86-64.tar.gz
+	wget https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.2.4-linux-x86-64.tar.gz.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x6B0E6B70976DE303EDF2F601F9C3D6BDB8232B5D
+	gpg --verify libwebp-1.2.4-linux-x86-64.tar.gz
+	tar xf libwebp-1.2.4-linux-x86-64.tar.gz -C /opt/
+Windows
+	wget https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.2.4-windows-x64.zip
+	wget https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.2.4-windows-x64.zip.asc
+	gpg --verify libwebp-1.2.4-windows-x64.zip.asc
+	7z x -o"C:\Program Files\" libwebp-1.2.4-windows-x64.zip
+Add to PATH
+C:\Program Files\libwebp-1.2.4-windows-x64\bin
+Homebrew
+	brew install webp
+
+Usage
+	cwebp -q 80 landscape.jpg -o landscape.webp
+Lossly
+	cwebp -lossless landscape.jpg -o landscape.webp
+HTML
+<picture>
+	<source srcset="img/landscape.webp" type="type/webp">
+	<img src="img/landscape.jpg" alt="Landscape">
+</picture>
+
+Is WebP the SUPERIOR Web Image Format?
+https://www.youtube.com/watch?v=65wUAZqPsIo

@@ -1,6 +1,6 @@
 https://github.com/ajeetdsouza/zoxide
 A faster way to navigate your filesystem
-	wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.8.1/zoxide-x86_64-unknown-linux-musl.tar.gz
+	wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.8.3/zoxide-x86_64-unknown-linux-musl.tar.gz
 	tar xf zoxide-x86_64-unknown-linux-musl.tar.gz
 	cd zoxide-x86_64-unknown-linux-musl
 Debian
@@ -10,10 +10,28 @@ Termux
 Windows
 	choco install zoxide
 	scoop install zoxide
-add ~/.bashrc
-eval "$(zoxide init bash)"
+Homebrew
+	brew install zoxide
 
 Config at
 $XDG_DATA_HOME or $HOME/.local/share
 $HOME/Library/Application Support
 C:\Users\dyzag\AppData\Roaming
+
+Database at
+/home/david/.local/share
+/Users/David/Library/Application Support
+C:\Users\dyzag\AppData\Local
+
+Install Bash
+eval "$(zoxide init bash)"
+
+Install Fish
+	vim ~/.config/fish/config.fish
+zoxide init fish | source
+
+Install Powershell
+Invoke-Expression (& {
+    $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
+    (zoxide init --hook $hook powershell | Out-String)
+})

@@ -1,5 +1,5 @@
 https://github.com/leandromoreira/ffmpeg-libav-tutorial#learn-ffmpeg-libav-the-hard-way
-https://www.ffmpeg.org/
+https://www.ffmpeg.org
 https://en.wikipedia.org/wiki/FFmpeg
 The project comprises several components:
 ffmpeg is a command-line tool to convert one video file format to another. It can also grab and encode in real-time from a TV card.
@@ -22,19 +22,19 @@ See RickMates below
 Installing FFmpeg on macOS Big Sur (on Intel)
 https://www.youtube.com/watch?v=zl4vo0dhLRk
 Download the following: ffmpeg, ffprobe, ffplay
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.0.1.zip
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.0.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.0.1.zip
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.0.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffplay-5.0.1.zip
-	wget https://evermeet.cx/ffmpeg/ffplay-5.0.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip.sig
 	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
-	gpg --verify ffmpeg-5.0.1.zip.sig
-	gpg --verify ffprobe-5.0.1.zip.sig
-	gpg --verify ffplay-5.0.1.zip.sig
-	unzip ffmpeg-5.0.1.zip -d /usr/local/bin
-	unzip ffprobe-5.0.1.zip -d /usr/local/bin
-	unzip ffplay-5.0.1.zip -d /usr/local/bin
+	gpg --verify ffmpeg-5.1.1.zip.sig
+	gpg --verify ffprobe-5.1.1.zip.sig
+	gpg --verify ffplay-5.1.1.zip.sig
+	unzip ffmpeg-5.1.1.zip -d /usr/local/bin
+	unzip ffprobe-5.1.1.zip -d /usr/local/bin
+	unzip ffplay-5.1.1.zip -d /usr/local/bin
 Remove from quarantine
 	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
 Add the /usr/local/bin to PATH
@@ -48,7 +48,7 @@ https://johnvansickle.com/ffmpeg/
 	wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz.md5
 	md5sum -c ffmpeg-release-amd64-static.tar.xz.md5
 	tar xf ffmpeg-release-amd64-static.tar.xz
-	cd ffmpeg-5.0.1-amd64-static
+	cd ffmpeg-5.1.1-amd64-static
 	mv ffmpeg ffprobe qt-faststart /usr/local/bin
 	sudo mv manpages/ /usr/local/src
 x	cp -r model /usr/local/share/
@@ -57,13 +57,13 @@ Custom compilation with FDK AAC encoder and such, see:
 https://trac.ffmpeg.org/wiki/CompilationGuide
 
 Compile
-	wget https://www.ffmpeg.org/releases/ffmpeg-5.0.1.tar.bz2
-	wget https://www.ffmpeg.org/releases/ffmpeg-5.0.1.tar.bz2.asc
+	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2
+	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2.asc
 	gpg --recv-keys 0xd67658d8
 	gpg --edit-key 0xd67658d8
-	gpg --verify ffmpeg-5.0.1.tar.bz2.asc ffmpeg-5.0.1.tar.bz2
-	tar xf ffmpeg-5.0.1.tar.bz2
-	cd ffmpeg-5.0.1
+	gpg --verify ffmpeg-5.1.1.tar.bz2.asc ffmpeg-5.1.1.tar.bz2
+	tar xf ffmpeg-5.1.1.tar.bz2
+	cd ffmpeg-5.1.1
 	./configure
 	make -j 12 # twelve CPU cores
 	make install
@@ -216,3 +216,24 @@ https://gist.github.com/kerbeh/fbe0cd0d89c424708c119e0a0d00ca88
 ffmpeg buddy
 https://evanhahn.github.io/ffmpeg-buddy/
 https://news.ycombinator.com/item?id=31557809
+
+How to Optimize Videos for the Web with FFmpeg
+https://www.youtube.com/watch?v=G1_7LnbJdR0
+https://caniuse.com/?search=h264
+https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
+https://trac.ffmpeg.org/wiki/Encode/VP9
+https://trac.ffmpeg.org/wiki/Encode/H.264
+https://trac.ffmpeg.org/wiki/Encode/H.265
+https://gist.github.com/ericmurphyxyz/b00a73142618a65cc70a54f2ae4d7fad
+	optvideo skyscrapers.mp4 1920 videos
+Scale down and remove audio
+	ffmpeg -i skyscrapers.mp4 -vf scale=1920:-2 -an output.mp4
+	ffmpeg -i skyscrapers.mp4 -c:v libx264 -crf 24 -vf scale=1920:-2 -movflags faststart -an output.mp4
+	ffmpeg -i skyscrapers.mp4 -c:v libvpx-vp9 -crf 40 -vf scale=1920:-2 -movflags faststart -an output.webm
+	ffmpeg -i skyscrapers.mp4 -c:v libx265 -crf 28 -vf scale=1920:-2 -tag:v hvc1 -movflags faststart -an output.mp4
+HTML
+<video width="100%" controls>
+	<source src="videos/skyscrapers_h265.mp4" type="video/mp4; codecs=hevc" />
+	<source src="videos/skyscrapers.webm" type="video/webm; codecs=vp9" />
+	<source src="videos/skyscrapers_h264.mp4" type="video/mp4" />
+</video>

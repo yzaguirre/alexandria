@@ -1,0 +1,8 @@
+Image viewer. Fast, easy to use. Optional video support.
+https://github.com/easymodo/qimgv
+	add-apt-repository ppa:easymodo/qimgv
+	apt install qimgv
+Windows
+	winget install easymodo.qimgv
+	choco install qimgv
+See imageglass.txt and picview.txt

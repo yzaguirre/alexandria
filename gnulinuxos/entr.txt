@@ -1,0 +1,3 @@
+Run arbitrary commands when files change
+http://eradman.com/entrproject/
+https://github.com/eradman/entr

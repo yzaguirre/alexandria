@@ -20,10 +20,13 @@ Compile
 	cd Image-ExifTool-12.40
 	perl Makefile.PL
     sudo make install
+Windows
+	winget install OliverBetz.ExifTool
+	choco install exiftool exiftoolgui
 Homebrew
 	brew install exiftool
 Usage
-	exiftool 413511-1920x1080.jpg 
+	exiftool 413511-1920x1080.jpg
 
 Crear metadatos
 Para crear metadatos basta con escribir el "tag" que queremos crear. En este caso le añadimos el metadato copyright.
@@ -59,3 +62,17 @@ https://explainshell.com/explain?cmd=+exiftool+-d+%27%25r+%25a%2C+%25B+%25e%2C+%
 
 ExifLooter finds geolocation on all image urls and directories also integrates with OpenStreetMap
 https://github.com/aydinnyunus/exifLooter
+
+Cross-platform desktop GUI app to clean image metadata
+https://exifcleaner.com
+https://github.com/szTheory/exifcleaner
+	wget https://github.com/szTheory/exifcleaner/releases/download/v3.6.0/exifcleaner_3.6.0_amd64.deb
+	dpkg -i exifcleaner_3.6.0_amd64.deb
+Windows
+	winget install szTheory.exifcleaner
+
+jExifToolGUI is a multi-platform java/Swing graphical frontend for the excellent
+command-line ExifTool application by Phil Harvey
+https://github.com/hvdwolf/jExifToolGUI
+	wget https://github.com/hvdwolf/jExifToolGUI/releases/download/2.0.1/jExifToolGUI.jar
+	java -jar jExifToolGUI.jar &

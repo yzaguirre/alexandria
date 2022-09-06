@@ -1,0 +1,6 @@
+Fast Picture Viewer with compact UI that can be hidden. Features image effects, galleries, EXIF and more. The application can automatically adjusts itself to your screen.
+https://picview.org
+https://github.com/Ruben2776/PicView
+	winget install Ruben2776.PicView
+	choco install picview
+See imageglass.txt and qimgv.txt

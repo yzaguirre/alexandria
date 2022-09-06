@@ -20,6 +20,9 @@ Windows
 Android Studio inclues sqlite version 3.32.2
 	choco install sqlite
 
+SQLite 3.39.3
+https://sqlite.org/releaselog/3_39_3.html
+https://news.ycombinator.com/item?id=32724337
 Ask HN: Have you used SQLite as a primary database?
 https://news.ycombinator.com/item?id=31152490
 http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/

@@ -1,0 +1,12 @@
+🖥️📱🔔 A utility for sending notifications, on demand and when commands finish.
+https://ntfy.readthedocs.io/en/v2.7.0/
+https://github.com/dschep/ntfy
+	sudo -H pip install -U ntfy
+Bash
+eval "$(ntfy shell-integration)"
+
+Configuration
+~/.ntfy.yml
+~/.config/ntfy/ntfy.yml
+~/Library/Application Support/ntfy/ntfy.yml
+C:\Users\<User>\AppData\Local\dschep\ntfy.yml
