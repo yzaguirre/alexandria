@@ -94,6 +94,8 @@ Any time you need to show another update, you can
 again, and the same url will work.
 So simple, so useful to show your work in progress.
 
+Watchman
+https://facebook.github.io/watchman/
 Watchman on Linux
 https://codeyarns.com/2015/02/10/how-to-install-and-use-watchman/
 https://facebook.github.io/watchman/docs/install.html
@@ -106,6 +108,10 @@ Checkout the latest release
 	make
 	sudo make install
 The log file can be found in /tmp/.watchman.yourusername.log
+Watchman on Windows
+	choco install watchman
+Clear
+	watchman watch-del-all
 
 Install the cli
 https://github.com/react-native-community/cli

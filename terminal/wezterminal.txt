@@ -2,10 +2,10 @@ WezTerm is a GPU-accelerated cross-platform terminal emulator
 and multiplexer written by @wez and implemented in Rust
 https://wezfurlong.org/wezterm/
 https://github.com/wez/wezterm
-	wget https://github.com/wez/wezterm/releases/download/20220904-064125-9a6cee2b/wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb
-	wget https://github.com/wez/wezterm/releases/download/20220904-064125-9a6cee2b/wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb.sha256
-	sha256sum -c wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb.sha256
-	dpkg -i wezterm-20220904-064125-9a6cee2b.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
+	wget https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb.sha256
+	sha256sum -c wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb.sha256
+	dpkg -i wezterm-20220905-102802-7d4b8249.Ubuntu20.04.deb
 The package installs
 /usr/bin/wezterm
 and
@@ -13,6 +13,10 @@ and
 Windows
 	winget install wez.wezterm
 	choco install wezterm
+Installer
+	wget https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/WezTerm-20220905-102802-7d4b8249-setup.exe
+	wget https://github.com/wez/wezterm/releases/download/20220905-102802-7d4b8249/WezTerm-20220905-102802-7d4b8249-setup.exe.sha256
+	sha256sum -c WezTerm-20220905-102802-7d4b8249-setup.exe.sha256
 
 Configuration at
 /home/david/.config/wezterm/wezterm.lua
