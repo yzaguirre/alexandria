@@ -2,3 +2,21 @@ How to AUTOMATICALLY EDIT talking-head videos
 https://www.youtube.com/watch?v=Bdoi7BDhrWc
 https://news.ycombinator.com/item?id=27482397
 https://gist.github.com/vivekhaldar/92368f35da2d8bb8f12734d840d11cfa
+
+The Ultimate h264 Video Encoding Tutorial
+https://www.youtube.com/watch?v=AhdbbJpl_n4
+Video Formats, Codecs and Containers (Explained) Youtube
+https://www.youtube.com/watch?v=XvoW-bwIeyY
+See ../social/youtube.txt
+H264 Overview
+https://www.youtube.com/watch?v=2GNxLYnfNS8
+H264 vs H265 | Explained
+https://www.youtube.com/watch?v=SUvlWYD67QQ
+Understanding Video Codecs (Why Some Footage is So Hard to Edit)
+https://www.youtube.com/watch?v=cfz3jwdo1v0
+H.264 Part 1: Encoding & Decoding Basics
+https://www.youtube.com/watch?v=J9RemuYxA4s
+H264 Vs H265 - Which Should You Use?
+https://www.youtube.com/watch?v=QULNzP_PM7k
+
+See ../MS/codecs.txt

@@ -236,3 +236,6 @@ ca-certificates-java default-jre-headless java-common libapache-pom-java libbcpr
 openjdk-11-jre-headless pdftk pdftk-java
 	convert img1.jpg -resize 50% -quality 50 -density 200 img1.pdf
 	pdftk img?.pdf cat output documento.pdf
+
+Optimizing Images for the Web from the Command Line
+https://www.youtube.com/watch?v=8zj44m0hAoU

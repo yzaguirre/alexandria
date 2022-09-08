@@ -41,7 +41,11 @@ Add the /usr/local/bin to PATH
 	vim ~/.zshrc
 PATH+=/usr/local/bin
 	source ~/.zshrc
+Homebrew
+	brew install ffmpeg
 
+Linux
+	apt install ffmpeg
 Binary
 https://johnvansickle.com/ffmpeg/
 	wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
@@ -89,11 +93,24 @@ Trim video
 https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
 https://stackoverflow.com/questions/19774975/unknown-encoder-libfaac
 	ffmpeg -i video.mp4 -ss 0 -to 30 fragment.mp4
-	ffmpeg -i "Path\do you want him.flv"        \
-       -ss 00:00:05.240 -to 00:00:08.360    \
-       -vcodec libx264 -acodec aac \
-       "Path\Do you want him1.flv"
+Trim to 10 second duration
+	ffmpeg -i "input.flv" -ss 00:00:05.240 -t 10 "Path\Do you want him1.flv"
+Convert video and trim
 	ffmpeg -i "Path\do you want him.flv" -ss 00:00:05.240 -to 00:00:08.360 -vcodec libx264 -acodec aac "Path\Do you want him1.flv"
+To webm
+	ffmpeg -i input.mkv -c:v vp9 -c:a libvorbis output.webm
+Convert only video
+	ffmpeg -i input.mkv -c:v vp9 -c:a copy output.webm
+Convert only audio
+	ffmpeg -i input.mkv -c:v copy -c:a libvorbis output.webm
+Convert video and bitrate to 1 megabit
+	ffmpeg -i input.mkv -c:v libx264 -c:a libvorbis -b:v 1M output.webm
+Reduce framerate
+	ffmpeg -i input.mkv -c:v libx264 -c:a libvorbis -r 24 output.webm
+Reduce resolution to 480p video
+	ffmpeg -i input.mkv -c:v libx264 -c:a libvorbis -s 848x480 output.webm
+	ffmpeg -i input.mkv -c:v libx264 -c:a libvorbis -r 24 -b:v 1M -s 848x480 output.webm
+
 https://sandilands.info/sgordon/multimedia-on-linux-command-line
 
 Concat
@@ -119,52 +136,48 @@ Generate a palette:
 Output the GIF using the palette:
 	ffmpeg -ss 30 -t 3 -i input.flv -i palette.png -filter_complex "fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" output.gif
 
-Scale a video
-https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
-	ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv
-	ffmpeg -i input.mkv -vf "scale=iw/3:ih/3" a_third_the_frame_size.mkv
-	ffmpeg -i input.mkv -vf "scale=iw/4:ih/4" a_fourth_the_frame_size.mkv
-
 https://www.rickmakes.com/ffmpeg-notes/
 https://www.youtube.com/playlist?list=PLErU2HjQZ_ZOPDZ71Khzt5PX4X4j6flkg
 Stream a Mac Screen to a Raspberry Pi
-	#This lists audio/video sources on the Mac:
+This lists audio/video sources on the Mac:
 	ffmpeg -f avfoundation -list_devices true -i ""
-	#Run this on the Mac:
+Run this on the Mac:
 	ffmpeg -f avfoundation -i "1" -vcodec h264_videotoolbox -realtime 1 -pix_fmt nv12 -b:v 5000k -f mpegts udp://ip_address_of_pi:1234
-	#Run this on the Raspberry Pi:
+Run this on the Raspberry Pi:
 	omxplayer --timeout 60 ip_address_of_mac:1234
+Piping Output of FFmpeg to Input of FFplay (Watch streaming)
+https://www.youtube.com/watch?v=eptS90MP6ro
+	ffmpeg -i <stream or file> -f h264 -vcodec libx264 pipe:1 | ffplay -i pipe:0
 
 Make H.265 File Compatible with Quicktime
 	ffmpeg -i input.mp4 -codec copy -tag:v hvc1 output.mp4
-
-Convert JPEG Image Sequence to MKV (with MJPEG encoding)
-	ffmpeg -framerate 30 -pattern_type glob -i 'timelapse/*.JPG' -codec copy out.mkv
-
-Convert MKV (with MJPEG encoding) to JPEG Image Sequence
-	ffmpeg -i out.mkv -vcodec copy timelapse/pic%d.jpg
-
-Extract Single JPEG Image from MKV (with MJPEG encoding)
-	ffmpeg -ss 00:00:00.03 -i out.mkv -vframes 1 -codec copy output.jpg
-
 Add Background Image to an Audio File
 	ffmpeg -loop 1 -f image2 -i airplane.jpg -i train_whistle_audio.aac \
 	-vf crop=in_w:in_w*9/16,scale=1920:1080,fps=fps=30 \
 	-pix_fmt yuv420p -vcodec libx264 -shortest train_whistle_airplane.mp4
-
 Add Solid Color Background to an Audio File
 	ffmpeg -i train_whistle_audio.m4a -f lavfi -i color=c=blue:s=640x480:r=15 -acodec copy -shortest train_whistle_blue_background.mp4
-
 Extract Audio/Remove Video from a Video File
 	ffmpeg -i train_whistle.mp4 -vn -acodec copy train_whistle_audio.m4a
-
 Extract Video/Remove Audio from a Video File
 	ffmpeg -i train_whistle.mp4 -vcodec copy -an train_whistle_no_audio.mp4
-
 Add Silent Audio Track to a Video File
 	ffmpeg -i video_without_audio.mp4 -f lavfi -i anullsrc -vcodec copy -acodec aac -shortest video_with_silence.mp4
-
+Add audio to a video. Add first and second input to first slot.
+	ffmpeg -i input.mkv -i audio.m4a -map 0:v:0 -map 1:a:0 -c:v copy output.mp4
+To the previos copy with lower volume
+	ffmpeg -i input.mkv -i audio.m4a -map 0:v:0 -map 1:a:0 -c:v copy -filter:a "volume=0.5" output.mp4
+Double the audio volume
+	ffmpeg -i input.mkv -filter:a "volume=2.0" output.mkv
+Crop a video from the top left corner
+	ffmpeg -i input.mkv -filter:v "crop=1280:720:0:0" output.mkv
 https://stackoverflow.com/questions/40088222/ffmpeg-convert-video-to-images
+Extract Single JPEG Image from MKV (with MJPEG encoding)
+	ffmpeg -i out.mkv -ss 00:00:00.03 -vframes 1 -codec copy output.jpg
+Convert JPEG Image Sequence to MKV (with MJPEG encoding)
+	ffmpeg -framerate 30 -pattern_type glob -i 'timelapse/*.JPG' -codec copy out.mkv
+Convert MKV (with MJPEG encoding) to JPEG Image Sequence
+	ffmpeg -i out.mkv -vcodec copy timelapse/pic%d.jpg
 Create a thumbnail image every X seconds of the video
 https://web.archive.org/web/20210621172103/https://trac.ffmpeg.org/wiki/Create%20a%20thumbnail%20image%20every%20X%20seconds%20of%20the%20video
 Output one image every second:
@@ -190,6 +203,10 @@ Fix rotation to 0
 	ffmpeg -i h1920_w1080_f30_a9-16_r90.mp4 -c copy -metadata:s:v:0 rotate=0 temp.mp4
 Rotate
 	ffmpeg -i temp.mp4 -vf "transpose=cclock" -crf 23 -c:a copy rotated.mp4
+Add watermark
+	ffmpeg -i input.mkv -i watermark.png -filter_complex "overlay=50:50" output.mkv
+Overlay small video over another
+	ffmpeg -i input.mkv -i input2.mkv -filter_complex "[0:v][1:v] overlay=25:25" output.mkv
 
 Chroma key
 Replace green background
@@ -202,7 +219,11 @@ or how gradual it is. (See the documentation for more).
 	ffmpeg -i <base-video> -i <overlay-video> -filter_complex '[1:v]colorkey=0x<color>:<similarity>:<blend>[ckout];[0:v][ckout]overlay[out]' -map '[out]' <output-file>
 Making Transparent Video with FFMPEG by Chroma Keying | Tutorial
 https://www.youtube.com/watch?v=0tA4fauFykw
-	ffmpeg -f lavfi -i color=c=#00000000:s=606x1080 -i C:/Users/(Your Username)/Desktop/input.mp4 -c: png -filter_complex "[1:v]chromakey=0x00FF00:similarity=.455[out]" -map "[out]" C:/Users/(Your Username)/Desktop/output.mov
+Using mov as it supports transparency
+	ffmpeg -f lavfi -i "color=c=#00000000:s=606x1080" -i .\input.mp4 -c:png -filter_complex "[1:v]chromakey=0x00FF00:similarity=.455[out]" -map "[out]" .\output.mov
+Replace green with transparent background.
+VP9 allows transparency. Tolerence at 0.1 if green is not exactly green. Blend value of 0.2.
+	ffmpeg -i follow_alert.mp4 -c:v vp9 -filter:v "chromakey=0x00FF00:0.1:0.2" follow_alert.webm
 
 https://stackoverflow.com/questions/8299252/ffmpeg-chroma-key-greenscreen-filter-for-images-video/65610927#65610927
 Resize the background image. Ej. 1024x1024, 1920x1080, etc.
@@ -211,6 +232,7 @@ Conversion
 	ffmpeg -i background.jpg -i opengl-rotating-triangle.mp4 -filter_complex '[1:v]colorkey=0x000000:0.1:[ckout];[0:v][ckout]overlay[out]' -map '[out]' out.mp4
 or
 https://gist.github.com/kerbeh/fbe0cd0d89c424708c119e0a0d00ca88
+For mac
 	ffmpeg -hwaccel videotoolbox -i background.jpg -i out.mp4 -filter_complex "[1:v]colorkey=0x34d454:0.3:0.15[ckout];[0:v][ckout]overlay[despill];[despill] despill=green[colorspace];[colorspace]format=yuv420p[out]" -map "[out]" output.mp4
 
 ffmpeg buddy
@@ -226,14 +248,53 @@ https://trac.ffmpeg.org/wiki/Encode/H.264
 https://trac.ffmpeg.org/wiki/Encode/H.265
 https://gist.github.com/ericmurphyxyz/b00a73142618a65cc70a54f2ae4d7fad
 	optvideo skyscrapers.mp4 1920 videos
+Scale a video
+https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg
+	ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv
+	ffmpeg -i input.mkv -vf "scale=iw/3:ih/3" a_third_the_frame_size.mkv
+	ffmpeg -i input.mkv -vf "scale=iw/4:ih/4" a_fourth_the_frame_size.mkv
 Scale down and remove audio
 	ffmpeg -i skyscrapers.mp4 -vf scale=1920:-2 -an output.mp4
-	ffmpeg -i skyscrapers.mp4 -c:v libx264 -crf 24 -vf scale=1920:-2 -movflags faststart -an output.mp4
-	ffmpeg -i skyscrapers.mp4 -c:v libvpx-vp9 -crf 40 -vf scale=1920:-2 -movflags faststart -an output.webm
-	ffmpeg -i skyscrapers.mp4 -c:v libx265 -crf 28 -vf scale=1920:-2 -tag:v hvc1 -movflags faststart -an output.mp4
+	ffmpeg -i skyscrapers.mp4 -c:v libx264 -crf 24 -vf scale="1920:-2" -movflags faststart -an output.mp4
+	ffmpeg -i skyscrapers.mp4 -c:v libvpx-vp9 -crf 40 -vf scale="1920:-2" -movflags faststart -an output.webm
+	ffmpeg -i skyscrapers.mp4 -c:v libx265 -crf 28 -vf scale="1920:-2" -tag:v hvc1 -movflags faststart -an output.mp4
 HTML
 <video width="100%" controls>
 	<source src="videos/skyscrapers_h265.mp4" type="video/mp4; codecs=hevc" />
 	<source src="videos/skyscrapers.webm" type="video/webm; codecs=vp9" />
 	<source src="videos/skyscrapers_h264.mp4" type="video/mp4" />
 </video>
+
+FFmpeg Crash Course | Install, Convert, Reduce File Size, Trim, Crop, Watermark, Chroma Key, Overlay
+https://www.youtube.com/watch?v=yieG9DZQ_vM
+
+Hardware
+FFmpeg Hardware Encoding on a Windows 10
+https://www.youtube.com/watch?v=H81fgnaXkHY
+https://www.rickmakes.com/ffmpeg-hardware-encoding-on-a-windows-10/
+https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video
+https://www.intel.com/content/www/us/en/products/sku/213803/intel-core-i711800h-processor-24m-cache-up-to-4-60-ghz/specifications.html
+	ffmpeg -encoders | rg 264
+	ffmpeg -encoders | rg qsv
+	ffmpeg -encoders | rg amf
+	ffmpeg -encoders | rg nvenc
+
+FFProbe
+	ffprobe -show_streams -print_format json input.mp4
+001 Inspecting with ffprobe
+https://www.youtube.com/watch?v=7iDwaT7l6SM
+FFProbe and Parsing Json with JQ - Bash Playground
+https://www.youtube.com/watch?v=P4cc6beZjVs
+	ffprobe -v error -select_streams v -show_entries stream=codec_name -print_format default=noprint_wrappers=1:nokey=1 input.mp4
+	ffprobe -v error -show_streams -print_format csv .\input.mp4
+
+FFPlay
+#12. ffplay | FFmpeg
+https://www.youtube.com/watch?v=0CqBRUirGOA
+Play scaled
+	ffplay Moon.mp4 -vf scale=700:-1
+Stabalize play
+	ffplay Moon.mp4 -vf "transpose=2,deshake=edge=0"
+
+Huy Nguyen
+https://www.youtube.com/channel/UCgmcl72rZ-S7Jwo4PGzGsnw/search?query=ffmpeg

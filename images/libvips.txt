@@ -1,0 +1,15 @@
+A fast image processing library with low memory needs.
+https://www.libvips.org
+https://github.com/libvips/libvips
+Compile
+	wget https://github.com/libvips/libvips/releases/download/v8.13.1/vips-8.13.1.tar.gz
+	tar xf vips-8.13.1.tar.gz
+Windows
+https://github.com/libvips/libvips/releases?q=vips-dev-w64&expanded=true
+https://github.com/libvips/build-win64-mxe/releases
+	wget https://github.com/libvips/build-win64-mxe/releases/download/v8.13.1/vips-dev-w64-web-8.13.1.zip
+	7z x -o"C:\Program Files" vips-dev-w64-web-8.13.1.zip
+Add to PATH
+C:\Program Files\vips-dev-8.13\bin
+Homebrew
+	brew install vips

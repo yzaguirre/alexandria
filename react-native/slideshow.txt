@@ -1,0 +1,9 @@
+A simple and fully customizable React Native component that implements an Image Slider UI.
+https://github.com/intellidev1991/react-native-image-slider-box
+x	yarn add react-native-image-slider-box
+	yarn add megamaxs1234/react-native-image-slider-box
+	yarn add react-native-fast-image
+
+Classic
+https://github.com/haqiqiw/react-native-slideshow
+https://github.com/kamalpandey/react-native-image-slider-show

@@ -12,3 +12,8 @@ Date operators:
 I tried the search:
 	tesla, before:2019-01-02, after:2019-01-01
 And it appeared to work like you'd expect.
+
+Video Formats, Codecs and Containers (Explained) Youtube
+https://www.youtube.com/watch?v=XvoW-bwIeyY
+YouTube COMPRESSION - Tips and Tricks for BETTER Results!!
+https://www.youtube.com/watch?v=T1pRz4qTuXs

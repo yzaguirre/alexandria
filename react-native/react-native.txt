@@ -497,3 +497,7 @@ Text.defaultProps.allowFontScaling = false;
 
 https://stackoverflow.com/questions/33378884/how-to-hide-status-bar-in-android-w-react-native
 <StatusBar backgroundColor={'transparent'} translucent={true} />
+
+Preload images
+https://savecode.net/code/javascript/react+native+preload+local+images
+https://github.com/DylanVann/react-native-fast-image/issues/160

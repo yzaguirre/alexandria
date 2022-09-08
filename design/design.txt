@@ -1,2 +1,12 @@
 https://www.reddit.com/r/webdev/comments/m468bc/ive_compiled_a_list_of_20_design_resources_for/
 https://twitter.com/midesweb/status/1363924181461663747
+
+Mobile screen sizes
+https://material.io/devices/
+https://stackoverflow.com/questions/13024272/android-background-image-size-in-pixel-which-support-all-devices
+240*320
+320*480
+480*800
+768*1280
+1080*1920
+1440*2560

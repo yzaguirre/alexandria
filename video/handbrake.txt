@@ -1,2 +1,7 @@
+https://handbrake.fr
+https://github.com/HandBrake/HandBrake
+Windows
+	winget install HandBrake.HandBrake
+	choco install handbrake
 https://elbinario.net/2018/08/30/handbrake-poniendo-a-dieta-nuestros-videos/
 	HandBrakeCLI --preset-import-file Conver.json -i archivo.avi -o archivo.mkv

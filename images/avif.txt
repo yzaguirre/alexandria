@@ -1,0 +1,21 @@
+libavif - Library for encoding and decoding .avif files
+https://aomediacodec.github.io/av1-avif/
+https://github.com/AOMediaCodec/libavif
+Windows
+https://ci.appveyor.com/project/louquillio/libavif/build/artifacts
+	wget -O bin\avifdec.exe https://ci.appveyor.com/api/buildjobs/0prra5663i21gs9y/artifacts/build%2Favifdec.exe
+	wget -O bin\avifenc.exe https://ci.appveyor.com/api/buildjobs/0prra5663i21gs9y/artifacts/build%2Favifenc.exe
+
+Usage
+Encode to avif
+	avifenc -j all input.jpg output.avif
+Decode to png
+	avifdec -j all input.avif output.png
+
+See webp.txt
+
+Is AVIF the Future of Web Images? (RIP WebP)
+https://www.youtube.com/watch?v=5eGN_94zbKo
+
+React native support
+https://www.reddit.com/r/reactnative/comments/r7oel1/display_avif_convert_images_to_avif/

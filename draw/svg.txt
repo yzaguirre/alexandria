@@ -7,6 +7,15 @@ krita.txt
 Reduce the size of SVGs
 https://github.com/sonnyp/OhMySVG
 
+SVGO
+⚙️ Node.js tool for optimizing SVG files
+https://github.com/svg/svgo
+	npm install -g svgo
+	yarn global add svgo
+Usage
+	svgo logo.svg -o logo.min.svg
+	svgo -f folder/ -o output/
+
 https://www.svgrepo.com
 https://news.ycombinator.com/item?id=26117767
 Browse 300.000+ SVG Vectors and Icons
