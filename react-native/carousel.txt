@@ -7,3 +7,8 @@ multiple layouts, parallax images,
 performant handling of huge numbers of items, and more
 https://github.com/meliorence/react-native-snap-carousel
 	yarn add react-native-snap-carousel
+
+Snap speed/duration
+https://github.com/meliorence/react-native-snap-carousel/issues/98
+https://github.com/meliorence/react-native-snap-carousel/issues/589
+https://github.com/meliorence/react-native-snap-carousel/issues/213

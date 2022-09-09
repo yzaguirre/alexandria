@@ -18,33 +18,7 @@ libavfilter is the substitute for vhook which allows the video/audio to be modif
 How to use FFMPEG
 https://www.youtube.com/watch?v=MPV7JXTWPWI
 
-See RickMates below
-Installing FFmpeg on macOS Big Sur (on Intel)
-https://www.youtube.com/watch?v=zl4vo0dhLRk
-Download the following: ffmpeg, ffprobe, ffplay
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip.sig
-	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
-	gpg --verify ffmpeg-5.1.1.zip.sig
-	gpg --verify ffprobe-5.1.1.zip.sig
-	gpg --verify ffplay-5.1.1.zip.sig
-	unzip ffmpeg-5.1.1.zip -d /usr/local/bin
-	unzip ffprobe-5.1.1.zip -d /usr/local/bin
-	unzip ffplay-5.1.1.zip -d /usr/local/bin
-Remove from quarantine
-	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
-Add the /usr/local/bin to PATH
-	vim ~/.zshrc
-PATH+=/usr/local/bin
-	source ~/.zshrc
-Homebrew
-	brew install ffmpeg
-
-Linux
+Install
 	apt install ffmpeg
 Binary
 https://johnvansickle.com/ffmpeg/
@@ -82,6 +56,30 @@ Very minimal FFmpeg installation:
 				--pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 Windows
 	choco install ffmpeg
+Installing FFmpeg on macOS Big Sur (on Intel)
+https://www.youtube.com/watch?v=zl4vo0dhLRk
+Download the following: ffmpeg, ffprobe, ffplay
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip.sig
+	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
+	gpg --verify ffmpeg-5.1.1.zip.sig
+	gpg --verify ffprobe-5.1.1.zip.sig
+	gpg --verify ffplay-5.1.1.zip.sig
+	unzip ffmpeg-5.1.1.zip -d /usr/local/bin
+	unzip ffprobe-5.1.1.zip -d /usr/local/bin
+	unzip ffplay-5.1.1.zip -d /usr/local/bin
+Remove from quarantine
+	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
+Add the /usr/local/bin to PATH
+	vim ~/.zshrc
+PATH+=/usr/local/bin
+	source ~/.zshrc
+Homebrew
+	brew install ffmpeg
 
 Video information
 	ffmpeg -i video.mp4
@@ -298,3 +296,9 @@ Stabalize play
 
 Huy Nguyen
 https://www.youtube.com/channel/UCgmcl72rZ-S7Jwo4PGzGsnw/search?query=ffmpeg
+
+Slideshow
+https://shotstack.io/learn/use-ffmpeg-to-convert-images-to-video/
+https://superuser.com/questions/1189246/creating-an-ffmpeg-image-slideshow-with-zoompan-and-fade-in-out/1190199#1190199
+Chroma subsampling scheme and the p stands for planar, not progressive. In ffmpeg yuv420p is called a pixel format.
+	ffmpeg -h encoder=h264_nvenc

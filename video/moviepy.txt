@@ -1,0 +1,4 @@
+https://zulko.github.io/moviepy/
+	sudo -H pip install -U moviepy imageio[pyav] imageio[opencv]
+https://zulko.github.io/moviepy/getting_started/effects.html#effects
+https://stackoverflow.com/questions/46517510/moviepy-slidein-and-slideout-transitions
