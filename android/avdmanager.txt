@@ -5,30 +5,39 @@ Screen size
 
 https://gist.github.com/mrk-han/66ac1a724456cadf1c93f4218c6060ae
 https://dev.to/koscheyscrag/how-to-install-android-emulator-without-installing-android-studio-3lce
-	sdkmanager --list | grep system-images
-	sdkmanager --install "system-images;android-29;google_apis;x86_64" "platform-tools" "platforms;android-29"
+	sdkmanager --list | rg system-images
+Latest android
+	sdkmanager --install "system-images;android-33;google_apis;x86_64"
 Accept the licenses
 	sdkmanager --licenses
-
+List pixels
+	avdmanager list | less
+List existing Android Virtual Devices
+	avdmanager list avd
 Pixel Emulator with Google Apis and x86 architecture
+https://developer.android.com/studio/run/managing-avds
 	echo "no" | avdmanager --verbose create avd --force --name "pixel_9.0" --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi x86_64
 	echo "no" | avdmanager --verbose create avd --force --name "pixel_10.0" --device "pixel" --package "system-images;android-29;google_apis;x86_64" --tag "google_apis" --abi x86_64
-
+Latest pixel phone
+	avdmanager --verbose create avd --force --name "pixel5" --device "pixel_5" --package "system-images;android-33;google_apis;x86_64" -c 1000M --tag "google_apis" --abi x86_64
 Generic Emulator with Google Apis
 	echo "no" | avdmanager --verbose create avd --force --name "generic_10" --package "system-images;android-29;google_apis;x86_64" --tag "google_apis" --abi "x86_64"
+Run devices
+	emulator -avd pixel5
 
-Lists existing Android Virtual Devices
-	avdmanager list avd
-
-Edit its settings
+Edit settings
+https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-properties?pivots=windows
+https://stackoverflow.com/questions/44328225/cant-change-emulated-performance-of-avd-in-android-studio
 	vim ~/.android/avd/generic_10.avd/config.ini
 I recommend adding these lines to: ~/.android/avd/generic_10.avd/config.ini
 
 skin.name=1080x1920        # proper screen size for emulator
 hw.lcd.density=480
 hw.keyboard=yes            # enables keys from your laptop to be sent to the emulator
+hw.gpu.enabled=yes
+hw.gpu.mode=host
 
-If you cannot do this, you can still pass -skin 1080x1920 as an argument when starting the emulator. 
+If you cannot do this, you can still pass -skin 1080x1920 as an argument when starting the emulator.
 
 Launch
 	emulator -avd test_avd_29
@@ -47,5 +56,8 @@ Lists existing targets
 	avdmanager list target
 Lists existing devices
 	avdmanager list device
+Delete virtual device
+	avdmanager delete avd -n pixel5
+
 MacOS
 https://www.stkent.com/2017/08/10/update-your-path-for-the-new-android-emulator-location.html

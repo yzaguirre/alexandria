@@ -1,5 +1,7 @@
 https://developer.android.com/studio/#downloads
 https://developer.android.com/studio/install
+See avdmanager.txt
+gradle.txt
 Dependencies
 	apt install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 The following NEW packages will be installed:
@@ -28,12 +30,16 @@ https://groups.google.com/g/kivy-users/c/2C7mzjZyj2M?pli=1
 	unzip commandlinetools-linux-8092744_latest.zip -d /opt/android-studio/cmdline-tools
 	mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-studio/cmdline-tools/latest
 	vim ~/.profile
-PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/emulator
 
 Download platform tools. Usually installed using sdkmanager.
 	wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip
 	unzip platform-tools-latest-linux.zip -d /opt/android-studio
 	PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+Jenkins
+	apt install android-tools-adb android-tools-fastboot
+	ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
+	ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
 Android Studio
 	wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/android-studio-2021.1.1.22-linux.tar.gz
 	sha256sum android-studio-2021.1.1.22-linux.tar.gz
@@ -48,7 +54,7 @@ https://stackoverflow.com/questions/23042638/how-do-i-set-android-sdk-home-envir
 #export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export JAVA_HOME=/opt/android-studio/jre
 export ANDROID_SDK_ROOT=/opt/android-sdk
-PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/emulator
 To download for windows, set the env variable
 export REPO_OS_OVERRIDE=windows
 Windows locations
@@ -56,25 +62,24 @@ Locations
 %LOCALAPPDATA%\Android\Sdk
 %LOCALAPPDATA%\Android\Sdk\platform-tools
 %LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest\bin
+%LOCALAPPDATA%\Android\Sdk\emulator
 C:\Program Files\Android\Android Studio\jre\bin
 
 https://developer.android.com/studio/command-line/sdkmanager
-	sdkmanager --list
-	sdkmanager.bat --list
+	sdkmanager --list | subl -
 
 Platforms
 https://en.wikipedia.org/wiki/Android_(operating_system)#Platform_usage
 https://en.wikipedia.org/wiki/Android_version_history#Overview
-	sdkmanager "platforms;android-30"
-	sdkmanager "platforms;android-29"
-	sdkmanager --install "platform-tools" "platforms;android-23" "platforms;android-24" "platforms;android-25" "platforms;android-26" "platforms;android-27" "platforms;android-28"
-	sdkmanager --install "platform-tools" "platforms;android-19" "platforms;android-21" "platforms;android-26" "platforms;android-27" "platforms;android-28" "platforms;android-29" "platforms;android-30" "platforms;android-31" "platforms;android-32"
-	sdkmanager "cmdline-tools;latest"
+	sdkmanager "cmdline-tools;latest" emulator platform-tools
+	sdkmanager --install "platforms;android-26" "platforms;android-27" "platforms;android-28"
+	sdkmanager --install "platforms;android-29" "platforms;android-30" "platforms;android-31"
+	sdkmanager --install "platforms;android-32" "platforms;android-33"
 Build tools
 https://developer.android.com/studio/releases/build-tools
-	sdkmanager --install "build-tools;19.1.0" "build-tools;27.0.3" "build-tools;28.0.2" "build-tools;30.0.3" "build-tools;31.0.0" "build-tools;32.0.0"
+	sdkmanager --install "build-tools;33.0.0"
 Print tools versions
-	cat cmdline-tools/latest/source.properties cmdline-tools/tools/source.properties tools/source.properties
+	bat cmdline-tools/latest/source.properties platform-tools/source.properties tools/source.properties emulator/source.properties
 More stuff
 	sdkmanager --install "add-ons;addon-google_apis-google-19" "add-ons;addon-google_apis-google-24"
 In case java isn't working
@@ -89,17 +94,6 @@ Android SDK location
 
 Building your first app
 http://developer.android.com/training/basics/firstapp/index.html
-
-List devices
-	android list avd
-Run a device
-	emulator -avd <Virtual Device Name>
-
-	apt install android-tools-adb android-tools-fastboot
-	ln -s /usr/bin/adb /var/jenkins-slave/tools/android-sdk/platform-tools/adb
-	ln -s /usr/bin/fastboot /var/jenkins-slave/tools/android-sdk/platform-tools/fastboot
-
-https://developer.android.com/studio/build/building-cmdline
 
 https://stackoverflow.com/questions/26694108/what-is-the-difference-between-compilesdkversion-and-targetsdkversion
 Check with $ANDROID_HOME/build-tools

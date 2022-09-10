@@ -152,6 +152,8 @@ Android properties
 Activity
 https://github.com/Kardelio/easy-dumpsys
 	adb shell dumpsys activity "com.mypackage"
+Current title
+	adb shell dumpsys activity recents | rg "Recent #0"
 
 Get coordinates on screen
 Activate "Pointer location" in developer options

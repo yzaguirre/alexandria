@@ -37,8 +37,9 @@ https://trac.ffmpeg.org/wiki/CompilationGuide
 Compile
 	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2
 	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2.asc
-	gpg --recv-keys 0xd67658d8
-	gpg --edit-key 0xd67658d8
+x	gpg --recv-keys 0xd67658d8
+x	gpg --edit-key 0xd67658d8
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xFCF986EA15E6E293A5644F10B4322F04D67658D8
 	gpg --verify ffmpeg-5.1.1.tar.bz2.asc ffmpeg-5.1.1.tar.bz2
 	tar xf ffmpeg-5.1.1.tar.bz2
 	cd ffmpeg-5.1.1

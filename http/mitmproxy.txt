@@ -82,3 +82,8 @@ mitmweb
 Using cert manually
 	curl --proxy 127.0.0.1:8080 --cacert ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/
 	wget -e https_proxy=127.0.0.1:8080 --ca-certificate ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/
+Install android
+	adb push mitmproxy-ca-cert.cer /storage/emulated/0/Download
+
+Learn mitmproxy #1 - Record, Replay, Intercept, and Modify HTTP Requests
+https://www.youtube.com/watch?v=igcsLKDfssw

@@ -1,8 +1,7 @@
 https://github.com/ajeetdsouza/zoxide
 A faster way to navigate your filesystem
-	wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.8.3/zoxide-x86_64-unknown-linux-musl.tar.gz
-	tar xf zoxide-x86_64-unknown-linux-musl.tar.gz
-	cd zoxide-x86_64-unknown-linux-musl
+	wget https://github.com/ajeetdsouza/zoxide/releases/download/v0.8.3/zoxide_0.8.3_amd64.deb
+	dpkg -i zoxide_0.8.3_amd64.deb
 Debian
 	apt install zoxide
 Termux

@@ -57,6 +57,10 @@ http://www.howtogeek.com/126469/how-to-create-a-powershell-profile/
 Create function
 	vim C:\Users\dyzag\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 Function List-LSD {lsd.exe --long}
+Automatic Variables
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_Automatic_Variables?view=powershell-7.2
+https://stackoverflow.com/questions/62861665/powershell-pass-all-parameters-received-in-function-and-handle-parameters-with
+$args
 
 Alias
 Setting up aliases in Powershell

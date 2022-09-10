@@ -1,0 +1,32 @@
+See ../java/gradle.txt
+https://developer.android.com/studio/releases/gradle-plugin.html
+# Gradle plugin 
+You can specify the Android Plugin for Gradle version in either the File > Project Structure > Project menu in Android Studio, or the top-level build.gradle file
+
+If the specified plugin version has not been downloaded, Gradle downloads it the next time you build your project
+or click Tools > Android > Sync Project with Gradle Files from the Android Studio main menu.
+
+Latest version 2.1.3
+# Gradle
+You can specify the Gradle version in either the File > Project Structure > Project menu in Android Studio,
+or by editing the Gradle distribution reference in the gradle/wrapper/gradle-wrapper.properties file.
+
+https://developer.android.com/studio/build/index.html
+
+https://developer.android.com/studio/build/building-cmdline
+https://developer.android.com/studio/build/index.html
+http://tools.android.com/tech-docs/new-build-system/user-guide
+
+Build varient
+https://developer.android.com/studio/build/index.html#buildVariants
+http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Build-Variants
+build types: debug, release, quality assurence testing
+product types: 
+bui
+
+rootDir
+
+Build cache
+https://android-developers.blogspot.com/2016/09/android-studio-2-2.html
+http://tools.android.com/tech-docs/build-cache
+Just add android.enableBuildCache=true to your gradle.properties file

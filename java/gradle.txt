@@ -1,39 +1,58 @@
-https://gradle.org/
-https://github.com/gradle/gradle/releases
+https://gradle.org
+https://github.com/gradle/gradle
 https://news.ycombinator.com/item?id=16742858
-Groovy 
+Groovy
 Learn X in Y: http://learnxinyminutes.com/docs/groovy/
 http://groovy-lang.org/documentation.html
 
 Using Gradle bundled with android studio
-Edit ~/.profile
-	export GRADLE_HOME=/opt/android-studio/gradle/gradle-4.10.1
-	export GRADLE_OPTS="-Dorg.gradle.daemon=true"
-	export GRADLE_USER_HOME="/opt/gradle-home"
-	PATH=$PATH:$GRADLE_HOME/bin
+See ../android/gradle.txt
 
-Download latest build
-https://gradle.org/gradle-download/
-	wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip
-	wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip.sha256
-	cat gradle-5.2.1-bin.zip.sha256
-	sha256sum gradle-5.2.1-bin.zip
-Installation
+Binaries
 https://docs.gradle.org/current/userguide/installation.html
-Unpacking
-	unzip gradle-5.2.1-bin.zip -d /opt/
-	mv /opt/gradle{-5.2.1,}
-Edit ~/.profile
-	export GRADLE_HOME=/opt/gradle
-	PATH=$PATH:$GRADLE_HOME/bin
-	gradle -v
+https://gradle.org/gradle-download/
+	wget https://services.gradle.org/distributions/gradle-7.5.1-bin.zip
+	wget https://services.gradle.org/distributions/gradle-7.5.1-bin.zip.sha256
+	cat gradle-7.5.1-bin.zip.sha256
+	sha256sum gradle-7.5.1-bin.zip
+	unzip gradle-7.5.1-bin.zip -d /opt/
+	mv /opt/gradle{-7.5.1,}
+	vim ~/.profile
+export GRADLE_HOME=/opt/gradle
+export GRADLE_USER_HOME="/opt/gradle-home"
+PATH=$PATH:$GRADLE_HOME/bin
+Completions
+https://github.com/gradle/gradle-completion
+	mkdir $HOME/bash_completion.d
+	curl -LA gradle-completion https://edub.me/gradle-completion-bash -o $HOME/bash_completion.d/gradle-completion.bash
+Windows
+	choco install gradle
+Binary
+	7z x -o"C:\Gradle" gradle-7.5.1-bin.zip
+Add to PATH
+C:\Gradle\gradle-7.5.1\bin
+Homebrew
+	brew install gradle
+	brew install gradle-completion
+	brew install gradle-completion
+Source completion scripts from bash-completion in your bash profile
+	echo '[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"' >> ~/.bash_profile
+Load changes to bash profile
+	source ~/.bash_profile
+Ensure /usr/local/share/zsh/site-functions is on $fpath.
+You should get a result from the following
+	echo $fpath | grep "/usr/local/share/zsh/site-functions"
 
+Usage
+	gradle -v
 Use the daemon
 	vim ~/.gradle/gradle.properties
 org.gradle.daemon=true
+or environment variable
+	vim ~/.profile
+export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 Stop the daemon
 	gradle --stop
-
 List taks
 	gradle tasks
 Run a task

@@ -8,3 +8,7 @@ Stable
 Key fingerprint
 37D2 C987 89D8 3119 4839 4E3E 41E7 044E 1DBA 2E89
 	adb push FDroid.apk /sdcard/Download
+
+Download Lightning Browser
+	wget https://f-droid.org/repo/acr.browser.lightning_101.apk
+	adb install acr.browser.lightning_101.apk

@@ -1,0 +1,3 @@
+https://blog.burntsushi.net/bstr/
+https://github.com/BurntSushi/bstr
+https://news.ycombinator.com/item?id=32762345
