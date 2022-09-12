@@ -1,15 +1,15 @@
 Open-source compositing software. Node-graph based.
-https://natrongithub.github.io/
+https://natrongithub.github.io
 https://github.com/NatronGitHub/Natron
 Previous repo https://github.com/olear/Natron
 	apt install libxcb-shm0
-	wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.0/Natron-2.4.0-Linux-64.tgz
-	tar xf Natron-2.4.0-Linux-64.tgz
-	./Natron-2.4.0-Linux-64
+	wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.3/Natron-2.4.3-Linux-64.tgz
+	tar xf Natron-2.4.3-Linux-64.tgz
+	./Natron-2.4.3-Linux-64
 No installer
-	wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.0/Natron-2.4.0-Linux-64-no-installer.tar.xz
-	tar xf Natron-2.4.0-Linux-64-no-installer.tar.xz -C /opt
-	mv /opt/Natron-2.4.0-Linux-64-no-installer /opt/Natron
+	wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.3/Natron-2.4.3-Linux-64-no-installer.tar.xz
+	tar xf Natron-2.4.3-Linux-64-no-installer.tar.xz -C /opt
+	mv /opt/Natron-2.4.3-Linux-64-no-installer /opt/Natron
 	ln -s /opt/Natron/Natron /usr/local/bin/Natron
 	ln -s /opt/Natron/NatronRenderer /usr/local/bin/NatronRenderer
 Homebrew

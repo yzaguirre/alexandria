@@ -84,18 +84,18 @@ http://www.raspberrypi.org/documentation/installation/installing-images/linux.md
 Unmount the SD card and copy the OS image
 	dd bs=4M if=2014-12-24-wheezy-raspbian.img of=/dev/sdd; sync
 Raspberry Pi OS
-	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.torrent
-	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.info
-	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sha1
-	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sha256
-	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-04-07/2022-04-04-raspios-bullseye-arm64.img.xz.sig
-	sha256sum 2022-04-04-raspios-bullseye-arm64.img.xz.torrent
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-09-07/2022-09-06-raspios-bullseye-arm64.img.xz.torrent
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-09-07/2022-09-06-raspios-bullseye-arm64.info
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-09-07/2022-09-06-raspios-bullseye-arm64.img.xz.sha1
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-09-07/2022-09-06-raspios-bullseye-arm64.img.xz.sha256
+	wget https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2022-09-07/2022-09-06-raspios-bullseye-arm64.img.xz.sig
+	sha256sum 2022-09-06-raspios-bullseye-arm64.img.xz.torrent
 5adcab7a063310734856adcdd2041c8d58f65c185a3383132bc758886528a93d
-	sha1sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha1
-	sha256sum -c --ignore-missing 2022-04-04-raspios-bullseye-arm64.img.xz.sha256
+	sha1sum -c --ignore-missing 2022-09-06-raspios-bullseye-arm64.img.xz.sha1
+	sha256sum -c --ignore-missing 2022-09-06-raspios-bullseye-arm64.img.xz.sha256
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x54C3DD610D9D1B4AF82A37758738CD6B956F460C
-	gpg --verify 2022-04-04-raspios-bullseye-arm64.img.xz.sig
-	unxz 2022-04-04-raspios-bullseye-arm64.img.xz.sig
+	gpg --verify 2022-09-06-raspios-bullseye-arm64.img.xz.sig
+	unxz 2022-09-06-raspios-bullseye-arm64.img.xz
 Recover /dev/sdb1
 Unmount sdbx
 	e2fsck /dev/sdb1
