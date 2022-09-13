@@ -22,6 +22,9 @@ Modifify 7z, 7za and 7zr in /usr/bin
 	tar xf 7z2201-linux-x64.tar.xz -C /usr/local/bin 7zz 7zzs
 	mkdir /usr/local/share/doc/7zip
 	tar xf 7z2201-linux-x64.tar.xz -C /usr/local/share/doc/7zip --strip-components=1 MANUAL
+Compile
+	wget https://www.7-zip.org/a/7z2201-src.tar.xz
+	tar xf 7z2201-src.tar.xz
 Termux
 	apt install p7zip
 Windows

@@ -12,5 +12,12 @@ No installer
 	mv /opt/Natron-2.4.3-Linux-64-no-installer /opt/Natron
 	ln -s /opt/Natron/Natron /usr/local/bin/Natron
 	ln -s /opt/Natron/NatronRenderer /usr/local/bin/NatronRenderer
+Windows
+	wget https://github.com/NatronGitHub/Natron/releases/download/v2.4.3/Natron-2.4.3-Windows-x86_64.zip
+	7z x .\Natron-2.4.3-Windows-x86_64.zip
+	cd .\Natron-2.4.3-Windows-x86_64
+	start .\Setup.exe
+Installed at
+C:\Program Files\Natron
 Homebrew
 	brew install natron

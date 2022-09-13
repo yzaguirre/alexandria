@@ -23,10 +23,10 @@ Go 1.17.8 and Go 1.16.14 are released
 https://groups.google.com/g/golang-announce/c/SUsQn0aSgPQ/m/gx45t8JEAgAJ?pli=1
 https://twitter.com/golang/status/1491914601948233731
 https://go.dev/dl/#go1.18
-	wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
-	sha256sum go1.18.linux-amd64.tar.gz
-e85278e98f57cdb150fe8409e6e5df5343ecb13cebf03a5d5ff12bd55a80264f
-	tar xf go1.18.linux-amd64.tar.gz -C /usr/local
+	wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
+	sha256sum go1.19.1.linux-amd64.tar.gz
+acc512fbab4f716a8f97a8b3fbaa9ddd39606a28be6c2515ef7c6c6311acffde
+	tar xf go1.19.1.linux-amd64.tar.gz -C /usr/local
 	mkdir /usr/local/go/libs
 	vim + ~/.profile
 export GOROOT=/usr/local/go
@@ -35,10 +35,10 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 Windows
 	winget install GoLang.Go
 	choco install go
-	wget https://go.dev/dl/go1.18.windows-amd64.msi
-	sha256sum go1.18.windows-amd64.msi
-57cba0010ce3bc8012cfa68ab0e11181ccd8493a66b109a5b86998e5d2b38ae1
-	explorer.exe go1.18.windows-amd64.msi
+	wget https://go.dev/dl/go1.19.1.windows-amd64.msi
+	sha256sum go1.19.1.windows-amd64.msi
+f92c0070b83876910e7d12c1d7e0d0d39124accc1d81ecf69359d4fbdd194ab1
+	explorer.exe go1.19.1.windows-amd64.msi
 Binary at
 %USERPROFILE%\go\bin
 C:\Program Files\Go\bin

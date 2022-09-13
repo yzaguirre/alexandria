@@ -31,7 +31,7 @@ Using Debian, as root
 	curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 	apt-get install -y nodejs
 Binary
-	wget https://nodejs.org/download/release/latest-v18.x/node-v18.8.0-linux-x64.tar.xz
+	wget https://nodejs.org/download/release/latest-v18.x/node-v18.9.0-linux-x64.tar.xz
 	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt
 	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt.asc
 	wget https://nodejs.org/download/release/latest-v18.x/SHASUMS256.txt.sig
@@ -40,12 +40,12 @@ Binary
 	gpg --verify SHASUMS256.txt.sig
 	sha256sum -c --ignore-missing SHASUMS256.txt
 	mkdir -p /usr/local/lib/nodejs
-	tar xf node-v18.8.0-linux-x64.tar.xz -C /usr/local/lib/nodejs
-	export PATH=/usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin:$PATH
+	tar xf node-v18.9.0-linux-x64.tar.xz -C /usr/local/lib/nodejs
+	export PATH=/usr/local/lib/nodejs/node-v18.9.0-linux-x64/bin:$PATH
 or symlink
-	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/node /usr/bin/node
-	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/npm /usr/bin/npm
-	ln -s /usr/local/lib/nodejs/node-v18.8.0-linux-x64/bin/npx /usr/bin/npx
+	ln -s /usr/local/lib/nodejs/node-v18.9.0-linux-x64/bin/node /usr/bin/node
+	ln -s /usr/local/lib/nodejs/node-v18.9.0-linux-x64/bin/npm /usr/bin/npm
+	ln -s /usr/local/lib/nodejs/node-v18.9.0-linux-x64/bin/npx /usr/bin/npx
 Windows
 	winget install OpenJS.NodeJS
 LTS

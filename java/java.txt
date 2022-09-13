@@ -14,6 +14,13 @@ you can install Oracle Java 8 by using the following commands:
 	update-alternatives --config javac
 	vim /etc/environment
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/bin/"
+Windows
+	choco install jre8
+	winget install Oracle.JavaRuntimeEnvironment
+Path
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+Compites with Android Studio's OpenJDK Runtime Environment
+C:\Program Files\Android\Android Studio\jre\bin\java
 
 Create jar file
 	jar c[v0Mmfe] [manifest] [jarfile] [entrypoint] [-C dir] inputfiles [-Joption]

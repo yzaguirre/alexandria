@@ -1,15 +1,15 @@
 https://github.com/microsoft/azuredatastudio
 https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-ver15
 https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15
-	wget https://go.microsoft.com/fwlink/?linkid=2183341 -O azuredatastudio-1.35.1.deb
-	dpkg -i azuredatastudio-1.35.1.deb
+	wget https://go.microsoft.com/fwlink/?linkid=2183341 -O azuredatastudio-1.39.1.deb
+	dpkg -i azuredatastudio-1.39.1.deb
 	apt install libxss1 libgconf-2-4 libunwind8
 	azuredatastudio
 Windows
 	winget install Microsoft.AzureDataStudio
 Installer
-	wget https://go.microsoft.com/fwlink/?linkid=2183423 -O azuredatastudio-windows-setup-1.35.1.exe
-	explorer.exe azuredatastudio-windows-setup-1.35.1.exe
+	wget https://go.microsoft.com/fwlink/?linkid=2183423 -O azuredatastudio-windows-setup-1.39.1.exe
+	explorer.exe azuredatastudio-windows-setup-1.39.1.exe
 
 Top 5 Time-Saving Extensions in Azure Data Studio
 https://youtu.be/MBlbLQKiD6g

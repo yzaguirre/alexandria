@@ -15,7 +15,7 @@ https://inkscape.org/en/develop/getting-started/#building-inkscape-linux
 	./configure
 	make
 	make install
-Building the package 
+Building the package
 	dpkg-buildpackage -uc -us -rfakeroot
 	dpkg-buildpackage -uc -us -b -j4
 https://packages.debian.org/experimental/amd64/inkscape/download

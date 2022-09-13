@@ -57,12 +57,12 @@ http://www.emoticode.net/python/httprequest.html
 https://www.python.org/downloads/
 https://stackoverflow.com/questions/58984026/official-python-gpg-signing-key-where-is-it-gpg-using-rsa-key-fc6246434870
 Windows
-	choco install python
+	choco install pyt0hon
 Installer
-	curl -o python-3.10.1-amd64.exe https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe
-	curl -o python-3.10.1-amd64.exe.asc https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe.asc
-	gpg --verify python-3.10.1-amd64.exe.asc
-	explorer.exe python-3.10.1-amd64.exe
+	curl -o python-3.10.7-amd64.exe https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe
+	curl -o python-3.10.7-amd64.exe.asc https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe.asc
+	gpg --verify python-3.10.7-amd64.exe.asc
+	explorer.exe python-3.10.7-amd64.exe
 Install setup tools and pip on Windows
 http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows
 http://stackoverflow.com/questions/2817869/error-unable-to-find-vcvarsall-bat
@@ -72,7 +72,7 @@ http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip
 
 Its installed at:
-C:\Python27\Scripts\
+C:\Python310\Scripts\
 So make that directory to PATH variable.
 
 Install easy tools on *NIX

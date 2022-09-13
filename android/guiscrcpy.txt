@@ -35,7 +35,7 @@ Configuration files
 https://github.com/srevinsaju/guiscrcpy/blob/main/docs/CONFIGURATION.md
 C:\Users\<username>\AppData\Local\guiscrcpy\guiscrcpy.json
 
-https://github.com/genymobile/scrcpy/
+https://github.com/genymobile/scrcpy
 Install scrcpy
 	apt install scrcpy
 Compile latest
@@ -55,6 +55,18 @@ Chocolately
 Directory: ~\scoop\apps\scrcpy\current
 Directory: C:/ProgramData/chocolatey/bin
 scrcpy-server at C:\ProgramData\chocolatey\lib\scrcpy\tools\scrcpy-server
+
+Usage
+	scrcpy-console.bat --bit-rate 20M --stay-awake
+	scrcpy-console.bat --bit-rate 20M -w
+Record video
+	scrcpy-console.bat --bit-rate 20M -w --record video.mp4
+Use GPU
+	scrcpy-console.bat --bit-rate 20M -wr video.mp4 --render-driver=opengl
+List encoders
+	scrcpy --encoder _
+Use encoder
+	scrcpy --encoder OMX.qcom.video.encoder.avc
 
 guiscrcpy binary for Windows
 	wget https://github.com/srevinsaju/guiscrcpy/releases/download/v4.11.3/guiscrcpy-PyQt5-x64.exe

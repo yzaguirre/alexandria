@@ -15,22 +15,22 @@ Homebrew
 Config at
 $XDG_DATA_HOME or $HOME/.local/share
 $HOME/Library/Application Support
-C:\Users\dyzag\AppData\Roaming
+C:\Users\DAVIDY~1\AppData\Roaming
 
 Database at
 /home/david/.local/share
 /Users/David/Library/Application Support
-C:\Users\dyzag\AppData\Local
+C:\Users\DAVIDY~1\AppData\Local\zoxide
 
 Install Bash
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd g bash)"
 
 Install Fish
 	vim ~/.config/fish/config.fish
-zoxide init fish | source
+zoxide init --cmd g fish | source
 
 Install Powershell
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
-    (zoxide init --hook $hook powershell | Out-String)
+    (zoxide init --hook $hook --cmd g powershell | Out-String)
 })

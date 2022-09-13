@@ -1,92 +1,6 @@
-See github-cli.txt
-Mentoring
-https://twitter.com/razlupercio/status/1473065406906654724
-https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github
-
-https://help.github.com/articles/github-flavored-markdown
-https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
-
-https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github
-Push a branch
-	git push --set-upstream origin new-branch
-Add remote
-	git remote add upstream https://github.com/original-owner-username/original-repository.git
-Sync the fork
-	git fetch upstream
-Merge changes in upstream master to local 'master' branch
-	git checkout master
-	git merge upstream/master
-Print remotes
-	git remote -v
-Inverse pull request
-https://stackoverflow.com/questions/22318145/update-github-fork-from-web-only-in-other-words-without-git#22321511
-
-https://github.com/tiimgreen/github-cheat-sheet
-Shift+?
-Clone your projects
-	git clone git@github.com:dvdyzag/JBubbles.git
-
-Get origin
-https://stackoverflow.com/questions/4089430/how-can-i-determine-the-url-that-a-local-git-repo-was-originally-cloned-from
-	git config --get remote.origin.url
-	git remote show origin
-http://dropshado.ws/post/8513715503/git-config-get-remote-origin-url
-	git config --local -l
-	
-https://stackoverflow.com/questions/11200237/how-do-i-get-github-to-default-to-ssh-and-not-https-for-new-repositories
-https://help.github.com/articles/changing-a-remote-s-url/
-	git remote set-url origin git@github.com:nikhilbhardwaj/abc.git
-	git remote set-url push git@github.com:yzaguirre/zgas.git
-
-Add .pibb to the end of any Gist URL (https://gist.github.com/tiimgreen/10545817.pibb) in order to get 
-the HTML only version suitable for embedding in any other site.
-Gists can be treated as a full repository so they can be cloned like any other:
-
-	git clone https://gist.github.com/tiimgreen/10545817
-
-Create a new repository on the command line
-	touch README.md LICENSE .gitignore
-	git init
-	git add README.md LICENSE .gitignore
-	git commit -m "first commit"
-	git remote add origin git@github.com:yzaguirre/CustomerScaffold.git
-	git push -u origin master
-
-https://education.github.com/pack/offers
-
-Publish a release based on a tag
-Create annotated tag
-https://git-scm.com/book/en/v2/Git-Basics-Tagging
-https://wiki.debian.org/Creating%20signed%20GitHub%20releases
-	git tag -a v5.9.1
-For signing the annotated tag, use -s instead of -a
-	git tag -s v5.9.1
-Tag a specific commit
-	git log --pretty=oneline
-	git tag -s v5.9.0 9fceb02
-List tags for v5
-	git tag -l v5
-	git show v5.9.1
-Push tags
-	git push origen v5.9.1
-or	git push origen --tags
-Sign the tarball with your key:
-	gpg -ab mysoftware-0.4.tar.gz
-This should give a file called mysoftware-0.4.tar.gz.asc.
-Now on /releases page
-	Clic "Publish a new release"
-	Add a version number
-	Clic "Publish release"
-
-Verifying Tags
-	git tag -v v5.9.1
-
-https://help.github.com/en/github/writing-on-github/autolinked-references-and-urls#commit-shas
-https://stackoverflow.com/questions/8910271/how-can-i-reference-a-commit-in-an-issue-comment-on-github
-Username/Repository@SHA	
-
 https://github.com/cli/cli
-https://github.com/cli/cli/releases/tag/v0.8.0
+https://docs.github.com/en
+https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/
 https://news.ycombinator.com/item?id=23161684
 https://github.blog/2020-09-17-github-cli-1-0-is-now-available/
@@ -129,7 +43,8 @@ Chocolately
 	choco install gh
 	choco upgrade gh
 Config file at ~/.config/gh/ or C:\Users\%HOME%\AppData\Roaming\GitHub CLI
-Extensions at C:\Users\dyzag\AppData\Roaming\GitHub CLI
+Extensions at
+C:\Users\DAVIDY~1\AppData\Roaming\GitHub CLI
 https://cli.github.com/manual/
 	gh auth login
 Use SSH
@@ -183,34 +98,3 @@ https://cli.github.com/manual/gh_repo_delete
 List repos for a user
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/user/repos'
 
-GitHub Actions
-Work with GitHub Actions in Your Terminal with GitHub CLI
-https://github.blog/2021-04-15-work-with-github-actions-in-your-terminal-with-github-cli/
-https://twitter.com/natfriedman/status/1382740586562691072
-https://news.ycombinator.com/item?id=26822169
-
-"Private" branches
-https://stackoverflow.com/questions/7983204/having-a-private-branch-of-a-public-repo-on-github
-https://github.community/t/project-setup-question-with-public-and-private-branches/2198
-
-Extensions
-https://github.com/topics/gh-extension
-https://github.com/vilmibm/gh-user-status
-	gh extension install vilmibm/gh-user-status
-https://github.com/sheepla/gh-userfetch
-	gh extension install sheepla/gh-userfetch
-	gh-userfetch
-https://github.com/mislav/gh-repo-collab
-	gh extension install mislav/gh-repo-collab
-Usage: gh repo-collab list [<repo>]
-       gh repo-collab add <repo> <login> [--permission <string>]
-       gh repo-collab add <repo> < logins-file.txt
-       gh repo-collab remove <repo> <login>
-
-Valid permission is one of: pull, triage, push, maintain, admin.
-
-¿Quieres tener un commit en GitHub el día que naciste? 🐣
-https://twitter.com/carlosazaustre/status/1494197961185759234
-
-Complaints mount after GitHub launches new algorithmic feed
-https://news.ycombinator.com/item?id=30788364
