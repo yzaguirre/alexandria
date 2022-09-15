@@ -1,8 +1,12 @@
 Fuzzy Finder in rust!
 https://github.com/lotabout/skim
-	wget https://github.com/lotabout/skim/releases/download/v0.9.3/skim-v0.9.3-x86_64-unknown-linux-gnu.tar.gz
-	tar xfv skim-v0.9.3-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/lotabout/skim/releases/download/v0.9.4/skim-v0.9.4-x86_64-unknown-linux-musl.tar.gz
+	tar xf skim-v0.9.4-x86_64-unknown-linux-musl.tar.gz
 	chmod u+x sk
 	mv sk ~/bin
 Windows
+Won't work
+https://github.com/lotabout/tuikit/issues/13#issuecomment-616217899
 	cargo install skim
+Homebrew
+	brew install sk

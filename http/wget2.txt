@@ -7,7 +7,7 @@ or	wget https://ftp.gnu.org/gnu/wget/wget2-2.0.1.tar.gz
 	wget https://ftp.gnu.org/gnu/wget/wget2-2.0.1.tar.gz.sig
 Signed with 0x08302DB6A2670428 key
 	gpg --verify wget2-2.0.1.tar.gz.sig
-	tar xf wget2-latest.tar.gz
+	tar xf wget2-2.0.1.tar.gz
 	cd wget2-*
 	./configure
 	make -j12

@@ -1,4 +1,6 @@
-https://netbeans.org/
+https://netbeans.org
+https://github.com/apache/netbeans
+https://news.ycombinator.com/item?id=32835722
 Download
 	wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-linux.sh
 	sha256sum netbeans-8.2-linux.sh

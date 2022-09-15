@@ -1,9 +1,10 @@
 MS Build - Microsoft build engine
 Replaces xbuild on Mono
+See buildtools.txt
+../ide/visualstudio.txt
 https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022
 https://github.com/dotnet/msbuild
 Usual directory
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin
 C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin
 
 CD into project directory, where the solution file exists

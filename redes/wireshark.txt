@@ -11,7 +11,6 @@ https://www.wireshark.org
 	apt install wireshark tshark
 The following NEW packages will be installed:
 libbcg729-0 libsmi2ldbl libspandsp2 libwireshark-data libwireshark14 libwiretap11 libwsutil12 wireshark wireshark-common wireshark-qt
-
 Termux
 	apt install root-repo
 	apt install tshark

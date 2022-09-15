@@ -88,3 +88,10 @@ https://twitter.com/TessaRDavis/status/1512402354435510276
 - until:YYYY-MM-DD
 - since:YYYY-MM-DD
 - near:location within:15mi
+
+Mudge Twitter Whistleblower Testimony
+https://www.judiciary.senate.gov/meetings/data-security-at-risk-testimony-from-a-twitter-whistleblower
+https://news.ycombinator.com/item?id=32824504
+
+The search for dirt on Mudge
+https://news.ycombinator.com/item?id=32823548

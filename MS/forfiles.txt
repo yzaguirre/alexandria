@@ -1,0 +1,17 @@
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753551(v=ws.11)?redirectedfrom=MSDN
+The Forfiles Command
+https://www.youtube.com/watch?v=1mTFYyfYBS4
+	forfiles /?
+Rename every single file in the folder
+	forfiles /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+	forfiles /p some_path /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+	forfiles /m *.jpg /p some_path /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+Recurse
+	forfiles /s /m *.jpg /p some_path /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+Dates
+Files newer or equal than 1st-Oct-2015
+	forfiles /d +01-10-2015 /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+Files older or equal than 30-Sep-2015
+	forfiles /d -30-10-2015 /c "cmd /c move @FILE @FNAME_renamed.@EXT"
+Files older than 100 days old
+	forfiles /d -100 /c "cmd /c move @FILE @FNAME_renamed.@EXT"

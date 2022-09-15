@@ -16,6 +16,8 @@ Install
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
 Windows
+https://stackoverflow.com/questions/55603111/unable-to-compile-rust-hello-world-on-windows-linker-link-exe-not-found/55603112#55603112
+See ../MS/buildtools.txt
 	winget install Rustlang.Rust.MSVC
 	choco install rust
 Getting Started with Rust on Windows and Visual Studio Code
@@ -44,7 +46,10 @@ https://news.ycombinator.com/item?id=11691760
 http://blog.rust-lang.org/2016/05/13/rustup.html
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Windows
+	winget install Rustlang.Rustup
 	choco install rustup.install
+
+Usage
 	rustup --version
 	rustup toolchain list
 	rustup toolchain install stable-x86_64-pc-windows-msvc

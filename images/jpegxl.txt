@@ -69,7 +69,9 @@ Install
 
 You may need to configure the dynamic linker run-time bindings:
 	sudo ldconfig /usr/local/lib
-
+Windows
+	wget https://github.com/libjxl/libjxl/releases/download/v0.6.1/jxl-x64-windows-static.zip
+	7z x -o"..\bin" jxl-x64-windows-static.zip benchmark_xl.exe cjxl.exe djxl.exe
 JPEG XL would be Turing-complete
 https://dbohdan.com/wiki/jpeg-xl?
 https://news.ycombinator.com/item?id=27559748

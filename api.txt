@@ -33,3 +33,11 @@ https://approveapi.com/
 https://news.ycombinator.com/item?id=19360844
 
 https://github.com/public-apis/public-apis
+
+Congress.gov API
+https://api.congress.gov
+https://news.ycombinator.com/item?id=32770058
+
+Increase: Banking API
+https://increase.com
+https://news.ycombinator.com/item?id=32828669

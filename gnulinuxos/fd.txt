@@ -6,11 +6,6 @@ Package manager
 	dpkg -i fd_8.4.0_amd64.deb
 x	alias fd=fdfind
 	ln -s $(which fdfind) ~/.local/bin/fd
-For fish shell
-	vim ~/.config/fish/functions/fd.fish
-function fd
-    fdfind $argv
-end
 Raspberry Pi
 	wget https://github.com/sharkdp/fd/releases/download/v8.4.0/fd_8.4.0_armhf.deb
 	dpkg -i fd_8.4.0_armhf.deb
@@ -46,3 +41,5 @@ Convert all flac files into opus files:
 	fd -e flac -x ffmpeg -i {} -c:a libopus {.}.opus
 Count the number of lines in Rust files (the command template can be terminated with ';'):
 	fd -x wc -l \; -e rs
+
+https://github.com/sharkdp/fd/issues/538

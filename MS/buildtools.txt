@@ -1,0 +1,20 @@
+These Build Tools allow you to build Visual Studio projects from a command-line interface.
+Use of this tool requires a valid Visual Studio license.
+	winget install Microsoft.VisualStudio.2022.BuildTools
+See ../ide/visualstudio.txt
+msbuild.txt
+Installed at
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.33.31629\bin\Hostx64\x64
+Shortcuts at
+https://docs.microsoft.com/en-us/cpp/build/building-on-the-command-line?view=msvc-170#developer_command_prompt_shortcuts
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2022\Visual Studio Tools\VC
+
+Rust
+https://stackoverflow.com/questions/55603111/unable-to-compile-rust-hello-world-on-windows-linker-link-exe-not-found/55603112#55603112
+https://stackoverflow.com/questions/57178691/rust-link-failed-with-exit-code-1181
+C++ build tools
+MSVC v143 - VS 2022 C++ x64/x86 build tools
+Windows 10 SDK (10.0.19041.0)
+C++ CMake tools for Windows

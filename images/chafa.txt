@@ -1,6 +1,7 @@
 📺🗿 Terminal graphics for the 21st century.
 https://hpjansson.org/chafa/
 https://github.com/hpjansson/chafa
+https://news.ycombinator.com/item?id=32797681
 	apt install chafa
 Windows
 https://hpjansson.org/chafa/releases/static/

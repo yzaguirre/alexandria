@@ -35,10 +35,11 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 Windows
 	winget install GoLang.Go
 	choco install go
+Installer
 	wget https://go.dev/dl/go1.19.1.windows-amd64.msi
 	sha256sum go1.19.1.windows-amd64.msi
-f92c0070b83876910e7d12c1d7e0d0d39124accc1d81ecf69359d4fbdd194ab1
-	explorer.exe go1.19.1.windows-amd64.msi
+d2e63b114c6bdd300078715e02589e3598f804c6b9d766a00a0a5c6a90a8ca89
+	start go1.19.1.windows-amd64.msi
 Binary at
 %USERPROFILE%\go\bin
 C:\Program Files\Go\bin
