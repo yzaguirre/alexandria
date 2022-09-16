@@ -1,5 +1,5 @@
 https://developers.google.com/speed/webp/docs/cwebp
-https://github.com/webmproject/libwebp/
+https://github.com/webmproject/libwebp
 https://developers.google.com/speed/webp/docs/cwebp
 https://developers.google.com/speed/webp/download
 https://developers.google.com/speed/webp/docs/precompiled

@@ -1,6 +1,7 @@
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
-Version: 15.0.18410.0
+Version: 15.0.18424.0
 	winget install Microsoft.SQLServerManagementStudio
+	choco install sql-server-management-studio
 Restore a database
 https://stackoverflow.com/questions/19624189/backup-log-cannot-be-performed-because-there-is-no-current-database-backup
 Right click on Databases > Restore Database > General : Device: [the path of back up file] ---> OK
