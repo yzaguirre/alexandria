@@ -78,3 +78,17 @@ The following NEW packages will be installed:
 	make install
 Clean project
 	make distclean
+
+Scrot
+https://github.com/resurrecting-open-source-projects/scrot
+Command line screen capture utility
+	apt install scrot
+Compile
+	wget https://github.com/resurrecting-open-source-projects/scrot/releases/download/1.7/scrot-1.7.tar.bz2
+	tar xf scrot-1.7.tar.bz2
+	./configure
+	make -j12
+	make install
+
+Usage
+	scrot /tmp/screen.png

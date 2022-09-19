@@ -170,6 +170,8 @@ Double the audio volume
 	ffmpeg -i input.mkv -filter:a "volume=2.0" output.mkv
 Crop a video from the top left corner
 	ffmpeg -i input.mkv -filter:v "crop=1280:720:0:0" output.mkv
+Crop and scale
+	ffmpeg -i input.mp4 -vf "crop=in_w:in_w*9/16,scale=1920:1080,fps=fps=30" output.mp4
 https://stackoverflow.com/questions/40088222/ffmpeg-convert-video-to-images
 Extract Single JPEG Image from MKV (with MJPEG encoding)
 	ffmpeg -i out.mkv -ss 00:00:00.03 -vframes 1 -codec copy output.jpg

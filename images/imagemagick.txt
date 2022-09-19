@@ -55,13 +55,20 @@ Horizontal
 SVG to PNG
 	convert drawing.svg -size 2000x3000 drawing.png
 	convert -density 300 -background none butterfly.svg butterfly.png
-
 Remove white background
 https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=32118
 	convert GvCTYAI.png -white-threshold 70% result.png
-
 https://www.halberesford.com/how-to-make-an-images-background-transparent-using-imagemagick/
 	convert orig-2.png -transparent "#ffffff" transparent.png
+	convert orig-2.png -transparent white -fuzz 10% transparent.png
+	convert orig-2.png -transparent white -fuzz 50% transparent.png
+See -trim
+	convert orig-2.png -trim -transparent white -fuzz 50% transparent.png
+Invert colors
+	convert 1149_rocky.jpg -channel RGB -negate output.png
+Take screenshot
+	import screen.png
+	import -channel rgb -negate screen.pngf
 
 Removing background using imagemagick, on a white product
 https://stackoverflow.com/questions/31837724/removing-background-using-imagemagick-on-a-white-product
@@ -81,6 +88,7 @@ https://stackoverflow.com/questions/11095007/add-an-image-on-top-of-existing-one
    ( 313386r.png -thumbnail x25 ) -gravity center -geometry +80+30 -composite \
    ( 313386r.png -thumbnail x25 ) -gravity east   -geometry  +0+30 -composite \
    output.png
+   convert village.jpg -gravity center thinking.png -composite -matte output.png
 Watermark
 https://www.burnsland.com/steves-photography-tips-adding-watermark-imagemagick/
 https://www.imagemagick.org/discourse-server/viewtopic.php?t=19177
@@ -160,7 +168,9 @@ https://legacy.imagemagick.org/discourse-server/viewtopic.php?t=33957
 Blur
 	mogrify -blur 5x2 image.jpg
 The first number here is the radius, while the second is the sigma
-
+Vignette
+	convert -background black -vignette 100x300 sample.jpg output.jpg
+	convert -background black -vignette 10x50 sample.jpg output.jpg
 Charcoal
 	mogrify -charcoal 5 image.jpg
 
@@ -195,6 +205,8 @@ Shapes
 
 CAMBIAR EL ESPACIO DE COLOR
 	convert -colorspace {espacio} {entrada} {salida}
+Grey
+	convert -colorspace Gray sample.jpg output.jpg
 Si queremos consultar los espacios de color disponibles
 	convert -list colorspace
 COMBINAR
@@ -236,6 +248,23 @@ ca-certificates-java default-jre-headless java-common libapache-pom-java libbcpr
 openjdk-11-jre-headless pdftk pdftk-java
 	convert img1.jpg -resize 50% -quality 50 -density 200 img1.pdf
 	pdftk img?.pdf cat output documento.pdf
+Convert to PDF to JPG
+	convert -density 600 document.pdf -quality 100 documento.jpg 
+Resize
+	mogrify *jpg -resize 773x773
+Create a blank canvas
+	convert -size 1920x1080 canvas:darkblue out.png
+	convert -size 1920x1080 canvas:darkblue \( chadhead.png -resize x1080 \) -composite out.png
+	convert -size 1920x1080 canvas:darkblue -gravity west \( chadhead.png -resize x1080 \) -composite -gravity east imresize.png -composite out.png
+	convert -size 1920x1080 canvas:darkblue -gravity west \( chadhead.png -resize x1080 \) -geometry +150+0 -composite -gravity east imresize.png -composite out.png
+	convert -size 1920x1080 plasma:blue -gravity west \( chadhead.png -resize x1080 \) -geometry +150+0 -composite -gravity east imresize.png -composite out.png
+	convert -size 1920x1080 plasma:blue-purple -gravity west \( chadhead.png -resize x1080 \) -geometry +150+0 -composite -gravity east imresize.png -composite out.png
+	convert -size 1920x1080 plasma:blue-purple -swirl 180 -gravity west \( chadhead.png -resize x1080 \) -geometry +150+0 -composite -gravity east imresize.png -composite out.png
 
 Optimizing Images for the Web from the Command Line
 https://www.youtube.com/watch?v=8zj44m0hAoU
+Must know Imagemagick commands
+https://www.youtube.com/watch?v=DTcLCOSBQyc
+
+Set background
+	display -backdrop -background '#3f3f3f' -flatten -window root volcano.png
