@@ -83,6 +83,7 @@ content-preserving transformations on PDF files.
 https://qpdf.sourceforge.io
 https://github.com/qpdf/qpdf
 https://qpdf.readthedocs.io/en/stable/
+https://www.howtogeek.com/827186/how-to-make-and-combine-pdf-files-on-the-linux-command-line/
 	apt install qpdf
 Binary
 	wget https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3.0cmake1/qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
@@ -105,3 +106,12 @@ finishing deferred symbolic links:
   /usr/local/lib/libqpdf.so.28 -> libqpdf.so.28.6.3
 Windows
 	choco install qpdf
+Binary
+	wget https://github.com/qpdf/qpdf/releases/download/v11.1.0/qpdf-11.1.0-msvc64.exe
+	start qpdf-11.1.0-msvc64.exe
+Installed at
+C:\Program Files\qpdf 11.1.0
+
+Usage
+Combine two PDF files to form a new PDF file
+	qpdf --empty --pages first.pdf second.pdf -- combined.pdf

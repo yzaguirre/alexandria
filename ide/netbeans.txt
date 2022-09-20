@@ -23,3 +23,24 @@ https://netbeans.apache.org/download/nb90/nb90.html
 	wget https://www.apache.org/dist/incubator/netbeans/incubating-netbeans-java/incubating-9.0/incubating-netbeans-java-9.0-bin.zip.sha1
 	sha1sum -c incubating-netbeans-java-9.0-bin.zip.sha1
 	gpg --verify incubating-netbeans-java-9.0-bin.zip.asc
+Netbeans 15
+	wget https://dlcdn.apache.org/netbeans/netbeans/15/netbeans-15-bin.zip
+	wget https://downloads.apache.org/netbeans/netbeans/15/netbeans-15-bin.zip.sha512
+	wget https://downloads.apache.org/netbeans/netbeans/15/netbeans-15-bin.zip.asc
+	wget https://downloads.apache.org/netbeans/KEYS
+	gpg --import KEYS
+	gpg --verify netbeans-15-bin.zip.asc
+	sha512sum -c --ignore-missing netbeans-15-bin.zip.sha512
+Windows
+	wget https://dlcdn.apache.org/netbeans/netbeans-installers/15/Apache-NetBeans-15-bin-windows-x64.exe
+	wget https://downloads.apache.org/netbeans/netbeans-installers/15/Apache-NetBeans-15-bin-windows-x64.exe.sha512
+	wget https://downloads.apache.org/netbeans/netbeans-installers/15/Apache-NetBeans-15-bin-windows-x64.exe.asc
+	gpg --verify Apache-NetBeans-15-bin-windows-x64.exe.asc
+	sha512sum -c --ignore-missing Apache-NetBeans-15-bin-windows-x64.exe.sha512
+	start Apache-NetBeans-15-bin-windows-x64.exe
+Installed at
+C:\Program Files\NetBeans-15
+Remove jshell references
+https://www.mail-archive.com/users@netbeans.apache.org/msg03412.html
+	cd "C:\Program Files\NetBeans-15"
+	7z a backup-conf.zip .\netbeans\etc\netbeans.conf

@@ -1,0 +1,46 @@
+https://zlib.net
+https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
+https://manpages.ubuntu.com/manpages/bionic/man3/zlib.3tcl.html
+	apt install zlib1g
+Compile
+	wget https://zlib.net/zlib-1.2.12.tar.xz
+	wget https://zlib.net/zlib-1.2.12.tar.xz.asc
+	gpg --verify zlib-1.2.12.tar.xz.asc
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x5ED46A6721D365587791E2AA783FCD8E58BCAFBA
+	sha256sum zlib-1.2.12.tar.xz
+7db46b8d7726232a621befaab4a1c870f00a90805511c0e0090441dac57def18
+	tar xf zlib-1.2.12.tar.xz
+	./configure
+	make -j12
+	make install
+/usr/local/lib/libz.a
+/usr/local/lib/libz.so.1.2.12
+/usr/local/share/man/man3/zlib.3
+/usr/local/lib/pkgconfig/zlib.pc
+/usr/local/include/zlib.h /usr/local/include/zconf.h
+
+Re: Zlib memory corruption on deflate
+https://www.openwall.com/lists/oss-security/2022/03/28/1
+https://news.ycombinator.com/item?id=30828743
+
+zlib replacement with optimizations for "next generation" systems.
+https://github.com/zlib-ng/zlib-ng
+	wget https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.0.6.tar.gz
+	tar xf 2.0.6.tar.gz
+	cd zlib-ng-2.0.6
+	./configure
+	make
+	make test
+Windows
+	wget https://github.com/zlib-ng/zlib-ng/releases/download/2.0.6/zlib-ng-win-x86-64.zip
+	7z x -o"C:\Program Files\zlib" zlib-ng-win-x86-64.zip
+Add to PATH environment variable
+C:\Program Files\zlib
+
+Usage
+	minigzip -v
+	minideflate -v
+
+https://github.com/gdraheim/zziplib
+	apt install libzzip-0-13
+Dev: libzzip-dev

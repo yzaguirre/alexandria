@@ -1,0 +1,4 @@
+fgtrace is an experimental profiler/tracer that is capturing wallclock timelines for each goroutine.
+It's very similar to the Chrome profiler.
+https://github.com/felixge/fgtrace
+https://news.ycombinator.com/item?id=32897962

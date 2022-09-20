@@ -1,7 +1,15 @@
-https://gource.io/
+https://gource.io
 https://github.com/acaudwell/Gource
 https://news.ycombinator.com/item?id=21558013
 Windows
+	winget install acaudwell.Gource
+	choco install gource
 	scoop install gource
 Change directory to a git controlled project
 	gource
+
+Record video
+https://github.com/acaudwell/Gource/wiki/Videos
+	gource -1280x720 -o gource.ppm
+	gource -1920x1080 -o gource.ppm
+	ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i gource.ppm -vcodec h264_nvenc -preset medium -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4

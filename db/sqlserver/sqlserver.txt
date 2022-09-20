@@ -14,5 +14,8 @@ Right click on Databases > Restore Database > General : Device: [the path of bac
 
 Dark theme
 https://theflyingmaverick.com/2018/02/14/how-to-enable-dark-theme-for-sql-server-management-studio/
+https://www.mssqltips.com/sqlservertip/7218/dark-mode-ssms-configuration/
 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio
-ssms.pkgundef
+Later versions
+	cd "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE"
+	notepad++.exe ssms.pkgundef

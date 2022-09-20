@@ -5,13 +5,13 @@ Supports 7Z, 7-Zip sfx, ACE, ARJ, Brotli, BZ2, CAB, CHM, CPIO, DEB, GZ,
 ISO, JAR, LHA/LZH, NSIS, OOo, PAQ/LPAQ, PEA, QUAD, RAR, RPM, split,
 TAR, Z, ZIP, ZIPX, Zstandard.
 https://peazip.github.io/index.html
-https://github.com/peazip/PeaZip/
+https://github.com/peazip/PeaZip
 https://www.reddit.com/r/linux/comments/nwrq8t/peazip_80_is_here/
 https://www.reddit.com/r/linux/comments/oqqj8q/peazip_810_released/
 	apt install libqt5pas1
-	wget https://github.com/peazip/PeaZip/releases/download/8.4.0/peazip_8.4.0.LINUX.Qt5-1_amd64.deb
-	wget https://github.com/peazip/PeaZip/releases/download/8.4.0/peazip_help.pdf
-	dpkg -i peazip_8.4.0.LINUX.Qt5-1_amd64.deb
+	wget https://github.com/peazip/PeaZip/releases/download/8.8.0/peazip_8.8.0.LINUX.Qt5-1_amd64.deb
+	wget https://github.com/peazip/PeaZip/releases/download/8.8.0/peazip_help.pdf
+	dpkg -i peazip_8.8.0.LINUX.Qt5-1_amd64.deb
 Windows
 	winget install Giorgiotani.Peazip
 Add C:\Program Files\PeaZip to PATH

@@ -1,2 +1,2 @@
-https://hub.github.com/
+https://hub.github.com
 https://github.com/github/hub

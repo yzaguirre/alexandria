@@ -1,60 +1,51 @@
-zlib replacement with optimizations for "next generation" systems.
-https://github.com/zlib-ng/zlib-ng
-	wget https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.0.6.tar.gz
-	tar xf 2.0.6.tar.gz
-	cd zlib-ng-2.0.6
-	./configure
-	make
-	make test
-Windows
-	wget https://github.com/zlib-ng/zlib-ng/releases/download/2.0.6/zlib-ng-win-x86-64.zip
-	7z x -o"C:\Program Files\zlib" zlib-ng-win-x86-64.zip
-
-https://zlib.net
-https://www.systutorials.com/how-to-install-the-zlib-library-in-ubuntu/
-https://manpages.ubuntu.com/manpages/bionic/man3/zlib.3tcl.html
-	apt install zlib1g
-Compile
-	wget https://zlib.net/zlib-1.2.12.tar.xz
-	wget https://zlib.net/zlib-1.2.12.tar.xz.asc
-	gpg --verify zlib-1.2.12.tar.xz.asc
-	gpg --keyserver keyserver.ubuntu.com --recv-keys 0x5ED46A6721D365587791E2AA783FCD8E58BCAFBA
-	sha256sum zlib-1.2.12.tar.xz
-7db46b8d7726232a621befaab4a1c870f00a90805511c0e0090441dac57def18
-	tar xf zlib-1.2.12.tar.xz
-	./configure
-	make -j12
-	make install
-/usr/local/lib/libz.a
-/usr/local/lib/libz.so.1.2.12
-/usr/local/share/man/man3/zlib.3
-/usr/local/lib/pkgconfig/zlib.pc
-/usr/local/include/zlib.h /usr/local/include/zconf.h
-
-Re: Zlib memory corruption on deflate
-https://www.openwall.com/lists/oss-security/2022/03/28/1
-https://news.ycombinator.com/item?id=30828743
-
 http://infozip.sourceforge.net
+http://infozip.sourceforge.net/Info-ZIP.html
 http://infozip.sourceforge.net/mans/
+See zlib.txt
+powershell.txt
 	apt install zip unzip
-Binary
-	wget https://r15ch13.keybase.pub/scoop/zip/zip300xn-x64.zip
-	wget https://r15ch13.keybase.pub/scoop/unzip/unz600xn.exe#/dl.7z
 Compile
 	wget -O zip30.tar.gz https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/zip30.tar.gz/download
 	tar xf zip30.tar.gz
 	cd zip30
 	make -f unix/Makefile -j12 generic
 	make -f unix/Makefile install
+Windows
+	choco install zip unzip
+MikTex binaries.
+See ../documents/latex.txt
+C:\Users\DAVIDY~1\AppData\Local\Programs\MiKTeX\miktex\bin\x64
+Binary
+	wget https://r15ch13.keybase.pub/scoop/zip/zip300xn-x64.zip
+	wget https://r15ch13.keybase.pub/scoop/zip/zip.md5
+	wget https://r15ch13.keybase.pub/scoop/zip/zip.sha1
+	wget https://r15ch13.keybase.pub/scoop/zip/zip.sha256
+	wget https://r15ch13.keybase.pub/scoop/zip/zip.sha512
+	md5sum -c --ignore-missing zip.md5
+	sha1sum -c --ignore-missing zip.sha1
+	sha256sum -c --ignore-missing zip.sha256
+	sha512sum -c --ignore-missing zip.sha512
+	7z x -otmp zip300xn-x64.zip
+	cd tmp
+	7z x -o"C:\Program Files\zip" zip300xn-x64.zip
+	
+	wget https://r15ch13.keybase.pub/scoop/unzip/unz600xn.exe
+	wget https://r15ch13.keybase.pub/scoop/unzip/unzip.md5
+	wget https://r15ch13.keybase.pub/scoop/unzip/unzip.sha1
+	wget https://r15ch13.keybase.pub/scoop/unzip/unzip.sha256
+	wget https://r15ch13.keybase.pub/scoop/unzip/unzip.sha512
+	md5sum -c --ignore-missing zip.md5
+	sha1sum -c --ignore-missing zip.sha1
+	sha256sum -c --ignore-missing zip.sha256
+	sha512sum -c --ignore-missing zip.sha512
+x	start unz600xn.exe
+	7z x -o"C:\Program Files\unzip" unz600xn.exe
+	
 http://askubuntu.com/questions/58889/how-can-i-create-a-zip-archive-of-a-whole-directory-via-terminal-without-hidden
 	zip -r file.zip file1.txt files/
 	unzip file.zip -d exdir
-See powershell.txt
-
 Details
 	zipdetails archive.zip
-
 Brief overview
 	zipinfo archive.zip
 
@@ -70,23 +61,16 @@ https://www.computerhope.com/unix/zip.htm
 https://rhardih.io/2021/04/listing-the-contents-of-a-remote-zip-archive-without-downloading-the-entire-file/
 https://www.reddit.com/r/programming/comments/mtfph7/listing_the_contents_of_a_remote_zip_archive/
 
-https://github.com/gdraheim/zziplib
-	apt install libzzip-0-13
-Dev: libzzip-dev
-
 Encrypted archive
 	zipcloack archive.zip
-
 Search for "alias" strings in archive
 	zipgrep alias archive.zip bashrc
-
 Add comments
 	zipnote archive.zip > comments
 Edit "comments" text file and later insert comments
 	zipnote -w archive.zip < comments
 View comments
 	zipnote archive.zip
-
 Split multiple parts (in bytes)
 	zipsplit -n 4028 archive.zip
 

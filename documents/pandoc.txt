@@ -15,6 +15,7 @@ https://pandoc.org/MANUAL.html
 Convert to html5
 	pandoc -f markdown -t html5 -o output.html document.md
 Conversion to pdf
+	pandoc -o output.pdf input.txt
 	pandoc -t beamer -o output.pdf yourInput.mkd
 https://stackoverflow.com/questions/11025123/how-to-convert-r-markdown-to-pdf
 	pandoc -s example-r-markdown.html -o example-r-markdown.pdf

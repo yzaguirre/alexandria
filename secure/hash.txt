@@ -78,3 +78,6 @@ See ../MS/PowerShell.txt
 Example
 	Get-FileHash *db -Algorithm SHA256 | Format-List
 	Get-FileHash *db -Algorithm SHA256 | Sort-Object -Property Hash
+
+CertUtil
+	CertUtil -hashfile file.exe SHA256

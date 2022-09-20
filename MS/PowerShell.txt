@@ -298,3 +298,19 @@ Remove session
 Xargs
 https://stackoverflow.com/questions/36428949/whats-the-equivalent-of-xargs-in-powershell
 	myapp.exe @(Get-ChildItem -Recurse -Filter *.jpg | Another-Step)
+
+Print PDF
+Enable Microsoft Print to PDF feature using PowerShell
+https://www.youtube.com/watch?v=peE6P2YgFgg
+https://answers.microsoft.com/en-us/windows/forum/all/microsoft-print-to-pdf-is-gone/6cce44e1-feef-4bba-8fce-44b87d7a1829
+Activate feature
+	Get-WindowsOptionalFeature –FeatureName "*" -Online | Where-Object {$_.State -eq "Disabled"}
+	Enable-WindowsOptionalFeature –FeatureName "Printing-PrintToPDFServices-Features" -All -Online
+Missing print pdf option
+https://www.makeuseof.com/windows-restore-missing-print-pdf-option/
+https://answers.microsoft.com/en-us/windows/forum/all/where-can-i-get-microsoft-print-to-pdf/367f6ea3-64cd-4398-8f53-1da9029d8357
+Local print spooler service is not running?
+https://www.minitool.com/news/print-spooler-service-not-running.html
+	net start spooler
+Usage
+	ls | Out-Printer

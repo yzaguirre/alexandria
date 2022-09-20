@@ -1,0 +1,7 @@
+https://dotnettutorials.net/lesson/jsp-using-netbeans-ide/
+See java.txt
+tomcat.txt
+../ide/netbeans.txt
+
+Java Server Pages Tutorial for Beginners
+https://www.youtube.com/watch?v=W0sLM9hrrx8

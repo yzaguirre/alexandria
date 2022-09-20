@@ -6,3 +6,6 @@ https://github.com/gitahead/gitahead
 	chown -R david:david /opt/GitAhead
 	./GitAhead-2.6.3.sh --prefix=/opt/GitAhead
 	ln -s /opt/GitAhead/GitAhead /usr/local/bin/
+Windows
+	winget install GitAhead.GitAhead
+	choco install gitahead

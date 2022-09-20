@@ -13,5 +13,6 @@ Homebrew
 
 Usage
 	scc
-
+To PDF
+	scc -f html src/ | pandoc -o ~/downloads/report.pdf -f html
 See ../gnulinuxos/tokei.txt

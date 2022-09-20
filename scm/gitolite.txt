@@ -1,4 +1,4 @@
-https://github.com/sitaramc/gitolite/
+https://github.com/sitaramc/gitolite
 http://gitolite.com/gitolite/master-toc.html
 http://www.project-longinus.es/2012/07/instalando-y-configurando-gitolite/
 http://stackoverflow.com/questions/10888300/gitosis-vs-gitolite

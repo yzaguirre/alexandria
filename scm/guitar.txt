@@ -4,8 +4,9 @@ https://news.ycombinator.com/item?id=22943427
 
 https://files.soramimi.jp/guitar/
 Install
-	wget https://files.soramimi.jp/guitar/1.1.1/guitar_1.1.1_amd64.deb
-	dpkg -i guitar_1.1.1_amd64.deb
+	wget https://files.soramimi.jp/guitar/1.2.0/guitar_1.2.0_amd64.deb
+	dpkg -i guitar_1.2.0_amd64.deb
 Windows
-	wget https://files.soramimi.jp/guitar/1.1.1/Guitar-1.1.1-win32-installer.exe
+	wget https://files.soramimi.jp/guitar/1.2.0/Guitar-1.2.0-win32-installer.exe
+	start Guitar-1.2.0-win32-installer.exe
 C:\Program Files (x86)\soramimi\Guitar

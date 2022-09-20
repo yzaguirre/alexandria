@@ -9,6 +9,7 @@ https://www.bleepingcomputer.com/news/software/7-zip-developer-releases-the-firs
 https://news.ycombinator.com/item?id=26438921
 https://news.ycombinator.com/item?id=26426816
 https://sourceforge.net/p/sevenzip/discussion/45797/thread/7fe6c21efa/
+https://superuser.com/questions/1652983/7-zip-7z-exe-7zg-exe-7zfm-exe-which-one-to-use
 p7zip
 https://github.com/jinfeihan57/p7zip
 	apt install p7zip-full
@@ -39,6 +40,7 @@ https://stackoverflow.com/questions/18180060/how-to-zip-a-file-using-cmd-line
 	7z a -tzip {yourfile.zip} {yourfolder}
 Using 4 threads
 	7z a -mmt4 directory.zip directory/
+	7z a -mmt16 directory.zip directory/
 Include only files with txt extension. It starts with current directory.
 	7z a -tzip -i"!*.txt" file.zip additional_dirs/
 Read a tar from stdin to save as 7z
@@ -71,6 +73,13 @@ using "ultra settings"
               dictionary size = 32 megabytes
 
        -ms=on solid archive = on
+Make splits
+https://www.vishalon.net/blog/commands-for-using-standalone-7-zip-to-split-and-combine-zip-file
+	7z a -v2m "Release4.zip" "*.xlsm"
+a = create archive(=zip)
+-v2m = split the file into 2MB
+"Release4.zip" = zip output file name
+"*.xlsm" = source file name(s) to zip
 
 Extract file
 	7z x file.7z -o/tmp
@@ -87,6 +96,8 @@ x    = Extract with full paths command
 -si  = read from stdin switch
 -aoa = Overwrite all existing files without prompt. 
 -o   = output directory
+Extract split file
+	7z x "Release4.zip.001"
 
 https://www.redhat.com/sysadmin/encrypting-decrypting-7zip
 Encrypt

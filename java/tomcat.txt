@@ -1,0 +1,56 @@
+http://tomcat.apache.org
+http://tomcat.apache.org/whichversion.html
+http://tomcat.apache.org/download-80.cgi
+https://tomcat.apache.org/tomcat-10.0-doc/index.html
+See java.txt
+	wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
+	wget https://downloads.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz.asc
+	wget https://downloads.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz.sha512
+	wget https://downloads.apache.org/tomcat/tomcat-10/KEYS
+	gpg --import KEYS
+	gpg --verify apache-tomcat-10.0.23.tar.gz.asc
+	sha512sum -c --ignore-missing apache-tomcat-10.0.23.tar.gz.sha512
+	tar xf apache-tomcat-10.0.23.tar.gz -C /opt
+	mkdir -p ~/.tomcat/logs
+	cp -r /opt/apache-tomcat-10.0.23/{conf,webapps} ~/.tomcat
+Windows
+	choco install Tomcat
+Installer
+https://tomcat.apache.org/tomcat-10.0-doc/setup.html#Windows
+	wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23-windows-x64.zip
+	wget https://downloads.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23-windows-x64.zip.asc
+	wget https://downloads.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23-windows-x64.zip.sha512
+	gpg --verify apache-tomcat-10.0.23-windows-x64.zip.asc
+	sha512sum -c --ignore-missing apache-tomcat-10.0.23-windows-x64.zip.sha512
+	7z x -o"C:\" apache-tomcat-10.0.23-windows-x64.zip
+Binaries at
+C:\apache-tomcat-10.0.23\bin
+Set CATALINA_HOME (required) and CATALINA_BASE (optional)
+CATALINA_HOME=C:\apache-tomcat-10.0.23
+CATALINA_HOME=/opt/apache-tomcat-10.0.23
+
+Verifiy the configuration
+	$CATALINA_HOME/bin/version.sh
+	$env:CATALINA_HOME\bin\version.sh
+Check any configuration changes in scripts
+	$CATALINA_HOME/bin/configtest.sh
+	$env:CATALINA_HOME\bin\configtest.sh
+Start it up
+	$CATALINA_HOME/bin/startup.sh
+	$CATALINA_HOME/bin/catalina.sh start
+	%CATALINA_HOME%\bin\startup.bat /C TomcatAdminPassword
+	$env:CATALINA_HOME\bin\startup.bat
+	%CATALINA_HOME%\bin\catalina.bat start
+Shut it down
+	$CATALINA_HOME/bin/shutdown.sh
+	$CATALINA_HOME/bin/catalina.sh stop
+	%CATALINA_HOME%\bin\shutdown.bat
+	$env:CATALINA_HOME\bin\shutdown.bat
+	%CATALINA_HOME%\bin\catalina.bat stop
+Head to
+	http://localhost:8080
+	user: admin
+Users at
+https://stackoverflow.com/questions/3829513/what-is-the-default-username-and-password-in-tomcat
+	vim $CATALINA_BASE/conf/tomcat-users.xml
+	vim $env:CATALINA_BASE\conf\tomcat-users.xml
