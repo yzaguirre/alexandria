@@ -33,3 +33,7 @@ https://www.reddit.com/r/programming/comments/mhurew/a_categorized_list_of_all_j
 Java 17
 https://mail.openjdk.java.net/pipermail/jdk-dev/2021-September/006037.html
 https://news.ycombinator.com/item?id=28525378
+
+JDK 19
+https://jdk.java.net/19/release-notes
+https://news.ycombinator.com/item?id=32910348

@@ -10,6 +10,7 @@ https://news.ycombinator.com/item?id=26438921
 https://news.ycombinator.com/item?id=26426816
 https://sourceforge.net/p/sevenzip/discussion/45797/thread/7fe6c21efa/
 https://superuser.com/questions/1652983/7-zip-7z-exe-7zg-exe-7zfm-exe-which-one-to-use
+https://documentation.help/7-Zip/method.htm
 p7zip
 https://github.com/jinfeihan57/p7zip
 	apt install p7zip-full
@@ -73,6 +74,8 @@ using "ultra settings"
               dictionary size = 32 megabytes
 
        -ms=on solid archive = on
+Use more CPU
+	7z a -mmt16 -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1
 Make splits
 https://www.vishalon.net/blog/commands-for-using-standalone-7-zip-to-split-and-combine-zip-file
 	7z a -v2m "Release4.zip" "*.xlsm"
@@ -102,6 +105,9 @@ Extract split file
 https://www.redhat.com/sysadmin/encrypting-decrypting-7zip
 Encrypt
 	7z a -p -mhe=on directory.tar.7z directory.tar
+Encrypt AES256
+	7z a -p -mem=AES256 backup.zip files
+Note: zip can't encrypt headers.
 
 7-Zip up to 21.07 on Windows allows privilege escalation and command execution
 https://github.com/kagancapar/CVE-2022-29072

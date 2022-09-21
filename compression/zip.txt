@@ -69,6 +69,11 @@ Add comments
 	zipnote archive.zip > comments
 Edit "comments" text file and later insert comments
 	zipnote -w archive.zip < comments
+Add comments per file
+https://stackoverflow.com/questions/50459135/how-to-add-comments-to-a-zip-file
+	zip -c valid.zip somefile.txt otherfile.txt
+Add comments from stdin
+	zip -z valid.zip somefile.txt otherfile.txt
 View comments
 	zipnote archive.zip
 Split multiple parts (in bytes)
@@ -85,3 +90,6 @@ https://www.youtube.com/watch?v=lu7sY1LOWiI
 
 06.Secret History of Windows ZIPFolders
 https://www.youtube.com/watch?v=aQUtUQ_L8Yk
+
+File Types That Are Secretly Just .Zip Files In Disguise 
+https://www.youtube.com/watch?v=xGXTy_mwQZY

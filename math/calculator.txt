@@ -1,1 +1,8 @@
-See ~/ide/notecalc.txt ~/math/bc.txt ~/math/kalk.txt
+See
+../ide/notecalc.txt
+bc.txt
+kalk.txt
+
+Show HN: Figr.app – a multi-user, notepad style calculator (desktop app) (figr.app)
+https://www.figr.app
+https://news.ycombinator.com/item?id=32905802
