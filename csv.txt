@@ -75,6 +75,7 @@ https://packagecontrol.io/packages/rainbow_csv
 q - Run SQL directly on CSV or TSV files
 https://github.com/harelba/q
 http://harelba.github.io/q/
+https://news.ycombinator.com/item?id=32926546
 	wget https://github.com/harelba/q/releases/download/v3.1.6/q-text-as-data-3.1.6-1.x86_64.deb
 	dpkg -i q-text-as-data-3.1.6-1_amd64.deb
 MacOS

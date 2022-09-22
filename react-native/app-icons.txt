@@ -1,7 +1,7 @@
 Make icons.
 Best results with images at 1536x1536 pixels. Minimum 1024x1024
 
-https://appicon.co/
+https://appicon.co
 
 https://soshace.com/build-real-world-react-native-app-1-splash-screen-and-app-icon/
 See react-native-splash-screen.txt
