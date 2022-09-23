@@ -4,3 +4,5 @@ HEIF Image Extensions
 
 https://apps.microsoft.com/store/detail/hevc-video-extensions-from-device-manufacturer/9N4WGH0Z6VHQ
 	winget install --id 9N4WGH0Z6VHQ
+
+See ../media/codecs.txt

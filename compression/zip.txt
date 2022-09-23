@@ -3,6 +3,7 @@ http://infozip.sourceforge.net/Info-ZIP.html
 http://infozip.sourceforge.net/mans/
 See zlib.txt
 powershell.txt
+engrampa.txt
 	apt install zip unzip
 Compile
 	wget -O zip30.tar.gz https://sourceforge.net/projects/infozip/files/Zip%203.x%20%28latest%29/3.0/zip30.tar.gz/download
@@ -91,5 +92,11 @@ https://www.youtube.com/watch?v=lu7sY1LOWiI
 06.Secret History of Windows ZIPFolders
 https://www.youtube.com/watch?v=aQUtUQ_L8Yk
 
-File Types That Are Secretly Just .Zip Files In Disguise 
+File Types That Are Secretly Just .Zip Files In Disguise
 https://www.youtube.com/watch?v=xGXTy_mwQZY
+
+ZIP BOMBS vs. Windows
+https://www.youtube.com/watch?v=peeYOqejWfg
+
+Fun with ZIP files
+https://www.youtube.com/watch?v=m2AUaSgku3M

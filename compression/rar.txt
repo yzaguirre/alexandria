@@ -2,9 +2,9 @@ Rar Files
 https://www.rarlab.com
 https://www.win-rar.com
 https://winrar.es
-	wget https://www.win-rar.com/fileadmin/winrar-versions/rarlinux-x64-611.tar.gz
-x	tar xf rarlinux-x64-611.tar.gz -C /usr/local/bin --strip-components=1 rar/rar rar/unrar
-	tar xf rarlinux-x64-611.tar.gz
+	wget https://www.win-rar.com/fileadmin/winrar-versions/rarlinux-x64-612.tar.gz
+x	tar xf rarlinux-x64-612.tar.gz -C /usr/local/bin --strip-components=1 rar/rar rar/unrar
+	tar xf rarlinux-x64-612.tar.gz
 	cd rar
 	make install
 	rar -iver
@@ -54,6 +54,12 @@ https://diasp.eu/posts/3890839
 
 Uncompress
 	unrar x file.rar
+Open ZIP files
+https://stackoverflow.com/questions/1315662/how-to-extract-zip-files-with-winrar-command-line
+	winrar x -ibck C:\file.zip *.* c:\folder\
+	winrar x -ibck .\file.zip
+Is password protected?
+	winrar x -ppassword -ibck .\file.zip
 
 Don't Use RAR
 https://group.miletic.net/en/blog/2022-02-24-dont-use-rar/
@@ -71,3 +77,5 @@ Sale of the Century
 https://www.youtube.com/watch?v=lX_pF03vCSU
 paying for winrar
 https://www.youtube.com/watch?v=UT5Yyi7opfs
+pagué por winrar
+https://www.youtube.com/watch?v=VhuJC-K8BrI

@@ -305,3 +305,57 @@ https://shotstack.io/learn/use-ffmpeg-to-convert-images-to-video/
 https://superuser.com/questions/1189246/creating-an-ffmpeg-image-slideshow-with-zoompan-and-fade-in-out/1190199#1190199
 Chroma subsampling scheme and the p stands for planar, not progressive. In ffmpeg yuv420p is called a pixel format.
 	ffmpeg -h encoder=h264_nvenc
+
+Effects
+	ffmpeg -i input.avi -vf "..." output.avi
+-vf
+	-vf "filter1=settign1=value1:setting=value2,filter2=setting1=value1:setting2=value2"
+Video editing filters
+Sharpening
+Makes a blurry video clearer
+	ffmpeg -i input.avi -vf "unsharp" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=3:ly=3" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=7:ly=7" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=13:ly=13" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=7:ly=7:la=1.0" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=7:ly=7:la=1.5" output.avi
+	ffmpeg -i input.avi -vf "unsharp=lx=7:ly=7:la=-1.5" output.avi
+Equalization
+	ffmpeg -i input.avi -vf "eq=contrast=0.7" output.avi
+	ffmpeg -i input.avi -vf "eq=contrast=1.0" output.avi
+	ffmpeg -i input.avi -vf "eq=contrast=1.3" output.avi
+	ffmpeg -i input.avi -vf "eq=brightness=-0.3" output.avi
+	ffmpeg -i input.avi -vf "eq=brightness=0.0" output.avi
+	ffmpeg -i input.avi -vf "eq=brightness=-0.3" output.avi
+	ffmpeg -i input.avi -vf "eq=saturation=0.5" output.avi
+	ffmpeg -i input.avi -vf "eq=saturation=1.0" output.avi
+	ffmpeg -i input.avi -vf "eq=saturation=1.5" output.avi
+	ffmpeg -i input.avi -vf "eq=gamma_r=0.5" output.avi
+	ffmpeg -i input.avi -vf "eq=gamma_r=1.0" output.avi
+	ffmpeg -i input.avi -vf "eq=gamma_r=1.5" output.avi
+Colorbalance
+	ffmpeg -i input.avi -vf "eq=colorbalance=rs=-0.3:bs=0.3:rh=0.1:bh=-0.1" output.avi
+Audio visualization
+	ffmpeg -i input.mp3 -filter_complex "..." output.avi
+Showwaves
+	ffmpeg -i input.mp3 -filter_complex "showwaves=mode=line:colors=#00FF00|#FF00FF" output.avi
+	ffmpeg -i input.mp3 -filter_complex "showfreqs=colors=#00FF00|#FF00FF" output.avi
+	ffmpeg -i input.mp3 -filter_complex "showfreqs=size=1280x720" output.avi
+	ffmpeg -i input.mp3 -filter_complex "showfreqs=size=1920x1080" output.avi
+	ffmpeg -i input.mp3 -filter_complex "showwaves=mode=cline:size=1280x720" output.avi
+	ffmpeg -i input.mp3 -filter_complex "showwaves=mode=cline:size=1920x1080" output.avi
+Avectorscope
+	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=200:gc=20:bc=100" output.avi
+	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=40:gc=160:bc=80" output.avi
+	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=40:gc=80:bc=160" output.avi
+	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=40:gc=80:bc=160:rf=3:gf=20:bf=15" output.avi
+	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=40:gc=80:bc=160:draw=line" output.avi
+Video visualizations
+vectorscope
+	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope" out.avi
+	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color" out.avi
+	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color4" out.avi
+	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color4:g=green" out.avi
+
+FFMPEG Advanced Techniques Pt1 - Advanced Filters
+https://www.youtube.com/watch?v=M58rc7cxl_s
