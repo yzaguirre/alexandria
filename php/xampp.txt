@@ -1,0 +1,11 @@
+XAMPP Apache + MariaDB + PHP + Perl
+https://www.apachefriends.org
+	winget install ApacheFriends.Xampp.8.1
+	choco install XAMPP-81
+Installed at C:\xampp
+Add to PATH environment variable
+C:\xampp\php\windowsXamppPhp
+Delete xampp-control.ini and run xampp-control.exe
+	rm xampp-control.ini
+	.\xampp-control.exe
+Or run as admin

@@ -1,18 +1,29 @@
-local install
-https://getcomposer.org/download/
-
+https://getcomposer.org
+https://github.com/composer/composer
 https://getcomposer.org/doc/01-basic-usage.md
-https://getcomposer.org/
+https://getcomposer.org/download/
 	wget https://getcomposer.org/composer.phar
 	chmod 555 composer.phar
 	mv composer.phar /usr/local/bin/composer
-Make sure you have ~/.composer/vendor/bin/ in your path. 
+Make sure you have ~/.composer/vendor/bin/ in your PATH environment variable.
 	mkdir -p ~/.composer/vendor/bin/
 If on web server
 	mkdir -p /var/www/.composer/vendor/bin/
 	chown www-data:www-data -R /var/www/.composer
+Windows
+https://github.com/composer/windows-setup
+	choco install composer
+	refreshenv
+Installs at
+C:\Program Files (x86)\ComposerSetup\
+C:\ProgramData\ComposerSetup\bin
+Libraries at
+C:/Users/DAVIDY~1/AppData/Roaming/Composer
+
+Usage
 Print version
 	composer -V
+	composer show --platform
 Download dependencies
 	composer install
 

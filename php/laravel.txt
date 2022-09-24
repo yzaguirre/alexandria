@@ -1,20 +1,14 @@
-https://www.laravel.com/
+https://laravel.com
 https://laravel.com/docs/5.7/
 https://learninglaravel.net/cheatsheet/
+See php.txt
 Debugging with php methods
 var_dump($var)
 dd($var)
-
-Dependencies
-	apt install php7.1 php7.1-xml php7.1-mbstring php7.1-zip
-7.2	apt install php7.2-xml php7.2-mbstring php7.2-zip
-7.3	apt install php7.3-xml php7.3-mbstring php7.3-zip
 	npm install -g cross-env
 
 Install via composer
 	composer global require "laravel/installer"
-Make env variables in ~/.profile
-PATH=$PATH:$HOME/.composer/vendor/bin
 Otherwise, update dependencies
 	composer global update
 
@@ -138,6 +132,8 @@ Inside boot method write:
 
 Run migration
 	php artisan migrate
+Newly created sqlite
+	litecli database/database.sqlite
 
 Migration files in database/migrations
 Give it a name that corresponds to what I am doing

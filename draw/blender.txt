@@ -10,9 +10,16 @@ Binary
 	mv /opt/blender{-2.93.1-linux-x64,}
 	ln -s /opt/blender/blender /usr/local/bin
 Windows
+	winget install BlenderFoundation.Blender
 	scoop bucket add extras
 	scoop install blender
+	choco install blender
+Installed at
+C:\Program Files\Blender Foundation\Blender 3.3
 
 Adobe Joins Blender Development Fund
 https://www.blender.org/press/adobe-joins-blender-development-fund/
 https://news.ycombinator.com/item?id=27894708
+
+Blender 2.8 Video Editing - Exporting Video (Rendering)
+https://www.youtube.com/watch?v=xxeP3We4k-A

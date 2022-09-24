@@ -1,3 +1,5 @@
+https://www.php.net
+https://github.com/php/php-src
 Whats New in PHP 8.2
 https://stitcher.io/blog/new-in-php-82
 https://news.ycombinator.com/item?id=31153698
@@ -41,17 +43,23 @@ http://php.net/manual/es/timezones.america.php
 http://php.net/manual/en/datetime.configuration.php#ini.date.timezone
 http://askubuntu.com/questions/260303/how-do-i-change-the-timezone-on-php5-for-apache
 
-Installing PHP
-Installing PHP for IIS is very straightforward. We just need to download the latest
-installer from http://windows.php.net/download/ and run it. At the time of
-writing this book, PHP 5.3 VC9 x86 was the latest installer available. Select the IIS
-FastCGI radio button when prompted, and install keeping the rest as default.
-
 Windows
-Xampp
-	winget install ApacheFriends.Xampp
-Installed at C:\xampp
-Add C:\xampp\php\windowsXamppPhp to PATH
+See xampp.txt
+	choco install php
+Installed at
+C:\tools\php81
+Binaries
+https://windows.php.net/download
+If you are using PHP as FastCGI with IIS you should use the Non-Thread Safe (NTS) versions of PHP.
+	wget https://windows.php.net/downloads/releases/php-8.1.10-nts-Win32-vs16-x64.zip
+	Get-FileHash php-8.1.10-nts-Win32-vs16-x64.zip -Algorithm SHA256
+7cd98bd52d14415fe893c5a92165a1919a478e9edc08d9606426ddc0c7cbd3a0
+
+Usage
+	php --ini
+	vim +921 C:\tools\php81\php.ini
+Enable
+extension=fileinfo
 
 Install PHP on OpenSuse
 http://www.howtoforge.com/installing-apache2-with-php5-and-mysql-support-onopensuse-12.3-lamp

@@ -91,7 +91,13 @@ List codecs
 Trim video
 https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
 https://stackoverflow.com/questions/19774975/unknown-encoder-libfaac
+https://shotstack.io/learn/use-ffmpeg-to-trim-video/
 	ffmpeg -i video.mp4 -ss 0 -to 30 fragment.mp4
+Trime with frame number
+https://superuser.com/a/1365055/1034146
+https://stackoverflow.com/questions/47441921/using-a-ffmpeg-trim-filter-to-trim-a-video-while-preserving-its-audio-with-fil
+	ffmpeg -i video.mp4 -vf select="between(n\,0\,800),setpts=PTS-STARTPTS" -c:v h264_nvenc -c:a copy out.mp4
+	ffmpeg -i video.mp4 -vf trim=60:120 -c:v h264_nvenc -c:a copy out.mp4
 Trim to 10 second duration
 	ffmpeg -i "input.flv" -ss 00:00:05.240 -t 10 "Path\Do you want him1.flv"
 Convert video and trim
@@ -359,3 +365,15 @@ vectorscope
 
 FFMPEG Advanced Techniques Pt1 - Advanced Filters
 https://www.youtube.com/watch?v=M58rc7cxl_s
+
+Lossless-cut
+https://github.com/mifi/lossless-cut
+	wget https://github.com/mifi/lossless-cut/releases/download/v3.46.2/LosslessCut-linux-x64.tar.bz2
+	tar xf LosslessCut-linux-x64.tar.bz2 -C /opt
+Add to PATH environment variable
+/opt/LosslessCut-linux-x64
+Windows
+	wget https://github.com/mifi/lossless-cut/releases/download/v3.46.2/LosslessCut-win-x64.7z
+	7z x -o"C:\ProgramData\LosslessCut" LosslessCut-win-x64.7z
+Configuration at
+/home/david/.config/LosslessCut
