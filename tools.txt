@@ -645,6 +645,7 @@ ruplacer
 duc
 exa
 duf
+diskus
 aha
 bat
 jq

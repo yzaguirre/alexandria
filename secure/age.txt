@@ -1,6 +1,7 @@
 Age: A simple, modern and secure file encryption tool
 https://github.com/FiloSottile/age
 https://news.ycombinator.com/item?id=21895671
+https://news.ycombinator.com/item?id=32980141
 https://age-encryption.org/v1
 	apt install age
 Homebrew

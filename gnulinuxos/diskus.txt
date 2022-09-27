@@ -1,0 +1,7 @@
+A minimal, fast alternative to 'du -sh'
+https://github.com/sharkdp/diskus
+	wget https://github.com/sharkdp/diskus/releases/download/v0.7.0/diskus_0.7.0_amd64.deb
+	sudo dpkg -i diskus_0.7.0_amd64.deb
+Windows
+	wget https://github.com/sharkdp/diskus/releases/download/v0.7.0/diskus-v0.7.0-x86_64-pc-windows-msvc.zip
+	7z e -oC:\Users\DAVIDY~1\bin diskus-v0.7.0-x86_64-pc-windows-msvc.zip diskus-v0.7.0-x86_64-pc-windows-msvc\diskus.exe

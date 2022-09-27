@@ -1,4 +1,6 @@
 https://jupyter.org
+https://github.com/jupyterlab/jupyterlab
+https://github.com/jupyter/notebook
 JupyterHub
 https://blog.jupyter.org/announcing-jupyterhub-1-0-8fff78acad7f
 https://news.ycombinator.com/item?id=19826169

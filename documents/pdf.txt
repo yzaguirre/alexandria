@@ -115,3 +115,10 @@ C:\Program Files\qpdf 11.1.0
 Usage
 Combine two PDF files to form a new PDF file
 	qpdf --empty --pages first.pdf second.pdf -- combined.pdf
+
+Search PDFs
+pdfgrep is a tool to search text in PDF files.
+https://pdfgrep.org
+https://gitlab.com/pdfgrep/pdfgrep
+https://news.ycombinator.com/item?id=32971748
+	apt install pdfgrep

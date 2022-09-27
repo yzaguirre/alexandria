@@ -1,17 +1,18 @@
 https://github.com/Byron/dua-cli
-	wget https://github.com/Byron/dua-cli/releases/download/v2.17.1/dua-v2.17.1-x86_64-unknown-linux-musl.tar.gz
-	tar xf dua-v2.17.1-x86_64-unknown-linux-musl.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.17.1-x86_64-unknown-linux-musl/dua
+	wget https://github.com/Byron/dua-cli/releases/download/v2.18.0/dua-v2.18.0-x86_64-unknown-linux-musl.tar.gz
+	tar xf dua-v2.18.0-x86_64-unknown-linux-musl.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.18.0-x86_64-unknown-linux-musl/dua
 Raspberry Pi
-	wget https://github.com/Byron/dua-cli/releases/download/v2.17.1/dua-v2.17.1-arm-unknown-linux-gnueabihf.tar.gz
-	tar xf dua-v2.17.1-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.17.1-arm-unknown-linux-gnueabihf/dua
+	wget https://github.com/Byron/dua-cli/releases/download/v2.18.0/dua-v2.18.0-arm-unknown-linux-gnueabihf.tar.gz
+	tar xf dua-v2.18.0-arm-unknown-linux-gnueabihf.tar.gz --strip-components=1 -C /usr/local/bin dua-v2.18.0-arm-unknown-linux-gnueabihf/dua
 Windows
-	wget https://github.com/Byron/dua-cli/releases/download/v2.17.1/dua-v2.17.1-x86_64-pc-windows-msvc.zip
-	unzip -p dua-v2.17.1-x86_64-pc-windows-msvc.zip dua-v2.17.1-x86_64-pc-windows-msvc/dua.exe > /c/Users/dyzag/bin/dua.exe
+	wget https://github.com/Byron/dua-cli/releases/download/v2.18.0/dua-v2.18.0-x86_64-pc-windows-msvc.zip
+	unzip -p dua-v2.18.0-x86_64-pc-windows-msvc.zip dua-v2.18.0-x86_64-pc-windows-msvc/dua.exe | Out-File C:\Users\DAVIDY~1\bin\dua.exe
 Homebrew
 	brew update
 	brew install dua-cli
 
 Usage
 	dua i
-
+Use 16 threads
+	dua -t 16
 See dust.txt pdu.txt tree.txt

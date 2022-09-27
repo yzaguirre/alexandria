@@ -21,6 +21,15 @@ List filestreams
 	dir /r
 Open filestream
 	expand imagetext.txt:picture.jpg extracted.jpg
+https://learn.microsoft.com/en-us/sysinternals/
+https://learn.microsoft.com/en-us/sysinternals/downloads/streams
+https://www.minitool.com/partition-disk/alternate-data-streams.html
+	choco install streams
+Binary
+	wget https://download.sysinternals.com/files/Streams.zip
+	7z x -o"..\bin" Streams.zip
+Delete stream
+	streams -d file.txt
 
 Restart process
 https://www.softwareok.com/?seite=faq-Windows-Console&faq=24

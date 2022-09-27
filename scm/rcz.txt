@@ -1,0 +1,9 @@
+A tool to write a commit message
+https://github.com/Cassin01/rcz
+https://www.reddit.com/r/commandline/comments/xl1xzv/rcz_a_mini_tool_to_write_a_commit_message/
+	cargo install rcz
+Configuration
+~/.config/rcz
+C:\Users\DavidY~1\AppData\Roaming\rcz
+~/Library/Preferences/rs.rcz
+Default configuration

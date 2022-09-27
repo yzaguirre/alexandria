@@ -1,0 +1,3 @@
+Golang HTTP Clients/Servers and Alternative Networking
+https://github.com/openziti-test-kitchen/go-http
+https://news.ycombinator.com/item?id=32981981

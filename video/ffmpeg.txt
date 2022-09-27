@@ -128,6 +128,7 @@ file '/path/to/file2'
 file '/path/to/file3'
 
 	ffmpeg -f concat -i mylist.txt -c copy output.mp4
+	ffmpeg -i vid1.avi -i vid2.avi -filter_complex "[0][1]concat=n=2" out.avi
 
 https://superuser.com/questions/704493/ffmpeg-convert-m4a-files-to-mp3-without-significant-loss-of-information-
 	mkdir newfiles
@@ -176,8 +177,12 @@ Double the audio volume
 	ffmpeg -i input.mkv -filter:a "volume=2.0" output.mkv
 Crop a video from the top left corner
 	ffmpeg -i input.mkv -filter:v "crop=1280:720:0:0" output.mkv
+Crop to 16:9 ratio
+	ffmpeg -i input.mp4 -vf crop=16/9*ih:ih output.mp4
 Crop and scale
 	ffmpeg -i input.mp4 -vf "crop=in_w:in_w*9/16,scale=1920:1080,fps=fps=30" output.mp4
+Pad to 16:9 ratio
+	ffmpeg -i input.mp4 -vf "pad=iw:iw/16*9:(ow-iw)/2:(oh-ih)/2" output.mp4
 https://stackoverflow.com/questions/40088222/ffmpeg-convert-video-to-images
 Extract Single JPEG Image from MKV (with MJPEG encoding)
 	ffmpeg -i out.mkv -ss 00:00:00.03 -vframes 1 -codec copy output.jpg
@@ -224,6 +229,7 @@ Where <color> is the rgb color to match in hex (ex: 0x000000 for black),
 and <blend> (ex: 0.2) controls whether the opacity is on-off
 or how gradual it is. (See the documentation for more).
 	ffmpeg -i <base-video> -i <overlay-video> -filter_complex '[1:v]colorkey=0x<color>:<similarity>:<blend>[ckout];[0:v][ckout]overlay[out]' -map '[out]' <output-file>
+	ffmpeg -i <base-video> -i <overlay-video> -filter_complex '[1:v]colorkey=0x<color>:<similarity>:<blend>[ckout];[0:v][ckout]overlay[despill];[despill]despill=green[colorspace];[colorspace]format=yuv420p[out]' -map '[out]' <output-file>
 Making Transparent Video with FFMPEG by Chroma Keying | Tutorial
 https://www.youtube.com/watch?v=0tA4fauFykw
 Using mov as it supports transparency
@@ -260,6 +266,7 @@ https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-wi
 	ffmpeg -i input.mkv -vf "scale=iw/2:ih/2" half_the_frame_size.mkv
 	ffmpeg -i input.mkv -vf "scale=iw/3:ih/3" a_third_the_frame_size.mkv
 	ffmpeg -i input.mkv -vf "scale=iw/4:ih/4" a_fourth_the_frame_size.mkv
+	ffmpeg -i input.mp4 -vf scale=1920:1080 output.mp4
 Scale down and remove audio
 	ffmpeg -i skyscrapers.mp4 -vf scale=1920:-2 -an output.mp4
 	ffmpeg -i skyscrapers.mp4 -c:v libx264 -crf 24 -vf scale="1920:-2" -movflags faststart -an output.mp4
@@ -365,6 +372,8 @@ vectorscope
 
 FFMPEG Advanced Techniques Pt1 - Advanced Filters
 https://www.youtube.com/watch?v=M58rc7cxl_s
+FFMPEG Advanced Techniques Pt2 - Filtergraphs & Timeline
+https://www.youtube.com/watch?v=hElDsyuAQDA
 
 Lossless-cut
 https://github.com/mifi/lossless-cut
@@ -377,3 +386,4 @@ Windows
 	7z x -o"C:\ProgramData\LosslessCut" LosslessCut-win-x64.7z
 Configuration at
 /home/david/.config/LosslessCut
+C:\Users\DAVIDY~1\AppData\Roaming\LosslessCut

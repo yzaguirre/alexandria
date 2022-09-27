@@ -1,5 +1,6 @@
 https://github.com/busyloop/lolcat
 https://twitter.com/bobbybobson4888/status/1399249162420559872
+See ../documents/text.txt
 	apt install lolcat cowsay fortune sl toilet figlet cmatrix rig
 Homebrew
 	brew install lolcat cowsay fortune sl toilet figlet cmatrix rig
@@ -9,3 +10,8 @@ Usage
 
 Other Useful Terminal Commands - lolcat, toilet, ponysay and more!
 https://www.youtube.com/watch?v=coXb-2VxT5s
+
+cowsay is a configurable talking cow
+https://github.com/piuccio/cowsay
+https://github.com/tnalpgge/rank-amateur-cowsay
+	npm install -g cowsay

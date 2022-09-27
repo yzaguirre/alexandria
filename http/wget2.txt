@@ -19,3 +19,11 @@ Windows
 https://www.lumito.net/2020/12/05/released-wget2-1-99-2-for-windows/
 	wget https://github.com/rockdaboot/wget2/files/8785944/wget2.zip
 	7z x -o"..\bin" wget2.zip
+
+Configuration at
+~/.config/wget/wget2rc
+C:\Users\DAVIDY~1\AppData\Local/wget/wget2rc
+Progress bar
+	wget2  --progress bar "$LINK"
+Download 1 by 1 from file
+	wget2 --max-threads=1 --no-http2 --progress=bar -i links.txt

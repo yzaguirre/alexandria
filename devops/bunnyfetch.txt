@@ -1,0 +1,12 @@
+https://github.com/Rosettea/bunnyfetch
+	wget https://github.com/Rosettea/bunnyfetch/releases/download/v0.2.0/bunnyfetch-v0.2.0-linux-amd64.tar.gz
+	wget https://github.com/Rosettea/bunnyfetch/releases/download/v0.2.0/bunnyfetch-v0.2.0-linux-amd64.tar.gz.md5
+	cat bunnyfetch-v0.2.0-linux-amd64.tar.gz.md5
+	md5sum bunnyfetch-v0.2.0-linux-amd64.tar.gz
+	tar xf bunnyfetch-v0.2.0-linux-amd64.tar.gz -C /usr/local/bin bunnyfetch
+Windows
+	wget https://github.com/Rosettea/bunnyfetch/releases/download/v0.2.0/bunnyfetch-v0.2.0-windows-amd64.zip
+	wget https://github.com/Rosettea/bunnyfetch/releases/download/v0.2.0/bunnyfetch-v0.2.0-windows-amd64.zip.md5
+	cat bunnyfetch-v0.2.0-windows-amd64.zip.md5
+	md5sum bunnyfetch-v0.2.0-windows-amd64.zip
+	7z x -o"..\bin" bunnyfetch-v0.2.0-windows-amd64.zip bunnyfetch.exe

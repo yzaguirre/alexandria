@@ -1,16 +1,22 @@
 Terminal file manager
 https://github.com/gokcehan/lf
-	wget https://github.com/gokcehan/lf/releases/download/r26/lf-linux-amd64.tar.gz
+	wget https://github.com/gokcehan/lf/releases/download/r27/lf-linux-amd64.tar.gz
 	tar xf lf-linux-amd64.tar.gz -C ~/.local/bin
 Termux
 	apt install lf
 Windows
 	choco install lf
 	scoop install lf
+Binary
+	wget https://github.com/gokcehan/lf/releases/download/r27/lf-windows-amd64.zip
+	7z x -oC:\Users\DAVIDY~1\bin lf-windows-amd64.zip
 Homebrew
 	brew install lf
 
 Configuration
+https://pkg.go.dev/github.com/gokcehan/lf#hdr-Configuration
+~/.config/lf/lfrc
+C:\Users\DAVIDY~1\AppData\Local\lf\lfrc
 Example file
 	mkdir ~/.config/lf
 	wget -O ~/.config/lf/lfrc https://github.com/gokcehan/lf/raw/master/etc/lfrc.example
@@ -38,3 +44,6 @@ https://github.com/slavistan/lf-gadgets/tree/master/lf-ueberzug
 New alias
 	vim ~/.bash_aliases
 alias lf=lf-ueberzug
+
+https://www.reddit.com/r/commandline/comments/xm3q72/finally_found_a_practical_usage_about_cowsay_with/
+https://github.com/GrenicMars/dotfiles/blob/master/.config/lf/lfrc

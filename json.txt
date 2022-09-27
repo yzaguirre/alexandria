@@ -162,3 +162,43 @@ Windows
 	7z x -oC:\Users\dyzag\bin zed-v1.0.0.windows-amd64.zip zed.exe zq.exe
 Homebrew
 	brew install brimdata/tap/zq
+
+A TUI playground to experiment with jq
+https://github.com/noahgorstein/jqp
+https://www.reddit.com/r/commandline/comments/xit2dz/jqp_a_tui_playground_for_jq/
+	wget https://github.com/noahgorstein/jqp/releases/download/v0.2.0/jqp_0.2.0_Linux_x86_64.tar.gz
+	wget https://github.com/noahgorstein/jqp/releases/download/v0.2.0/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+	tar xf jqp_0.2.0_Linux_x86_64.tar.gz -C /usr/local/bin jqp
+Windows
+	wget https://github.com/noahgorstein/jqp/releases/download/v0.2.0/jqp_0.2.0_Windows_x86_64.tar.gz
+	tar xf jqp_0.2.0_Windows_x86_64.tar.gz -C ..\bin jqp.exe
+Homebrew
+	brew install noahgorstein/tap/jqp
+
+Usage
+	jqp --help
+	jqp -v
+	jqp -f path/file.txt
+STDIN
+	curl "https://api.github.com/repos/stedolan/jq/issues?per_page=2" | jqp
+ctrl-c	quit program
+
+jid
+json incremental digger
+https://github.com/simeji/jid
+	wget https://github.com/simeji/jid/releases/download/v0.7.6/jid_linux_amd64.zip
+	wget https://github.com/simeji/jid/releases/download/v0.7.6/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+Windows
+	wget https://github.com/simeji/jid/releases/download/v0.7.6/jid_windows_amd64.zip
+	7z x -o"..\bin" jid_windows_amd64.zip
+Homebrew
+	brew install jid
+
+Usage
+	Get-Content file.json | jid
+	curl -s http://rdg.afilias.info/rdap/domain/example.info | jid
+
+command line JSONPath processing tool (like `jq` but using JSONPath syntax)
+https://github.com/kjozsa/jsp
