@@ -1,0 +1,16 @@
+A Rust wc clone
+https://hur.st/projects/cw/
+https://github.com/Freaky/cw
+Compile
+	wget https://github.com/Freaky/cw/archive/refs/tags/v0.7.0.tar.gz
+	cd cw-0.7.0
+	cargo build --release --features runtime-dispatch-simd
+Windows
+	choco install cw
+
+Usage
+	cw -V
+	cw *
+	cw file
+Count lines
+	cw -l file

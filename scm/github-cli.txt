@@ -97,6 +97,28 @@ https://cli.github.com/manual/gh_repo_delete
 	gh repo delete [<repository>] --confirm
 List repos for a user
 	curl -i -H 'Authorization: token my_access_token' -X GET -H "Accept: application/vnd.github.v3+json" 'https://api.github.com/user/repos'
+Release
+	gh release list
+View
+	gh release view --json assets,id,name,tagName,url <tag>
+	gh release view --json assets -q .assets[].url <tag> > links.txt
+	wget2 --max-threads=1 --no-http2 --progress=bar -i links.txt
+	gh release view -w <tag>
+See git-cliff.txt
+https://cli.github.com/manual/gh_release_create
+https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases
+https://docs.github.com/en/rest/releases
+	gh release create [<tag>] [<files>...]
+Pre-release
+	gh release create -p --generate-notes [<tag>] [<files>...]
+	gh release create -p -F <release notes file> -t <title> [<tag>] [<files>...]
+Upload more assets
+	gh release upload <tag> <files>... [flags]
+	gh release upload <tag> <files>... --clobber
+Modify release notes
+	gh release edit -F <release notes file> <tag>
+Download
+	gh release download <tag> -D 'C:\Users\DAVIDY~1\Downloads\' -p '*.apk' -p 'checksums.*' -A zip -A tar.gz
 
 GitHub Actions
 Work with GitHub Actions in Your Terminal with GitHub CLI

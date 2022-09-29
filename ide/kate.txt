@@ -6,4 +6,7 @@ The following NEW packages will be installed:
   libkf5newstuffcore5 libkf5syndication5abi1 libkf5syntaxhighlighting-data libkf5syntaxhighlighting5 libkf5texteditor-bin libkf5texteditor5
   libkuserfeedbackcore1 libkuserfeedbackwidgets1 qml-module-org-kde-newstuff qml-module-org-kde-userfeedback
 Windows
+	winget install KDE.Kate
 	choco install kate
+Installed at
+C:\Program Files\Kate\bin

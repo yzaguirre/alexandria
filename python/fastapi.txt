@@ -1,1 +1,2 @@
 One of the fastest Python frameworks available
+	sudo -H pip install -U fastapi

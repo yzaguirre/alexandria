@@ -1,2 +1,6 @@
+Gitly is an upcoming open-source development platform that is going to have
+Source code hosting
+Project management
+CI & CD
 http://gitly.org
 https://news.ycombinator.com/item?id=28061981

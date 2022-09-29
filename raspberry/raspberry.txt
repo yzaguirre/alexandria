@@ -1,3 +1,4 @@
+See ../electronics/rust.txt
 https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
 Best Raspberry Pi Projects

@@ -16,3 +16,16 @@ Create the package
 	cd RustFrontEnd
 Serve web app locally
 	trunk serve
+
+Learn How to Build a RUST WebAssembly Frontend App With Yew - Complete Tutorial
+https://www.youtube.com/watch?v=In09Lgqxp6Y
+
+Facilitating high-level interactions between Wasm modules and JavaScript
+https://rustwasm.github.io/docs/wasm-bindgen/
+https://github.com/rustwasm/wasm-bindgen
+
+https://rustwasm.github.io/wasm-bindgen/web-sys/index.html
+https://github.com/rustwasm/wasm-bindgen/tree/main/crates/web-sys
+
+https://rustwasm.github.io/wasm-bindgen/api/js_sys/
+https://docs.rs/wasm-bindgen-futures/latest/wasm_bindgen_futures/

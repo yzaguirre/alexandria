@@ -4,3 +4,33 @@ Based on LLVM.
 https://tinygo.org
 https://github.com/tinygo-org/tinygo
 https://news.ycombinator.com/item?id=31636642
+See rust.txt ../golang/go.txt
+	apt install gcc-avr avr-libc avrdude
+	wget https://github.com/tinygo-org/tinygo/releases/download/v0.25.0/tinygo_0.25.0_amd64.deb
+	dpkg -i tinygo_0.25.0_amd64.deb
+Windows
+	scoop install go
+	scoop install tinygo
+	scoop install avr-gcc
+	scoop install avrdude
+Binaries
+	wget https://github.com/tinygo-org/tinygo/releases/download/v0.25.0/tinygo0.25.0.windows-amd64.zip
+	7z x  -o"C:\" tinygo0.25.0.windows-amd64.zip
+Add to PATH environment variable
+C:\tinygo\bin
+
+Usage
+	tinygo version
+
+Create new project
+	mkdir blinky
+	cd blinky
+	go mod init blinky
+
+Flash arduino board
+	tinygo flash -target=arduino
+Flash raspberry pi pico
+	tinygo flash -target=pico
+
+Garbage Collection on an 8-Bit Microcontroller? (its actually easy)
+https://www.youtube.com/watch?v=75VGzwtmgXc

@@ -1,0 +1,14 @@
+Save space by cleaning non-essential files from software projects.
+https://github.com/tbillington/kondo
+	wget https://github.com/tbillington/kondo/releases/download/v0.5/kondo-x86_64-unknown-linux-gnu.tar.gz
+	tar xf kondo-x86_64-unknown-linux-gnu.tar.gz -C /usr/local/bin
+Windows
+	wget2 https://github.com/tbillington/kondo/releases/download/v0.5/kondo-x86_64-pc-windows-msvc.zip
+	7z x -o'..\bin' kondo-x86_64-pc-windows-msvc.zip
+Homebrew
+	brew install kondo
+
+Usage
+	cd repo
+	kondo
+	kondo code/my_project code/my_project_2

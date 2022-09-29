@@ -1,6 +1,26 @@
 Zellij - A Terminal Workspace and Multiplexer Written in Rust 
+https://zellij.dev
 https://zellij.dev/news/beta/#
 https://github.com/zellij-org/zellij
 https://news.ycombinator.com/item?id=26902430
 https://zellij.dev/news/sixel-search-statusbar/
 https://www.reddit.com/r/commandline/comments/wb101x/zellij_a_terminal_workspace_and_multiplexer/
+	wget https://github.com/zellij-org/zellij/releases/download/v0.31.4/zellij-x86_64-unknown-linux-musl.tar.gz
+	wget https://github.com/zellij-org/zellij/releases/download/v0.31.4/zellij-x86_64-unknown-linux-musl.sha256sum
+	tar xf zellij-x86_64-unknown-linux-musl.tar.gz
+	sha256sum -c --ignore-missing zellij-x86_64-unknown-linux-musl.sha256sum
+	mv zellij /usr/local/bin
+Compile
+	cargo install --locked zellij
+
+Configuration
+	mkdir ~/.config/zellij
+	zellij setup --dump-config > ~/.config/zellij/config.yaml
+Configuration directories
+/home/david/.config/zellij
+/Users/David/Library/Application Support/org.Zellij-Contributors.Zellij
+
+To show the current default configuration:
+	zellij setup --dump-config
+To start without loading configuration from default directories:
+	zellij options --clean

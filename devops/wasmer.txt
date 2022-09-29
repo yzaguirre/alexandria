@@ -1,3 +1,21 @@
+🚀 The leading WebAssembly Runtime supporting WASI and Emscripten
 https://wasmer.io/posts/wasmer-2.0
 https://github.com/wasmerio/wasmer
 https://news.ycombinator.com/item?id=27537541
+	curl https://get.wasmer.io -sSfL | sh
+Windows
+	winget install Wasmer.Wasmer
+Installed at
+C:\Program Files (x86)\Wasmer\bin
+Homebrew
+	brew install wasmer
+Compile
+	cargo install wasmer-cli
+
+Usage
+Install library
+	wasmer qjs.wasm
+QuickJS - Type "\h" for help
+qjs > const i = 1 + 2;
+qjs > console.log("hello " + i);
+hello 3

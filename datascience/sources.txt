@@ -13,3 +13,7 @@ https://github.com/collections/open-data
 Awesome datasets curated. By topic and for core data
 https://datahub.io/docs/core-data
 https://github.com/datasets/awesome-data
+
+U.S. mortgage interest rates jump to 6.52%, highest since mid-2008
+https://www.mortgagenewsdaily.com/mortgage-rates
+https://news.ycombinator.com/item?id=33008513

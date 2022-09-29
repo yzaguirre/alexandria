@@ -1,3 +1,12 @@
 Run arbitrary commands when files change
 http://eradman.com/entrproject/
 https://github.com/eradman/entr
+	wget https://github.com/eradman/entr/archive/refs/tags/5.2.tar.gz
+	tar xf 5.2.tar.gz
+	cd entr-5.2
+	./configure
+	make test
+	make install
+
+Usage
+	ls *.rb | entr ruby main.rb

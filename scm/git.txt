@@ -431,3 +431,13 @@ https://news.ycombinator.com/item?id=31480306
 Things I wish everyone knew about Git (Part II)
 https://blog.plover.com/prog/git/tips-2.html
 https://news.ycombinator.com/item?id=32161247
+
+Submodule
+https://www.youtube.com/watch?v=wTGIDDg0tK8
+	cd repo
+	git submodule add git@github.com:yzaguirre/module-b.git
+	git diff --cached --submodule
+Initialize submodules on recently cloned top repo
+	git submodule update --init --recursive
+Or initialize on clone
+	git clone --recurse-submodules git@github.com:yzaguirre/module-a.git

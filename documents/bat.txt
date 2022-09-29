@@ -20,3 +20,7 @@ C:\Users\dyzag\AppData\Roaming\bat\config
 
 --pager="less -RS"
 --wrap=never
+
+Usage
+	bat cache --build
+	bat file.txt
