@@ -3,3 +3,7 @@ https://www.reddit.com/r/programming/comments/lfa1il/why_you_should_never_use_cl
 Why you should never use $freeService in your business critical stack.
 
 https://blog.cloudflare.com/cloudflare-pages-ga/
+
+How to build a personal webpage from scratch
+https://rutar.org/writing/how-to-build-a-personal-webpage-from-scratch/
+https://news.ycombinator.com/item?id=33017056

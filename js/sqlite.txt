@@ -1,0 +1,6 @@
+An ORM for SQLite
+https://github.com/thebinarysearchtree/flyweight
+https://news.ycombinator.com/item?id=33019500
+	npm install flyweightjs
+
+See ../nodejs/sqlite.txt

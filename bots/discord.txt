@@ -1,1 +1,5 @@
 https://www.digitalocean.com/community/tutorials/how-to-build-a-discord-bot-in-python-on-ubuntu-20-04
+
+Building a Discord bot in Rust
+https://www.shuttle.rs/blog/2022/09/14/serentity-discord-bot
+https://news.ycombinator.com/item?id=33019573

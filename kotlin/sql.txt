@@ -1,0 +1,2 @@
+https://cashapp.github.io/sqldelight/
+https://github.com/cashapp/sqldelight

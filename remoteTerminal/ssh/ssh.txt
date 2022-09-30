@@ -155,6 +155,10 @@ En PowerShell es:
 Or use ssh-id-copy
 	$ ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
 
+Extract public key
+https://askubuntu.com/questions/53553/how-do-i-retrieve-the-public-key-from-a-ssh-private-key#53555
+	ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+
 Creating an SSH host alias
 	$ touch ~/.ssh/config
 Give it rw permissions:

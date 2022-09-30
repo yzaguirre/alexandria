@@ -23,17 +23,24 @@ Windows
 	choco install lsd
 Binary
 	wget https://github.com/Peltoche/lsd/releases/download/0.23.1/lsd-0.23.1-x86_64-pc-windows-msvc.zip
-	7z e -oC:\Users\dyzag\bin lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/lsd.exe
-	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/lsd.bash-completion
-	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/lsd.fish
-	7z e -oC:\Users\dyzag\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/_lsd
+	7z e -oC:\Users\DAVIDY~1\bin lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/lsd.exe
+	7z e -oC:\Users\DAVIDY~1\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/lsd.bash-completion
+	7z e -oC:\Users\DAVIDY~1\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/lsd.fish
+	7z e -oC:\Users\DAVIDY~1\AppData\Roaming\lsd lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc.zip lsd-0.23.1-x86_64-pc-windows-msvc/autocomplete/_lsd
 PowerShell Alias
 	vim $PROFILE
-function List-LSD()
-{ 
-    lsd.exe --long
+function ll()
+{
+    lsd.exe --long $args
 }
-Set-Alias ll List-LSD
+function lt()
+{
+    lsd.exe --long -tA --header $args
+}
+function ltree()
+{
+    lsd.exe --long --tree -tA --header $args
+}
 
 Edit .bashrc
 source /c/Users/dyzag/AppData/Roaming/lsd/lsd.bash-completion

@@ -93,3 +93,7 @@ https://news.ycombinator.com/item?id=27354815
 
 https://cyberpolygon.com/materials/security-of-json-web-tokens-jwt/
 https://www.reddit.com/r/webdev/comments/nrb807/session_management/
+
+Why to not use JWT (2021)
+https://apibakery.com/blog/tech/no-jwt/
+https://news.ycombinator.com/item?id=33019960

@@ -1,0 +1,6 @@
+A Creative Coding Framework for Rust.
+https://nannou.cc
+https://github.com/nannou-org/nannou
+
+Creative Coding in Rust with Nannou
+https://www.youtube.com/watch?v=p-axai_Wuec

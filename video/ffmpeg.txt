@@ -26,7 +26,7 @@ https://johnvansickle.com/ffmpeg/
 	wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz.md5
 	md5sum -c ffmpeg-release-amd64-static.tar.xz.md5
 	tar xf ffmpeg-release-amd64-static.tar.xz
-	cd ffmpeg-5.1.1-amd64-static
+	cd ffmpeg-5.1.2-amd64-static
 	mv ffmpeg ffprobe qt-faststart /usr/local/bin
 	sudo mv manpages/ /usr/local/src
 x	cp -r model /usr/local/share/
@@ -35,14 +35,14 @@ Custom compilation with FDK AAC encoder and such, see:
 https://trac.ffmpeg.org/wiki/CompilationGuide
 
 Compile
-	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2
-	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.1.tar.bz2.asc
+	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.2.tar.bz2
+	wget https://www.ffmpeg.org/releases/ffmpeg-5.1.2.tar.bz2.asc
 x	gpg --recv-keys 0xd67658d8
 x	gpg --edit-key 0xd67658d8
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xFCF986EA15E6E293A5644F10B4322F04D67658D8
-	gpg --verify ffmpeg-5.1.1.tar.bz2.asc ffmpeg-5.1.1.tar.bz2
-	tar xf ffmpeg-5.1.1.tar.bz2
-	cd ffmpeg-5.1.1
+	gpg --verify ffmpeg-5.1.2.tar.bz2.asc ffmpeg-5.1.2.tar.bz2
+	tar xf ffmpeg-5.1.2.tar.bz2
+	cd ffmpeg-5.1.2
 	./configure
 	make -j 12 # twelve CPU cores
 	make install
@@ -60,19 +60,19 @@ Windows
 Installing FFmpeg on macOS Big Sur (on Intel)
 https://www.youtube.com/watch?v=zl4vo0dhLRk
 Download the following: ffmpeg, ffprobe, ffplay
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.1.zip.sig
-	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip
-	wget https://evermeet.cx/ffmpeg/ffplay-5.1.1.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.2.zip
+	wget https://evermeet.cx/ffmpeg/ffmpeg-5.1.2.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.2.zip
+	wget https://evermeet.cx/ffmpeg/ffprobe-5.1.2.zip.sig
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.2.zip
+	wget https://evermeet.cx/ffmpeg/ffplay-5.1.2.zip.sig
 	curl https://evermeet.cx/ffmpeg/0x1A660874.asc | gpg --import
-	gpg --verify ffmpeg-5.1.1.zip.sig
-	gpg --verify ffprobe-5.1.1.zip.sig
-	gpg --verify ffplay-5.1.1.zip.sig
-	unzip ffmpeg-5.1.1.zip -d /usr/local/bin
-	unzip ffprobe-5.1.1.zip -d /usr/local/bin
-	unzip ffplay-5.1.1.zip -d /usr/local/bin
+	gpg --verify ffmpeg-5.1.2.zip.sig
+	gpg --verify ffprobe-5.1.2.zip.sig
+	gpg --verify ffplay-5.1.2.zip.sig
+	unzip ffmpeg-5.1.2.zip -d /usr/local/bin
+	unzip ffprobe-5.1.2.zip -d /usr/local/bin
+	unzip ffplay-5.1.2.zip -d /usr/local/bin
 Remove from quarantine
 	sudo xattr -dr com.apple.quarantine /usr/local/bin/ff*
 Add the /usr/local/bin to PATH

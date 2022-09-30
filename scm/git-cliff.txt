@@ -23,7 +23,7 @@ Homebrew
 Configuration
 /home/david/.config/git-cliff/cliff.toml
 C:\Users\DAVIDY~1\AppData\Roaming\git-cliff\cliff.toml
-on macOS: /Users/<user>/Library/Application Support/git-cliff/cliff.toml
+/Users/david/Library/Application Support/git-cliff/cliff.toml
 	wget https://github.com/orhun/git-cliff/raw/main/config/cliff.toml
 
 Usage
