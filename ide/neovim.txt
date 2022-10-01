@@ -10,6 +10,10 @@ Neovim 0.5 Is Overpowering
 https://crispgm.com/page/neovim-is-overpowering.html
 https://news.ycombinator.com/item?id=27291302
 
+Neovim 0.8 Released
+https://github.com/neovim/neovim/releases/tag/v0.8.0
+https://news.ycombinator.com/item?id=33037151
+
 Compile
 https://github.com/neovim/neovim/wiki/Building-Neovim
 	wget https://github.com/neovim/neovim/archive/master.zip
@@ -23,18 +27,26 @@ Install
 	apt install neovim
 	nvim
 DEB
-	wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
-	wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb.sha256sum
+	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
+	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb.sha256sum
 	sha256sum -c nvim-linux64.deb.sha256sum
 	dpkg -i nvim-linux64.deb
 Windows
 	winget install Neovim.Neovim
 	choco install neovim
+Binaries
+	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-win64.msi
+	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-win64.msi.sha256sum
+	sha256sum -c --ignore-missing nvim-win64.msi.sha256sum
+	start nvim-win64.msi
+Installed at
+C:\Program Files\Neovim\
 Homebrew
 	brew install neovim
-Config at
-~/.config/nvim/init.vim
-%LOCALAPPDATA%\nvim\init.vim
+
+Configuration at
+/home/david/.config/nvim/init.vim
+C:\Users\DAVIDY~1\AppData\Local\nvim\init.vim
 	:edit $MYVIMRC
 
 https://media.pragprog.com/titles/modvim/switch.pdf

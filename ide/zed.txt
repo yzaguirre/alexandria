@@ -1,4 +1,4 @@
-http://zedapp.org/download/
+https://zed.dev
 	tar xf zed-linux64-v0.11.0.tar.gz -C /VMs/opt
 x	ln -s /VMs/opt/zed/zed /usr/local/bin
 	echo $'#!/bin/bash\n/VMs/opt/zed/zed' > /usr/local/bin/zed && chmod a+x /usr/local/bin/zed

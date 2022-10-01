@@ -1,0 +1,23 @@
+A post-modern modal text editor.
+https://helix-editor.com
+https://github.com/helix-editor/helix
+	wget https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-linux.tar.xz
+	tar xf helix-22.08.1-x86_64-linux.tar.xz -C ~/.config --transform s/-22.08.1-x86_64-linux//
+	mv ~/.config/helix/hx /usr/local/bin
+Windows
+	choco install helix
+Binaries
+	wget https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-windows.zip
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\" helix-22.08.1-x86_64-windows.zip
+	cd C:\Users\DAVIDY~1\AppData\Roaming\
+	mv .\helix-22.08.1-x86_64-windows\ .\helix\
+	mv .\helix\hx.exe ..\..\bin\
+Homebrew
+	brew install helix
+
+Configuration at
+/home/david/.config/helix
+C:\Users\DAVIDY~1\AppData\Roaming\helix
+
+Usage
+	hx [file]

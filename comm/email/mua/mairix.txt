@@ -1,0 +1,5 @@
+https://about.me/rc0
+https://github.com/rc0/mairix
+https://github.com/vandry/mairix
+Windows
+	choco install mairix

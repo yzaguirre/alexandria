@@ -1,0 +1,10 @@
+Rust and Elixir libraries for end-to-end encrypted secure communication
+https://www.ockam.io
+https://github.com/build-trust/ockam
+https://news.ycombinator.com/item?id=33038384
+
+What is the business model for this? The enterprise addons?
+
+We have two products. The first is avail under Apache 2 lic. The second is available as a paid subscription through AWS marketplace.
+1. Ockam Open Source: It's all the protocols, packages, and tools (like CLI) for building things.
+2. Ockam Orchestrator: It allows for running small to massive scale systems. It's also has add-ons for Okta, Confluent Cloud, various DBs...

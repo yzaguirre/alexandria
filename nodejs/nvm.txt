@@ -1,0 +1,33 @@
+Node Version Manager - POSIX-compliant bash script to
+manage multiple active node.js versions
+https://github.com/nvm-sh/nvm
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+Binaries at
+~/.nvm
+Windows
+A node.js version management utility for Windows.
+Ironically written in Go.
+https://github.com/coreybutler/nvm-windows
+	choco install nvm
+	winget install CoreyButler.NVMforWindows
+Installed at
+C:\ProgramData\nvm
+C:\ProgramData\nodejs
+
+Usage
+Install latest
+	nvm install node # "node" is an alias for the latest version
+List versions
+	nvm ls-remote
+List local versions
+	nvm ls
+Specific version
+	nvm install 14.20.1
+	nvm install 16.17.1
+	nvm install 17.9.1
+	nvm install 18.10.0
+Change node
+	nvm use 14.20.1
+	nvm use 18.10.0
+Restore PATH
+	nvm deactivate

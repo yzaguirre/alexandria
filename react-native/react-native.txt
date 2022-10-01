@@ -501,3 +501,11 @@ https://stackoverflow.com/questions/33378884/how-to-hide-status-bar-in-android-w
 Preload images
 https://savecode.net/code/javascript/react+native+preload+local+images
 https://github.com/DylanVann/react-native-fast-image/issues/160
+
+https://stackoverflow.com/questions/70234084/node-js-failed-to-construct-transformer-error-error0308010cdigital-envelope
+See ../nodejs/nvm.txt
+And run previous nodejs
+https://stackoverflow.com/questions/66213401/execution-failed-for-task-react-native-reanimatedandroidjavadoc-in-react-nat
+Task ::androidJavadoc FAILED
+	vim +26 android/build.gradle
+tasks.withType(Javadoc).all { enabled = false }

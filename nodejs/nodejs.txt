@@ -1,3 +1,5 @@
+https://nodejs.org
+
 I finally escaped Node
 https://acco.io/i-escaped-node
 https://news.ycombinator.com/item?id=26561847
@@ -7,6 +9,7 @@ Remove modules
 
 https://github.com/nodejs/Release#release-schedule
 Install
+See nvm.txt
 https://github.com/nodesource/distributions
 https://nodejs.org/en/download/package-manager/
 https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04
