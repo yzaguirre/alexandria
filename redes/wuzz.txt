@@ -1,0 +1,14 @@
+Interactive cli tool for HTTP inspection
+https://github.com/asciimoo/wuzz
+	wget https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_linux_amd64
+	mv wuzz_linux_amd64 wuzz
+	chmod u+x wuzz
+	mv wuzz /usr/local/bin
+Compile
+	go get github.com/asciimoo/wuzz
+	wuzz --help
+Windows
+	wget -O ../bin/wuzz.exe https://github.com/asciimoo/wuzz/releases/download/v0.5.0/wuzz_windows_amd64.exe
+
+Configuration at
+/home/david/.wuzz/config.toml

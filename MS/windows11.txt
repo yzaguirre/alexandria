@@ -38,3 +38,6 @@ Example to save thumbnails
 	thumbs_viewer.exe -o Output Thumbs.db
 Example to save a CSV (comma-separated values) file
 	thumbs_viewer.exe -c example.csv Thumbs.db
+
+A surprising way to lose your files on Windows
+https://news.ycombinator.com/item?id=33047150
