@@ -1,0 +1,47 @@
+ntfy (pronounce: notify) is a simple HTTP-based pub-sub notification service.
+It allows you to send notifications to your phone or desktop via scripts from any computer,
+entirely without signup, cost or setup.
+https://ntfy.sh
+Send push notifications to your phone or desktop using PUT/POST
+https://github.com/binwiederhier/ntfy
+	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/ntfy_1.28.0_linux_amd64.deb
+	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+	dpkg -i ntfy_1.28.0_linux_amd64.deb
+	vim /etc/ntfy/server.yml
+	systemctl enable ntfy
+	systemctl start ntfy
+	mv /usr/bin/ntfy{,-cli}
+Windows
+	scoop install ntfy
+Binaries
+	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/ntfy_1.28.0_windows_x86_64.zip
+	7z e -o"..\bin\" ntfy_1.28.0_windows_x86_64.zip ntfy_1.28.0_windows_x86_64\ntfy.exe
+	mv ..\bin\ntfy.exe ..\bin\ntfy-cli.exe
+	mkdir C:\Users\DAVIDY~1\AppData\Roaming\ntfy\
+	7z e -o"C:\Users\DAVIDY~1\AppData\Roaming\ntfy\" ntfy_1.28.0_windows_x86_64.zip ntfy_1.28.0_windows_x86_64\client\client.yml
+
+Configuration at
+/etc/ntfy
+/home/david/.config/ntfy/client.yml
+C:\Users\DAVIDY~1\AppData\Roaming\ntfy\client.yml
+
+Publish a message
+	ntfy-cli publish mytopic This is a message
+Attach a file
+	ntfy-cli pub --file README.md mytopic | jq .
+	curl -d "Backup successful 😀" ntfy.sh/mytopic
+	curl \
+  -H "Title: Unauthorized access detected" \
+  -H "Priority: urgent" \
+  -H "Tags: warning,skull" \
+  -d "Remote access to $(hostname) detected. Act right away." \
+  ntfy.sh/mytopic
+Subscribe to message
+	ntfy-cli sub mytopic
+	ntfy-cli sub --from-config
+
+Android app for ntfy.sh
+https://github.com/binwiederhier/ntfy-android
+iOS App for ntfy
+https://github.com/binwiederhier/ntfy-ios

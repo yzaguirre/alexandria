@@ -1,0 +1,2 @@
+https://www.videolan.org/vlc/download-android.html
+https://code.videolan.org/videolan/vlc-android

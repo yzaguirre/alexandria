@@ -1,2 +1,5 @@
 https://github.com/ThePBone/GalaxyBudsClient
 	winget install ThePBone.GalaxyBudsClient
+
+Samsung phones are Blowing Up - Here's Why.
+https://www.youtube.com/watch?v=OfM0GqsIB6c

@@ -1,0 +1,19 @@
+https://cryptocam.gitlab.io
+
+CLI tool and to decrypt Cryptocam videos and manage keys
+https://gitlab.com/cryptocam/cryptocam-companion-cli
+	cargo build --release
+The resulting executable is target/release/cryptocam
+Alternatively, to copy the executable to ~/cargo/bin
+	cargo install --path .
+
+A tool to decrypt files created by Cryptocam
+https://gitlab.com/cryptocam/cryptocam-companion
+	wget -O "cryptocam-qt" https://gitlab.com/cryptocam/cryptocam-companion/-/jobs/1246114286/artifacts/raw/cryptocam-qt?inline=false
+	chmod u+x cryptocam-qt
+	mv cryptocam-qt /usr/local/bin
+Windows
+	wget -O "CryptocamCompanion.zip" "https://gitlab.com/cryptocam/cryptocam-companion/-/jobs/1246114288/artifacts/raw/CryptocamCompanion.zip?inline=false"
+	7z x -o"C:\ProgramData\" CryptocamCompanion.zip
+Add to PATH environment variable
+C:\ProgramData\CryptocamCompanion\bin

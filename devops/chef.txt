@@ -1,0 +1,10 @@
+Chef Workstation is Chef's modern developer tool kit that includes Chef Infra, InSpec and Habitat
+plus a host of resources, helpers and testing tools that make automating infrastructure,
+application and security testing easier than ever.
+With Chef Workstation DevOps automators can create,
+test and deliver codified artifacts all within their preferred developer environment.
+https://www.chef.io
+https://github.com/chef/chef-workstation
+Windows
+	choco info chef-workstation
+	winget install ChefSoftware.Workstation

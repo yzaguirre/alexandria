@@ -1,0 +1,9 @@
+https://r12f.com
+https://github.com/r12f/rnp
+	wget https://github.com/r12f/rnp/releases/download/0.1.146.main/rnp.0.1.146.main.linux.x64.tar.gz
+Windows
+	choco install rnp-cli
+	winget install r12f.Rnp
+
+Usage
+	rnp.exe 8.8.8.8:443 -p 10 -i 0 -n 100 -q -r --log-json log.json

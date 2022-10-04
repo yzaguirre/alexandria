@@ -18,7 +18,9 @@ Create filestream
 Save a file into a filesream
 	type image.jpg > imagetest.txt:picture.jpg
 List filestreams
-	dir /r
+	dir /R
+List shortname
+	dir /X
 Open filestream
 	expand imagetext.txt:picture.jpg extracted.jpg
 https://learn.microsoft.com/en-us/sysinternals/
@@ -31,11 +33,96 @@ Binary
 Delete stream
 	streams -d file.txt
 
+Shutdown inmediately
+	shutdown /s /t 0
+Restart computer into system BIOS
+	shutdown /r /fw /f /t 0
+Cancel last shutdown
+	shutdown /a
+Shutdown with GUI
+	shutdown /i
+Lock Screen
+	rundll32.exe user32.dll,LockWorkStation
+Ask network information
+	ipconfig /all | findstr /I dns
+Ask new IP
+	ipconfig /release "Ethernet adapter Ethernet"
+	ipconfig /renew "Ethernet adapter Ethernet"
+If its a remote machine
+	ipconfig /release && ipconfig /renew
+Display DNS
+	ipconfig /displaydns | clip
+Delete DNS cache, including outdated DNS resolutions
+	ipconfig /flushdns
+	ipconfig /regsiterdns
+Ping a computer
+	ping networkchuck.coffee
+Indefinte ping
+	ping -t networkchuck.coffee
+Lateness is higher then the standard ms
+	ping -w
+See ../redes/netsh.txt
+../redes/powerping.txt
+Trace Route
+	tracert networkchuck.com
+Speed it up
+	tracert -d networkchuck.com
+What are you connected to
+	netstat
+What ports are opened
+	netstat -af
+Process ID for all your connections
+	netstat -o
+Statistics
+	netstat -e -t 5
+Show routes your computer will take to get to certain networks or gateways it will use
+	route print
+Add a route
+	route add 192.168.40.0 mask 255.255.255.0 10.7.1.44
+Remote a route
+	route delete 192.168.40.0
+Resolve a domain
+	nslookup networkchuck.com
+Using another DNS server
+	nslookup networkchuck.com 8.8.8.8
+Check other records
+	nslookup -type=mx networkchuck.com
+	nslookup -type=txt networkchuck.com
+	nslookup -type=ptr networkchuck.com
+Get MAC Address
+	getmac /v
+Battery
+	powercfg
+Battery report
+	powercfg /batteryreport
+	.\battery-report.html
+List file types and associated programs
+	assoc
+Associate mp4 with VLC
+	assoc .mp4=VLC.vlc
+	assoc .zip=7-Zip.zip
+	assoc .zip=WinRAR.ZIP
+Check disk for error and fix 'em
+	chkdsk /f
+Check for physical sector issues
+	chkdsk /r
+System file checker, including Windows dll files
+	sfc /scannow
+Deployment image servicing and management
+	DISM /Online /Cleanup-Image /CheckHealth
+Deeper scan
+	DISM /Online /Cleanup-Image /ScanHealth
+If issues found
+	DISM /Online /Cleanup-Image /RestoreHealth
+Find a script
+	tasklist | findstr script
+With Process ID kill that process
+	taskkill /f /pid 20184
+Supply .exe name instead of pid
+https://www.windows-commandline.com/taskkill-kill-process/
+	taskkill /IM tmux.exe /F
 Restart process
 https://www.softwareok.com/?seite=faq-Windows-Console&faq=24
 	vim C:\Users\dyzag\bin\restartExplorer.bat
 taskkill /IM explorer.exe /F
 explorer.exe
-
-https://www.windows-commandline.com/taskkill-kill-process/
-	taskkill /IM tmux.exe /F

@@ -2,8 +2,8 @@ https://www.vim.org
 https://github.com/vim/vim
 	apt install vim
 Windows
-	winget install vim
-Add C:\Program Files\Vim\vim82 to PATH
+	winget install vim.vim
+Add C:\Program Files\Vim\vim90 to PATH
 
 Vim can edit files inside zip files
 https://twitter.com/climagic/status/1402272919363936268

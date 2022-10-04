@@ -1,0 +1,27 @@
+https://docs.digitalocean.com/reference/doctl/
+https://github.com/digitalocean/doctl
+https://www.digitalocean.com/community/tutorials/how-to-use-doctl-the-official-digitalocean-command-line-client
+	wget https://github.com/digitalocean/doctl/releases/download/v1.82.2/doctl-1.82.2-linux-amd64.tar.gz
+	wget https://github.com/digitalocean/doctl/releases/download/v1.82.2/doctl-1.82.2-checksums.sha256
+	sha256sum -c --ignore-missing doctl-1.82.2-checksums.sha256
+	tar xf doctl-1.82.2-linux-amd64.tar.gz -C /usr/local/bin
+Windows
+	choco install doctl
+	scoop install doctl
+Homebrew
+	brew uninstall -f doctl
+
+Configuration at
+/home/david/Library/Application Support/doctl/config.yaml
+/home/david/.config/doctl/config.yaml
+C:\Users\DAVIDY~1\AppData\Roaming\doctl\config.yaml
+
+Usage
+	doctl auth init --context <NAME>
+	doctl auth list
+	doctl auth switch --context <NAME>
+	doctl account get
+Create an instante
+	doctl compute droplet create --region tor1 --image ubuntu-18-04-x64 --size s-1vcpu-1gb <DROPLET-NAME>
+Delete a droplet
+	doctl compute droplet delete <DROPLET-ID>

@@ -11,6 +11,11 @@ Windows
 
 Configuration at
 /home/david/.wuzz/config.toml
+C:\Users\DAVIDY~1\.wuzz\config.toml
+	wget -O config.toml https://github.com/asciimoo/wuzz/raw/master/sample-config.toml
 
 Usage
 	wuzz --help
+	wuzz -X POST -H "authorization: Bearer ey..." --json request_body.json https://example.com
+Load request
+	wuzz -f request.json

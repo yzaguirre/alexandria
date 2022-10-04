@@ -1,0 +1,10 @@
+Renode - Antmicro's virtual development framework for complex embedded systems
+https://renode.io
+https://github.com/renode/renode
+Install the mono-complete package as per the installation instructions
+for various Linux distributions which can be found on the Mono project
+website.
+	wget https://github.com/renode/renode/releases/download/v1.13.2/renode_1.13.2_amd64.deb
+	dpkg -i renode_1.13.2_amd64.deb
+Windows
+	winget install Renode.Renode

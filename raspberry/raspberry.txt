@@ -1,6 +1,10 @@
 See ../electronics/rust.txt
 https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
+You can't buy a Raspberry Pi right now
+https://www.jeffgeerling.com/blog/2022/you-cant-buy-raspberry-pi-right-now
+https://news.ycombinator.com/item?id=33071408
+
 Best Raspberry Pi Projects
 https://www.tomshardware.com/features/best-raspberry-pi-projects
 https://news.ycombinator.com/item?id=31246337

@@ -1,13 +1,16 @@
 https://github.com/Killeroo/PowerPing
-	scoop install powerping
-Linux install
-see ~/MS/dotnet.txt
+Compile
+See ../MS/dotnet.txt
 	git clone https://github.com/Killeroo/PowerPing.git
 	cd PowerPing
-	git checkout v1.3.0
+	git checkout v1.3.3
 	cd src/PowerPing
 	dotnet restore "PowerPing.csproj"
 	dotnet build "PowerPing.csproj"
 	dotnet publish "PowerPing.csproj" -c Release -r ubuntu.18.10-x64
+Windows
+	scoop install powerping
+Binaries
+	wget -O "..\bin\PowerPing.exe" https://github.com/Killeroo/PowerPing/releases/download/v1.3.3/PowerPing.exe
 Usage
 	powerping IP

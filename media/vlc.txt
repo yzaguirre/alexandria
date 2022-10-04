@@ -9,16 +9,16 @@ Se instalarán los siguientes paquetes NUEVOS:
   vlc-plugin-skins2 vlc-plugin-video-output vlc-plugin-video-splitter vlc-plugin-visualization
 MacOS
 https://www.videolan.org/vlc/download-macosx.html
-	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg
-	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg.asc
-	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg.md5
-	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg.sha1
-	wget https://get.videolan.org/vlc/3.0.16/macosx/vlc-3.0.16-intel64.dmg.sha256
-	md5sum -c --ignore-missing vlc-3.0.16-intel64.dmg.md5
-	sha1sum -c --ignore-missing vlc-3.0.16-intel64.dmg.sha1
-	sha256sum -c --ignore-missing vlc-3.0.16-intel64.dmg.sha256
-	gpg --verify vlc-3.0.16-intel64.dmg.asc
-	open vlc-3.0.16-intel64.dmg
+	wget https://get.videolan.org/vlc/3.0.17.4/macosx/vlc-3.0.17.4-intel64.dmg
+	wget https://get.videolan.org/vlc/3.0.17.4/macosx/vlc-3.0.17.4-intel64.dmg.asc
+	wget https://get.videolan.org/vlc/3.0.17.4/macosx/vlc-3.0.17.4-intel64.dmg.md5
+	wget https://get.videolan.org/vlc/3.0.17.4/macosx/vlc-3.0.17.4-intel64.dmg.sha1
+	wget https://get.videolan.org/vlc/3.0.17.4/macosx/vlc-3.0.17.4-intel64.dmg.sha256
+	md5sum -c --ignore-missing vlc-3.0.17.4-intel64.dmg.md5
+	sha1sum -c --ignore-missing vlc-3.0.17.4-intel64.dmg.sha1
+	sha256sum -c --ignore-missing vlc-3.0.17.4-intel64.dmg.sha256
+	gpg --verify vlc-3.0.17.4-intel64.dmg.asc
+	open vlc-3.0.17.4-intel64.dmg
 	ln -s /Applications/VLC.app/Contents/MacOS/VLC bin/vlc
 Homebrew
 	brew install vlc

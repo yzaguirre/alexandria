@@ -5,3 +5,16 @@ Add rule
 	netsh http add urlacl url=http://+:44886/ user="NT SERVICE\TermService" listen=yes delegate=no sddl="D:(A;;GX;;;S-1-5-80-446051430-1559341753-4161941529-1950928533-810483104)"
 Remove rule
 	netsh http delete urlacl url=http://*:62555/
+Wireless report
+	netsh wlan show wlanreport
+C:\ProgramData\Microsoft\Windows\WlanReport\wlan-report-latest.html
+Show interfaces
+	netsh interface show interface
+Find IP Address
+	netsh interface ip show address | findstr "IP Address"
+DNS Server
+	netsh interface ip show dnsservers
+Turn off windows firewall
+	netsh advfirewall set allprofiles state off
+Turn on windows firewall
+	netsh advfirewall set allprofiles state on

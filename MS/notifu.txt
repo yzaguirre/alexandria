@@ -1,0 +1,16 @@
+https://www.paralint.com/projects/notifu/
+https://github.com/ixe013/notifu
+	wget https://github.com/ixe013/notifu/releases/download/1.7.1/notifu-1.7.1.zip
+	7z x -o"C:\ProgramData\notifu" notifu-1.7.1.zip
+Add to PATH environment variable
+C:\ProgramData\notifu
+
+Usage
+	notifu /m "my message"
+	notifu /m "This is a simple Notifu message." /p "Simple prompt"
+	notifu /m "This is a simple Notifu message." /d 3000
+With icon
+	notifu /m "This is a simple Notifu message." /i %SYSTEMROOT%\system32\shell32.dll,43
+
+See ../gnulinuxos/ntfy.txt
+../gnulinuxos/notify-send.txt

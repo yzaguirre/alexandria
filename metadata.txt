@@ -16,11 +16,12 @@ http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-met
 http://www.avpreserve.com/exiftool-tutorial-series/ 
 	apt install libimage-exiftool-perl
 Compile
-	wget https://www.exiftool.org/Image-ExifTool-12.45.tar.gz
+	wget https://www.exiftool.org/Image-ExifTool-12.47.tar.gz
 	wget https://www.exiftool.org/checksums.txt
 	sha1sum -c --ignore-missing checksums.txt
-	tar xf Image-ExifTool-12.45.tar.gz
-	cd Image-ExifTool-12.45
+	md5sum -c --ignore-missing checksums.txt
+	tar xf Image-ExifTool-12.47.tar.gz
+	cd Image-ExifTool-12.47
 	perl Makefile.PL
 	make test
     make install

@@ -1,0 +1,5 @@
+A powerful tool for managing networks and troubleshoot network problems!
+https://borntoberoot.net/NETworkManager/
+https://github.com/BornToBeRoot/NETworkManager
+	winget install BornToBeRoot.NETworkManager
+	choco install networkmanager

@@ -9,4 +9,7 @@ Configuration
 ~/.ntfy.yml
 ~/.config/ntfy/ntfy.yml
 ~/Library/Application Support/ntfy/ntfy.yml
-C:\Users\<User>\AppData\Local\dschep\ntfy.yml
+C:\Users\DAVIDY~1\AppData\Local\dschep\ntfy.yml
+
+See ../MS/notifu.txt
+notify-send.txt
