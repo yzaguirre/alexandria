@@ -30,9 +30,6 @@ CREATE DATABASE david;
 GRANT ALL ON david.* TO david@'localhost' IDENTIFIED BY 'f00.bar';
 FLUSH PRIVILEGES;
 
-MySQL :: MySQL Workbench :: 15.5 Manual Pages
-http://dev.mysql.com/doc/workbench/en/utils-manuals.html
-
 On OpenSuse:
 	# mkdir -p /var/lib/mysql/ /var/run/mysql/
 	# chown mysql:mysql -R /var/lib/mysql/ /var/run/mysql/
@@ -166,8 +163,8 @@ Windows
 	net stop MySQL56
 
 Configuración en
-	 %WINDIR%\my.cnf
-	%INSTALLDIR%\my.ini, %INSTALLDIR%\my.cnf
+%WINDIR%\my.cnf
+%INSTALLDIR%\my.ini, %INSTALLDIR%\my.cnf
 
 Charset
 http://dev.mysql.com/doc/refman/5.5/en/charset-applications.html 
@@ -212,7 +209,7 @@ Crear Usuarios
 	GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, FILE, INDEX, ALTER, CREATE TEMPORARY TABLES, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EXECUTE ON *.* TO web@localhost;
 	GRANT ALL ON *.* TO admin@localhost WITH GRANT OPTION;
 	FLUSH PRIVILEGES;
-	UPDATE mysql.user SET PASSWORD = PASSWORD('foo.baz')  vWHERE User = 'web';
+	UPDATE mysql.user SET PASSWORD = PASSWORD('foo.baz')  WHERE User = 'web';
 	UPDATE mysql.user SET PASSWORD = PASSWORD('foo.baz')  WHERE User = 'admin';
 Easy way
 	CREATE DATABASE symphony;

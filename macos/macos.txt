@@ -1,7 +1,13 @@
-See ~/video/ffmpeg.txt, ~/terminal/iterm.txt, ~/ide/xcode.txt
+See
+../video/ffmpeg.txt
+../terminal/iterm.txt
+../ide/xcode.txt
+../compression/keka.txt
+../compression/7zip.txt
+../compression/ditto.txt
 
-https://www.macincloud.com/
-https://www.macstadium.com/
+https://www.macincloud.com
+https://www.macstadium.com
 
 https://www.bejarano.io/hardening-macos/
 https://news.ycombinator.com/item?id=31864974
@@ -71,6 +77,11 @@ https://news.ycombinator.com/item?id=26513528
 SHA Hash Sum
 https://dyclassroom.com/howto-mac/how-to-verify-checksum-on-a-mac-md5-sha1-sha256-etc
 	shasum -a 256 /path/to/file
+	openssl sha256 filename
+MD5 Hash Sum
+https://osxdaily.com/2009/10/13/check-md5-hash-on-your-mac/
+	md5 big_hugh_file.iso
+	openssl md5 big_huge_file.iso
 
 macOS gatekeeper and file quarantine bypass
 https://objective-see.com/blog/blog_0x64.html

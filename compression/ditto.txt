@@ -1,0 +1,9 @@
+See zip.txt
+https://ss64.com/osx/ditto.html
+https://www.polynique.com/operating-systems/how-to-zip-files-and-folders-in-macos-from-terminal/
+Zip a folder
+	ditto -c -k --sequesterRsrc --keepParent folder archive.zip
+Extract an archive
+	ditto -x -k archive.zip destination
+Extract with password
+	ditto -x -k --password archive.zip destination

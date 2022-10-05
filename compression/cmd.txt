@@ -22,3 +22,5 @@ Unzip
 	expand file.zip file
 Open filestream
 	expand imagetext.txt:picture.jpg extracted.jpg
+
+See PowerShell.txt

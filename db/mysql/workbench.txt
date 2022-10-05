@@ -1,0 +1,20 @@
+https://dev.mysql.com/doc/workbench/en/
+https://dev.mysql.com/downloads/workbench/
+	wget "https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb"
+	wget -O "mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb.asc" "https://dev.mysql.com/downloads/gpg/?file=mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb&p=8"
+https://dev.mysql.com/doc/refman/8.0/en/checking-gpg-signature.html
+	gpg --keyserver keyserver.ubuntu.com --recv-keys 3A79BD29
+	gpg --verify mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb.asc
+	md5sum mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb
+5155efe91a4681c5f23bed64fb3779b1 
+	dpkg -i mysql-workbench-community_8.0.30-1ubuntu22.04_amd64.deb
+Windows
+	choco install mysql.workbench
+Installed at
+C:\Program Files\MySQL\MySQL Workbench 8.0 CE
+
+Configuration at
+https://dev.mysql.com/doc/workbench/en/wb-configuring-files.html
+/home/david/.mysql/workbench/
+C:\Users\DAVIDY~1\AppData\Roaming\MySQL\Workbench\
+/home/david/Library/Application Support/MySQL/Workbench/

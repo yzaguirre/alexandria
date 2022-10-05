@@ -126,3 +126,30 @@ https://www.softwareok.com/?seite=faq-Windows-Console&faq=24
 	vim C:\Users\dyzag\bin\restartExplorer.bat
 taskkill /IM explorer.exe /F
 explorer.exe
+
+Service Control
+Start a service
+	sc start MariaDB
+Stop a service
+	sc stop MariaDB
+Delete a service (from the registry).
+	sc delete MariaDB
+Find stopped service
+	SC query messenger | FIND "STATE" | FIND "STOPPED"
+Find running service
+	SC query messenger | FIND "STATE" | FIND "RUNNING"
+With PowerShell
+	& sc.exe
+Disable Windows Update (Windows 10)
+	SC config wuauserv start= disabled
+	NET stop wuauserv
+Network resources
+	net view
+List services
+	net start
+Start a service
+	net start spooler
+	net start MySQL
+
+Self Extracting EXE installer using 7zip on Windows or Linux 7zS.sfx
+https://www.youtube.com/watch?v=Gh7JDNT-Luc

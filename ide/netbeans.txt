@@ -44,3 +44,8 @@ Remove jshell references
 https://www.mail-archive.com/users@netbeans.apache.org/msg03412.html
 	cd "C:\Program Files\NetBeans-15"
 	7z a backup-conf.zip .\netbeans\etc\netbeans.conf
+
+https://github.com/dtgm/chocolatey-packages/issues/167
+https://github.com/dtgm/chocolatey-packages/issues/92
+Remove netbeans bad registry
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-all-15.0.0.220826.0

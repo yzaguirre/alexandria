@@ -59,9 +59,21 @@ func main() {
 }
 Compile
 	go build
+Compile for linux from PowerShell
+	$env:GOOS="linux"
+	$env:GOARCH="amd64"
+	go build
+See other architectures
+	go tool dist list
 Or Run
 	go run hello.go
 hello, world
+
+Print go path
+	go env GOPATH
+	go env GOOS GOARCH
+Install
+	go install
 
 https://golang.org/doc/effective_go.html
 
@@ -91,6 +103,32 @@ https://blog.golang.org/strings
 for i := 0; i < len(sample); i++ {
         fmt.Printf("%x ", sample[i])
     }
+
+String interpolation
+https://www.golinuxcloud.com/golang-string-interpolation/
+thisDate := fmt.Sprintf("%d-%d-%d", thisYear, thisMonth, thisDay)
+
+Flags
+https://stackoverflow.com/questions/18429632/flag-package-in-go-do-i-have-to-always-set-default-value
+optFile := flag.String("file", "", "Source file")
+fn := *optFile
+if fn == "" {
+	fn = "/dev/stdin"
+}
+
+Write to file
+https://gosamples.dev/write-file/
+https://stackoverflow.com/questions/1821811/how-to-read-write-from-to-a-file-using-go
+f, err := os.Create("file.txt")
+if err != nil {
+	log.Fatal(err)
+}
+// remember to close the file
+defer f.Close()
+_, err := f.WriteString(line + "\n")
+if err != nil {
+	log.Fatal(err)
+}
 
 https://github.com/gtank/cryptopasta
 https://news.ycombinator.com/item?id=12107682s

@@ -1,0 +1,9 @@
+Text file format converters
+https://waterlan.home.xs4all.nl/dos2unix.html
+https://sourceforge.net/p/dos2unix/dos2unix/ci/master/tree/
+	apt install dos2unix
+Windows
+	choco install dos2unix
+
+Usage
+	dos2unix file.txt

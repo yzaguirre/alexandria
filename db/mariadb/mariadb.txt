@@ -1,15 +1,12 @@
-https://mariadb.com/
+https://mariadb.com
+https://github.com/MariaDB/server
 MariaDB is intended to be, 5 branch, replacement for mysql
 community users development mysql,
 less forthcoming for plans long term for 
 Resposoble forked the last code five branch
 stable and secure
 fedora, ubuntu replaces mysql for latest secure version mariadb
-https://downloads.mariadb.org/
-	apt update
-	apt install mariadb-server
-Reload
-	systemctl restart mariadb.service
+See ../mysql/mysql.txt
 Docs
 https://mariadb.com/kb/en/library/basic-sql-statements/
 https://mariadb.com/kb/en/library/basic-sql-statements/
@@ -18,21 +15,6 @@ https://mariadb.com/kb/en/library/alter-table/
 https://mariadb.com/kb/en/library/create-table/#column-and-index-definitions
 https://mariadb.com/kb/en/library/data-definition/
 https://mariadb.com/kb/en/library/data-types/
-
-Instalation
-Runs part of secure_instalation
-
-Add password for root user
-
-./mysql_secure_instalattion
-Disables anonymous lo
-Disables root login
-remotes test user database
-removes remote login
-Tests users, database or its configuration can have exploits associated with them,
-so better safe than sorry for a production environment.
-reload
-	systemctl restart mariadb.service
 
 https://www.hellodevops.blog/posts/database-character-sets-and-collations-explained/
 https://news.ycombinator.com/item?id=29793916

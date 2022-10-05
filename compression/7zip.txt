@@ -35,6 +35,13 @@ Windows
 Installer
 	wget https://7-zip.org/a/7z2200-x64.exe
 Append to PATH C:\Program Files\7-Zip
+MacOS
+See keka.txt
+https://7ziphelp.com/7-zip-for-macos
+	wget https://www.7-zip.org/a/7z2107-mac.tar.xz
+	mkdir /home/david/Library/Application/7zip
+	tar -xfJ 7z2107-mac.tar.xz -C /home/david/Library/Application/7zip
+	ln -s /home/david/Library/Application/7zip/7zz /home/david/bin/7zz
 
 Create ZIP file
 https://stackoverflow.com/questions/18180060/how-to-zip-a-file-using-cmd-line
@@ -54,9 +61,6 @@ https://stackoverflow.com/questions/53283240/how-to-create-tar-file-with-7zip
 Add all files from directory "dir1" to SFX archive  archive.exe
 (Remark : SFX archive MUST end with ".exe")
 	7z a -sfx archive.exe dir1
-Add all files from directory "a_directory" to the archive "archive.7z"
-(with data and header archive encryption on)
-	7z a -mhe=on -pmy_password archive.7z a_directory
 Adds  all  files  from  directory  "dir1" to archive archive.7z
 using "ultra settings"
 	7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on archive.7z dir1
@@ -97,13 +101,13 @@ https://stackoverflow.com/questions/1359793/programmatically-extract-tar-gz-in-a
 x    = Extract with full paths command
 -so  = write to stdout switch
 -si  = read from stdin switch
--aoa = Overwrite all existing files without prompt. 
+-aoa = Overwrite all existing files without prompt.
 -o   = output directory
 Extract split file
 	7z x "Release4.zip.001"
 
 https://www.redhat.com/sysadmin/encrypting-decrypting-7zip
-Encrypt
+Encrypt AES256 (default for 7z) and header archive on
 	7z a -p -mhe=on directory.tar.7z directory.tar
 Encrypt AES256
 	7z a -p -mem=AES256 backup.zip files
@@ -112,3 +116,12 @@ Note: zip can't encrypt headers.
 7-Zip up to 21.07 on Windows allows privilege escalation and command execution
 https://github.com/kagancapar/CVE-2022-29072
 https://news.ycombinator.com/item?id=31070256
+
+7zip - Securely encrypt and decrypt files using 7zip
+https://www.youtube.com/watch?v=icG__m92tRY
+
+How to send encrypted files and folders by email
+https://www.youtube.com/watch?v=2Ltgl9D4Y2g
+
+7-Zip File Manager, compress, decompress, .rar, .tar, .zip, .7z, .gz Encrypt, decrypt, secure E-mail
+https://www.youtube.com/watch?v=w1elgVkA7Cc

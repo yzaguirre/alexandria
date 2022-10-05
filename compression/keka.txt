@@ -1,0 +1,11 @@
+The macOS file archiver
+https://www.keka.io
+https://github.com/aonez/Keka
+	wget https://github.com/aonez/Keka/releases/download/v1.2.56/Keka-1.2.56.dmg
+	wget https://github.com/aonez/Keka/releases/download/v1.2.56/Keka-1.2.56.txt
+	shasum -a 256 Keka-1.2.56.dmg
+cfed68a618da5d5957dc40eb3f33e27e2b1c1f31d103063c23f20918a507f470
+	md5 Keka-1.2.56.dmg
+72d6a76b14fe717927474e344564aabd
+
+It includes 7zip and unrar

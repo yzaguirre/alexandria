@@ -19,7 +19,7 @@ Binaries
 	wget https://github.com/nushell/nushell/releases/download/0.69.1/nu-0.69.1-x86_64-pc-windows-msvc.msi
 	start nu-0.69.1-x86_64-pc-windows-msvc.msi
 Installed at
-C:\
+C:\Program Files\nu\bin
 Homebrew
 	brew install nushell
 

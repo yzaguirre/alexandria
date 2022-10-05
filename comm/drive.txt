@@ -1,3 +1,10 @@
+https://drive.google.com
+Windows
+	choco install googledrive
+	winget install Google.Drive
+Installed at
+C:\Program Files\Google\Drive File Stream\64.0.4.0\GoogleDriveFS.exe
+
 Google Drive API
 https://developers.google.com/resources/api-libraries/documentation/drive/v3/python/latest/index.html
 https://developers.google.com/drive/api/v3/about-sdk?hl=en

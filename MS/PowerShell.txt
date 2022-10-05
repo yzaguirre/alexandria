@@ -123,6 +123,8 @@ Log the services
 	Get-Service | Out-File C:\Users\dyzag\ServicesPS.txt
 Log in CSV
 	Get-Process | Out-Csv C:\Users\dyzag\ProcessesPS.csv
+Set manual
+	Set-Service -name postgresql-x64-14 -startuptype 'manual'
 
 Compare 2 files
 	$ListReferencia = Get-Content "C:\PowerShell\ListaOrigen.txt"

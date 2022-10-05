@@ -1,3 +1,4 @@
+https://downloads.mariadb.org
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
 	apt install mariadb-server
 The following NEW packages will be installed:
@@ -7,24 +8,60 @@ mariadb-client-core-10.5 mariadb-common mariadb-server mariadb-server-10.5 maria
 	sudo mysqladmin version
 	mysqladmin -p -u root version
 Windows
+	choco install mariadb
+https://github.com/dtgm/chocolatey-packages/issues/167
+https://github.com/dtgm/chocolatey-packages/issues/92
+Remove netbeans bad registry
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-all-15.0.0.220826.0
+Installed at
+C:\ProgramData\chocolatey\lib\mariadb
+C:\Program Files\MariaDB 10.10\
+Data dir at
+C:\Program Files\MariaDB 10.10\data
+	winget install MariaDB.Server
 	scoop install mariadb
 Database has been initialized (username: root, password: <blank>)
-Default data directory is C:\Users\User\scoop\apps\mariadb\current\data
+Installed at
+C:\Users\DAVIDY~1\scoop\apps\mariadb\current\data
 Run to start the Database:
 	mysqld --standalone
 or
 	mysqld --console
-or run following command as administrator to register MariaDB as a service. See: https://mariadb.com/kb/en/library/mysql_install_dbexe/
-
-	mysql_install_db --service=MariaDB --password=NewRootPassword
-
+or run following command as administrator to register MariaDB as a service. See: https://mariadb.com/kb/en/mysql_install_dbexe/
+	mariadb-install-db --datadir=C:\db --service=MariaDB --password=NewRootPassword
+Secure the installation
+	./mysql_secure_instalattion
+Disables anonymous lo
+Disables root login
+remotes test user database
+removes remote login
+Tests users, database or its configuration can have exploits associated with them,
+so better safe than sorry for a production environment.
+Restart service
+	systemctl restart mariadb.service
 To stop and/or delete the Service run
 	sc stop MariaDB
-and
 	sc delete MariaDB
-
+Set manual start
+	Set-Service -name MySQL -startuptype 'manual'
 Stop on system boot
 	systemctl disable mariadb.service
 
+Configuration at
+https://mariadb.com/kb/en/configuring-mariadb-with-option-files/
+C:\Program Files\MariaDB 10.10\data\my.ini
+Client configuration at
+C:\my.ini
+/home/david/.my.cnf
+
+Environment variables
+https://mariadb.com/kb/en/mariadb-environment-variables/
+
+Usage
+	mariadb -uroot
 Create user
 GRANT ALL ON *.* TO 'david'@'localhost' IDENTIFIED BY 'DAVID' WITH GRANT OPTION;
+
+Print Default Option File Locations
+https://mariadb.com/kb/en/configuring-mariadb-with-option-files/
+	mariadbd --help --verbose | subl -
