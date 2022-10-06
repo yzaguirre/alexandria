@@ -2,7 +2,8 @@ https://github.com/samizzo/hexed
 Windows
 	scoop install hexed
 Binary
-	wget -O bin\hexed.exe https://github.com/samizzo/hexed/releases/download/1.0.32/hexed.exe
+	wget -O "..\bin\" https://github.com/samizzo/hexed/releases/download/1.0.32/hexed.exe
+
 Usage
 	hexed myfile.txt
 Navigation

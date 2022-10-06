@@ -1,0 +1,76 @@
+Watches files and records, or triggers actions, when they change.
+https://facebook.github.io/watchman/
+https://github.com/facebook/watchman
+	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-linux.zip
+	7zz e -o"/opt/watchman" watchman-v2022.10.03.00-linux.zip
+Add to PATH environment variable
+/opt/watchman
+Compile
+	git clone https://github.com/facebook/watchman.git
+	cd watchman
+Checkout the latest release
+	git checkout v2022.10.03.00
+	./autogen.sh
+	./configure
+	make
+	sudo make install
+Windows
+	choco install watchman
+Binaries
+	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-windows.zip
+	7z e -o"C:\ProgramData\watchman" watchman-v2022.10.03.00-windows.zip
+Add to PATH environment variable
+C:\ProgramData\watchman
+Macos
+	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-macos.zip
+	ditto -x -k watchman-v2022.10.03.00-macos.zip /home/david/Library
+
+Usage
+	watchman watch ~/src
+The single quotes around '*.css' are important!
+	watchman -- trigger ~/src buildme '*.css' -- minify-css
+
+Execute a command when something changes
+https://github.com/crodjer/watchman
+https://news.ycombinator.com/item?id=33094829
+	git clone https://github.com/crodjer/watchman.git
+	cd watchman
+	make install
+To uninstall
+	make uninstall
+
+Usage
+Watch a shell script and execute it on change.
+	watchman sample.sh ./sample.sh
+
+Executes commands in response to file modifications
+https://watchexec.github.io
+https://github.com/watchexec/watchexec
+https://docs.rs/watchexec/latest/watchexec/
+	wget https://github.com/watchexec/watchexec/releases/download/v1.20.6/watchexec-1.20.6-x86_64-unknown-linux-gnu.deb
+	wget https://github.com/watchexec/watchexec/releases/download/v1.20.6/B3SUMS
+	wget -O B3SUMS.minisig https://github.com/watchexec/watchexec/releases/download/v1.20.6/B3SUMS.auto.minisig
+	wget https://github.com/watchexec/watchexec/releases/download/v1.20.6/SHA512SUMS
+	wget -O SHA512SUMS.minisig https://github.com/watchexec/watchexec/releases/download/v1.20.6/SHA512SUMS.auto.minisig
+	wget https://raw.githubusercontent.com/watchexec/watchexec/cli-v1.20.5/.github/workflows/release.pub
+	minisign -Vm SHA512SUMS -p release.pub
+	minisign -Vm B3SUMS -p release.pub
+	sha512sum -c --ignore-missing SHA512SUMS
+	gohash -a sha512 -c SHA512SUMS
+	b3sum -c B3SUMS
+	dpkg -i watchexec-1.20.6-x86_64-unknown-linux-gnu.deb
+Compile
+	cargo install watchexec-cli
+Windows
+	choco install watchexec
+	scoop install watchexec
+Binaries
+	wget https://github.com/watchexec/watchexec/releases/download/v1.20.6/watchexec-1.20.6-x86_64-pc-windows-msvc.zip
+	7z e -o"C:\ProgramData\watchexec" watchexec-1.20.6-x86_64-pc-windows-msvc.zip
+Add to PATH environment variable
+C:\ProgramData\watchexec
+Homebrew
+	brew install watchexec
+
+Usage
+	watchexec -e js,css,html npm run build

@@ -12,7 +12,14 @@ Binary
 Public key for binaries
 RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
 
+Keys at
+/home/david/.minisign
+C:\Users\DAVIDY~1\.minisign
+
 Usage
+Creating a key pair
+	minisign -G
+	minisign -G -p public.key -s secret.key
 Signing a file
 The signature is put into myfile.txt.minisig.
 	minisign -Sm myfile.txt

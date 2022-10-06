@@ -1,0 +1,18 @@
+https://nestedtext.org
+Extension: .nt
+
+CLI to convert between NestedText and JSON, YAML, or TOML
+https://github.com/AndydeCleyre/nestedtextto
+https://www.reddit.com/r/commandline/comments/xus434/nt2_a_cli_converter_between_nestedtext_and_json/
+	sudo -H pip install -U 'nt2[toml]'
+
+Usage
+	nt2json --help
+	nt2json --help
+	nt2yaml --help
+	nt2toml --help
+	json2nt --help
+	yaml2nt --help
+	toml2nt --help
+
+See ../gnulinuxos/jc.

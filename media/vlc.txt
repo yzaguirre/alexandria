@@ -26,6 +26,11 @@ Windows
 	winget install VideoLAN.VLC
 Add C:\Program Files\VideoLAN\VLC to PATH
 
+Configuration at
+C:\Program Files\VideoLAN\VLC\lua\http
+/Applications/VLC.app/Contents/MacOS/share/lua/http/.hosts
+/usr/share/vlc/lua/http/.hosts
+
 TUI mode
 	cvlc --extraintf ncurses
 	vlc -I ncurses --no-video
@@ -38,6 +43,8 @@ https://www.videolan.org/doc/play-howto/en/ch04.html
 
 http
 https://wiki.videolan.org/Documentation:Alternative_Interfaces/
+https://wiki.videolan.org/Documentation:Advanced_Use_of_VLC/#The_HTTP_interface
+https://www.howtogeek.com/117261/how-to-activate-vlcs-web-interface-control-vlc-from-a-browser-use-any-smartphone-as-a-remote/
 	vlc -I http [--http-src /directory/] [--http-host host:port]
 	vlc -I http --http-password 555 --http-host cb64:8881 *mp3
 

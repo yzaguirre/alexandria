@@ -1,0 +1,10 @@
+Sharing is a command-line tool to share directory and files with
+ios and android devices without an extra client app
+https://github.com/parvardegr/sharing
+https://news.ycombinator.com/item?id=33094627
+	npm install -g easy-sharing
+
+Usage
+Share a file or directory
+	sharing /directory-or-file-to-share
+	sharing --ip your-public-ip-address /directory-or-file-to-share

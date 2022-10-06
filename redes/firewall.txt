@@ -1,0 +1,96 @@
+It's not my fault but I gotta deal with it - how I learned to handle corporate firewalls in my frontend.
+https://www.valcanbuild.tech/handling-corporate-firewalls/
+https://news.ycombinator.com/item?id=33078280
+
+https://www.digitalocean.com/community/tutorials/what-is-a-firewall-and-how-does-it-work
+ufw
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04
+https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
+Using IPv6 with UFW
+	vim /etc/default/ufw
+...
+IPV6=yes
+...
+List available apps
+	ufw app list
+	ufw allow OpenSSH
+Check the status of UFW
+	ufw status verbose
+	ufw status numbered
+	ufw status
+Check status when disabled
+https://askubuntu.com/questions/30781/see-configured-rules-even-when-inactive#533664
+	ufw show added
+UFW is set to deny all incoming connections and allow all outgoing connections
+	ufw default deny incoming
+	ufw default allow outgoing
+Allow SSH and other Connections
+	ufw allow 22/tcp # ssh
+	ufw allow http/tcp
+	ufw allow https/tcp
+	ufw allow 8090/tcp # app
+	ufw allow 3000/tcp # gogs
+	ufw allow 5000/tcp # letschat
+	ufw allow 5222/tcp # xmpp
+	ufw allow 64738 # mumble
+	ufw allow 60001:61000/udp # mosh
+	ufw allow proto tcp from any to any port 80,443
+	ufw deny ICMP
+
+For Nginx
+	ufw allow 'Nginx Full'
+	ufw delete allow 'Nginx HTTP'
+
+Enable UFW
+	ufw enable
+
+Delte rule by rule number
+	ufw status numbered
+	ufw delete 2
+By Actual Rule
+	ufw delete allow http
+	ufw delete allow 80
+This method will delete both IPv4 and IPv6 rules, if they exist.
+
+How To Disable UFW
+	ufw disable
+Reset UFW Rules
+	ufw reset
+Allow DB to Specific Network Interface
+	ufw allow in on eth1 to any port 3306
+	ufw allow in on eth1 to any port 5432
+
+iptables
+https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
+https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules
+https://www.digitalocean.com/community/tutorials/a-deep-dive-into-iptables-and-netfilter-architecture
+List Specific Chain
+	iptables -S
+	iptables -S TCP
+List Rules as Tables
+	iptables -L -n -v --line-numbers
+	iptables -L --line-numbers
+To display INPUT or OUTPUT chain rules, enter:
+	iptables -L INPUT -n -v --line-numbers
+	iptables -L OUTPUT -n -v --line-numbers
+If you want to limit the output to a specific chain (INPUT, OUTPUT, TCP, etc.),
+you can specify the chain name directly after the -L option.
+	iptables -L INPUT
+Persistence
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-iptables-firewall-to-protect-traffic-between-your-servers
+
+ICMP rules
+https://help.ubuntu.com/community/UFW
+-A ufw-before-forward -p icmp -m icmp --icmp-type 3 -j ACCEPT
+-A ufw-before-forward -p icmp -m icmp --icmp-type 4 -j ACCEPT
+-A ufw-before-forward -p icmp -m icmp --icmp-type 11 -j ACCEPT
+-A ufw-before-forward -p icmp -m icmp --icmp-type 12 -j ACCEPT
+-A ufw-before-forward -p icmp -m icmp --icmp-type 8 -j ACCEPT
+-A ufw-before-input -p icmp -m icmp --icmp-type 3 -j ACCEPT
+-A ufw-before-input -p icmp -m icmp --icmp-type 4 -j ACCEPT
+-A ufw-before-input -p icmp -m icmp --icmp-type 11 -j ACCEPT
+-A ufw-before-input -p icmp -m icmp --icmp-type 12 -j ACCEPT
+-A ufw-before-input -p icmp -m icmp --icmp-type 8 -j ACCEPT
+-A ufw-user-limit -j REJECT --reject-with icmp-port-unreachable
+
+	 vim /etc/ufw/before.rules 

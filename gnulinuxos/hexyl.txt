@@ -2,6 +2,15 @@ A command-line hex viewer
 https://github.com/sharkdp/hexyl
 	wget https://github.com/sharkdp/hexyl/releases/download/v0.10.0/hexyl_0.10.0_amd64.deb
 	dpkg -i hexyl_0.10.0_amd64.deb
+Termux
+	pkg install hexyl
 Windows
+	scoop install hexyl
+Binaries
 	wget https://github.com/sharkdp/hexyl/releases/download/v0.10.0/hexyl-v0.10.0-x86_64-pc-windows-msvc.zip
 	7z e -o"..\bin" hexyl-v0.10.0-x86_64-pc-windows-msvc.zip hexyl-v0.10.0-x86_64-pc-windows-msvc\hexyl.exe
+Homebrew
+	brew install hexyl
+
+Usage
+	hexyl small.png

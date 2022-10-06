@@ -23,6 +23,9 @@ C:\Program Files\MariaDB 10.10\data
 Database has been initialized (username: root, password: <blank>)
 Installed at
 C:\Users\DAVIDY~1\scoop\apps\mariadb\current\data
+Includes HeidiSQL at
+C:\Program Files (x86)\Common Files\MariaDBShared\HeidiSQL\
+
 Run to start the Database:
 	mysqld --standalone
 or

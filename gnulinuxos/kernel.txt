@@ -1,4 +1,4 @@
-https://www.kernel.org/
+https://www.kernel.org
 Compiling The Linux Kernel On Ubuntu & Debian
 https://www.youtube.com/watch?v=E4yRcmQqvWM
 Dependencies
@@ -175,3 +175,7 @@ https://news.ycombinator.com/item?id=16107578
 make CONFIG_PAGE_TABLE_ISOLATION=y deb-pkg
 Remove old kernels in /boot
 https://askubuntu.com/questions/89710/how-do-i-free-up-more-space-in-boot
+
+Intel Laptop Users Should Avoid Linux 5.19.12 to Avoid Damaging the Display
+https://lore.kernel.org/all/YzwooNdMECzuI5+h@intel.com/
+https://news.ycombinator.com/item?id=33092974

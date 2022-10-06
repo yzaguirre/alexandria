@@ -1,0 +1,6 @@
+An attractive Matrix client built in React Native
+Ditto is an in-development React Native client for iOS and Android.
+https://www.dittochat.org
+https://gitlab.com/ditto-chat/ditto/activity
+https://matrix.org/docs/projects/client/ditto-chat
+Not actively maintained

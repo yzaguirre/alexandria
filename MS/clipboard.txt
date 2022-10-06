@@ -4,3 +4,10 @@ Set clipboard
 	echo "hello" | Set-Clipboard
 Get clipboard
 	gcb
+
+Ditto is an extension to the Windows Clipboard. You copy something to the Clipboard
+and Ditto takes what you copied and stores it in a database to retrieve at a later time.
+https://ditto-cp.sourceforge.io/
+https://github.com/sabrogden/Ditto
+	choco install ditto
+	winget install Ditto.Ditto

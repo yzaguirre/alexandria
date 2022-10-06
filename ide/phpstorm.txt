@@ -1,8 +1,21 @@
 https://www.jetbrains.com/phpstorm/
-	wget http://download.jetbrains.com/webide/PhpStorm-8.0.2.tar.gz
-	tar xf PhpStorm-8.0.2.tar.gz -C /opt
-	rm PhpStorm-8.0.2.tar.gz
+	wget https://download-cdn.jetbrains.com/webide/PhpStorm-2022.2.2.tar.gz
+	wget https://download.jetbrains.com/webide/PhpStorm-2022.2.2.tar.gz.sha256
+	gohash -c PhpStorm-2022.2.2.tar.gz.sha256
+	tar xf PhpStorm-2022.2.2.tar.gz -C /opt
+	rm PhpStorm-2022.2.2.tar.gz
 	ln -s /opt/PhpStorm/bin/phpstorm.sh /usr/local/bin/phpstorm
+Windows
+	choco install phpstorm
+	winget install JetBrains.PHPStorm
+Installer
+	wget https://download-cdn.jetbrains.com/webide/PhpStorm-2022.2.2.exe
+	wget https://download.jetbrains.com/webide/PhpStorm-2022.2.2.exe.sha256
+	gohash -c PhpStorm-2022.2.2.exe.sha256
+	start PhpStorm-2022.2.2.exe
+Installed at
+C:\Program Files (x86)\JetBrains\PhpStorm 2022.2.2
+
 Xdebug
 https://www.jetbrains.com/phpstorm/help/configuring-xdebug.html
 https://www.jetbrains.com/phpstorm/marklets/

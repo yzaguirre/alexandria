@@ -101,8 +101,7 @@ https://codeyarns.com/2015/02/10/how-to-install-and-use-watchman/
 https://facebook.github.io/watchman/docs/install.html
 	git clone https://github.com/facebook/watchman.git
 	cd watchman
-Checkout the latest release
-	git checkout v4.6.0
+	git checkout v2022.10.03.00
 	./autogen.sh
 	./configure
 	make

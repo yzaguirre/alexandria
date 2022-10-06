@@ -103,3 +103,7 @@ https://github.com/tjluoma/launchd-keepalive
 
 Screen reader
 https://twitter.com/AshleeMBoyer/status/1402975801902047234
+
+QR code images in macOS are silently executed in the background hours/days later
+https://twitter.com/simonw/status/1577674380133269504
+https://news.ycombinator.com/item?id=33096540

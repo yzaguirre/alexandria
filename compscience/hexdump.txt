@@ -1,0 +1,11 @@
+Unix od
+	od file.txt
+Vim's xxd
+https://github.com/vim/vim/tree/master/src/xxd
+https://www.reddit.com/r/commandline/comments/xudwxn/xxd_for_macos/
+	xxd file
+
+See
+../gnulinuxos/hex.txt
+../gnulinuxos/hexyl.txt
+../hexed.txt
