@@ -1,0 +1,17 @@
+LicenseCertificate-A2943229.pdf
+	sha256sum -c pycharm-professional-2021.2.3.tar.gz.txt
+	tar xf pycharm-professional-2021.2.3.tar.gz -C /opt
+	cd /opt/pycharm-2021.2.3/bin
+	./pycharm.sh
+Configuration variables at ~/.config/JetBrains/PyCharm2021.2
+Data cache at ~/.local/share/JetBrains/PyCharm2021.2
+
+Add /opt/pycharm-2021.2.3/bin to PATH
+
+Create pycharm64.vmoptions file at the configuration directory
+and set the -Xms and -Xmx parameters
+See /opt/pycharm-2021.2.3/bin/vmoptions file for inspiration
+	vim ~/.config/JetBrains/PyCharm2021.2/pycharm64.vmoptions
+More info on memory parameters
+https://codeahoy.com/2019/09/02/java-xmx-vs-xms/
+	java -XX:+PrintCommandLineFlags -version

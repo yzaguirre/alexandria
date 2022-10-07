@@ -1,4 +1,4 @@
-https://mat.boum.org/
+https://mat.boum.org
 	$ mat -d filename.ext
 That command will return (to the display) the metadata stored in a
 file. 

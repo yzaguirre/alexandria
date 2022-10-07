@@ -69,3 +69,6 @@ Remove the bridge
 	ip link set dev eno1 nomaster
 	ip link delete dev bridge0
 Use the bridge helper
+
+Subnet Mask - Explained
+https://www.youtube.com/watch?v=s_Ntt6eTn94

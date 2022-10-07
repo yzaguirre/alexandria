@@ -1,0 +1,2 @@
+https://www.reddit.com/r/commandline/comments/xpzihx/fname_generate_random_humanfriendly_names/
+	shuf -n 4 /usr/share/dict/words | paste -sd "-" -
