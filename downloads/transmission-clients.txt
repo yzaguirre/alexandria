@@ -7,6 +7,12 @@ Windows
 Installed at
 C:\Program Files\Transmission\
 
+Transmission 4.0.0 beta 1
+https://news.ycombinator.com/item?id=33118471
+Binaries
+	wget https://github.com/transmission/transmission/releases/download/4.0.0-beta.1/transmission-4.0.0-beta.1+r98cf7d9b3c-x64.msi
+	start transmission-4.0.0-beta.1+r98cf7d9b3c-x64.msi
+
 transdroid
 https://www.transdroid.org/download/
 
@@ -18,6 +24,13 @@ http://www.webupd8.org/2009/12/setting-up-transmission-remote-gui-in.html
 	ln -s /opt/transmission-gui/transgui /usr/local/bin
 Windows
 	choco install transgui
+
+http://go.kblog.us/2011/03/using-transmission-cli-to-download.html
+	transmission-cli http://cdimage.debian.org/debian-cd/7.5.0/amd64/bt-cd/debian-7.5.0-amd64-lxde-CD-1.iso.torrent
+	transmission-cli "magnet link here"
+Crear directorio Downloads
+	mkdir Downloads
+	transmission-cli "magnet" -w Downloads
 
 NCurses interface with transmission daemon
 https://github.com/fagga/transmission-remote-cli
@@ -75,3 +88,30 @@ See transg-tui.txt
 
 Fragments
 https://gitlab.gnome.org/World/Fragments
+
+A tiny, hackable BitTorrent client.
+https://picotorrent.org
+https://github.com/picotorrent/picotorrent
+	choco install picotorrent
+	winget install PicoTorrent.PicoTorrent
+
+BiglyBT
+https://www.biglybt.com
+https://github.com/BiglySoftware/BiglyBT
+	wget https://files.biglybt.com/installer/BiglyBT_Installer.sh
+	sh BiglyBT_Installer.sh
+Java dependency
+	winget install BiglySoftware.BiglyBT
+	choco install biglybt-no-java
+
+https://deluge-torrent.org
+Windows
+	choco install deluge
+	winget install DelugeTeam.Deluge
+Binaries
+	wget https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe
+	wget https://ftp.osuosl.org/pub/deluge/windows/deluge-2.1.1-win64-setup.exe.sha256
+	gohash -c deluge-2.1.1-win64-setup.exe.sha256
+	start deluge-2.1.1-win64-setup.exe
+Installed at
+C:\Program Files\Deluge

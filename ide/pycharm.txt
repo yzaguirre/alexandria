@@ -1,8 +1,11 @@
-LicenseCertificate-A2943229.pdf
-	sha256sum -c pycharm-professional-2021.2.3.tar.gz.txt
-	tar xf pycharm-professional-2021.2.3.tar.gz -C /opt
-	cd /opt/pycharm-2021.2.3/bin
-	./pycharm.sh
+https://www.jetbrains.com/pycharm
+	wget https://download-cdn.jetbrains.com/python/pycharm-community-2022.2.2.tar.gz
+	wget https://download.jetbrains.com/python/pycharm-community-2022.2.2.tar.gz.sha256
+	sha256sum -c --ignore-missing pycharm-community-2022.2.2.tar.gz.sha256
+	tar xf pycharm-community-2022.2.2.tar.gz -C /opt
+Windows
+	choco install PyCharm-community
+	winget install JetBrains.PyCharm.Community
 Configuration variables at ~/.config/JetBrains/PyCharm2021.2
 Data cache at ~/.local/share/JetBrains/PyCharm2021.2
 

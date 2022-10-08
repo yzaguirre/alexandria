@@ -1,0 +1,14 @@
+https://www.stimulsoft.com
+https://github.com/stimulsoft
+	wget https://admin.stimulsoft.com/install/Stimulsoft-Designer-2022.4.2.exe
+	start Stimulsoft-Designer-2022.4.2.exe
+Installed at
+C:\Program Files (x86)\Stimulsoft Designer 2022.4.2
+C:\Program Files (x86)\Stimulsoft Reports.Ultimate 2012.1 Trial\
+
+Developer package for ASP.NET
+	wget https://admin.stimulsoft.com/install/2022.4.2/Stimulsoft-Reports.NET-2022.4.2.zip
+
+Nuget
+https://www.nuget.org/packages/Stimulsoft.Reports.Web
+https://www.nuget.org/packages/Stimulsoft.Reports.Wpf

@@ -24,3 +24,6 @@ C:\Users\dyzag\AppData\Roaming\bat\config
 Usage
 	bat cache --build
 	bat file.txt
+Syntax highlighting a XML file, Rust file
+	bat -l xml packages.config
+	git show v0.6.0:src/main.rs | bat -l rs

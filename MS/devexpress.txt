@@ -1,0 +1,6 @@
+https://www.devexpress.com
+Installed at
+C:\Program Files (x86)\DevExpress 19.1\
+
+DLL from
+C:\Program Files (x86)\DevExpress 19.1\Components\Bin\Framework

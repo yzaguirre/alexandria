@@ -3,3 +3,7 @@ https://www.nuget.org
 https://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati
 https://stackoverflow.com/questions/10240029/how-do-i-install-a-nuget-package-nupkg-file-locally
 https://stackoverflow.com/questions/14894864/how-to-download-a-nuget-package-without-nuget-exe-or-visual-studio-extension
+
+Sources
+https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file
+https://stackoverflow.com/questions/49446394/unable-to-find-nuget-local-source-error-occurred-while-restoring-nuget-packages

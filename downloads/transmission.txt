@@ -1,10 +1,3 @@
-http://go.kblog.us/2011/03/using-transmission-cli-to-download.html
-	transmission-cli http://cdimage.debian.org/debian-cd/7.5.0/amd64/bt-cd/debian-7.5.0-amd64-lxde-CD-1.iso.torrent
-	transmission-cli "magnet link here"
-Crear directorio Downloads
-	mkdir Downloads
-	transmission-cli "magnet" -w Downloads
-
 Install transmission daemon
 	apt install transmission-daemon
 	systemctl stop transmission-daemon

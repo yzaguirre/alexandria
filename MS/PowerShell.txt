@@ -232,6 +232,8 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
 $testString = "Hello,Welcome,to,Shell Geek"
 # Split string by comma as single delimiter
 $testString.Split(',')
+http://stackoverflow.com/questions/37114587/
+"C:\Ravi\".TrimEnd('\')
 
 3 USEFULL TIPS IN 1 VIDEO | PowerShell Tips and Tricks
 https://www.youtube.com/watch?v=v7jScENUgoI
