@@ -19,6 +19,8 @@ Windows
 	choco install wireshark
 Installed at C:\Program Files\Wireshark
 
+See tshark.txt
+
 http://securityblog.gr/1195/run-wireshark-as-a-user-rather-than-root-ubuntu/
 	chgrp adm /usr/bin/dumpcap
 	chmod 750 /usr/bin/dumpcap

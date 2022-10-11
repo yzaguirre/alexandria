@@ -21,3 +21,43 @@ https://stackoverflow.com/questions/14382974/how-can-i-add-a-new-file-to-csproj-
 Compile with code documentation
 https://docs.microsoft.com/es-es/dotnet/csharp/programming-guide/xmldoc/how-to-use-the-xml-documentation-features
 	csc XMLsample.cs /doc:XMLsample.xml
+
+Frameworks
+https://learn.microsoft.com/en-us/dotnet/framework/install/guide-for-developers
+https://www.c-sharpcorner.com/article/open-legacy-projects-4-5-framework-in-visual-studio-2022/
+https://learn.microsoft.com/en-us/answers/questions/993957/how-to-target-net-framework-40-in-vs-2022-on-windo.html
+C:\Windows\Microsoft.NET
+https://dotnet.microsoft.com/en-us/download/dotnet-framework
+Framework 2.0
+https://www.makeuseof.com/windows-10-install-net-framework-version-35/
+https://www.kapilarya.com/how-to-enable-net-framework-3-5-on-windows-10
+https://learn.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows?WT.mc_id=dotnet-35129-website
+	Get-WindowsCapability -Online | Where-Object Name -like 'NetFx3'
+	Enable-WindowsOptionalFeature -Online -FeatureName "NetFx3"
+Framework 4.0
+https://www.nuget.org/packages/microsoft.netframework.referenceassemblies.net40
+Move contents from
+C:\Users\DAVIDY~1\Downloads\build\.NETFramework\v4.0
+to
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+	cd "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework"
+	7z a 'C:\Users\DAVIDY~1\Backups\v4.0.7z' v4.0
+	cd Downloads
+	7z x .\microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg
+	cd C:\Users\DAVIDY~1\Downloads\build\.NETFramework\v4.0
+Framework 4.5
+https://www.nuget.org/packages/microsoft.netframework.referenceassemblies.net45
+Move contents from
+C:\Users\DAVIDY~1\Downloads\build\.NETFramework\v4.5
+to
+C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5
+	cd "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework"
+	7z a 'C:\Users\DAVIDY~1\Backups\v4.5.7z' v4.5
+	cd Downloads
+	7z x .\microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg
+	cd C:\Users\DAVIDY~1\Downloads\build\.NETFramework\v4.5
+Package
+	choco install netfx-4.5.2-devpack
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net452-developer-pack-offline-installer
+	wget https://download.microsoft.com/download/4/3/B/43B61315-B2CE-4F5B-9E32-34CCA07B2F0E/NDP452-KB2901951-x86-x64-DevPack.exe
+	start NDP452-KB2901951-x86-x64-DevPack.exe

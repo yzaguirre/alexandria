@@ -1,0 +1,33 @@
+Tshark capture
+See wireshark.txt
+http://www.codealias.info/technotes/the_tshark_capture_and_filter_example_page
+List interfaces
+	ipconfig /all | findstr /I Description
+	tshark -D
+Capture
+	tshark -f "HTTP" -i "\Device\NPF_{...-...-...-...-...}" -w capture.pcap
+	tshark -f "HTTP" -i 7 -w capture.pcap
+	tshark -i eth0 -w capture.pcap
+	tshark -f "HTTP" -i eth0 -w capture.pcap -F pcap
+	tshark -i eth0 ICMP
+Capture telnet
+	tshark -i ens192 -w telnet.pcap tcp port 23
+Capture in 10 seconds
+	tshark -i 7 -a duration:10
+Capture 1 Kilobyte
+	tshark -i 7 -a filesize:1
+Capture 5 packets, turn off promiscous mode, only read packets for this machine
+	tshark -i 7 -c 5 -p
+Read a capture
+	tshark -r test.pcap
+TCP Stream
+	tshark -nr telnet1.pcap -q -z follow,tcp,ascii,1 | grep cisco
+Statistics
+	tshark -r telnet.pcap -z io,phs,tcp -q
+	tshark -r telnet.pcap -z endpoints,tcp -q
+	tshark -r telnet.pcap -z conv,tcp -q
+	tshark -r telnet.pcap -z conv,ip -q
+	tshark -r telnet.pcap -z ptype,tree -q
+
+Packet Analysis - Tshark Fundamentals
+https://www.youtube.com/watch?v=w9mSPvacba0

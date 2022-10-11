@@ -45,6 +45,8 @@ Lock Screen
 	rundll32.exe user32.dll,LockWorkStation
 Ask network information
 	ipconfig /all | findstr /I dns
+List Interfaces
+	ipconfig /all | findstr /I Description
 Ask new IP
 	ipconfig /release "Ethernet adapter Ethernet"
 	ipconfig /renew "Ethernet adapter Ethernet"

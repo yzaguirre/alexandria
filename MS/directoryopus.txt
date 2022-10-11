@@ -1,0 +1,5 @@
+https://www.gpsoft.com.au
+	winget install GPSoftware.DirectoryOpus
+
+Replace Windows File Explorer With Something Better
+https://www.youtube.com/watch?v=HaeHYPGnv2M

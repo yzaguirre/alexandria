@@ -1,4 +1,19 @@
+https://learn.microsoft.com/en-us/windows/terminal/
 https://github.com/microsoft/terminal
 https://news.ycombinator.com/item?id=31343461
-	choco install microsoft-windows-terminal
 	winget install --id=Microsoft.WindowsTerminal -e
+	choco install microsoft-windows-terminal
+Configuration at
+C:\Users\DAVIDY~1\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+C:\Users\DAVIDY~1\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
+
+Fonts
+https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance
+"font": {
+                "face": "FiraMono NF",
+                "size": 18,
+                "weight": "medium"
+            }
+
+Windows Terminal NEW Features: v1.0 ⇨ v1.15
+https://www.youtube.com/watch?v=hA4rGwT0nC4
