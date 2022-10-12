@@ -14,6 +14,8 @@ Fontviewer
 choice=$(fc-list | awk '{print $1}' | sed 's/://g' | dmenu -l 20 -p 'FontViewer:')
 display "$choice"
 	./dmenu-fontviewer.sh
+Load EGA/VGA console screen font
+	setfont ter-132n
 
 Fontmatrix
 https://github.com/fcoiffie/fontmatrix

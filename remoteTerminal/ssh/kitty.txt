@@ -1,0 +1,4 @@
+💻 KiTTY, a free telnet/ssh client for Windows
+https://www.9bis.net/kitty/?#!index.md
+https://github.com/cyd01/KiTTY
+	choco install kitty

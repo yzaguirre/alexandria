@@ -1,2 +1,6 @@
+System monitoring dashboard for terminal
 https://github.com/aksakalli/gtop
 	npm install gtop -g
+
+Usage
+	gtop

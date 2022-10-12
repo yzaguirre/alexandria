@@ -1,5 +1,16 @@
+https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/
+Transport Layer Security, or TLS, is a widely adopted security protocol designed to facilitate
+privacy and data security for communications over the Internet.
+
+Encryption: hides the data being transferred from third parties.
+Authentication: ensures that the parties exchanging information are who they claim to be.
+Integrity: verifies that the data has not been forged or tampered with.
+
 https://tls13.xargs.org
 https://news.ycombinator.com/item?id=32333115
+
+https://blog.mozilla.org/security/2018/03/12/distrust-symantec-tls-certificates/
+https://wiki.mozilla.org/CA/Symantec_Issues
 
 Android Chrome 99 expands Certificate Transparency, breaking all MitM dev tools
 https://httptoolkit.tech/blog/chrome-android-certificate-transparency/

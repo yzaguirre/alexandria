@@ -1,24 +1,43 @@
-Download
-	wget http://download.virtualbox.org/virtualbox/5.0.20/virtualbox-5.0_5.0.20-106931~Debian~jessie_amd64.deb
-	wget https://www.virtualbox.org/download/hashes/5.0.20/SHA256SUMS
-	wget https://www.virtualbox.org/download/hashes/5.0.20/MD5SUMS
-	
+https://www.virtualbox.org
+https://www.virtualbox.org/wiki/Downloads
+https://web.archive.org/web/20171201035409/https://www.virtualbox.org/wiki/Licensing_FAQ
+
+Arch Linux as Host: VirtualBox
+https://www.youtube.com/watch?v=vQUOf2E6XZw
+	apt install virtualbox virtualbox-guest-iso
+ISO extension package at
+/usr/lib/virtual/box/additions/VBoxGuestAdditions.iso
+Installer
+	wget https://download.virtualbox.org/virtualbox/7.0.0/virtualbox-7.0_7.0.0-153978~Debian~bullseye_amd64.deb
+	wget https://download.virtualbox.org/virtualbox/7.0.0/VBoxGuestAdditions_7.0.0.iso
+	wget https://www.virtualbox.org/download/hashes/7.0.0/SHA256SUMS
+	wget https://www.virtualbox.org/download/hashes/7.0.0/MD5SUMS
+	sha256sum -c --ignore-missing SHA256SUMS
+	md5sum -c --ignore-missing MD5SUMS
+	dpkg -i virtualbox-7.0_7.0.0-153978~Debian~bullseye_amd64.debf
 	sudo modprobe vboxdrv
+Use host USB devices in guest machines
+http://dedoimedo.com/computers/virtualbox-usb.html
+	sudo usermod -aG vboxusers david
 https://forums.virtualbox.org/viewtopic.php?t=15868
 Mount shared folders
-	# mount -t vboxsf share ~/host
-	# mount -t vboxsf -o uid=1000,gid=100 share /home/david/host
+	mount -t vboxsf share ~/host
+	mount -t vboxsf -o uid=1000,gid=100 share /home/david/host
 	
 If you want to have it mount automatically upon each boot, put the mount command in /etc/rc.local (Debian based distro's), 
 or whatever script is run at the end of the boot process. The Shared Folders service should mount them automatically, but that doesn't always happen.
 
-http://dedoimedo.com/computers/virtualbox-usb.html
+Windows
+	choco install virtualbox --params "/NoDesktopShortcut"
+Inside Windows VM
+	choco install virtualbox-guest-additions-guest.install
+
 Expansion Pack
 http://www.sysprobs.com/guide-download-install-oracle-vm-virtualbox-extension-pack-windows-host
-http://download.virtualbox.org/virtualbox/4.2.18/
-	$ wget http://download.virtualbox.org/virtualbox/4.2.18/Oracle_VM_VirtualBox_Extension_Pack-4.2.18-88780.vbox-extpack
+	wget https://download.virtualbox.org/virtualbox/7.0.0/Oracle_VM_VirtualBox_Extension_Pack-7.0.0-153978.vbox-extpack
 The other way is, go to File -> Preferences in menu bar and select Extensions option in VirtualBox console.
-Press Add Extension button and browse the downloaded VM VirtualBox Extension Pack. That
+Press Add Extension button and browse the downloaded VM VirtualBox Extension Pack.
+
 
 http://xmodulo.com/2013/05/how-to-create-and-start-virtualbox-vm-without-gui.html
 https://www.virtualbox.org/manual/ch08.html#vboxmanage-startvm

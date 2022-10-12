@@ -47,3 +47,6 @@ Change to bin/64bit or bin/32bit and then simply run:  ./obs
 Windows
 	winget install OBSProject.OBSStudio
 	choco install obs-studio
+
+How to Use OBS Studio - Complete Tutorial for Beginners!
+https://www.youtube.com/watch?v=-puA85ciDEM

@@ -2,17 +2,22 @@ https://github.com/xo/usql
 https://news.ycombinator.com/item?id=17299356
 
 Linux
-	wget https://github.com/xo/usql/releases/download/v0.7.8/usql-0.7.8-linux-amd64.tar.bz2
-	tar xf usql-0.7.8-linux-amd64.tar.bz2 -C ~/bin
+	wget https://github.com/xo/usql/releases/download/v0.12.13/usql-0.12.13-linux-amd64.tar.bz2
+	tar xf usql-0.12.13-linux-amd64.tar.bz2 -C ~/bin
 Windows
 	scoop install usql
 Binary
-	wget https://github.com/xo/usql/releases/download/v0.7.8/usql-0.7.8-windows-amd64.zip
-	unzip usql-0.7.8-windows-amd64.zip -d ~/bin
+	wget https://github.com/xo/usql/releases/download/v0.12.13/usql-0.12.13-windows-amd64.zip
+	7z x -o"..\bin" usql-0.12.13-windows-amd64.zip usql.exe
+
+Usage
+	usql -c '\drivers'
+
 MS SQL Server
 https://github.com/denisenkom/go-mssqldb
+https://github.com/microsoft/go-mssqldb
 	MSSQL_CLI_SERVER='HOST:PORT/INSTANCE'
 	MSSQL_CLI_DATABASE=''
 	MSSQL_CLI_USER=''
 	MSSQL_CLI_PASSWORD=''
-	usql.exe sqlserver://${MSSQL_CLI_USER}:${MSSQL_CLI_PASSWORD}@${MSSQL_CLI_SERVER}?database=${MSSQL_CLI_DATABASE}
+	usql.exe sqlserver://${MSSQL_CLI_USER}:${MSSQL_CLI_PASSWORD}@${MSSQL_CLI_SERVER}/${MSSQL_CLI_DATABASE}

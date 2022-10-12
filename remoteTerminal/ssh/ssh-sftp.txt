@@ -3,6 +3,10 @@ GET/PUT Command - Transfer Files/Folders in Linux
 https://www.youtube.com/watch?v=-FFSM3bHrFE
 How to use SFTP Commands to Copy Files to/from a Server
 https://www.youtube.com/watch?v=22lBJIfO9qQ
+Setup SFTP server in Windows using OpenSSH with public key authentication, folder jailing
+https://www.youtube.com/watch?v=pOwXn4do7r0
+https://nagasudhir.blogspot.com/2022/03/setup-sftp-server-and-sftp-client-in.html
+http://how-2-know.com/main/couldnt-canonicalise-permission-denied/
 
 	sftp server
 	ls
@@ -16,3 +20,10 @@ Download a file
 	get brandon-hopkins.jpg
 Exit session
 	bye
+
+Add a sftp user
+	useradd -mG sudo ermanno
+	passwd ermanno
+	usermod --shell /bin/bash ermanno
+PowerShell
+	New-LocalUser -Name "user1"

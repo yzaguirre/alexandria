@@ -6,18 +6,15 @@ Windows
 	scoop install gobang
 Binary
 	wget https://github.com/TaKO8Ki/gobang/releases/download/v0.1.0-alpha.5/gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc.zip
-	7z e -oC:\Users\dyzag\bin gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc.zip gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc/gobang.exe
+	7z e -o"..\bin" gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc.zip gobang-0.1.0-alpha.5-x86_64-pc-windows-msvc/gobang.exe
 Homebrew
 	brew install tako8ki/tap/gobang
 
 Configuration at
 https://github.com/TaKO8Ki/gobang#Configuration
-macOS
-$HOME/.config/gobang/config.toml
-Linux
-$HOME/.config/gobang/config.toml
-Windows
-%APPDATA%/gobang/config.toml
+/home/david/.config/gobang/config.toml
+C:\Users\DAVIDY~1\AppData\Roaming\gobang\config.toml
 
 Usage
-	gobang
+	gobang -V
+	gobang -h

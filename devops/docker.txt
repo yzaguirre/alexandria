@@ -1,7 +1,23 @@
+https://hub.docker.com
+
+Docker CE
+See moby.txt
+docker-desktop.txt
+docker-windows.txt
+
+Docker CLI
+https://www.docker.com
+https://github.com/docker/cli
 	yum install -y docker
+Windows
+	choco install docker
+
+Setup
 	dockeradd docker
 	usermod -aG docker cloud_user
 	systemctl enable --now docker
+
+Usage
 	docker ps
 	docker pull docker.io/hello-world
 	docker images
@@ -13,3 +29,27 @@ Try other programs
 	docker images
 See all of the environment variables for any running container
 	docker inspect
+
+Fedora
+	docker pull fedora
+	docker run fedora echo hello world
+Get inside container. Creates new container.
+	docker run -it fedora
+Return to instance.
+	docker exec -it HASH /bin/sh
+
+Run docker commands non-interactive
+	docker run jpetazzo/clock
+Run in detached state
+	docker run -d jpetazzo/clock
+	docker run -d --name clock jpetazzo/clock
+List running containers
+	docker ps
+Stop container
+Exit container gracefully
+	docker stop CONTAINER_ID
+Hard core stop
+	docker kill clock
+
+List logs for container
+	docker logs -f --tail 3 CONTAINER_ID

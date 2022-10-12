@@ -1,0 +1,4 @@
+https://www.docker.com/products/docker-desktop/
+Windows
+	choco install docker-desktop
+	winget install Docker.DockerDesktop

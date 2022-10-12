@@ -1,1 +1,3 @@
-https://aerc-mail.org/
+https://aerc-mail.org
+https://news.ycombinator.com/item?id=33166054
+	wget https://git.sr.ht/~rjarry/aerc/archive/0.12.0.tar.gz

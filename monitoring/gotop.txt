@@ -1,0 +1,21 @@
+https://github.com/xxxserxxx/gotop
+	wget https://github.com/xxxserxxx/gotop/releases/download/v4.2.0/gotop_v4.2.0_linux_amd64.deb
+	dpkg -i gotop_v4.2.0_linux_amd64.deb
+Windows
+	choco install gotop
+Binaries
+	wget https://github.com/xxxserxxx/gotop/releases/download/v4.2.0/gotop_v4.2.0_windows_amd64.zip
+	7z x -o"..\bin" gotop_v4.2.0_windows_amd64.zip
+Homebrew
+	brew install gotop
+
+Configuration at
+/home/david/.config/gotop/gotop.conf
+C:\Users\DAVIDY~1\AppData\Roaming\gotop\gotop.conf
+
+Usage
+	gotop --write-config
+	gotop --list paths
+	gotop --list devices
+	gotop
+	gotop -l minimal

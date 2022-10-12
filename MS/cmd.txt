@@ -152,6 +152,7 @@ List services
 Start a service
 	net start spooler
 	net start MySQL
-
+User Management
+	lusrmgr.msc
 Self Extracting EXE installer using 7zip on Windows or Linux 7zS.sfx
 https://www.youtube.com/watch?v=Gh7JDNT-Luc

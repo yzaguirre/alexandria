@@ -1,17 +1,23 @@
 A modern replacement for ps written in Rust
 https://github.com/dalance/procs
-	wget https://github.com/dalance/procs/releases/download/v0.12.3/procs-v0.12.3-x86_64-lnx.zip
-	unzip procs-v0.12.3-x86_64-lnx.zip -d /usr/local/bin
+	wget https://github.com/dalance/procs/releases/download/v0.13.2/procs-v0.13.2-x86_64-linux.zip
+	unzip procs-v0.13.2-x86_64-linux.zip -d /usr/local/bin
+Termux
+	pkg install procs
 Windows
 	scoop install procs
 Binary
-	wget https://github.com/dalance/procs/releases/download/v0.12.3/procs-v0.12.3-x86_64-win.zip
-	7z e -oC:\Users\dyzag\bin procs-v0.12.3-x86_64-win.zip
+	wget https://github.com/dalance/procs/releases/download/v0.13.2/procs-v0.13.2-x86_64-windows.zip
+	7z e -o"..\bin" procs-v0.13.2-x86_64-windows.zip
+	mkdir C:\Users\DAVIDY~1\AppData\Roaming\dalance\procs\config
+	procs --config | Out-File C:\Users\DAVIDY~1\AppData\Roaming\dalance\procs\config\config.toml
+Homebrew
+	brew install procs
 
 Configuration
-Linux
-~/.config/procs/config.toml
-macOS
+/home/david/.config/procs/config.toml
+C:\Users\DAVIDY~1\AppData\Roaming\dalance\procs\config\config.toml
 ~/Library/Preferences/com.github.dalance.procs/config.toml
-Windows
-C:\Users\dyzag\AppData\Roaming\dalance\procs\config.toml
+
+Usage
+	procs

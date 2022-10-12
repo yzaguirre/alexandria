@@ -10,6 +10,14 @@ https://github.com/PowerShell/openssh-portable
 https://github.com/PowerShell/Win32-OpenSSH
 https://superuser.com/questions/1395962/is-it-possible-to-update-the-built-in-openssh-client-in-windows-10
 	choco upgrade openssh --pre
+Binaries
+Setup SFTP server in Windows using OpenSSH with public key authentication, folder jailing
+https://www.youtube.com/watch?v=pOwXn4do7r0
+https://nagasudhir.blogspot.com/2022/03/setup-sftp-server-and-sftp-client-in.html
+	wget https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.9.1.0p1-Beta/OpenSSH-Win64.zip
+	7z x -o"C:\Program Files\" OpenSSH-Win64.zip
+	cd "C:\Program Files\OpenSSH-Win64"
+	pwsh.exe -ExecutionPolicy Bypass -File install-sshd.ps1
 
 https://devblogs.microsoft.com/powershell/openssh-for-windows-update/
 
@@ -24,6 +32,8 @@ How to Install SSH Server on Windows 10 - Remote into your computer using a Comm
 https://www.youtube.com/watch?v=HCmEB5qtkSY
 How to SSH into Windows from Windows (and copy files remotely)
 https://www.youtube.com/watch?v=pFTC4Rt-EDQ
+Configure and Install OpenSSH Public key authentication in Windows 10 for remote connectivity
+https://www.youtube.com/watch?v=9dhQIa8fAXU
 
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
@@ -49,12 +59,12 @@ Set service to start automatically
 
 Configuration file
 https://github.com/PowerShell/Win32-OpenSSH/issues/870
-	%userprofile%\.ssh\config
+C:\Users\DAVIDY~1\.ssh\config
 System-wide configuration file
-	%programdata%\ssh\sshd_config
+C:\ProgramData\ssh\sshd_config
 Server configuration directory
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
-	%programdata%/ssh/
+C:\ProgramData\ssh\
 
 Permissions for administrators_authorized_keys
 https://stackoverflow.com/questions/16212816/setting-up-openssh-for-windows-using-public-key-authentication
@@ -67,6 +77,7 @@ https://stackoverflow.com/questions/16212816/setting-up-openssh-for-windows-usin
 	$acl | Set-Acl
 Alternative
 	icacls administrators_authorized_keys /inheritance:r /grant "Administradores:F" /grant "SYSTEM:F"
+	icacls "C:\Users\DAVIDY~1\.ssh\authorized_keys" /inheritance:r /grant "Administradores:F" /grant "SYSTEM:F"
 Start server
 	Start-Service sshd
 	Get-Service sshd
@@ -90,3 +101,15 @@ http://mobaxterm.mobatek.net/download.html
 
 https://www.itefix.no/i2/copssh
 http://www.bitvise.com/tunnelier
+
+See ssh-sftp.txt
+Install SFTP in Windows Server 2022 & 2019 (Easiest Way)
+https://www.youtube.com/watch?v=BR9qc_1unu8
+Setup SFTP server in Windows using OpenSSH with public key authentication, folder jailing
+https://www.youtube.com/watch?v=pOwXn4do7r0
+Setting up an SFTP Server on Windows (Server) with OpenSSH (using Microsoft's port of OpenSSH)
+https://www.youtube.com/watch?v=Eklxg_UUktI
+SFTP Setup in Windows Server 2019
+https://www.youtube.com/watch?v=cu2HjREsTVE
+Add ssh user
+	New-LocalUser -Name "user1"

@@ -1,0 +1,9 @@
+https://www.digicert.com
+https://www.digicert.com/support/tools/certificate-utility-for-windows
+Also known as thawte, geotrust
+See ../tls/tls.txt
+	wget -O "..\bin" https://www.digicert.com/StaticFiles/DigiCertUtil.exe
+	wget https://digicert.com/StaticFiles/DigiCertUtil.zip
+
+Usage
+	start DigiCertUtil.exe

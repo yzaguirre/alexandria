@@ -2,3 +2,21 @@ Podman desktop companion
 https://iongion.github.io/podman-desktop-companion/
 https://github.com/iongion/podman-desktop-companion
 https://news.ycombinator.com/item?id=32421793
+	wget https://github.com/iongion/podman-desktop-companion/releases/download/4.1.0-rc.28/podman-desktop-companion-amd64-4.1.0-rc.28.deb
+	dpkg -i podman-desktop-companion-amd64-4.1.0-rc.28.deb
+Windows
+	wget https://github.com/iongion/podman-desktop-companion/releases/download/4.1.0-rc.28/podman-desktop-companion-x64-4.1.0-rc.28.exe
+	start podman-desktop-companion-x64-4.1.0-rc.28.exe
+
+Podman desktop companion
+https://podman-desktop.io
+https://github.com/containers/podman-desktop
+	wget https://github.com/containers/podman-desktop/releases/download/v0.8.0/podman-desktop-0.8.0.tar.gz
+	tar xf podman-desktop-0.8.0.tar.gz
+Windows
+	winget install RedHat.Podman-Desktop
+Homebrew
+	brew install podman-desktop
+
+Usage
+	podman-desktop

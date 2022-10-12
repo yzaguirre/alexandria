@@ -1,7 +1,7 @@
 https://www.reddit.com/r/commandline/comments/fsm3sj/neomutt_config_megathread/
 
 Teaching an Old Dog New Tricks -- IRC: #neomutt on irc.libera.chat
-https://neomutt.org/
+https://neomutt.org
 https://github.com/neomutt/neomutt
 	wget https://github.com/neomutt/neomutt/releases/download/20210205/20210205-CHECKSUM
 	wget https://github.com/neomutt/neomutt/releases/download/20210205/20210205.tar.gz.sig

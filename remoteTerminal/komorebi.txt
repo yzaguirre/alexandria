@@ -1,0 +1,5 @@
+A tiling window manager for Windows
+https://github.com/LGUG2Z/komorebi
+https://news.ycombinator.com/item?id=33168263
+	winget install LGUG2Z.komorebi Lexikos.AutoHotkey
+	choco install autohotkey.install

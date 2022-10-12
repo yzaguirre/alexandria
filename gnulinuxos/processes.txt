@@ -1,0 +1,7 @@
+Linux: Managing Processes
+https://www.youtube.com/watch?v=ibEX5kY7WIU
+	top
+See procs.txt
+../monitoring/htop.txt
+../monitoring/btop.txt
+../monitoring/gtop.txt

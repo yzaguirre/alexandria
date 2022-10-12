@@ -1,8 +1,13 @@
 A monitor of resources
 https://github.com/aristocratos/btop
-	wget https://github.com/aristocratos/btop/releases/download/v1.2.5/btop-x86_64-linux-musl.tbz
-	tar xf btop-x86_64-linux-musl.tbz
+	wget https://github.com/aristocratos/btop/releases/download/v1.2.12/btop-x86_64-linux-musl.tbz
+	mkdir tmp
+	tar xf btop-x86_64-linux-musl.tbz -C tmp
+	cd tmp
 	./install.sh
+Homebrew
+	brew install btop
 
 Usage
+	btop -v
 	btop

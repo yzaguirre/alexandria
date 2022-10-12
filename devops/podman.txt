@@ -1,0 +1,5 @@
+Podman: A tool for managing OCI containers and pods.
+https://podman.io
+https://github.com/containers/podman
+	winget install RedHat.Podman
+See podmandesktop.txt
