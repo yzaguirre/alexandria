@@ -1,7 +1,13 @@
+Intuitive find & replace CLI (sed alternative)
 https://github.com/chmln/sd
 Intuitive find & replace CLI (sed alternative)
 	wget https://github.com/chmln/sd/releases/download/v0.7.6/sd-v0.7.6-x86_64-unknown-linux-gnu -O sd
 	chmod u+x sd
 	mv sd /usr/local/bin
 Windows
+	choco install sd-cli
 	scoop install sd
+Compile
+	cargo install sd
+Homebrew
+	brew install sd

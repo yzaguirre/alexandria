@@ -1,0 +1,10 @@
+Pdfium.Net SDK
+The C# PDF Library
+https://pdfium.patagames.com
+NuGet install
+	Install-Package Pdfium.Net.SDK
+Install specified package in specified project
+	Install-Package pdfium.net.sdk - ProjectName <Project Name>
+
+This is a package of C# Project for Pdfium.Net SDK PdfViewer control for WinForms.
+https://github.com/Patagames/Pdf.WinForms

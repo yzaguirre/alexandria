@@ -23,10 +23,23 @@ f324001f3338e6cfa1bc6c94c6511fc0ec29b90fc8e0f94159fb0adce802363f69754e32dd9d1b0f
 	tar xf FileZilla_3.60.1_x86_64-linux-gnu.tar.bz2 -C /opt
 	ln -s /opt/FileZilla3/bin/filezilla /usr/local/bin/filezilla
 Windows
-	winget install TimKosse.FileZilla.Client
 	choco install filezilla
+https://github.com/Romanitho/Winget-AutoUpdate/discussions/159
+	winget install TimKosse.FileZilla.Client
 
 https://www.youtube.com/results?search_query=filezilla+sftp&page=&utm_source=opensearch
 https://superuser.com/questions/180221/connect-to-server-using-sftp-and-public-ssh-key-using-filezilla-on-windows
 https://wiki.filezilla-project.org/Howto
 https://wiki.filezilla-project.org/FileZilla_FTP_Client
+
+Filezilla server
+https://wiki.filezilla-project.org/FileZilla_FTP_Server
+	wget "https://dl1.cdn.filezilla-project.org/server/FileZilla_Server_1.5.1_x86_64-linux-gnu.deb?h=RxvbN2uc0V7Nk0x4EqwwVA&x=1665610908"
+	sha512sum FileZilla_Server_1.5.1_x86_64-linux-gnu.deb
+a8a6a3b39bbe5c12335bab01ce1283771dc2398ae5ed863a2bfb8c8110419065b95088e988299aa4d162663464bb6c9b999f7b5e9fba19a3dd465e50b9f4c581
+	dpkg -i FileZilla_Server_1.5.1_x86_64-linux-gnu.deb
+Windows
+	choco install filezilla.server
+
+HOW TO: Install File Zilla FTP Server 1.0.1
+https://www.youtube.com/watch?v=ZjiKMyrMm78

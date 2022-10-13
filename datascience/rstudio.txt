@@ -1,10 +1,18 @@
-RStudio Desktop
+RStudio is an integrated development environment (IDE) for R
+https://www.rstudio.com
+https://github.com/rstudio/rstudio
 https://blog.rstudio.org/2016/11/01/announcing-rstudio-v1-0/
 https://www.rstudio.com/products/rstudio/download/
-	wget https://download1.rstudio.org/rstudio-1.0.136-amd64.deb
-	md5sum rstudio-1.0.136-amd64.deb
-2a73b88a12a9fbaf96251cecf8b41340
-	dpkg -i rstudio-1.0.136-amd64.deb
+	wget https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.07.2-576-amd64.deb
+	sha256sum rstudio-2022.07.2-576-amd64.deb
+e1c51003dc8f791bc1861949bd6dec6f03fedb7084d2f470dcd31f7ecc2bddd7
+	dpkg -i rstudio-2022.07.2-576-amd64.deb
+Windows
+	winget install RStudio.RStudio.OpenSource
+	choco install R.Studio
 
 https://rmarkdown.rstudio.com/flexdashboard/
 	install.packages("flexdashboard")
+
+https://twitter.com/cosima_meyer/status/1579549848277520385
+https://cosimameyer.com/post/2022-10-10-great-rstudio-shortcuts/

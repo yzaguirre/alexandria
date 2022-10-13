@@ -1,7 +1,10 @@
+Use a text editor. Make a PDF
 https://rst2pdf.org
 	apt install rst2pdf
 Se instalarán los siguientes paquetes NUEVOS:
   docutils-common python3-docutils python3-jinja2 python3-packaging python3-pygments python3-pyparsing python3-roman python3-smartypants rst2pdf
+Python
+	sudo -H pip install -U rst2pdf
 
 A command-line tool to turn web pages into beautiful,
 readable PDF, EPUB, or HTML docs.
@@ -55,6 +58,7 @@ https://news.ycombinator.com/item?id=29837895
 
 Convert to PNG
 https://www.cyberciti.biz/faq/how-to-convert-pdf-to-image-on-linux-command-line/
+See latex.txt
 	apt install poppler-utils
 Termux
 	apt install poppler
@@ -63,6 +67,10 @@ Termux
 	pdftoppm Bulldog.pdf Bulldog.pdf -png
 
 pdftk
+See ../java/openpdf.txt
+../MS/pdfium.txt
+../MS/questpdf.txt
+../MS/pdftk.txt
 https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
 	apt install pdftk
 The following NEW packages will be installed:
@@ -86,33 +94,20 @@ https://qpdf.readthedocs.io/en/stable/
 https://www.howtogeek.com/827186/how-to-make-and-combine-pdf-files-on-the-linux-command-line/
 	apt install qpdf
 Binary
-	wget https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3.0cmake1/qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
-	unzip -d /usr/local qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
-Archive:  qpdf-10.6.3.0cmake1-bin-linux-x86_64.zip
-  inflating: /usr/local/bin/qpdf     
-  inflating: /usr/local/bin/fix-qdf  
-  inflating: /usr/local/bin/zlib-flate  
-  inflating: /usr/local/lib/libffi.so.6  
-  inflating: /usr/local/lib/libgnutls.so.30  
-  inflating: /usr/local/lib/libhogweed.so.4  
-  inflating: /usr/local/lib/libidn2.so.0  
-  inflating: /usr/local/lib/libjpeg.so.8  
-  inflating: /usr/local/lib/libnettle.so.6  
-    linking: /usr/local/lib/libqpdf.so.28  -> libqpdf.so.28.6.3 
-  inflating: /usr/local/lib/libqpdf.so.28.6.3  
-  inflating: /usr/local/lib/libtasn1.so.6  
-  inflating: /usr/local/lib/libunistring.so.2  
-finishing deferred symbolic links:
-  /usr/local/lib/libqpdf.so.28 -> libqpdf.so.28.6.3
+	wget https://github.com/qpdf/qpdf/releases/download/v11.1.1/qpdf-11.1.1-bin-linux-x86_64.zip
+	unzip -d /usr/local qpdf-11.1.1-bin-linux-x86_64.zip
 Windows
 	choco install qpdf
 Binary
-	wget https://github.com/qpdf/qpdf/releases/download/v11.1.0/qpdf-11.1.0-msvc64.exe
-	start qpdf-11.1.0-msvc64.exe
+	wget https://github.com/qpdf/qpdf/releases/download/v11.1.1/qpdf-11.1.1-msvc64.exe
+	start qpdf-11.1.1-msvc64.exe
 Installed at
-C:\Program Files\qpdf 11.1.0
+C:\Program Files\qpdf 11.1.1
+Add to PATH environment variable
+C:\Program Files\qpdf 11.1.1\bin
 
 Usage
+	qpdf --version
 Combine two PDF files to form a new PDF file
 	qpdf --empty --pages first.pdf second.pdf -- combined.pdf
 

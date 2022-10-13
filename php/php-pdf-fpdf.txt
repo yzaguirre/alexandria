@@ -1,4 +1,4 @@
-http://www.fpdf.org/
+http://www.fpdf.org
 FPDF es una clase escrita en PHP que permite generar documentos PDF directamente desde PHP,
 es decir, sin usar la biblioteca PDFlib.
 La F de FPDF significa Free (gratis y libre): 

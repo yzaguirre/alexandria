@@ -1,21 +1,38 @@
+Manage your GnuPG keys with ease! 🔐
 https://orhun.dev/blog/introducing-gpg-tui/
 https://github.com/orhun/gpg-tui
 https://news.ycombinator.com/item?id=27329598
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sha512
-	wget https://github.com/orhun/gpg-tui/releases/download/v0.8.3/gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sig
-	sha512sum -c --ignore-missing gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sha512
-	gpg --verify gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz.sig
-	tar xf gpg-tui-0.8.3-x86_64-unknown-linux-gnu.tar.gz
-	mv gpg-tui-0.8.3/gpg-tui /usr/local/bin
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.9.1/gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.9.1/gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz.sha512
+	wget https://github.com/orhun/gpg-tui/releases/download/v0.9.1/gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz.sig
+	sha512sum -c --ignore-missing gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz.sha512
+	gpg --verify gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz.sig
+	tar xf gpg-tui-0.9.1-x86_64-unknown-linux-gnu.tar.gz
+	mv gpg-tui-0.9.1/gpg-tui /usr/local/bin
 Terminal completions
-	sudo mv -v gpg-tui-0.8.3/completions/gpg-tui.bash /usr/share/bash-completion/completions/gpg-tui
-	sudo mv -v gpg-tui-0.8.3/completions/gpg-tui.fish /usr/share/fish/completions
-	sudo mv -v gpg-tui-0.8.3/completions/_gpg-tui /usr/share/zsh/vendor-completions
+	sudo mv -v gpg-tui-0.9.1/completions/gpg-tui.bash /usr/share/bash-completion/completions/gpg-tui
+	sudo mv -v gpg-tui-0.9.1/completions/gpg-tui.fish /usr/share/fish/completions
+	sudo mv -v gpg-tui-0.9.1/completions/_gpg-tui /usr/share/zsh/vendor-completions
 Instruction manual
-	sudo mv gpg-tui-0.8.3/man/gpg-tui.1 /usr/share/man/man1
+	sudo mv gpg-tui-0.9.1/man/gpg-tui.1 /usr/share/man/man1
 Rust
-	cargo install gpg-tui
+https://github.com/orhun/gpg-tui/issues/33
+https://github.com/gpg-rs/gpgme/issues/31
+https://github.com/gpg-rs/libgpg-error/issues/5
+https://stackoverflow.com/questions/68414140/link-to-gpgme-library-in-visual-studio
+	rustup target add i686-pc-windows-gnu
+	rustup target add i686-pc-windows-msvc
+	$env:GPGME_INCLUDE="C:\Program Files (x86)\GnuPG\include"
+	$env:GPGME_LIB_DIR="C:\Program Files (x86)\Gpg4win\bin"
+x	$env:GPGME_LIBS="C:\Program Files (x86)\Gpg4win\lib\libgpgme.imp"
+x	$env:GPGME_STATIC=1
+	$env:LIBGPG_ERROR_INCLUDE="C:\Program Files (x86)\GnuPG\include"
+	$env:LIBGPG_ERROR_LIB_DIR="C:\Program Files (x86)\Gpg4win\bin"
+x	$env:LIBGPG_ERROR_LIBS="C:\Program Files (x86)\Gpg4win\lib\libgpg-error.imp"
+https://github.com/rust-lang/wg-cargo-std-aware/issues/70
+x	$env:RUSTFLAGS="-Lnative=C:\Program Files (x86)\Gpg4win\lib"
+	cargo install --target=i686-pc-windows-gnu gpg-tui
+	cargo install --target=i686-pc-windows-msvc gpg-tui
 Compile
 Clone the repository
 	git clone https://github.com/orhun/gpg-tui.git && cd gpg-tui/
@@ -23,6 +40,14 @@ Build and install
 	cargo install --root "$HOME/.cargo" --path .
 Homebrew
 	brew install gpg-tui
+
+Configuration
+https://github.com/orhun/gpg-tui/blob/master/config/gpg-tui.toml
+/home/david/.config/gpg-tui/gpg-tui.toml
+/Library/Application Support/gpg-tui/gpg-tui.toml
+	mkdir ~/.config/gpg-tui
+	wget -O ~/.config/gpg-tui/gpg-tui.toml https://raw.githubusercontent.com/orhun/gpg-tui/master/config/gpg-tui.toml
+See ../../gnulinuxos/xplr.txt
 
 Usage
 	gpg-tui [FLAGS] [OPTIONS]

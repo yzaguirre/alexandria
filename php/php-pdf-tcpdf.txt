@@ -1,4 +1,19 @@
-http://www.tcpdf.org/
+TCPDF - PHP PDF Library
+http://www.tcpdf.org
+https://github.com/tecnickcom/tc-lib-pdf
 soporte QR
 writeHTMLCell
 writeHTML
+
+Composer
+{
+    "require": {
+        "tecnickcom/tc-lib-pdf": "dev-main"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:tecnickcom/tc-lib-pdf.git"
+        }
+    ]
+}

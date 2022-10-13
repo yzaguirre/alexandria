@@ -4,10 +4,8 @@ https://github.com/ClementTsang/bottom
 	wget https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
 	dpkg -i bottom_0.6.8_amd64.deb
 Windows
-	winget install Clement.bottom
 	choco install bottom
-The version number may be required for newer releases during the approval process:
-	choco install bottom --version=0.6.8
+	winget install Clement.bottom
 	scoop install bottom
 Homebrew
 	brew install bottom

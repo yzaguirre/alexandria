@@ -83,6 +83,7 @@ Environment variables
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.2
 	$Env:<variable-name> = "<new-value>"
 	$Env:Foo = 'An example'
+	$env:PSModulePath -split ';' | bat
 
 Load scripts
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.2
@@ -90,6 +91,17 @@ Import-Module -Name c:\ps-test\modules\test.ps1
 https://www.donnfelker.com/loading-powershell-profiles-from-other-script-files/
 $fileContents = [string]::join([environment]::newline, (get-content -path C:\Users\dyzag\Documents\PowerShell\completion.ps1))
 invoke-expression $fileContents
+
+Install modules
+	Install-Module Microsoft.PowerShell.Crescendo,Microsoft.PowerShell.SecretManagement,Microsoft.PowerShell.SecretStore
+VS Code extension
+	code --install-extension ms-vscode.powershell
+
+Secrets
+	Register-SecretVault -Name SecretStore -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
+	Get-SecretInfo
+	Set-Secret -Name TestSecret -Secret Hi
+	Get-Secret -Name TestSecret -AsPlainText
 
 Eject USB
 Dismount-DiskImage G:\

@@ -4,17 +4,18 @@ https://dystroy.org/broot/
 From source
 	git clone https://github.com/Canop/broot.git
 	cd broot
-	git checkout v1.9.3
+	git checkout v1.16.0
 	cargo build --release
 Binary download
 Linux
-	wget https://github.com/Canop/broot/releases/download/v1.9.3/broot_1.9.3.zip
-	7z e -o/usr/local/bin broot_1.9.3.zip build/x86_64-linux/broot
+	wget https://github.com/Canop/broot/releases/download/v1.16.0/broot_1.16.0.zip
+	7zz e -o/usr/local/bin broot_1.16.0.zip build/x86_64-linux/broot
 Terminal completions
-	7z e -o/usr/share/bash-completion/completions broot_1.9.3.zip build/completion/*.bash
-	7z e -o/usr/share/fish/completions broot_1.9.3.zip build/completion/*.fish
+	7zz e -o/usr/share/bash-completion/completions broot_1.16.0.zip build/completion/*.bash
+	7zz e -o/usr/share/fish/completions broot_1.16.0.zip build/completion/*.fish
 Termux
-	scp build/aarch64-linux-android/broot phone:bin
+x	scp build/aarch64-linux-android/broot phone:bin
+	pkg install broot
 	scp build/completion/*.bash phone:/data/data/com.termux/files/usr/share/bash-completion/completions
 
 Check the $EDITOR environment variable (all OS platform)
@@ -27,7 +28,7 @@ Alternative binary download
 source /c/Users/dyzag/AppData/Roaming/dystroy/broot/config/launcher/bash/br
 
 Configuration file
-%HOME%\AppData\Roaming\dystroy\broot\config\conf.hjson
+C:\Users\DAVIDY~1\AppData\Roaming\dystroy\broot\config\conf.hjson
 MacOS
 	brew install broot
 

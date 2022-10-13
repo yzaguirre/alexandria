@@ -1,20 +1,25 @@
-https://maven.apache.org/guides/getting-started/index.html#How_do_I_compile_my_application_sources
 https://maven.apache.org
-	wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
-	wget https://www.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.sha512
-	wget https://www.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.asc
-	sha512sum apache-maven-3.5.4-bin.tar.gz
-	cat apache-maven-3.5.4-bin.tar.gz.sha512
-	wget https://www.apache.org/dist/maven/KEYS
+https://github.com/apache/maven
+https://maven.apache.org/guides/getting-started/index.html#How_do_I_compile_my_application_source
+	wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+	wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz.sha512
+	wget https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz.asc
+	sha512sum apache-maven-3.8.6-bin.tar.gz
+	cat apache-maven-3.8.6-bin.tar.gz.sha512
+	wget https://downloads.apache.org/maven/KEYS
 	gpg --import KEYS
-	gpg --verify apache-maven-3.5.4-bin.tar.gz.asc apache-maven-3.5.4-bin.tar.gz
+	gpg --verify apache-maven-3.8.6-bin.tar.gz.asc apache-maven-3.8.6-bin.tar.gz
 http://maven.apache.org/install.html
-	tar xf apache-maven-3.5.4-bin.tar -C /opt
-	mv /opt/{apache-maven-3.5.4,maven}
+	tar xf apache-maven-3.8.6-bin.tar -C /opt
+	mv /opt/{apache-maven-3.8.6,maven}
 Add /opt/maven/bin to $PATH in ~/.profile
 	vim ~/.profile
 export M2_HOME=/opt/maven
 PATH=$PATH:$M2_HOME/bin
+Windows
+	choco install maven
+
+Create repository
 	mkdir -p /opt/m2repository
 Edit
 	vim $M2_HOME/conf/settings.xml

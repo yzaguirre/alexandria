@@ -1,6 +1,10 @@
 A dead simple tool to sign files and verify digital signatures.
 https://jedisct1.github.io/minisign/
 https://github.com/jedisct1/minisign
+	wget https://github.com/jedisct1/minisign/releases/download/0.10/minisign-0.10-linux.tar.gz
+	wget https://github.com/jedisct1/minisign/releases/download/0.10/minisign-0.10-linux.tar.gz.minisig
+	minisign -Vm minisign-0.10-linux.tar.gz -P RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+	tar xf minisign-0.10-linux.tar.gz -C /usr/local/bin --strip-components=2
 Windows
 	choco install minisign
 Binary

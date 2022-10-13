@@ -5,3 +5,4 @@ See procs.txt
 ../monitoring/htop.txt
 ../monitoring/btop.txt
 ../monitoring/gtop.txt
+../monitoring/bottom.txt
