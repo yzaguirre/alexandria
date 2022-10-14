@@ -1,0 +1,10 @@
+By using WinDivert this application gives you the ability
+to allow/block connections.
+https://poqdavid.github.io/PotatoWall/
+https://github.com/poqdavid/PotatoWall
+	winget install POQDavid.PotatoWall
+
+Ability to block/allow connection by using WinDivert
+Customizable WinDivert settings filter, QueueLen, QueueTime and QueueSize
+Allow connections by regex
+Flexible user interface

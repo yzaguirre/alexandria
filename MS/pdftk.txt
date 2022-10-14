@@ -1,3 +1,58 @@
 .NET Library to drive the awesome PDFtk binary.
 https://github.com/kevbite/Kevsoft.PDFtk
+	Install-Package Kevsoft.PDFtk
+DotNet
+	dotnet add package Kevsoft.PDFtk
+
+Dependency
+https://www.pdflabs.com/tools/pdftk-server/
+https://www.pdflabs.com/docs/pdftk-man-page/
 	choco install pdftk-server
+Installed at
+C:\Program Files (x86)\PDFtk Server\
+Binaries
+	wget -O https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe
+	Invoke-WebRequest -OutFile pdftk_server-2.02-win-setup.exe -URI https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe
+	start pdftk_server-2.02-win-setup.exe
+Homebrew
+	brew tap spl/pdftk
+	brew install pdftk
+
+Usage
+	pdftk
+
+Fill a PDF with given data and returns the PDF bytes.
+var pdftk = new PDFtk();
+
+var fieldData = new Dictionary<string, string>()
+{
+   ["Given Name Text Box"] = "Kevin",
+   ["Language 3 Check Box"] = "Yes"
+};
+
+var result = await pdftk.FillFormAsync(
+   pdfFile: await File.ReadAllBytesAsync("myForm.pdf"),
+   fieldData: FieldData,
+   flatten: false,
+   dropXfa: dropfalse
+);
+
+if(result.Success)
+{
+   // Do something with result.Result (bytes[])
+}
+
+Concatenate Multiple PDFs
+Merge multiple PDFs into one single PDF and returns the PDF bytes.
+var pdftk = new PDFtk();
+
+var result = await pdftk.ConcatAsync(new[]
+{
+    await File.ReadAllBytesAsync("Pdf1.pdf"),
+    await File.ReadAllBytesAsync("Pdf2.pdf")
+});
+
+if(result.Success)
+{
+   // Do something with result.Result (bytes[])
+}

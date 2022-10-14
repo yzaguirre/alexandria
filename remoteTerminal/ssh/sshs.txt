@@ -1,16 +1,21 @@
+Terminal user interface for SSH
 https://github.com/quantumsheep/sshs
 https://www.reddit.com/r/programming/comments/sk168l/sshs_graphical_commandline_client_for_ssh/
-	wget -P bin/ https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-linux-amd64
-	wget https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-linux-amd64.sha256
+	wget -P bin/ https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-linux-amd64
+	wget https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-linux-amd64.sha256
 	sha256sum -c --ignore-missing sshs-linux-amd64.sha256
 	mv bin/sshs-linux-amd64 /usr/local/bin/sshs
 Termux
-	wget -P bin/ https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-linux-arm64
-	wget https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-linux-arm64.sha256
+	wget -P bin/ https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-linux-arm64
+	wget https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-linux-arm64.sha256
 	sha256sum -c --ignore-missing sshs-linux-arm64.sha256
 	mv bin/sshs-linux-arm64 ~/bin/sshs
 Windows
-	wget -P bin\ https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-windows-amd64.exe
-	wget https://github.com/quantumsheep/sshs/releases/download/1.4.2/sshs-windows-amd64.exe.sha256
+	choco install sshs
+Binaries
+	wget -P bin\ https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-windows-amd64.exe
+	wget https://github.com/quantumsheep/sshs/releases/download/3.3.0/sshs-windows-amd64.exe.sha256
 	sha256sum -c --ignore-missing sshs-windows-amd64.exe.sha256
 	move bin\sshs-windows-amd64.exe C:\Users\dyzag\bin\sshs.exe
+Homebrew
+	brew install sshs

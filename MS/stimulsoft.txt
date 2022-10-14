@@ -1,5 +1,7 @@
 https://www.stimulsoft.com
 https://github.com/stimulsoft
+https://www.stimulsoft.com/en/documentation
+https://admin.stimulsoft.com/documentation/classreference-net/frames.html?frmname=topic&frmfile=index.html
 	wget https://admin.stimulsoft.com/install/Stimulsoft-Designer-2022.4.2.exe
 	start Stimulsoft-Designer-2022.4.2.exe
 Installed at
@@ -12,3 +14,32 @@ Developer package for ASP.NET
 Nuget
 https://www.nuget.org/packages/Stimulsoft.Reports.Web
 https://www.nuget.org/packages/Stimulsoft.Reports.Wpf
+DotNet
+	dotnet add package Stimulsoft.Reports.Net
+
+.NET Core Reporting Tools: print and export a report without preview from code (2022)
+https://www.youtube.com/watch?v=tyL-AunDopM
+https://www.youtube.com/playlist?list=PL-72PPAq-3SXd6cBrI_8gu9LvExFUr_JH
+	var report new StiReport();
+	report.Load(StiNetCoreHelper.MapPath(this, "Reports/BusinessInvoice.mrt"));
+	return StiNetCoreReportResponse.ResponseAsPdf(report);
+	// PrintReport
+	return report;
+
+https://www.stimulsoft.com/en/samples/reports-web/netcore/rendering-and-exporting-a-report-in-the-console-app
+	var report = new StiReport();
+	report.Load($"{ReportsDirectory}/TwoSimpleLists.mrt");
+	var exportFilePath = $"{ReportsDirectory}/TwoSimpleLists_{DateTime.Now.ToString("yyyy-dd-MM_HH-mm-ss")}.pdf";
+	report.Render(false);
+	report.ExportDocument(StiExportFormat.Pdf, exportFilePath);
+	Console.WriteLine(Path.GetFullPath(exportFilePath));
+
+Merge PDFs
+https://forum.stimulsoft.com/viewtopic.php?t=40079
+Unfortunately, it's impossible to do.
+You should look for the pdf editor.
+https://forum.stimulsoft.com/viewtopic.php?t=3636
+This task in not about the reporting tool. So we do not have such functionality.
+You can do it using third party utilities.
+
+See pdfsharp.txt

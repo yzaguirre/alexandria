@@ -1,3 +1,71 @@
 Modern .NET library for PDF document generation
+QuestPDF is an open-source, modern and battle-tested library that
+can help you with generating PDF documents by offering friendly,
+discoverable and predictable C# fluent API.
 https://www.questpdf.com
 https://github.com/QuestPDF/QuestPDF
+https://github.com/QuestPDF/QuestPDF-ExampleInvoice
+Package Manager
+	Install-Package QuestPDF
+.NET CLI
+	dotnet add package QuestPDF
+Package reference in .csproj file
+	<PackageReference Include="QuestPDF" Version="2022.9.0" />
+
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
+
+// code in your main method
+Document.Create(container =>
+{
+    container.Page(page =>
+    {
+        page.Size(PageSizes.A4);
+        page.Margin(2, Unit.Centimetre);
+        page.PageColor(Colors.White);
+        page.DefaultTextStyle(x => x.FontSize(20));
+        
+        page.Header()
+            .Text("Hello PDF!")
+            .SemiBold().FontSize(36).FontColor(Colors.Blue.Medium);
+        
+        page.Content()
+            .PaddingVertical(1, Unit.Centimetre)
+            .Column(x =>
+            {
+                x.Spacing(20);
+                
+                x.Item().Text(Placeholders.LoremIpsum());
+                x.Item().Image(Placeholders.Image(200, 100));
+            });
+        
+        page.Footer()
+            .AlignCenter()
+            .Text(x =>
+            {
+                x.Span("Page ");
+                x.CurrentPageNumber();
+            });
+    });
+})
+.GeneratePdf("hello.pdf");
+
+Document.Create(Function(container)
+        container.Page(Function(page)
+            page.Size(PageSizes.A4)
+            page.Margin(2, Unit.Centimetre)
+            page.Background(Colors.White)
+            page.DefaultTextStyle(Function(x) x.FontSize(20))
+            page.Header().Text("Hello PDF!").SemiBold().FontSize(36).FontColor(Colors.Blue.Medium)
+            page.Content().PaddingVertical(1, Unit.Centimetre).Column(Function(x)
+                x.Spacing(20)
+                x.Item().Text(Placeholders.LoremIpsum())
+                x.Item().Image(Placeholders.Image(200, 100))
+            End Function)
+            page.Footer().AlignCenter().Text(Function(x)
+                x.Span("Page ")
+                x.CurrentPageNumber()
+            End Function)
+        End Function)
+    End Function).GeneratePdf("hello.pdf")

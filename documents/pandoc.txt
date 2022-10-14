@@ -10,6 +10,8 @@ Installed at C:\Users\dyzag\AppData\Local\Pandoc
 	choco install pandoc
 	scoop install pandoc latex
 pdflatex.exe at %HOME%\scoop\apps\latex\2.9.7255\texmfs\install\miktex\bin\x64
+Homebrew
+	brew install pandoc
 
 https://pandoc.org/MANUAL.html
 Convert to html5
@@ -26,3 +28,18 @@ Conversion to Word
 
 Using SVG in source document to PDF
 https://github.com/jgm/pandoc/issues/265
+
+Lightweight and cross-platform GUI wrapper for the pandoc command line
+https://github.com/Ombrelin/pandoc-gui
+	wget https://github.com/Ombrelin/pandoc-gui/releases/download/1.1.1/PandocGui.1.0.0.deb
+	dpkg -i PandocGui.1.0.0.deb
+Windows
+	winget install Ombrelin.PandocGui
+Binaries
+	wget https://github.com/Ombrelin/pandoc-gui/releases/download/1.1.1/pandoc-gui-setup.exe
+	start pandoc-gui-setup.exe
+Installed at
+C:\Program Files (x86)\Pandoc GUI
+
+Usage
+	PandocGui

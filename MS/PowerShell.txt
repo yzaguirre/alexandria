@@ -330,3 +330,7 @@ https://www.minitool.com/news/print-spooler-service-not-running.html
 	net start spooler
 Usage
 	ls | Out-Printer
+
+HTTP Client
+https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2
+	Invoke-WebRequest -OutFile <File> -URI <LINK>

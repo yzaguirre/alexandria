@@ -1,3 +1,5 @@
+See potatowall.txt
+
 It's not my fault but I gotta deal with it - how I learned to handle corporate firewalls in my frontend.
 https://www.valcanbuild.tech/handling-corporate-firewalls/
 https://news.ycombinator.com/item?id=33078280

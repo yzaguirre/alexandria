@@ -1,0 +1,28 @@
+A port ping console for Windows.
+https://codingfreaks.de/pping/
+https://github.com/codingfreak/pping
+	wget https://devdeer.blob.core.windows.net/shared/codingfreaks/pping-linux-x64-latest.7z
+	sha256sum pping-linux-x64-latest.7z
+C1962DB9679A0E8E7BEE7E86A7DC7B7A1AA637FDB4B4D9D365623EBB024FCC72
+	7zz x pping-linux-x64-latest.7z pping
+	chmod u+x pping
+	mv pping /usr/local/bin/pping
+Windows
+	choco install pping
+
+Usage
+	pping google.com 80
+Resolve the IP address behind a DNS entry
+	pping google.com 80 -res
+Constant pings
+	pping google.com 80 -t
+Waiting for a port to open
+Consider a situation where you restart a server and want to know,
+when RDP connections are possible.
+A simple ping would'nt help you here because even if the machine is up,
+the RDP port (3389) might no be reachable yet.
+	pping myserver.local 3389 -t -as
+Multiple ports
+	pping google.com 80,443 -d
+Range of ports
+	pping google.com 80-82 -d

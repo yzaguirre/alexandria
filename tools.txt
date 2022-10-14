@@ -653,6 +653,8 @@ exa
 duf
 diskus
 aha
+oha
+tuc
 bat
 jq
 ttyplot
@@ -680,6 +682,9 @@ just
 nushell
 entr
 cw
+
+mentebinaria.retoolkit
+potatowall
 
 Rust Programs Every Linux User Should Know About
 https://www.youtube.com/watch?v=dQa9mveTSV4

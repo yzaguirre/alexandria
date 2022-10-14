@@ -1,5 +1,8 @@
 PostgreSQL: The World's Most Advanced Open Source Relational Database
 https://www.postgresql.org
+PostgreSQL 15
+https://www.postgresql.org/about/news/postgresql-15-released-2526/
+https://news.ycombinator.com/item?id=33190456
 PostgreSQL 14
 https://www.postgresql.org/about/news/postgresql-14-released-2318/
 https://news.ycombinator.com/item?id=28705699

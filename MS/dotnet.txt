@@ -15,26 +15,6 @@ https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/?utm_source=Direct
 https://github.com/dotnet/sdk
 https://www.microsoft.com/net/core
 https://dotnet.microsoft.com/download
-Windows
-	winget install Microsoft.DotNet.SDK.6
-Installation at C:\Program Files\dotnet
-
-Binaries
-	wget https://download.visualstudio.microsoft.com/download/pr/ede8a287-3d61-4988-a356-32ff9129079e/bdb47b6b510ed0c4f0b132f7f4ad9d5a/dotnet-sdk-6.0.101-linux-x64.tar.gz
-	sha512sum dotnet-sdk-6.0.101-linux-x64.tar.gz
-ca21345400bcaceadad6327345f5364e858059cfcbc1759f05d7df7701fec26f1ead297b6928afa01e46db6f84e50770c673146a10b9ff71e4c7f7bc76fbf709
-	mkdir /opt/dotnet
-	tar xf dotnet-sdk-6.0.101-linux-x64.tar.gz -C /opt/dotnet
-export DOTNET_ROOT=/opt/dotnet
-export PATH=$PATH:/opt/dotnet
-
-Check installations
-https://docs.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions?pivots=os-windows
-	dotnet --info
-	dotnet --list-sdks
-	dotnet --list-runtimes
-
-Package manager
 https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu
 	wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 	sudo dpkg -i packages-microsoft-prod.deb
@@ -50,17 +30,35 @@ you can install the .NET Runtime, which doesn't include
 ASP.NET Core support: replace aspnetcore-runtime-6.0
 in the previous command with dotnet-runtime-6.0:
 	sudo apt install dotnet-runtime-6.0
-
 Installation at /usr/share/dotnet/
-
+Binaries
+	wget https://download.visualstudio.microsoft.com/download/pr/d3e46476-4494-41b7-a628-c517794c5a6a/6066215f6c0a18b070e8e6e8b715de0b/dotnet-sdk-6.0.402-linux-x64.tar.gz
+	sha512sum dotnet-sdk-6.0.402-linux-x64.tar.gz
+972c2d9fff6a09ef8f2e6bbaa36ae5869f4f7f509ae5d28c4611532eb34be10c629af98cdf211d86dc4bc6edebb04a2672a97f78c3e0f2ff267017f8c9c59d4e
+	mkdir /opt/dotnet
+	tar xf dotnet-sdk-6.0.402-linux-x64.tar.gz -C /opt/dotnet
+export DOTNET_ROOT=/opt/dotnet
+export PATH=$PATH:/opt/dotnet
 Termux
 https://www.reddit.com/r/termux/comments/r9jsvv/anyone_managed_to_use_dotnet_sdk_6_on_debian_10/
+Windows
+	winget install Microsoft.DotNet.SDK.6
+Installation at C:\Program Files\dotnet
+	choco install dotnet-sdk
 
 Write this in ~/.profile
 	export DOTNET_CLI_TELEMETRY_OPTOUT=1
+Check installations
+https://docs.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions?pivots=os-windows
+	dotnet --info
+	dotnet --list-sdks
+	dotnet --list-runtimes
+
 Start a new project
+	dotnet new -l | bat
 	dotnet new
 	dotnet new console -o myApp
+	dotnet new console -lang VB -o myApp
 With Blazor
 	dotnet new blazorserver -n myApp
 
