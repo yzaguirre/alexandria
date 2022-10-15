@@ -17,6 +17,8 @@ https://www.python.org/downloads/release/python-3910/
 Disable the MAX_PATH path length limitation
 https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd
 https://stackoverflow.com/questions/27680647/does-max-path-issue-still-exists-in-windows-10
+https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell#enable-long-paths-in-windows-10-version-1607-and-later
+	New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 All other Windows installation
 python is C:\Python39\python
           C:\Python39\Scripts\

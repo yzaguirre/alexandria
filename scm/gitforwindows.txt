@@ -2,6 +2,10 @@ https://gitforwindows.org
 	winget install Git.Git
 Uses ~/.bashrc
 
+https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=powershell#enable-long-paths-in-windows-10-version-1607-and-later
+https://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows
+	New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+
 https://www.develves.net/blogs/asd/articles/using-git-with-powershell-on-windows-10/
 A PowerShell environment for Git
 http://dahlbyk.github.io/posh-git/

@@ -22,6 +22,7 @@ Usage
 	pdftk
 
 Fill a PDF with given data and returns the PDF bytes.
+https://stackoverflow.com/questions/29633873/pdftk-and-removing-the-xfa-format#29645189
 var pdftk = new PDFtk();
 
 var fieldData = new Dictionary<string, string>()

@@ -1,0 +1,28 @@
+https://stackoverflow.com/questions/10398490/how-to-make-a-very-simple-asynchronous-method-call-in-vb-net
+Imports System.Threading
+
+Dim t As New Thread(New ThreadStart(AddressOf DoAsyncWork))
+t.Priority = Threading.ThreadPriority.Normal
+t.Start()
+
+https://stackoverflow.com/questions/12235967/await-doesnt-wait-for-the-completion-of-call
+Now because your method has a type of void, you have no way of knowing
+when that's even finished - if you returned Task (which wouldn't require
+any change in the body of the method) you'd at least be able to work out when it had finished.
+
+Pause
+https://www.c-sharpcorner.com/blogs/how-to-pause-a-thread-in-vb-net1
+For i As Integer = 0 To 10
+	Console.WriteLine("Hello")
+	Thread.Sleep(1000)
+Next
+
+Dictionary
+https://www.dotnetperls.com/dictionary-vbnet
+
+Multiline String
+https://www.codeproject.com/articles/292152/mutliline-string-literals-in-vb-net
+<string>
+	Imports Microsoft.VisualBasic
+	Imports System
+</string>
