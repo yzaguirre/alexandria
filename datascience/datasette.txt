@@ -1,0 +1,16 @@
+https://datasette.io
+	sudo -H pip install -U datasette
+Homebrew
+	brew install datasette
+Upgrade homebrew
+	datasette install -U datasette
+
+Install plugins
+	datasette install datasette-vega
+
+Usage
+This will start a web server on port 8001
+Visit http://localhost:8001/ to access the web interface.
+	datasette path/to/database.db
+On Chrome browser history
+	datasette ~/Library/Application\ Support/Google/Chrome/Default/History --nolock

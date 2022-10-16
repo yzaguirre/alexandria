@@ -1,0 +1,14 @@
+Convert CSV files into a SQLite database
+https://datasette.io/tools/csvs-to-sqlite
+https://github.com/simonw/csvs-to-sqlite
+https://news.ycombinator.com/item?id=33219289
+See ../../datascience/sources.txt
+../../images/shot-scraper.txt
+	sudo -H pip install -U csvs-to-sqlite
+
+Usage
+	csvs-to-sqlite myfile.csv mydatabase.db
+	csvs-to-sqlite one.csv two.csv bundle.db
+The bundle.db database will contain two tables, one and two.
+Pass directories
+	csvs-to-sqlite ~/path/to/directory all-my-csvs.db

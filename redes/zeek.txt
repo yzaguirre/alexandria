@@ -1,0 +1,8 @@
+An Open Source Network Security Monitoring Tool
+Zeek is a powerful network analysis framework that is much different
+from the typical IDS you may know.
+https://zeek.org
+https://github.com/zeek/zeek
+https://github.com/microsoft/ms-zeek
+https://corelight.com/company/zeek-now-component-of-microsoft-windows
+https://news.ycombinator.com/item?id=33214246

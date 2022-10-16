@@ -1,4 +1,26 @@
-https://librepcb.org/
-	wget https://download.librepcb.org/releases/0.1.4/librepcb-installer-0.1.4-linux-x86_64.run
-	chmod u+x librepcb-installer-0.1.4-linux-x86_64.run
-	./librepcb-installer-0.1.4-linux-x86_64.run
+A powerful, innovative and intuitive EDA tool for everyone!
+https://librepcb.org
+https://github.com/LibrePCB/LibrePCB
+https://librepcb.org/blog/2022-10-03_release_0.1.7/
+https://news.ycombinator.com/item?id=33217270
+	wget https://download.librepcb.org/releases/0.1.7/librepcb-installer-0.1.7-linux-x86_64.run
+	wget https://download.librepcb.org/releases/0.1.7/librepcb-installer-0.1.7-linux-x86_64.run.asc
+	wget https://download.librepcb.org/releases/0.1.7/sha256sums.txt
+	wget https://download.librepcb.org/releases/0.1.7/sha256sums.txt.asc
+	gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 0xD6F9AF572228C5BCD6B538407EF3061F5C8D5E25
+	gpg --verify librepcb-installer-0.1.7-linux-x86_64.run.asc
+	gpg --verify sha256sums.txt.asc
+	sha256sum -c --ignore-missing sha256sums.txt
+	chmod u+x librepcb-installer-0.1.7-linux-x86_64.run
+	sudo sh -c ./librepcb-installer-0.1.7-linux-x86_64.run
+Installed at
+/opt/LibrePCB
+Add to PATH environment variable
+/opt/LibrePCB/stable/bin
+Windows
+	wget https://download.librepcb.org/releases/0.1.7/librepcb-installer-0.1.7-windows-x86.exe
+	wget https://download.librepcb.org/releases/0.1.7/librepcb-installer-0.1.7-windows-x86.exe.asc
+	gpg --verify librepcb-installer-0.1.7-windows-x86.exe.asc
+	start librepcb-installer-0.1.7-windows-x86.exe
+Installed at
+C:\Program Files (x86)\LibrePCB

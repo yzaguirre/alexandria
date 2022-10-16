@@ -7,6 +7,7 @@ http://2016.padjo.org/tutorials/sqlite-data-starterpacks/
 https://news.ycombinator.com/item?id=27324669
 
 https://datasette.io/examples
+See ../images/shot-scraper.txt
 
 https://github.com/collections/open-data
 

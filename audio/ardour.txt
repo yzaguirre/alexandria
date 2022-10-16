@@ -1,0 +1,4 @@
+https://www.ardour.org
+https://github.com/Ardour/ardour
+https://news.ycombinator.com/item?id=27740936
+https://news.ycombinator.com/item?id=33215431

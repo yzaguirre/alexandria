@@ -1,6 +1,10 @@
 Tools for taking automated screenshots of websites
+https://shot-scraper.datasette.io/en/stable/
 https://github.com/simonw/shot-scraper
 https://news.ycombinator.com/item?id=32409632
+See ../datascience/sources.txt
+https://simonwillison.net/2022/Oct/14/automating-screenshots/
+https://news.ycombinator.com/item?id=33216789
 	sudo -H pip install -U shot-scraper
 	shot-scraper install
 Installed at

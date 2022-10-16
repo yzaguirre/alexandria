@@ -1,3 +1,9 @@
-https://htmx.org/
+https://htmx.org
 https://github.com/bigskysoftware/htmx
 https://news.ycombinator.com/item?id=23330881
+https://news.ycombinator.com/item?id=33218439
+Add to project
+	yarn add htmx.org
+	npm install htmx.org
+Download minified
+	wget https://unpkg.com/htmx.org/dist/htmx.min.js

@@ -268,3 +268,6 @@ https://www.youtube.com/watch?v=DTcLCOSBQyc
 
 Set background
 	display -backdrop -background '#3f3f3f' -flatten -window root volcano.png
+
+https://imagemagick.org/Usage/compare/#difference
+	magick composite bag_frame1.gif bag_frame1.jpg -compose difference difference_jpeg.gif
