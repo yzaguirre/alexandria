@@ -6,12 +6,11 @@ http://www.apertoire.net/gogs-an-alternative-to-gitlab/
 https://help.github.com/articles/closing-issues-via-commit-messages/
 
 https://gogs.io/docs/installation
-https://github.com/gogits/gogs/releases
-	wget https://github.com/gogs/gogs/releases/download/v0.12.3/gogs_0.12.3_linux_amd64.tar.gz
-	wget https://dl.gogs.io/0.12.3/checksum_sha256.txt
+	wget https://github.com/gogs/gogs/releases/download/v0.12.10/gogs_0.12.10_linux_amd64.tar.gz
+	wget https://dl.gogs.io/0.12.10/checksum_sha256.txt
 	sha256sum -c --ignore-missing checksum_sha256.txt
+	tar xf gogs_0.12.10_linux_amd64.tar.gz -C /opt
 	mkdir -p /home/git/.ssh
-	tar xf gogs_0.12.3_linux_amd64.tar.gz -C /opt
 
 Edit mariadb file
 https://github.com/gogs/gogs/issues/6476
@@ -30,8 +29,8 @@ Run
 	su git
 	cd /opt/gogs
 	./gogs web
-	
-https://gogs.io/docs/advanced/configuration_cheat_sheet
+
+https://gogs.io/docs/installation/configuration_and_run
 Configuration file is located in <install folder>/custom/conf/app.ini
 
 DB
@@ -43,12 +42,25 @@ DB
 Update gogs
 Backup configuration and data dir
 	cd /opt/gogs
-	cp -r custom data attachments /tmp
+	7zz a ~/gogs-data-0.12.3.zip custom data log
 	cd ..
-	mv gogs gogs-old
+	7zz a ~/gogs-0.12.3.zip gogs
 Download latest release (see above)
-	mv /tmp/{data,custom,attachments} /opt/gogs
+	7zz x -o/opt/gogs ~/gogs-data-0.12.3.zip
 	chown git:git -R /opt/gogs
+
+Templates
+	mkdir custom/templates
+	cp templates/home.tmpl custom/templates/home.tmpl
+Favicon
+	mkdir -p custom/public/img
+	cp new_favicon.png custom/public/img/favicon.png
+CSS
+	mkdir -p custom/public/css
+	cp new_site.css custom/public/css/custom.css
+	vim custom/templates/inject/head.tmpl
+<link rel="stylesheet" href="/css/custom.css">
+Restart gogs
 
 https://gogs.io/docs/features/webhook.html
 https://stackoverflow.com/questions/22169225/how-to-setup-gitlab-web-hook-to-deployment
