@@ -1,13 +1,13 @@
 https://www.blender.org
 	apt install blender
 Binary
-	wget https://download.blender.org/release/Blender3.3/blender-3.3.0-linux-x64.tar.xz
-	wget https://download.blender.org/release/Blender3.3/blender-3.3.0.md5
-	wget https://download.blender.org/release/Blender3.3/blender-3.3.0.sha256
-	md5sum -c --ignore-missing blender-3.3.0.md5
-	sha256sum -c --ignore-missing blender-3.3.0.sha256
-	tar xf blender-3.3.0-linux-x64.tar.xz -C /opt
-	mv /opt/blender{-3.3.0-linux-x64,}
+	wget https://download.blender.org/release/Blender3.3/blender-3.3.1-linux-x64.tar.xz
+	wget https://download.blender.org/release/Blender3.3/blender-3.3.1.md5
+	wget https://download.blender.org/release/Blender3.3/blender-3.3.1.sha256
+	md5sum -c --ignore-missing blender-3.3.1.md5
+	sha256sum -c --ignore-missing blender-3.3.1.sha256
+	tar xf blender-3.3.1-linux-x64.tar.xz -C /opt
+	mv /opt/blender{-3.3.1-linux-x64,}
 	ln -s /opt/blender/blender /usr/local/bin
 Windows
 	winget install BlenderFoundation.Blender

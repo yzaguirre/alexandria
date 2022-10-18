@@ -1,0 +1,9 @@
+https://www.complang.tuwien.ac.at/anton/failing-memory.html
+https://news.ycombinator.com/item?id=33200294
+
+Rasdaemon is a RAS (Reliability, Availability and Serviceability) logging tool.
+It records memory errors, using the EDAC tracing events.
+EDAC is a Linux kernel subsystem with handles detection of ECC errors
+from memory controllers for most chipsets on i386 and x86_64 architectures.
+EDAC drivers for other architectures like arm also exists.
+https://github.com/mchehab/rasdaemon

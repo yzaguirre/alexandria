@@ -3,12 +3,17 @@ creates and processes PDF documents on the fly from any .NET language.
 The same drawing routines can be used to create PDF documents,
 draw on the screen, or send output to any printer.
 http://www.pdfsharp.net
-https://www.nuget.org/packages/PdfSharp/1.51.5185-beta
+https://www.nuget.org/packages/PdfSharp
 NuGet
-	Install-Package PdfSharp -Version 1.51.5185-beta
+	Install-Package PdfSharp
 DotNet
-	dotnet add package PdfSharp --version 1.51.5185-beta
-	dotnet add package System.Resources.Extensions
+https://github.com/ststeiger/PdfSharpCore
+https://www.nuget.org/packages/PdfSharpCore
+x	dotnet add package PdfSharp --version 1.51.5185-beta
+x	dotnet add package System.Resources.Extensions
 
 Combine Documents
 http://www.pdfsharp.com/PDFsharp/index.php?option=com_content&task=view&id=34&Itemid=45
+
+Concatenate Documents
+http://www.pdfsharp.net/wiki/ConcatenateDocuments-sample.ashx

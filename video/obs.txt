@@ -28,9 +28,9 @@ Required packages
 	libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev
 Building and installing OBS:
 x	git clone https://github.com/jp9000/obs-studio.git
-	wget https://github.com/jp9000/obs-studio/archive/0.9.1.tar.gz
-	tar xf 0.9.1.tar.gz
-	cd obs-studio-0.9.1
+	wget https://github.com/jp9000/obs-studio/archive/28.0.3.tar.gz
+	tar xf 28.0.3.tar.gz
+	cd obs-studio-28.0.3
 	mkdir build && cd build
 	cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
 	make -j4

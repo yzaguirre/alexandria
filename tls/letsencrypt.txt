@@ -1,3 +1,6 @@
+https://certbot.eff.org
+https://github.com/certbot/certbot
+
 https://letsencrypt.org/docs/staging-environment/
 
 Should you use Let's Encrypt for internal hostnames?
@@ -67,8 +70,6 @@ NOTES:
 	openssl dhparam -out dhparam.pem 2048
 	cat domain.key signed.crt lets-encrypt-x1-cross-signed.pem dhparam.pem > znc.pem
 
-
-
 # Regular client example
 	./letsencrypt-auto --email diafygi@gmail.com --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr
 
@@ -115,6 +116,11 @@ For apache
 	certbot --apache -d example.com -d www.example.com
 Standalone
 	certbot certonly --standalone --preferred-challenges http -d example.com -d www.example.com
+Wildcard
+https://qsandbox.com/blog/server-administration/generate-free-wildcard-ssl-certificate-letsencrypt-p524
+https://www.youtube.com/watch?v=WB6ude6FbXg
+	certbot certonly --manual --webroot-path /var/www/vhosts/example.com/htdocs --email admin@example.com --verbose -d example.com -d '*.example.com' --rsa-key-size 4096 --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory --agree-tos --manual-public-ip-logging-ok
+
 Certs are saved in
 /etc/letsencrypt/live
 

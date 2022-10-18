@@ -1,0 +1,48 @@
+https://certbot.eff.org
+https://github.com/certbot/certbot
+See letsencrypt.txt
+	winget install EFF.Certbot
+Binaries
+https://github.com/certbot/certbot/releases/download/v1.31.0/certbot-beta-installer-win_amd64_signed.exe
+	Invoke-WebRequest -OutFile certbot-beta-installer-win_amd64_signed.exe -URI https://github.com/certbot/certbot/releases/download/v1.31.0/certbot-beta-installer-win_amd64_signed.exe
+	start certbot-beta-installer-win_amd64_signed.exe
+
+Usage
+	certbot --help
+Renew
+	certbot renew -pre-hook "net stop Apache2.4" --post-hook "net start Apache2.4"
+
+https://www.win-acme.com
+https://github.com/win-acme/win-acme
+Free Certificate for IIS with Let's Encrypt
+https://www.youtube.com/watch?v=A0Go2_A6gPg
+How to Install Lets Encrypt Certificates on IIS with Autorenew
+https://www.youtube.com/watch?v=vbk5kUT7GeY
+	choco install win-acme
+	dotnet tool install win-acme --global
+Binaries
+	Invoke-WebRequest -OutFile .\win-acme.v2.1.22.1289.x64.pluggable.zip -URI "https://github.com/win-acme/win-acme/releases/download/v2.1.22.1289/win-acme.v2.1.22.1289.x64.pluggable.zip"
+	Expand-Archive -Path .\win-acme.v2.1.22.1289.x64.pluggable.zip -DestinationPath C:\Win-Acme
+
+Usage
+	cd C:\Win-Acme
+	wacs.exe
+
+https://certifytheweb.com
+https://github.com/webprofusion/certify
+https://docs.certifytheweb.com/docs/intro
+Certificado SSL Gratuito Let's EnCrypt en IIS (Windows Server) 🔥
+https://www.youtube.com/watch?v=ND02QaNAXY8
+	choco install certifytheweb
+Binaries
+	Invoke-WebRequest -OutFile CertifyTheWebSetup_V5.6.8.exe -Uri "https://certifytheweb.s3.amazonaws.com/downloads/archive/CertifyTheWebSetup_V5.6.8.exe"
+	Get-FileHash CertifyTheWebSetup_V5.6.8.exe -Algorithm SHA256
+7e4614e706dad3c7f7fb9652dd02ceefb3c95ae6ea0cc9e9fe59d943a495158c
+	start CertifyTheWebSetup_V5.6.8.exe
+Installed at
+C:\ProgramData\certify
+
+An ACME client library and PowerShell client for the .NET platform (Let's Encrypt)
+https://pkisharp.github.io/ACMESharp-docs/
+https://github.com/ebekker/ACMESharp
+	choco install acmesharp-posh-all

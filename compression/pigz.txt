@@ -1,5 +1,6 @@
 https://zlib.net/pigz/
 https://github.com/madler/pigz
+https://news.ycombinator.com/item?id=33238283
 	apt install pigz
 Compile
 	wget https://zlib.net/pigz/pigz-2.7.tar.gz
