@@ -20,7 +20,7 @@ DotNet
 .NET Core Reporting Tools: print and export a report without preview from code (2022)
 https://www.youtube.com/watch?v=tyL-AunDopM
 https://www.youtube.com/playlist?list=PL-72PPAq-3SXd6cBrI_8gu9LvExFUr_JH
-	var report new StiReport();
+	var report = new StiReport();
 	report.Load(StiNetCoreHelper.MapPath(this, "Reports/BusinessInvoice.mrt"));
 	return StiNetCoreReportResponse.ResponseAsPdf(report);
 	// PrintReport

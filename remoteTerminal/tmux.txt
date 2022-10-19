@@ -12,6 +12,7 @@ https://github.com/rothgar/awesome-tmux
 https://leanpub.com/the-tao-of-tmux/read
 https://sourceforge.net/projects/tmux/files/tmux/tmux-2.0/
 http://www.bsdnow.tv/tutorials/ssh-tmux
+https://www.reddit.com/r/commandline/comments/y6zysj/what_is_your_most_important_feature_of_tmux/
 Install
 	apt install tmux
 MacOS

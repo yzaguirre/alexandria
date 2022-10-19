@@ -213,7 +213,9 @@ https://shotstack.io/learn/rotate-videos-using-ffmpeg/
 	exiftool -Rotation -ImageWidth -ImageHeight h1920_w1080_f30_a9-16_r90.mp4
 Fix rotation to 0
 	ffmpeg -i h1920_w1080_f30_a9-16_r90.mp4 -c copy -metadata:s:v:0 rotate=0 temp.mp4
-Rotate
+Rotate 90 clockwise
+	ffmpeg -i in.mov -vf "transpose=1" out.mov
+Rotate counter clockwise
 	ffmpeg -i temp.mp4 -vf "transpose=cclock" -crf 23 -c:a copy rotated.mp4
 Add watermark
 	ffmpeg -i input.mkv -i watermark.png -filter_complex "overlay=50:50" output.mkv

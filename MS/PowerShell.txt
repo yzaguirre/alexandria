@@ -334,3 +334,20 @@ Usage
 HTTP Client
 https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.2
 	Invoke-WebRequest -OutFile <File> -URI <LINK>
+
+Get Users
+https://www.educba.com/powershell-user-list/
+https://stackoverflow.com/questions/4548476/powershell-list-local-users-and-their-groups
+	Get-LocalUser
+	Get-WmiObject -Class Win32_UserAccount
+List groups
+https://techexpert.tips/powershell/powershell-create-local-group/
+https://blog.eldernode.com/create-group-in-windows-with-powershell/
+	Get-LocalGroup
+List members of a group
+	Get-LocalGroupMember -Group "MYGRP"
+Create Group
+	New-LocalGroup -Name "MYGRP" -Description "MY GROUP"
+Add members
+	Add-LocalGroupMember -Group "MYGRP" -Member "Gohan"
+	Add-LocalGroupMember -Group "MYGRP" -Member ("Gohan","Administrator")

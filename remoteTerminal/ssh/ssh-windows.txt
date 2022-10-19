@@ -34,6 +34,8 @@ How to SSH into Windows from Windows (and copy files remotely)
 https://www.youtube.com/watch?v=pFTC4Rt-EDQ
 Configure and Install OpenSSH Public key authentication in Windows 10 for remote connectivity
 https://www.youtube.com/watch?v=9dhQIa8fAXU
+Learn how to AllowUsers, DenyUsers, AllowGroups and DenyGroups in OpenSSH in Windows Server 2019
+https://www.youtube.com/watch?v=Tpf3dQQ8l3U
 
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
 https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
@@ -53,18 +55,14 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "'C:\P
 Binary at
 C:\Windows\System32\OpenSSH
 
+Firewall
+https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/
+x	New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+	New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Service sshd -Enabled True -Direction Inbound -Protocol TCP -Action Allow -Profile Domain
+
 Set service to start automatically
 	Set-Service -name ssh-agent -startuptype 'automatic'
 	Set-Service -name sshd -startuptype 'automatic'
-
-Configuration file
-https://github.com/PowerShell/Win32-OpenSSH/issues/870
-C:\Users\DAVIDY~1\.ssh\config
-System-wide configuration file
-C:\ProgramData\ssh\sshd_config
-Server configuration directory
-https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
-C:\ProgramData\ssh\
 
 Permissions for administrators_authorized_keys
 https://stackoverflow.com/questions/16212816/setting-up-openssh-for-windows-using-public-key-authentication
@@ -81,12 +79,18 @@ Alternative
 Start server
 	Start-Service sshd
 	Get-Service sshd
+	Get-Service ssh-agent
 Stop server
 	Stop-Service sshd
 
-Firewall
-https://devblogs.microsoft.com/powershell/using-the-openssh-beta-in-windows-10-fall-creators-update-and-windows-server-1709/
-	New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Service sshd -Enabled True -Direction Inbound -Protocol TCP -Action Allow -Profile Domain
+Configuration file
+https://github.com/PowerShell/Win32-OpenSSH/issues/870
+C:\Users\DAVIDY~1\.ssh\config
+System-wide configuration file
+C:\ProgramData\ssh\sshd_config
+Server configuration directory
+https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_server_configuration
+C:\ProgramData\ssh\
 
 https://en.wikipedia.org/wiki/Comparison_of_SSH_servers
 http://www.extenua.com/silvershield.htm
@@ -111,5 +115,7 @@ Setting up an SFTP Server on Windows (Server) with OpenSSH (using Microsoft's po
 https://www.youtube.com/watch?v=Eklxg_UUktI
 SFTP Setup in Windows Server 2019
 https://www.youtube.com/watch?v=cu2HjREsTVE
+Configuring Windows Server 2019 Open SSH Server to support Key Based Authentication
+https://www.youtube.com/watch?v=Cs3wBl_mMH0
 Add ssh user
 	New-LocalUser -Name "user1"

@@ -154,5 +154,7 @@ Start a service
 	net start MySQL
 User Management
 	lusrmgr.msc
+List users
+	net user
 Self Extracting EXE installer using 7zip on Windows or Linux 7zS.sfx
 https://www.youtube.com/watch?v=Gh7JDNT-Luc

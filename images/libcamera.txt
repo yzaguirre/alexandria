@@ -1,0 +1,4 @@
+An open source camera stack and framework for Linux, Android, and ChromeOS
+https://libcamera.org
+https://git.libcamera.org/libcamera/libcamera.git
+https://news.ycombinator.com/item?id=33245414

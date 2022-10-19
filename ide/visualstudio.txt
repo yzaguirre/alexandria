@@ -19,3 +19,6 @@ Open files
 https://stackoverflow.com/questions/44130341/open-file-in-existing-instance-of-visual-studio-2017
 https://docs.microsoft.com/en-us/visualstudio/ide/reference/devenv-command-line-switches?view=vs-2019
 https://davemateer.com/2018/11/14/Open-visual-studio-from-command-line
+
+Debugging
+https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/debuggers/debugger-not-stop-breakpoint

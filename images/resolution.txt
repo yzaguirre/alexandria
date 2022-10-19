@@ -8,3 +8,5 @@ Extra Compression Tools
 
 https://cft.vanderbilt.edu/wp-content/uploads/sites/59/Image_resolutions.pdf
 See ~/Libros/Progra/Design UX UI/Image_resolutions.pdf
+
+https://www.reddit.com/r/commandline/comments/y6tvpf/imagemagick_did_an_obscenely_good_job_compressing/
