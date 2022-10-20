@@ -41,5 +41,7 @@ Convert all flac files into opus files:
 	fd -e flac -x ffmpeg -i {} -c:a libopus {.}.opus
 Count the number of lines in Rust files (the command template can be terminated with ';'):
 	fd -x wc -l \; -e rs
+Always color
+	fd -c always
 
 https://github.com/sharkdp/fd/issues/538
