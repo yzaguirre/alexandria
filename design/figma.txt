@@ -19,3 +19,7 @@ ioskit
 ioskit.design
 https://www.figma.com/community/file/984106517828363349
 https://twitter.com/joeyabanks/status/1402281551187136525
+
+Delve into Material 3 through the Now in Android app 
+https://www.figma.com/community/file/1164313362327941158
+https://twitter.com/AndroidDev/status/1583125041944104961
