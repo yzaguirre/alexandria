@@ -7,3 +7,7 @@ https://thepihut.com/products/mq-2-gas-sensor
 
 Enviro + Air Quality for Raspberry Pi
 https://thepihut.com/collections/raspberry-pi-gifts/products/enviro-air-quality-for-raspberry-pi
+
+A Bluetooth Low Energy (BLE) soil moisture sensor
+https://github.com/rbaron/b-parasite
+https://news.ycombinator.com/item?id=33281310
