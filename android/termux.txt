@@ -1,4 +1,4 @@
-https://termux.com
+https://termux.dev
 https://github.com/termux/termux-app
 https://github.com/termux/termux-packages
 https://news.ycombinator.com/item?id=24979258

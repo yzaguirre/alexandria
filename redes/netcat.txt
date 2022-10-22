@@ -4,6 +4,12 @@ Se instalarán los siguientes paquetes NUEVOS:
   liblua5.3-0 ncat
 Termux
 	apt install nmap-ncat
+Traditional
+http://www.stearns.org/nc/
+ncat-openbsd
+https://github.com/openbsd/src/blob/master/usr.bin/nc/netcat.c
+netcat GNU
+https://netcat.sourceforge.net/
 
 http://nmap.org/ncat/guide/ncat-file-transfer.html
 http://supportex.net/2011/06/ncat-transfer-files-ssh/

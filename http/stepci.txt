@@ -1,3 +1,5 @@
 Continuous Integration platform for APIs
+https://stepci.com
 https://github.com/stepci
 https://news.ycombinator.com/item?id=33151474
+	npm install -g stepci

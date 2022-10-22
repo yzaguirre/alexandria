@@ -2,6 +2,7 @@ Hurl, run and test HTTP requests.
 https://hurl.dev/index.html
 https://github.com/Orange-OpenSource/hurl
 https://news.ycombinator.com/item?id=28758226
+See stepci.txt
 Install
 https://hurl.dev/docs/installation.html
 	wget https://github.com/Orange-OpenSource/hurl/releases/download/1.7.0/hurl_1.7.0_amd64.deb
