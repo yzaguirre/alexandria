@@ -46,6 +46,8 @@ Homebrew
 
 Configuration at
 /home/david/.config/nvim/init.vim
+/etc/xdg/xdg-mate/nvim/init.vim
+/etc/xdg/nvim/init.vim
 C:\Users\DAVIDY~1\AppData\Local\nvim\init.vim
 	:edit $MYVIMRC
 
@@ -59,9 +61,18 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vim/vimrc
 
+Usage
+	nvim -V5log.txt
+
 https://media.pragprog.com/titles/modvim/terminal.pdf
 
 https://neovim.io/doc/user/usr_05.html#05.1
 
 Find, Filter, Preview, Pick. All lua, all the time.
 https://github.com/nvim-telescope/telescope.nvim
+
+https://github.com/rockerBOO/awesome-neovim
+
+https://www.reddit.com/r/neovim/comments/r0a33t/good_neovim_configurations/
+
+https://dev.to/iamdeb25/my-neovim-configuration-3ign

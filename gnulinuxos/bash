@@ -1,4 +1,5 @@
 https://www.linuxquestions.org/questions/linux-networking-3/how-do-i-find-my-gateway-address-on-eth0-83484/
+https://www.unixmen.com/how-to-find-default-gateway-in-linux/
 	netstat -nr
 	ip route show
 	route -nee

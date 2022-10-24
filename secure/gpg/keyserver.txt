@@ -1,4 +1,4 @@
-https://keys.mailvelope.com/
+https://keys.mailvelope.com
 https://github.com/mailvelope/keyserver
 	git clone https://github.com/mailvelope/keyserver.git
 	cd keyserver
