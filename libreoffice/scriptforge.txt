@@ -1,0 +1,24 @@
+https://help.libreoffice.org/7.2/en-US/text/sbasic/shared/03/lib_ScriptForge.html?DbPAR=BASIC
+Python script support provider for LibreOffice scripting framework
+	apt install libreoffice-script-provider-python
+https://github.com/rafaelhlima/LibOCon_2021_SFCalc
+
+LibreOffice user scripts folder
+https://help.libreoffice.org/latest/en-US/text/sbasic/python/python_locations.html
+~/.config/libreoffice/4/user/Scripts/python/
+C:\Users\DAVIDY~1\LibreOffice\4\user\Scripts\python
+/Users/david/Library/Application Support/LibreOffice/4/user/Scripts/python
+
+doc = CreateScriptService("Calc")
+if doc.IsCalc:
+	# do something
+else:
+	return
+
+LibreOffice Conference 2021 - Python scripts in LibreOffice Calc using the ScriptForge library
+https://www.youtube.com/watch?v=3xnO1prvgmk
+https://www.youtube.com/watch?v=pHlLdyJz2sE
+Extender LibreOffice con Python
+https://www.youtube.com/watch?v=zRkh8e25HSM
+ScriptForge 7.2 - LibreOffice Conference 2021
+https://www.youtube.com/watch?v=C9OiwWTK994
