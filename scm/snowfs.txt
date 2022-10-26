@@ -1,0 +1,6 @@
+SnowFS - a fast, scalable version control file storage for graphic files 🎨
+SnowFS is a high-performance command-line application and node library for Windows, macOS and Linux
+with a focus on binary file versioning.
+It is made for the graphics industry and was initially developed for Snowtrack.
+https://www.snowtrack.io
+https://github.com/snowtrack/snowfs

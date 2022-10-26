@@ -1,0 +1,5 @@
+git clone https://gitlab.com/mudlej_android/mj_pdf_reader.git
+	cd mj_pdf_reader
+	git checkout V1.4.2-stable
+	gradle wrapper
+	gradlew.bat assembleRelease

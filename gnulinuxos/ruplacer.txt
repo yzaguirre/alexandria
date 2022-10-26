@@ -1,11 +1,10 @@
 https://github.com/dmerejkowsky/ruplacer
 .deb installer not available form https://github.com/TankerHQ/ruplacer
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.4/ruplacer-linux
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-linux
 	chmod u+x ruplacer-linux
 	mv ruplacer-linux /usr/local/bin/ruplacer
 Windows
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.6.4/ruplacer-windows.exe
-	move ruplacer-windows.exe C:\Users\dyzag\bin\ruplacer.exe
+	wget -O ..\bin\ruplacer.exe https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-windows.exe
 MacOS
 Use formula
 	brew install yzaguirre/homebrew-repo/ruplacer
@@ -14,6 +13,8 @@ Use formula
 See https://github.com/yzaguirre/homebrew-repo/commit/863190eec331269645a1ca4e1ea21198d58e3b23
 	brew install yzaguirre/repo/ruplacer
 
+Usage
+	ruplacer -V
 Replace 'LastName, FirstName' with 'FirstName LastName'
 	ruplacer '(\w)+, (\w)+' '$2 $1'
 Ruplacer has a --subvert option which works across a variety of case styles (lower case, snake case, and so on):
@@ -21,6 +22,7 @@ Replace 'FooBar' with 'SpamEggs', 'foo_bar' with 'spam_eggs', ...
 	ruplacer --subvert FooBar SpamEggs
 
 Only python files
+	ruplacer --type py foo bar
 	ruplacer -t py foo bar
 Ignore all js files
 	ruplacer old new -T js

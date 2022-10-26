@@ -3,10 +3,10 @@ https://just.systems
 https://github.com/casey/just
 	apt install just
 Binaries
-	wget https://github.com/casey/just/releases/download/1.5.0/just-1.5.0-x86_64-unknown-linux-musl.tar.gz
+	wget https://github.com/casey/just/releases/download/1.6.0/just-1.6.0-x86_64-unknown-linux-musl.tar.gz
 	mkdir /opt/just
 	chown david:david -R /opt/just
-	tar xf just-1.5.0-x86_64-unknown-linux-musl.tar.gz -C /opt/just
+	tar xf just-1.6.0-x86_64-unknown-linux-musl.tar.gz -C /opt/just
 Add /opt/just to PATH
 Compile
 	git clone https://mpr.makedeb.org/just

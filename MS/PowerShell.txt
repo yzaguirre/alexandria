@@ -13,24 +13,24 @@ Enable the "universe" repositories
 Install PowerShell
 	sudo apt install powershell
 Manual install
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.4/powershell_7.2.4-1.deb_amd64.deb
-	sha256sum powershell_7.2.4-1.deb_amd64.deb
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/powershell_7.2.7-1.deb_amd64.deb
+	sha256sum powershell_7.2.7-1.deb_amd64.deb
 7E764B26BA87196E78DEC20665E166EEE536D117DEB91562A6E4CCF75CC1B6E8
-	dpkg -i powershell_7.2.4-1.deb_amd64.deb
+	dpkg -i powershell_7.2.7-1.deb_amd64.deb
 	apt install -f
 Windows
 How to install latest version of powershell in Windows 11 | Upgrade Powershell to 7.2.0
 https://www.youtube.com/watch?v=bWw7f5yVvGQ
 	winget install Microsoft.PowerShell
 Binary
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.4/PowerShell-7.2.4-win-x64.msi
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.4/hashes.sha256
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/PowerShell-7.2.7-win-x64.msi
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/hashes.sha256
 	& 'C:\Program Files\Git\bin\bash.exe'
 	dos2unix hashes.sha256
 	sha256sum -c --ignore-missing hashes.sha256
-	sha256sum PowerShell-7.2.4-win-x64.msi
-06B93C2263FBD6D975AC59E09AB2390635AFF0455AD2504FFD60F0A5E0E61103
-	start PowerShell-7.2.4-win-x64.msi
+	sha256sum PowerShell-7.2.7-win-x64.msi
+7445f2f711759fe7167fae2329911f9800d087265d1ba720a8801ff775ac1b31
+	start PowerShell-7.2.7-win-x64.msi
 Installed at C:\Program Files\PowerShell\7
 
 Usage

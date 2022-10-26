@@ -27,6 +27,8 @@ https://github.com/gradle/gradle-completion
 	curl -LA gradle-completion https://edub.me/gradle-completion-bash -o $HOME/bash_completion.d/gradle-completion.bash
 Windows
 	choco install gradle
+Installed at
+C:\ProgramData\chocolatey\lib\gradle\tools
 Binary
 	7z x -o"C:\Gradle" gradle-7.5.1-bin.zip
 Add to PATH
