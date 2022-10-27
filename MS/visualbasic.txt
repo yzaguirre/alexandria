@@ -12,3 +12,11 @@ Dim dateISO8602 As Date = DateTime.ParseExact(iso8601String, "yyyyMMddTHH:mm:ssZ
 Dim date3 As New Date(2008, 1, 1, 0, 30, 45, 125)
 Console.WriteLine("Date with milliseconds: {0:MM/dd/yyy HH:mm:ss.fff}", _
                   date3)
+
+Download file
+https://stackoverflow.com/questions/5778619/how-can-i-automatically-prompt-a-file-download-in-asp-net
+https://stackoverflow.com/questions/15925648/asp-net-start-download-after-page-load
+Response.ContentType = "image/jpeg";
+Response.AppendHeader("Content-Disposition","attachment; filename=yourfile.jpg");
+Response.TransmitFile( Server.MapPath("~/yourfile.jpg") );
+Response.End();

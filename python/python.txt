@@ -38,6 +38,10 @@ C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.16.13405.0_x64__8we
 
 https://www.debugpoint.com/2021/10/install-python-3-10-ubuntu/
 
+Python 3.11 is faster than 3.8
+https://jott.live/markdown/py3.11_vs_3.8
+https://news.ycombinator.com/item?id=33345421
+
 did you know that you can use functions as values in a Python dictionary?
 https://twitter.com/DynamicWebPaige/status/1456110881553612803
 

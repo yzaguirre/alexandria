@@ -64,7 +64,9 @@ Termux
 	apt install poppler
 	pdftoppm {input.pdf} {output.file} -png
 	wget https://www.cyberciti.biz/media/new/faq/2020/11/Bulldog.pdf
-	pdftoppm Bulldog.pdf Bulldog.pdf -png
+	pdftoppm Bulldog.pdf Bulldog -png
+Page 17
+	pdftoppm -f 17 -l 17 Bulldog.pdf Bulldog -png
 
 pdftk
 See ../java/openpdf.txt

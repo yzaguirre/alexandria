@@ -5,6 +5,10 @@ Windows
 	winget install vim.vim
 Add C:\Program Files\Vim\vim90 to PATH
 
+VIM AFTER 15 YEARS
+https://blog.langworth.com/vim3
+https://news.ycombinator.com/item?id=33349871
+
 Vim can edit files inside zip files
 https://twitter.com/climagic/status/1402272919363936268
 	vim stranger-things.zip

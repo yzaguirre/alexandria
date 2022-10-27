@@ -22,3 +22,10 @@ https://davemateer.com/2018/11/14/Open-visual-studio-from-command-line
 
 Debugging
 https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/debuggers/debugger-not-stop-breakpoint
+
+https://stackoverflow.com/questions/1043913/copying-a-dlls-dependencies-in-visual-studio
+call xcopy /S /Y "$(SolutionDir)Dependencies\*.*" "$(TargetDir)"
+
+Collapse
+https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code
+Ctrl + M Ctrl + O

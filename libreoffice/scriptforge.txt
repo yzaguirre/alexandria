@@ -6,7 +6,7 @@ https://github.com/rafaelhlima/LibOCon_2021_SFCalc
 LibreOffice user scripts folder
 https://help.libreoffice.org/latest/en-US/text/sbasic/python/python_locations.html
 ~/.config/libreoffice/4/user/Scripts/python/
-C:\Users\DAVIDY~1\LibreOffice\4\user\Scripts\python
+C:\Users\DAVIDY~1\AppData\Roaming\LibreOffice\4\user\Scripts\python
 /Users/david/Library/Application Support/LibreOffice/4/user/Scripts/python
 
 doc = CreateScriptService("Calc")

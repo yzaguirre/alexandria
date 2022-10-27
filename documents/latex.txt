@@ -18,6 +18,11 @@ https://github.com/MiKTeX/miktex
 https://miktex.org/howto/install-miktex
 Windows
 	winget install ChristianSchenk.MiKTeX
+Binaries
+	wget https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/basic-miktex-22.10-x64.exe
+	Get-FileHash basic-miktex-22.10-x64.exe -Algorithm SHA256
+1f6c197678f9b55adec8772f3a9e6d89f1e2d169f67c0d8494501813b9d3724f
+	start basic-miktex-22.10-x64.exe
 Installed at C:\Users\dyzag\AppData\Local\Programs\MiKTeX
 Open console
 https://miktex.org/howto/miktex-console
