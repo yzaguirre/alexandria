@@ -1,4 +1,6 @@
+reMarkable 2
 https://remarkable.com/store/remarkable-2
+https://news.ycombinator.com/item?id=33352967
 
 https://github.com/reHackable/awesome-reMarkable
 
@@ -6,4 +8,5 @@ The rise of E Ink Tablets and Note Takers: reMarkable 2 vs Onyx Boox Note Air
 https://www.hanselman.com/blog/the-quiet-rise-of-e-ink-tablets-and-infinite-paper-note-takers-remarkable-2-vs-onyx-boox-note-air
 https://news.ycombinator.com/item?id=27513201
 
-See ~/hardware/remarkable-cli.txt, ~/sync/syncthing.txt
+See remarkable-cli.txt
+../sync/syncthing.txt

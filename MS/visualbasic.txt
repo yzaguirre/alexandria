@@ -20,3 +20,13 @@ Response.ContentType = "image/jpeg";
 Response.AppendHeader("Content-Disposition","attachment; filename=yourfile.jpg");
 Response.TransmitFile( Server.MapPath("~/yourfile.jpg") );
 Response.End();
+
+String interpolation and multiline
+https://stackoverflow.com/questions/706382/multiline-strings-in-vb-net
+Dim sql As String = $"
+    SELECT {primaryKey}, Description
+    FROM {inventoryTable}
+    ORDER BY DateAdded
+"
+Note that interpolated strings begin with $ and you need to take care of ", { and } contained inside
+convert them into "", {{ or }} respectively.

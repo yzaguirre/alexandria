@@ -1,0 +1,21 @@
+ssss is an implementation of Shamir's secret sharing scheme for UNIX/linux machines.
+It is free software, the code is licensed under the GNU GPL v2.
+ssss does both: the generation of shares for a known secret and the reconstruction of
+a secret using user provided shares.
+The software was written in 2006 by B. Poettering,
+it links against the GNU libgmp multiprecision library (version 4.1.4 works well)
+and requires the /dev/random entropy source.
+http://point-at-infinity.org/ssss/
+https://news.ycombinator.com/item?id=33326846
+	wget http://point-at-infinity.org/ssss/ssss-0.5.tar.gz
+	sha1sum ssss-0.5.tar.gz
+3f8f5046c2c5c3a2cf1a93f0a9446681852b190e
+	tar xf ssss-0.5.tar.gz
+
+Usage
+The generation of shares given a known secret is shown first.
+A (3,5)-threshold scheme is used, that is: 5 shares are generated,
+the secret can be reconstructed by any subset of size 3.
+	ssss-split -t 3 -n 5
+These shares can be combined to recreate the secret:
+	ssss-combine -t 3

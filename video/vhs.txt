@@ -1,0 +1,29 @@
+Your CLI home video recorder 📼
+https://github.com/charmbracelet/vhs
+Share your terminal over the web
+https://tsl0922.github.io/ttyd/
+https://github.com/tsl0922/ttyd
+See ../remoteTerminal/ttyd.txt
+https://news.ycombinator.com/item?id=33357956
+	wget https://github.com/charmbracelet/vhs/releases/download/v0.1.0/vhs_0.1.0_linux_amd64.deb
+	wget https://github.com/charmbracelet/vhs/releases/download/v0.1.0/checksums.txt
+	wget https://github.com/charmbracelet/vhs/releases/download/v0.1.0/checksums.txt.pem
+	wget https://github.com/charmbracelet/vhs/releases/download/v0.1.0/checksums.txt.sig
+	wget https://repo.charm.sh/apt/gpg.key
+	gpg --import gpg.key
+	gpg --verify checksums.txt.sig
+	minisign -Vm checksums.txt -p checksums.txt.pem
+	sha256sum -c --ignore-missing checksums.txt
+	dpkg -i vhs_0.1.0_linux_amd64.deb
+Windows
+	wget https://github.com/charmbracelet/vhs/releases/download/v0.1.0/vhs_0.1.0_Windows_x86_64.zip
+	7z x -o"..\bin" vhs_0.1.0_Windows_x86_64.zip vhs.exe
+	wget -O ..\bin\ttyd.exe https://github.com/tsl0922/ttyd/releases/download/1.7.2/ttyd.win10.exe
+Homebrew
+	brew install charmbracelet/tap/vhs ffmpeg
+	brew install ttyd --HEAD
+
+Usage
+	vhs -v
+	ttyd -v
+	ttyd -p 8080 bash

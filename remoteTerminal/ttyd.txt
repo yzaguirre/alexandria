@@ -1,10 +1,13 @@
 Share your terminal over the web
 https://tsl0922.github.io/ttyd
 https://github.com/tsl0922/ttyd
+See ../video/vhs.txt
 	apt install ttyd libev4
 	sudo systemctl status ttyd.service
 	sudo systemctl stop ttyd.service
 	sudo systemctl disable ttyd.service
+Windows
+	wget -O ..\bin\ttyd.exe https://github.com/tsl0922/ttyd/releases/download/1.7.2/ttyd.win10.exe
 Termux
 	apt install ttyd libwebsockets json-c libuv
 Homebrew

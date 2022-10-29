@@ -1,0 +1,5 @@
+Diem's mission is to build a trusted and innovative financial network
+that empowers people and businesses around the world.
+https://www.diem.com
+https://github.com/diem/diem
+https://news.ycombinator.com/item?id=33357926

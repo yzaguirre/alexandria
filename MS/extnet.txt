@@ -1,0 +1,6 @@
+
+https://forums.ext.net/showthread.php?2271-Using-AddListener-on-Fields-to-add-a-Listener
+field.AddListener("render", "function(el){ handler }");
+
+https://forums.ext.net/showthread.php?12972-Common-ExtraParams-for-all-DirectEvents
+https://stackoverflow.com/questions/10760926/ext-net-button-with-directevents-to-extjs
