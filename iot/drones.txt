@@ -15,3 +15,8 @@ this data all the time.
 we managed to receive + decode the packets over the air. no encryption.
 (We saw some confusion around that before)
 https://twitter.com/74ck_0/status/1517483406518591490
+
+TinyML for tiny drones!
+https://twitter.com/EdgeImpulse/status/1585784462184484865
+tinyML EMEA 2022 - Daniele Palossi: Autonomous Nano-UAVs: An Extreme Edge Computing Case
+https://www.youtube.com/watch?v=llcmQPMx2B8

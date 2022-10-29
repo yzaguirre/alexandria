@@ -4,3 +4,6 @@ field.AddListener("render", "function(el){ handler }");
 
 https://forums.ext.net/showthread.php?12972-Common-ExtraParams-for-all-DirectEvents
 https://stackoverflow.com/questions/10760926/ext-net-button-with-directevents-to-extjs
+Save file
+https://forums.ext.net/showthread.php?16702-Ext-Net-fileupload-field
+https://forums.ext.net/showthread.php?19766-CLOSED-FileUploadField-and-dynamic-control

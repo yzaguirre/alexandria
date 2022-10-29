@@ -35,3 +35,8 @@ public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("elmah.axd");
         }
+
+Upload files
+https://stackoverflow.com/questions/8369376/ext-net-fileupload-and-asp-net-routing
+https://forums.ext.net/showthread.php?19766-CLOSED-FileUploadField-and-dynamic-control
+https://stackoverflow.com/questions/36661830/request-files-in-asp-net-core

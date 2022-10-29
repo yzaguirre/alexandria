@@ -6,3 +6,7 @@ Pytorch at Tesla
 https://www.youtube.com/watch?v=oBklltKXtDE
 Pytorch configuration in Linux environment can take up to 3hrs esp if ur building it freshly from source.
 However, it's one of my favorite deep learning framework's besides keras an Tensorflow.
+
+PyTorch 1.13
+https://pytorch.org/blog/PyTorch-1.13-release/
+https://news.ycombinator.com/item?id=33377648

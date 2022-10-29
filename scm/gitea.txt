@@ -1,3 +1,6 @@
+An Open Letter to Gitea
+https://gitea-open-letter.coding.social1
+https://news.ycombinator.com/item?id=33372471
 Gitea 1.10.0 Released
 https://news.ycombinator.com/item?id=21537454
 

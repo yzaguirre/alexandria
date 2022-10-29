@@ -60,5 +60,9 @@ https://news.ycombinator.com/item?id=16719615
 Watch from 1h 47m to 2h 1m
 https://www.youtube.com/watch?v=gplTc2F5Wvk&feature=youtu.be&t=1h47m20s
 
+Intel® Extension for TensorFlow*
+https://github.com/intel/intel-extension-for-tensorflow
+https://news.ycombinator.com/item?id=33375392
+
 Create models here
 https://teachablemachine.withgoogle.com

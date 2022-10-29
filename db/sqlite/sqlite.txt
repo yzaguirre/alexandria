@@ -168,3 +168,8 @@ https://news.ycombinator.com/item?id=32250426
 SQLite: Past, Present, and Future
 https://vldb.org/pvldb/volumes/15/paper/SQLite%3A%20Past%2C%20Present%2C%20and%20Future
 https://news.ycombinator.com/item?id=32675861
+
+SQLite in the browser with WASM/JS
+See ws4sqlite.txt
+https://sqlite.org/wasm/doc/tip/about.md
+https://news.ycombinator.com/item?id=33374402
