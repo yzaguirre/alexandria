@@ -20,4 +20,5 @@ Configuration at
 C:\Users\DAVIDY~1\AppData\Roaming\helix
 
 Usage
+	hx -V
 	hx [file]

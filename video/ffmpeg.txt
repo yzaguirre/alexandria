@@ -18,6 +18,10 @@ libavfilter is the substitute for vhook which allows the video/audio to be modif
 How to use FFMPEG
 https://www.youtube.com/watch?v=MPV7JXTWPWI
 
+FFmpeg Command Visualizer and Editor
+https://ffmpeg.guide
+https://news.ycombinator.com/item?id=33383023
+
 Install
 	apt install ffmpeg
 Binary
@@ -88,6 +92,8 @@ Video information
 List codecs
 	ffmpeg -codecs
 
+Download HLS
+	ffmpeg -i "m3u8URL" -c copy fileName.mp4
 Trim video
 https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video#704118
 https://stackoverflow.com/questions/19774975/unknown-encoder-libfaac

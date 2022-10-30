@@ -1,0 +1,13 @@
+Soul - A SQLite RESTful Server
+See ../pocketbase.txt
+https://github.com/thevahidal/soul
+https://news.ycombinator.com/item?id=33387162
+	npm install -g soul-cli
+
+Usage
+	soul --version
+	soul -d sqlite.db -p 8000
+Documentation
+http://localhost:8000/api/docs
+Test
+	curl http://localhost:8000/api/tables

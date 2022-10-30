@@ -1,5 +1,7 @@
 https://mitmproxy.org
-
+Mitmproxy 9
+https://mitmproxy.org/posts/releases/mitmproxy9/
+https://news.ycombinator.com/item?id=33382896
 Mitmproxy 7
 https://mitmproxy.org/posts/releases/mitmproxy7/
 https://news.ycombinator.com/item?id=27855476
