@@ -6,3 +6,8 @@ https://www.youtube.com/watch?v=j0xr0-IAqyk
 
 Parsing XML files with Python (xml.etree.ElementTree)
 https://www.youtube.com/watch?v=bWfAD7wAfOI
+
+Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.
+https://lxml.de
+https://github.com/lxml/lxml
+	sudo -H pip install -U lxml
