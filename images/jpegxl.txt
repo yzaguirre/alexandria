@@ -75,3 +75,7 @@ Windows
 JPEG XL would be Turing-complete
 https://dbohdan.com/wiki/jpeg-xl?
 https://news.ycombinator.com/item?id=27559748
+
+Removing the JPEG XL code and flag from Chromium
+https://bugs.chromium.org/p/chromium/issues/detail?id=1178058#c84
+https://news.ycombinator.com/item?id=33412340

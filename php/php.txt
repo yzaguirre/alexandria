@@ -51,9 +51,9 @@ C:\tools\php81
 Binaries
 https://windows.php.net/download
 If you are using PHP as FastCGI with IIS you should use the Non-Thread Safe (NTS) versions of PHP.
-	wget https://windows.php.net/downloads/releases/php-8.1.11-nts-Win32-vs16-x64.zip
-	Get-FileHash php-8.1.11-nts-Win32-vs16-x64.zip -Algorithm SHA256
-a3904d05700b56186ab9c7f5e472bad9a40ad60cd8ef8fd68be6d55a4a756296
+	wget https://windows.php.net/downloads/releases/php-8.1.12-nts-Win32-vs16-x64.zip
+	Get-FileHash php-8.1.12-nts-Win32-vs16-x64.zip -Algorithm SHA256
+dbf95bc61fd342c4b5a086c5a34129d710126b22f74485576367030b3bb97df1
 
 Usage
 	php --ini

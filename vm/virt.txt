@@ -1,6 +1,7 @@
 See
 https://www.cyberciti.biz/faq/centos-rhel-linux-kvm-virtulization-tutorial/
-redes/networks.txt
+../redes/networks.txt
+../rust/rustyhermit.txt
 
 https://libvirt.org/
 https://virt-manager.org/

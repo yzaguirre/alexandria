@@ -1,2 +1,15 @@
+A simple zero-config tool to make locally trusted development certificates
+with any names you'd like.
+https://github.com/FiloSottile/mkcert
+https://news.ycombinator.com/item?id=33383095
 https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/
 https://news.ycombinator.com/item?id=18842218
+	apt install libnss3-tools
+	curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64"
+	chmod +x mkcert-v*-linux-amd64
+	sudo cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert
+Windows
+	choco install mkcert
+Homebrew
+	brew install mkcert
+	brew install nss # if you use Firefox

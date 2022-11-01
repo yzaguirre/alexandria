@@ -1,4 +1,5 @@
 https://www.mamedev.org
+https://github.com/mamedev/mame
 https://wiki.mamedev.org/index.php/SDL_Supported_Platforms
 
 MAME Turns 25
@@ -27,6 +28,15 @@ https://thelinuxcode.com/install-mame-games-linux-ubuntu-16-04-16-10-17/
 	add-apt-repository ppa:c.falco/mame
 	apt install mame
 	mkdir -p ~/mame/roms
+Windows
+	choco install mame
+Binary
+	wget https://github.com/mamedev/mame/releases/download/mame0249/mame0249b_64bit.exe
+	wget https://github.com/mamedev/mame/releases/download/mame0249/SHA1SUMS
+	wget https://github.com/mamedev/mame/releases/download/mame0249/SHA256SUMS
+	sha1sum -c --ignore-missing SHA1SUMS
+	sha256sum -c --ignore-missing SHA256SUMS
+	start mame0249b_64bit.exe
 Config file
 ~/.mame/mame.ini
 Roms at
