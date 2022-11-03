@@ -8,3 +8,7 @@ Grab a key
 ProtonMail includes Google Recaptcha for Login, every single time
 https://github.com/ProtonMail/WebClient/issues/242
 https://news.ycombinator.com/item?id=27326243
+
+Protonmail can delete the wrong email and nobody cares
+https://github.com/ProtonMail/proton-bridge/issues/220
+https://news.ycombinator.com/item?id=33432296

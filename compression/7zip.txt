@@ -87,6 +87,10 @@ a = create archive(=zip)
 -v2m = split the file into 2MB
 "Release4.zip" = zip output file name
 "*.xlsm" = source file name(s) to zip
+Make a container (no compression)
+	7z a -mmt16 -mx0 container.zip files/
+	7z a -mmt16 container.tar files/
+	7z a -mmt16 -ttar -so dummytar files/ | gpg -er 0x12345678 -o file.tar.gpg
 
 Extract file
 	7z x file.7z -o/tmp

@@ -5,3 +5,8 @@ https://github.com/paolostivanin/OTPClient
 	cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 	make
 	sudo make install
+
+Aegis Authenticator - Secure 2FA App for Android
+https://getaegis.app
+https://github.com/beemdevelopment/Aegis
+https://news.ycombinator.com/item?id=33438540
