@@ -1,0 +1,7 @@
+Duplicati: Free backup software to store encrypted backups online
+https://www.duplicati.com
+https://github.com/duplicati/duplicati
+https://news.ycombinator.com/item?id=33449574
+Windows
+	winget install Duplicati.Duplicati
+	choco install duplicati

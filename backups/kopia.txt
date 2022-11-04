@@ -1,0 +1,10 @@
+Fast and Secure Open-Source Backup Software for Windows, Mac, and Linux
+https://kopia.io
+https://github.com/kopia/kopia
+https://news.ycombinator.com/item?id=33450200
+Huh? No... Kopia supports cloud object storage, google drive, webdav, SFTP (ssh),
+or it's own repository server. https://kopia.io/docs/repositories/
+
+Windows
+	choco install KopiaUI
+	winget install Kopia.KopiaUI

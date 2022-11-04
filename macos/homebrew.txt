@@ -1,4 +1,4 @@
-https://brew.sh/
+https://brew.sh
 https://medium.com/@thomasbirkenes/set-up-macbook-for-react-native-development-2021-83b94f16f53d
 Xcode command line tools (macOS)
 	xcode-select --install
