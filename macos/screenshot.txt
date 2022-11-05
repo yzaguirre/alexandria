@@ -25,7 +25,7 @@ Mac Tip: Ways to perform Screen Capturing and Screenshots
 https://www.youtube.com/watch?v=VmQq1o1taOA
 
 An open-source screen recorder built with web technology
-https://getkap.co/
+https://getkap.co
 https://github.com/wulkano/kap
 https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38
 Homebrew

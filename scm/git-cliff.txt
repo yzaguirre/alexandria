@@ -19,7 +19,7 @@ Edit powershell profile
 	notepad++ $PROFILE
 Import-Module -Name C:\Users\dyzag\Documents\PowerShell\_git-cliff.ps1
 Homebrew
-	brew install git-cli
+	brew install git-cliff
 
 Configuration
 /home/david/.config/git-cliff/cliff.toml

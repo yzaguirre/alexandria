@@ -1,7 +1,7 @@
 Node Version Manager - POSIX-compliant bash script to
 manage multiple active node.js versions
 https://github.com/nvm-sh/nvm
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 Binaries at
 ~/.nvm
 Windows
@@ -13,6 +13,9 @@ https://github.com/coreybutler/nvm-windows
 Installed at
 C:\ProgramData\nvm
 C:\ProgramData\nodejs
+Homebrew
+x	brew install nvm
+	touch ~/.zshrc
 
 Usage
 Install latest
@@ -22,10 +25,11 @@ List versions
 List local versions
 	nvm ls
 Specific version
-	nvm install 14.20.1
+	nvm install 14.21.1
 	nvm install 16.17.1
 	nvm install 17.9.1
 	nvm install 18.10.0
+	nvm install 19.0.1
 Change node
 	nvm use 14.20.1
 	nvm use 18.10.0

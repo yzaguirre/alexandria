@@ -6,8 +6,23 @@ Install
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew install wget
 	brew install awk coreutils findutils gnu-tar gnu-sed gnu-which gnu-time
+GNU "tar" has been installed as "gtar".
+GNU "sed" has been installed as "gsed".
+GNU "which" has been installed as "gwhich".
+GNU "time" has been installed as "gtime".
+GNU "tar" has been installed as "gtar".
+GNU "sed" has been installed as "gsed".
+GNU "which" has been installed as "gwhich".
+GNU "time" has been installed as "gtime".
+	vim ~/.bashrc
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-time/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/gnu-which/libexec/gnubin:$PATH"
 Homebrew installs packages to their own directory and then symlinks their files into /usr/local.
-	brew cask install firefox
+	brew install --cask firefox
 
 Make a dump
 	brew bundle dump --describe
@@ -29,7 +44,7 @@ Remove cache
 	brew --cache
 
 Open homepage
-	brew cask home pycharm
+	brew home --cask pycharm
 Homebrew Tutorial: Simplify Software Installation on Mac Using This Package Manager
 https://www.youtube.com/watch?v=SELYgZvAZbU
 

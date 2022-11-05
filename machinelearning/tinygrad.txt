@@ -1,0 +1,3 @@
+Tinygrad: A simple and powerful neural network framework
+https://tinygrad.org
+https://news.ycombinator.com/item?id=33462337

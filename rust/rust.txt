@@ -2,17 +2,17 @@ https://www.rust-lang.org
 https://github.com/rust-lang/rust
 See ../electronics/rust.txt
 https://www.rust-lang.org/downloads.html
-	wget https://static.rust-lang.org/dist/rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz
-	wget https://static.rust-lang.org/dist/rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
-	wget https://static.rust-lang.org/dist/rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz
+	wget https://static.rust-lang.org/dist/rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	wget https://static.rust-lang.org/dist/rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.sha256
 Verify
-	gpg2 --verify rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.asc
-	sha256sum -c rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.sha256
-	sha256sum -c rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
+	gpg2 --verify rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.asc
+	sha256sum -c rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.sha256
+	sha256sum -c rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz.asc.sha256
 Install
-	tar xf rust-1.64.0-x86_64-unknown-linux-gnu.tar.gz
-	cd rust-1.64.0-x86_64-unknown-linux-gnu
+	tar xf rust-1.65.0-x86_64-unknown-linux-gnu.tar.gz
+	cd rust-1.65.0-x86_64-unknown-linux-gnu
 	sudo ./install.sh
 To uninstall:
     sudo /usr/local/lib/rustlib/uninstall.sh
@@ -25,20 +25,23 @@ Getting Started with Rust on Windows and Visual Studio Code
 https://www.youtube.com/watch?v=aYsUBddY7KY
 
 Src
-	wget https://static.rust-lang.org/dist/rustc-1.64.0-src.tar.gz
-	wget https://static.rust-lang.org/dist/rustc-1.64.0-src.tar.gz.asc
-	wget https://static.rust-lang.org/dist/rustc-1.64.0-src.tar.gz.sha256
-	wget https://static.rust-lang.org/dist/rustc-1.64.0-src.tar.gz.asc.sha256
-	gpg2 --verify rustc-1.64.0-src.tar.gz.asc
-	sha256sum -c rustc-1.64.0-src.tar.gz.sha256
-	sha256sum -c rustc-1.64.0-src.tar.gz.asc.sha256
-	tar xf rustc-1.64.0-src.tar.gz -C /usr/local/src
+	wget https://static.rust-lang.org/dist/rustc-1.65.0-src.tar.gz
+	wget https://static.rust-lang.org/dist/rustc-1.65.0-src.tar.gz.asc
+	wget https://static.rust-lang.org/dist/rustc-1.65.0-src.tar.gz.sha256
+	wget https://static.rust-lang.org/dist/rustc-1.65.0-src.tar.gz.asc.sha256
+	gpg2 --verify rustc-1.65.0-src.tar.gz.asc
+	sha256sum -c rustc-1.65.0-src.tar.gz.sha256
+	sha256sum -c rustc-1.65.0-src.tar.gz.asc.sha256
+	tar xf rustc-1.65.0-src.tar.gz -C /usr/local/src
 Install racer (may take a while)
 	cargo install racer
 Edit 
 	vim + ~/.profile
-export RUST_SRC_PATH=/usr/local/src/rustc-1.64.0/src
+export RUST_SRC_PATH=/usr/local/src/rustc-1.65.0/src
 PATH=$PATH:/home/david/.cargo/bin
+
+Rust 1.65.0
+https://news.ycombinator.com/item?id=33451359
 
 Rustup
 https://rustup.rs

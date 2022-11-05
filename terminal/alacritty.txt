@@ -50,3 +50,8 @@ https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 Using mysys2 (or git bash)
 https://github.com/alacritty/alacritty/issues/3301
+
+Vi Mode
+Ctrl Shift Space
+Start a selection with v
+Copy selected with y

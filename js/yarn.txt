@@ -8,6 +8,9 @@ Debian/Ubuntu
 	yarn --version
 Windows
 	winget install Yarn.Yarn
+Homebrew
+Will install node.js
+	brew install yarn
 
 Yarn Package Manager Crash Course
 https://www.youtube.com/watch?v=g9_6KmiBISk

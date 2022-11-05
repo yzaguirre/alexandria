@@ -35,7 +35,8 @@ Windows
 Installer
 	wget https://7-zip.org/a/7z2200-x64.exe
 Append to PATH C:\Program Files\7-Zip
-MacOS
+Homebrew
+	brew install 7-zip
 See keka.txt
 https://7ziphelp.com/7-zip-for-macos
 	wget https://www.7-zip.org/a/7z2107-mac.tar.xz

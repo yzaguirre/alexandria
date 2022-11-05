@@ -104,9 +104,11 @@ CLI tool and python library that converts the output of popular
 command-line tools and file-types to JSON or Dictionaries.
 This allows piping of output to tools like jq and simplifying
 automation scripts.
+https://kellyjonbrazil.github.io/jc/
 https://github.com/kellyjonbrazil/jc
+https://news.ycombinator.com/item?id=33448204
 	dig example.com | jc --dig
-	sudo -H pip3 install jc
+	sudo -H pip3 install -U jc
 Homebrew
 	brew install jc
 

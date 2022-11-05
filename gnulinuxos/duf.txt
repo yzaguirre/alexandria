@@ -18,3 +18,5 @@ Windows
 	scoop install duf
 Termux
 	apt install duf
+Homebrew
+	brew install duf

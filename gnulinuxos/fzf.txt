@@ -11,3 +11,7 @@ Download binary
 	tar xf fzf-0.34.0-linux_amd64.tar.gz -C /usr/local/bin
 Windows
 	choco install fzf
+Homebrew
+	brew install fzf
+To install useful key bindings and fuzzy completion:
+	$(brew --prefix)/opt/fzf/install

@@ -8,7 +8,7 @@ Symlink
 	ln -s /opt/android-sdk/platform-tools/adb /usr/local/bin/adb
 Or	alias adb='/opt/android-sdk/platform-tools/adb'
 Homebrew
-	brew cask install android-platform-tools
+	brew install --cask android-platform-tools
 
 key
 http://forum.xda-developers.com/showthread.php?t=2247471

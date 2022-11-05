@@ -1,6 +1,10 @@
 See ../electronics/rust.txt
 https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 
+Show HN: Tracking my local bus with a RaspberryPi
+https://purplehoisin.com/i-built-a-bus-clock-with-a-raspberry-pi/
+https://news.ycombinator.com/item?id=33464492
+
 I use a Raspberry Pi as my daily computer
 https://www.heyhomepage.com/?module=blog&link=1&post=4
 https://news.ycombinator.com/item?id=33369635

@@ -21,6 +21,8 @@ Binaries
 	7z e -o"C:\ProgramData\watchman" watchman-v2022.10.03.00-windows.zip
 Add to PATH environment variable
 C:\ProgramData\watchman
+Homebrew
+	brew install watchman
 Macos
 	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-macos.zip
 	ditto -x -k watchman-v2022.10.03.00-macos.zip /home/david/Library

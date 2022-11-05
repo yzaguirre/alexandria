@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=8kiR_QsQNPc
 Compile with xcodebuild
 
 Devices
-See ~/ios/destinations.txt
+See ../ios/destinations.txt
 	instruments -s devices
 List schemes
 	xcodebuild -workspace app.xcworkspace -list

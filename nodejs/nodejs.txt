@@ -113,4 +113,3 @@ or
 	var result = querystring.stringify({query: "SELECT name FROM user WHERE uid = me()"});
 	console.log(result);
 	#prints 'query=SELECT%20name%20FROM%20user%20WHERE%20uid%20%3D%20me()'
-

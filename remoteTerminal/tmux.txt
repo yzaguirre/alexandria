@@ -15,7 +15,7 @@ http://www.bsdnow.tv/tutorials/ssh-tmux
 https://www.reddit.com/r/commandline/comments/y6zysj/what_is_your_most_important_feature_of_tmux/
 Install
 	apt install tmux
-MacOS
+Homebrew
 	brew install tmux
 Windows
 https://gist.github.com/DeanPDX/acff533cff0cfbda2761d1e62e8cb1a7
@@ -71,6 +71,9 @@ Conf
 
 Let's SSH into the server, install tmux and fire it up.
 	tmux
+Use UTF-8
+https://stackoverflow.com/questions/61893391/oh-my-zsh-showing-weird-on-tmux-with-unknown-white-space
+	tmux -u
 
 If you get disconnected while working in tmux, you can reconnect and run:
 	tmux attach

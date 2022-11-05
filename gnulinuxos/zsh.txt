@@ -1,8 +1,10 @@
 https://www.zsh.org
-http://ohmyz.sh/
+http://ohmyz.sh
 https://github.com/robbyrussell/oh-my-zsh
 	apt install zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+Homebrew
+	brew install zsh zsh-completion
 
 Zsh 5.9
 https://news.ycombinator.com/item?id=31394420
@@ -10,7 +12,8 @@ https://news.ycombinator.com/item?id=31394420
 Git plugin
 https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 
-See ~/ide/fonts.txt for Powerline fonts
+See ../ide/fonts.txt
+for Powerline fonts
 
 Color scheme
 Make terminal awesome looking !!! How to customize your terminal with ZSH and custom color scheme
@@ -44,7 +47,8 @@ alias zshconfig="nvim ~/.zshrc"
 	source ~/.zshrc
 
 https://github.com/romkatv/powerlevel10k
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-	echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+x	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+x	echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 Configuration
 	p10k configure

@@ -48,6 +48,14 @@ Remove PowerShell Alias
 https://daniel.haxx.se/blog/2016/08/19/removing-the-powershell-curl-alias/
 Homebrew
 	brew install curl
+If you need to have curl first in your PATH, run:
+	echo 'export PATH="/usr/local/opt/curl/bin:$PATH"' >> ~/.zshrc
+For compilers to find curl you may need to set:
+	export LDFLAGS="-L/usr/local/opt/curl/lib"
+	export CPPFLAGS="-I/usr/local/opt/curl/include"
+
+For pkg-config to find curl you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
 
 https://curlconverter.com
 https://github.com/curlconverter/curlconverter

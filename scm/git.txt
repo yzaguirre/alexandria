@@ -13,6 +13,8 @@ See ./gitforwindows.txt
 Ubuntu
 	add-apt-repository ppa:git-core/ppa
 	apt install git
+Homebrew
+	brew install git
 
 Inside the Hidden Git Folder - Computerphile
 https://www.youtube.com/watch?v=bSA91XTzeuA
@@ -417,6 +419,10 @@ Make an alias
 	git root
 This adds the whole working tree from any directory in the repo
 	git add :/
+
+Add from file
+https://stackoverflow.com/questions/22569497/is-it-possible-to-git-add-a-list-of-files-from-a-file
+	xargs -a file -d '\n' git add
 
 FS Monitor
 Activate

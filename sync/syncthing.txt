@@ -1,28 +1,29 @@
 http://syncthing.net
 https://github.com/syncthing/syncthing
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/sha1sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/sha256sum.txt.asc
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-linux-amd64-v1.21.0.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-linux-386-v1.21.0.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-linux-arm-v1.21.0.tar.gz
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-windows-amd64-v1.21.0.zip
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-macos-universal-v1.21.0.zip
-	wget https://github.com/syncthing/syncthing/releases/download/v1.21.0/syncthing-macos-amd64-v1.21.0.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/sha1sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/sha256sum.txt.asc
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-linux-amd64-v1.22.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-linux-386-v1.22.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-linux-arm-v1.22.1.tar.gz
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-windows-amd64-v1.22.1.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-macos-universal-v1.22.1.zip
+	wget https://github.com/syncthing/syncthing/releases/download/v1.22.1/syncthing-macos-amd64-v1.22.1.zip
 Verify
 https://syncthing.net/security.html
 Release binaries are signed with key D26E6ED000654A3E
 	sha1sum --ignore-missing -c sha1sum.txt.asc
 	sha256sum --ignore-missing -c sha256sum.txt.asc
+	gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 0x37C84554E7E0A261E4F76E1ED26E6ED000654A3E
 	gpg --verify sha1sum.txt.asc
 	gpg --verify sha256sum.txt.asc
 http://discourse.syncthing.net/t/getting-started/46
 Install amd64
-	tar xf syncthing-linux-amd64-v1.21.0.tar.gz -C /opt --transform s/-linux-amd64-v1.21.0//
+	tar xf syncthing-linux-amd64-v1.22.1.tar.gz -C /opt --transform s/-linux-amd64-v1.22.1//
 	ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
 Install raspberry pi
 	mkdir ~/.syncthing
-	tar xf syncthing-linux-arm-v1.21.0.tar.gz -C ~/
-	mv ~/syncthing-linux-arm-v1.21.0 .syncthing
+	tar xf syncthing-linux-arm-v1.22.1.tar.gz -C ~/
+	mv ~/syncthing-linux-arm-v1.22.1 .syncthing
 	ln -s ~/.syncthing/syncthing /usr/local/bin/syncthing
 Remarkable
 https://github.com/Evidlo/remarkable_syncthing
@@ -48,9 +49,12 @@ Config at
 AppData\Local\Syncthing
 
 Install MacOS
-	unzip syncthing-macos-universal-v1.19.1.zip
-	cd syncthing-macos-universal-v1.19.1
+	shasum -c --ignore-missing sha256sum.txt.asc
+	shasum -c --ignore-missing sha1sum.txt.asc
+	7zz x syncthing-macos-amd64-v1.22.1.zip
+	cd syncthing-macos-amd64-v1.22.1
 	ruplacer "/USERNAME" "/david" etc/macos-launchd/syncthing.plist
+	mkdir ~/Library/LaunchAgents/ ~/bin
 	mv etc/macos-launchd/syncthing.plist ~/Library/LaunchAgents/syncthing.plist
 	mv syncthing ~/bin
 Stop syncthing

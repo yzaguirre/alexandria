@@ -29,6 +29,10 @@ Install Fish
 	vim ~/.config/fish/config.fish
 zoxide init --cmd g fish | source
 
+Install Zsh
+	vim ~/.zshrc
+eval "$(zoxide init zsh)"
+
 Install Powershell
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }

@@ -1,3 +1,5 @@
+Find and replace text in source files
+https://github.com/your-tools/ruplacer
 https://github.com/dmerejkowsky/ruplacer
 .deb installer not available form https://github.com/TankerHQ/ruplacer
 	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-linux
@@ -5,7 +7,8 @@ https://github.com/dmerejkowsky/ruplacer
 	mv ruplacer-linux /usr/local/bin/ruplacer
 Windows
 	wget -O ..\bin\ruplacer.exe https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-windows.exe
-MacOS
+Homebrew
+	brew install your-tools/homebrew-repo/ruplacer
 Use formula
 	brew install yzaguirre/homebrew-repo/ruplacer
 	export HOMEBREW_EDITOR=vim

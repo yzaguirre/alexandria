@@ -1,6 +1,6 @@
 https://iterm2.com
 Homebrew
-	brew cask install iterm2
+	brew install --cask iterm2
 https://apple.stackexchange.com/questions/339862/ls-operation-not-permitted-mojave-security
 Go to System Preferences > Security & Privacy and give Full Disk Access to Terminal.
 
