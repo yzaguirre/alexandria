@@ -53,3 +53,42 @@ Hard core stop
 
 List logs for container
 	docker logs -f --tail 3 CONTAINER_ID
+
+Make own container
+Build YOUR OWN Dockerfile, Image, and Container - Docker Tutorial
+https://www.youtube.com/watch?v=SnSH8Ht3MIc
+	vim src/html/index.html
+	vim Dockerfile
+FROM nginx:1.10.1-alpine
+ENV BAR=baz
+COPY src/html /usr/share/nginx/html
+# documentation
+#EXPOSE 80
+#CMD ["nginx", "-g", "daemon off;"]
+	vim .dockerignore
+node_modules
+coverage
+.vscode
+**/password.txt
+
+Build container
+	docker build .
+Check images
+	docker images
+Build image with a tag
+	docker build -t hello-internet .
+Run
+	docker run -d -p 80:80 70bad1cdcf5d
+Check if running
+	docker ps
+Stop image
+	docker stop brave_carver
+	docker ps
+Start it up
+	docker start brave_carver
+Remove container
+	docker rm brave_carver
+Remove image
+	docker rmi brave_carver
+Inspect a running container
+	docker exec -it ac45d6e57262 /bin/sh
