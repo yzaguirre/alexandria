@@ -9,3 +9,7 @@ CUDA Toolkit
 https://developer.nvidia.com/cuda-toolkit-archive
 	choco install cuda
 	winget install Nvidia.CUDA
+
+Nvidia PhysX 5.0
+https://github.com/NVIDIA-Omniverse/PhysX
+https://news.ycombinator.com/item?id=33519414

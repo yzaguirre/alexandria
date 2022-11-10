@@ -3,10 +3,10 @@ https://imageglass.org
 https://github.com/d2phap/ImageGlass
 	winget install DuongDieuPhap.ImageGlass
 Installer
-	wget https://github.com/d2phap/ImageGlass/releases/download/8.7.10.26/ImageGlass_8.7.10.26_x64.msi
-	sha1sum ImageGlass_8.7.10.26_x64.msi
-988efe9ec3db11f769240fe7b118b08ee859e973
-	explorer ImageGlass_8.7.10.26_x64.msi
+	wget https://github.com/d2phap/ImageGlass/releases/download/8.7.11.6/ImageGlass_8.7.11.6_x64.msi
+	sha1sum ImageGlass_8.7.11.6_x64.msi
+B3ACE84D1F52C3A1F85069513083EE9771453CA1
+	explorer ImageGlass_8.7.11.6_x64.msi
 Add to PATH
 C:\Program Files\ImageGlass
 Scoop

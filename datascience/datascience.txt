@@ -6,3 +6,10 @@ http://minimaxir.com/2017/08/ggplot2-web/
 
 Ask HN: Full-on machine learning for 2020, what are the best resources?
 https://news.ycombinator.com/item?id=21924298
+
+Python lxml
+https://stackoverflow.com/questions/29440482/how-to-install-lxml-on-windows
+https://stackoverflow.com/questions/1904752/install-libxml2-and-associated-python-bindings-windows
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+	wget https://download.lfd.uci.edu/pythonlibs/archived/lxml-4.9.0-cp311-cp311-win_amd64.whl
+	pip install lxml-4.9.0-cp311-cp311-win_amd64.whl

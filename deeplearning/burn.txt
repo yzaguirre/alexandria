@@ -1,0 +1,4 @@
+BURN: Burn Unstoppable Rusty Neurons
+https://github.com/burn-rs/burn
+Announcing Burn: New Deep Learning framework with CPU & GPU support using the newly stabilized GAT feature
+https://www.reddit.com/r/rust/comments/ynquym/announcing_burn_new_deep_learning_framework_with/

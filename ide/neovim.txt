@@ -70,6 +70,12 @@ https://media.pragprog.com/titles/modvim/terminal.pdf
 
 https://neovim.io/doc/user/usr_05.html#05.1
 
+https://github.com/wbthomason/packer.nvim
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+PowerShell
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+
 Find, Filter, Preview, Pick. All lua, all the time.
 https://github.com/nvim-telescope/telescope.nvim
 
@@ -78,3 +84,10 @@ https://github.com/rockerBOO/awesome-neovim
 https://www.reddit.com/r/neovim/comments/r0a33t/good_neovim_configurations/
 
 https://dev.to/iamdeb25/my-neovim-configuration-3ign
+
+https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support
+
+Minimal configuration for the best text editor
+https://www.youtube.com/watch?v=rDRZEd5v3y0
+Neovim Setup 2022 | #coding #tutorial #development
+https://www.youtube.com/watch?v=t8GzWrs7Ff0

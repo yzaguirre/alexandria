@@ -22,20 +22,21 @@ $HOME/Library/Application Support/Sublime Text 3
 regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
 Install
-	wget https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz
-	wget https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz.asc
-	gpg --verify sublime_text_build_4126_x64.tar.xz.asc
-	tar xf sublime_text_build_4126_x64.tar.xz -C /opt
+	wget https://download.sublimetext.com/sublime_text_build_4142_x64.tar.xz
+	wget https://download.sublimetext.com/sublime_text_build_4142_x64.tar.xz.asc
+	wget https://www.sublimetext.com/sublimehq-pub.gpg
+	gpg --verify sublime_text_build_4142_x64.tar.xz.asc
+	tar xf sublime_text_build_4142_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 Windows
 	winget install SublimeHQ.SublimeText.4
 Binary
-	wget https://download.sublimetext.com/sublime_text_build_4126_x64_setup.exe
+	wget https://download.sublimetext.com/sublime_text_build_4142_x64_setup.exe
 Add to PATH C:\Program Files\Sublime Text
-	explorer.exe sublime_text_build_4126_x64_setup.exe
+	explorer.exe sublime_text_build_4142_x64_setup.exe
 MacOS
-	wget https://download.sublimetext.com/sublime_text_build_4126_mac.zip
-	unzip https://download.sublimetext.com/sublime_text_build_4126_mac.zip -d /Applications
+	wget https://download.sublimetext.com/sublime_text_build_4142_mac.zip
+	unzip https://download.sublimetext.com/sublime_text_build_4142_mac.zip -d /Applications
 
 Cache directory
 ~/.cache

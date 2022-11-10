@@ -2,3 +2,4 @@ Npcap is the Windows version of the libpcap library;
 it includes a driver to support capturing packets.
 https://npcap.com
 https://gitlab.com/wireshark/wireshark/-/wikis/Npcap
+See ../clang/pcapplusplus.txt

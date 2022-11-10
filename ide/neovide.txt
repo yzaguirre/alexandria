@@ -1,10 +1,10 @@
 No Nonsense Neovim Client in Rust
 https://neovide.dev
 https://github.com/neovide/neovide
-	wget https://github.com/neovide/neovide/releases/download/0.10.1/neovide.tar.gz
+	wget https://github.com/neovide/neovide/releases/download/0.10.3/neovide.tar.gz
 	tar xf neovide.tar.gz -C /usr/local/bin
 Windows
-	wget https://github.com/neovide/neovide/releases/download/0.10.1/neovide-windows.zip
+	wget https://github.com/neovide/neovide/releases/download/0.10.3/neovide-windows.zip
 	7z x -o"..\bin" neovide-windows.zip
 
 Neovide is cool

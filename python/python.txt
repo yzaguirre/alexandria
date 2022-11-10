@@ -64,16 +64,20 @@ https://www.python.org/downloads/
 https://stackoverflow.com/questions/58984026/official-python-gpg-signing-key-where-is-it-gpg-using-rsa-key-fc6246434870
 Windows
 	choco install python
-Installer
+Installer 3.11.0
 	curl -o python-3.11.0-amd64.exe https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
 	curl -o python-3.11.0-amd64.exe.asc https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe.asc
 	gpg --verify python-3.11.0-amd64.exe.asc
-	explorer.exe python-3.11.0-amd64.exe
+	start python-3.11.0-amd64.exe
 Install setup tools and pip on Windows
 http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows
 http://stackoverflow.com/questions/2817869/error-unable-to-find-vcvarsall-bat
 	Create new environment variable VS90COMNTOOLS=%VS110COMNTOOLS%
-
+Installer 3.10.8
+	wget https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe
+	wget https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe.asc
+	gpg --verify python-3.10.8-amd64.exe.asc
+	start python-3.10.8-amd64.exe
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip
 

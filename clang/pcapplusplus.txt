@@ -1,0 +1,7 @@
+PcapPlusPlus is a multiplatform C++ library for capturing, parsing and crafting
+of network packets.
+It is designed to be efficient, powerful and easy to use.
+It provides C++ wrappers for the most popular packet processing engines
+such as libpcap, WinPcap, DPDK and PF_RING.
+https://github.com/seladb/PcapPlusPlus
+https://www.reddit.com/r/programming/comments/yqnhzm/pcapplusplus_v2211_released_c11_library_for/

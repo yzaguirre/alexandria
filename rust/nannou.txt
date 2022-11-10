@@ -4,3 +4,5 @@ https://github.com/nannou-org/nannou
 
 Creative Coding in Rust with Nannou
 https://www.youtube.com/watch?v=p-axai_Wuec
+
+https://www.reddit.com/r/rust/comments/yog6ce/played_around_with_nannou_this_weekend/

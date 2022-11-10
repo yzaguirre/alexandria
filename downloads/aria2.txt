@@ -4,18 +4,17 @@ It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
 https://aria2.github.io
 https://github.com/aria2/aria2
 	apt install aria2
-Homebrew
-	brew install aria2
-
 Windows
+	choco install aria2
 An Aria2 GUI for Windows & Linux & MacOS
 https://aria-ng.xmader.com/
 https://github.com/Xmader/aria-ng-gui
 	scoop bucket add extras
 	scoop install aria-ng-gui
 	AriaNgGUI.exe
+Homebrew
+	brew install aria2
 Configuration
-Windows
 %APPDATA%/aria-ng-gui/aria2.conf
 
 Usage
@@ -25,3 +24,6 @@ Usage
 	aria2c http://example.org/mylinux.metalink
 Download URIs found in text file:
 	aria2c -i uris.txt
+
+Get Notified After Download Finishes With Aria2c
+https://www.youtube.com/watch?v=2aFqNGI16DQ

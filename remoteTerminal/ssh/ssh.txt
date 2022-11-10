@@ -216,7 +216,7 @@ Debian or Ubuntu Linux Regenerate OpenSSH Host Keys
 MacOS reload
 https://superuser.com/questions/478035/command-line-ssh-restart-mac-osx-mountain-lion
 	sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
-	sudo launchctl load /System/Library/LaunchDaemons/ssh.plist
+	sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 Get fingerprint
 	ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
 Remove all from the known_hosts on local machine, that belongs to remote host

@@ -1,4 +1,5 @@
 https://www.tensorflow.org
+https://pypi.org/project/tensorflow/
 https://www.freecodecamp.org/learn/machine-learning-with-python/
 	sudo -H pip install tensorflow
 Windows
@@ -13,38 +14,12 @@ Conda
 	conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 If already have cuda
 	conda install -c conda-forge cudnn=8.1.0
-	python3 -m pip install tensorflow
+	python -m pip install tensorflow
 Verify install
-	python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+	python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
-Manual install with CPU support
-https://www.tensorflow.org/install/source
-Install bazel
-https://docs.bazel.build/versions/master/install.html
-	apt install openjdk-8-jdk
-	echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-	curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-	apt update
-	apt install bazel
-List cpu flags
-https://stackoverflow.com/questions/45877158/illegal-instruction-error-when-building-tensorflow-from-source
-	gcc -march=native -Q --help=target | grep enabled
-Continue with tensorflow compile
-	apt install python3-dev python3-pip python3-wheel
-	sudo -H pip3 install numpy
-	git clone https://github.com/tensorflow/tensorflow
-	cd tensorflow
-	git checkout r1.7
-	./configure
-Compile with 2GB RAM limit
-	bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package --local_resources 2048,.5,1.0
-It builds a script named build_pip_package.
-Running this script as follows will build a .whl file within the /tmp/tensorflow_pkg directory:
-	bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
-Install the pip package
-for TensorFlow 1.6.0 on Linux:
-	pip install /tmp/tensorflow_pkg/tensorflow-1.6.0-py2-none-any.whl
-
+https://www.tensorflow.org/install/gpu
+	conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 # Validate installation
 	vim hellotf.py
 #!/usr/bin/env python3

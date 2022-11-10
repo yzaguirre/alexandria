@@ -14,6 +14,10 @@ Or download package
 	dotnet tool install -g --add-source ./package.nupkg Path --version 0.1.2-alpha
 
 Usage
+List PATH
+	path list | Out-File path.txt
+List Path globally
+	path list -g | Out-File path-global.txt1
 Add a directory to user PATH
 	path add C:\some\new\path
 Want to add it to the machine-level PATH? Run this on an elevated prompt instead

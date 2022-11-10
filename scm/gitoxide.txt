@@ -1,0 +1,4 @@
+An idiomatic, lean, fast & safe pure Rust implementation of Git
+https://github.com/Byron/gitoxide
+Cloning the Linux kernel in under a minute with Gitoxide
+https://www.reddit.com/r/rust/comments/yo1hb1/cloning_the_linux_kernel_in_under_a_minute_with/

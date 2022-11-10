@@ -3,8 +3,11 @@ https://www.gnu.org/software/coreutils/manual/html_node/The-cut-command.html
 A sharp cut(1) clone.
 https://github.com/sstadick/hck
 https://news.ycombinator.com/item?id=27794188
-	wget https://github.com/sstadick/hck/releases/download/v0.7.1/hck-linux-amd64.deb
-	sudo dpkg -i hck-linux-amd64.deb
+	wget https://github.com/sstadick/hck/releases/download/v0.7.5/hck-linux-amd64.deb
+	dpkg -i hck-linux-amd64.deb
+Windows
+	wget -O "..\bin\hck.exe" https://github.com/sstadick/hck/releases/download/v0.7.5/hck-windows-amd64.exe
+	start hck-windows-amd64.exe
 Homebrew
 	brew tap sstadick/hck
 	brew install hck
