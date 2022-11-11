@@ -5,13 +5,13 @@ Se instalarán los siguientes paquetes NUEVOS:
 Compile
 https://nmap.org/download.html
 https://nmap.org/dist/sigs/?C=M&O=D
-	wget https://nmap.org/dist/nmap-7.92.tgz
-	wget https://nmap.org/dist/sigs/nmap-7.92.tgz.asc
-	wget https://nmap.org/dist/sigs/nmap-7.92.tgz.digest.txt
+	wget https://nmap.org/dist/nmap-7.93.tgz
+	wget https://nmap.org/dist/sigs/nmap-7.93.tgz.asc
+	wget https://nmap.org/dist/sigs/nmap-7.93.tgz.digest.txt
 Windows
-	wget https://nmap.org/dist/nmap-7.92-setup.exe
-	wget https://nmap.org/dist/sigs/nmap-7.92-setup.exe.asc
-	wget https://nmap.org/dist/sigs/nmap-7.92-setup.exe.digest.txt
+	wget https://nmap.org/dist/nmap-7.93-setup.exe
+	wget https://nmap.org/dist/sigs/nmap-7.93-setup.exe.asc
+	wget https://nmap.org/dist/sigs/nmap-7.93-setup.exe.digest.txt
 Verify
 https://nmap.org/book/install.html#inst-integrity
 import key
@@ -21,20 +21,20 @@ import key
 	gpg --fingerprint nmap fyodor
 BB61 D057 C0D7 DCEF E730 996C 1AF6 EC50 3359 9B5F
 436D 66AB 9A79 8425 FDA0 E3F8 01AF 9F03 6B93 55D0
-	gpg --verify nmap-7.92.tgz.asc nmap-7.92.tgz
-	grep MD5 nmap-7.92.tgz.digest.txt
-	md5sum nmap-7.92.tgz
-	sha1sum nmap-7.92.tgz
-	sha224sum nmap-7.92.tgz
-	sha256sum nmap-7.92.tgz
-	sha384sum nmap-7.92.tgz
-	sha512sum nmap-7.92.tgz
+	gpg --verify nmap-7.93.tgz.asc nmap-7.93.tgz
+	grep MD5 nmap-7.93.tgz.digest.txt
+	md5sum nmap-7.93.tgz
+	sha1sum nmap-7.93.tgz
+	sha224sum nmap-7.93.tgz
+	sha256sum nmap-7.93.tgz
+	sha384sum nmap-7.93.tgz
+	sha512sum nmap-7.93.tgz
 Windows
-	explorer.exe nmap-7.92-setup.exe
+	explorer.exe nmap-7.93-setup.exe
 Compile
 https://nmap.org/book/inst-source.html
-	tar xf nmap-7.92.tgz
-	cd nmap-7.92
+	tar xf nmap-7.93.tgz
+	cd nmap-7.93
 	./configure
 configure directives
 --prefix=<directoryname>
@@ -42,7 +42,6 @@ configure directives
 --without-zenmap
 	make -j12
 	make install
-
 Compile ncat
 https://github.com/ksylvan/MyPassportWirelessHacks/tree/master/ncat
 http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-MyPW/td-p/812349
@@ -53,6 +52,8 @@ http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-My
 	cd ../ncat/
 	make -j12
 	apt install liblua5.2-0 libc6
+Homebrew
+	brew install nmap
 
 Scan a trace for open ports
 	nmap -A localhost

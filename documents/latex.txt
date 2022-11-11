@@ -7,7 +7,7 @@ https://castel.dev/post/lecture-notes-1/
 https://news.ycombinator.com/item?id=29143707
 
 https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex
-Install
+https://www.tug.org/texlive/
 	apt install texlive-xetex texlive-fonts-recommended texlive-latex-recommended
 The following NEW packages will be installed:
 fonts-texgyre libapache-pom-java libcommons-logging-java libcommons-parent-java libfontbox-java libpdfbox-java preview-latex-style teckit tex-gyre
@@ -24,6 +24,8 @@ Binaries
 1f6c197678f9b55adec8772f3a9e6d89f1e2d169f67c0d8494501813b9d3724f
 	start basic-miktex-22.10-x64.exe
 Installed at C:\Users\dyzag\AppData\Local\Programs\MiKTeX
+Homebrew
+	brew install miktex-console
 Open console
 https://miktex.org/howto/miktex-console
 	miktex-console.exe

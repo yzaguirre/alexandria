@@ -1,15 +1,15 @@
 Watches files and records, or triggers actions, when they change.
 https://facebook.github.io/watchman/
 https://github.com/facebook/watchman
-	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-linux.zip
-	7zz e -o"/opt/watchman" watchman-v2022.10.03.00-linux.zip
+	wget https://github.com/facebook/watchman/releases/download/v2022.11.07.00/watchman-v2022.11.07.00-linux.zip
+	7zz e -o"/opt/watchman" watchman-v2022.11.07.00-linux.zip
 Add to PATH environment variable
 /opt/watchman
 Compile
 	git clone https://github.com/facebook/watchman.git
 	cd watchman
 Checkout the latest release
-	git checkout v2022.10.03.00
+	git checkout v2022.11.07.00
 	./autogen.sh
 	./configure
 	make
@@ -17,15 +17,16 @@ Checkout the latest release
 Windows
 	choco install watchman
 Binaries
-	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-windows.zip
-	7z e -o"C:\ProgramData\watchman" watchman-v2022.10.03.00-windows.zip
+	wget https://github.com/facebook/watchman/releases/download/v2022.11.07.00/watchman-v2022.11.07.00-windows.zip
+	7z e -o"C:\ProgramData\watchman" watchman-v2022.11.07.00-windows.zip
 Add to PATH environment variable
 C:\ProgramData\watchman
 Homebrew
 	brew install watchman
 Macos
-	wget https://github.com/facebook/watchman/releases/download/v2022.10.03.00/watchman-v2022.10.03.00-macos.zip
-	ditto -x -k watchman-v2022.10.03.00-macos.zip /home/david/Library
+	wget https://github.com/facebook/watchman/releases/download/v2022.11.07.00/watchman-v2022.11.07.00-macos.zip
+	7zz x -o"/Users/david/Library" watchman-v2022.11.07.00-macos.zip
+x	ditto -x -k watchman-v2022.11.07.00-macos.zip /Users/david/Library
 
 Usage
 	watchman watch ~/src

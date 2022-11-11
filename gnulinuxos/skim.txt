@@ -1,7 +1,7 @@
 Fuzzy Finder in rust!
 https://github.com/lotabout/skim
-	wget https://github.com/lotabout/skim/releases/download/v0.10.1/skim-v0.10.1-x86_64-unknown-linux-musl.tar.gz
-	tar xf skim-v0.10.1-x86_64-unknown-linux-musl.tar.gz
+	wget https://github.com/lotabout/skim/releases/download/v0.10.2/skim-v0.10.2-x86_64-unknown-linux-musl.tar.gz
+	tar xf skim-v0.10.2-x86_64-unknown-linux-musl.tar.gz
 	chmod u+x sk
 	mv sk ~/bin
 Windows

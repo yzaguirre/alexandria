@@ -1,22 +1,22 @@
 Friendly and fast tool for sending HTTP requests
 https://github.com/ducaale/xh
-https://docs.rs/crate/ht/0.16.1
+https://docs.rs/crate/ht/0.17.0
 Install
 	cargo install ht
-	wget https://github.com/ducaale/xh/releases/download/v0.16.1/xh-v0.16.1-x86_64-unknown-linux-musl.tar.gz
-	tar xf xh-v0.16.1-x86_64-unknown-linux-musl.tar.gz
-	sudo mv xh-v0.16.1-x86_64-unknown-linux-musl/xh /usr/local/bin
+	wget https://github.com/ducaale/xh/releases/download/v0.17.0/xh-v0.17.0-x86_64-unknown-linux-musl.tar.gz
+	tar xf xh-v0.17.0-x86_64-unknown-linux-musl.tar.gz
+	sudo mv xh-v0.17.0-x86_64-unknown-linux-musl/xh /usr/local/bin
 	cd /usr/local/bin
 	sudo ln -s ./xh ./xhs
 Terminal completions
-	sudo mv xh-v0.16.1-x86_64-unknown-linux-musl/completions/xh.bash /usr/share/bash-completion/completions
-	sudo mv xh-v0.16.1-x86_64-unknown-linux-musl/completions/xh.fish /usr/share/fish/completions
+	sudo mv xh-v0.17.0-x86_64-unknown-linux-musl/completions/xh.bash /usr/share/bash-completion/completions
+	sudo mv xh-v0.17.0-x86_64-unknown-linux-musl/completions/xh.fish /usr/share/fish/completions
 Windows
-	scoop install xh
 	choco install xh
+	scoop install xh
 Binary
-	wget https://github.com/ducaale/xh/releases/download/v0.16.1/xh-v0.16.1-x86_64-pc-windows-msvc.zip
-	unzip xh-v0.16.1-x86_64-pc-windows-msvc.zip
+	wget https://github.com/ducaale/xh/releases/download/v0.17.0/xh-v0.17.0-x86_64-pc-windows-msvc.zip
+	unzip xh-v0.17.0-x86_64-pc-windows-msvc.zip
 MacOS
 	brew install xh
 Uninstall previous project, if applicable

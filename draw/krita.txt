@@ -12,6 +12,9 @@ Ubuntu
 https://launchpad.net/~kritalime/+archive/ubuntu/ppa
 	sudo add-apt-repository ppa:kritalime/ppa
 	apt install krita krita-l10n
+Windows
+	choco install krita
+	winget install KDE.Krita
 Homebrew
 	brew install krita
 	ln -s /Applications/krita.app/Contents/MacOS/krita /usr/local/bin/

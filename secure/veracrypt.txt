@@ -1,4 +1,18 @@
 https://www.veracrypt.fr/en/Home.html
+https://github.com/veracrypt/VeraCrypt
+	wget https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.25.9/veracrypt-1.25.9-Debian-11-amd64.deb
+	wget https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.25.9/veracrypt-1.25.9-Debian-10-amd64.deb.sig
+	gpg --verify veracrypt-1.25.9-Debian-10-amd64.deb.sig
+	dpkg -i veracrypt-1.25.9-Debian-10-amd64.deb
+Ubuntu
+	wget https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.25.9/veracrypt-1.25.9-Ubuntu-21.10-amd64.deb
+	wget https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.25.9/veracrypt-1.25.9-Ubuntu-21.10-amd64.deb.sig
+	gpg --verify veracrypt-1.25.9-Ubuntu-21.10-amd64.deb.sig
+	dpkg -i veracrypt-1.25.9-Ubuntu-21.10-amd64.deb
+Windows
+	choco install veracrypt
+Installed at
+C:\Program Files\VeraCrypt\
 Homebrew
 	brew install veracrypt
 Dependencies

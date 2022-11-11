@@ -4,6 +4,9 @@ Se instalarán los siguientes paquetes NUEVOS:
   liblua5.3-0 ncat
 Termux
 	apt install nmap-ncat
+Homebrew
+	brew install nmap
+See nmap.txt
 Traditional
 http://www.stearns.org/nc/
 ncat-openbsd
