@@ -1,0 +1,50 @@
+Xq - command-line XML and HTML beautifier and content extractor 
+https://github.com/sibprogrammer/xq
+https://news.ycombinator.com/item?id=33573157
+	curl -sSL https://bit.ly/install-xq | sudo bash
+Binaries
+	wget https://github.com/sibprogrammer/xq/releases/download/v1.0.0/xq_1.0.0_linux_amd64.tar.gz
+	wget https://github.com/sibprogrammer/xq/releases/download/v1.0.0/checksums.txt
+	sha256sum -c --ignore-missing checksums.txt
+Homebrew
+	brew install xq
+Compile
+	go install github.com/sibprogrammer/xq@latest
+
+Usage
+	xq -v
+	xq -h
+	xq test/data/xml/unformatted.xml
+	curl -s https://www.w3schools.com/xml/note.xml | xq
+HTML content can be formatted and highlighted as well (using -m flag):
+	xq -m test/data/html/formatted.html
+It is possible to extract the content using XPath query language. -x parameter accepts XPath expression.
+	cat test/data/xml/unformatted.xml | xq -x //city
+Extract the value of attribute named status and belonging to user:
+	cat test/data/xml/unformatted.xml | xq -x /user/@status
+
+Parsing HTML at the command line
+https://github.com/EricChiang/pup
+	wget https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip
+	sha256sum pup_v0.4.0_linux_amd64.zip
+ec3d29e9fb375b87ac492c8b546ad6be84b0c0b49dab7ff4c6b582eac71ba01c
+	7zz x -o"/usr/local/bin" pup_v0.4.0_linux_amd64.zip
+Windows
+	wget https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_windows_amd64.zip
+	Get-FileHash pup_v0.4.0_windows_amd64.zip -Algorithm SHA256
+6755cbd43e94eaf173689e93e914c7056a2249c2977e5b90024fb397f9b45ba4
+	7z x -o"..\bin" pup_v0.4.0_windows_amd64.zip
+MacOS
+	wget https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_darwin_amd64.zip
+	shasum -a 256 pup_v0.4.0_darwin_amd64.zip
+c539a697efee2f8e56614a54cb3b215338e00de1f6a7c2fa93144ab6e1db8ebe
+	7zz x -o"../bin" pup_v0.4.0_darwin_amd64.zip
+
+Usage
+	pup --version
+Filter by id
+	cat robots.html | pup 'span#See_also'
+
+XMLStarlet Command Line XML Toolkit
+https://xmlstar.sourceforge.net
+	choco install xmlstarlet

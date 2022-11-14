@@ -1,3 +1,4 @@
+See ../xml.txt
 Create boiler plate
 	http://html5boilerplate.com/
 	http://www.initializr.com/

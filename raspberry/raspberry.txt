@@ -136,6 +136,7 @@ Total $180+
 
 Radio
 http://www.icrobotics.co.uk/wiki/index.php/Turning_the_Raspberry_Pi_Into_an_FM_Transmitter
+https://news.ycombinator.com/item?id=33572912
 	wget http://omattos.com/pifm.tar.gz
 	tar xf pifm.tar.gz
 or
