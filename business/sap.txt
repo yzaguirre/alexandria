@@ -1,3 +1,5 @@
 What's SAP, and why's it worth $163B? (2020)
 https://news.ycombinator.com/item?id=32776276
 https://retool.com/blog/erp-for-engineers/
+See ../devops/openblocks.txt
+../devops/tooljet.txt

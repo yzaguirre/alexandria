@@ -2,7 +2,7 @@ Media Player Classic
 https://github.com/clsid2/mpc-hc
 https://news.ycombinator.com/item?id=32191953
 Windows
-	choco install mpc-hc-clsid2
 	winget install clsid2.mpc-hc
+	choco install mpc-hc-clsid2
 Installed at
 C:\Program Files\MPC-HC\

@@ -7,10 +7,14 @@ QR Code encoder into PNG image
 https://fukuchi.org/works/qrencode/#news
 https://github.com/fukuchi/libqrencode
 https://superuser.com/questions/1420001/is-it-possible-to-create-a-qr-code-using-text
-see php/php-qrcode.txt js/js-qrcode.txt
+see php/php-qrcode.txt
+js/js-qrcode.txt
 	apt install qrencode
 Homebrew
 	brew install qrencode
+Windows
+https://sourceforge.net/projects/qrencode-for-windows/
+
 To stdout
 	echo hello | qrencode -o - -t UTF8
 	echo 'Hello World' | qrencode -t ANSI

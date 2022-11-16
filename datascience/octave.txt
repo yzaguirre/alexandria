@@ -4,21 +4,21 @@ Install PCRE
 http://www.cyberciti.biz/faq/debian-ubuntu-linux-install-libpcre3-dev/
 	apt-get install libpcre3 libpcre3-dev
 	apt-get install libfreetype6-dev libopenblas-dev liblapack-dev
-	wget ftp://ftp.gnu.org/gnu/octave/octave-6.4.0.tar.bz2
-	tar xf octave-6.4.0.tar.bz2 && cd octave-6.4.0
+	wget ftp://ftp.gnu.org/gnu/octave/octave-7.3.0.tar.bz2
+	tar xf octave-7.3.0.tar.bz2 && cd octave-7.3.0
 	./configure
 	make
 	# make install
 Windows
+	choco install octave.install
 	winget install octave
 	scoop install octave
-	choco install octave
 Installed at
 C:\Program Files\GNU Octave
 Configuration at
 AppData\Roaming\octave\octave-gui.ini
 PowerShell alias
-Set-Alias octave 'C:\Program Files\GNU Octave\Octave-7.2.0\mingw64\bin\octave-7.2.0.exe'
+Set-Alias octave 'C:\Program Files\GNU Octave\Octave-7.3.0\mingw64\bin\octave-7.3.0.exe'
 
 Docs
 https://www.gnu.org/software/octave/octave.pdf

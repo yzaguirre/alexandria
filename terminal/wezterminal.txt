@@ -23,7 +23,7 @@ Configuration at
 ~/.wezterm.lua
 C:\Program Files\WezTerm\wezterm.lua
 
-	vim C:\Program Files\WezTerm\wezterm.lua
+	vim "C:\Program Files\WezTerm\wezterm.lua"
 return {
 	default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"},
 	default_cwd = "C:\\Users\\dyzag\\Downloads",

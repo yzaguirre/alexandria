@@ -2,23 +2,23 @@ https://dev.yorhel.nl/ncdu
 Ncdu is entirely written in C and available under a liberal MIT license.
 https://www.reddit.com/r/commandline/comments/sekd0w/ncdu_ncurses_disk_usage_see_which_directories_and/
 Download
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2.tar.gz
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2.tar.gz.asc
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2.tar.gz.sha1
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2.tar.gz.md5
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1.tar.gz.asc
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1.tar.gz.sha1
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1.tar.gz.md5
 Verify
-	md5sum ncdu-2.1.2.tar.gz
-	cat ncdu-2.1.2.tar.gz.md5
-	sha1sum ncdu-2.1.2.tar.gz
-	cat ncdu-2.1.2.tar.gz.sha1
+	md5sum ncdu-2.2.1.tar.gz
+	cat ncdu-2.2.1.tar.gz.md5
+	sha1sum ncdu-2.2.1.tar.gz
+	cat ncdu-2.2.1.tar.gz.sha1
 PGP fingerprint
 7446 0D32 B808 10EB A9AF A2E9 6239 4C69 8C27 39FA
 	wget https://yorhel.nl/key.asc
 	gpg --import key.asc
-	gpg --verify ncdu-2.1.2.tar.gz.asc
+	gpg --verify ncdu-2.2.1.tar.gz.asc
 Extract
-	tar xf ncdu-2.1.2.tar.gz
-	cd ncdu-2.1.2
+	tar xf ncdu-2.2.1.tar.gz
+	cd ncdu-2.2.1
 	./configure
 	make -j12
 	make install
@@ -28,37 +28,37 @@ Extract
 /usr/bin/install -c -m 644 ncdu.1 '/usr/local/share/man/man1'
 
 Binary
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2-linux-x86_64.tar.gz
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2-linux-x86_64.tar.gz.asc
-	gpg --verify ncdu-2.1.2-linux-x86_64.tar.gz.asc
-	md5sum ncdu-2.1.2-linux-x86_64.tar.gz
-da7ea20a2629a4b11465f2fe133716f8
-	sha1sum ncdu-2.1.2-linux-x86_64.tar.gz
-1430c0f0aae82162fbb547431ff22c8c953d6337
-	sha256sum ncdu-2.1.2-linux-x86_64.tar.gz
-c837b535a5b42b5c9813bc5719358d6fc84ded3c4d477e779edd0f4ca88b2b60x86_64
-	tar xf ncdu-2.1.2-linux-x86_64.tar.gz -C /usr/local/bin
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1-linux-x86_64.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1-linux-x86_64.tar.gz.asc
+	gpg --verify ncdu-2.2.1-linux-x86_64.tar.gz.asc
+	md5sum ncdu-2.2.1-linux-x86_64.tar.gz
+6411ff15b067e883e77da034d09f3820
+	sha1sum ncdu-2.2.1-linux-x86_64.tar.gz
+9800e3c1af24e2dbd0a55e1cf86ba324327d39fd
+	sha256sum ncdu-2.2.1-linux-x86_64.tar.gz
+0915f329c86d4722b8a89f0165a437c546ca32f4f7f4e700a567ee786d52cdedx86_64 
+	tar xf ncdu-2.2.1-linux-x86_64.tar.gz -C /usr/local/bin
 Termux
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2-linux-aarch64.tar.gz
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2-linux-aarch64.tar.gz.asc
-	gpg --verify ncdu-2.1.2-linux-aarch64.tar.gz.asc
-	md5sum ncdu-2.1.2-linux-aarch64.tar.gz
-43fefe2d1b2d4480b83d4b923b1666d6
-	sha1sum ncdu-2.1.2-linux-aarch64.tar.gz
-fb6134172fb029cfbb70fd9e3fd6d64e1a1d0648
-	sha256sum ncdu-2.1.2-linux-aarch64.tar.gz
-63c1dc8a47816bce8a090fbdc96346cc0bb513ccbbc1efde169b985f1a156253AArch64
-	tar xf ncdu-2.1.2-linux-aarch64.tar.gz -C /data/data/com.termux/files/usr/bin
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1-linux-aarch64.tar.gz
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1-linux-aarch64.tar.gz.asc
+	gpg --verify ncdu-2.2.1-linux-aarch64.tar.gz.asc
+	md5sum ncdu-2.2.1-linux-aarch64.tar.gz
+52a1a890e8b587299acda36b88650b0d
+	sha1sum ncdu-2.2.1-linux-aarch64.tar.gz
+0214c88212235aa0da9160fe2ae24af975896833
+	sha256sum ncdu-2.2.1-linux-aarch64.tar.gz
+591bb23fd6a873703bd80ba24ddd16f40b46982d2b8835170c4399954b24bc5fAArch64 
+	tar xf ncdu-2.2.1-linux-aarch64.tar.gz -C /data/data/com.termux/files/usr/bin
 ARM
-	wget https://dev.yorhel.nl/download/ncdu-2.1.2-linux-arm.tar.gz
-	md5sum ncdu-2.1.2-linux-arm.tar.gz
-150faf0cb2877c7ea73f86dd093dfe1f
-	sha1sum ncdu-2.1.2-linux-arm.tar.gz
-95c62df62ab14afee106228cf5012c2366612d26
-	sha256sum ncdu-2.1.2-linux-arm.tar.gz
-fc2dc967ac462ede1138beadb622b0b800849a5c58d93c229fbda96a22c83e90ARM
-	tar xf ncdu-2.1.2-linux-arm.tar.gz -C /usr/local/bin
-MacOS
+	wget https://dev.yorhel.nl/download/ncdu-2.2.1-linux-arm.tar.gz
+	md5sum ncdu-2.2.1-linux-arm.tar.gz
+52a1a890e8b587299acda36b88650b0d
+	sha1sum ncdu-2.2.1-linux-arm.tar.gz
+0214c88212235aa0da9160fe2ae24af975896833
+	sha256sum ncdu-2.2.1-linux-arm.tar.gz
+591bb23fd6a873703bd80ba24ddd16f40b46982d2b8835170c4399954b24bc5fAArch64 
+	tar xf ncdu-2.2.1-linux-arm.tar.gz -C /usr/local/bin
+Homebrew
 	brew install ncdu
 
 Alias
