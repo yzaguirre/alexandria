@@ -377,7 +377,10 @@ vectorscope
 	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color" out.avi
 	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color4" out.avi
 	ffmpeg -i sample_vid.mov -vf "format=yuva444p9, vectorscope=mode=color4:g=green" out.avi
-
+Blur a video
+FFmpeg command to Blur Video on particular location
+https://www.youtube.com/watch?v=qTZ-VvO8XFU
+	ffmpeg -i .\VID-20221115-WA0001.mp4 -filter_complex "[0:V]crop=134:640,boxblur=20[fg];[0:V] [fg]overlay=(main_w - 134):0" -c:v nvenc_h264 -y output.mp4
 FFMPEG Advanced Techniques Pt1 - Advanced Filters
 https://www.youtube.com/watch?v=M58rc7cxl_s
 FFMPEG Advanced Techniques Pt2 - Filtergraphs & Timeline

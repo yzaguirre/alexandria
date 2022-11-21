@@ -7,7 +7,10 @@ https://www.reddit.com/r/programming/comments/tj0ero/stream_your_audio/
 	unzip streammyaudio_linux_amd64.zip -d /usr/local/bin streammyaudio
 Windows
 	wget https://github.com/schollz/streammyaudio/releases/download/v0.2.1/streammyaudio_windows_amd64.zip
-	7z x -oC:\Users\dyzag\bin streammyaudio_windows_amd64.zip streammyaudio.exe
+	7z x -o"..\bin" streammyaudio_windows_amd64.zip streammyaudio.exe
+MacOS
+	wget https://github.com/schollz/streammyaudio/releases/download/v0.2.1/streammyaudio_macos_amd64.zip
+	7zz x -o"../.local/bin" streammyaudio_macos_amd64.zip streammyaudio
 
 Usage
 	streammyaudio.exe

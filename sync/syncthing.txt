@@ -46,7 +46,7 @@ Start service
 
 Config at
 ~/.config/syncthing/config.xml
-AppData\Local\Syncthing
+C:\Users\DAVIDY~1\AppData\Local\Syncthing
 
 Install MacOS
 	shasum -c --ignore-missing sha256sum.txt.asc

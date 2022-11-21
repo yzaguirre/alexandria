@@ -1,10 +1,10 @@
 https://docs.digitalocean.com/reference/doctl/
 https://github.com/digitalocean/doctl
 https://www.digitalocean.com/community/tutorials/how-to-use-doctl-the-official-digitalocean-command-line-client
-	wget https://github.com/digitalocean/doctl/releases/download/v1.85.0/doctl-1.85.0-linux-amd64.tar.gz
-	wget https://github.com/digitalocean/doctl/releases/download/v1.85.0/doctl-1.85.0-checksums.sha256
-	sha256sum -c --ignore-missing doctl-1.85.0-checksums.sha256
-	tar xf doctl-1.85.0-linux-amd64.tar.gz -C /usr/local/bin
+	wget https://github.com/digitalocean/doctl/releases/download/v1.87.0/doctl-1.87.0-linux-amd64.tar.gz
+	wget https://github.com/digitalocean/doctl/releases/download/v1.87.0/doctl-1.87.0-checksums.sha256
+	sha256sum -c --ignore-missing doctl-1.87.0-checksums.sha256
+	tar xf doctl-1.87.0-linux-amd64.tar.gz -C /usr/local/bin
 Windows
 	choco install doctl
 	scoop install doctl

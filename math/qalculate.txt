@@ -11,6 +11,8 @@ https://qalculate.github.io/manual/qalc.html
 Windows
 	winget install Qalculate.Qalculate
 	choco install qalculate
+Homebrew
+	brew install qalculate-gtk
 Configuration at
 ~/.config/qalculate/qalc.cfg
 C:\Users\DAVIDY~1\AppData\Local\Qalculate\qalc.cfg

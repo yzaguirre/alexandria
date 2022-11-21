@@ -351,3 +351,12 @@ Create Group
 Add members
 	Add-LocalGroupMember -Group "MYGRP" -Member "Gohan"
 	Add-LocalGroupMember -Group "MYGRP" -Member ("Gohan","Administrator")
+
+Keys
+https://keycombiner.com/collections/powershell/
+CTRL+DEL
+Erase next word
+CTRL+END
+Erase right side of cursor
+CTRL+HOME
+Erase left side of cursor

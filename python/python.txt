@@ -1,3 +1,7 @@
+Python 3.12.0 is to remove long-deprecated items
+https://discuss.python.org/t/python-3-12-0-alpha-2-released/21087
+https://news.ycombinator.com/item?id=33620692
+
 https://www.python.org
 	apt install python3.9 python3.9-venv python3-pip
 For Python 3.10

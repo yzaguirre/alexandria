@@ -19,6 +19,9 @@ Windows
 Installed at C:\tools\ruby31\
 MacOS
 	brew install rbenv ruby-build
+	rbenv init
+	vim ~/.zshrc
+eval "$(rbenv init - zsh)"
 ruby-build installs a non-Homebrew OpenSSL for each Ruby version installed and these are never upgraded.
 To link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded) add the following
 to your ~/.zshrc:
@@ -28,7 +31,10 @@ that use OpenSSL <1.1.
 
 Install a ruby version
 	rbenv install 3.0.0
-	rbenv install 2.7.2
+	rbenv install 2.7.5
+	rbenv install 2.7.6
+Installed at
+/Users/david/.rbenv/versions/2.7.6
 Installs shims for all Ruby executables known
 to rbenv (i.e., ~/.rbenv/versions/*/bin/*).
 Run this command after you install a new version of Ruby,
@@ -39,13 +45,19 @@ Ruby versions at ~/.rbenv/versions
 	rbenv versions
 Display current version
 	rbenv version
+List latest stable verions
+	rbenv install -l
+List all local versions
+	rbenv install -L
 Lists all available versions of Ruby
 	ruby-build --definitions
 
 Choose a ruby version in your scripts file (.zshrc, .zprofile, .bashrc, .profile)
-	export RBENV_VERSION=2.7.2
+	export RBENV_VERSION=2.7.6
 Or
-	rbenv shell 2.7.2
+	rbenv global 2.7.6
+	rbenv global 3.1.2
+	rbenv shell 2.7.6
 Unset it
 	rbenv shell --unset
 

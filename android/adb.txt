@@ -119,6 +119,8 @@ https://stackoverflow.com/questions/42564693/adb-exec-out-not-working
 	adb exec-out screencap -p | xclip -selection clipboard -target image/png
 	alias capture="adb exec-out screencap -p > $@"
 	capture myfile.jpg
+cmdline-tools has screenshot2
+	screenshot2 -d login_screen.png
 
 Record Screen
 https://developer.android.com/studio/command-line/adb#screenrecord

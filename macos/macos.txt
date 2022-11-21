@@ -46,7 +46,7 @@ https://www.youtube.com/watch?v=SjLe8xeJzR4
 Remove Smart Quotes and Dashes
 System Preferences -> Keyboard -> Text
 
-Activate SSH Server on MacOS. See ~/remoteTerminal/ssh/ssh.txt
+Activate SSH Server on MacOS. See ../remoteTerminal/ssh/ssh.txt
 Mac: Turning on and Connecting to the SSH Server
 https://www.youtube.com/watch?v=OBWgpUmRhPY
 System Preferences -> Sharing -> Remote Login

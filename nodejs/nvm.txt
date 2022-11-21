@@ -26,12 +26,20 @@ List local versions
 	nvm ls
 Specific version
 	nvm install 14.21.1
-	nvm install 16.17.1
+	nvm install 16.18.1
 	nvm install 17.9.1
-	nvm install 18.10.0
-	nvm install 19.0.1
+	nvm install 18.12.1
+	nvm install 19.1.0
 Change node
-	nvm use 14.20.1
-	nvm use 18.10.0
+https://stackoverflow.com/questions/69647332/cannot-read-properties-of-undefined-reading-transformfile-at-bundler-transfo
+	nvm use 14.21.1
+	nvm use 16.18.1
+	nvm alias default 16
+	nvm use 18.12.1
 Restore PATH
 	nvm deactivate
+Erase node cache
+	npm config get cache
+	rm -rf ~/.npm
+	rm C:\cache
+	npm --global cache verify

@@ -2,13 +2,13 @@ a cross-platform, terminal-based music player,
 audio engine, metadata indexer, and server in c++
 https://musikcube.com
 https://github.com/clangen/musikcube
-	wget https://github.com/clangen/musikcube/releases/download/0.98.0/musikcube_standalone_0.98.0_amd64.deb
-	dpkg -i musikcube_standalone_0.98.0_amd64.deb
+	wget https://github.com/clangen/musikcube/releases/download/0.98.1/musikcube_standalone_0.98.1_amd64.deb
+	dpkg -i musikcube_standalone_0.98.1_amd64.deb
 Windows
 	choco install musikcube
 Binary
-	wget https://github.com/clangen/musikcube/releases/download/0.98.0/musikcube_win64_0.98.0.zip
-	7z x -o"C:\ProgramData\musikcube" musikcube_win64_0.98.0.zip
+	wget https://github.com/clangen/musikcube/releases/download/0.98.1/musikcube_win64_0.98.1.zip
+	7z x -o"C:\ProgramData\musikcube" musikcube_win64_0.98.1.zip
 Installed at
 C:\ProgramData\musikcube
 Homebrew

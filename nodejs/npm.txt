@@ -56,6 +56,11 @@ Cleanup
 "Write after end" Error
 https://github.com/npm/npm/issues/19989#issuecomment-371739104
 	npm install npm -g
+Cache directory
+https://stackoverflow.com/questions/14836053/how-can-i-change-the-cache-path-for-npm-or-completely-disable-the-cache-on-win
+	npm config get cache
+	npm config set cache C:\Devel\nodejs\npm-cache --global
+	npm --global cache verify
 
 Use a http proxy
 https://medium.com/@jamesjefferyuk/how-to-use-npm-behind-a-socks-proxy-c81d6f51dff8

@@ -56,19 +56,34 @@ https://reactnative.dev/docs/environment-setup
 https://medium.com/@pabasarajayawardhana/react-native-environment-set-up-on-mac-os-with-xcode-and-android-studio-324e64c8552e
 https://reactnativecode.com/install-react-native-on-mac/
 For MacOS
+Don't use gnu sed binaries. Only BSD binaries.
+https://stackoverflow.com/questions/43171648/sed-gives-sed-cant-read-no-such-file-or-directory
+	rbenv install 2.7.5
+	brew uninstall --force ruby
 	brew update
-	brew install node
+	brew uninstall --force node
+See ../nodejs/nvm.txt
+	nvm ls-remote
+	nvm install 19.1.0
+	nvm use 19.1.0
 	brew install watchman
-	brew install cocoapods
+	brew uninstall --force cocoapods
 https://stackoverflow.com/questions/64698820/ignoring-ffi-1-13-1-because-its-extensions-are-not-built-try-gem-pristine-ffi
 Ignoring ffi-1.15.0 because its extensions are not built. Try: gem pristine ffi --version 1.15.0
-1.10.1
+1.11.3
+https://libraries.io/rubygems/ffi
+	gem install ffi -v 1.15.5
+	gem pristine ffi --version 1.15.5
+	brew install cocoapods
 	brew link --overwrite cocoapods
+x	sudo gem install cocoapods
+pod sandbox-pod
 For new versions
 	brew upgrade node
 https://stackoverflow.com/questions/59410402/webpacker-error-while-creating-ruby-on-rails-app
 	gem uninstall yarn
 	brew install yarn
+	export LANG=en_US.UTF-8
 
 Install on Windows
 	npm install -g expo-cli
@@ -139,6 +154,7 @@ Run for iOS
 	react-native run-ios
 	react-native run-ios --simultator "iPhone X"
 	react-native run-ios --device "Kris101"
+	yarn run ios --simulator='iPhone 14 Pro'
 or	xed -b ios
 
 Erase cache

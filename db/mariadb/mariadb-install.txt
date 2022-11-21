@@ -15,9 +15,9 @@ Remove netbeans bad registry
 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\nbi-nb-all-15.0.0.220826.0
 Installed at
 C:\ProgramData\chocolatey\lib\mariadb
-C:\Program Files\MariaDB 10.10\
+C:\Program Files\MariaDB 10.11\
 Data dir at
-C:\Program Files\MariaDB 10.10\data
+C:\Program Files\MariaDB 10.11\data
 	winget install MariaDB.Server
 	scoop install mariadb
 Database has been initialized (username: root, password: <blank>)
@@ -52,7 +52,7 @@ Stop on system boot
 
 Configuration at
 https://mariadb.com/kb/en/configuring-mariadb-with-option-files/
-C:\Program Files\MariaDB 10.10\data\my.ini
+C:\Program Files\MariaDB 10.11\data\my.ini
 Client configuration at
 C:\my.ini
 /home/david/.my.cnf

@@ -1,0 +1,8 @@
+Universal UI kit and style system for React Native + Web - with an optimizing compiler 🚄
+https://tamagui.dev
+https://github.com/tamagui/tamagui
+	npm create tamagui-app@latest
+https://github.com/tamagui/tamagui/issues/329
+	npx create-tamagui-app@latest createtest
+Add to project
+	yarn add tamagui react-native-web

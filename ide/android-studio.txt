@@ -8,8 +8,7 @@ Install
 	tar xf android-studio-ide-191.6010548-linux.tar.gz -C /opt
 	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /opt/android-studio/bin/studio.sh'
 	touch ~/.android/analytics.settings
-
-For Windows
+Windows
 https://stackoverflow.com/questions/53076422/getting-android-sdkmanager-to-run-with-java-11
 https://developer.android.com/studio/#downloads
 	sha256sum sdk-tools-windows-4333796.zip
@@ -19,6 +18,17 @@ https://developer.android.com/studio/#downloads
 Locations
 %LOCALAPPDATA%\Android\Sdk
 %LOCALAPPDATA%\Android\Sdk\platform-tools
+
+Homebrew
+	brew install android-studio
+Installed at
+/Applications/Android Studio.app
+Java Home at
+/Applications/Android Studio.app/Contents/jre/Contents/Home
+SDK at
+/Users/david/Library/Android/sdk
+Platform-tools at
+/Users/david/Library/Android/sdk/platform-tools
 
 Clean previous settings
 	rm -r ~/.AndroidStudio

@@ -17,7 +17,7 @@ Windows
 Binary
 	wget https://github.com/ducaale/xh/releases/download/v0.17.0/xh-v0.17.0-x86_64-pc-windows-msvc.zip
 	unzip xh-v0.17.0-x86_64-pc-windows-msvc.zip
-MacOS
+Homebrew
 	brew install xh
 Uninstall previous project, if applicable
 	brew uninstall ht-rs

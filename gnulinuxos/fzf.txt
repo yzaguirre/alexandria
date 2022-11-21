@@ -5,10 +5,10 @@ https://www.youtube.com/watch?v=DBGvWyQNYY0
 https://news.ycombinator.com/item?id=30736518
 	apt install fzf
 Download binary
-	wget https://github.com/junegunn/fzf/releases/download/0.34.0/fzf-0.34.0-linux_amd64.tar.gz
-	wget https://github.com/junegunn/fzf/releases/download/0.34.0/fzf_0.34.0_checksums.txt
-	sha256sum -c --ignore-missing fzf_0.34.0_checksums.txt
-	tar xf fzf-0.34.0-linux_amd64.tar.gz -C /usr/local/bin
+	wget https://github.com/junegunn/fzf/releases/download/0.35.0/fzf-0.35.0-linux_amd64.tar.gz
+	wget https://github.com/junegunn/fzf/releases/download/0.35.0/fzf_0.35.0_checksums.txt
+	sha256sum -c --ignore-missing fzf_0.35.0_checksums.txt
+	tar xf fzf-0.35.0-linux_amd64.tar.gz -C /usr/local/bin
 Windows
 	choco install fzf
 Homebrew

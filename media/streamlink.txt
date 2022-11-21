@@ -1,18 +1,17 @@
+Streamlink is a CLI utility which pipes video streams from various services into a video player
 https://streamlink.github.io
 https://streamlink.github.io/install.html
+https://github.com/streamlink/streamlink
 	sudo -H pip install -U streamlink
 Windows
-	winget install Streamlink.Streamlink
 	choco install streamlink
+	winget install Streamlink.Streamlink
 Homebrew
 	brew install streamlink
 
 Configuration
-Linux
 ${XDG_CONFIG_HOME:-${HOME}/.config}/streamlink/config
-MacOS
 ${HOME}/Library/Application Support/streamlink/config
-Windows
 %APPDATA%\streamlink\config
 
 Example configuration file
