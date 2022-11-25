@@ -14,3 +14,17 @@ Will install node.js
 
 Yarn Package Manager Crash Course
 https://www.youtube.com/watch?v=g9_6KmiBISk
+
+Usage
+List local packages
+https://classic.yarnpkg.com/lang/en/docs/cli/list/
+	yarn list --depth=0
+	yarn list --depth=0 --pattern "react-native-camera-kit"
+	yarn list --depth=1 --pattern "gulp|grunt"
+Describe a package
+	yarn info react
+	yarn info react description
+	yarn info react versions
+	yarn info react readme
+To emit lines of valid JSON, use the standard --json flag:
+	yarn info react --json

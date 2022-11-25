@@ -16,6 +16,8 @@ Windows
 	wget https://github.com/ogham/dog/releases/download/v0.1.0/dog-v0.1.0-x86_64-pc-windows-msvc.zip.minisig
 	minisign -Vm dog-v0.1.0-x86_64-pc-windows-msvc.zip -P RWRe1ZqME1pmGXTRr9OJglWmrl5taVWP8Tbc6Do0Yb5fjF8zPQ8a9dRx
 	7z e -oC:\Users\dyzag\bin dog-v0.1.0-x86_64-pc-windows-msvc.zip bin/dog.exe
+Homebrew
+	brew install dog
 
 Usage
 	dog example.com A NS MX TXT

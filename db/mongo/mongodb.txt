@@ -1,12 +1,52 @@
+The MongoDB Database
+http://www.mongodb.org
+https://github.com/mongodb/mongo
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 	echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 	apt update
 	apt install mongodb-org
 If you installed via the package manager, the data directory /var/lib/mongodb and the log directory /var/log/mongodb are created during the installation.
+Windows
+	choco install mongodb
+	winget install MongoDB.Server
+	msiexec.exe /i .\mongodb-windows-x86_64-6.1.0-signed.msi ADDLOCAL="ServerService,Server,ProductFeature,Client,Router,MiscellaneousTools" /qn /norestart MONGO_DATA_PATH="C:\ProgramData\MongoDB\data\db" MONGO_LOG_PATH="C:\ProgramData\MongoDB\log"
+Installed at
+C:\Program Files\MongoDB\Server\6.1\bin
+Start/Stop service
+	Set-Service -name MongoDB -startuptype 'manual'
+	Get-Service MongoDB
+	net start MongoDB
+	net stop MongoDB
+Remove service
+	sc.exe delete MongoDB
+Mongosh
+	winget install MongoDB.Shell
+Homebrew
+	brew tap mongodb/brew
+	brew update
+	brew install mongodb-community@6.1
+The installation includes the following binaries:
+The mongod server
+The mongos sharded cluster query router
+The MongoDB Shell, mongosh
+Start/Stop service
+	brew services start mongodb-community@6.0
+	brew services stop mongodb-community@6.0
+	brew services list
+	ps aux | grep -v grep | grep mongod
 
+Mongo configuration
+/usr/local/etc/mongod.conf
+C:\Program Files\MongoDB\Server\6.0\bin\mongod.cfg
+Log directory
+/usr/local/var/log/mongodb
+Data directory
+/usr/local/var/mongodb
+Mongosh preferences and configuration options are stored in the directory
+%APPDATA%/mongodb/mongosh
 
-Mongo shell 
-https://docs.mongodb.org/manual/reference/mongo-shell/
+Mongosh
+	mongosh
 	show databases
 	use <db>
 	show collections

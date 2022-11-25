@@ -107,3 +107,12 @@ https://twitter.com/AshleeMBoyer/status/1402975801902047234
 QR code images in macOS are silently executed in the background hours/days later
 https://twitter.com/simonw/status/1577674380133269504
 https://news.ycombinator.com/item?id=33096540
+
+Preview a file
+	qlmanage -p file.png
+
+Disable gatekeeper
+	sudo spctl --master-disable
+
+50 Mac Terminal Commands you NEED to know (in 10 minutes)
+https://www.youtube.com/watch?v=qOrlYzqXPa8

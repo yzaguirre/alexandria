@@ -99,3 +99,7 @@ GEOJSON library for maps
 https://github.com/frankrowe/react-native-geojson
 
 See spacialite.txt
+
+Accuracy
+https://univercity.ai/how-precisely-do-you-understand-geolocation-accuracy/
+https://w3c.github.io/geolocation-api/#getcurrentposition-method

@@ -12,4 +12,6 @@ Add /opt/idea-IC-183.4284.148/bin to PATH
 export PATH=$PATH:/opt/idea-IC-183.4284.148/bin
 Look for previous and current config files
 	ls ~/.Idea*
-The firt launch wizards also creates a 'idea' launch script.
+The first launch wizards also creates a 'idea' launch script.
+Windows
+	winget install JetBrains.IntelliJIDEA.Community

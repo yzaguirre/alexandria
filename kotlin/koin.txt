@@ -1,0 +1,5 @@
+Koin - a pragmatic lightweight dependency injection framework for Kotlin
+https://insert-koin.io
+https://github.com/InsertKoinIO/koin
+https://blog.kotzilla.io/koin-android-stronger-viewmodel-api/
+https://mvnrepository.com/artifact/io.insert-koin/koin-core-jvm

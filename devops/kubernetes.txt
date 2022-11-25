@@ -1,6 +1,7 @@
 https://kubernetes.io
 https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 https://github.com/kubernetes/kubernetes
+See ../redes/kubeshark.txt
 Windows
 https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 	curl -LO "https://dl.k8s.io/release/v1.23.1/bin/windows/amd64/kubectl.exe"
@@ -87,4 +88,3 @@ https://www.youtube.com/watch?v=cNlxPKy_NPA
 Delete a pod
 	kubectl delete pod weather-api-deployment-hash
 	kubectl get pods
-

@@ -1,0 +1,12 @@
+Retrieve app metada in ease.
+https://github.com/ridvanaltun/react-native-metadata
+	yarn add react-native-metadata
+Install pods for ios
+	npx pod-install ios
+
+Get media file metadata in your React Native app
+https://github.com/mybigday/react-native-media-meta
+A fork
+https://github.com/BaiXiaoYan/react-native-media-meta
+Location is missing
+https://github.com/mybigday/react-native-media-meta/issues/44

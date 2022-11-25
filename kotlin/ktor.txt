@@ -1,2 +1,9 @@
-https://ktor.io/
+https://ktor.io
+https://start.ktor.io
 Ktor is an asynchronous framework for creating microservices, web applications, and more. It's fun, free, and open source.
+Android Chat App With Ktor
+https://www.youtube.com/playlist?list=PLQkwcJG4YTCSHLKOwFeFvA7XlAGXYa_y0
+See koin.txt
+kmongo.txt
+Test websocket
+https://www.piesocket.com/websocket-tester

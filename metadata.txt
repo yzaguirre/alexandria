@@ -1,10 +1,22 @@
 https://mat.boum.org
-	$ mat -d filename.ext
-That command will return (to the display) the metadata stored in a
-file. 
-To clean a file and save a backup copy (the default behavior for
-the GUI application), you would enter the command like this:
-	$ mat -b filename.ext
+https://0xacab.org/jvoisin/mat2
+	apt install pycairo
+	sudo -H pip install -U mat2
+Windows
+https://discourse.gnome.org/t/i-tried-to-install-pygobject-but-got-cannot-open-include-file-msvc-recommended-pragmas-h-error/5435/1
+	C:\Python310\python.exe -m pip install -U mat2
+Homebrew
+	brew install exiftool cairo pygobject3 poppler gdk-pixbuf librsvg ffmpeg
+	pip install -U mat2
+Usage
+Show metadata without removing them
+	mat2 -s filename.ext
+Remove metadata with backup
+	mat2 filename.ext
+Remove some metadata
+	mat2 -L filename.ext
+Remove without backup
+	mat2 --inplace filename.ext
 
 Extraer, crear, borrar y modificar metadatos con Exiftool. 
 https://exiftool.org

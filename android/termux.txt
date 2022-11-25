@@ -53,6 +53,10 @@ Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
 	sshd
 	ssh -p 8022 user@address
 
+Termux on Android 5 or 6
+https://github.com/termux/termux-app/wiki/Termux-on-android-5-or-6
+https://news.ycombinator.com/item?id=33691293
+
 Repositories
 https://packages-cf.termux.org
 https://wiki.termux.com/wiki/FAQ#Repositories_are_down_and_return_403_404_errors

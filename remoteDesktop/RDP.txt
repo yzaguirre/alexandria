@@ -82,6 +82,7 @@ Este cilente está optimizado para conexiones bajas de banda ancha
 	apt install xtightvncviewer
 
 tightvnc.com
+	choco install tightvnc
 
 Servidor VNC para GNU/Linux
 es vino, el servidor VNC para Gnome
@@ -104,3 +105,12 @@ Viewer VNC para Android
 rdesktop
 	rdesktop -u root p password -n hostname -f
 -f for full screen. Ctrl-Alt-Enter
+
+https://uvnc.com
+https://github.com/ultravnc/UltraVNC
+	choco install ultravnc
+
+FreeRDP is a free remote desktop protocol library and clients
+https://www.freerdp.com
+https://github.com/FreeRDP/FreeRDP
+	brew install freerdp

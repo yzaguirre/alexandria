@@ -2,21 +2,21 @@ https://dbeaver.io
 https://github.com/dbeaver/dbeaver
 https://github.com/dbeaver/dbeaver/wiki
 https://news.ycombinator.com/item?id=18935138
-	wget https://github.com/dbeaver/dbeaver/releases/download/22.2.4/dbeaver-ce_22.2.4_amd64.deb
-	wget https://dbeaver.io/files/22.2.4/dbeaver-ce_22.2.4_amd64.deb
+	wget https://github.com/dbeaver/dbeaver/releases/download/22.2.5/dbeaver-ce_22.2.5_amd64.deb
+	wget https://dbeaver.io/files/22.2.5/dbeaver-ce_22.2.5_amd64.deb
 or	wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-or	wget https://github.com/dbeaver/dbeaver/releases/download/22.2.4/dbeaver-ce_22.2.4_amd64.deb
-	wget https://dbeaver.io/files/22.2.4/checksum/dbeaver-ce_22.2.4_amd64.deb.sha256
-	wget https://dbeaver.io/files/22.2.4/checksum/dbeaver-ce_22.2.4_amd64.deb.sha1
-	wget https://dbeaver.io/files/22.2.4/checksum/dbeaver-ce_22.2.4_amd64.deb.md5
+or	wget https://github.com/dbeaver/dbeaver/releases/download/22.2.5/dbeaver-ce_22.2.5_amd64.deb
+	wget https://dbeaver.io/files/22.2.5/checksum/dbeaver-ce_22.2.5_amd64.deb.sha256
+	wget https://dbeaver.io/files/22.2.5/checksum/dbeaver-ce_22.2.5_amd64.deb.sha1
+	wget https://dbeaver.io/files/22.2.5/checksum/dbeaver-ce_22.2.5_amd64.deb.md5
 	
-	sha256sum dbeaver-ce_22.2.4_amd64.deb
-	cat dbeaver-ce_22.2.4_amd64.deb.sha256
-	sha1sum dbeaver-ce_22.2.4_amd64.deb
-	cat dbeaver-ce_22.2.4_amd64.deb.sha1
-	md5sum dbeaver-ce_22.2.4_amd64.deb
-	cat dbeaver-ce_22.2.4_amd64.deb.md5
-	dpkg -i dbeaver-ce_22.2.4_amd64.deb
+	sha256sum dbeaver-ce_22.2.5_amd64.deb
+	cat dbeaver-ce_22.2.5_amd64.deb.sha256
+	sha1sum dbeaver-ce_22.2.5_amd64.deb
+	cat dbeaver-ce_22.2.5_amd64.deb.sha1
+	md5sum dbeaver-ce_22.2.5_amd64.deb
+	cat dbeaver-ce_22.2.5_amd64.deb.md5
+	dpkg -i dbeaver-ce_22.2.5_amd64.deb
 Windows
 	choco install dbeaver
 Installed at C:\Program Files\DBeaver

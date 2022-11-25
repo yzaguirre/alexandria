@@ -55,6 +55,8 @@ http://community.wd.com/t5/My-Passport-Wireless/Cross-compiling-ncat-onto-the-My
 Homebrew
 	brew install nmap
 
+https://twitter.com/SecurityGuill/status/1595454628690133005
+
 Scan a trace for open ports
 	nmap -A localhost
 Use tcp syn scan, prevents the tcp 3 way handshake

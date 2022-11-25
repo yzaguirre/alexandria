@@ -45,3 +45,9 @@ https://github.com/PaddlePaddle/PaddleOCR
 https://pypi.org/project/paddleocr/
 https://huggingface.co/spaces/akhaliq/PaddleOCR
 https://news.ycombinator.com/item?id=28473496
+
+Frog: OCR Tool for Linux
+Extract text from any image, video, QR Code and etc.
+https://tenderowl.com/work/frog/
+https://github.com/TenderOwl/Frog
+https://news.ycombinator.com/item?id=33704483

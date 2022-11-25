@@ -3,8 +3,8 @@ https://github.com/certbot/certbot
 See letsencrypt.txt
 	winget install EFF.Certbot
 Binaries
-https://github.com/certbot/certbot/releases/download/v1.31.0/certbot-beta-installer-win_amd64_signed.exe
-	Invoke-WebRequest -OutFile certbot-beta-installer-win_amd64_signed.exe -URI https://github.com/certbot/certbot/releases/download/v1.31.0/certbot-beta-installer-win_amd64_signed.exe
+https://github.com/certbot/certbot/releases/download/v2.0.0/certbot-beta-installer-win_amd64_signed.exe
+	Invoke-WebRequest -OutFile certbot-beta-installer-win_amd64_signed.exe -URI https://github.com/certbot/certbot/releases/download/v2.0.0/certbot-beta-installer-win_amd64_signed.exe
 	start certbot-beta-installer-win_amd64_signed.exe
 
 Usage

@@ -1,4 +1,4 @@
-See ~/react-native/linking.txt
+See ../react-native/linking.txt
 https://medium.com/rakutenready/requesting-location-permissions-in-ios-9e5a3b814a8b
 https://stackoverflow.com/questions/8246070/ios-launching-settings-restrictions-url-scheme
 https://stackoverflow.com/questions/5655674/opening-the-settings-app-from-another-app

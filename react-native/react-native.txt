@@ -524,3 +524,7 @@ https://stackoverflow.com/questions/66213401/execution-failed-for-task-react-nat
 Task ::androidJavadoc FAILED
 	vim +26 android/build.gradle
 tasks.withType(Javadoc).all { enabled = false }
+
+Compile main.jsbundle
+https://stackoverflow.com/questions/69141867/react-native-ios-release
+	react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios/assets

@@ -48,11 +48,13 @@ https://binary-factory.kde.org/view/MacOS/job/kdeconnect-kde_Nightly_macos/
 	bat kdeconnect-kde-master-1699-macos-64-clang.dmg.sha256
 	open kdeconnect-kde-master-1699-macos-64-clang.dmg
 https://kde.inoki.cc/2019/07/24/DBus/
+https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard/issues/73
 	brew install dbus
 	launchctl getenv DBUS_LAUNCHD_SESSION_BUS_SOCKET
 	fd unix /private/tmp
 	launchctl setenv DBUS_LAUNCHD_SESSION_BUS_SOCKET /private/tmp/com.apple.launchd.NM2TskHrjy/unix_domain_listener
 https://www.mail-archive.com/kde-bugs-dist@kde.org/msg741208.html
+https://stackoverflow.com/questions/23023899/registerservice-with-system-dbus-fails-but-works-with-session-dbus
 error activating kdeconnectd: QDBusError("org.freedesktop.DBus.Error.ServiceUnknown", "The name org.kde.kdeconnect was not provided by any .service files")
 
 Share clipboard

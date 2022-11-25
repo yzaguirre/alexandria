@@ -1,6 +1,6 @@
 Blazing 💥 fast terminal-ui for git written in rust 🦀
 https://github.com/extrawurst/gitui
-	wget https://github.com/extrawurst/gitui/releases/download/v0.21.0/gitui-linux-musl.tar.gz
+	wget https://github.com/extrawurst/gitui/releases/download/v0.22.1/gitui-linux-musl.tar.gz
 	tar xf gitui-linux-musl.tar.gz -C /usr/local/bin
 Termux
 	pkg install gitui

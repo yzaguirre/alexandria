@@ -1,4 +1,5 @@
-https://ish.app/
+The Linux shell for iOS.
+https://ish.app
 https://github.com/ish-app/ish
 https://news.ycombinator.com/item?id=18421016
 About iSH's pending removal from the App Store

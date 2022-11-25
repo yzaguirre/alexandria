@@ -26,6 +26,7 @@ Devices
 See ../ios/destinations.txt
 	instruments -s devices
 List schemes
+https://riptutorial.com/xcode/example/14833/list-available-targets--schemes-and-build-configurations
 	xcodebuild -workspace app.xcworkspace -list
 
 https://developer.apple.com/library/archive/technotes/tn2339/_index.html

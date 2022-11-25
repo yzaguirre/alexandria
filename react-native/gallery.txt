@@ -5,3 +5,6 @@ https://www.reddit.com/r/reactnative/comments/n74n69/need_help_in_finding_a_pack
 https://amanhimself.dev/blog/custom-preview-image-gallery-in-react-native/
 
 https://www.instamobile.io/react-native-tutorials/instagram-photo-filters-react-native/
+
+https://github.com/idrisssakhi/photoGallery
+	yarn add react-native-photo-gallery-api

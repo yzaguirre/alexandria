@@ -1,0 +1,257 @@
+https://blog.whatsapp.com/10000633/Building-for-People-and-Now-Businesses
+https://faq.whatsapp.com/en/general/26000067
+https://www.surveymonkey.com/r/WhatsAppBusiness
+
+https://faq.whatsapp.com/545917406122452/?cms_platform=iphone
+If you choose to send an existing video, it is limited to 16 Megabytes.
+On most phones, this will equal about 90 seconds to three minutes of video.
+If you choose an existing video that is larger than 16 MB,
+then you will have the option to trim the length of the video before sending it.
+If you are trying to send a video that you have previously received,
+please use the Forward button to forward the video via WhatsApp. To forward a video:
+https://www.tenorshare.com/whatsapp-tips/whatsapp-video-limit-2017-how-to-increase-whatsapp-plus-file-size-limits.html
+Photos, videos or voice messages: the maximum file size is 16MB.
+Documents: the maximum file size allowed is 100 MB.
+
+Backup
+https://www.whatsapp.com/faq/en/android/20902622
+
+https://github.com/davidgfnet/whatsapp-purple
+	# mv last-whatsapp.so /usr/lib64/pidgin
+https://maikel.pro/blog/en-whatsapp-privacy-options-are-illusions/
+https://maikel.pro/blog/en-whatsapp-privacy-problem-explained-in-detail/
+https://gitlab.maikel.pro/maikeldus/WhatsSpy-Public/wikis/home
+https://gitlab.maikel.pro/maikeldus/WhatsSpy-Public/wikis/getting-started
+	cd /var/www/html/whatsspy
+	psql -U whatsspy -d whatsspy -f whatsspy-db.sql -h 127.0.0.1 -W
+	cd api/
+	mv config.example.php config.php
+	chown www-data:www-data -R /var/www/html/whatsspy
+Dependencies
+	apt-get install postgresql apache2 php5 php5-cli php5-curl php5-fpm php5-pgsql git-core screen libapache2-mod-php5
+	vim /var/www/html/phpinfo.php
+<?php
+  phpinfo();
+?>
+checkout http://localhost/phpinfo.php
+Allow local connections for the user postgres in PostgreSQL
+	vim /etc/postgresql/9.4/main/pg_hba.conf
+local  all      all          md5
+
+	service postgresql restart
+	mkdir /var/www/html/whatsspy/
+	cd /var/www/html/whatsspy/
+	git init
+	git remote add origin https://gitlab.maikel.pro/maikeldus/WhatsSpy-Public.git
+	git pull origin master
+	psql -U postgres
+-- Execute command by command!
+-- cmd 1 (choose a password)
+CREATE ROLE whatsspy LOGIN
+PASSWORD 'f00.bar'
+NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
+-- cmd 2
+CREATE DATABASE whatsspy
+WITH OWNER = whatsspy
+ENCODING = 'UTF8'
+TABLESPACE = pg_default
+CONNECTION LIMIT = -1;
+-- cmd 3
+\connect whatsspy
+GRANT ALL ON DATABASE whatsspy TO whatsspy;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO whatsspy;
+\q
+
+	cd /var/www/html/whatsspy/api/
+	psql -U postgres -d whatsspy -f whatsspy-db.sql
+	mv config.example.php config.php
+Retrieve the secret
+	php /var/www/whatsspy/api/whatsapp/registerTool.php
+Enter your phonenumber that you want to use for the WhatsSpy Public tracker
+Request activation via SMS and wait for a SMS to arrive at the phone (try voice if you did not get the SMS).
+Enter the retrieved code in the script without any dashes (only the digits!).
+Write down the secret (it's the one-line of strange characters ending with an =).
+
+Activate apache user
+	sudo usermod www-data -s /bin/sh
+Deactivate apache user
+https://askubuntu.com/questions/486346/this-account-is-currently-not-available-error-when-trying-to-ssh
+	usermod www-data -s /bin/nologin
+Start the tracker
+	tmux
+	sudo su www-data
+	cd /var/www/whatsspy/
+	php api/tracker.php
+
+https://github.com/venomous0x/WhatsAPI/issues/983
+	wget https://mgp25.com/wa/wapw2.apk
+	sha1sum wapw2.apk
+	md5sum wapw2.apk
+SHA1: CA465128E4C4B4A4F70B37E968F62C302AA8A3E1
+MD5: DB753933E47926DD131B097E069DB1D4
+	adb push wapw2.apk /sdcard/Download
+
+https://blog.whatsapp.com/10000633/Building-for-People-and-Now-Businesses
+https://github.com/tgalal/yowsup
+	sudo -H pip3 install yowsup2
+	python setup.py install
+
+Replace CC with your country code
+http://www.ipipi.com/help/telephone-country-codes.htm
+https://en.wikipedia.org/wiki/Mobile_country_code
+	cat CONFIG
+############# Yowsup Configuration Sample ###########
+#
+# ====================
+# The file contains info about your WhatsApp account. This is used during registration and login.
+# You can define or override all fields in the command line args as well.
+#
+# Country code. See http://www.ipipi.com/help/telephone-country-codes.htm. This is now required.
+cc=502
+mcc=704
+mnc=003
+#
+# Your full phone number including the country code you defined in 'cc', without preceding '+' or '00'
+phone=50235249564
+#
+# You obtain this password when you register using Yowsup.
+# password=NDkxNTIyNTI1NjAyMkBzLndoYXRzYXBwLm5ldA==
+password=zQr4PlyKTTeR6jnjUv2yFwSimDk=
+#######################################################
+
+	yowsup-cli registration -r sms -c CONFIG
+
+After getting the sms code (in this example: 602738)
+	yowsup-cli registration -R 602738 sms -c CONFIG
+status: ok
+kind: free
+pw: zQr4PlyKTTeR6jnjUv2yFwSimDk=
+price: $0.99
+price_expiration: 1516386958
+currency: USD
+cost: 0.99
+expiration: 4444444444.0
+login: 50235249564
+type: existing
+
+	yowsup-cli demos -c CONFIG -s 5025454 'Hola.'
+	yowsup-cli demos -c CONFIG -s 5025456 'Hola.'
+	yowsup-cli demos -c CONFIG -s 5024965 'Hello.'
+
+Hay que tener cuidado con simbolos como !
+Concatener el codigo de pais y el numero de watsapp
+El resultado es una cadena de digitos
+
+Interactive client
+https://github.com/tgalal/yowsup/wiki/Command-line-client
+	yowsup-cli demos --yowsup -c CONFIG
+/L
+/contacts      sync           50244,50250,50248
+/groups        create         Dispute Motherboard
+/groups        list
+/message       broadcast      50244,50250,5028 'Ola ke ac'
+/message       send           5024 'Hola mundo'
+/message       send           50258 'ddfdfadffd ffadfd?'
+
+/contactssync<contacts>Synccontacts,contactsshouldbecommaseparatedphonenumbers,withnospaces
+/keys          get            <jids>                        Get shared keys
+/image         send           <number> <path> [caption]     Send an image with optional caption
+/presence      available                                    Set presence as available
+/presence      subscribe      <contact>                     Subscribe to contact's presence updates
+/presence      unsubscribe    <contact>                     Unsubscribe from contact's presence updates
+/presence      name           <name>                        Set presence name
+/presence      unavailable                                  Set presence as unavailable
+/ping                                                       Ping server
+/L                                                          Quick login
+/state         paused         <jid>                         Send paused state
+/state         typing         <jid>                         Send typing state
+/contact       picture        <jid>                         Get profile picture for contact
+/contact       picturePreview <jid>                         Get profile picture preview for contact
+/contact       lastseen       <jid>                         Get lastseen for contact
+/video         send           <number> <path> [caption]     Send a video with optional caption
+/groups        create         <subject> [jids]              Create a new group with the specified subject and participants. Jids are a comma separated list but optional.
+/groups        list                                         List all groups you belong to
+/group         info           <group_jid>                   Get group info
+/group         picture        <group_jid> <path>            Set group picture
+/group         invite         <group_jid> <jids>            Invite to group. Jids are a comma separated list
+/group         leave          <group_jid>                   Leave a group you belong to
+/group         setSubject     <group_jid> <subject>         Change group subject
+/group         demote         <group_jid> <jids>            Remove admin of a group. Jids are a comma separated list
+/group         promote        <group_jid> <jids>            Promote admin of a group. Jids are a comma separated list
+/group         kick           <group_jid> <jids>            Kick from group. Jids are a comma separated list
+/login                        <username> <b64password>      Login to WhatsApp
+/audio         send           <number> <path>               Send audio file
+/message       broadcast      <numbers> <content>           Broadcast message. numbers should comma separated phone numbers
+/message       send           <number> <content>            Send message to a friend
+/statuses      get            <contacts>                    Request contacts statuses
+
+https://github.com/EliasKotlyar/yowsup-microservice
+	sudo apt install python3-pip python3-dev
+	sudo -H pip3 install nameko
+	sudo -H pip3 install flask
+	sudo -H pip3 install flasgger
+	sudo -H pip3 install pexpect
+# git+https://github.com/tgalal/yowsup@master works fine
+	pip3 install git+https://github.com/tgalal/yowsup@master
+
+# Install RabbitMQ
+	apt install rabbitmq-server
+# RabbitMQ
+https://www.digitalocean.com/community/tutorials/how-to-configure-sensu-monitoring-rabbitmq-and-redis-on-ubuntu-14-04
+Stop rabbit mq
+	systemctl stop epmd
+	sudo -u rabbitmq rabbitmqctl stop
+	sudo -u rabbitmq rabbitmqctl start_app
+	vim /etc/rabbitmq/rabbitmq.config
+[
+    {rabbit, [
+    {ssl_listeners, [5671]},
+    {ssl_options, [{cacertfile,"/etc/rabbitmq/ssl/cacert.pem"},
+                   {certfile,"/etc/rabbitmq/ssl/cert.pem"},
+                   {keyfile,"/etc/rabbitmq/ssl/key.pem"},
+                   {verify,verify_peer},
+                   {fail_if_no_peer_cert,true}]}
+  ]}
+].
+	systemctl start rabbitmq-server
+
+	git clone https://github.com/EliasKotlyar/yowsup-microservice.git
+	cd yowsup-microservice
+Copy user & password to serviceconfig.yml file.
+	cat serviceconfig.yml
+AMQP_URI: 'pyamqp://guest:guest@localhost'
+WEB_SERVER_ADDRESS: '0.0.0.0:8000'
+YOWSUP_USERNAME: '50235249564'
+YOWSUP_PASSWORD: 'zQr4PlyKTTeR6jnjUv2yFwSimDk='
+TOKEN_RESEND_MESSAGES: 'Ask Not What Your Country Can Do For You'
+ENDPOINT_RESEND_MESSAGES: 'http://localhost/loquesea'
+rpc_exchange: 'nameko-rpc'
+max_workers: 1
+parent_calls_tracked: 10
+
+	./startservice.sh
+	./startapi.sh
+Go to http://127.0.0.1/apidocs/#!/default/post_send
+
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
+   "address": "50250175810", \ 
+   "body": "Desde ", \ 
+   "type": "simple" \ 
+ }' 'https://chucho.cool/send'
+ 
+ # Resumen
+	systemctl start apache2
+	systemctl start rabbitmq-server
+
+	cd whatsapp/yowsup-microservice
+	./startservice.sh
+	./startapi.sh
+
+
+https://stackoverflow.com/questions/12792856/what-ports-does-rabbitmq-use#12811593
+https://www.rabbitmq.com/install-windows-manual.html
+https://www.rabbitmq.com/networking.html
+
+EPMD
+ERL_EPMD_ADDRESS='127.0.0.1'
+https://www.rabbitmq.com/configure.html#customise-environment

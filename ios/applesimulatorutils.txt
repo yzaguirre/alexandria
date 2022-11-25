@@ -4,3 +4,5 @@ https://github.com/wix/AppleSimulatorUtils
 	brew install applesimutils
 Display available simulators
 	applesimutils --list | less -S
+By name
+	applesimutils -l --byName "iPhone 14"

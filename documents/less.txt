@@ -12,8 +12,12 @@ Compile
 	./configure2
 	make -j12
 	make install
+Homebrew
+	brew install less
 
 https://superuser.com/questions/272818/how-to-turn-off-word-wrap-in-less#272826
 	less -S
 Git setup
 	git config --global core.pager 'less -RS'
+Line number
+	less -N

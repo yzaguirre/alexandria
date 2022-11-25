@@ -12,9 +12,11 @@ CLI
 Capture with cursor, 5 second timer and save it in ~/Desktop
 	screencapture -C -T 5 ~/Desktop/ss.png
 Change default settings
+	defaults write com.apple.screencapture name "yessss"
 	defaults write com.apple.screencapture type jpg
 	defaults write com.apple.screencapture type png
 	defaults write com.apple.screencapture location ~/Desktop/Screenshots/
+	defaults write com.apple.screencapture location ~/images/screenshots/
 Restart the system UI server in order for changes to take place
 	killall SystemUIServer
 
@@ -30,3 +32,8 @@ https://github.com/wulkano/kap
 https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38
 Homebrew
 	brew install --cask kap
+
+Download history
+	sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 'select LSQuarantineDataURLString from LSQuarantineEvent'
+Clean download history
+	sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 'delete from LSQuarantineEvent'

@@ -3,6 +3,10 @@ https://ergo.chat
 https://github.com/ergochat/ergo
 https://news.ycombinator.com/item?id=31832115
 
+IRCv3 2022 Spec round-up
+https://ircv3.net/2022/11/20/spec-round-up
+https://news.ycombinator.com/item?id=33682835
+
 Goodbye Freenode
 https://nedbatchelder.com/blog/202106/goodbye_freenode.html
 https://news.ycombinator.com/item?id=27491967

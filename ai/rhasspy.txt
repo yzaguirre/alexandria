@@ -1,0 +1,3 @@
+Rhasspy - Offline private voice assistant for many human languages
+https://github.com/rhasspy/rhasspy
+https://news.ycombinator.com/item?id=33705938

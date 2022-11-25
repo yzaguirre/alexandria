@@ -19,7 +19,9 @@ When your last name is "True" and that broke Apple's iCloud service.
 The wonders of programming ;)
 https://twitter.com/nixcraft/status/1368169769459998723
 
-see ../ide/xcode.txt ../devops/bitrise.txt ../ios/destinations.txt
+see ../ide/xcode.txt
+../devops/bitrise.txt
+../ios/destinations.txt
 
 https://suelan.github.io/2020/02/05/iOS-Simulator-from-the-Command-Line/
 List devices

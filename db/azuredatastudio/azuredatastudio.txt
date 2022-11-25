@@ -16,3 +16,6 @@ https://youtu.be/MBlbLQKiD6g
 
 Build SQL Database Projects Easily in Azure Data Studio | Data Exposed
 https://www.youtube.com/watch?v=I6T9OA9YBGg
+
+Connect with Azure Data Studio
+https://learn.microsoft.com/en-us/sql/azure-data-studio/connect?view=sql-server-ver16

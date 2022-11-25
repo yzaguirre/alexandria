@@ -14,6 +14,21 @@ Winget temp file
 https://superuser.com/questions/1686873/where-is-the-winget-downloaded-exe-go
 %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\TempState\WinGet
 
+Error al intentar actualizar el origen: winget
+Failed in attempting to update the source: winget
+	winget --info
+	winget source update --verbose-logs
+	winget settings
+https://github.com/microsoft/winget-cli/issues/1878
+	ping cdn.winget.microsoft.com
+152.199.21.175
+https://github.com/microsoft/winget-cli/issues/2696
+https://github.com/microsoft/winget-cli/issues/1826
+https://github.com/microsoft/winget-cli/issues/2114
+https://techcommunity.microsoft.com/t5/windows-insider-program/winget-sql-error/m-p/3066428
+Remove file
+%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\StoreEdgeFD
+
 Disable these 8 Services to make Windows 11 Faster
 https://www.youtube.com/watch?v=Pk9uh5Zz6yU
 How to Clear All Types Cache in Windows 11?

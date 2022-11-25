@@ -1,0 +1,4 @@
+KMongo - a Kotlin toolkit for Mongo
+https://litote.org/kmongo/
+https://github.com/Litote/kmongo
+https://mvnrepository.com/artifact/org.litote.kmongo/kmongo
