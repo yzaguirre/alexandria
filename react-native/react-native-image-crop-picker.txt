@@ -57,4 +57,4 @@ https://www.youtube.com/watch?v=J0emr9pI9V4
 React Native image crop picker , Full Example
 https://www.youtube.com/watch?v=wzNcB5iCXE4
 
-Ver ~/react-native/react-native-camera.txt
+Ver react-native-camera.txt

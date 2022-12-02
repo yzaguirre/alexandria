@@ -1,1 +1,4 @@
 https://developer.apple.com/xcode/swiftui/
+SwiftUI Is Convenient, but Slow
+https://notes.alinpanaitiu.com/SwiftUI%20is%20convenient,%20but%20slow
+https://news.ycombinator.com/item?id=33772876

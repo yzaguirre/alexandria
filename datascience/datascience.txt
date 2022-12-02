@@ -1,3 +1,7 @@
+Goodbye, Data Science
+https://ryxcommar.com/2022/11/27/goodbye-data-science/
+https://news.ycombinator.com/item?id=33787270
+
 http://joaomdmoura.com/articles/unboxing-data-science-chapter-i
 https://news.ycombinator.com/item?id=16848506
 
@@ -13,3 +17,4 @@ https://stackoverflow.com/questions/1904752/install-libxml2-and-associated-pytho
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
 	wget https://download.lfd.uci.edu/pythonlibs/archived/lxml-4.9.0-cp311-cp311-win_amd64.whl
 	pip install lxml-4.9.0-cp311-cp311-win_amd64.whl
+	C:\Python310\python.exe -m pip install lxml-4.9.0-cp311-cp311-win_amd64.whl

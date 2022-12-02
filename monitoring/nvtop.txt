@@ -1,0 +1,9 @@
+GPUs process monitoring for AMD, Intel and NVIDIA
+https://github.com/Syllo/nvtop
+	apt install nvtop
+
+An interactive NVIDIA-GPU process viewer, the one-stop solution for GPU process management.
+https://github.com/XuehaiPan/nvitop
+	sudo -H pip install --upgrade nvitop
+Windows
+	C:\Python310\python.exe -m pip install -U nvitop

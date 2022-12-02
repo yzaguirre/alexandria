@@ -1,0 +1,9 @@
+Menus for React (Native) done right.
+https://zeego.dev
+https://github.com/nandorojo/zeego
+https://zeego-docs.vercel.app
+	yarn add zeego
+	npx pod-install ios
+
+Fernando Rojo: Is React Native + Next.js production-ready?
+https://www.youtube.com/watch?v=CicON9v6LGE

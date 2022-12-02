@@ -1,0 +1,12 @@
+A curated directory of 700 Mac menu bar apps
+https://macmenubar.com
+https://news.ycombinator.com/item?id=33774920
+
+Put the output from any script or program
+into your macOS Menu Bar (the BitBar reboot)
+https://xbarapp.com
+https://github.com/matryer/xbar
+	wget https://github.com/matryer/xbar/releases/download/v2.1.7-beta/xbar.v2.1.7-beta.dmg
+	open xbar.v2.1.7-beta.dmg
+The plugin directory is folder on your Mac where the plugins live, located at
+~/Library/Application Support/xbar/plugins

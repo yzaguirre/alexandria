@@ -1,0 +1,12 @@
+https://github.com/warmuuh/milkman
+	wget https://github.com/warmuuh/milkman/releases/download/5.5.0/milkman-dist-linux64-bin.tgz
+	tar xf milkman-dist-linux64-bin.tgz
+Windows
+	choco install milkman milkman-plugins
+Installed at
+C:\tools\milkman
+Homebrew
+All plugins are included.
+	brew install --cask milkman
+To update, run
+	brew upgrade --cask

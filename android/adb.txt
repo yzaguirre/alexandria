@@ -84,6 +84,10 @@ Remove app keep cache
 Clear data cache
 https://stackoverflow.com/questions/10934304/clear-android-application-user-data#26400275
 	adb shell pm clear com.2020App
+To clear the cache for all installed apps:
+https://stackoverflow.com/questions/10934304/clear-android-application-user-data
+	adb shell
+	cmd package list packages|cut -d":" -f2|while read package ;do pm clear $package;done
 
 Install apk
 https://www.smartphones.how/internet/install-an-apk-file-from-computer-using-adb-command

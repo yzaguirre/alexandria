@@ -19,6 +19,10 @@ Optional libraries
 	sudo -H pip install -U tensorflow pandas scipy
 Git plugin
 	sudo -H pip install -U jupyterlab-git
+Jupyter lite
+Wasm powered Jupyter running in the browser 💡
+https://github.com/jupyterlite/jupyterlite
+https://news.ycombinator.com/item?id=33782010
 Check version
 	jupyter notebook --version
 https://jupyter-notebook.readthedocs.io/en/stable/config.html
@@ -35,6 +39,11 @@ you can also use JupyterLab by starting the classic Jupyter Noteboook
 and visiting the /lab URL (usually http://localhost:8888/lab) rather than the default /tree URL.
 Conversely, to go to the classic Notebook from JupyterLab, you can change the URL from /lab to /tree
 
+Theme
+https://github.com/AllanChain/jupyterlab-theme-solarized-dark
+	pip install -U jupyterlab_theme_solarized_dark
+	C:\Python310\python.exe -m pip install -U jupyterlab_theme_solarized_dark
+	jupyter labextension install jupyterlab-theme-solarized-dark
 TLS
 Edit
 ~/.jupyter/jupyter_notebook_config.py

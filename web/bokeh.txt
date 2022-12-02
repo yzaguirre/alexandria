@@ -1,0 +1,7 @@
+Interactive Data Visualization in the browser, from Python
+https://bokeh.org
+https://github.com/bokeh/bokeh
+	sudo -H pip install -U bokeh
+
+Interactive Web Visualizations with Bokeh in Python
+https://www.youtube.com/watch?v=HDvxYoRadcA

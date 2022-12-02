@@ -1,0 +1,9 @@
+The modern video player for macOS.
+https://iina.io
+https://github.com/iina/iina
+	brew install iina
+Binary
+	wget https://github.com/iina/iina/releases/download/v1.3.1/IINA.v1.3.1.dmg
+	shasum -a 256 IINA.v1.3.1.dmg
+c646642a2884cb0516922170e0f6d4990b12b41d6244b08d53f318dbb9518c2f
+	open IINA.v1.3.1.dmg

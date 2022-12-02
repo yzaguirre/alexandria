@@ -8,3 +8,5 @@ https://www.instamobile.io/react-native-tutorials/instagram-photo-filters-react-
 
 https://github.com/idrisssakhi/photoGallery
 	yarn add react-native-photo-gallery-api
+Permission to read GPS exif
+ACCESS_MEDIA_LOCATION

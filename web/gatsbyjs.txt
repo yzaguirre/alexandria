@@ -1,1 +1,1 @@
-https://www.gatsbyjs.org/
+https://www.gatsbyjs.org

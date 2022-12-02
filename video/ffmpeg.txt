@@ -15,6 +15,9 @@ libpostproc is a library containing video postprocessing routines.
 libswscale is a library containing video image scaling and colorspace/pixelformat conversion routines.
 libavfilter is the substitute for vhook which allows the video/audio to be modified or examined between the decoder and the encoder.
 
+https://img.ly/blog/ultimate-guide-to-ffmpeg/
+https://news.ycombinator.com/item?id=33771445
+
 How to use FFMPEG
 https://www.youtube.com/watch?v=MPV7JXTWPWI
 

@@ -73,11 +73,11 @@ Windows
 	winget install TeXstudio.TeXstudio
 Installed at C:\Program Files\texstudio
 INstaller
-	wget https://github.com/texstudio-org/texstudio/releases/download/4.4.0/texstudio-4.4.0-win-qt6.exe
-	wget https://github.com/texstudio-org/texstudio/releases/download/4.4.0/hashes.txt
+	wget https://github.com/texstudio-org/texstudio/releases/download/4.4.1/texstudio-4.4.1-win-qt6.exe
+	wget https://github.com/texstudio-org/texstudio/releases/download/4.4.1/hashes.txt
 	sha256sum -c --ignore-missing hashes.txt
-	Get-FileHash texstudio-4.4.0-win-qt6.exe -Algorithm SHA256 | Sort-Object -Property Hash
-	start texstudio-4.4.0-win-qt6.exe
+	Get-FileHash texstudio-4.4.1-win-qt6.exe -Algorithm SHA256 | Sort-Object -Property Hash
+	start texstudio-4.4.1-win-qt6.exe
 LyX - The Document Processor
 https://www.lyx.org
 Windows

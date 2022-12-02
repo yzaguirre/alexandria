@@ -1,2 +1,8 @@
 Instagram is shifting to videos - users aren't happy
 https://news.ycombinator.com/item?id=32254090
+
+Video limits
+twitter - 140
+whatsapp - 170
+	ffmpeg -ss 14:28.436 -t 140 -i '.\video.mp4' -c:v h264_nvenc -y out.mp4
+	ffmpeg -ss 14:28.436 -t 170 -i '.\video.mp4' -c:v h264_nvenc -y out.mp4

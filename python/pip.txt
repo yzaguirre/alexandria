@@ -25,6 +25,7 @@ List packages
 	pip list
 List outdated
 	pip list --outdated
+	C:\Python310\python.exe -m pip list --outdated
 In a local environment
 	pip freeze > requirements.txt
 Install packages

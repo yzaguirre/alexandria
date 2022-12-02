@@ -48,3 +48,6 @@ writer.save()
 
 https://stackoverflow.com/questions/38560748/python-pandas-dataframe-reading-exact-specified-range-in-an-excel-sheet_name
 pd.read_excel('resultat-elections-2012.xls', index_col = None, skiprows= 2, nrows= 5, sheet_name='France entière T1T2', usecols=range(0,8))
+
+Load Database Tables Into Pandas
+https://www.youtube.com/watch?v=npNY5-451Nc

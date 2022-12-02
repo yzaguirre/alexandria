@@ -52,3 +52,11 @@ module: {
 }
 Run again
 	npm run build
+
+https://stackoverflow.com/questions/51737915/webpack-warning-in-asset-size-limit-the-following-assets-exceed-the-recomme
+You can hide these warnings/hints by setting performance.hints = false:
+{
+  performance: {
+    hints: false
+  }
+}

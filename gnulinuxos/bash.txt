@@ -1,3 +1,9 @@
+Hombrew
+	brew install bash
+	vim /etc/shells
+/usr/local/bin/bash
+	chsh -s /usr/local/bin/bash
+
 Source
 https://opensource.com/article/20/6/bash-source-command
 for i in $HOME/.local/include/*;

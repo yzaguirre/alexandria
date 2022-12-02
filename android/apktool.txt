@@ -3,9 +3,9 @@ https://ibotpeaches.github.io/Apktool/
 https://github.com/iBotPeaches/Apktool
 https://bitbucket.org/iBotPeaches/apktool/downloads/
 https://www.reddit.com/r/reactnative/comments/uqkftc/use_apktool_to_inspect_your_apk_file_when/
-	wget -O apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar
+	wget -O apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
 	wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
-	chmod u+x apktool_2.6.1.jar apktool
+	chmod u+x apktool_2.7.0.jar apktool
 	mv apktool.jar /usr/local/bin/apktool.jar
 	mv apktool /usr/local/bin/apktool
 Windows

@@ -10,3 +10,22 @@ A fork
 https://github.com/BaiXiaoYan/react-native-media-meta
 Location is missing
 https://github.com/mybigday/react-native-media-meta/issues/44
+
+https://github.com/mrousavy/react-native-vision-camera/issues/780
+Use piexifjs
+Read and modify exif in client-side or server-side JavaScript.
+https://github.com/hMatoba/piexifjs
+https://piexifjs.readthedocs.io/en/latest/
+https://auth0.com/blog/read-edit-exif-metadata-in-photos-with-javascript/
+https://github.com/hMatoba/piexifjs/issues/78
+	yarn install piexifjs
+Get exif data as object.
+jpegData must be a string that starts with "data:image/jpeg;base64,"(DataURL),
+"\xff\xd8", or "Exif".
+var exifObj = piexif.load(jpegData)
+
+📷 The fastest and most versatile JS EXIF reading library.
+https://github.com/MikeKovarik/exifr
+https://github.com/mattiasw/ExifReader#using-react-native
+https://github.com/mattiasw/ExifReader/issues/177#issuecomment-1172228225
+	yarn add exifreader

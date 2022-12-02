@@ -13,7 +13,36 @@ https://news.ycombinator.com/item?id=24979103
 React Developer Tools web browser plugin
 
 prettier.io for vsc
-
+Initialize a yarn project
+	cd webapp
+	yarn init
+	yarn add react react-dom
+	yarn add --dev webpack webpack-cli webpack-dev-server html-webpack-plugin webpack-merge
+	yarn add --dev @babel/core @babel/preset-react @babel/preset-env babel-loader
+x	yarn add --dev @babel/plugin-transform-runtime babel-eslint @babel/runtime
+Typescript
+	yarn add typescript
+	yarn add --dev @types/react @types/react-dom ts-loader
+	yarn add --dev @babel/preset-typescript
+Sass
+	yarn add --dev sass style-loader css-loader sass-loader
+Saas file in src/styles/main.scss
+Rule
+	{
+		test: /\.scss$/,
+		exclude: /node_modules/,
+		use: ['style-loader', 'css-loader', 'sass-loader']
+	}
+postcss
+	yarn add --dev postcss style-loader css-loader postcss-loader
+Rule
+	{
+		test: /\.css$/,
+		exclude: /node_modules/,
+		use: ['style-loader', 'css-loader']
+	}
+Analyzer
+	yarn add --dev webpack-bundle-analyzer
 Using create-react-app
 	npm install -g create-react-app
 	create-react-app hello-react
@@ -45,3 +74,12 @@ A React component for handling outside clicks
 https://github.com/airbnb/react-outside-click-handler
 https://www.reddit.com/r/reactnative/comments/nvl8xg/how_to_detect_press_event_outside_of_component/
 	yarn add react-outside-click-handler
+
+Create a React App WITHOUT Create React App
+https://www.youtube.com/watch?v=h3LpsM42s5o
+Create A React App Without Create-React-App (.babelrc)
+https://www.youtube.com/watch?v=mB1TKceLzh0
+Webpack 5 Crash Course | Frontend Development Setup (Sass, assets)
+https://www.youtube.com/watch?v=IZGNcSuwBZs
+Webpack v5 with React | Babel | Preact | 2022 | Webpack Loaders (babel.config.js, css)
+https://www.youtube.com/watch?v=y2O4weVFerw

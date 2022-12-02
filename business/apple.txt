@@ -30,3 +30,7 @@ https://www.youtube.com/watch?v=2B-XwPjn9YY
 Apple introduces Ask Apple for developers
 https://www.apple.com/newsroom/2022/10/apple-introduces-ask-apple-for-developers/
 https://news.ycombinator.com/item?id=33165831
+
+AirDrop is now limited to 10 minutes
+https://twitter.com/tibor/status/1597296268275240960
+https://news.ycombinator.com/item?id=33778302

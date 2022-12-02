@@ -9,6 +9,7 @@ http://archive.ics.uci.edu/ml/datasets
 For books and articles : https://z-lib.org/
 For papers : https://sci-hub.tw/
 kaggle.com
+See ../deeplearning/colab.txt
 
 https://www.reddit.com/r/learnmachinelearning/comments/g6jyes/stanford_release_andrew_ngs_machine_learning/
 https://www.youtube.com/watch?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&v=jGwO_UgTS7I&feature=emb_title

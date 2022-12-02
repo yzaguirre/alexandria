@@ -21,6 +21,7 @@ https://github.com/react-native-cameraroll/react-native-cameraroll/issues/397
 	yarn add @react-native-community/cameraroll fbjs
 
 https://github.com/idrisssakhi/photoGallery
+	yarn add react-native-photo-gallery-api
 
 https://github.com/teslamotors/react-native-camera-kit/issues/415
 https://github.com/ibitcy/react-native-hole-view

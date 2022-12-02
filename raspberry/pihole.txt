@@ -1,6 +1,9 @@
-https://pi-hole.net/
+https://pi-hole.net
 https://cri.dev/posts/2020-05-03-Ad-blocking-with-Raspberry-Pi-and-Pi-hole/
 https://news.ycombinator.com/item?id=23073109
 
 https://scotthelme.co.uk/running-my-own-doh-relay-and-getting-pihole/
 https://news.ycombinator.com/item?id=26291402
+
+https://www.crosstalksolutions.com/the-worlds-greatest-pi-hole-and-unbound-tutorial-2023/
+https://news.ycombinator.com/item?id=33787505

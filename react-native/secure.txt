@@ -13,7 +13,7 @@ https://www.reddit.com/r/reactnative/comments/o3rc7h/react_native_vault_a_persis
 	yarn install react-native-vault
 	yarn pod
 
-See ~/ios/keychain.txt
+See ../ios/keychain.txt
 
 AES-GCM encryption/decryption for React Native
 https://github.com/craftzdog/react-native-aes-gcm-crypto

@@ -28,3 +28,9 @@ Create configuration file, to enable the preset
   "presets": ["@babel/preset-env"]
 }
 	npm run build
+
+React preset
+{
+	"presets": ["@babel/preset-env", "@babel/preset-react"],
+	"plugins": ["@babel/plugin-transform-runtime"]
+}

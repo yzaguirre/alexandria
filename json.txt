@@ -49,6 +49,11 @@ https://www.youtube.com/watch?v=PdC-zWfx73Q
 JSON JQ Linux Tool, Quick Tutorial
 https://www.youtube.com/watch?v=CQuRAIN9nJk
 
+jqjq
+Jqjq: Jq Implementation of Jq
+https://github.com/wader/jqjq
+https://news.ycombinator.com/item?id=33741688
+
 gojq
 https://github.com/itchyny/gojq
 	wget https://github.com/itchyny/gojq/releases/download/v0.12.7/gojq_v0.12.7_linux_amd64.tar.gz
