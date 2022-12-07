@@ -384,6 +384,13 @@ Blur a video
 FFmpeg command to Blur Video on particular location
 https://www.youtube.com/watch?v=qTZ-VvO8XFU
 	ffmpeg -i .\VID-20221115-WA0001.mp4 -filter_complex "[0:V]crop=134:640,boxblur=20[fg];[0:V] [fg]overlay=(main_w - 134):0" -c:v nvenc_h264 -y output.mp4
+Embed subtitles
+How to add subtitles to a video | Burn in subtitle video effect #ffmpeg #TheFFMPEGGuy
+https://www.youtube.com/watch?v=cRoEV3bqF14
+	ffmpeg -i input.mp4 -vf subtitles=input.srt output01.mp4
+MKV
+	ffmpeg -i input.mkv -vf subtitles=input.mkv:si=1 output02.mp4
+
 FFMPEG Advanced Techniques Pt1 - Advanced Filters
 https://www.youtube.com/watch?v=M58rc7cxl_s
 FFMPEG Advanced Techniques Pt2 - Filtergraphs & Timeline

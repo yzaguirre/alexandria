@@ -30,3 +30,6 @@ Mount remote directory
 When you are done using the remote directory, you can unmount it with the fuser-
 mount command (part of the fuse-utils package):
 	fusermount -u /var/tmp/chris
+
+Linux Crash Course Series - How to Share Files via SSHFS
+https://www.youtube.com/watch?v=SY2AAQlnk2E

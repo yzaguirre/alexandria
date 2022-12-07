@@ -1,0 +1,7 @@
+https://www.gnu.org/software/coreutils/manual/html_node/join-invocation.html#join-invocation
+join writes to standard output a line for each pair of input lines that have identical join fields.
+	join file1 file2
+
+https://www.baeldung.com/linux/join-multiple-lines
+See paste.txt
+	paste -sd ',' input.txt

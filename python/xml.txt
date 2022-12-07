@@ -10,4 +10,5 @@ https://www.youtube.com/watch?v=bWfAD7wAfOI
 Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.
 https://lxml.de
 https://github.com/lxml/lxml
+See ../datascience/datascience.txt
 	sudo -H pip install -U lxml

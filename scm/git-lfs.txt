@@ -5,16 +5,26 @@ Recent version
 https://packagecloud.io/github/git-lfs/install#bash-deb
 	curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 Binary
-	wget https://github.com/git-lfs/git-lfs/releases/download/v3.1.2/git-lfs-linux-amd64-v3.1.2.tar.gz
-	sha256sum git-lfs-linux-amd64-v3.1.2.tar.gz
-a10bb562658a65ad0e22f331bc43f2cb292a57d21c5b26f52794257e48fcbe10
+	wget https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/git-lfs-linux-amd64-v3.3.0.tar.gz
+	wget https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/hashes.asc
+	wget https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/sha256sums.asc
+	gpg --verify hashes.asc
+	gpg --verify sha256sums.asc
+	sha256sum -c --ignore-missing sha256sums.asc
+	sha256sum git-lfs-linux-amd64-v3.3.0.tar.gz
+6a4e6bd7d06d5c024bc70c8ee8c9da143ffc37d2646e252a17a6126d30cdebc1
 	mkdir git-lfs
-	tar xf git-lfs-linux-amd64-v3.1.2.tar.gz -C git-lfs
+	tar xf git-lfs-linux-amd64-v3.3.0.tar.gz -C git-lfs
 	cd git-lfs
 	./install
 Included in git for windows. Latest available with chocolately
-	winget install GitHub.GitLFS
 	choco install git-lfs
+	winget install GitHub.GitLFS
+Installer
+	wget https://github.com/git-lfs/git-lfs/releases/download/v3.3.0/git-lfs-windows-v3.3.0.exe
+	Get-FileHash -Algorithm SHA256 .\git-lfs-windows-v3.3.0.exe
+81b28b59a100ab5023e62e7bc99e25c33fadf2e106a8c3a36f535b05e52dd76b
+	start git-lfs-windows-v3.3.0.exe
 Homebrew
 	brew install git-lfs
 
@@ -28,6 +38,7 @@ You can upload a larger file to GitHub using Git LFS!
 https://www.youtube.com/watch?v=o2toX-8_3bs
 
 Usage
+	git-lfs -v
 Set up Git LFS for your user account
 	git lfs install
 Check .git/hooks/ directory

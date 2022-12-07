@@ -1,13 +1,15 @@
 Gifski gif encoder
-https://gif.ski/
+https://gif.ski
 https://github.com/ImageOptim/gifski
 Install
-	wget https://github.com/ImageOptim/gifski/releases/download/1.4.0/gifski_1.4.0_amd64.deb
-	dpkg -i gifski_1.4.0_amd64.deb
+	wget https://github.com/ImageOptim/gifski/releases/download/1.8.1/gifski_1.8.1_amd64.deb
+	dpkg -i gifski_1.8.1_amd64.deb
 Termux
 	apt install gifski
 Rust
 	cargo install gifski
+Windows
+	choco install gifski
 MacOS
 	brew install gifski
 Export to png

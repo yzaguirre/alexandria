@@ -5,8 +5,11 @@ Homebrew
 	brew install yt-dlp/taps/yt-dlp
 Subtitles
 	yt-dlp --list-subs http://www.youtube.com/watch?v=
-	yt-dlp --write-sub --sub-format "srt" --sub-langs "es-ES" http://www.youtube.com/watch?v=
+	yt-dlp --write-subs --sub-format "srt" --sub-langs "es-ES" http://www.youtube.com/watch?v=
 Download only subs
 	yt-dlp --skip-download --write-sub --sub-format "srt" --sub-langs "es-ES" http://www.youtube.com/watch?v=
 Automatic subs
 	yt-dlp --write-auto-subs --sub-format best --sub-langs "es" http://www.youtube.com/watch?v=
+Edit subtitles into the video
+	yt-dlp --write-subs --write-auto-subs --embed-subs --sub-format best --sub-langs "es" http://www.youtube.com/watch?v=
+

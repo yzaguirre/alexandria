@@ -1,7 +1,7 @@
 A viewer for git and diff output
 https://github.com/dandavison/delta
-	wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb
-	dpkg -i git-delta_0.14.0_amd64.deb
+	wget https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
+	dpkg -i git-delta_0.15.1_amd64.deb
 Homebrew
 	brew install git-delta
 Windows

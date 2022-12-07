@@ -25,7 +25,8 @@ List packages
 	pip list
 List outdated
 	pip list --outdated
-	C:\Python310\python.exe -m pip list --outdated
+	C:\Python310\python.exe -m pip list --outdated | Out-File pip-outdated.txt
+	hck -f 1 pip-outdated.txt | sed ':a;N;$!ba;s/\n/" "/g' | subl -
 In a local environment
 	pip freeze > requirements.txt
 Install packages

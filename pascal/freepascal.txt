@@ -1,0 +1,18 @@
+https://www.freepascal.org
+See ../ide/lazarus.txt
+Windows
+	winget install FreePascal.FreePascalCompiler
+	choco install freepascal
+Installed at
+C:\FPC
+
+Coding in Pascal in 2022
+https://www.youtube.com/watch?v=8UJNQt8DAWE
+
+Usage
+	vim mine.pas
+program mine;
+
+begin
+	WriteLn('Hello, World');
+end.

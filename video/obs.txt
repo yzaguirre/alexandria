@@ -4,6 +4,7 @@ https://github.com/obsproject/obs-studio
 https://github.com/obsproject/obs-studio/blob/master/INSTALL
 https://github.com/obsproject/obs-studio/releases/tag/27.1.1
 https://news.ycombinator.com/item?id=28686216
+See ../media/streamlink.txt
 Install
 	apt install obs-studio
 Homebrew
@@ -50,3 +51,5 @@ Windows
 
 How to Use OBS Studio - Complete Tutorial for Beginners!
 https://www.youtube.com/watch?v=-puA85ciDEM
+Record Video Sources Separately Using OBS Studio - Visible or not!
+https://www.youtube.com/watch?v=fv8BXm3d0Ic

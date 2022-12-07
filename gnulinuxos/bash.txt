@@ -150,22 +150,6 @@ https://superuser.com/questions/104635/better-way-to-do-echo-x-sed-and-echo-x-gr
 	sed 's/foo/bar/' <<< "foobie"
 	grep 'this' <<< "this or that"
 
-Paste function
-	paste example1.txt example2.txt
-	paste example*.txt
-	paste -d: example*.txt
-	paste -d- example*.txt
-	paste -d. example*.txt
-	paste -d")" example*.txt
-If there were numbers involved.
-	paste -d+ pay*.txt
-	paste -d+ pay*.txt | while read line;do echo $line|bc;done
-	paste -d+ pay*.txt | while read line;do echo -n "${line}=";echo $line|bc;done
-Create CSV
-Dash for each line
-	< people.txt paste - - - - -
-	< people.txt paste -d, - - - - -
-
 https://www.reddit.com/r/linuxadmin/comments/7kvwjh/til_ctrlaltu_resets_and_erases_all_characters/
 https://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts#Command_line_shortcuts
 	man readline

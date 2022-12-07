@@ -1,4 +1,5 @@
 https://www.gnu.org/software/coreutils/manual/html_node/The-cut-command.html
+See tuc.txt
 	cut -dT -f2,3 removetr.log
 A sharp cut(1) clone.
 https://github.com/sstadick/hck
@@ -11,6 +12,10 @@ Windows
 Homebrew
 	brew tap sstadick/hck
 	brew install hck
+
+Usage
+	hck -V
+	hck -f 1 -o pip.txt pip-outdated.txt
 
 A human-friendly and fast alternative to cut and (sometimes) awk
 https://github.com/theryangeary/choose

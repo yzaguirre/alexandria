@@ -1,3 +1,6 @@
+Windows
+	choco install sed
+
 https://linuxacademy.com/blog/linux/the-sed-command-bash-basics/
 Sed breaks symlinks
 https://news.ycombinator.com/item?id=18823391
@@ -14,6 +17,7 @@ Remove href
 	sed 's/href=\"//'
 	sed "s/\"//g"
 Remove empty lines
+https://www.baeldung.com/linux/join-multiple-lines
 	sed ':a;N;$!ba;s/\n/" "/g'
 Surround in "
 	sed '1s/^/"/'

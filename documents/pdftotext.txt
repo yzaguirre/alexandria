@@ -1,6 +1,6 @@
 see ../python/pdfminer.txt
 
-https://poppler.freedesktop.org/
+https://poppler.freedesktop.org
 
 pdftotext
 https://www.xpdfreader.com/

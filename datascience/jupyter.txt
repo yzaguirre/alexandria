@@ -14,7 +14,7 @@ https://github.com/zeromq/pyzmq/issues/1469
 
 https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
-	sudo -H pip install -U jupyterlab
+	sudo -H pip install -U jupyterlab jupyternotify
 Optional libraries
 	sudo -H pip install -U tensorflow pandas scipy
 Git plugin
@@ -51,3 +51,6 @@ Assign a .pem file
 c.NotebookApp.certfile = '/etc/tls/certs/site.pem'
 
 https://jupyter-notebook.readthedocs.io/en/stable/security.html
+
+5 Jupyter Notebook Tips & Tricks to Improve your Data Science Workflow!
+https://www.youtube.com/watch?v=YuWZNV4BkkY

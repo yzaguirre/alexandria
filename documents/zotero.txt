@@ -7,8 +7,8 @@ Windows
 	winget install Zotero.Zotero
 	choco install zotero
 Latest Binary
-	wget https://download.zotero.org/client/release/6.0.13/Zotero-6.0.13_setup.exe
-	explorer.exe Zotero-6.0.13_setup.exe
+	wget https://download.zotero.org/client/release/6.0.18/Zotero-6.0.18_setup.exe
+	explorer.exe Zotero-6.0.18_setup.exe
 Installed at C:\Program Files (x86)\Zotero\
 
 https://www.zotero.org/blog/zotero-6/

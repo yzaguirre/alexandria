@@ -7,7 +7,7 @@ https://www.python.org
 For Python 3.10
 	apt install python3.10
 Windows
-	winget install Python.Python.3
+	winget install Python.Python.3.11
 Installs at %USERPROFILE%\AppData\Local\Programs\Python\Python310
 For Python 3.9.10
 https://www.python.org/downloads/release/python-399/
@@ -45,6 +45,9 @@ https://www.debugpoint.com/2021/10/install-python-3-10-ubuntu/
 Python 3.11 is faster than 3.8
 https://jott.live/markdown/py3.11_vs_3.8
 https://news.ycombinator.com/item?id=33345421
+Toml in Python 3.11
+What's New in Python 3.11?
+https://www.youtube.com/watch?v=LtR67QfgbmE
 
 did you know that you can use functions as values in a Python dictionary?
 https://twitter.com/DynamicWebPaige/status/1456110881553612803

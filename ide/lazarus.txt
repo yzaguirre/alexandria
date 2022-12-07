@@ -1,0 +1,13 @@
+The professional Free Pascal RAD IDE
+https://www.lazarus-ide.org
+Windows
+	winget install Lazarus.Lazarus
+Binaries
+https://www.lazarus-ide.org/index.php?page=checksums
+	wget -O lazarus-2.2.4-fpc-3.2.2-win64.exe https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/Lazarus%202.2.4/lazarus-2.2.4-fpc-3.2.2-win64.exe/download
+	Get-FileHash -A SHA256 lazarus-2.2.4-fpc-3.2.2-win64.exe
+	start lazarus-2.2.4-fpc-3.2.2-win64.exe
+Installed at
+C:\lazarus
+Free Pascal compiler at
+C:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe

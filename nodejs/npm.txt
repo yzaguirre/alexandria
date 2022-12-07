@@ -1,3 +1,4 @@
+See ../js/yarn.txt
 Install NPM
 	npm install -g npm@8.19.3
 http://gurustop.net/blog/2015/01/12/sudo-npm-install-g-global-mac-ubuntu-linux-windows
@@ -32,6 +33,7 @@ Remove dependency
 Update package
 https://docs.npmjs.com/getting-started/updating-global-packages
 	npm outdated -g --depth=0
+	npm update --save
 	npm update jshint -g
 Uninstall package
 https://docs.npmjs.com/getting-started/uninstalling-global-packages

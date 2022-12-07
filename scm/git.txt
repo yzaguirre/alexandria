@@ -250,7 +250,11 @@ https://stackoverflow.com/questions/11852558/gitignore-only-allow-certain-extens
 !.gitkeep
 !*.php
 !*/
-	
+Create useful .gitignore files for your project
+https://gitignore.io
+https://github.com/toptal/gitignore.io
+https://www.toptal.com/developers/gitignore/
+
 clone via SSH
 	git clone git@github.com:dvdyzag/alec.git
 

@@ -10,3 +10,18 @@ Miniconda
 http://conda.pydata.org/miniconda.html
 	choco install miniconda3 --params="'/AddToPath:1'"
 	winget install Anaconda.Miniconda3
+
+Usage
+	conda
+	conda create --name environmentName python=3.9
+Use virtual environment
+	conda activate environmentName
+Exit virtual environment
+	conda deactivate
+List environments
+	conda info --envs
+Delete environment
+	conda env remove -n environmentName
+
+My Python Development Environment Setup - Full Tutorial
+https://www.youtube.com/watch?v=qI3P7zMMsgY

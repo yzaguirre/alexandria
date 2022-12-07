@@ -1,0 +1,27 @@
+https://www.gnu.org/software/coreutils/manual/html_node/paste-invocation.html#paste-invocation
+	paste example1.txt example2.txt
+	paste example*.txt
+	paste -d: example*.txt
+	paste -d- example*.txt
+	paste -d. example*.txt
+	paste -d")" example*.txt
+If there were numbers involved.
+	paste -d+ pay*.txt
+	paste -d+ pay*.txt | while read line;do echo $line|bc;done
+	paste -d+ pay*.txt | while read line;do echo -n "${line}=";echo $line|bc;done
+Create CSV
+Dash for each line
+	< people.txt paste - - - - -
+	< people.txt paste -d, - - - - -
+
+Join lines
+https://www.baeldung.com/linux/join-multiple-lines
+	paste -sd '' input.txt
+	paste -sd ' ' input.txt
+With sed
+	sed ':a; N; $!ba; s/\n//g' input.txt
+I cameI sawI conquered!
+	sed ':a; N; $!ba; s/\n/,/g' input.txt
+I came,I saw,I conquered!
+	sed ':a; N; $!ba; s/\n/; /g' input.txt
+I came; I saw; I conquered!

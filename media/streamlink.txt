@@ -24,3 +24,15 @@ player="C:\mpv-x86_64\mpv"
 Usage
 	streamlink twitch.tv/day9tv
 	streamlink hls://file://C:/hls/playlist.m3u8
+Twitter
+https://github.com/streamlink/streamlink/issues/2672
+	streamlink --http-header "User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36" "https://prod-fastly-us-east-1.video.pscp.tv/Transcoding/v1/hls/lcT9QRKE4k0sbQ1fegNQp5e3okZT6vvIoerE6YGz2dpqaETtBsf9W-qTOTq4KpNuging-SQ-O87nJbkyZb2TyA/non_transcode/eu-central-1/periscope-replay-direct-prod-eu-central-1-public/tw_master_dynamic_16875482745446058136.m3u8?type=replay" live
+	--http-cookie "lv-uid=AAAAEIAuupFT6gEsSBns9vYVwK2s5u6cbamMWVmmGaSBGW8n1YCswj26NDM"
+
+OBS plugin
+https://github.com/dd-center/obs-streamlink
+	wget https://github.com/dd-center/obs-streamlink/releases/download/0.4.1/obs-streamlink-0.4.1.exe
+	start obs-streamlink-0.4.1.exe
+Installed at
+x C:\Program Files\DD Center\OBS Streamlink\
+C:\Program Files\obs-studio\

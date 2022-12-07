@@ -2,6 +2,8 @@ https://inkscape.org
 https://inkscape.org/doc/keys.html
 https://inkscape.org/doc/inkscape-man.html
 https://news.ycombinator.com/item?id=23089820
+https://inkscape.org/release/inkscape-1.2.2/
+https://news.ycombinator.com/item?id=33873311
 Boehm-GC
 libsigc++
 glibmm
@@ -9,9 +11,9 @@ gtkmm
 	apt-get install libsigc++-2.0-dev libgtkmm-2.4-dev intltool libgc-dev libcairo2-dev libcairomm-1.0-dev libxml2-dev libgsl0-dev libxslt1-dev libboost-dev libpopt-dev
 https://inkscape.org/en/download/linux/
 https://inkscape.org/en/develop/getting-started/#building-inkscape-linux
-	wget https://inkscape.org/gallery/item/34673/inkscape-1.2.1.tar.xz
-	tar xf inkscape-1.2.1.tar.xz
-	cd inkscape-1.2.1
+	wget https://inkscape.org/gallery/item/34673/inkscape-1.2.2.tar.xz
+	tar xf inkscape-1.2.2.tar.xz
+	cd inkscape-1.2.2
 	./configure
 	make
 	make install
