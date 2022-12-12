@@ -14,6 +14,9 @@ https://www.youtube.com/watch?v=Dnq5QhY7lOQ
 	7zz x -o"../.fonts" Fira_Code_v6.2.zip
 Windows
 	choco install firacode
+Homebrew
+	brew tap homebrew/cask-fonts
+	brew install --cask font-fira-code
 
 https://www.nerdfonts.com
 	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraMono.zip

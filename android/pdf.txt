@@ -3,3 +3,6 @@ git clone https://gitlab.com/mudlej_android/mj_pdf_reader.git
 	git checkout V1.4.2-stable
 	gradle wrapper
 	gradlew.bat assembleRelease
+
+MuPDF is a lightweight PDF, XPS, and E-book viewer.
+https://mupdf.com

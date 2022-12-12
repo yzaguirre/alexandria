@@ -1,5 +1,7 @@
 https://www.php.net
 https://github.com/php/php-src
+https://www.php.net/releases/8.2/en.php
+https://news.ycombinator.com/item?id=33907096
 Whats New in PHP 8.2
 https://stitcher.io/blog/new-in-php-82
 https://news.ycombinator.com/item?id=31153698

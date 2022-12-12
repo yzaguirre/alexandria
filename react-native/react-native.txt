@@ -64,8 +64,8 @@ https://stackoverflow.com/questions/43171648/sed-gives-sed-cant-read-no-such-fil
 	brew uninstall --force node
 See ../nodejs/nvm.txt
 	nvm ls-remote
-	nvm install 19.1.0
-	nvm use 19.1.0
+	nvm install 19.2.0
+	nvm use 19.2.0
 	brew install watchman
 	brew uninstall --force cocoapods
 https://stackoverflow.com/questions/64698820/ignoring-ffi-1-13-1-because-its-extensions-are-not-built-try-gem-pristine-ffi

@@ -29,7 +29,7 @@ Specific version
 	nvm install 16.18.1
 	nvm install 17.9.1
 	nvm install 18.12.1
-	nvm install 19.1.0
+	nvm install 19.2.0
 Change node
 https://stackoverflow.com/questions/69647332/cannot-read-properties-of-undefined-reading-transformfile-at-bundler-transfo
 	nvm use 14.21.1

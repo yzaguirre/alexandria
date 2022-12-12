@@ -1,0 +1,7 @@
+Scrambled Exif
+https://gitlab.com/juanitobananas/scrambled-exif/tree/HEAD
+https://f-droid.org/en/packages/com.jarsilio.android.scrambledeggsif/
+
+Reduces image size and removes exif-tags when sharing images on android devices.
+https://codeberg.org/Starfish/Imagepipe
+https://f-droid.org/en/packages/de.kaffeemitkoffein.imagepipe/

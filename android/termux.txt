@@ -5,12 +5,13 @@ https://news.ycombinator.com/item?id=24979258
 	pkg install openssh python tmux php openssl openssl-tool clang rust golang android-tools vim file bat ncurses-utils nmap-ncat git ffmpeg imagemagick libxml2 libxslt lsd qalc iproute2 traceroute
 	apt install figlet mutt tty-clock irssi pv mosh jq htop taskwarrior newsboat gnupg curl wget termux-api
 	apt install ripgrep fd exa binutils p7zip duf dust tree duc kakoune glow
+	apt install lfortran python-cryptography python-bcrypt python-numpy python-pillow
 	termux-setup-storage
 	pip install -U pip wheel setuptools
 	pip install -U lxml
 	export CARGO_BUILD_TARGET=aarch64-linux-android
 	pip install -U yt-dlp pick rich rich-cli paramiko termux-api httpie openpyxl pandas pandas-datareader
-	pip install -U pilgram pillow
+	pip install -U pilgram # pillow
 	apt install libzmq
 	pip install -U jupyterlab
 	cd $PREFIX/lib

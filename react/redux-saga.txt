@@ -1,5 +1,6 @@
-https://redux-saga.js.org/
+https://redux-saga.js.org
 https://github.com/redux-saga/redux-saga
+	yarn add redux-saga
 
 https://www.youtube.com/watch?v=Z4Ug7NL2VAk
 Saga Design Pattern for managing Distributed Transactions (An Introduction)

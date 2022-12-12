@@ -50,6 +50,7 @@ Homebrew
 Configuration at
 ~/.config/lsd/config.yaml
 %APPDATA%\lsd\config.yaml
+C:\Users\DAVIDY~1\AppData\Roaming\lsd\config.yaml
 
 Usage
 	lsd --long -A

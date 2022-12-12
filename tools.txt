@@ -34,6 +34,8 @@ https://www.tradegeniusacademy.com
 
 https://www.reddit.com/r/commandline/comments/wbfxsz/any_cool_curlwget_tools_that_you_use/
 https://github.com/chubin/awesome-console-services
+https://git.herrbischoff.com/awesome-macos-command-line/about/
+https://news.ycombinator.com/item?id=33896513
 https://github.com/herrbischoff/awesome-command-line-apps
 https://git.herrbischoff.com/awesome-command-line-apps/about/
 https://github.com/alebcay/awesome-shell

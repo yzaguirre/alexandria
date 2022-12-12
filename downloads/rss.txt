@@ -9,9 +9,9 @@ Newsbeuter
 https://www.youtube.com/watch?v=cpSKsQ2CdAU&list=PLqv94xWU9zZ30jHFe8pqC5qES6ya6v2sE
 Newsboat
 https://www.youtube.com/watch?v=z359lWo3eQA
-https://newsboat.org/
+https://newsboat.org
 	apt install newsboat
-See  ~/downloads/newsboat.txt
+See  ../downloads/newsboat.txt
 
 https://twitrss.me/t
 

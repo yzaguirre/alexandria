@@ -1,0 +1,3 @@
+🐻 Bear necessities for state management in React
+https://github.com/pmndrs/zustand
+	yarn add zustand

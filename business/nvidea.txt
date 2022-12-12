@@ -13,3 +13,8 @@ https://developer.nvidia.com/cuda-toolkit-archive
 Nvidia PhysX 5.0
 https://github.com/NVIDIA-Omniverse/PhysX
 https://news.ycombinator.com/item?id=33519414
+
+Usage
+	nvidia-smi.exe
+
+See ../monitoring/nvtop.txt

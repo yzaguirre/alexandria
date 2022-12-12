@@ -116,3 +116,15 @@ Disable gatekeeper
 
 50 Mac Terminal Commands you NEED to know (in 10 minutes)
 https://www.youtube.com/watch?v=qOrlYzqXPa8
+
+https://git.herrbischoff.com/awesome-macos-command-line/about/
+https://news.ycombinator.com/item?id=33896513
+Disable Creation of Metadata Files on USB Volumes
+Avoids creation of .DS_Store and AppleDouble files.
+	defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+Audio
+Convert Audio File to iPhone Ringtone
+	afconvert input.mp3 ringtone.m4r -f m4af
+Play Audio File
+	afplay -q 1 filename.mp3

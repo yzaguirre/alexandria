@@ -10,27 +10,29 @@ Tunnels
 https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Proxies_and_Jump_Hosts
 
 https://www.torproject.org/download/#downloads
+Tor Browser 12.0
+https://news.ycombinator.com/item?id=33896890
 https://support.torproject.org/tbb/how-to-verify-signature/
 Verify download
 https://www.torproject.org/docs/debian.html.en
 	gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xE53D989A9E2D47BF
-	wget https://www.torproject.org/dist/torbrowser/11.0.9/tor-browser-linux64-11.0.9_en-US.tar.xz
-	wget https://www.torproject.org/dist/torbrowser/11.0.9/tor-browser-linux64-11.0.9_en-US.tar.xz.asc
-	gpg --verify tor-browser-linux64-11.0.9_en-US.tar.xz.asc
+	wget https://www.torproject.org/dist/torbrowser/12.0/tor-browser-linux64-12.0_ALL.tar.xz
+	wget https://www.torproject.org/dist/torbrowser/12.0/tor-browser-linux64-12.0_ALL.tar.xz.asc
+	gpg --verify tor-browser-linux64-12.0_ALL.tar.xz.asc
 	rm -r /opt/tor
-	tar xf tor-browser-linux64-11.0.9_en-US.tar.xz -C /opt/ --transform s/tor-browser_en-US/tor/
+	tar xf tor-browser-linux64-12.0_ALL.tar.xz -C /opt/ --transform s/tor-browser_ALL/tor/
 	chown david:david -R /opt/tor
 	ln -s /opt/tor/Browser/start-tor-browser /usr/local/bin/tor
 Windows
 	winget install TorProject.TorBrowser
 	choco install tor
 Binary
-	wget https://www.torproject.org/dist/torbrowser/11.0.6/torbrowser-install-win64-11.0.6_en-US.exe
-	wget https://www.torproject.org/dist/torbrowser/11.0.6/torbrowser-install-win64-11.0.6_en-US.exe.asc
-	gpg --verify torbrowser-install-win64-11.0.6_en-US.exe.asc
-	explorer torbrowser-install-win64-11.0.6_en-US.exe
-Installs in "~/Desktop/Tor Browser"
+	wget https://dist.torproject.org/torbrowser/12.0/torbrowser-install-win64-12.0_ALL.exe
+	wget https://dist.torproject.org/torbrowser/12.0/torbrowser-install-win64-12.0_ALL.exe.asc
+	gpg --verify torbrowser-install-win64-12.0_ALL.exe.asc
+	start torbrowser-install-win64-12.0_ALL.exe
+Installed at "~/bin/Tor Browser"
 
 As a service
 https://www.torproject.org/docs/debian.html.en

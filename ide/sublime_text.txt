@@ -1,27 +1,7 @@
 https://www.sublimetext.com
-
-subl can now be used to edit stdin, eg:
-	echo test | subl | cat
-
 Sublime Text 4
 https://www.sublimetext.com/blog/articles/sublime-text-4
 https://news.ycombinator.com/item?id=27230042
-
-Config location
-Compare preferences with meld
-~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-	meld ~/.config/sublime-text-3/Packages/User/ "/tmp/Sublime Text 3/Packages/User"
-	meld ~/.config/sublime-text-3/Packages/User/"Default (Linux).sublime-keymap" "Default (Windows).sublime-keymap"
-https://news.codecademy.com/visual-studio-code-sublime-text/
-Multi-edit: When you press ctrl + d,
-all instances of the word or command you are currently on will be highlighted within the file,
-you can also press ctrl + f to find and replace words.
-MacOS
-$HOME/Library/Application Support/Sublime Text 3
-
-regular expressions http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
-
-Install
 	wget https://download.sublimetext.com/sublime_text_build_4143_x64.tar.xz
 	wget https://download.sublimetext.com/sublime_text_build_4143_x64.tar.xz.asc
 	wget https://www.sublimetext.com/sublimehq-pub.gpg
@@ -33,17 +13,34 @@ Windows
 Binary
 	wget https://download.sublimetext.com/sublime_text_build_4143_x64_setup.exe
 Add to PATH C:\Program Files\Sublime Text
-	explorer.exe sublime_text_build_4143_x64_setup.exe
+	start sublime_text_build_4143_x64_setup.exe
+Homebrew
+	brew install sublime-text
 MacOS
 	wget https://download.sublimetext.com/sublime_text_build_4143_mac.zip
 	7zz x -o"/Applications" sublime_text_build_4143_mac.zip
 Add to PATH
 /Applications/Sublime Text.app/Contents/SharedSupport/bin
 
+Config location
+~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+C:\Users\DAVIDY~1\AppData\Roaming\Sublime Text\Packages\User\Preferences.sublime-settings
+/Users/david/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings
+Compare preferences with meld
+/Users/david/Library/Application Support/Sublime Text
+	meld ~/.config/sublime-text-3/Packages/User/ "/tmp/Sublime Text 3/Packages/User"
+	meld ~/.config/sublime-text-3/Packages/User/"Default (Linux).sublime-keymap" "Default (Windows).sublime-keymap"
+
 Cache directory
+C:\Users\DAVIDY~1\AppData\Local\Sublime Text
 ~/.cache
-MacOS
 ~/Library/Caches
+
+subl can now be used to edit stdin, eg:
+	echo test | subl | cat
+
+Regular expressions
+http://www.boost.org/doc/libs/1_47_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
 https://www.sublimetext.com/docs/3/multiple_selection_with_the_keyboard.html
 
@@ -78,6 +75,9 @@ Packages/Material Theme/schemes/Material-Theme.tmTheme
 Color theme
 Adaptive.sublime-theme
 Material-Theme.sublime-theme
+Material Theme is deprecated
+https://github.com/wbond/package_control_channel/pull/8646
+https://github.com/SublimeText/material-theme
 
 Install Colorsublime
 After, choose Facebook color theme
@@ -99,9 +99,9 @@ https://stackoverflow.com/questions/30934706/sublime-text-hide-but-not-exclude-f
 Added it to binary_file_patterns in settings
 
 # keybindings
-Comment 
+Comment
 https://stackoverflow.com/questions/17742781/keyboard-shortcut-to-comment-lines-in-sublime-text-3
-{ "keys": ["control+keypad_divide"],"command": "toggle_comment", "args": {"block": false} }, 
+{ "keys": ["control+keypad_divide"],"command": "toggle_comment", "args": {"block": false} },
 { "keys": ["shift+control+keypad_divide"],"command": "toggle_comment", "args": {"block": true}}
 Vim splits bindings
 { "keys": [":", "v", "s"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
@@ -186,3 +186,8 @@ Remove Origami. Or change the key bindings.
 
 Spiritual successor to Sublime IS Sublilme. Come on, it’s the perfect editor, hope it never changes
 https://twitter.com/nikitonsky/status/1364917053744959489
+
+https://news.codecademy.com/visual-studio-code-sublime-text/
+Multi-edit: When you press ctrl + d,
+all instances of the word or command you are currently on will be highlighted within the file,
+you can also press ctrl + f to find and replace words.

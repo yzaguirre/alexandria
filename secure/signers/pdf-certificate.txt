@@ -1,7 +1,8 @@
 https://es.wikipedia.org/wiki/Firma_electr%C3%B3nica
 Usando una firma digital.
 
-mozilla http://openbadges.org/
+mozilla
+http://openbadges.org
 
 http://lifehacker.com/5990172/whats-the-best-way-to-to-sign-documents-electronically-without-scanning-them
 http://www.howtogeek.com/164668/how-to-electronically-sign-documents-without-printing-and-scanning-them/?PageSpeed=noscript
@@ -13,7 +14,6 @@ Signing any file is easy with gnupg
 	gpg --clearsign
 or
 	gpg --detach-sign
-
 
 PortableSigner
 jsignpdf
@@ -59,3 +59,8 @@ https://www.youtube.com/watch?v=3tqb1htxz1k
 
 How to make Electronic Signature
 https://www.youtube.com/watch?v=dwqg52dlbvc
+
+Ask HN: Why isn't there something like Let's Encrypt for document signing?
+https://news.ycombinator.com/item?id=33921115
+e-Signing as an everyday service
+https://www.dokobit.com

@@ -1,3 +1,4 @@
+https://redux.js.org
 https://redux.js.org/introduction/getting-started
 https://redux.js.org/basics/store/
 https://www.reddit.com/r/reactnative/comments/nslljz/whats_your_favorite_state_manager/ 
@@ -27,7 +28,7 @@ https://www.youtube.com/watch?v=qdAzeYAfQlY
 
 Access state in action
 https://react-redux.js.org/api/hooks
-See ~/react-native/hooks.txt
+See ../react-native/hooks.txt
 https://stackoverflow.com/questions/35667249/accessing-redux-state-in-an-action-creator
 import store from '../store';
 
@@ -52,3 +53,6 @@ case "RESET":
 React Redux Hooks Tutorial for Beginners
 https://www.youtube.com/watch?v=5X7oyxAQ9n4
 	yarn add @reduxjs/toolkit react-redux
+
+https://redux-toolkit.js.org
+	yarn add @reduxjs/toolkit

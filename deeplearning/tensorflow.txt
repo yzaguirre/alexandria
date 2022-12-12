@@ -41,3 +41,7 @@ https://news.ycombinator.com/item?id=33375392
 
 Create models here
 https://teachablemachine.withgoogle.com
+
+https://playground.tensorflow.org
+Neural Networks Made Simple with Tensorflow Playground
+https://www.youtube.com/watch?v=rti0Ozfeqn8

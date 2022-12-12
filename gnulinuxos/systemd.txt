@@ -95,3 +95,7 @@ Systemd can actually create the necessary directories and files for you
 Services atLinux Essentials - systemd: Using the systemctl command
 https://www.youtube.com/watch?v=5JVBpXiYMKo
 /usr/lib/systemd/system
+
+systemd.timer, an alternative to cron
+https://andrewpillar.com/programming/2022/12/08/systemd-timer-an-alternative-to-cron/
+https://news.ycombinator.com/item?id=33911910

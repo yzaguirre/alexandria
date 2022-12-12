@@ -1,3 +1,7 @@
+https://pipewire.org
 PipeWire Under the Hood
 https://venam.nixers.net/blog/unix/2021/06/23/pipewire-under-the-hood.html
 https://news.ycombinator.com/item?id=27602655
+PipeWire 0.3.62
+https://gitlab.freedesktop.org/pipewire/pipewire/-/releases/0.3.62
+https://news.ycombinator.com/item?id=33920086

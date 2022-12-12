@@ -1,21 +1,21 @@
-https://www.youtube.com/watch?v=z359lWo3eQA
-https://newsboat.org/
+https://newsboat.org
 https://github.com/newsboat/newsboat
+https://www.youtube.com/watch?v=z359lWo3eQA
 	apt install newsboat
 Compile
 	apt install libsqlite3-dev libcurl4 libxml2-dev libjson-c-dev libncursesw6 libncurses-dev libstfl-dev libcurl4-gnutls-dev krb5-config asciidoctor
-	wget https://newsboat.org/releases/2.26/newsboat-2.26.tar.xz
-	wget https://newsboat.org/releases/2.26/newsboat-2.26.tar.xz.asc
-	gpg --verify newsboat-2.26.tar.xz.asc
-	tar xf newsboat-2.26.tar.xz
-	cd newsboat-2.26
+	wget https://newsboat.org/releases/2.29/newsboat-2.29.tar.xz
+	wget https://newsboat.org/releases/2.29/newsboat-2.29.tar.xz.asc
+	gpg --verify newsboat-2.29.tar.xz.asc
+	tar xf newsboat-2.29.tar.xz
+	cd newsboat-2.29
 	make -j12 # 12 cores
 	make install
-https://newsboat.org/releases/2.26/docs/newsboat.html#_format_strings
+https://newsboat.org/releases/2.29/docs/newsboat.html#_format_strings
 https://wiki.archlinux.org/index.php/Newsboat
 	vim ~/.newsboat/config
 macro y set browser "echo -n '%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
 macro y set browser "echo -n '%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
 macro y set browser "echo -n '%F+%u' | xclip -selection clipboard" ; open-in-browser ; set browser "$BROWSER %u"
 macro i set MACRO "feh %u"; open-in-browser ; set MACRO "elinks %u"
-macro g set notify-program "getmenotify.sh" ; 
+macro g set notify-program "getmenotify.sh" ;

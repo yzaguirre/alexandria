@@ -1,0 +1,3 @@
+Vulnerability in pdf reader
+https://github.com/SimpleMobileTools/Simple-File-Manager/issues/619
+https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/com.simplemobiletools.filemanager.pro.yml

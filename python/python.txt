@@ -339,3 +339,12 @@ Ternary
 https://www.tutorialspoint.com/ternary-operator-in-python
 	[on_true] if [expression] else [on_false]
 	a if (a>b) else b
+
+Escape for shell
+https://docs.python.org/3/library/shlex.html
+https://stackoverflow.com/questions/18116465/escape-a-string-for-shell-commands-in-python
+https://9to5answer.com/valueerror-no-closing-quotation
+import shlex
+# from shlex import quote
+shlex.quote("This is muh' music.mp4")
+Only works for posix OS

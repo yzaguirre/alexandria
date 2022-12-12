@@ -28,3 +28,5 @@ Describe a package
 	yarn info react readme
 To emit lines of valid JSON, use the standard --json flag:
 	yarn info react --json
+List outdated
+	yarn outdated

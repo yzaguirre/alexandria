@@ -1,0 +1,6 @@
+https://beta.openai.com
+https://github.com/openai/openai-node
+	yarn add openai
+
+Build An AI Image Generator With OpenAI & Node.js
+https://www.youtube.com/watch?v=fU4o_BKaUZE

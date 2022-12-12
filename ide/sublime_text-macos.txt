@@ -1,0 +1,12 @@
+/Users/david/Library/Application Support/Sublime Text
+Installed Packages/
+Lib/
+Lib/python33/
+Lib/python38/
+Local/
+Local/Auto Save Session.sublime_session
+Local/Session.sublime_session
+Log/
+Packages/
+Packages/User/
+Packages/User/Preferences.sublime-settings
