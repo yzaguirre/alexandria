@@ -23,10 +23,10 @@ Go 1.17.8 and Go 1.16.14 are released
 https://groups.google.com/g/golang-announce/c/SUsQn0aSgPQ/m/gx45t8JEAgAJ?pli=1
 https://twitter.com/golang/status/1491914601948233731
 https://go.dev/dl/#go1.18
-	wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
-	sha256sum go1.19.3.linux-amd64.tar.gz
+	wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
+	sha256sum go1.19.4.linux-amd64.tar.gz
 acc512fbab4f716a8f97a8b3fbaa9ddd39606a28be6c2515ef7c6c6311acffde
-	tar xf go1.19.3.linux-amd64.tar.gz -C /usr/local
+	tar xf go1.19.4.linux-amd64.tar.gz -C /usr/local
 	mkdir /usr/local/go/libs
 	vim + ~/.profile
 export GOROOT=/usr/local/go
@@ -37,10 +37,10 @@ Windows
 	choco install go
 	scoop install go
 Installer
-	wget https://go.dev/dl/go1.19.3.windows-amd64.msi
-	sha256sum go1.19.3.windows-amd64.msi
+	wget https://go.dev/dl/go1.19.4.windows-amd64.msi
+	sha256sum go1.19.4.windows-amd64.msi
 d2e63b114c6bdd300078715e02589e3598f804c6b9d766a00a0a5c6a90a8ca89
-	start go1.19.3.windows-amd64.msi
+	start go1.19.4.windows-amd64.msi
 Binary at
 %USERPROFILE%\go\bin
 C:\Program Files\Go\bin

@@ -30,6 +30,10 @@ Install from a dump
 	brew bundle --file ~/Brewfile
 or move to the directory first
 	brew bundle
+Update
+	brew outdated > brew.txt
+	paste -sd ' ' brew.txt
+	brew upgrade
 
 Edit formulae
 https://stackoverflow.com/questions/3939651/how-do-i-modify-a-homebrew-formula

@@ -1,2 +1,15 @@
 How to Get a Verified Email Badge (Extremely Rare)
 https://www.youtube.com/watch?v=3ne0d37cZyc
+https://extrassl.actalis.it/portal/uapub/freemail?lang=en
+	7z x PKCS_12_Credential_*.zip
+	start PKCS_12_Credential_*.pfx
+
+Install intermediate certificates
+Windows
+Manage user certificates
+	Personal -> Certificates
+Double click certificate
+	Certification Path -> middle node -> View Certificate -> Details
+Copy to File
+Actalis Client Authentication CA G3
+DER .cer
