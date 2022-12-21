@@ -26,9 +26,9 @@ https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
 https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
 https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
 	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev libttfautohint-dev
-	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-54.tar.gz
-	tar xf 7.1.0-54.tar.gz
-	cd ImageMagick-7.1.0-54
+	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-55.tar.gz
+	tar xf 7.1.0-55.tar.gz
+	cd ImageMagick-7.1.0-55
 	./configure --with-modules --with-fontconfig=yes --with-freetype=yes --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
 If using jpeg-xl. See ~/images/jpegxl.txt
 https://github.com/ImageMagick/ImageMagick/issues/3236
@@ -51,6 +51,9 @@ Vertical
 Horizontal
 	convert +append in-*.jpg out.jpg
 	convert +append -gravity center -background "#16202A" Screenshot_20211203-192* out.png
+-smush offset
+Appends an image sequence together ignoring transparency.
+	convert +smush 5 -gravity center -bordercolor "grey" -border 10x20 -background "#16202A" Screenshot_20211203-192* out.png
 
 SVG to PNG
 	convert drawing.svg -size 2000x3000 drawing.png

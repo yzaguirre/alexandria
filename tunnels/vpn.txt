@@ -6,3 +6,15 @@ http://www.softether.org/9-about/News/800-open-source
 
 http://unix.stackexchange.com/questions/57656/how-to-access-a-machine-behind-a-restricted-nat-gateway-i-dont-manage
 http://superuser.com/questions/121435/is-it-possible-to-host-a-web-server-from-behind-a-nat
+
+Watchguard
+https://www.watchguard.com
+	wget https://cdn.watchguard.com/SoftwareCenter/Files/MUVPN_SSL/12_7_2/WG-MVPN-SSL_12_7_2.exe
+	Get-FileHash -A SHA1 WG-MVPN-SSL_12_7_2.exe
+2beb1c5704880fef73cc68e75e807c441862482d
+	start WG-MVPN-SSL_12_7_2.exe
+Installed at
+C:\Program Files (x86)\WatchGuard\WatchGuard Mobile VPN with SSL
+TAP-Windows Provider V9 Networks adapters
+	Set-Service -name wgsslvpnsrc -startuptype 'manual'
+	Stop-Service wgsslvpnsrc

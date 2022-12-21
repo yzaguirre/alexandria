@@ -1,6 +1,9 @@
 https://github.com/in3rsha/sha256-animation
 https://news.ycombinator.com/item?id=23165333
 
+NIST Retires SHA-1 Cryptographic Algorithm
+https://news.ycombinator.com/item?id=34001347
+
 7-zip
 https://sevenzip.osdn.jp/chm/cmdline/commands/hash.htm
 Supported methods: CRC32, CRC64, SHA1, SHA256, BLAKE2sp

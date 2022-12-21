@@ -1,0 +1,25 @@
+https://ocaml.org
+https://github.com/ocaml/ocaml
+	add-apt-repository ppa:avsm/ppa
+	apt install opam
+Debian (stable, testing and unstable)
+	apt-get install opam
+Windows
+https://github.com/diskuv/dkml-installer-ocaml
+https://ocaml.org/docs/up-and-running#installation-for-windows
+	winget install Diskuv.opam
+	choco install ocaml
+Homebrew
+	brew install opam
+
+Initialising opam on Unix
+	opam init
+	eval $(opam env)
+	ocaml -version
+Specific version of OCaml
+	opam switch create 4.14.0
+	eval $(opam env)
+
+OCaml 5.0 Multicore is out
+https://github.com/ocaml/ocaml/releases/tag/5.0.0
+https://news.ycombinator.com/item?id=34014073

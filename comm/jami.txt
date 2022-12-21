@@ -1,0 +1,16 @@
+Jami (formerly Ring and SFLphone) is a free distributed multimedia communication software
+https://jami.net
+https://f-droid.org/en/packages/cx.ring/
+https://git.jami.net/savoirfairelinux/jami-client-android
+	wget https://dl.jami.net/ring-manual/ubuntu_22.10/jami-all_amd64.deb
+	dpkg -i jami-all_amd64.deb
+Windows
+	choco install jami
+Binary
+	wget https://dl.jami.net/windows/jami.release.x64.msi
+	start jami.release.x64.msi
+Homebrew
+	brew install jami
+
+Jami - An Open Source, Peer-to-Peer, Audio, Video, Conferencing, Chat, and Screen Sharing System.
+https://www.youtube.com/watch?v=2Wi99K33qrw

@@ -1,7 +1,8 @@
-https://svelte.dev/
+https://svelte.dev
 https://svelte.dev/blog/whats-new-in-svelte-december-2020
 https://news.ycombinator.com/item?id=25288043
-https://sapper.svelte.dev/
+The next small thing in web development
+https://sapper.svelte.dev
 	# for Rollup
 	npx degit "sveltejs/sapper-template#rollup" my-app
 	# for webpack

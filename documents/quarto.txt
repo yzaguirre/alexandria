@@ -1,0 +1,36 @@
+Quarto® is an open-source scientific and technical publishing system built on Pandoc
+https://quarto.org
+https://news.ycombinator.com/item?id=30042831
+Create dynamic content with Python, R, Julia, and Observable.
+Author documents as plain text markdown or Jupyter notebooks.
+	wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.280/quarto-1.2.280-linux-amd64.deb
+	sha256sum quarto-1.2.280-linux-amd64.deb
+	dpkg -i quarto-1.2.280-linux-amd64.deb
+0bf2a9b3e3bef0565c69fb6ba4e66a7787be58d9632fec44934a311190fe1615
+Windows
+	choco install quarto
+	winget install RStudio.quarto
+Binary
+	wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.280/quarto-1.2.280-win.msi
+	Get-FileHash -A SHA256 quarto-1.2.280-win.msi
+	start quarto-1.2.280-win.msi
+e6f82cdd8e3e3c18502e4edb9e439dbca462a8e97be16a311ce8cca6eb4f122c
+Homebrew
+	brew install quarto
+Binary
+	wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.280/quarto-1.2.280-macos.pkg
+	shasum -a 256 quarto-1.2.280-macos.pkg
+db72c33eda1c69adc2f2c7aec342f60b90a4e104f6c583e4c25e370e626c6941
+	open quarto-1.2.280-macos.pkg
+
+Jupyter usage
+https://quarto.org/docs/get-started/hello/jupyter.html
+See ../datascience/jupyter.txt
+	sudo -H pip install -U jupyter matplotlib plotly
+	wget https://quarto.org/docs/get-started/hello/_hello.ipynb
+	python -m jupyter lab hello.ipynb
+
+Usage
+Note that the target file (in this case hello.ipynb) should always be the very first command line argument.
+	quarto render hello.ipynb --to html
+	quarto render hello.ipynb --to docx

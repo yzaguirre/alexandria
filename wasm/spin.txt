@@ -1,0 +1,12 @@
+Develop serverless WebAssembly apps with Spin
+https://www.fermyon.com/spin
+https://github.com/fermyon/spin
+https://bytecodealliance.org
+Create, build, test, and deploy an app in just a few minutes.
+	wget https://github.com/fermyon/spin/releases/download/v0.6.0/spin-v0.6.0-linux-amd64.tar.gz
+	wget https://github.com/fermyon/spin/releases/download/v0.6.0/checksums-v0.6.0.txt
+	sha256sum -c --ignore-missing checksums-v0.6.0.txt
+	tar xf spin-v0.6.0-linux-amd64.tar.gz -C /usr/local/bin spin
+Windows
+	wget https://github.com/fermyon/spin/releases/download/v0.6.0/spin-v0.6.0-windows-amd64.zip
+	7z x -o"..\bin" spin-v0.6.0-windows-amd64.zip spin.exe

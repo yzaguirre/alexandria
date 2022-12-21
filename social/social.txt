@@ -7,3 +7,11 @@ twitter - 2:20, 140
 whatsapp - 2:50, 170
 	ffmpeg -ss 14:28.436 -t 140 -i '.\video.mp4' -c:v h264_nvenc -y out.mp4
 	ffmpeg -ss 14:28.436 -t 170 -i '.\video.mp4' -c:v h264_nvenc -y out.mp4
+Scale for whatsapp
+	ffmpeg -ss 14:28.436 -t 170 -i '.\video.mp4' -vf scale=640:352 -c:v h264_nvenc -y out.mp4
+Images
+	convert +append -gravity center -bordercolor "grey" -border 10x20 -background "#16202A" Screenshot_20211203-192* out.png
+	convert +smush 5 -gravity center -bordercolor "grey" -border 10x20 -background "#16202A" Screenshot_20211203-192* out.png
+
+See ../video/ffmpeg.txt
+../images/imagemagick.txt

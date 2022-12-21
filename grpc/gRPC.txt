@@ -1,6 +1,7 @@
-https://grpc.io/
+https://grpc.io
 https://docs.microsoft.com/es-es/aspnet/core/grpc/?view=aspnetcore-5.0
 https://github.com/grpc/grpc-dotnet/tree/master/examples
+See ../tsx/trpc.txt
 
 REST vs GraphQL vs gRPC
 https://www.danhacks.com/software/grpc-rest-graphql.html

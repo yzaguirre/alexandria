@@ -1,0 +1,7 @@
+Actix Web is a powerful, pragmatic, and extremely fast web framework for Rust
+https://actix.rs
+	cargo add actix-web serde_json
+	cargo add serde --features derive
+
+Fast Rest API - Rust + Actix Web (2022)
+https://www.youtube.com/watch?v=Ziq3vu63pAU

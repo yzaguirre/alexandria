@@ -13,3 +13,8 @@ Automatic subs
 Edit subtitles into the video
 	yt-dlp --write-subs --write-auto-subs --embed-subs --sub-format best --sub-langs "es" http://www.youtube.com/watch?v=
 
+Configuration at
+/home/david/.config/yt-dlp/config
+/home/david/.config/yt-dlp.conf
+C:\Users\DAVIDY~1\AppData\Roaming\yt-dlp\config
+C:\Users\DAVIDY~1\AppData\Roaming\yt-dlp\config.txt

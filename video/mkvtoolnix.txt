@@ -1,0 +1,13 @@
+MKVToolNix is a set of tools to create, alter and inspect Matroska files
+under Linux, other Unices and Windows.
+https://mkvtoolnix.download
+	sudo wget -O /usr/share/keyrings/gpg-pub-moritzbunkus.gpg https://mkvtoolnix.download/gpg-pub-moritzbunkus.gpg
+	vim /etc/apt/sources.list.d/mkvtoolnix.download.list
+deb [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/ubuntu/ kinetic main
+deb-src [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/ubuntu/ kinetic main
+	apt install mkvtoolnix mkvtoolnix-gui
+Windows
+	choco install mkvtoolnix
+	winget install MoritzBunkus.MKVToolNix
+Homebrew
+	brew install mkvtoolnix

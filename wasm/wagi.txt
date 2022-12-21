@@ -1,0 +1,30 @@
+Write HTTP handlers in WebAssembly with a minimal amount of work
+https://github.com/deislabs/wagi
+	wget https://github.com/deislabs/wagi/releases/download/v0.8.1/wagi-v0.8.1-linux-amd64.tar.gz
+	tar xf wagi-v0.8.1-linux-amd64.tar.gz -C /usr/local/bin wagi
+Windows
+	wget https://github.com/deislabs/wagi/releases/download/v0.8.1/wagi-v0.8.1-windows-amd64.tar.gz
+	tar xf wagi-v0.8.1-windows-amd64.tar.gz -C "..\bin" wagi.exe
+MacOS
+	wget https://github.com/deislabs/wagi/releases/download/v0.8.1/wagi-v0.8.1-macos-amd64.tar.gz
+	tar xf wagi-v0.8.1-macos-amd64.tar.gz -C ../bin wagi
+Verify
+	shasum -a 256 wagi-v0.8.1-*
+5e813b102dcc46ea0be1ae6aaaa84fb73fd4793e8830c6b91dbf67c31f15ae32  wagi-v0.8.1-linux-aarch64.tar.gz
+fd1fae6dfdbff26cb077e46bff55d8a744d566a8d5932019366ac6f260a1351f  wagi-v0.8.1-linux-amd64.tar.gz
+29d45fb6b0e35b692f4b5775090a8b54e13181c038e1f1e529249be7d53094a4  wagi-v0.8.1-macos-amd64.tar.gz
+a6d296f776b51ea47d15d0d40a27e31c3b1ef2fb7be72add221090ce49bce3cc  wagi-v0.8.1-windows-amd64.tar.gz
+
+Updates on WAGI
+https://deislabs.io/posts/wagi-updates/
+
+Usage
+	wagi -V
+	wagi --help
+	vim api.toml
+[[module]]
+route = "/api/awesome"
+module = "./bin/debug/net7.0/mywasiapp.wasm"
+	wagi -c helloworld.wasm
+Go to
+http://127.0.0.1/api/awesome

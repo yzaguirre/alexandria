@@ -92,3 +92,6 @@ largeHeap
 https://stackoverflow.com/questions/13799623/androidlargeheap-true-not-working
 https://stackoverflow.com/questions/17054454/androidlargeheap-true-convention
 https://stackoverflow.com/questions/27396892/what-are-advantages-of-setting-largeheap-to-true
+
+Style Your Android App UI According To The Colors Of An Image Using The Color Palette API
+https://www.youtube.com/watch?v=FwKGnVo-JJQ

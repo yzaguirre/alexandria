@@ -53,6 +53,12 @@ Windows
 	winget install Rustlang.Rustup
 	choco install rustup.install
 
+Visual Studio Code Rust-analyzer
+https://stackoverflow.com/questions/72062935/rust-analyzer-failed-to-discover-workspace-in-vscode
+"[rust]": {
+	"editor.defaultFormatter": "rust-lang.rust-analyzer"
+}
+
 Usage
 	rustup --version
 	rustup toolchain list
@@ -151,7 +157,7 @@ If your project contains unit tests, it can execute them for you by using
 	cargo t
 
 Add dependencies
-https://crates.io/
+https://crates.io
 https://github.com/toml-lang/toml
 Edit Cargo.toml with
 [dependencies]

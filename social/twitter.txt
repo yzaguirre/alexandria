@@ -107,3 +107,9 @@ https://news.ycombinator.com/item?id=32824504
 
 The search for dirt on Mudge
 https://news.ycombinator.com/item?id=32823548
+ElonJet Is Now Suspended
+https://news.ycombinator.com/item?id=33983878
+
+Twitter archiver: Make your own simple, public, searchable Twitter archive
+https://github.com/dariusk/twitter-archiver
+https://news.ycombinator.com/item?id=34056378

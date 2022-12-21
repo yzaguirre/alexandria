@@ -28,16 +28,16 @@ Install
 	apt install neovim
 	nvim
 DEB
-	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
-	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb.sha256sum
+	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb
+	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb.sha256sum
 	sha256sum -c nvim-linux64.deb.sha256sum
 	dpkg -i nvim-linux64.deb
 Windows
 	winget install Neovim.Neovim
 	choco install neovim
 Binaries
-	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-win64.msi
-	wget https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-win64.msi.sha256sum
+	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-win64.msi
+	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-win64.msi.sha256sum
 	sha256sum -c --ignore-missing nvim-win64.msi.sha256sum
 	start nvim-win64.msi
 Installed at
@@ -51,7 +51,12 @@ Configuration at
 /etc/xdg/nvim/init.vim
 /Users/david/.config/nvim/init.lua
 C:\Users\DAVIDY~1\AppData\Local\nvim\init.vim
+C:\Users\DAVIDY~1\AppData\Local\nvim\init.lua
+C:\Users\DAVIDY~1\AppData\Local\nvim-data
 	:edit $MYVIMRC
+Backup
+C:\Users\David Yzaguirre\AppData\Local\
+7z a C:\Users\DAVIDY~1\Backups\nvim-20221218.zip nvim
 
 https://media.pragprog.com/titles/modvim/switch.pdf
 	vim ~/.bash_aliases
@@ -91,3 +96,6 @@ Minimal configuration for the best text editor
 https://www.youtube.com/watch?v=rDRZEd5v3y0
 Neovim Setup 2022 | #coding #tutorial #development
 https://www.youtube.com/watch?v=t8GzWrs7Ff0
+
+Color scheme
+https://github.com/rose-pine/neovim

@@ -1,0 +1,39 @@
+Fast SQL for time series
+QuestDB is the fastest open source time series database
+https://questdb.io
+https://github.com/questdb/questdb
+	wget https://github.com/questdb/questdb/releases/download/6.6.1/questdb-6.6.1-no-jre-bin.tar.gz
+	tar xf questdb-6.6.1-no-jre-bin.tar.gz -C ..\bin --strip-components=1
+Homebrew
+	brew install questdb
+
+Configuration at root directory
+conf/server.conf
+
+Root directory
+$HOME/.questdb
+C:\Windows\System32\qdbroot
+/opt/homebrew/var/questdb
+
+Usage
+Interactive
+	questdb.exe
+Open
+http://localhost:9000/
+Install the Windows QuestDB service. The service will start automatically at startup.
+	questdb.exe install
+Removes the Windows QuestDB service. It will no longer start at startup.
+	questdb.exe remove
+Service
+	./questdb.sh start
+	questdb.exe start
+
+Upgrade QuestDB version
+	./questdb.sh stop
+	questdb.exe stop
+Overwrite the binaries folder with new binaries
+	./questdb.sh start
+	questdb.exe start
+
+QuestDB 🛡️ The Time Traveler's Database (Open Source)
+https://www.youtube.com/watch?v=A8uMF64rbS8

@@ -215,7 +215,7 @@ comm
 https://ekiga.im/
 http://www.linphone.org/
 http://yateclient.yate.ro/
-http://sflphone.org/
+https://jami.net
 
 GPS
 http://owntracks.org/

@@ -217,6 +217,10 @@ Diff Against the Previous Commit
 Send signed tags
 	git tag -s
 	git push origen --follow-tags
+Move tag to latest commit
+https://stackoverflow.com/questions/8044583/how-can-i-move-a-tag-on-a-git-branch-to-a-different-commit#8044605
+	git tag -fas <tagname>
+	git push origin --tags
 
 Add origin
 	git remote add origin git@server:yzaguirre/CustomerScaffold.git

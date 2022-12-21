@@ -1,0 +1,6 @@
+https://forgejo.org
+https://codeberg.org/forgejo/forgejo
+
+Codeberg launches Forgejo - Gitea fork
+https://blog.codeberg.org/codeberg-launches-forgejo.html
+https://news.ycombinator.com/item?id=34011581

@@ -12,7 +12,7 @@ compile it here https://wiki.filezilla-project.org/Cross_Compiling_FileZilla_3_f
 tftpd
 trivial ftp server
 
-http://www.proftpd.org/
+http://www.proftpd.org
 	apt install proftpd-basic
 http://www.proftpd.org/docs/howto/ConfigFile.html
 edit

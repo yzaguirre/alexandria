@@ -1,0 +1,11 @@
+TypeScript-first schema validation with static type inference
+https://zod.dev
+https://github.com/colinhacks/zod
+	yarn add zod
+
+The best TypeScript library just got better
+https://www.youtube.com/watch?v=CughWjaoXZw
+
+import { z } from "zod";
+// creating a schema for strings
+const mySchema = z.string();

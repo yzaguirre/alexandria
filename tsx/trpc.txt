@@ -1,0 +1,5 @@
+🧙‍♀️ Move Fast and Break Nothing.
+End-to-end typesafe APIs made easy.
+https://trpc.io
+https://github.com/trpc/trpc
+	yarn create next-app --example https://github.com/trpc/trpc --example-path examples/next-prisma-starter trpc-prisma-starter

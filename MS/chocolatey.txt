@@ -22,5 +22,5 @@ Update
 List upgradable
 	choco outdated
 
-CHoco cleaner
+Choco cleaner
 https://superuser.com/questions/1371668/how-to-clear-chocolatey-cache-in-the-free-version

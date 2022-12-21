@@ -64,3 +64,21 @@ Ask HN: Why isn't there something like Let's Encrypt for document signing?
 https://news.ycombinator.com/item?id=33921115
 e-Signing as an everyday service
 https://www.dokobit.com
+
+Digitally sign PDF files from your commandline
+https://www.openpdfsign.org
+https://github.com/open-pdf-sign/open-pdf-sign
+https://news.ycombinator.com/item?id=34051652
+See jsignpdf.txt
+	wget https://github.com/open-pdf-sign/open-pdf-sign/releases/download/v0.1.0/open-pdf-sign.jar
+	java -jar open-pdf-sign.jar -i input.pdf -o output.pdf \
+     -c /etc/letsencrypt/live/openpdfsign.org/fullchain.pem \
+     -k /etc/letsencrypt/live/openpdfsign.org/privkey.pem
+In its default settings, the document is signed using an invisible electronic signature.
+In case you want to add a visible signature to the signed documents,
+you can use the --page, --logo, --hint and other options.
+	java -jar open-pdf-sign.jar -i input.pdf -o output.pdf \
+     -c /etc/letsencrypt/live/openpdfsign.org/fullchain.pem \
+     -k /etc/letsencrypt/live/openpdfsign.org/privkey.pem \
+     --page -1 --logo mylogo.png \
+     --hint "You can check the validity at signaturpruefung.gv.at"

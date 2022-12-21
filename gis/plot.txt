@@ -1,0 +1,3 @@
+A concise API for exploratory data visualization
+https://github.com/observablehq/plot
+https://news.ycombinator.com/item?id=33966057

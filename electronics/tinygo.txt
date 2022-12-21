@@ -4,7 +4,8 @@ Based on LLVM.
 https://tinygo.org
 https://github.com/tinygo-org/tinygo
 https://news.ycombinator.com/item?id=31636642
-See rust.txt ../golang/go.txt
+See rust.txt
+../golang/go.txt
 	apt install gcc-avr avr-libc avrdude
 	wget https://github.com/tinygo-org/tinygo/releases/download/v0.25.0/tinygo_0.25.0_amd64.deb
 	dpkg -i tinygo_0.25.0_amd64.deb

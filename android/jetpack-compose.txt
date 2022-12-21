@@ -4,3 +4,7 @@ https://medium.com/androiddevelopers/jetpack-compose-before-and-after-8b43ba0b7d
 
 How To Use The Jetpack Proto DataStore With Kotlin Support | Android Tutorial
 https://www.youtube.com/watch?v=UD6e-HmU-4I
+I Bet You DON'T Know These 3 Performance Optimizations for your Jetpack Compose UI
+https://www.youtube.com/watch?v=EVVFhyuVV5g
+Simple Login UI with Background Video in Jetpack Compose
+https://www.youtube.com/watch?v=-oT9-IbPQWY

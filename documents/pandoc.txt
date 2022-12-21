@@ -1,6 +1,7 @@
 https://pandoc.org
 https://github.com/jgm/pandoc
 See djot.txt
+quarto.txt
 Install
 	apt install latex-beamer pandoc liblua5.1-0 texlive-math-extra
 Ubuntu

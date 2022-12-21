@@ -397,7 +397,9 @@ FFMPEG Advanced Techniques Pt2 - Filtergraphs & Timeline
 https://www.youtube.com/watch?v=hElDsyuAQDA
 
 Lossless-cut
+https://mifi.no/losslesscut/
 https://github.com/mifi/lossless-cut
+https://news.ycombinator.com/item?id=33969490
 	wget https://github.com/mifi/lossless-cut/releases/download/v3.47.1/LosslessCut-linux-x64.tar.bz2
 	tar xf LosslessCut-linux-x64.tar.bz2 -C /opt
 Add to PATH environment variable

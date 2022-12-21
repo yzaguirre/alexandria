@@ -1,0 +1,5 @@
+https://zentyal.com
+	wget https://download02.public.zentyal.com/zentyal-7.0-development-amd64.iso
+
+Episode 6 - An Open Source Domain Controller and Active Directory system with Zentyal!
+https://www.youtube.com/watch?v=RZfybZVE6Lo

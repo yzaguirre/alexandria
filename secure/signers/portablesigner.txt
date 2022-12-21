@@ -1,4 +1,4 @@
-http://portablesigner.sourceforge.net/
+http://portablesigner.sourceforge.net
 https://github.com/pflaeging/PortableSigner2
 GUI and commandline tool for Linux, OSX, and Windows 
 PortableSigner is a signing (with X.509 certificates) program for PDF files.

@@ -1,0 +1,29 @@
+https://traggo.net
+https://github.com/traggo/server
+	wget https://github.com/traggo/server/releases/download/v0.2.3/traggo-server-0.2.3-linux-amd64.zip
+	mkdir /opt/traggo
+	7zz x -o"/opt/traggo" traggo-server-0.2.3-linux-amd64.zip traggo-server-0.2.3-linux-amd64
+	mv /opt/traggo/{traggo-server-0.2.3-linux-amd64,traggo}
+	chmod +x /opt/traggo/traggo
+	chown -R david:david /opt/traggo
+Windows
+	wget https://github.com/traggo/server/releases/download/v0.2.3/traggo-server-0.2.3-windows-amd64.exe.zip
+	7z x -o"..\bin" traggo-server-0.2.3-windows-amd64.exe.zip traggo-server-0.2.3-windows-amd64.exe
+	mv ..\bin\traggo-server-0.2.3-windows-amd64.exe ..\bin\traggo.exe
+
+Configuration at
+https://traggo.net/config/
+./.env.local
+./.env
+/home/david/.config/traggo/server.ini
+/etc/traggo/server.ini
+
+Default user
+admin:admin
+
+Data at
+/opt/traggo/data/traggo.db
+./data/traggo.db
+
+Traggo - Open Source, Self Hosted, simple yet powerful time tracking for your business needs.
+https://www.youtube.com/watch?v=5jVcM3RjhE0

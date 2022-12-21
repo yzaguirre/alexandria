@@ -3,3 +3,4 @@ https://github.com/WiseLibs/better-sqlite3
 	npm install better-sqlite3
 
 See ../js/sqlite.txt
+../tsx/prisma.txt

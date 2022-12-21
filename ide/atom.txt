@@ -1,6 +1,8 @@
 https://github.com/atom/atom
-Disable "metrics" package
+Atom was archived today
+https://news.ycombinator.com/item?id=34010065
 
+Disable "metrics" package
 Editrconfig
 https://atom.io/packages/editorconfig
 	apm install editorconfig

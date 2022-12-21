@@ -4,6 +4,7 @@ https://github.com/wasmerio/wasmer
 https://news.ycombinator.com/item?id=27537541
 https://wasmer.io/posts/announcing-wasmer-3.0
 https://news.ycombinator.com/item?id=33721685
+See ../wasm/wasm.txt
 	curl https://get.wasmer.io -sSfL | sh
 Windows
 	winget install Wasmer.Wasmer

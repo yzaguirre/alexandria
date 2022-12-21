@@ -1,13 +1,15 @@
 PDF signing software written in Java.
 It supports visible signatures, timestamping,
 certificate verification and many other cool features
-http://jsignpdf.sourceforge.net/
+http://jsignpdf.sourceforge.net
 https://github.com/kwart/jsignpdf
 Install
-	unzip JSignPdf-1.6.1.zip -d /VMs/opt/
+	unzip JSignPdf-2.2.0.zip -d /VMs/opt/
 	cd /VMs/opt
-	mv jsignpdf{-1.6.1,}
+	mv jsignpdf{-2.2.0,}
 	cd jsignpdf
+Windows
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming" jsignpdf-2.2.0.zip
 Tried case JSignPDF
 https://superuser.com/questions/653231/embed-a-gpg-signature-in-a-pdf-file
 

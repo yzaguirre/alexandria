@@ -94,3 +94,6 @@ https://twitter.com/carlosazaustre/status/1494197961185759234
 
 Complaints mount after GitHub launches new algorithmic feed
 https://news.ycombinator.com/item?id=30788364
+
+https://github.blog/changelog/2022-12-19-tencent-wechat-is-now-a-github-secret-scanning-partner/
+https://news.ycombinator.com/item?id=34063390

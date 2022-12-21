@@ -1,6 +1,7 @@
 https://github.com/toggl-open-source/toggldesktop
-	wget https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.189/toggldesktop_7.5.189_amd64.deb
-	dpkg -i toggldesktop_7.5.189_amd64.deb
+See traggo.txt
+	wget https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.363/toggldesktop_7.5.363_amd64.deb
+	dpkg -i toggldesktop_7.5.363_amd64.deb
 Windows
-	wget https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.189/TogglDesktopInstaller-x64-7.5.189.exe
-	explorer TogglDesktopInstaller-x64-7.5.189.exe
+	wget https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.363/TogglDesktopInstaller-x64-7.5.363.exe
+	start TogglDesktopInstaller-x64-7.5.363.exe

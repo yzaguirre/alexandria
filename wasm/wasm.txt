@@ -1,3 +1,28 @@
+https://webassembly.sh
+	wapm upload
+
 mod_wasm: Run WebAssembly with Apache
 https://wasmlabs.dev/articles/apache-mod-wasm/
 https://news.ycombinator.com/item?id=33068978
+
+See wasmer.txt
+wasmtime.txt
+../web/wgpu.txt
+
+WASI is the new kid on the block.
+https://www.youtube.com/watch?v=97yJtD5FKe4
+
+.NET demo
+https://github.com/SteveSandersonMS/dotnet-wasi-sdk
+	dotnet new console -o mywasiapp
+	cd mywasiapp
+	code.cmd .
+	dotnet run
+Add WASM file
+	dotnet add package wasi.sdk --prerelease
+Added to mywasiapp.csproj
+	dotnet run
+	dotnet build
+See bin\Debug\net7.0\mywasiapp.wasm
+	wasmtime run .\bin\Debug\net7.0\mywasiapp.wasm
+	wasmer .\bin\Debug\net7.0\mywasiapp.wasm

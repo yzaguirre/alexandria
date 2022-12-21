@@ -18,3 +18,11 @@ Change localhost to * and run:
 Remove port rule
 	netsh http delete urlacl url=http://*:62555/
 	netsh advfirewall firewall delete rule name="IIS Express (non-SSL)"
+
+401 Unauthorized: Access is denied due to invalid credentials
+https://stackoverflow.com/questions/13279593/401-unauthorized-access-is-denied-due-to-invalid-credentials
+1 IIS Manager → Sites → Website
+2 Double click "Authentication"
+3 Select Anonymous Authentication
+4 From the Actions panel, select Edit
+5 Select Application pool Identity and click ok

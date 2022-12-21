@@ -1,0 +1,6 @@
+TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
+https://github.com/microsoft/TypeScript
+	npm install -g typescript
+
+const modifiers make generics a LOT easier
+https://www.youtube.com/watch?v=hk6ZkD0Vg3w

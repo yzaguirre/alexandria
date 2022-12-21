@@ -1,0 +1,12 @@
+Emscripten: An LLVM-to-WebAssembly Compiler
+https://emscripten.org
+https://github.com/emscripten-core/emscripten
+Windows
+Instead of running emscripten on Windows directly,
+you can use the Windows Subsystem for Linux to run it in a Linux environment.
+	choco install emscripten
+Homebrew
+	brew install emscripten
+
+Usage
+	emsdk
