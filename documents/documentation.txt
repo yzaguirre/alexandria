@@ -21,3 +21,7 @@ It's never been easier to document your things!
 https://www.docz.site
 https://github.com/pedronauck/docz
 See ./docz.txt
+
+Unbundling Tools for Thought
+https://borretti.me/article/unbundling-tools-for-thought
+https://news.ycombinator.com/item?id=34137751

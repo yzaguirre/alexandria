@@ -1,6 +1,6 @@
 Other clients
 http://gpg4win.org/download.html
-	winget install gpg4win
+	winget install GnuPG.Gpg4win
 Installed at C:\Program Files (x86)\Gpg4win\bin
 and at C:\Program Files (x86)\GnuPG\bin
 Only gpg cli

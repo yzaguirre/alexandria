@@ -2,6 +2,12 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 Version: 15.0.18424.0
 	winget install Microsoft.SQLServerManagementStudio
 	choco install sql-server-management-studio
+	Set-Service -name 'SQLWriter' -startuptype 'manual'
+
+Log at
+https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-vss-writer-logging?view=sql-server-ver16
+C:\Program Files\Microsoft SQL Server\90\Shared\SqlWriterLogger.txt
+
 Restore a database
 https://stackoverflow.com/questions/19624189/backup-log-cannot-be-performed-because-there-is-no-current-database-backup
 Right click on Databases > Restore Database > General : Device: [the path of back up file] ---> OK

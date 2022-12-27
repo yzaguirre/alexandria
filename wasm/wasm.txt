@@ -26,3 +26,7 @@ Added to mywasiapp.csproj
 See bin\Debug\net7.0\mywasiapp.wasm
 	wasmtime run .\bin\Debug\net7.0\mywasiapp.wasm
 	wasmer .\bin\Debug\net7.0\mywasiapp.wasm
+
+WebAssembly: Docker Without Containers
+https://wasmlabs.dev/articles/docker-without-containers/
+https://news.ycombinator.com/item?id=34078532

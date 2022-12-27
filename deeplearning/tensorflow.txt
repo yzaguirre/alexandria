@@ -45,3 +45,13 @@ https://teachablemachine.withgoogle.com
 https://playground.tensorflow.org
 Neural Networks Made Simple with Tensorflow Playground
 https://www.youtube.com/watch?v=rti0Ozfeqn8
+
+TensorFlow Datasets
+https://github.com/tensorflow/datasets
+https://www.tensorflow.org/datasets/catalog/overview#all_datasets
+https://news.ycombinator.com/item?id=34079690
+Alternative datasets
+https://www.kaggle.com/datasets
+For computer vision, there are 100k+ open source classification, object detection, and segmentation datasets available on Roboflow Universe: https://universe.roboflow.com
+Hugging Face Datasets - there's 16k+ of them today
+https://huggingface.co/datasets

@@ -16,3 +16,6 @@ Windows
 
 What is Meson (and Ninja)? [Build system for C/C++, Rust, and Java]
 https://www.youtube.com/watch?v=A3Pq3E1S8ss
+
+Meson 1.0 Build System
+https://mesonbuild.com/Release-notes-for-1-0-0.html

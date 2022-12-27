@@ -1,21 +1,25 @@
 Nim is a statically typed compiled systems programming language.
 It combines successful concepts from mature languages like Python,
 Ada and Modula.
-https://nim-lang.org/
-https://conf.nim-lang.org/
+https://nim-lang.org
+https://conf.nim-lang.org
 https://www.youtube.com/channel/UCDAYn_VFt0VisL5-1a5Dk7Q/videos
 https://news.ycombinator.com/item?id=27604798
+https://nim-lang.org/blog/2022/12/21/version-20-rc.html
+https://news.ycombinator.com/item?id=34086739
 
 Install
 	apt install nim
 Download
-	wget https://nim-lang.org/download/nim-1.4.8-linux_x64.tar.xz
-	wget https://nim-lang.org/download/nim-1.4.8-linux_x64.tar.xz.sha256
-	sha256sum -c --ignore-missing nim-1.4.8-linux_x64.tar.xz.sha256
-	tar xf nim-1.4.8-linux_x64.tar.xz
-	cd nim-1.4.8
+	wget https://nim-lang.org/download/nim-1.6.10-linux_x64.tar.xz
+	wget https://nim-lang.org/download/nim-1.6.10-linux_x64.tar.xz.sha256
+	sha256sum -c --ignore-missing nim-1.6.10-linux_x64.tar.xz.sha256
+	tar xf nim-1.6.10-linux_x64.tar.xz
+	cd nim-1.6.10
 	./install.sh -h
 	sudo ./install.sh /usr/local/bin
 	nim --version
+Windows
+	choco install nim
 Homebrew
 	brew install nim

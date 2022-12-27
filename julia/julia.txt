@@ -33,3 +33,6 @@ and interactive visualizations.
 
 Simple reactive notebooks for Julia
 https://github.com/fonsp/Pluto.jl
+
+Julia in 100 Seconds
+https://www.youtube.com/watch?v=JYs_94znYy0

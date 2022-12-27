@@ -1,10 +1,10 @@
 https://docs.digitalocean.com/reference/doctl/
 https://github.com/digitalocean/doctl
 https://www.digitalocean.com/community/tutorials/how-to-use-doctl-the-official-digitalocean-command-line-client
-	wget https://github.com/digitalocean/doctl/releases/download/v1.90.0/doctl-1.90.0-linux-amd64.tar.gz
-	wget https://github.com/digitalocean/doctl/releases/download/v1.90.0/doctl-1.90.0-checksums.sha256
-	sha256sum -c --ignore-missing doctl-1.90.0-checksums.sha256
-	tar xf doctl-1.90.0-linux-amd64.tar.gz -C /usr/local/bin
+	wget https://github.com/digitalocean/doctl/releases/download/v1.91.0/doctl-1.91.0-linux-amd64.tar.gz
+	wget https://github.com/digitalocean/doctl/releases/download/v1.91.0/doctl-1.91.0-checksums.sha256
+	sha256sum -c --ignore-missing doctl-1.91.0-checksums.sha256
+	tar xf doctl-1.91.0-linux-amd64.tar.gz -C /usr/local/bin
 Windows
 	choco install doctl
 	scoop install doctl
@@ -17,11 +17,16 @@ Configuration at
 C:\Users\DAVIDY~1\AppData\Roaming\doctl\config.yaml
 
 Usage
+	doctl version
 	doctl auth init --context <NAME>
 	doctl auth list
 	doctl auth switch --context <NAME>
 	doctl account get
 Create an instante
 	doctl compute droplet create --region tor1 --image ubuntu-18-04-x64 --size s-1vcpu-1gb <DROPLET-NAME>
+	doctl compute droplet create --region nyc1 --image ubuntu-18-04-x64 --size s-1vcpu-1gb <DROPLET-NAME>
 Delete a droplet
 	doctl compute droplet delete <DROPLET-ID>
+
+Working with DOCTL - the Official DigitalOcean CLI
+https://www.youtube.com/watch?v=6EubUwP5gN0

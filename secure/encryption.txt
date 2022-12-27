@@ -1,3 +1,7 @@
+Show HN: Portable Secret - How I store my secrets and communicate privately
+https://mprimi.github.io/portable-secret/
+https://news.ycombinator.com/item?id=34083366
+
 https://sha256algorithm.com
 https://news.ycombinator.com/item?id=30244534
 

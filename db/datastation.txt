@@ -2,7 +2,14 @@ Easily query, script, and visualize data from every database, file, and API.
 https://datastation.multiprocess.io
 https://github.com/multiprocessio/datastation
 
+Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more.
 https://datastation.multiprocess.io/blog/2022-01-11-dsq.html
 https://github.com/multiprocessio/dsq
 https://news.ycombinator.com/item?id=29892463
-Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more.
+	wget https://github.com/multiprocessio/dsq/releases/download/v0.23.0/dsq-linux-x64-v0.23.0.zip
+	7zz x -o"/usr/local/bin" dsq-linux-x64-v0.23.0.zip
+Windows
+	wget https://github.com/multiprocessio/dsq/releases/download/v0.23.0/dsq-win32-x64-v0.23.0.zip
+	7z x -o"..\bin" dsq-win32-x64-v0.23.0.zip
+Homebrew
+	brew install dsq
