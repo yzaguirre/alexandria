@@ -5,3 +5,6 @@ https://actix.rs
 
 Fast Rest API - Rust + Actix Web (2022)
 https://www.youtube.com/watch?v=Ziq3vu63pAU
+
+https://www.reddit.com/r/rust/comments/zvvrl7/rocket_is_dead/
+https://steveklabnik.com/writing/a-sad-day-for-rust

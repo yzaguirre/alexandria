@@ -1,9 +1,14 @@
+The Dog API provides dog data as a service!
+https://dogapi.dog
+https://github.com/kinduff/dogapi.dog
+https://news.ycombinator.com/item?id=34147366
+
 Ask HN: Nested Resources in REST/HTTP API URLs?
 https://news.ycombinator.com/item?id=32506784
 
 https://twitter.com/degranda10/status/1295371218909040641
 
-https://developer.marvel.com/
+https://developer.marvel.com
 
 https://stackoverflow.com/questions/3521290/logout-get-or-post
 Use POST.

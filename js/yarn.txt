@@ -12,6 +12,9 @@ Homebrew
 Will install node.js
 	brew install yarn
 
+Yarn v2 (Berry)
+https://www.youtube.com/watch?v=bPae4Z8BFt8
+
 Yarn Package Manager Crash Course
 https://www.youtube.com/watch?v=g9_6KmiBISk
 

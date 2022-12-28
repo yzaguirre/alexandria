@@ -11,3 +11,7 @@ https://ditto-cp.sourceforge.io/
 https://github.com/sabrogden/Ditto
 	choco install ditto
 	winget install Ditto.Ditto
+
+📋 Cut, copy, and paste anything, anywhere, all from the terminal.
+https://github.com/Slackadays/Clipboard
+https://news.ycombinator.com/item?id=34144707

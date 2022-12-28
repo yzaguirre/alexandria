@@ -26,3 +26,13 @@ https://stackoverflow.com/questions/13279593/401-unauthorized-access-is-denied-d
 3 Select Anonymous Authentication
 4 From the Actions panel, select Edit
 5 Select Application pool Identity and click ok
+
+List site
+	appcmd list site
+Show list of applications created under Default Web Site
+	appcmd list app
+
+Deploy website on IIS using command prompt
+https://www.youtube.com/watch?v=3YRDhCpwyJA
+Located at C:\Windows\System32\inetsrv
+	appcmd add app /site.name:"Default Web Site" /path:/app1 /physicalPath:"D:\sample\project\WebSite5"
