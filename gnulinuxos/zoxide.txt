@@ -15,7 +15,7 @@ Homebrew
 Config at
 $XDG_DATA_HOME or $HOME/.local/share
 $HOME/Library/Application Support
-C:\Users\DAVIDY~1\AppData\Roaming
+C:\Users\DAVIDY~1\AppData\Roaming\zoxide
 
 Database at
 /home/david/.local/share
@@ -38,3 +38,8 @@ Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
     (zoxide init --hook $hook --cmd g powershell | Out-String)
 })
+
+Height option in windows
+https://github.com/junegunn/fzf/issues/782
+https://github.com/junegunn/fzf/issues/1198
+	export _ZO_FZF_OPTS="--reverse"

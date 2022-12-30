@@ -1,0 +1,33 @@
+Kalk, A calculator with math syntax, complex numbers
+https://kalker.xyz
+https://github.com/PaddiM8/kalker
+https://news.ycombinator.com/item?id=27333772
+See qalculate.txt
+	wget https://github.com/PaddiM8/kalker/releases/download/v2.0.1/kalker-linux
+	chmod u+x kalker-linux
+	mkdir /opt/kalker
+	mv kalker-linux /opt/kalker
+	ln -s /opt/kalker/kalker-linux /usr/local/bin/kalker
+Android
+	wget https://github.com/PaddiM8/kalker/releases/latest/download/kalker-android.apk
+	adb install kalker-android.apk
+	adb shell am start -S -n net.strct.kalker/net.strct.kalker.MainActivity
+Windows
+	winget install PaddiM8.kalker
+Binary
+	wget https://github.com/PaddiM8/kalker/releases/download/v2.0.1/kalker-windows.msi
+	start kalker-windows.msi
+Installed at
+C:\Program Files\Kalker
+	cpath add "C:\Program Files\Kalker"
+Homebrew
+	brew install kalker
+MacOS
+	wget https://github.com/PaddiM8/kalker/releases/download/v2.0.1/kalker-macOS.zip
+	unzip kalker-macOS.zip
+	mv target/release/kalker ~/bin
+
+Configuration at
+~/.config/kalker/
+~/Library/Application Support/kalker/ or ~/Library/Preferences/kalker
+C:\Users\DAVIDY~1\AppData\Roaming\kalker\

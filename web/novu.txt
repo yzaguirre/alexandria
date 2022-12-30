@@ -1,0 +1,6 @@
+The open-source notification infrastructure for products.
+Add a notification center for your React, Vue and Angular apps 🚀
+https://novu.co
+https://github.com/novuhq/novu
+https://news.ycombinator.com/item?id=34136381
+	npx novu init

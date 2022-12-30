@@ -32,3 +32,7 @@ article.dataset.columns // "3"
 Disable Zoom
 https://www.w3docs.com/snippets/css/how-to-disable-zoom-on-a-mobile-web-page-using-html-and-css.html
 <meta name="viewport" content="width=device-width, user-scalable=no">
+
+Smallest gif
+https://stackoverflow.com/questions/19126185/setting-an-image-src-to-empty
+<img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" width="0" height="0" alt="" />
