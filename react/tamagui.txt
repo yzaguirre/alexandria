@@ -6,3 +6,6 @@ https://github.com/tamagui/tamagui/issues/329
 	npx create-tamagui-app@latest createtest
 Add to project
 	yarn add tamagui react-native-web
+
+https://tamagui.dev/blog/version-one
+https://news.ycombinator.com/item?id=34186742
