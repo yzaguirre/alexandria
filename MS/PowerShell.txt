@@ -300,6 +300,9 @@ Remove App
 	Get-AppxPackage Microsoft.Zune* | Remove-AppxPackage
 Remove all builtin apps
 	Get-AppxPackage | Remove-AppxPackage
+Debloating Windows 10 with one command and no internet scripts
+https://news.ycombinator.com/item?id=34221653
+	Get-AppxPackage | Remove-AppxPackage -WhatIf
 
 Get IP address
 https://adamtheautomator.com/powershell-get-ip-address/

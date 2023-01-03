@@ -3,3 +3,6 @@ End-to-end typesafe APIs made easy
 https://trpc.io
 https://github.com/trpc/trpc
 See ../tsx/trpc.txt
+
+Why isn't JSON-RPC more widely adopted?
+https://news.ycombinator.com/item?id=34211796

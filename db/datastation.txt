@@ -1,6 +1,17 @@
 Easily query, script, and visualize data from every database, file, and API.
 https://datastation.multiprocess.io
 https://github.com/multiprocessio/datastation
+	wget https://github.com/multiprocessio/datastation/releases/download/0.11.0/datastation-linux-x64-0.11.0.zip
+	7zz x datastation-linux-x64-0.11.0.zip
+Windows
+	wget https://github.com/multiprocessio/datastation/releases/download/0.11.0/datastation-win32-x64-0.11.0.zip
+	7z x 
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\" datastation-win32-x64-0.11.0.zip
+	cd "C:\Users\DAVIDY~1\AppData\Roaming\"
+	mv "releases\DataStation Desktop CE-win32-x64" "DataStation Desktop CE"
+	start "DataStation Desktop CE\DataStation Desktop CE.exe"
+Configuration at
+C:\Users\DAVIDY~1\AppData\Roaming\DataStation Community Edition
 
 Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more.
 https://datastation.multiprocess.io/blog/2022-01-11-dsq.html

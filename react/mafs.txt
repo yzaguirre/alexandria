@@ -1,0 +1,8 @@
+React components for interactive math
+https://mafs.dev
+https://github.com/stevenpetryk/mafs
+https://news.ycombinator.com/item?id=34214896
+	yarn add mafs
+
+And then make sure to load the stylesheet:
+@import "mafs/build/index.css";

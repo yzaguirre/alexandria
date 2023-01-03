@@ -11,9 +11,9 @@ https://github.com/Genivia/ugrep#table-of-contents
 https://www.reddit.com/r/commandline/comments/tdfk4i/ugrep_375_released_announcing_the_google_ospb/
 	apt install ugrep
 Compile
-	wget https://github.com/Genivia/ugrep/archive/refs/tags/v3.7.10.tar.gz
-	tar xf v3.7.10.tar.gz
-	cd ugrep-3.7.10
+	wget https://github.com/Genivia/ugrep/archive/refs/tags/v3.9.3.tar.gz
+	tar xf v3.9.3.tar.gz
+	cd ugrep-3.9.3
 	./configure
 	make -j12
 	make install

@@ -12,6 +12,11 @@ NodeJS
 https://pola-rs.github.io/polars/nodejs-polars/html/index.html
 	yarn install nodejs-polars
 
+Polars: The Next Big Python Data Science Library... written in RUST?
+https://www.youtube.com/watch?v=VHqn7ufiilE
+Polars: Blazingly Fast DataFrames in Rust and Python
+https://www.youtube.com/watch?v=kVy3-gMdViM
+
 import polars as pl
 
 q = (

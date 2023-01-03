@@ -9,11 +9,11 @@ Restart apache2 web server
 	service apache2 restart
 Binary
 See ../../secure/hash.txt
-	wget https://sqlite.org/2022/sqlite-tools-linux-x86-3400000.zip
-	openssl dgst -sha3-256 sqlite-tools-linux-x86-3400000.zip
-	rhash --sha3-256 sqlite-tools-linux-x86-3400000.zip
-5777b71f6692ff0eaf586238f416a886b3b713d575bac237646ac150394471e4
-	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3400000.zip
+	wget https://sqlite.org/2022/sqlite-tools-linux-x86-3400100.zip
+	openssl dgst -sha3-256 sqlite-tools-linux-x86-3400100.zip
+	rhash --sha3-256 sqlite-tools-linux-x86-3400100.zip
+ee3f1e027637734c0c2dbc33d5e8fa5aba6f54cf4130fb8247cf37030ba1bc24
+	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3400100.zip
 Installs sqlite3, sqlite3_analyzer and sqldiff
 See sqldiff.txt
 Windows

@@ -1,14 +1,14 @@
 A fast and secure runtime for WebAssembly
 https://wasmtime.dev
 https://github.com/bytecodealliance/wasmtime
-	wget https://github.com/bytecodealliance/wasmtime/releases/download/v3.0.1/wasmtime-v3.0.1-x86_64-linux.tar.xz
-	tar xf wasmtime-v3.0.1-x86_64-linux.tar.xz -C /usr/local/bin wasmtime
+	wget https://github.com/bytecodealliance/wasmtime/releases/download/v4.0.0/wasmtime-v4.0.0-x86_64-linux.tar.xz
+	tar xf wasmtime-v4.0.0-x86_64-linux.tar.xz -C /usr/local/bin wasmtime
 Windows
-	wget https://github.com/bytecodealliance/wasmtime/releases/download/v3.0.1/wasmtime-v3.0.1-x86_64-windows.msi
-	start wasmtime-v3.0.1-x86_64-windows.msi
+	wget https://github.com/bytecodealliance/wasmtime/releases/download/v4.0.0/wasmtime-v4.0.0-x86_64-windows.msi
+	start wasmtime-v4.0.0-x86_64-windows.msi
 MacOS
-	wget https://github.com/bytecodealliance/wasmtime/releases/download/v3.0.1/wasmtime-v3.0.1-x86_64-macos.tar.xz
-	tar xf wasmtime-v3.0.1-x86_64-macos.tar.xz -C ../bin --strip-components=1 wasmtime-v3.0.1-x86_64-macos/wasmtime
+	wget https://github.com/bytecodealliance/wasmtime/releases/download/v4.0.0/wasmtime-v4.0.0-x86_64-macos.tar.xz
+	tar xf wasmtime-v4.0.0-x86_64-macos.tar.xz -C ../bin --strip-components=1 wasmtime-v4.0.0-x86_64-macos/wasmtime
 
 Usage
 	wasmtime -V
