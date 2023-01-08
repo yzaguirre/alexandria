@@ -2,6 +2,7 @@ Instagram is shifting to videos - users aren't happy
 https://news.ycombinator.com/item?id=32254090
 See youtube.txt
 twitter.txt
+../documents/pdf.txt
 Video limits
 twitter - 2:20, 140
 whatsapp - 2:50, 170
@@ -12,6 +13,10 @@ Scale for whatsapp
 Images
 	convert +append -gravity center -bordercolor "grey" -border 10x20 -background "#16202A" Screenshot_20211203-192* out.png
 	convert +smush 5 -gravity center -bordercolor "grey" -border 10x20 -background "#16202A" Screenshot_20211203-192* out.png
+PDF to image
+	pdftoppm Bulldog.pdf Bulldog -png
+Page 17
+	pdftoppm -f 17 -l 17 Bulldog.pdf Bulldog -png
 
 See ../video/ffmpeg.txt
 ../images/imagemagick.txt

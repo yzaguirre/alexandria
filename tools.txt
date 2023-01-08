@@ -542,7 +542,13 @@ monitorix
 
 Graphics
 gimp, blender, shellpic
-http://www.birdfont.org/
+web/bokeh.txt
+gis/plot.txt
+datascience/labplot.txt
+datascience/visidata.txt
+gnulinuxos/ph.txt
+
+http://www.birdfont.org
 	pip install Shellpic
 
 libreoffice, vlc, winrar, sublime_text, retroshare, notepad++, virtualbox, jitsi, linphone
@@ -698,3 +704,6 @@ Open Source Alternatives to Popular B2B Tools
 https://news.ycombinator.com/item?id=27915370
 
 https://www.reddit.com/r/AskReddit/comments/qxx50y/whats_an_extremely_useful_website_most_people/
+
+Alternatives to Scratch for a blind child?
+https://news.ycombinator.com/item?id=34229502

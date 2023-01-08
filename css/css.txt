@@ -13,3 +13,15 @@ padding-bottom: 50%;
 
 10 CSS Pro Tips - Code this, NOT that!
 https://www.youtube.com/watch?v=Qhaz36TZG5Y
+
+https://stackoverflow.com/questions/27842735/how-to-use-media-queries-correctly-to-reduce-font-size
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1.5em; 
+  }
+
+  table {
+    border: 8px solid green;
+    width: 85%;
+  }
+}

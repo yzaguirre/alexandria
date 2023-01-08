@@ -1,0 +1,14 @@
+C# as you know it but with Go-inspired tooling
+(small, selfcontained, and native executables)
+https://flattened.net
+https://github.com/bflattened/bflat
+https://news.ycombinator.com/item?id=34227943
+	wget https://github.com/bflattened/bflat/releases/download/v7.0.1/bflat-7.0.1-linux-glibc-x64.tar.gz
+	tar xf bflat-7.0.1-linux-glibc-x64.tar.gz -C /opt/bflat-bin
+Windows
+	wget https://github.com/bflattened/bflat/releases/download/v7.0.1/bflat-7.0.1-windows-x64.zip
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\bflat-bin" bflat-7.0.1-windows-x64.zip
+	path add "C:\Users\DAVIDY~1\AppData\Roaming\bflat-bin"
+
+Usage
+	bflat build --help

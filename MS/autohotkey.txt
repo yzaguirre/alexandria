@@ -1,0 +1,9 @@
+AutoHotkey
+macro-creation and automation-oriented scripting utility for Windows.
+https://www.autohotkey.com
+https://github.com/AutoHotkey/AutoHotkey
+	winget install Lexikos.AutoHotkey
+	choco install autohotkey.install
+
+https://www.autohotkey.com/v2/
+https://news.ycombinator.com/item?id=34248234

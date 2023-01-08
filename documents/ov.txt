@@ -1,0 +1,24 @@
+🎑Feature-rich terminal-based text viewer. It is a so-called terminal pager.
+https://noborus.github.io/ov/
+https://github.com/noborus/ov
+https://news.ycombinator.com/item?id=34242275
+See bat.txt
+	wget https://github.com/noborus/ov/releases/download/v0.13.0/ov_0.13.0-1_amd64.deb
+	wget https://github.com/noborus/ov/releases/download/v0.13.0/ov_0.13.0_checksums.txt
+	sha256sum -c --ignore-missing ov_0.13.0_checksums.txt
+	dpkg -i ov_0.13.0-1_amd64.deb
+Windows
+	wget https://github.com/noborus/ov/releases/download/v0.13.0/ov_0.13.0_windows_amd64.zip
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\ov-bin" ov_0.13.0_windows_amd64.zip
+	path add "C:\Users\DAVIDY~1\AppData\Roaming\ov-bin"
+Homebrew
+	brew install noborus/tap/ov
+
+Configuration at
+$HOME/.ov.yaml
+%USERPROFILE%/.ov.yaml
+
+Usage
+	ov filename
+	cat filename | ov
+	export PAGER=ov

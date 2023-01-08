@@ -1,0 +1,4 @@
+A customizable, modular, responsive, lightbox gallery plugin.
+https://www.lightgalleryjs.com
+https://github.com/sachinchoolur/lightGallery
+	yarn add lightgallery

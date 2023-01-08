@@ -310,3 +310,6 @@ http://www.linux.com/learn/answers/view/1267-help--how-can-i-fix-this--i-cant-up
 
 /var/lib/dpkg/alternatives/x-www-browser
 	update-alternatives --config x-www-browser
+
+What's on your home server?
+https://news.ycombinator.com/item?id=34271167

@@ -1,6 +1,8 @@
 Official Transmission BitTorrent client repository
 https://transmissionbt.com
 https://github.com/transmission/transmission
+	wget https://github.com/transmission/transmission/releases/download/3.00/transmission-3.00.tar.xz
+	tar xf transmission-3.00.tar.xz
 Windows
 	winget install Transmission.Transmission
 	choco install transmission

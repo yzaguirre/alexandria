@@ -20,3 +20,5 @@ TinyML for tiny drones!
 https://twitter.com/EdgeImpulse/status/1585784462184484865
 tinyML EMEA 2022 - Daniele Palossi: Autonomous Nano-UAVs: An Extreme Edge Computing Case
 https://www.youtube.com/watch?v=llcmQPMx2B8
+The Prepper Drone: DJI + Dronelink for SHTF Surveillance
+https://www.youtube.com/watch?v=i1ybpMXH7Rk

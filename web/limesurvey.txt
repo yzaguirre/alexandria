@@ -1,4 +1,4 @@
-https://www.limesurvey.org/
+https://www.limesurvey.org
 https://github.com/LimeSurvey/LimeSurvey
 Download
 https://www.limesurvey.org/en/downloads/category/25-latest-stable-release
