@@ -80,11 +80,11 @@ Install setup tools and pip on Windows
 http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows
 http://stackoverflow.com/questions/2817869/error-unable-to-find-vcvarsall-bat
 	Create new environment variable VS90COMNTOOLS=%VS110COMNTOOLS%
-Installer 3.10.8
-	wget https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe
-	wget https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe.asc
-	gpg --verify python-3.10.8-amd64.exe.asc
-	start python-3.10.8-amd64.exe
+Installer 3.10.9
+	wget https://www.python.org/ftp/python/3.10.9/python-3.10.9-amd64.exe
+	wget https://www.python.org/ftp/python/3.10.9/python-3.10.9-amd64.exe.asc
+	gpg --verify python-3.10.9-amd64.exe.asc
+	start python-3.10.9-amd64.exe
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools
 http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip
 

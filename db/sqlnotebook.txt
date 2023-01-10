@@ -8,11 +8,11 @@ supporting both standard SQL queries and SQL Notebook-specific commands and func
 https://sqlnotebook.com
 https://sqlnotebook.com/doc.html
 https://github.com/electroly/sqlnotebook
-	wget https://github.com/electroly/sqlnotebook/releases/download/v1.1.0/SQLNotebook-1.1.0.msi
-	explorer.exe SQLNotebook-1.1.0.msi
+	wget https://github.com/electroly/sqlnotebook/releases/download/v1.2.1/SQLNotebook-1.2.1.msi
+	explorer.exe SQLNotebook-1.2.1.msi
 Portable
-	wget https://github.com/electroly/sqlnotebook/releases/download/v1.1.0/SQLNotebook-1.1.0.zip
-	7z x -o"C:\Program Files\SQL Notebook" SQLNotebook-1.1.0.zip
+	wget https://github.com/electroly/sqlnotebook/releases/download/v1.2.1/SQLNotebook-1.2.1.zip
+	7z x -o"C:\Program Files\SQL Notebook" SQLNotebook-1.2.1.zip
 Windows
 	choco install sqlnotebook
 Installed at C:\Program Files\SQL Notebook\

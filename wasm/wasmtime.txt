@@ -4,6 +4,8 @@ https://github.com/bytecodealliance/wasmtime
 	wget https://github.com/bytecodealliance/wasmtime/releases/download/v4.0.0/wasmtime-v4.0.0-x86_64-linux.tar.xz
 	tar xf wasmtime-v4.0.0-x86_64-linux.tar.xz -C /usr/local/bin wasmtime
 Windows
+	winget install BytecodeAlliance.Wasmtime
+Binary
 	wget https://github.com/bytecodealliance/wasmtime/releases/download/v4.0.0/wasmtime-v4.0.0-x86_64-windows.msi
 	start wasmtime-v4.0.0-x86_64-windows.msi
 MacOS

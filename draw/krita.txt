@@ -20,12 +20,12 @@ Homebrew
 	ln -s /Applications/krita.app/Contents/MacOS/krita /usr/local/bin/
 Android
 https://stackoverflow.com/questions/56824557/what-is-the-difference-between-armeabi-v7a-arm64-v8a-x86
-	wget https://download.kde.org/stable/krita/5.1.4/krita-arm64-v8a-5.1.4-release.apk
-	wget https://download.kde.org/stable/krita/5.1.4/md5sum.txt
+	wget https://download.kde.org/stable/krita/5.1.5/krita-arm64-v8a-5.1.5-release.apk
+	wget https://download.kde.org/stable/krita/5.1.5/md5sum.txt
 	md5sum -c --ignore-missing md5sum.txt
-	adb install krita-arm64-v8a-5.1.4-release.apk
+	adb install krita-arm64-v8a-5.1.5-release.apk
 On termux
-	xgd-open krita-arm64-v8a-5.1.4-release.apk
+	xgd-open krita-arm64-v8a-5.1.5-release.apk
 
 Linux Command Line
 https://docs.krita.org/en/reference_manual/linux_command_line.html?highlight=command%20line#linux-command-line

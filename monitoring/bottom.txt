@@ -1,8 +1,8 @@
 Yet another cross-platform graphical process/system monitor.
 https://clementtsang.github.io/bottom/nightly/
 https://github.com/ClementTsang/bottom
-	wget https://github.com/ClementTsang/bottom/releases/download/0.7.0/bottom_0.7.0_amd64.deb
-	dpkg -i bottom_0.7.0_amd64.deb
+	wget https://github.com/ClementTsang/bottom/releases/download/0.7.1/bottom_0.7.1_amd64.deb
+	dpkg -i bottom_0.7.1_amd64.deb
 Windows
 	choco install bottom
 	winget install Clement.bottom
