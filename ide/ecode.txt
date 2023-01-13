@@ -1,0 +1,20 @@
+Lightweight multi-platform C++ code editor designed for modern hardware
+https://github.com/SpartanJ/ecode
+https://news.ycombinator.com/item?id=34320844
+	wget https://github.com/SpartanJ/ecode/releases/download/ecode-0.4.0/ecode-linux-0.4.0-x86_64.tar.gz
+	tar xf ecode-linux-0.4.0-x86_64.tar.gz
+Windows
+	wget https://github.com/SpartanJ/ecode/releases/download/ecode-0.4.0/ecode-windows-0.4.0-x86_64.zip
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\" ecode-windows-0.4.0-x86_64.zip
+	path add "C:\Users\DAVIDY~1\AppData\Roaming\ecode"
+MacOS
+	wget https://github.com/SpartanJ/ecode/releases/download/ecode-0.4.0/ecode-macos-0.4.0-x86_64.dmg
+	open ecode-macos-0.4.0-x86_64.dmg
+
+Plugin location
+Linux: uses XDG_CONFIG_HOME, usually translates to
+~/.config/ecode/plugins
+macOS: uses Application Support folder in HOME, usually translates to
+~/Library/Application Support/ecode/plugins
+Windows: uses APPDATA, usually translates to
+C:\Users\DAVIDY~1\AppData\Roaming\ecode\plugins

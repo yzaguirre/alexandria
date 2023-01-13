@@ -2,11 +2,11 @@ Find and replace text in source files
 https://github.com/your-tools/ruplacer
 https://github.com/dmerejkowsky/ruplacer
 .deb installer not available form https://github.com/TankerHQ/ruplacer
-	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-linux
+	wget https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.1/ruplacer-linux
 	chmod u+x ruplacer-linux
 	mv ruplacer-linux /usr/local/bin/ruplacer
 Windows
-	wget -O ..\bin\ruplacer.exe https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.0/ruplacer-windows.exe
+	wget -O ..\bin\ruplacer.exe https://github.com/dmerejkowsky/ruplacer/releases/download/v0.8.1/ruplacer-windows.exe
 Homebrew
 	brew install your-tools/homebrew-repo/ruplacer
 Use formula

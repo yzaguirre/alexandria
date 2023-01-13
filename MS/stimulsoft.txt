@@ -43,3 +43,10 @@ This task in not about the reporting tool. So we do not have such functionality.
 You can do it using third party utilities.
 
 See pdfsharp.txt
+
+Import tools
+A wide range of importing tools for converting third party reports into our internal format.
+https://github.com/stimulsoft/Importing.Tools
+Importing Reports to Stimulsoft (the Example of Importing Crystal Reports) [Shot on v2017]
+https://www.youtube.com/watch?v=Xt8X6TmLxY4
+	wget https://github.com/stimulsoft/Importing.Tools/archive/refs/heads/master.zip

@@ -1,0 +1,4 @@
+https://techcommunity.microsoft.com/t5/tools/what-s-the-future-of-rdlc-quot-client-side-ssrs-quot-aka-quot/m-p/2946830
+https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi
+	choco install powerbi-reportbuilder
+	choco install powerbi-reportbuilder --params="'/Language:es-ES'"

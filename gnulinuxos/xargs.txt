@@ -22,3 +22,5 @@ All my input mark off as squirly braces
 	ls | xargs -I @@ echo 'hello @@'
 	ls | grep -v .md | xargs -I {} mv {} {}.c
 	echo "a b c d" | xargs -n 1 -P 1 bash -c 'sleep 1; echo $0'
+Open with text editor
+	ls | xargs -I {} subl {}

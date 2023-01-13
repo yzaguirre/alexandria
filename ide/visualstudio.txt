@@ -29,3 +29,7 @@ call xcopy /S /Y "$(SolutionDir)Dependencies\*.*" "$(TargetDir)"
 Collapse
 https://stackoverflow.com/questions/42660670/collapse-all-methods-in-visual-studio-code
 Ctrl + M Ctrl + O
+
+VS2005
+Installed at
+C:\Program Files (x86)\Microsoft Visual Studio 8

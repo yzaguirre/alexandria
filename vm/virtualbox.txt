@@ -29,6 +29,9 @@ or whatever script is run at the end of the boot process. The Shared Folders ser
 
 Windows
 	choco install virtualbox --params "/NoDesktopShortcut"
+	winget install Oracle.VirtualBox
+	Stop-Service VBoxSDS
+	Set-Service -name VBoxSDS -startuptype 'manual'
 Inside Windows VM
 	choco install virtualbox-guest-additions-guest.install
 
@@ -138,3 +141,7 @@ Delete snapshot
 	VBoxManage snapshot "helium" delete "snap01"
 List snapshot
 	VBoxManage snapshot "helium" list --details
+
+Default password
+https://stackoverflow.com/questions/74929891/cannot-login-in-virtualbox-7-0-windows-10-because-vboxuser-password-expired
+changeme

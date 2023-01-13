@@ -33,7 +33,8 @@ Windows
 	winget install 7zip.7zip
 	choco install 7zip.install
 Installer
-	wget https://7-zip.org/a/7z2200-x64.exe
+	wget https://www.7-zip.org/a/7z2201-x64.exe
+	start 7z2201-x64.exe
 Append to PATH C:\Program Files\7-Zip
 Homebrew
 	brew install 7-zip

@@ -1,0 +1,15 @@
+RDLC reports
+Opens with visual studio 2015
+See ../ide/visualstudio.txt
+https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftRdlcReportDesignerforVisualStudio2022
+https://techcommunity.microsoft.com/t5/tools/what-s-the-future-of-rdlc-quot-client-side-ssrs-quot-aka-quot/m-p/2946830
+Agregar RDLC y Report Viewer a Visual Studio 2015, 2017, 2019
+https://www.youtube.com/watch?v=jUlRTZMiWLg
+
+Report Builder
+https://learn.microsoft.com/en-us/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver16
+
+Power BI Report Builder
+https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi
+	choco install powerbi-reportbuilder
+	choco install powerbi-reportbuilder --params="'/Language:es-ES'"

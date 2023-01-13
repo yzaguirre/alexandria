@@ -317,6 +317,7 @@ Get the names of all the files that have changed in the last 3 commits:
 
 Patch
 	git diff > patch.diff
+	git diff HEAD~1 > foo.diff
 https://stackoverflow.com/questions/3368590/show-diff-between-commits
 	git diff k73ud^..dj374
 Restore a patch
