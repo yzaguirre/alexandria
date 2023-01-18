@@ -26,6 +26,7 @@ https://linux.die.net/man/1/exiftool
 https://ninedegreesbelow.com/photography/exiftool-commands.html#examine
 http://www.taringa.net/posts/linux/17718908/Extraer-crear-borrar-y-modificar-metadatos-con-Exiftool.html
 http://www.avpreserve.com/exiftool-tutorial-series/ 
+https://news.ycombinator.com/item?id=34373928
 	apt install libimage-exiftool-perl
 Compile
 	wget https://www.exiftool.org/Image-ExifTool-12.54.tar.gz
@@ -44,6 +45,10 @@ Homebrew
 	brew install exiftool
 Usage
 	exiftool 413511-1920x1080.jpg
+Remove GPS coords in a file
+	exiftool -gps:all= filename.jpg
+Clear out all metadata
+	exiftool -all= filename.jpg somesong.mp3
 
 Crear metadatos
 Para crear metadatos basta con escribir el "tag" que queremos crear. En este caso le añadimos el metadato copyright.

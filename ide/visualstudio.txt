@@ -33,3 +33,7 @@ Ctrl + M Ctrl + O
 VS2005
 Installed at
 C:\Program Files (x86)\Microsoft Visual Studio 8
+
+Breakpoint Window
+https://stackoverflow.com/questions/17617845/how-can-i-see-all-breakpoints-in-visual-studio-2013
+CTRL+ALT+B

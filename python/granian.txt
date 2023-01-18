@@ -1,0 +1,3 @@
+A Rust HTTP server for Python applications
+https://github.com/emmett-framework/granian
+https://news.ycombinator.com/item?id=34399125

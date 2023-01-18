@@ -2,6 +2,10 @@ https://torflow.uncharted.software
 https://news.ycombinator.com/item?id=10938103
 https://github.com/unchartedsoftware/torflow
 
+Identified a Tor User
+https://www.schneier.com/blog/archives/2023/01/the-fbi-identified-a-tor-user.html
+https://news.ycombinator.com/item?id=34412080
+
 http://jordan-wright.com/blog/2015/02/28/how-tor-works-part-one/
 http://jordan-wright.com/blog/2015/05/09/how-tor-works-part-two-relays-vs-bridges/
 https://metrics.torproject.org/networksize.html

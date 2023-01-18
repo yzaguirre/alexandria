@@ -11,12 +11,12 @@ See ../android/gradle.txt
 Binaries
 https://docs.gradle.org/current/userguide/installation.html
 https://gradle.org/gradle-download/
-	wget https://services.gradle.org/distributions/gradle-7.5.1-bin.zip
-	wget https://services.gradle.org/distributions/gradle-7.5.1-bin.zip.sha256
-	cat gradle-7.5.1-bin.zip.sha256
-	sha256sum gradle-7.5.1-bin.zip
-	unzip gradle-7.5.1-bin.zip -d /opt/
-	mv /opt/gradle{-7.5.1,}
+	wget https://services.gradle.org/distributions/gradle-7.6-bin.zip
+	wget https://services.gradle.org/distributions/gradle-7.6-bin.zip.sha256
+	cat gradle-7.6-bin.zip.sha256
+	sha256sum gradle-7.6-bin.zip
+	unzip gradle-7.6-bin.zip -d /opt/
+	mv /opt/gradle{-7.6,}
 	vim ~/.profile
 export GRADLE_HOME=/opt/gradle
 export GRADLE_USER_HOME="/opt/gradle-home"
@@ -30,9 +30,9 @@ Windows
 Installed at
 C:\ProgramData\chocolatey\lib\gradle\tools
 Binary
-	7z x -o"C:\Gradle" gradle-7.5.1-bin.zip
+	7z x -o"C:\Gradle" gradle-7.6-bin.zip
 Add to PATH
-C:\Gradle\gradle-7.5.1\bin
+C:\Gradle\gradle-7.6\bin
 Homebrew
 	brew install gradle
 	brew install gradle-completion
