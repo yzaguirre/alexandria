@@ -2,8 +2,8 @@ Gifski gif encoder
 https://gif.ski
 https://github.com/ImageOptim/gifski
 Install
-	wget https://github.com/ImageOptim/gifski/releases/download/1.8.1/gifski_1.8.1_amd64.deb
-	dpkg -i gifski_1.8.1_amd64.deb
+	wget https://github.com/ImageOptim/gifski/releases/download/1.10.0/gifski_1.10.0_amd64.deb
+	dpkg -i gifski_1.10.0_amd64.deb
 Termux
 	apt install gifski
 Rust

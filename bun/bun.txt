@@ -1,0 +1,13 @@
+Bun is a fast all-in-one JavaScript runtime
+https://bun.sh
+https://github.com/oven-sh/bun
+	curl -fsSL https://bun.sh/install | bash
+Homebrew
+	brew tap oven-sh/bun
+	brew install bun
+
+https://bun.sh/blog/bun-v0.5.0
+https://news.ycombinator.com/item?id=34430458
+
+Upgrade
+	bun upgrade

@@ -8,13 +8,13 @@ https://www.youtube.com/watch?v=vQUOf2E6XZw
 ISO extension package at
 /usr/lib/virtual/box/additions/VBoxGuestAdditions.iso
 Installer
-	wget https://download.virtualbox.org/virtualbox/7.0.0/virtualbox-7.0_7.0.0-153978~Debian~bullseye_amd64.deb
-	wget https://download.virtualbox.org/virtualbox/7.0.0/VBoxGuestAdditions_7.0.0.iso
-	wget https://www.virtualbox.org/download/hashes/7.0.0/SHA256SUMS
-	wget https://www.virtualbox.org/download/hashes/7.0.0/MD5SUMS
+	wget https://download.virtualbox.org/virtualbox/7.0.6/virtualbox-7.0_7.0.6-153978~Debian~bullseye_amd64.deb
+	wget https://download.virtualbox.org/virtualbox/7.0.6/VBoxGuestAdditions_7.0.6.iso
+	wget https://www.virtualbox.org/download/hashes/7.0.6/SHA256SUMS
+	wget https://www.virtualbox.org/download/hashes/7.0.6/MD5SUMS
 	sha256sum -c --ignore-missing SHA256SUMS
 	md5sum -c --ignore-missing MD5SUMS
-	dpkg -i virtualbox-7.0_7.0.0-153978~Debian~bullseye_amd64.debf
+	dpkg -i virtualbox-7.0_7.0.6-153978~Debian~bullseye_amd64.debf
 	sudo modprobe vboxdrv
 Use host USB devices in guest machines
 http://dedoimedo.com/computers/virtualbox-usb.html
@@ -37,7 +37,7 @@ Inside Windows VM
 
 Expansion Pack
 http://www.sysprobs.com/guide-download-install-oracle-vm-virtualbox-extension-pack-windows-host
-	wget https://download.virtualbox.org/virtualbox/7.0.0/Oracle_VM_VirtualBox_Extension_Pack-7.0.0-153978.vbox-extpack
+	wget https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Extension_Pack-7.0.6-153978.vbox-extpack
 The other way is, go to File -> Preferences in menu bar and select Extensions option in VirtualBox console.
 Press Add Extension button and browse the downloaded VM VirtualBox Extension Pack.
 

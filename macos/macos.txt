@@ -132,3 +132,11 @@ Convert Audio File to iPhone Ringtone
 	afconvert input.mp3 ringtone.m4r -f m4af
 Play Audio File
 	afplay -q 1 filename.mp3
+
+displayplacer
+macOS command line utility to configure multi-display resolutions and arrangements.
+Essentially XRandR for macOS.
+https://github.com/jakehilborn/displayplacer
+https://news.ycombinator.com/item?id=34487066
+	brew tap jakehilborn/jakehilborn
+	brew install displayplacer

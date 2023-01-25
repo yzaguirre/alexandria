@@ -4,6 +4,7 @@ can help you with generating PDF documents by offering friendly,
 discoverable and predictable C# fluent API.
 https://www.questpdf.com
 https://github.com/QuestPDF/QuestPDF
+https://news.ycombinator.com/item?id=34429791
 https://github.com/QuestPDF/QuestPDF-ExampleInvoice
 Package Manager
 	Install-Package QuestPDF
