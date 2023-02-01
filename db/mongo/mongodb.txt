@@ -9,7 +9,7 @@ If you installed via the package manager, the data directory /var/lib/mongodb an
 Windows
 	choco install mongodb
 	winget install MongoDB.Server
-	msiexec.exe /i .\mongodb-windows-x86_64-6.1.1-signed.msi ADDLOCAL="ServerService,Server,ProductFeature,Client,Router,MiscellaneousTools" /qn /norestart MONGO_DATA_PATH="C:\ProgramData\MongoDB\data\db" MONGO_LOG_PATH="C:\ProgramData\MongoDB\log"
+	msiexec.exe /i .\mongodb-windows-x86_64-6.2.0-signed.msi ADDLOCAL="ServerService,Server,ProductFeature,Client,Router,MiscellaneousTools" /qn /norestart MONGO_DATA_PATH="C:\ProgramData\MongoDB\data\db" MONGO_LOG_PATH="C:\ProgramData\MongoDB\log"
 Installed at
 C:\Program Files\MongoDB\Server\6.1\bin
 Start/Stop service

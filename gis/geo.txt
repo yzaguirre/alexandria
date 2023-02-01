@@ -1,4 +1,4 @@
-https://geoman.io/
+https://geoman.io
 https://news.ycombinator.com/item?id=22288276
 
 Tutorial of fundamental remote sensing and GIS methodologies
