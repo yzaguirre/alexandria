@@ -18,3 +18,9 @@ Configuration at
 /home/david/.config/yt-dlp.conf
 C:\Users\DAVIDY~1\AppData\Roaming\yt-dlp\config
 C:\Users\DAVIDY~1\AppData\Roaming\yt-dlp\config.txt
+
+Download a portion
+https://unix.stackexchange.com/questions/230481/how-to-download-portion-of-video-with-youtube-dl-command
+	yt-dlp --youtube-skip-dash-manifest -g "URL"
+	ffmpeg -ss 12:15 -i "1st-URL" -ss 12:15 -i "2nd-URL" -t 5:15 -map 0:v -map 1:a -c:v libx264 -c:a aac output.mkv
+	ffmpeg -ss 12:15 -i "1st-URL" -ss 12:15 -i "2nd-URL" -t 5:15 -map 0:v -map 1:a -c:v h264_nvenc -c:a aac output.mkv
