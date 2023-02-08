@@ -2,3 +2,12 @@ https://techcommunity.microsoft.com/t5/tools/what-s-the-future-of-rdlc-quot-clie
 https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi
 	choco install powerbi-reportbuilder
 	choco install powerbi-reportbuilder --params="'/Language:es-ES'"
+
+A collection of Power BI samples for developer use.
+https://github.com/Microsoft/PowerBI-Developer-Samples
+https://github.com/microsoft/PowerBI-Developer-Samples/tree/master/.NET%20Framework
+
+https://dev.powerbi.com/apps
+https://app.powerbi.com
+Explorando ejemplos sobre Power BI Embedded
+https://www.youtube.com/watch?v=Tyi0xWdFDO4
