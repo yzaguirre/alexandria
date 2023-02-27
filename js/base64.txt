@@ -1,0 +1,35 @@
+https://github.com/beatgammit/base64-js
+	npm install base64-js
+
+var base64 = require('base64-js')
+base64 has two exposed functions, toByteArray and fromByteArray, which both take a single argument.
+
+    toByteArray - Takes a base64 string and returns a byte array
+    fromByteArray - Takes a byte array and returns a base64 string
+
+https://stackoverflow.com/questions/6150289/how-can-i-convert-an-image-into-base64-string-using-javascript
+const getImg64 = async() => {
+  const convertImgToBase64URL = (url) => {
+  console.log(url)
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'Anonymous';
+      img.onload = () => {
+          let canvas = document.createElement('CANVAS')
+          const ctx = canvas.getContext('2d')
+          canvas.height = img.height;
+          canvas.width = img.width;
+          ctx.drawImage(img, 0, 0);
+          const dataURL = canvas.toDataURL();
+          canvas = null;
+          resolve(dataURL)
+      }
+      img.src = url;
+    })
+  }
+  //for the demonstration purposes I used proxy server to avoid cross origin error
+  const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+  const image = await convertImgToBase64URL(proxyUrl+'https://image.shutterstock.com/image-vector/vector-line-icon-hello-wave-260nw-1521867944.jpg')
+  console.log(image)
+}
+getImg64()

@@ -1,0 +1,20 @@
+jQuery Plugin Date and Time Picker
+https://github.com/xdan/datetimepicker
+https://xdsoft.net/jqplugins/datetimepicker/
+	yarn add jquery-datetimepicker
+
+https://getdatepicker.com/5-4/Usage/
+https://stackoverflow.com/questions/40035730/bootstrap-date-time-picker
+https://stackoverflow.com/questions/31967293/how-to-use-jquery-datetime-picker
+
+https://stackoverflow.com/questions/13571700/get-first-and-last-date-of-current-month-with-javascript-or-jquery
+var date = new Date(), y = date.getFullYear(), m = date.getMonth();
+var firstDay = new Date(y, m, 1);
+var lastDay = new Date(y, m + 1, 0);
+
+https://stackoverflow.com/questions/563406/how-to-add-days-to-date
+function addDays(date, days) {
+  var result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}

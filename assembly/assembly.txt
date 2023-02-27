@@ -21,3 +21,5 @@ https://www.reddit.com/r/commandline/comments/sixafz/i_wanted_to_learn_some_asse
 	make -j8
 	sudo make install
 	snake-asm
+
+https://www.youtube.com/@serene-dev/videos

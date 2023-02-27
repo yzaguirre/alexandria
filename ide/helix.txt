@@ -22,3 +22,6 @@ C:\Users\DAVIDY~1\AppData\Roaming\helix
 Usage
 	hx -V
 	hx [file]
+
+Helix Text Editor: Better than Neovim?
+https://www.youtube.com/watch?v=9Zj-wiQ9_Xw

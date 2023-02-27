@@ -70,3 +70,8 @@ pres.forEach(function(pre){
     copy(pre.childNodes[0])
   })
 })
+
+Presentation Slides for Developers
+https://sli.dev
+https://github.com/slidevjs/slidev
+	npm init slidev
