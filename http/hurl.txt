@@ -17,7 +17,27 @@ Homebrew
 	brew install hurl
 
 Usage
-	hurl --progress --summary --html . test1.hurl
+	hurl --report-html . test1.hurl
+Variables
+	hurl --variable host=example.net --variable id=1234 test.hurl
+GET https://{{host}}/health
+HTTP 200
+We can also define all injected variables in a file:
+	cat vars.env
+host=example.net
+id=1234
+	hurl --variables-file vars.env test.hurl
+Multiline string body
+PUT https://example.org/api/hits
+Content-Type: application/json
+```
+{
+    "key0": "{{a_string}}",
+    "key1": {{a_bool}},
+    "key2": {{a_null}},
+    "key3": {{a_number}}
+}
+```
 
 Export hurl file
 	hurlfmt test.hurl --format json | jq
