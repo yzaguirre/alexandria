@@ -6,13 +6,13 @@ https://news.ycombinator.com/item?id=33744106
 See stepci.txt
 Install
 https://hurl.dev/docs/installation.html
-	wget https://github.com/Orange-OpenSource/hurl/releases/download/2.0.0/hurl_2.0.0_amd64.deb
-	dpkg -i hurl_2.0.0_amd64.deb
+	wget https://github.com/Orange-OpenSource/hurl/releases/download/2.0.1/hurl_2.0.1_amd64.deb
+	dpkg -i hurl_2.0.1_amd64.deb
 Windows
 	winget install Orange-OpenSource.Hurl
 Installer
-	wget https://github.com/Orange-OpenSource/hurl/releases/download/2.0.0/hurl-2.0.0-win64-installer.exe
-	start hurl-2.0.0-win64-installer.exe
+	wget https://github.com/Orange-OpenSource/hurl/releases/download/2.0.1/hurl-2.0.1-win64-installer.exe
+	start hurl-2.0.1-win64-installer.exe
 Homebrew
 	brew install hurl
 

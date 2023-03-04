@@ -126,9 +126,6 @@ https://stackoverflow.com/questions/9086880/t-sql-export-to-new-excel-file
 Compress ZIP
 See ../compression/powershell.txt
 
-TLS Certificate
-See ~/tls/tls-powershell.txt
-
 Log the processes
 	Get-Process | Out-File C:\Users\dyzag\ProcessesPS.txt
 Log the services

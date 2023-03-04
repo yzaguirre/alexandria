@@ -8,3 +8,16 @@ https://slproweb.com/products/Win32OpenSSL.html
 	choco install openssl
 	choco install openssl.light
 See ../tunnels/openssl.txt
+
+From pfx
+https://stackoverflow.com/questions/403174/convert-pfx-to-cer
+Extracting ca-certs
+	openssl pkcs12 -in ${filename}.pfx -nodes -nokeys -cacerts -out ${filename}-ca.crt
+Extracting key file
+  openssl pkcs12 -in ${filename}.pfx -nocerts -out ${filename}.key
+Extracting crt
+	openssl pkcs12 -in ${filename}.pfx -clcerts -nokeys -out ${filename}.crt
+Combine ca-certs and cert files
+	cat  ${filename}.crt ${filename}-ca.crt > ${filename}-full.crt
+Removing passphrase from keyfile
+	openssl rsa -in ${filename}.key -out ${filename}.key

@@ -233,6 +233,12 @@ Add watermark
 	ffmpeg -i input.mkv -i watermark.png -filter_complex "overlay=50:50" output.mkv
 Overlay small video over another
 	ffmpeg -i input.mkv -i input2.mkv -filter_complex "[0:v][1:v] overlay=25:25" output.mkv
+With background image
+	ffmpeg -i input.mp3 -vf "movie=image.jpg [layer]; [in][layer] overlay [out]" output.avi
+Scale background image
+	ffmpeg -i input.mp3 -vf "movie=image.jpg [layer]; [layer]scale=1920x1080[layer2]; [in][layer2] overlay [out]" output.avi
+Scale and position
+	ffmpeg -i input.mp3 -vf "movie=image.jpg [layer]; [layer]scale=1920x1080[layer2]; [in][layer2] overlay=300:200 [out]" output.avi
 
 Chroma key
 Replace green background
@@ -371,6 +377,10 @@ Showwaves
 	ffmpeg -i input.mp3 -filter_complex "showfreqs=size=1920x1080" output.avi
 	ffmpeg -i input.mp3 -filter_complex "showwaves=mode=cline:size=1280x720" output.avi
 	ffmpeg -i input.mp3 -filter_complex "showwaves=mode=cline:size=1920x1080" output.avi
+With background image
+https://stackoverflow.com/questions/34675160/ffmpeg-generate-overlay-complex-filter-for-audio-with-background-image
+	ffmpeg -y -i input.mp3 -loop 1 -i background.png -filter_complex "[0:a]showwaves=s=1280x720:mode=line,colorkey=0x000000:0.01:0.1,format=yuva420p[v];[1:v][v]overlay[outv]" -map "[outv]" -pix_fmt yuv420p -map 0:a -c:v libx264 -c:a copy -shortest output.mp4
+	ffmpeg -y -i input.mp3 -loop 1 -i background.png -filter_complex "[0:a]showwaves=mode=cline:size=1920x1080,colorkey=0x000000:0.01:0.1,format=yuva420p[v];[1:v][v]overlay[outv]" -map "[outv]" -pix_fmt yuv420p -map 0:a -c:v h264_nvenc -c:a copy -shortest output2.mp4
 Avectorscope
 	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=200:gc=20:bc=100" output.avi
 	ffmpeg -i input.mp3 -filter_complex "avectorscope=rc=40:gc=160:bc=80" output.avi
