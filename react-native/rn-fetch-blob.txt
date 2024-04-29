@@ -9,6 +9,7 @@ data:RNFetchBlob.wrap(this.state.file.uri.replace("file://", ""))
 A project committed to making file access and data transfer easier, efficient for React Native developers.
 https://github.com/RonRadtke/react-native-blob-util
 	yarn add react-native-blob-util
+import ReactNativeBlobUtil from 'react-native-blob-util'
 
 See document.txt
 

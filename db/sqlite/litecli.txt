@@ -1,4 +1,5 @@
 https://litecli.com
+https://github.com/dbcli/litecli
 https://www.pgcli.com/launching-litecli.html
 https://news.ycombinator.com/item?id=18831470
 	sudo -H pip install -U litecli

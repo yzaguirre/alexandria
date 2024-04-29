@@ -1,6 +1,8 @@
-http://sox.sourceforge.net/
+https://sourceforge.net/projects/sox/
 http://lignux.com/usemos-sox-para-manipular-archivos-de-audio/
 	apt install sox libsox-fmt-all
+Windows
+	winget install ChrisBagwell.SoX
 	
 	play tux.mp3
 	play http://direccióndelaudioquequiero.ogg

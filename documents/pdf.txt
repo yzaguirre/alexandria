@@ -6,6 +6,7 @@ Se instalarán los siguientes paquetes NUEVOS:
 Python
 	sudo -H pip install -U rst2pdf
 
+HTML to PDF
 A command-line tool to turn web pages into beautiful,
 readable PDF, EPUB, or HTML docs.
 https://github.com/danburzo/percollate
@@ -22,6 +23,16 @@ The option is implicitly enabled when the --title option is provided,
 or when bundling more than one web page to a single file.
 Disable this implicit behavior by passing the --no-cover flag.
 
+https://wkhtmltopdf.org
+https://github.com/wkhtmltopdf/wkhtmltopdf
+	apt install wkhtmltopdf
+Windows
+	choco install wkhtmltopdf
+	winget install wkhtmltopdf.wkhtmltox
+Installed at
+C:\Program Files\wkhtmltopdf
+Usage
+	wkhtmltopdf example-r-markdown.html example-r-markdown.pdf
 
 https://news.ycombinator.com/item?id=18199708
 https://blog.socialcops.com/technology/engineering/camelot-python-library-pdf-data/

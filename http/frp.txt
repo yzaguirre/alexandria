@@ -1,13 +1,22 @@
 https://github.com/fatedier/frp
 A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
+	wget https://github.com/fatedier/frp/releases/download/v0.52.3/frp_0.52.3_linux_amd64.tar.gz
+	wget https://github.com/fatedier/frp/releases/download/v0.52.3/frp_sha256_checksums.txt
+	sha256sum -c frp_sha256_checksums.txt
+	tar xf frp_0.52.3_linux_amd64.tar.gz -C /usr/local/
+	mv /usr/local/{frp_0.52.3_linux_amd64,frp}
+	ln -s /usr/local/frp/frpc /usr/local/bin
+	ln -s /usr/local/frp/frps /usr/local/bin
 Windows
 	scoop install frp
 Won't run on Windows 2008
 https://stackoverflow.com/questions/62681151/not-a-valid-win32-application-when-building-on-a-windows-server-2008
-Linux frpc
-	wget https://github.com/fatedier/frp/releases/download/v0.31.1/frp_0.31.1_linux_arm64.tar.gz
-	tar xf frp_0.31.1_linux_arm64.tar.gz
-	cd frp_0.31.1_linux_arm64
+
+Free, self-hosted ngrok alternative
+https://www.youtube.com/watch?v=JP-7iJE3hiE
+Using FRP to Improve Windows RDP access to Linux xRDP
+https://www.youtube.com/watch?v=IRCrqnjfrDM
+https://blog.51sec.org/2022/02/use-frp-fast-reverse-proxy-to-expedite.html#point2
 
 Socks5 behind a http proxy. npm can use it.
 Set up server component
@@ -29,3 +38,33 @@ remote_port = 8080
 plugin = http_proxy
 
 	frpc -c frpc.ini
+
+RTSP camera
+Server
+	frps -c frps-rtsp.ini
+	vim frps-rtsp.ini
+[common]
+bind_port = 7000
+Client
+	frpc -c frpc-rtsp.ini
+	vim frpc-rtsp.ini
+[common]
+server_addr = mysite.com
+server_port = 7000
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 6000
+
+[web]
+type = http
+subdomain = computer
+local_port = 3000
+
+[rtsp]
+type = tcp
+local_ip = 192.168.15.100
+local_port = 554
+remote_port = 4001

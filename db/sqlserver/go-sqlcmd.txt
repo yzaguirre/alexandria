@@ -1,0 +1,54 @@
+https://learn.microsoft.com/en-us/sql/tools/sqlcmd/sqlcmd-utility
+https://github.com/microsoft/go-sqlcmd
+	wget https://github.com/microsoft/go-sqlcmd/releases/download/v1.4.0/sqlcmd_1.4.0-1_all.deb
+	dpkg -i sqlcmd_1.4.0-1_all.deb
+RPM
+	wget https://github.com/microsoft/go-sqlcmd/releases/download/v1.4.0/sqlcmd-1.4.0-1.el7.x86_64.rpm
+	rpm -ivh sqlcmd-1.4.0-1.el7.x86_64.rpm
+Windows
+	choco install sqlcmd
+	winget install sqlcmd
+Homebrew
+	brew install sqlcmd
+
+Environment variables
+SQLCMDUSER
+SQLCMDPASSWORD
+SQLCMDSERVER
+SQLCMDDBNAME
+SQLCMDCOLSEP
+
+Configuration at
+~/.sqlcmd/sqlconfig
+
+Usage
+	sqlcmd "-?"
+	sqlcmd --version
+
+View configuration information and connection strings
+	sqlcmd config view
+	sqlcmd config cs
+Connect
+	sqlcmd
+Connect with no encryption
+	sqlcmd -N disable
+Write query
+	1> select top 1 name from person
+	2> go
+Run a script
+	sqlcmd -S myServer\instanceName -i C:\myScript.sql
+Save result to a file
+	sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt
+Remove trailing space
+https://social.msdn.microsoft.com/Forums/sqlserver/en-US/1b7b4234-e55c-41b0-9e25-3a61dea3ee2f/sqlcmd-strip-white-space?forum=sqltools
+	sqlcmd -S myServer\instanceName -i C:\myScript.sql -W -o C:\EmpAdds.txt
+
+Using variables
+	sqlcmd -v ColumnName ="FirstName" -i c:\testscript.sql
+	sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
+	bat c:\testscript.sql
+USE AdventureWorks2022;
+
+SELECT x.$(ColumnName)
+FROM Person.Person x
+WHERE x.BusinessEntityID < 5;

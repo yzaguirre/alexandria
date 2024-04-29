@@ -1,6 +1,7 @@
 Node Version Manager - POSIX-compliant bash script to
 manage multiple active node.js versions
 https://github.com/nvm-sh/nvm
+See nodejs.txt
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 Binaries at
 ~/.nvm
@@ -28,14 +29,14 @@ Specific version
 	nvm install 14.21.1
 	nvm install 16.18.1
 	nvm install 17.9.1
-	nvm install 18.12.1
+	nvm install 18.15.0
 	nvm install 19.2.0
 Change node
 https://stackoverflow.com/questions/69647332/cannot-read-properties-of-undefined-reading-transformfile-at-bundler-transfo
 	nvm use 14.21.1
 	nvm use 16.18.1
 	nvm alias default 16
-	nvm use 18.12.1
+	nvm use 18.15.0
 Restore PATH
 	nvm deactivate
 Erase node cache

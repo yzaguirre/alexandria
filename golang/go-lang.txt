@@ -1,0 +1,13 @@
+See go.txt
+Go is Surprisingly Easy
+https://www.youtube.com/watch?v=E7pxGyEcPNI
+Learn GO Fast: Full Tutorial
+https://www.youtube.com/watch?v=8uiZC0l4Ajw
+Building a CLI application with Golang
+https://www.youtube.com/watch?v=zPYjfgxYO7k
+This Is The BEST Way To Structure Your GO Projects
+https://www.youtube.com/watch?v=dxPakeBsgl4
+Golang Tutorial: Build A Beautiful CLI Todo App With Support for Piping
+https://www.youtube.com/watch?v=j1CXoOQXbco
+How To Build A Complete JSON API In Golang (JWT, Postgres, and Docker) Part 1
+https://www.youtube.com/watch?v=pwZuNmAzaH8

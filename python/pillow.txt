@@ -1,0 +1,5 @@
+See ../images/pillow-simd.txt
+https://python-pillow.org
+https://pillow.readthedocs.io/en/stable/
+https://github.com/python-pillow/Pillow
+	sudo -H pip install -U pillow

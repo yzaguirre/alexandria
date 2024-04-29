@@ -2,25 +2,25 @@ http://www.mozilla.org/en-US/thunderbird/all.html
 	wget -O ThunderbirdSetup.exe "https://download.mozilla.org/?product=thunderbird-latest&os=win&lang=es-MX"
 	wget -O ThunderbirdSetup.exe "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=es-MX"
 	
-	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/102.6.1/linux-x86_64/es-MX/thunderbird-102.6.1.tar.bz2
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/KEY
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA256SUMMARY
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA256SUMS
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA256SUMS.asc
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA512SUMMARY
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA512SUMS
-	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.6.1/SHA512SUMS.asc
+	wget https://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/102.9.0/linux-x86_64/es-MX/thunderbird-102.9.0.tar.bz2
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/KEY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA256SUMMARY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA256SUMS
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA256SUMS.asc
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA512SUMMARY
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA512SUMS
+	wget https://ftp.mozilla.org/pub/thunderbird/releases/102.9.0/SHA512SUMS.asc
 Verify
 	gpg --with-fingerprint KEY
 	gpg --import KEY
 	gpg --verify SHA256SUMS.asc
 	gpg --verify SHA512SUMS.asc
-	sha256sum thunderbird-102.6.1.tar.bz2
-	sha512sum thunderbird-102.6.1.tar.bz2
-	grep "linux-x86_64/es-ES/thunderbird-102.6.1" MD5SUMS
-	grep "linux-x86_64/es-ES/thunderbird-102.6.1" SHA1SUMS
-	grep "linux-x86_64/es-ES/thunderbird-102.6.1" SHA512SUMS
-	tar xf thunderbird-102.6.1.tar.bz2 -C /VMs/opt
+	sha256sum thunderbird-102.9.0.tar.bz2
+	sha512sum thunderbird-102.9.0.tar.bz2
+	grep "linux-x86_64/es-ES/thunderbird-102.9.0" MD5SUMS
+	grep "linux-x86_64/es-ES/thunderbird-102.9.0" SHA1SUMS
+	grep "linux-x86_64/es-ES/thunderbird-102.9.0" SHA512SUMS
+	tar xf thunderbird-102.9.0.tar.bz2 -C /VMs/opt
 	ln -s /VMs/opt/thunderbird/thunderbird-bin /usr/local/bin/thunderbird
 Windows
 	winget install Mozilla.Thunderbird

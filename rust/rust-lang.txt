@@ -1,0 +1,24 @@
+https://doc.rust-lang.org/std/
+https://doc.rust-lang.org/std/fmt/
+println!("MAX_HEALTH is {:b} in binary", MAX_HEALTH);  // 1100100
+The following formatting possibilities exist according to the type that must be printed:
+
+o for octal
+x for lower hexadecimal
+X for upper hexadecimal
+p for a pointer
+b for binary
+e for lower exponential notation
+E for upper exponential notation
+? for debugging purposes
+
+The format! macro has the same parameters and works in the same way as println!, but it returns a string instead of printing out.
+https://doc.rust-lang.org/std/fmt
+
+Rust is like any other C-like language when it comes to the different operators that exist on values and their precedence
+doc.rust-lang.org/reference.html#binary-operator-expressions
+
+Beginner's Series to: Rust
+https://www.youtube.com/playlist?list=PLlrxD0HtieHjbTjrchBwOVks_sr8EVW1x#
+Why JavaScript Devs are Switching to Rust in 2024
+https://www.youtube.com/watch?v=lpSlbeJyr6M

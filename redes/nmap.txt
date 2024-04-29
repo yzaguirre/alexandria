@@ -5,13 +5,13 @@ Se instalarán los siguientes paquetes NUEVOS:
 Compile
 https://nmap.org/download.html
 https://nmap.org/dist/sigs/?C=M&O=D
-	wget https://nmap.org/dist/nmap-7.93.tgz
-	wget https://nmap.org/dist/sigs/nmap-7.93.tgz.asc
-	wget https://nmap.org/dist/sigs/nmap-7.93.tgz.digest.txt
+	wget https://nmap.org/dist/nmap-7.94.tgz
+	wget https://nmap.org/dist/sigs/nmap-7.94.tgz.asc
+	wget https://nmap.org/dist/sigs/nmap-7.94.tgz.digest.txt
 Windows
-	wget https://nmap.org/dist/nmap-7.93-setup.exe
-	wget https://nmap.org/dist/sigs/nmap-7.93-setup.exe.asc
-	wget https://nmap.org/dist/sigs/nmap-7.93-setup.exe.digest.txt
+	wget https://nmap.org/dist/nmap-7.94-setup.exe
+	wget https://nmap.org/dist/sigs/nmap-7.94-setup.exe.asc
+	wget https://nmap.org/dist/sigs/nmap-7.94-setup.exe.digest.txt
 Verify
 https://nmap.org/book/install.html#inst-integrity
 import key
@@ -21,20 +21,20 @@ import key
 	gpg --fingerprint nmap fyodor
 BB61 D057 C0D7 DCEF E730 996C 1AF6 EC50 3359 9B5F
 436D 66AB 9A79 8425 FDA0 E3F8 01AF 9F03 6B93 55D0
-	gpg --verify nmap-7.93.tgz.asc nmap-7.93.tgz
-	grep MD5 nmap-7.93.tgz.digest.txt
-	md5sum nmap-7.93.tgz
-	sha1sum nmap-7.93.tgz
-	sha224sum nmap-7.93.tgz
-	sha256sum nmap-7.93.tgz
-	sha384sum nmap-7.93.tgz
-	sha512sum nmap-7.93.tgz
+	gpg --verify nmap-7.94.tgz.asc nmap-7.94.tgz
+	grep MD5 nmap-7.94.tgz.digest.txt
+	md5sum nmap-7.94.tgz
+	sha1sum nmap-7.94.tgz
+	sha224sum nmap-7.94.tgz
+	sha256sum nmap-7.94.tgz
+	sha384sum nmap-7.94.tgz
+	sha512sum nmap-7.94.tgz
 Windows
-	explorer.exe nmap-7.93-setup.exe
+	explorer.exe nmap-7.94-setup.exe
 Compile
 https://nmap.org/book/inst-source.html
-	tar xf nmap-7.93.tgz
-	cd nmap-7.93
+	tar xf nmap-7.94.tgz
+	cd nmap-7.94
 	./configure
 configure directives
 --prefix=<directoryname>
@@ -79,3 +79,7 @@ https://www.kalitut.com/2015/12/nmap-command-for-network-admins.html
 https://www.stationx.net/nmap-cheat-sheet/
 	nmap 192.168.1.0/24 --exclude 192.168.1.5,192.168.1.254
 	nmap -iL /tmp/scanlist.txt --excludefile /tmp/exclude.txt
+Scan with MAC Address
+https://security.stackexchange.com/questions/117710/with-nmap-it-is-possible-to-scan-according-mac-address
+	nmap -sP 192.168.1.0/24 | grep -B 2 "00:11:32:XX:XX:XX" | head -n 1 | cut -d " " -f 5
+	arp -a | rg -i "00-11-32-XX-XX-XX"

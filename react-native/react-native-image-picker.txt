@@ -3,3 +3,8 @@ https://blog.crowdbotics.com/how-to-use-react-native-image-picker/
 Rivals ./react-native-image-crop-picker.txt
 See ./react-native-image-resizer.txt
 	yarn add react-native-image-picker
+
+Create a patch
+	diff -u node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/Utils.java react-native-image-picker/Utils.java > patch/react-native-image-picker.diff
+Apply patch
+	patch -u node_modules/react-native-image-picker/android/src/main/java/com/imagepicker/Utils.java -i patch/react-native-image-picker.diff

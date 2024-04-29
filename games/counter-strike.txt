@@ -1,3 +1,9 @@
+How to get console in Counter-Strike
+https://www.youtube.com/watch?v=GnWJnMoAYlU
+https://www.tobyscs.com/developer-console-guide/
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike\cfg
+Launch properties
+-console
 https://steamcommunity.com/app/730/discussions/0/620703493318521847/
 To reset to the default config type in console:
 	exec config_default
@@ -7,3 +13,17 @@ Bind
 
 https://play-cs.com/en/servers
 https://news.ycombinator.com/item?id=34628386
+
+https://steamcommunity.com/app/240/discussions/0/540744934628504508/
+counter strike source how to put custom spraypaint
+https://www.youtube.com/watch?v=fMnvXjBDYQc
+C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike\materials\vgui\logos\ui
+
+Spray not working
+https://steamcommunity.com/app/240/discussions/0/1457328392101702115/
+Right click Counter-Strike Source in the Steam Library, go to properties,
+click on the Set Launch Options, copy and paste this into it
+-cl_playerspraydisable 0 -r_spray_lifetime 2 -r_decals 128 -mp_decals 128
+
+This is deceiving, you need to use + instead of - for these considering - is for launch flags,
+and + is for executing console commands.

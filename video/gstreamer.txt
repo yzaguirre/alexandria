@@ -1,0 +1,7 @@
+https://gstreamer.freedesktop.org
+https://gitlab.freedesktop.org/gstreamer/gstreamer
+Windows
+	choco install gstreamer
+	winget install gstreamerproject.gstreamer
+
+https://askubuntu.com/questions/5953/how-can-i-get-ffserver-to-work

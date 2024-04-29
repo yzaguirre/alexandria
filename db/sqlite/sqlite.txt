@@ -9,17 +9,21 @@ Restart apache2 web server
 	service apache2 restart
 Binary
 See ../../secure/hash.txt
-	wget https://sqlite.org/2022/sqlite-tools-linux-x86-3400100.zip
-	openssl dgst -sha3-256 sqlite-tools-linux-x86-3400100.zip
-	rhash --sha3-256 sqlite-tools-linux-x86-3400100.zip
-ee3f1e027637734c0c2dbc33d5e8fa5aba6f54cf4130fb8247cf37030ba1bc24
-	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3400100.zip
+	wget https://sqlite.org/2022/sqlite-tools-linux-x86-3430100.zip
+	openssl dgst -sha3-256 sqlite-tools-linux-x86-3430100.zip
+	rhash --sha3-256 sqlite-tools-linux-x86-3430100.zip
+cc31ba3d52472f31c52246d67174662af0a3f1679f24818c8bd107fade4c3e68
+	7zz e -o/usr/local/bin sqlite-tools-linux-x86-3430100.zip
 Installs sqlite3, sqlite3_analyzer and sqldiff
 See sqldiff.txt
 Windows
 Android Studio inclues sqlite version 3.32.2
 	choco install sqlite
 
+
+SQLite 3.45.0
+https://www.sqlite.org/changes.html#version_3_45_0
+https://news.ycombinator.com/item?id=39004963
 SQLite 3.40.0
 https://www.sqlite.org/releaselog/3_40_0.html
 SQLite 3.39.3
@@ -30,6 +34,9 @@ https://news.ycombinator.com/item?id=31152490
 http://charlesleifer.com/blog/sqlite-small-fast-reliable-choose-any-three-/
 https://news.ycombinator.com/item?id=8033210
 https://www.sqlite.org/whentouse.html
+Why you should probably be using SQLite
+https://www.epicweb.dev/why-you-should-probably-be-using-sqlite
+https://news.ycombinator.com/item?id=38036921
 
 https://antonz.org/sqlite-is-not-a-toy-database/
 https://news.ycombinator.com/item?id=26580614

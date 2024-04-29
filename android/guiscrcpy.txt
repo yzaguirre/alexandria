@@ -36,17 +36,18 @@ https://github.com/srevinsaju/guiscrcpy/blob/main/docs/CONFIGURATION.md
 C:\Users\<username>\AppData\Local\guiscrcpy\guiscrcpy.json
 
 https://github.com/genymobile/scrcpy
+https://news.ycombinator.com/item?id=35151298
 Install scrcpy
 	apt install scrcpy
 Compile latest
 https://github.com/Genymobile/scrcpy/blob/master/BUILD.md
 Windows binary
-	wget https://github.com/Genymobile/scrcpy/releases/download/v1.24/scrcpy-win64-v1.24.zip
-	wget https://github.com/Genymobile/scrcpy/releases/download/v1.24/SHA256SUMS.txt
-	wget https://github.com/Genymobile/scrcpy/releases/download/v1.24/SHA256SUMS.txt.asc
+	wget https://github.com/Genymobile/scrcpy/releases/download/v2.1.1/scrcpy-win64-v2.1.1.zip
+	wget https://github.com/Genymobile/scrcpy/releases/download/v2.1.1/SHA256SUMS.txt
+	wget https://github.com/Genymobile/scrcpy/releases/download/v2.1.1/SHA256SUMS.txt.asc
 	sha256sum -c --ignore-missing SHA256SUMS.txt
 	gpg --verify SHA256SUMS.txt.asc
-	mkdir tmp && unzip scrcpy-win64-v1.24.zip -d tmp
+	mkdir tmp && unzip scrcpy-win64-v2.1.1.zip -d tmp
 Rename tmp/ to C:\Program Files\scrcpy
 Scoop
 	scoop install scrcpy

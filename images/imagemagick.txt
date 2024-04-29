@@ -15,7 +15,7 @@ Windows
 	choco install imagemagick
 	winget install ImageMagick.ImageMagick
 Installed at
-C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\
+C:\Program Files\ImageMagick-7.1.1-Q3-HDRI\
 MacOs
 	brew install ghostscript
 	brew install imagemagick
@@ -26,9 +26,9 @@ https://linuxhint.com/install-the-latest-imagemagick-on-ubuntu/
 https://askubuntu.com/questions/211627/how-to-add-support-for-the-jpeg-image-format
 https://stackoverflow.com/questions/9586048/imagemagick-no-decode-delegate
 	apt install build-essential libjpeg8-dev libjpeg-turbo8-dev libttfautohint-dev
-	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.0-57.tar.gz
-	tar xf 7.1.0-57.tar.gz
-	cd ImageMagick-7.1.0-57
+	wget https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.1-21.tar.gz
+	tar xf 7.1.1-21.tar.gz
+	cd ImageMagick-7.1.1-21
 	./configure --with-modules --with-fontconfig=yes --with-freetype=yes --with-windows-font-dir=/usr/share/fonts/truetype/msttcorefonts/
 If using jpeg-xl. See ~/images/jpegxl.txt
 https://github.com/ImageMagick/ImageMagick/issues/3236
@@ -253,6 +253,9 @@ openjdk-11-jre-headless pdftk pdftk-java
 	pdftk img?.pdf cat output documento.pdf
 Convert to PDF to JPG
 	convert -density 600 document.pdf -quality 100 documento.jpg 
+https://stackoverflow.com/questions/31163450/converting-long-image-to-paged-pdf
+	convert image.png -crop 941x1359 +repage output.pdf
+	convert image.png -crop 941x1359 +repage -page letter output.pdf
 Resize
 	mogrify *jpg -resize 773x773
 Create a blank canvas

@@ -1,2 +1,58 @@
+https://pjreddie.com/darknet/yolo/
+YOLOv3
+https://www.youtube.com/watch?v=MPU2HistivI
 yolo or You Only Look Once is a Object Detection model. Check darkflow on Github
-​BTW darknet is TF implementation of YOLO
+BTW darknet is TF implementation of YOLO
+BARD
+
+Train Yolov8 object detection on a custom dataset | Step by step guide | Computer vision tutorial
+https://www.youtube.com/watch?v=m9fH9OWn8YM
+https://github.com/computervisioneng/train-yolov8-custom-dataset-step-by-step-guide
+
+Rust implementation of YOLO
+https://lib.rs/crates/rusty-yolo
+
+Yolo file
+https://docs.cogniflow.ai/en/article/how-to-create-a-dataset-for-object-detection-using-the-yolo-labeling-format-1tahk19/
+https://stackoverflow.com/questions/55248489/yolo-annotation-files-for-already-cropped-images
+<object-class> <x_center> <y_center> <width> <height>
+
+Annotations
+https://github.com/wkentaro/labelme
+	pip install -U labelme
+Usage
+	labelme --help
+just open gui
+	labelme
+Tutorial (single image example)
+	cd examples/tutorial
+Specify image file
+	labelme apc2016_obj3.jpg
+Close window after the save
+	labelme apc2016_obj3.jpg -O apc2016_obj3.json
+Not include image data but relative image path in JSON file
+	labelme apc2016_obj3.jpg --nodata
+specify label list
+	labelme apc2016_obj3.jpg \
+  --labels highland_6539_self_stick_notes,mead_index_cards,kong_air_dog_squeakair_tennis_ball
+
+# semantic segmentation example
+cd examples/semantic_segmentation
+labelme data_annotated/  # Open directory to annotate all images in it
+labelme data_annotated/ --labels labels.txt  # specify label list with a file
+Ultralytics
+https://docs.ultralytics.com
+https://github.com/ultralytics/ultralytics
+	sudo -H pip install -U ultralytics numpy
+	python
+	import torch
+	torch.cuda.is_available()
+
+Usage
+	yolo settings
+Train
+	yolo classify train data=mnist160 model=yolov8n-cls.pt epochs=100 imgsz=64
+	yolo classify train data="/data/weather_dataset" model=yolov8n-cls.pt epochs=1 imgsz=64
+
+SEGMENTACIÓN DE INSTANCIAS Y DETECCIÓN DE OBJETOS PERSONALIZADA | Entrenamiento paso a paso YoloV8
+https://www.youtube.com/watch?v=rk7zOBRJWCc

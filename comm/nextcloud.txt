@@ -21,17 +21,17 @@ Se instalarán los siguientes paquetes NUEVOS:
 Paquetes sugeridos:                                                                                                                                    [74/712]
   dolphin-nextcloud nautilus-nextcloud nemo-nextcloud caja-nextcloud
 AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4-x86_64.AppImage
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4-x86_64.AppImage.asc
-	gpg --verify Nextcloud-3.4.4-x86_64.AppImage.asc
-	chmod u+x Nextcloud-3.4.4-x86_64.AppImage
-	mv Nextcloud-3.4.4-x86_64.AppImage ~/appimage/Nextcloud.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.8.0/Nextcloud-3.8.0-x86_64.AppImage
+	wget https://github.com/nextcloud/desktop/releases/download/v3.8.0/Nextcloud-3.8.0-x86_64.AppImage.asc
+	gpg --verify Nextcloud-3.8.0-x86_64.AppImage.asc
+	chmod u+x Nextcloud-3.8.0-x86_64.AppImage
+	mv Nextcloud-3.8.0-x86_64.AppImage ~/appimage/Nextcloud.AppImage
 	ln -s ~/appimage/Nextcloud.AppImage /usr/local/bin/nextcloud
 MacOS
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4.pkg
-	wget https://github.com/nextcloud/desktop/releases/download/v3.4.4/Nextcloud-3.4.4.pkg.asc
-	gpg --verify Nextcloud-3.4.4.pkg.asc
-	open Nextcloud-3.4.4.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.8.0/Nextcloud-3.8.0.pkg
+	wget https://github.com/nextcloud/desktop/releases/download/v3.8.0/Nextcloud-3.8.0.pkg.asc
+	gpg --verify Nextcloud-3.8.0.pkg.asc
+	open Nextcloud-3.8.0.pkg
 	ln -s /Applications/nextcloud.app/Contents/MacOS/nextcloudcmd /usr/local/bin/nextcloudcmd
 Homebrew
 	brew install nextcloud

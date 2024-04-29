@@ -75,6 +75,9 @@ https://code.visualstudio.com/docs/nodejs/reactjs-tutorial#_debugging-react
 https://code.visualstudio.com/docs/editor/command-line
 -g or --goto	When used with file:line[:character], opens a file at a specific line and optional character position. This argument is provided since some operating systems permit : in a file name.
 
+¡Necesitas cambiar estas configuraciones de Visual Studio Code!
+https://www.youtube.com/watch?v=uyEUVgNMvGI
+
 Plugins
 
 C#

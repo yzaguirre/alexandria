@@ -1,0 +1,3 @@
+https://www.avaloniaui.net
+https://github.com/AvaloniaUI/Avalonia
+	dotnet new install Avalonia.Templates

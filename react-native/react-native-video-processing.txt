@@ -56,7 +56,7 @@ iOS/Android thumbnail generator with support for both local and
 remote videos.
 react-native-create-thumbnail is a wrapper
 round AVAssetImageGenerator (iOS) and MediaMetadataRetriever (Android)
-See ~/react-native/react-native-video.txt
+See react-native-video.txt
 https://github.com/souvik-ghosh/react-native-create-thumbnail
 https://stackoverflow.com/questions/40905141/react-native-generate-thumbnail-for-video-url
 	yarn add react-native-create-thumbnail
@@ -74,6 +74,13 @@ path, width, height
 
 Android permissions
 READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
+
+Create a patch
+https://github.com/souvik-ghosh/react-native-create-thumbnail/issues/71
+https://github.com/souvik-ghosh/react-native-create-thumbnail/issues/69
+	diff -u node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java react-native-create-thumbnail/CreateThumbnailModule.java > patch/react-native-create-thumbnail.diff
+Apply patch
+	patch -u node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java -i patch/react-native-create-thumbnail.diff
 
 Other libraries
 https://github.com/phuochau/react-native-thumbnail#readme

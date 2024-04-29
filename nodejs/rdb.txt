@@ -1,0 +1,9 @@
+RDB is the ultimate Object Relational Mapper for Node.js and Typescript,
+offering seamless integration with popular databases like Postgres, MS SQL, MySQL, Sybase SAP, and SQLite.
+Whether you're building applications in TypeScript or JavaScript (including both CommonJS and ECMAScript),
+RDB has got you covered.
+https://rdbjs.org
+https://github.com/alfateam/rdb
+https://twitter.com/lroal/status/1699319053473427732
+	npm install rdb
+	npm install sqlite3

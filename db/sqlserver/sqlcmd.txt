@@ -19,3 +19,6 @@ https://stackoverflow.com/questions/425379/how-to-export-data-as-csv-format-from
 sqlcmd -S myServer -d myDB -E -o "MyData.txt" ^
     -Q "select bar from foo" ^
     -W -w 999 -s","
+
+Using params
+	sqlcmd -v ColumnName = "LastName" -i C:\testscript.sql

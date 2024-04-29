@@ -1,4 +1,6 @@
 https://developer.android.com/kotlin/index.html
+New android project
+
 https://twitter.com/i/moments/980488782406303744
 https://www.youtube.com/watch?v=2IJaRSqPqN4
 Toast Function
@@ -13,3 +15,5 @@ toast("Hello Kotlin, Hackbal Teamz")
 
 Kotlin Android Tutorial | How to Create an Android App using Kotlin? | Edureka
 https://www.youtube.com/watch?v=WzVNGFK8bNc
+Deploy ML model | android studio | Kotlin | deep learning | model deploy | tflilte
+https://www.youtube.com/watch?v=gVJC1j2n9tE

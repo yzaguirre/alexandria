@@ -2,10 +2,11 @@ pgAdmin is designed to answer the needs of all users,
 from writing simple SQL queries to developing complex databases.
 https://www.pgadmin.org
 https://github.com/pgadmin-org/pgadmin4
+How to Install PgAdmin 4 on Ubuntu 22 04 LTS (Linux) (2023)
+https://www.youtube.com/watch?v=LObmSDf9p6Y
 Repository
-	curl https://www.pgadmin.org/static/packages_pgadmin_org.pub > /etc/apt/trusted.gpg.d/packages_pgadmin_org.pub
-x	wget --quiet -O - https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
-	sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+	curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+	sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 Install for both desktop and web modes:
 	sudo apt install pgadmin4
 Install for desktop mode only:

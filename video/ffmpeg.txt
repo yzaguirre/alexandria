@@ -14,6 +14,9 @@ libavutil is a helper library containing routines common to different parts of F
 libpostproc is a library containing video postprocessing routines.
 libswscale is a library containing video image scaling and colorspace/pixelformat conversion routines.
 libavfilter is the substitute for vhook which allows the video/audio to be modified or examined between the decoder and the encoder.
+See ffserver.txt
+gstreamer.txt
+rtsp.txt
 
 http://www.ffmpeg.org/download.html#release_6.0
 https://news.ycombinator.com/item?id=34965535
@@ -67,6 +70,11 @@ Very minimal FFmpeg installation:
 				--pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 Windows
 	choco install ffmpeg
+Windows Server
+	7z x -o"C:\Program Files\" ffmpeg-git-full.7z
+	move C:\Program Files\ffmpeg* C:\Program Files\ffmpeg
+Append to PATH C:\Program Files\ffmpeg
+
 Installing FFmpeg on macOS Big Sur (on Intel)
 https://www.youtube.com/watch?v=zl4vo0dhLRk
 Download the following: ffmpeg, ffprobe, ffplay

@@ -1,0 +1,11 @@
+NSSM - the Non-Sucking Service Manager
+https://nssm.cc
+	choco install NSSM
+	winget install NSSM.NSSM
+
+Usage
+https://stackoverflow.com/questions/415409/run-batch-file-as-a-windows-service
+Install a service
+	nssm install "YourCoolServiceNameLabel"
+Uninstall a service
+	nssm remove "YourCoolServiceNameLabel"

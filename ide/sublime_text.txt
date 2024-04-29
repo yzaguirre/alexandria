@@ -2,23 +2,23 @@ https://www.sublimetext.com
 Sublime Text 4
 https://www.sublimetext.com/blog/articles/sublime-text-4
 https://news.ycombinator.com/item?id=27230042
-	wget https://download.sublimetext.com/sublime_text_build_4143_x64.tar.xz
-	wget https://download.sublimetext.com/sublime_text_build_4143_x64.tar.xz.asc
+	wget https://download.sublimetext.com/sublime_text_build_4166_x64.tar.xz
+	wget https://download.sublimetext.com/sublime_text_build_4166_x64.tar.xz.asc
 	wget https://www.sublimetext.com/sublimehq-pub.gpg
-	gpg --verify sublime_text_build_4143_x64.tar.xz.asc
-	tar xf sublime_text_build_4143_x64.tar.xz -C /opt
+	gpg --verify sublime_text_build_4166_x64.tar.xz.asc
+	tar xf sublime_text_build_4166_x64.tar.xz -C /opt
 	ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl
 Windows
 	winget install SublimeHQ.SublimeText.4
 Binary
-	wget https://download.sublimetext.com/sublime_text_build_4143_x64_setup.exe
+	wget https://download.sublimetext.com/sublime_text_build_4166_x64_setup.exe
 Add to PATH C:\Program Files\Sublime Text
-	start sublime_text_build_4143_x64_setup.exe
+	start sublime_text_build_4166_x64_setup.exe
 Homebrew
 	brew install sublime-text
 MacOS
-	wget https://download.sublimetext.com/sublime_text_build_4143_mac.zip
-	7zz x -o"/Applications" sublime_text_build_4143_mac.zip
+	wget https://download.sublimetext.com/sublime_text_build_4166_mac.zip
+	7zz x -o"/Applications" sublime_text_build_4166_mac.zip
 Add to PATH
 /Applications/Sublime Text.app/Contents/SharedSupport/bin
 

@@ -1,16 +1,16 @@
 Render markdown on the CLI, with pizzazz! 💅🏻
 https://github.com/charmbracelet/glow
-	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_amd64.deb
-	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt
-	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/checksums.txt.sig
+	wget https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_linux_amd64.deb
+	wget https://github.com/charmbracelet/glow/releases/download/v1.5.1/checksums.txt
+	wget https://github.com/charmbracelet/glow/releases/download/v1.5.1/checksums.txt.sig
 	gpg --verify checksums.txt.sig
 	sha256sum -c --ignore-missing checksums.txt
-	dpkg -i glow_1.4.1_linux_amd64.deb
+	dpkg -i glow_1.5.1_linux_amd64.deb
 Termux
 	pkg install glow
 Raspbery Pi armv6
-	wget https://github.com/charmbracelet/glow/releases/download/v1.4.1/glow_1.4.1_linux_armv6.deb
-	dpkg -i glow_1.4.1_linux_armv6.deb
+	wget https://github.com/charmbracelet/glow/releases/download/v1.5.1/glow_1.5.1_linux_armv6.deb
+	dpkg -i glow_1.5.1_linux_armv6.deb
 Windows
 	choco install glow
 	scoop install glow

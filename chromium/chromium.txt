@@ -71,6 +71,7 @@ Helps with unknown plugins
 Create profile directory
 	mkdir ~/.config/chromium/Jail
 Start chromium
+https://peter.sh/experiments/chromium-command-line-switches/
 	chromium --user-data-dir=$HOME/.config/chromium/Jail
 Make an alias
 	alias chromiumjails='chromium --user-data-dir=$HOME/.config/chromium/Jail'

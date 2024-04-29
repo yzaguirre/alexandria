@@ -9,10 +9,10 @@ http://superuser.com/questions/121435/is-it-possible-to-host-a-web-server-from-b
 
 Watchguard
 https://www.watchguard.com
-	wget https://cdn.watchguard.com/SoftwareCenter/Files/MUVPN_SSL/12_7_2/WG-MVPN-SSL_12_7_2.exe
-	Get-FileHash -A SHA1 WG-MVPN-SSL_12_7_2.exe
-2beb1c5704880fef73cc68e75e807c441862482d
-	start WG-MVPN-SSL_12_7_2.exe
+	wget https://cdn.watchguard.com/SoftwareCenter/Files/MUVPN_SSL/12_10/WG-MVPN-SSL_12_10.exe
+	Get-FileHash -A SHA1 WG-MVPN-SSL_12_10.exe
+f4bc7942efac896bdb5cbbb556f06b64cb1413c3
+	start WG-MVPN-SSL_12_10.exe
 Installed at
 C:\Program Files (x86)\WatchGuard\WatchGuard Mobile VPN with SSL
 TAP-Windows Provider V9 Networks adapters

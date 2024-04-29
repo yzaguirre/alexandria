@@ -6,14 +6,14 @@ The following NEW packages will be installed:
   libgimp2.0 libgts-0.7-5 libgts-bin libgvc6 libgvpr2 liblab-gamut1 libmetis5 libmng2 libmypaint-1.5-1 libmypaint-common libpathplan4 libumfpack5
 Compile
 https://www.gimp.org/source/
-	wget https://download.gimp.org/mirror/pub/gimp/v2.10/gimp-2.10.32.tar.bz2
+	wget https://download.gimp.org/mirror/pub/gimp/v2.10/gimp-2.10.34.tar.bz2
 	wget https://download.gimp.org/mirror/pub/gimp/v2.10/SHA1SUMS
 	wget https://download.gimp.org/mirror/pub/gimp/v2.10/SHA256SUMS
 	wget https://download.gimp.org/mirror/pub/gimp/v2.10/SHA512SUMS
 	sha1sum -c --ignore-missing SHA1SUMS
 	sha256sum -c --ignore-missing SHA256SUMS
 	sha512sum -c --ignore-missing SHA512SUMS
-	tar xf gimp-2.10.32.tar.bz2
+	tar xf gimp-2.10.34.tar.bz2
 Windows
 	winget install GIMP.GIMP
 	scoop bucket add extras

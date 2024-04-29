@@ -7,9 +7,9 @@ Compile
 	apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 The following NEW packages will be installed:
   cmake cmake-data libjsoncpp24 librhash0 libxcb-shape0-dev libxcb-xfixes0-dev
-	wget https://github.com/alacritty/alacritty/archive/refs/tags/v0.11.0.tar.gz
-	tar xf v0.11.0.tar.gz
-	cd alacritty-0.11.0
+	wget https://github.com/alacritty/alacritty/archive/refs/tags/v0.12.3.tar.gz
+	tar xf v0.12.3.tar.gz
+	cd alacritty-0.12.3
 	cargo build --release
 Force support for only Wayland
 	cargo build --release --no-default-features --features=wayland

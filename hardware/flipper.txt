@@ -3,3 +3,7 @@ https://blog.flipperzero.one/certification-and-opening-sources/
 https://www.kickstarter.com/projects/flipper-devices/flipper-zero-tamagochi-for-hackers
 https://www.reddit.com/r/programming/comments/msx0fr/flipper_zero_tamagochi_for_hackers/
 https://news.ycombinator.com/item?id=32166058
+See portapack.txt
+https://www.reddit.com/r/flipperzero/comments/18sa0vi/my_flippers_sd_card_wont_stay_in/
+https://www.reddit.com/r/flipperzero/comments/18rdlyd/top_half_of_my_flipper_screen_is_extremely_faint/
+https://www.reddit.com/r/flipperzero/comments/18xjvh6/my_flipper_is_normal_when_it_always_high_power/

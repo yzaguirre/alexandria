@@ -1,4 +1,4 @@
-https://www.cygwin.com/
+https://www.cygwin.com
 https://www.youtube.com/watch?v=hh-V6el8Oxk
 https://cygwin.com/mirrors.html
 https://superuser.com/questions/366864/how-to-download-individual-cygwin-packages-and-or-individual-files-within-them#366919

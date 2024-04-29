@@ -27,6 +27,10 @@ https://www.youtube.com/watch?v=RgN1TEnULVQ
 
 https://onesignal.com/mobile-push
 https://github.com/OneSignal/react-native-onesignal
+https://documentation.onesignal.com/docs/react-native-sdk-setup
+React Native Android push notifications using OneSignal & Firebase
+https://www.youtube.com/watch?v=XFQHDt1C8Pc
+	yarn add react-native-onesignal
 
 https://notifee.app/
 https://notifee.app/react-native/docs/android/progress-indicators

@@ -1,3 +1,9 @@
+Power BI Desktop
+https://powerbi.microsoft.com
+https://playground.powerbi.com
+	winget install Microsoft.PowerBI
+	choco install PowerBI
+
 https://techcommunity.microsoft.com/t5/tools/what-s-the-future-of-rdlc-quot-client-side-ssrs-quot-aka-quot/m-p/2946830
 https://learn.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi
 	choco install powerbi-reportbuilder
@@ -11,3 +17,37 @@ https://dev.powerbi.com/apps
 https://app.powerbi.com
 Explorando ejemplos sobre Power BI Embedded
 https://www.youtube.com/watch?v=Tyi0xWdFDO4
+
+Power BI curso gratis
+https://www.youtube.com/playlist?list=PLAzxOcoUJJFTacRyXu56XrhJ28FzHHN7V
+https://powerbi.tips
+
+Embed for your customers
+app owns data
+A SKU Scale up and down
+P and EM SKU monthly licence
+
+Power BI Premium Capacity
+P1 - 25 GB
+P2 - 50 GB
+P3 - 100 GB
+P4 - 200 GB
+P5 - 400 GB
+Premium per user is just fine for you deploy your embed project
+You can use you Premium capacity for everything you have described. The embedded skus are useful for managing costs and adding scale that you may need for an external solution.
+Ppu CAN be used for your dev and test environments with premium capacity for production.
+
+Embed a report
+https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/embed-report
+Introduction to Power BI Embedded - Data Minds Presentation
+https://www.youtube.com/watch?v=eJIJ3H1kA9w
+
+Power BI Licensing Explained: Which Plan is Right for You?
+https://www.youtube.com/watch?v=sKvNdKxKljw
+
+Power BI REST APIs for .NET
+https://github.com/Microsoft/PowerBI-CSharp
+	Install-Package Microsoft.PowerBI.Api
+
+How to publish power bi report to web
+https://www.youtube.com/watch?v=L3KpZxtnbRc

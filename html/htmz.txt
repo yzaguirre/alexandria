@@ -1,0 +1,5 @@
+html with targeted manipulation zones
+Show HN: htmz – a low power tool for HTML
+https://leanrada.com/htmz/
+https://github.com/Kalabasa/htmz
+https://news.ycombinator.com/item?id=39429370

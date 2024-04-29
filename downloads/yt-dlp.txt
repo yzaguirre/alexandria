@@ -24,3 +24,8 @@ https://unix.stackexchange.com/questions/230481/how-to-download-portion-of-video
 	yt-dlp --youtube-skip-dash-manifest -g "URL"
 	ffmpeg -ss 12:15 -i "1st-URL" -ss 12:15 -i "2nd-URL" -t 5:15 -map 0:v -map 1:a -c:v libx264 -c:a aac output.mkv
 	ffmpeg -ss 12:15 -i "1st-URL" -ss 12:15 -i "2nd-URL" -t 5:15 -map 0:v -map 1:a -c:v h264_nvenc -c:a aac output.mkv
+Timestamps
+	yt-dlp.exe --download-sections "*6:02-6:22"
+Using better codec
+	yt-dlp.exe --download-sections "*6:02-6:22" --ppa "Merger+ffmpeg_i1:-v quiet"
+	yt-dlp.exe --download-sections "*6:02-6:22" --ppa "Merger+ffmpeg_i1:-vcodec h264_nvenc"

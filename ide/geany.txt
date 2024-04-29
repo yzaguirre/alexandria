@@ -15,21 +15,21 @@ Se instalarán los siguientes paquetes NUEVOS:
 Compile with plugins
 	apt install libgtk-3-dev intltool libgpgme-dev libgit2-dev
 See ../documents/pdf.txt for rst2pdf
-	wget https://download.geany.org/geany-1.38.tar.gz
-	wget https://download.geany.org/geany-1.38.tar.gz.sig
-	wget https://plugins.geany.org/geany-plugins/geany-plugins-1.38.tar.gz
-	wget https://plugins.geany.org/geany-plugins/geany-plugins-1.38.tar.gz.sig
+	wget https://download.geany.org/geany-2.0.tar.gz
+	wget https://download.geany.org/geany-2.0.tar.gz.sig
+	wget https://plugins.geany.org/geany-plugins/geany-plugins-2.0.tar.gz
+	wget https://plugins.geany.org/geany-plugins/geany-plugins-2.0.tar.gz.sig
 	wget https://download.geany.org/colombanw-pubkey.txt
-	gpg --verify geany-1.38.tar.gz.sig
-	gpg --verify geany-plugins-1.38.tar.gz.sig
-	tar xf geany-1.38.tar.gz
-	cd geany-1.38
+	gpg --verify geany-2.0.tar.gz.sig
+	gpg --verify geany-plugins-2.0.tar.gz.sig
+	tar xf geany-2.0.tar.gz
+	cd geany-2.0
 	./configure --enable-html-docs --enable-pdf-docs
 	make -j12
 	make install
 	cd ..
-	tar xf geany-plugins-1.38.tar.gz
-	cd geany-plugins-1.38
+	tar xf geany-plugins-2.0.tar.gz
+	cd geany-plugins-2.0
 	./configure --enable-markdown --enable-geanypg --enable-gitchangebar
 	make -j12
 	make install
@@ -38,21 +38,21 @@ MS Windows install
 Installer
 	curl -o SHA256SUMS https://download.geany.org/SHA256SUMS
 	curl -o MD5SUMS https://download.geany.org/MD5SUMS
-	curl -o geany-1.38_setup.exe https://download.geany.org/geany-1.38_setup.exe
-	curl -o geany-1.38_setup.exe.sig https://download.geany.org/geany-1.38_setup.exe.sig
+	curl -o geany-2.0_setup.exe https://download.geany.org/geany-2.0_setup.exe
+	curl -o geany-2.0_setup.exe.sig https://download.geany.org/geany-2.0_setup.exe.sig
 Verify download
 	md5sum.exe -c --ignore-missing MD5SUMS
 	sha256sum.exe -c --ignore-missing SHA256SUMS
-	gpg --verify geany-1.38_setup.exe.sig
+	gpg --verify geany-2.0_setup.exe.sig
 MS Windows plugins
-	curl -o geany-plugins-1.38_setup.exe https://download.geany.org/geany-plugins/geany-plugins-1.38_setup.exe
-	curl -o geany-plugins-1.38_setup.exe.sig https://download.geany.org/geany-plugins/geany-plugins-1.38_setup.exe.sig
+	curl -o geany-plugins-2.0_setup.exe https://download.geany.org/geany-plugins/geany-plugins-2.0_setup.exe
+	curl -o geany-plugins-2.0_setup.exe.sig https://download.geany.org/geany-plugins/geany-plugins-2.0_setup.exe.sig
 	curl -o SHA256SUMS https://download.geany.org/geany-plugins/SHA256SUMS
 	curl -o MD5SUMS https://download.geany.org/geany-plugins/MD5SUMS
 Verify download
 	md5sum.exe -c --ignore-missing MD5SUMS
 	sha256sum.exe -c --ignore-missing SHA256SUMS
-	gpg --verify geany-plugins-1.38_setup.exe.sig
+	gpg --verify geany-plugins-2.0_setup.exe.sig
 
 Add "C:\Program Files\Geany\bin" to PATH
 

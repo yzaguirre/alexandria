@@ -1,0 +1,4 @@
+What is the HackRF One Portapack H2+
+https://www.youtube.com/watch?v=alrFbY5vxt4
+Custom firmware for the HackRF+PortaPack H1/H2
+https://github.com/eried/portapack-mayhem

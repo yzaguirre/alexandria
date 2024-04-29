@@ -30,3 +30,5 @@ See bin\Debug\net7.0\mywasiapp.wasm
 WebAssembly: Docker Without Containers
 https://wasmlabs.dev/articles/docker-without-containers/
 https://news.ycombinator.com/item?id=34078532
+WASM in Rust without NodeJS
+https://dev.to/dandyvica/wasm-in-rust-without-nodejs-2e0c

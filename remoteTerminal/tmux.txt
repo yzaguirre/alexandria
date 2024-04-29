@@ -1,4 +1,5 @@
 https://tmux.github.io
+https://github.com/tmux/tmux
 https://www.arp242.net/tmux.html
 https://news.ycombinator.com/item?id=21951679
 https://stackoverflow.com/questions/58739867/how-to-target-a-particular-tmux-session
@@ -50,17 +51,17 @@ Compile in CentOS 6
 Don't install libevent-devel, its too old
 	yum install ncurses-devel
 https://superuser.com/questions/738829/attempting-to-install-tmux-on-centos-6-x-fails-with-error-evbuffer-eol-lf-und
-	wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
-	tar -xvzf libevent-2.0.22-stable.tar.gz
+	wget https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+	tar -xvzf libevent-2.1.12-stable.tar.gz
 	./configure
 	make -j 4
 	make install
 	cd ..
 Newer CentOS
 	yum install libevent2-devel.x86_64
-	wget https://github.com/tmux/tmux/releases/download/2.9a/tmux-2.9.tar.gz
-	tar xf tmux-2.9.tar.gz
-	cd tmux-2.9
+	wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
+	tar xf tmux-3.3a.tar.gz
+	cd tmux-3.3a
 	./configure LDFLAGS="-Wl,-rpath,/usr/local/lib"
 	make -j 4
 	make install
@@ -68,6 +69,8 @@ https://news.ycombinator.com/item?id=9505377
 
 Conf
 	vim ~/.tmux.conf
+https://stackoverflow.com/questions/40472995/tmux-is-not-using-screen-256color-even-it-is-set-in-the-config-file
+set -g default-terminal "screen-256color"
 
 Let's SSH into the server, install tmux and fire it up.
 	tmux

@@ -20,7 +20,7 @@ Ubuntu
 	add-apt-repository ppa:nemonein/ksnip
 	apt install ksnip
 Windows
-	winget install ksnip
+	winget install ksnip.ksnip
 Installed at C:\Program Files\ksnip
 Homebrew
 	brew install --cask ksnip

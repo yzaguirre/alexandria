@@ -1,0 +1,20 @@
+The endgame Python memory profiler
+Memray tracks and reports memory allocations, both in Python code and in compiled extension modules.
+https://bloomberg.github.io/memray/index.html
+https://news.ycombinator.com/item?id=38561682
+	python3.9 -m pip install memray
+You can invoke Memray the following way
+	python3.9 -m memray
+Or alternatively through the version-qualified memrayX.Y script
+	memray3.9
+You can also invoke Memray without version-qualifying it
+	memray
+Running the Analysis
+	memray3.9 run example.py
+This will execute the script and track its memory allocations,
+displaying the name of the file where results are being recorded with a message like:
+	Writing profile results into memray-example.py.4131.bin
+Generating a Flame Graph
+To generate a flame graph displaying memory usage across the application,
+we can run memray flamegraph and specify the results file:
+	memray3.9 flamegraph memray-example.py.4131.bin

@@ -1,0 +1,15 @@
+https://linux-cifs.samba.org/cifs-utils/
+https://markontech.com/linux/mount-a-network-shared-drive-on-linux/
+https://serverfault.com/questions/414074/mount-cifs-host-is-down
+	smbclient -L <server_ip> -U <username> -d 256
+	apt install cifs-utils
+	yum install cifs-utils
+	mkdir /mnt/share/nmshare
+	mount.cifs //10.0.1.4/share /mnt/share/nmshare/ -o user=share,pass=share,vers=1.0
+	vim /etc/fstab
+//10.0.1.4/share /mnt/share/nmshare cifs username=share,password=share 0 0
+To mount the network share which does not have credentials, use this command:
+//10.0.1.4/share /mnt/share/nmshare cifs guest,uid=1000 0 0
+
+How to Mount a Windows Share on Linux Video Tutorial
+https://www.youtube.com/watch?v=yuMoIfvhNaM

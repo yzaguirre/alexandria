@@ -35,12 +35,17 @@ Certificado SSL Gratuito Let's EnCrypt en IIS (Windows Server) 🔥
 https://www.youtube.com/watch?v=ND02QaNAXY8
 	choco install certifytheweb
 Binaries
-	Invoke-WebRequest -OutFile CertifyTheWebSetup_V5.6.8.exe -Uri "https://certifytheweb.s3.amazonaws.com/downloads/archive/CertifyTheWebSetup_V5.6.8.exe"
-	Get-FileHash CertifyTheWebSetup_V5.6.8.exe -Algorithm SHA256
-7e4614e706dad3c7f7fb9652dd02ceefb3c95ae6ea0cc9e9fe59d943a495158c
-	start CertifyTheWebSetup_V5.6.8.exe
+	Invoke-WebRequest -OutFile CertifyTheWebSetup_V6.0.11.exe -Uri "https://certifytheweb.s3.amazonaws.com/downloads/archive/CertifyTheWebSetup_V6.0.11.exe"
+	Get-FileHash CertifyTheWebSetup_V6.0.11.exe -Algorithm SHA256
+bfb34fd410d842f97ec2d0b1ae99e6ec6244a19e24c6341cabdc5fd2c6e3bcd5
+	start CertifyTheWebSetup_V6.0.11.exe
 Installed at
 C:\ProgramData\certify
+Service
+	Set-Service -name Certify.Service -startuptype 'manual'
+	Get-Service Certify.Service
+	Stop-Service Certify.Service
+	Start-Service Certify.Service
 
 An ACME client library and PowerShell client for the .NET platform (Let's Encrypt)
 https://pkisharp.github.io/ACMESharp-docs/

@@ -1,9 +1,12 @@
 See db/sqlite/termdbms.txt
+Stop Using CSV !
+https://www.youtube.com/watch?v=mGUlW6YgHjE
+
 csvtk
 A cross-platform, efficient and practical CSV/TSV toolkit in Golang
 https://bioinf.shenwei.me/csvtk/
 https://github.com/shenwei356/csvtk
-	wget https://github.com/shenwei356/csvtk/releases/download/v0.24.0/csvtk_linux_amd64.tar.gz
+	wget https://github.com/shenwei356/csvtk/releases/download/v0.28.0/csvtk_linux_amd64.tar.gz
 	tar xf csvtk_linux_amd64.tar.gz -C /usr/local/bin
 MacOS
 	brew install csvtk

@@ -1,0 +1,21 @@
+https://the.exa.website
+https://github.com/eza-community/eza
+See eza.txt
+Package install
+	apt install exa
+Binary install
+	wget https://github.com/eza-community/eza/releases/download/v0.14.2/eza_x86_64-unknown-linux-musl.tar.gz
+	tar xf eza_x86_64-unknown-linux-musl.tar.gz -C /usr/local/bin
+Windows
+	winget install eza-community.eza
+MacOS
+	brew install eza
+
+Useful alias
+	alias ll='eza -bghHlS'
+Other examples
+	eza -R
+	eza -T
+	eza -R --level=4
+	eza -l --sort=size
+	eza -lr --sort=size

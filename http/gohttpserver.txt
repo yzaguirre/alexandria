@@ -2,32 +2,32 @@ HAS GOOGLE ANALYTICS
 https://github.com/codeskyblue/gohttpserver/issues/85
 https://github.com/codeskyblue/gohttpserver
 Windows
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_windows_amd64.tar.gz
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
-	sha256sum.exe --ignore-missing -c gohttpserver_1.1.0_checksums.txt
-	tar xf gohttpserver_1.1.0_windows_amd64.tar.gz -C ~/bin
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_windows_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_checksums.txt
+	sha256sum.exe --ignore-missing -c gohttpserver_1.1.4_checksums.txt
+	tar xf gohttpserver_1.1.4_windows_amd64.tar.gz -C ~/bin
 	cd !$
 	rm LICENSE README.md
 Linux
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_linux_amd64.tar.gz
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
-	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
-	tar xf gohttpserver_1.1.0_linux_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_linux_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.4_checksums.txt
+	tar xf gohttpserver_1.1.4_linux_amd64.tar.gz
 	rm LICENSE README.md
 	mv gohttpserver /usr/local/bin
 Termux
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_linux_arm64.tar.gz
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
-	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
-	tar xf gohttpserver_1.1.0_linux_arm64.tar.gz -C ~/bin gohttpserver
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_linux_arm64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.4_checksums.txt
+	tar xf gohttpserver_1.1.4_linux_arm64.tar.gz -C ~/bin gohttpserver
 Windows
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_windows_amd64.tar.gz
-	tar xf gohttpserver_1.1.0_windows_amd64.tar.gz -C C:\Users\dyzag\bin gohttpserver.exe
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_windows_amd64.tar.gz
+	tar xf gohttpserver_1.1.4_windows_amd64.tar.gz -C C:\Users\dyzag\bin gohttpserver.exe
 MacOS
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_darwin_amd64.tar.gz
-	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.0/gohttpserver_1.1.0_checksums.txt
-	sha256sum --ignore-missing -c gohttpserver_1.1.0_checksums.txt
-	tar xf gohttpserver_1.1.0_darwin_amd64.tar.gz -C ~/bin
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_darwin_amd64.tar.gz
+	wget https://github.com/codeskyblue/gohttpserver/releases/download/1.1.4/gohttpserver_1.1.4_checksums.txt
+	sha256sum --ignore-missing -c gohttpserver_1.1.4_checksums.txt
+	tar xf gohttpserver_1.1.4_darwin_amd64.tar.gz -C ~/bin
 	cd !$
 	rm LICENSE README.md
 Make alias
@@ -36,7 +36,7 @@ Make alias
 Compile
 	git clone https://github.com/codeskyblue/gohttpserver.git
 	cd gohttpserver
-	git checkout 1.1.0
+	git checkout 1.1.4
 	./build.sh
 	cp gohttpserver-win-amd64.exe
 

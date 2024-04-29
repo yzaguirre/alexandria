@@ -1,0 +1,19 @@
+Forwarder Proxy
+https://forwarder-proxy.io
+https://github.com/saucelabs/forwarder
+https://news.ycombinator.com/item?id=38709734
+	mkdir C:\forwarder
+	Invoke-WebRequest -Uri https://github.com/saucelabs/forwarder/releases/download/v1.1.0/forwarder-1.1.0_windows.x86_64.zip -OutFile forwarder.zip
+	Expand-Archive -Path forwarder.zip -DestinationPath C:\forwarder
+Add to PATH
+	$currentPath = [System.Environment]::GetEnvironmentVariable('PATH', [System.EnvironmentVariableTarget]::Machine)
+	$newPath = "$currentPath;C:\forwarder"
+	[System.Environment]::SetEnvironmentVariable('PATH', $newPath, [System.EnvironmentVariableTarget]::Machine)
+Add PowerShell completion to the profile.
+	Add-Content -Path $PROFILE -Value ". C:\forwarder\completions\forwarder.ps1"
+Config file at
+C:\forwarder\forwarder.yaml
+Start
+	forwarder.exe run --config-file C:\forwarder\forwarder.yaml
+Enabling MITM only for specific hosts #
+	forwarder run --mitm --mitm-domains '.*\.example\.com$,-foo\.example\.com$'

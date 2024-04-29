@@ -1,0 +1,8 @@
+PRQL is a modern language for transforming data
+- a simple, powerful, pipelined SQL replacement
+https://prql-lang.org
+https://github.com/PRQL/prql
+
+Show HN: PRQL in PostgreSQL
+https://github.com/kaspermarstal/plprql
+https://news.ycombinator.com/item?id=39428609

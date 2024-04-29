@@ -1,2 +1,5 @@
 https://recordrtc.org/
 https://news.ycombinator.com/item?id=23869752
+
+https://quic.video/blog/replacing-webrtc/
+https://news.ycombinator.com/item?id=38069974

@@ -1,0 +1,24 @@
+Best Places to Find Datasets for Your Projects
+https://www.youtube.com/watch?v=PExdWWcxmro
+10 Free Dataset Resources for Your Next Project!
+https://www.youtube.com/watch?v=JcDnoEtsoCU
+
+https://www.kaggle.com
+https://datasetsearch.research.google.com
+https://data.fivethirtyeight.com
+https://data.gov
+https://github.com/search?q=dataset
+https://data.nasa.gov
+https://brightdata.com
+https://datahub.io
+https://data.gov
+UCI Machine Learning Repository
+https://archive.ics.uci.edu
+Earth Data
+https://www.earthdata.nasa.gov
+Gapminder
+https://www.gapminder.org
+CERN Open Data Portal
+https://opendata.cern.ch
+BFI Film Industry Statistics
+https://www.bfi.org.uk/industry-data-insights

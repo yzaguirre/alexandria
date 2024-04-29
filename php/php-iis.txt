@@ -1,0 +1,6 @@
+Web installer method
+Install and configure wordpress on windows server IIS
+https://www.youtube.com/watch?v=-c3ZGYmlwKM
+
+Permision
+https://stackoverflow.com/questions/19162553/iis-401-3-unauthorized

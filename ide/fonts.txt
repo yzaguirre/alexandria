@@ -19,9 +19,17 @@ Homebrew
 	brew install --cask font-fira-code
 
 https://www.nerdfonts.com
-	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraMono.zip
-	unzip FiraMono.zip -d ~/.fonts
-
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraMono.zip
+x	unzip FiraMono.zip -d ~/.fonts
+	unzip FiraMono.zip -d ~/.local/share/fonts
+	sudo fc-cache -fr
+	fc-list | rg fira
+MacOS
+	unzip FiraMono.zip -d ~/Library/Fonts
+or
+	brew tap homebrew/cask-fonts
+	brew search font- | rg jetbrains
+	brew install --cask font-jetbrains-mono-nerd-font
 https://fonts.google.com/specimen/Roboto+Mono
 
 https://github.com/daylerees/colour-schemes+

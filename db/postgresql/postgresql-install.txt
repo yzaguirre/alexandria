@@ -1,5 +1,8 @@
+https://www.postgresql.org
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 https://www.cyberciti.biz/faq/how-to-install-setup-postgresql-9-6-on-debian-linux-9/
+How To Install PostgreSQL on Ubuntu 22.04 LTS (Linux) (2023)
+https://www.youtube.com/watch?v=tducLYZzElo
 	apt install postgresql postgresql-contrib
 Package source
 	sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -14,17 +17,21 @@ C:\ProgramData\chocolatey\lib\postgresql
 	winget install PostgreSQL.PostgreSQL
 	scoop install postgresql
 Installed at
-C:\Program Files\PostgreSQL\14
+C:\Program Files\PostgreSQL\15
 pgadmin4 included at
-C:\Program Files\PostgreSQL\14\pgAdmin 4\bin
+C:\Program Files\PostgreSQL\15\pgAdmin 4\bin
 Set PGDATA to
-C:\Program Files\PostgreSQL\14\data
+C:\Program Files\PostgreSQL\15\data
 Service
-	Set-Service -name postgresql-x64-14 -startuptype 'manual'
-	Get-Service postgresql-x64-14
-	Start-Service postgresql-x64-14
-	Restart-Service postgresql-x64-14
-	Stop-Service postgresql-x64-14
+	Set-Service -name postgresql-x64-15 -startuptype 'manual'
+	Get-Service postgresql-x64-15
+	Start-Service postgresql-x64-15
+	Restart-Service postgresql-x64-15
+	Stop-Service postgresql-x64-15
+	systemctl status postgresql
+	systemctl disable postgresql
+	systemctl stop postgresql
+	systemctl start postgresql
 
 Configuration files locations
 SELECT name, setting FROM pg_settings WHERE category = 'File Locations';
@@ -52,3 +59,24 @@ popular ones: trust, peer, ident, md5, and password .
 
 PSQL_HISTORY
 	~/.psql_history
+
+Listen to Internet
+https://stackoverflow.com/questions/18580066/how-to-allow-remote-access-to-postgresql-database
+host    all             all              0.0.0.0/0                       md5
+host    all             all              ::/0                            md5
+
+Start session
+	sudo -i -u postgres
+	psql
+Change password
+	\password postgres
+	\password sde
+Create database
+	createdb my_pgdb
+Grant privileges to the user on the database
+	GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
+Switch to database
+	psql -d my_pgdb
+	\conninfo
+Exit
+	\q

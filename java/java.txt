@@ -16,6 +16,9 @@ you can install Oracle Java 8 by using the following commands:
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/bin/"
 Windows
 	choco install jre8
+	choco install oraclejdk openjdk11
+C:\Program Files\Java\jdk-17.0.2\
+C:\Program Files\Eclipse Adoptium\jdk-11.0.22.7-hotspot\
 	winget install Oracle.JavaRuntimeEnvironment
 Path
 C:\Program Files (x86)\Common Files\Oracle\Java\javapath

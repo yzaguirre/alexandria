@@ -3,3 +3,22 @@ https://news.ycombinator.com/item?id=30610532
 	.load ./csv
 	CREATE VIRTUAL TABLE temp.t1 USING csv(filename='thefile.csv');
 	SELECT * FROM t1;
+Import
+https://www.sqlitetutorial.net/sqlite-import-csv/
+	sqlite3 danios.db
+	.mode csv
+	.import FILE TABLE
+	.schema TABLE
+	DROP TABLE IF EXISTS TABLE;
+Export
+https://www.sqlitetutorial.net/sqlite-export-csv/
+	sqlite3 c:/sqlite/chinook.db
+	.headers on
+	.mode csv
+	.output data.csv
+	SELECT customerid,
+   ...>        firstname,
+   ...>        lastname,
+   ...>        company
+   ...>   FROM customers;
+	.quit

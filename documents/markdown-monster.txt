@@ -1,5 +1,7 @@
 https://markdownmonster.west-wind.com/
 https://github.com/rickstrahl/MarkdownMonster
+	choco install markdownmonster
+	winget install markdown-monster
 	scoop bucket add extras
 	scoop install markdown-monster
 https://markdownmonster.west-wind.com/docs/_5fp0xp68p.htm#cli-commands

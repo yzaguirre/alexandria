@@ -13,24 +13,23 @@ Enable the "universe" repositories
 Install PowerShell
 	sudo apt install powershell
 Manual install
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/powershell_7.2.7-1.deb_amd64.deb
-	sha256sum powershell_7.2.7-1.deb_amd64.deb
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell_7.3.4.0.deb_amd64.deb
+	sha256sum powershell_7.3.4.0.deb_amd64.deb
 7E764B26BA87196E78DEC20665E166EEE536D117DEB91562A6E4CCF75CC1B6E8
-	dpkg -i powershell_7.2.7-1.deb_amd64.deb
+	dpkg -i powershell_7.3.4.0.deb_amd64.deb
 	apt install -f
 Windows
 How to install latest version of powershell in Windows 11 | Upgrade Powershell to 7.2.0
 https://www.youtube.com/watch?v=bWw7f5yVvGQ
 	winget install Microsoft.PowerShell
 Binary
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/PowerShell-7.2.7-win-x64.msi
-	wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.7/hashes.sha256
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/PowerShell-7.4.1-win-x64.msi
+	wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/hashes.sha256
 	& 'C:\Program Files\Git\bin\bash.exe'
 	dos2unix hashes.sha256
 	sha256sum -c --ignore-missing hashes.sha256
-	sha256sum PowerShell-7.2.7-win-x64.msi
-7445f2f711759fe7167fae2329911f9800d087265d1ba720a8801ff775ac1b31
-	start PowerShell-7.2.7-win-x64.msi
+	sha256sum PowerShell-7.4.1-win-x64.msi
+	start PowerShell-7.4.1-win-x64.msi
 Installed at C:\Program Files\PowerShell\7
 
 Usage
@@ -84,6 +83,8 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
 	$Env:<variable-name> = "<new-value>"
 	$Env:Foo = 'An example'
 	$env:PSModulePath -split ';' | bat
+$env:USERNAME
+$env:COMPUTERNAME
 
 Load scripts
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/import-module?view=powershell-7.2
@@ -134,6 +135,8 @@ Log in CSV
 	Get-Process | Out-Csv C:\Users\dyzag\ProcessesPS.csv
 Set manual
 	Set-Service -name postgresql-x64-14 -startuptype 'manual'
+New service
+	New-Service -name rtsp_webcam -description "" -startuptype automatic "C:\streaming\webcam.exe"
 
 Compare 2 files
 	$ListReferencia = Get-Content "C:\PowerShell\ListaOrigen.txt"
@@ -348,9 +351,13 @@ List members of a group
 	Get-LocalGroupMember -Group "MYGRP"
 Create Group
 	New-LocalGroup -Name "MYGRP" -Description "MY GROUP"
+	New-LocalGroup -Name "IISWP" -Description "Grupo de IIS para WORDPRESS"
 Add members
 	Add-LocalGroupMember -Group "MYGRP" -Member "Gohan"
 	Add-LocalGroupMember -Group "MYGRP" -Member ("Gohan","Administrator")
+	Get-LocalGroupMember -Group "IISWP"
+	Get-Acl "C:\inetpub\www\file.txt" | fl *
+	Get-IISAppPool
 
 Keys
 https://keycombiner.com/collections/powershell/
@@ -360,3 +367,14 @@ CTRL+END
 Erase right side of cursor
 CTRL+HOME
 Erase left side of cursor
+
+Test open port
+https://techcommunity.microsoft.com/t5/itops-talk-blog/powershell-basics-how-to-scan-open-ports-within-a-network/ba-p/924149
+$socket = new-object System.Net.Sockets.TcpClient("192.168.0.15", "22")
+$socket.Connected
+$socket.Close()
+
+Format FAT32
+	format /FS:FAT32 E:
+How to Format USB Drive Larger Than 32GB to FAT32
+https://www.youtube.com/watch?v=s4EX5DMEZH0

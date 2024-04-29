@@ -28,16 +28,16 @@ Install
 	apt install neovim
 	nvim
 DEB
-	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb
-	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb.sha256sum
+	wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.deb
+	wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.deb.sha256sum
 	sha256sum -c nvim-linux64.deb.sha256sum
 	dpkg -i nvim-linux64.deb
 Windows
 	winget install Neovim.Neovim
 	choco install neovim
 Binaries
-	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-win64.msi
-	wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-win64.msi.sha256sum
+	wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-win64.msi
+	wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-win64.msi.sha256sum
 	sha256sum -c --ignore-missing nvim-win64.msi.sha256sum
 	start nvim-win64.msi
 Installed at

@@ -1,0 +1,43 @@
+Traffic sign detection with deep learning
+https://www.youtube.com/watch?v=BXvpCeiJrnM
+Road sign detection and classification by Zumbri/Qamcom
+https://www.youtube.com/watch?v=OcntBOYNiME
+
+Simple Traffic Sign Recognition
+https://www.youtube.com/watch?v=7lfrqJpkFpg
+https://github.com/MarioSamir123/Traffic-Sign-Recognition
+Dataset para tensorflow
+
+Traffic Sign Detection Using Yolo V4 | Yolov4 on Custom Dataset
+https://www.youtube.com/watch?v=IxL0k7L7Zko
+https://github.com/AarohiSingla/yolov4-on-traffic-sign-detection/blob/main/yolov4_traffic_sign_detection.ipynb
+Dataset para yolo
+Yolo v5 on Custom Dataset | Train and Test Yolov5 on Custom Dataset
+https://www.youtube.com/watch?v=80Q3HIBy7Qg
+https://www.kaggle.com/datasets/valentynsichkar/traffic-signs-dataset-in-yolo-format
+
+Traffic Sign Detection Using YOLOv5
+https://www.youtube.com/watch?v=FAijtrQ28bA
+https://github.com/MDhamani/Traffic-Sign-Recognition-Using-YOLO
+
+Traffic Signs Recognition with 95% Accuracy using CNN & Keras
+https://www.youtube.com/watch?v=Vtc64rPHZ6I
+https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
+https://github.com/DeepranjanG/Traffic_sign_classification
+
+I tried to code a TRAFFIC SIGN ML MODEL in 15 minutes
+https://www.youtube.com/watch?v=zPWxavBy1X0
+https://github.com/nicknochnack/StopSign
+https://www.kaggle.com/datasets/andrewmvd/road-sign-detection
+
+https://www.youtube.com/playlist?list=PLAzJXCSg9-Zd5h88UrUb-vonHb7bcDzK1
+
+https://www.kaggle.com/code/pkdarabi/traffic-signs-detection-using-yolov8
+
+https://www.kaggle.com/code/yacharki/traffic-signs-image-classification-96-cnn
+
+https://www.kaggle.com/datasets/valentynsichkar/traffic-signs-preprocessed
+https://www.kaggle.com/datasets/imadmoussa/traffic-signs
+
+https://dev.to/andreygermanov/a-practical-introduction-to-object-detection-with-yolov8-neural-network-3n8c
+https://universe.roboflow.com/roboflow-100/road-signs-6ih4y

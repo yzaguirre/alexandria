@@ -1,12 +1,12 @@
 http://www.greenwoodsoftware.com/less/
 	apt install less
 Compile
-	wget http://www.greenwoodsoftware.com/less/less-608.tar.gz
-	wget http://www.greenwoodsoftware.com/less/less-608.sig
+	wget http://www.greenwoodsoftware.com/less/less-643.tar.gz
+	wget http://www.greenwoodsoftware.com/less/less-643.sig
 	gpg --keyserver keyserver.ubuntu.com --recv-keys 0xF153A7C833235259
-	gpg --verify less-608.sig less-608.tar.gz
-	tar xf less-608.tar.gz
-	cd less-608
+	gpg --verify less-643.sig less-643.tar.gz
+	tar xf less-643.tar.gz
+	cd less-643
 	autoconf configure.ac > configure2
 	chmod u+x configure2
 	./configure2

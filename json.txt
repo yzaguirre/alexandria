@@ -56,16 +56,16 @@ https://news.ycombinator.com/item?id=33741688
 
 gojq
 https://github.com/itchyny/gojq
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.10/gojq_v0.12.10_linux_amd64.tar.gz
-	tar xf gojq_v0.12.10_linux_amd64.tar.gz -C /usr/local/bin --strip-components=1 gojq_v0.12.10_linux_amd64/gojq
-	tar xf gojq_v0.12.10_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.10_linux_amd64/_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.13/gojq_v0.12.13_linux_amd64.tar.gz
+	tar xf gojq_v0.12.13_linux_amd64.tar.gz -C /usr/local/bin --strip-components=1 gojq_v0.12.13_linux_amd64/gojq
+	tar xf gojq_v0.12.13_linux_amd64.tar.gz -C /usr/local/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.13_linux_amd64/_gojq
 Termux
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.10/gojq_v0.12.10_linux_arm64.tar.gz
-	tar xf gojq_v0.12.10_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin --strip-components=1 gojq_v0.12.10_linux_arm64/gojq
-	tar xf gojq_v0.12.10_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.10_linux_arm64/_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.13/gojq_v0.12.13_linux_arm64.tar.gz
+	tar xf gojq_v0.12.13_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/bin --strip-components=1 gojq_v0.12.13_linux_arm64/gojq
+	tar xf gojq_v0.12.13_linux_arm64.tar.gz -C /data/data/com.termux/files/usr/share/zsh/vendor-completions --strip-components=1 gojq_v0.12.13_linux_arm64/_gojq
 Windows
-	wget https://github.com/itchyny/gojq/releases/download/v0.12.10/gojq_v0.12.10_windows_amd64.zip
-	7z e  -o"..\bin" gojq_v0.12.10_windows_amd64.zip gojq_v0.12.10_windows_amd64/gojq.exe gojq_v0.12.10_windows_amd64\_gojq
+	wget https://github.com/itchyny/gojq/releases/download/v0.12.13/gojq_v0.12.13_windows_amd64.zip
+	7z e -o"..\bin" gojq_v0.12.13_windows_amd64.zip gojq_v0.12.13_windows_amd64/gojq.exe gojq_v0.12.13_windows_amd64\_gojq
 Homebrew
 	brew install gojq
 
@@ -212,3 +212,17 @@ Usage
 
 command line JSONPath processing tool (like `jq` but using JSONPath syntax)
 https://github.com/kjozsa/jsp
+
+https://fx.wtf
+https://github.com/antonmedv/fx
+Windows
+	choco install fx-win
+Binary
+	wget https://github.com/antonmedv/fx/releases/download/31.0.0/fx_windows_amd64.exe
+	move fx_windows_amd64.exe C:\Users\DAVIDY~1\bin\fx.exe
+Homebrew
+	brew install fx
+Usage
+	fx --version
+fx: A better JSON tool than jq?
+https://www.youtube.com/watch?v=I43vfzx7QUk

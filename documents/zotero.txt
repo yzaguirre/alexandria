@@ -3,18 +3,18 @@ cite, and share your research sources.
 https://www.zotero.org
 https://github.com/zotero/zotero
 https://news.ycombinator.com/item?id=17606929
-	wget https://download.zotero.org/client/release/6.0.20/Zotero-6.0.20_linux-x86_64.tar.bz2
+	wget https://download.zotero.org/client/release/6.0.27/Zotero-6.0.27_linux-x86_64.tar.bz2
 	mkdir /opt/zotero
 	chown david:david -R /opt/zotero
-	tar xf Zotero-6.0.20_linux-x86_64.tar.bz2 -C /opt/zotero
+	tar xf Zotero-6.0.27_linux-x86_64.tar.bz2 -C /opt/zotero
 	/opt/zotero/set_launcher_icon
 	ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
 Windows
-	winget install DigitalScholar.Zotero
 	choco install zotero
+	winget install DigitalScholar.Zotero
 Latest Binary
-	wget https://download.zotero.org/client/release/6.0.20/Zotero-6.0.20_setup.exe
-	explorer.exe Zotero-6.0.20_setup.exe
+	wget https://download.zotero.org/client/release/6.0.27/Zotero-6.0.27_setup.exe
+	explorer.exe Zotero-6.0.27_setup.exe
 Installed at C:\Program Files (x86)\Zotero\
 
 https://www.zotero.org/blog/zotero-6/

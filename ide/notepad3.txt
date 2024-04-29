@@ -3,6 +3,7 @@ Notepad3 based on code from Notepad2 and MiniPath on code from metapath
 https://www.rizonesoft.com/downloads/notepad3/
 https://github.com/rizonesoft/Notepad3
 	choco install notepad3
+	winget install Rizonesoft.Notepad3
 
 Usage
 	notepad.exe

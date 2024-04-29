@@ -259,3 +259,5 @@ https://stackoverflow.com/questions/31807559/undo-setting-proxy-via-settings-glo
 	adb shell settings put global http_proxy :0
 Get settings
 	adb shell settings list global | subl -
+Get App Permissions status
+	adb shell cmd appops get --uid PACKAGE_NAME

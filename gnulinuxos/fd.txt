@@ -2,23 +2,24 @@ fd-find
 https://github.com/sharkdp/fd
 	apt install fd-find
 Package manager
-	wget https://github.com/sharkdp/fd/releases/download/v8.6.0/fd_8.6.0_amd64.deb
-	dpkg -i fd_8.6.0_amd64.deb
+	wget https://github.com/sharkdp/fd/releases/download/v8.7.0/fd_8.7.0_amd64.deb
+	dpkg -i fd_8.7.0_amd64.deb
 x	alias fd=fdfind
 	ln -s $(which fdfind) ~/.local/bin/fd
 Raspberry Pi
-	wget https://github.com/sharkdp/fd/releases/download/v8.6.0/fd_8.6.0_armhf.deb
-	dpkg -i fd_8.6.0_armhf.deb
+	wget https://github.com/sharkdp/fd/releases/download/v8.7.0/fd_8.7.0_armhf.deb
+	dpkg -i fd_8.7.0_armhf.deb
 Windows
 	choco install fd
 Binary
-	wget https://github.com/sharkdp/fd/releases/download/v8.6.0/fd-v8.6.0-x86_64-pc-windows-msvc.zip
-	unzip fd-v8.6.0-x86_64-pc-windows-msvc.zip fd -d ~/bin
+	wget https://github.com/sharkdp/fd/releases/download/v8.7.0/fd-v8.7.0-x86_64-pc-windows-msvc.zip
+	unzip fd-v8.7.0-x86_64-pc-windows-msvc.zip fd -d ~/bin
 Homebrew
 	brew install fd
 
 Ignore file at
 %APPDATA%\fd\ignore
+C:\Users\DAVIDY~1\AppData\Roaming\fd\ignore
 ~/.config/fd/ignore
 
 Alias for windows bash

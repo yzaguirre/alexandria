@@ -7,6 +7,9 @@ https://www.youtube.com/watch?v=t5phi3nT8OU
 KiCad STM32 + RF + USB Hardware Design
 https://www.youtube.com/watch?v=14_jh3nLSsU
 
+Starting with STM32 - Programming Tutorial for Beginners | Step by Step | Greidi Ajalik
+https://www.youtube.com/watch?v=dnfuNT1dPiM
+
 https://github.com/nviennot/stm32-emulator
 	git clone https://github.com/nviennot/stm32-emulator.git
 	cd stm32-emulator/monox

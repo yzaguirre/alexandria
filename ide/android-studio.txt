@@ -1,23 +1,36 @@
 https://developer.android.com/studio/?utm_source=android-studio
 Download
-	wget https://dl.google.com/dl/android/studio/ide-zips/3.5.3.0/android-studio-ide-191.6010548-linux.tar.gz
+	wget https://redirector.gvt1.com/edgedl/android/studio/install/2023.1.1.28/android-studio-2023.1.1.28-windows.exe
 Verify
-	sha256sum android-studio-ide-191.6010548-linux.tar.gz
-af630d40f276b0d169c6ac8c7663a989f562b0ac48a1d3f0d720f5b6472355db
+	sha256sum android-studio-ide-2023.1.1.28-linux.tar.gz
+139d0dbb4909353b68fbf55c09b6d31a34512044a9d4f02ce0f1a9accca128f9
 Install
-	tar xf android-studio-ide-191.6010548-linux.tar.gz -C /opt
+	tar xf android-studio-ide-2023.1.1.28-linux.tar.gz -C /opt
 	alias astudio='STUDIO_JDK=/VMs/opt/jdk1.8.0_45 /opt/android-studio/bin/studio.sh'
 	touch ~/.android/analytics.settings
 Windows
+	winget install Google.AndroidStudio
+	choco install AndroidStudio
 https://stackoverflow.com/questions/53076422/getting-android-sdkmanager-to-run-with-java-11
 https://developer.android.com/studio/#downloads
 	sha256sum sdk-tools-windows-4333796.zip
 7e81d69c303e47a4f0e748a6352d85cd0c8fd90a5a95ae4e076b5e5f960d3c7a
-	sha256sum android-studio-ide-173.4907809-windows.exe
-6d738a91824791abe7d9efa9ad1becaa3a1b7b4e86e84b149cf4ea9984e68441
+	sha256sum android-studio-2023.1.1.28-windows.exe
+b6f1569d3a944e82b1beb5d4de39d7bdb434a7f2992eb965aae55c46915dff90
+
+Installed at
+C:\Program Files\Android\Android Studio
 Locations
 %LOCALAPPDATA%\Android\Sdk
 %LOCALAPPDATA%\Android\Sdk\platform-tools
+https://stackoverflow.com/questions/29356796/intellij-gradle-plugin-the-supplied-javahome-seems-to-be-invalid
+https://stackoverflow.com/questions/69766667/cannot-find-the-java-excutable
+https://stackoverflow.com/questions/75219897/sync-failed-and-unable-to-find-gradle-tasks-to-build-after-upgrading-from-andr
+	cd C:\Program Files\Android\Android Studio
+	rm jre
+	cmd /c mklink /D "jre" "jbr"
+SET JAVA_HOME and javaHOME to
+C:\Program Files\Android\Android Studio\jbr
 
 Homebrew
 	brew install android-studio

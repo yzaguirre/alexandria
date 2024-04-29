@@ -7,11 +7,11 @@ Binaries from
 https://eternallybored.org/misc/wget/
 https://builtvisible.com/download-your-website-with-wget/
 https://sourceforge.net/projects/gnuwin32/
-	wget https://eternallybored.org/misc/wget/releases/wget-1.21.3-win64.zip
-	7z x -oC:\Users\dyzag\bin wget-1.21.3-win64.zip wget.exe
-	7z x -oC:\Users\dyzag\Documents wget-1.21.3-win64.zip wget.html
+	wget https://eternallybored.org/misc/wget/releases/wget-1.21.4-win64.zip
+	7z x -oC:\Users\dyzag\bin wget-1.21.4-win64.zip wget.exe
+	7z x -oC:\Users\dyzag\Documents wget-1.21.4-win64.zip wget.html
 Or
-	wget https://eternallybored.org/misc/wget/1.21.3/64/wget.exe
+	wget https://eternallybored.org/misc/wget/1.21.4/64/wget.exe
 
 If you need to go via a proxy server, the ~/.wgetrc file can be used to set proxy settings for the
 wget tool.

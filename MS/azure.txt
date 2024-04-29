@@ -10,11 +10,19 @@ https://docs.microsoft.com/es-es/azure/storage/blobs/storage-quickstart-blobs-do
 https://azure.microsoft.com/en-us/documentation/articles/storage-encrypt-decrypt-blobs-key-vault/
 
 https://aka.ms/cli
+https://github.com/azure/azure-cli
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 Windows
+https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
+	choco install azure-cli
+	winget install Microsoft.AzureCLI
 	scoop install azure-cli
 	az --version
-Config at ~/.azure
+Config at
+~/.azure/config
+C:\Users\DAVIDY~1\.azure\config
+Logins at
+C:\Users\DAVIDY~1\.azure\azureProfile.json
 Login
 	az login
 Listing the available subscriptions in a table
@@ -25,6 +33,37 @@ Changing configuration options
 	az configure
 Listing all resource groups
 	az group list
+Set the default resource group and location for all commands.
+	az config set defaults.location=westus2 defaults.group=MyResourceGroup
+List VMs
+	az vm list | gojo ".[0]" | bat -l json
+	az vm list | gojo ".[] | {message: .name}"
+List a VM
+	az vm show --resource-group myResourceGroup --name myVMname --query "{name: name, os:storageProfile.imageReference.offer}" --output table
+Show network ids
+	az network nic list
+	az network nic show -n myNic
+Get the internal domain name suffix of a NIC.
+	az network nic show -g MyResourceGroup -n MyNic --query "dnsSettings.internalDomainNameSuffix"
+List open ports with networkProfile
+https://learn.microsoft.com/en-us/cli/azure/network/nsg?view=azure-cli-latest
+https://superuser.com/questions/1414475/azure-cli-to-list-opened-ports
+	az network nsg --help
+List network security groups.
+	az network nsg list
+	az network nsg list | gojq '.[].defaultSecurityRules[].destinationPortRange'
+	az network nsg list | gojq '.[].securityRules[].destinationPortRange'
+	az network nsg rul list
+Open port 5433 and 1433
+	az network nsg rule create -n "PostgreSQLRule" --nsg-name "myNSG" --priority 410 --resource-group myResourceGroup --access Allow --description "Puerto Base de Datos PostgreSQL" --direction Inbound --protocol "*" --destination-port-ranges 5433
+	az network nsg rule create -n "SQLServerBrowseRule" --nsg-name "myNSG" --priority 420 --resource-group myResourceGroup --access Allow --description "Puerto Base de Datos SQL Server botón de browse" --direction Inbound --protocol "*" --destination-port-ranges 1434
+https://learn.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver16
+	netsh advfirewall firewall add rule name="Open port 5432" protocol=TCP localport=5432 action=allow dir=IN
+	netsh advfirewall firewall add rule name="Open port 5433" protocol=TCP localport=5433 action=allow dir=IN
+
+	netsh advfirewall firewall add rule name="SQLServer default instance" protocol=TCP localport=1433 action=allow dir=IN
+	netsh advfirewall firewall add rule name="SQLServer Browser service" protocol=UDP localport=1434 action=allow dir=IN
+
 https://adamtheautomator.com/azure-pipelines-tutorial/
 
 Azure Storage Walk-through | Azure Disks, Managed Disks and Disk Performance
@@ -32,3 +71,5 @@ https://www.youtube.com/watch?v=KIys1MKAvSQ
 
 Azure Blob Storage
 https://azure.microsoft.com/en-us/services/storage/blobs/#features
+
+Costs

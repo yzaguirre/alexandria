@@ -1,0 +1,3 @@
+See dbeaver.txt
+https://dbeaver.com/docs/cloudbeaver/
+https://github.com/dbeaver/cloudbeaver

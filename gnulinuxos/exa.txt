@@ -1,5 +1,6 @@
 https://the.exa.website
 https://github.com/ogham/exa
+See eza.txt
 Package install
 	apt install exa
 Binary install

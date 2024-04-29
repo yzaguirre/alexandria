@@ -1,3 +1,4 @@
+See go-sqlcmd.txt
 A command-line client for SQL Server with auto-completion and syntax highlighting
 https://cloudblogs.microsoft.com/sqlserver/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/
 https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-2017
@@ -20,12 +21,12 @@ Part of the SQL Server SDK. https://www.microsoft.com/en-us/download/details.asp
 Config file at
 https://github.com/dbcli/mssql-cli/blob/master/mssqlcli/mssqlclirc
 %LOCALAPPDATA%\dbcli\mssqlcli\config
-C:\Users\dyzag\AppData\Local\dbcli\mssqlcli\config
+C:\Users\DAVIDY~1\AppData\Local\dbcli\mssqlcli\config
 ~/.config/mssqlcli/config
 
 Query History
 %LOCALAPPDATA%\dbcli\mssqlcli\history
-C:\Users\dyzag\AppData\Local\dbcli\mssqlcli\history
+C:\Users\DAVIDY~1\AppData\Local\dbcli\mssqlcli\history
 
 Disable telemetry collection by setting environment variable
 	MSSQL_CLI_TELEMETRY_OPTOUT=True
@@ -52,3 +53,5 @@ List or describe database objects. Calls sp_help.
 	\d OBJECT
 List tables
 	\lt
+Save to CSV
+	mssql-cli -Q "SELECT * FROM TABLE" -o "output.csv"

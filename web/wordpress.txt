@@ -13,8 +13,10 @@ https://wordpress.org/download/
 	tar xf wordpress-4.9.8.tar.gz -C /var/www/html
 	chown www-data:www-data -R /var/www/html/wordpress
 
+https://techglimpse.com/error-grant-identified-by-password/
 CREATE DATABASE wp;
-GRANT ALL ON wp.* TO wp@'localhost' IDENTIFIED BY 'f00.bar';
+CREATE USER 'wp'@'localhost' IDENTIFIED BY 'f00.bar';
+GRANT ALL PRIVILEGES ON wpdb.* TO 'wp'@'localhost';
 FLUSH PRIVILEGES;
 
 Reset password
@@ -55,3 +57,8 @@ https://docs.athemes.com/category/8-sydney
 Lokl - WordPress local development environment for Mac, Win and Linux
 https://lokl.dev/
 https://news.ycombinator.com/item?id=26681667
+
+IIS
+https://brudtkuhl.com/blog/wordpress-iis-permissions-updates-permalinks/
+https://stackoverflow.com/questions/4403514/wordpress-permalinks-on-iis
+https://ayudawp.com/error-respuesta-json-valida/

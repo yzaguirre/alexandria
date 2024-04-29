@@ -5,6 +5,12 @@ https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.s
 	dotnet add package Open-XML-SDK
 Once you install this NuGet package,
 you get full API support on Reading, Writing of Excel (.xlsx), Word (.doc) or Powerpoint(.ppt) files.
+https://stackoverflow.com/questions/13396090/openxmls-cell-innertext-is-returning-nonsense-results
+https://stackoverflow.com/questions/42508239/how-can-i-improve-the-performance-of-retrieving-values-from-sharedstringtable-in
+Excel Date
+https://stackoverflow.com/questions/11968570/converting-double-to-datetime
+https://learn.microsoft.com/en-us/dotnet/api/system.datetime.fromoadate?view=net-7.0
+	DateTime myDate = DateTime.FromOADate(41172);
 
 https://thecodebuzz.com/read-excel-file-in-dotnet-core-2-1/
 https://www.c-sharpcorner.com/article/creating-excel-file-using-openxml/

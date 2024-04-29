@@ -5,6 +5,8 @@ https://actix.rs
 
 Fast Rest API - Rust + Actix Web (2022)
 https://www.youtube.com/watch?v=Ziq3vu63pAU
+SQLx in 12 minutes - Rust + Actix Web + PostgreSQL (2022)
+https://www.youtube.com/watch?v=vLcoW408QvE
 
 https://www.reddit.com/r/rust/comments/zvvrl7/rocket_is_dead/
 https://steveklabnik.com/writing/a-sad-day-for-rust

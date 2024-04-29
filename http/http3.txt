@@ -1,1 +1,4 @@
 https://www.smashingmagazine.com/2021/08/http3-core-concepts-part1/
+HTTP/3 adoption is growing rapidly
+https://blog.apnic.net/2023/09/25/why-http-3-is-eating-the-world/
+https://news.ycombinator.com/item?id=37777050

@@ -1,0 +1,27 @@
+Cross-platform Text Expander written in Rust
+https://espanso.org
+https://github.com/espanso/espanso
+	winget install --source winget Espanso.Espanso
+Binary
+	wget https://github.com/federico-terzi/espanso/releases/download/v2.1.8/Espanso-Win-Installer-x86_64.exe
+	wget https://github.com/espanso/espanso/releases/download/v2.1.8/Espanso-Win-Installer-x86_64.exe.sha256.txt
+	Get-FileHash Espanso-Win-Installer-x86_64.exe -Algorithm SHA256 | Sort-Object -Property Hash
+	bat Espanso-Win-Installer-x86_64.exe.sha256.txt
+	start Espanso-Win-Installer-x86_64.exe
+MacOS
+	wget https://github.com/espanso/espanso/releases/download/v2.1.8/Espanso-Mac-Intel.zip
+	wget https://github.com/espanso/espanso/releases/download/v2.1.8/Espanso-Mac-Intel.zip.sha256.txt
+	7z x Espanso-Mac-Intel.zip
+
+Installed at
+C:\Users\DAVIDY~1\AppData\Local\Programs\Espanso
+
+Configuration at
+/home/david/.config/espanso
+C:\Users\DAVIDY~1\AppData\Roaming\espanso
+/Users/david/Library/Application Support/espanso
+
+Usage
+	:espanso
+	:date
+	:shell

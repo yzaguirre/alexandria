@@ -1,0 +1,3 @@
+OpenPGP Forked into "LibrePGP" by GnuPG's Maintainer Werner Koch
+https://blog.pgpkeys.eu/critique-critique.html
+https://news.ycombinator.com/item?id=38554943

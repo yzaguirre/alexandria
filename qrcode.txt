@@ -13,8 +13,9 @@ js/js-qrcode.txt
 Homebrew
 	brew install qrencode
 Windows
+https://fukuchi.org/works/qrencode/
 https://sourceforge.net/projects/qrencode-for-windows/
-
+	7z e -oC:\Users\DAVIDY~1\bin '.\QREncode-3.4.0_Win32(static).zip'
 To stdout
 	echo hello | qrencode -o - -t UTF8
 	echo 'Hello World' | qrencode -t ANSI

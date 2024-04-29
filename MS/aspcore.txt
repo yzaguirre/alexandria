@@ -80,3 +80,8 @@ Test the PutTodoItem method
 Test the DeleteTodoItem method
 	connect https://localhost:7240/api/todoitems/1
 	delete
+
+.NET 6 - POST form data file upload + JSON
+https://www.youtube.com/watch?v=1ClutLKZK6s
+6 - Using HttpClient to send files to a Web API | HttpClient C#
+https://www.youtube.com/watch?v=xiVLLXlBvGI

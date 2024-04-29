@@ -34,3 +34,8 @@ https://news.ycombinator.com/item?id=29962356
 https://www.youtube.com/watch?v=9QxQmDx1wms
 apkversion - Display Android Version of the APK file - Linux CLI
 https://github.com/gotbletu/shownotes/blob/master/apkversion.md
+
+Get SDK version
+https://stackoverflow.com/questions/8300822/android-how-to-find-which-platform-version-an-apk-targets
+	aapt list -a package.apk | rg SdkVersion
+	aapt dump badging package.apk | rg Version

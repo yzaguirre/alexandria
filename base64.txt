@@ -1,3 +1,9 @@
+https://rtner.de/software/base64.html
+Windows
+	choco install base64
+Usage
+	base64 -d photo.data -o photo.heic
+
 https://stackoverflow.com/questions/1207190/embedding-base64-images
 HTML
 <img alt="Embedded Image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA..." />

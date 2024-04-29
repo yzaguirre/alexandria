@@ -1,0 +1,51 @@
+Streaming RTSP with ffmpeg
+https://superuser.com/questions/1420328/streaming-rtsp-with-ffmpeg
+	ffmpeg -re -i input -f rtsp -rtsp_transport tcp rtsp://localhost:8888/live.sdp
+	ffplay -rtsp_flags listen rtsp://localhost:8888/live.sdp
+	ffmpeg -re -stream_loop -1 -i test.mp4 -f rtsp -rtsp_transport tcp rtsp://localhost:8554/live.stream
+	ffplay -rtsp_transport tcp rtsp://localhost:8554/live.stream
+
+
+Ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and media proxy that allows to read,
+publish and proxy video and audio streams.
+https://github.com/bluenviron/mediamtx
+https://github.com/aler9/rtsp-simple-server
+	wget https://github.com/bluenviron/mediamtx/releases/download/v1.0.3/mediamtx_v1.0.3_linux_amd64.tar.gz
+Windows
+	wget https://github.com/bluenviron/mediamtx/releases/download/v1.0.3/mediamtx_v1.0.3_windows_amd64.zip
+	7z x -o"..\bin" mediamtx_v1.0.3_windows_amd64.zip mediamtx.exe mediamtx.yml
+Configuration
+	vim ~\bin\mediamtx.yml
+
+TAK Server - Stream Live Video using RTSP-Simple-Server
+https://www.youtube.com/watch?v=FgpVC57a_lc
+
+Usage
+Publish a stream
+	ffmpeg -re -stream_loop -1 -i file.ts -c copy -f rtsp rtsp://localhost:8554/mystream
+	gst-launch-1.0 rtspclientsink name=s location=rtsp://localhost:8554/mystream filesrc location=file.mp4 \
+! qtdemux name=d d.video_0 ! queue ! s.sink_0 d.audio_0 ! queue ! s.sink_1
+Open a stream
+	vlc --network-caching=50 rtsp://localhost:8554/mystream
+	gst-play-1.0 rtsp://localhost:8554/mystream
+	ffmpeg -i rtsp://localhost:8554/mystream -c copy output.mp4
+	rtsp://localhost:8554/mystream
+
+https://github.com/deepch/RTSPtoWebRTC
+https://stackoverflow.com/questions/42598475/stream-rtsp-to-html-website
+
+RTSP stream to Web Browser using FFMPEG
+https://dev.to/tejasvi2/rtsp-stream-to-web-browser-using-ffmpeg-1cb
+
+RTSP Webcam to HLS Live Streaming using FFMPEG and XAMPP | PART 1
+https://www.youtube.com/watch?v=rgWVm_j3llo
+Streaming an IP Camera to a Web Browser using FFmpeg
+https://www.youtube.com/watch?v=ztjT2YqQ2Hc
+
+Connect to a stream
+	ffplay.exe -i rtsp://admin:asdf2323..@192.168.0.5:554/Streaming/Channels/101
+https://stackoverflow.com/questions/23238295/force-ffmpeg-to-use-tcp-protocol-when-reading-a-rtsp-stream#23302601
+	ffmpeg -v verbose -rtsp_transport tcp -i "RTSP_URL" -vf scale=1920:1080  -vcodec libx264 -r 25 -b:v 1000000 -crf 31 -acodec aac  -sc_threshold 0 -f hls  -hls_time 10  -segment_time 10 -hls_list_size 10 -start_number 1 -hls_wrap 10 C:\inetpub\wwwroot\streaming\stream.m3u8
+	ffmpeg -v verbose -rtsp_transport tcp -i "RTSP_URL" -vf scale=1920:1080  -vcodec h264_nvenc -r 25 -b:v 1000000 -crf 31 -acodec aac  -sc_threshold 0 -f hls  -hls_time 10  -segment_time 10 -hls_list_size 10 -start_number 1 -hls_wrap 10 C:\inetpub\wwwroot\streaming\stream.m3u8
+Other scales
+427x240

@@ -1,6 +1,6 @@
 https://reactnativepaper.com
 https://callstack.github.io/react-native-paper/
-https://callstack.github.io/react-native-paper/getting-started.html
+https://callstack.github.io/react-native-paper/docs/guides/getting-started
 https://github.com/callstack/react-native-paper
 https://github.com/oblador/react-native-vector-icons
 https://soshace.com/build-real-world-react-native-app-2-react-navigation-and-react-native-vector-icons/
@@ -9,7 +9,8 @@ Do a commit on ios/ before adding RN Paper
 	yarn add react-native-paper
 If you're on a vanilla React Native project, you also need to install react-native-vector-icons
 	yarn add react-native-vector-icons
-	react-native link react-native-vector-icons --platforms android
+https://stackoverflow.com/questions/72872203/unrecognized-command-link-when-linking-fonts-in-react-native
+	npx react-native-asset react-native-vector-icons --platforms android
 MacOS
 Edit ios/PROJECT_NAME/info.plist with every font in node_modules/react-native-vector-icons/Fonts
 <key>UIAppFonts</key>
@@ -39,6 +40,7 @@ module.file_ext=.android.js
 module.file_ext=.ios.js
 
 Android part, open android/app/build.gradle to include the following line:
+https://github.com/invertase/react-native-notifee/issues/88
 project.ext.vectoricons = [
     iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Name of the font files you want to copy
 ]

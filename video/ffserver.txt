@@ -1,0 +1,39 @@
+Warning: ffserver has been removed on 2018-01-06.
+https://trac.ffmpeg.org/wiki/ffserver
+
+RTSP stream to Web Browser using FFMPEG
+https://dev.to/tejasvi2/rtsp-stream-to-web-browser-using-ffmpeg-1cb
+
+https://stackoverflow.com/questions/37403282/is-there-anyone-who-can-successfully-run-real-time-streaming-with-ffserver
+	vim /etc/ffserver.conf
+HttpPort 8090 
+RtspPort 5554
+HttpBindAddress 0.0.0.0 
+MaxClients 1000 
+MaxBandwidth 10000 
+NoDaemon 
+
+<Feed feed1.ffm> 
+File /tmp/feed1.ffm 
+FileMaxSize 5M 
+</Feed> 
+
+<Stream test.mpeg4>
+Feed feed1.ffm
+Format rtp
+VideoCodec mpeg4
+VideoFrameRate 15
+VideoBufferSize 80000
+VideoBitRate 100
+VideoQMin 1
+VideoQMax 5
+VideoSize 352x288
+PreRoll 0
+Noaudio
+</Stream>
+	ffserver -d
+
+Start video capture from web camera:
+	ffmpeg -r 25 -s 352x288 -f video4linux2 -i /dev/video0 http://localhost:8090/feed1.ffm
+Now you can play your stream using any rtsp client. In my example I use ffplay:
+	ffplay "rtsp://localhost:5554/test.mpeg4

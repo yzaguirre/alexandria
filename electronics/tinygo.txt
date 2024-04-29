@@ -7,16 +7,16 @@ https://news.ycombinator.com/item?id=31636642
 See rust.txt
 ../golang/go.txt
 	apt install gcc-avr avr-libc avrdude
-	wget https://github.com/tinygo-org/tinygo/releases/download/v0.25.0/tinygo_0.25.0_amd64.deb
-	dpkg -i tinygo_0.25.0_amd64.deb
+	wget https://github.com/tinygo-org/tinygo/releases/download/v0.30.0/tinygo_0.30.0_amd64.deb
+	dpkg -i tinygo_0.30.0_amd64.deb
 Windows
 	scoop install go
 	scoop install tinygo
 	scoop install avr-gcc
 	scoop install avrdude
 Binaries
-	wget https://github.com/tinygo-org/tinygo/releases/download/v0.25.0/tinygo0.25.0.windows-amd64.zip
-	7z x  -o"C:\" tinygo0.25.0.windows-amd64.zip
+	wget https://github.com/tinygo-org/tinygo/releases/download/v0.30.0/tinygo0.30.0.windows-amd64.zip
+	7z x  -o"C:\" tinygo0.30.0.windows-amd64.zip
 Add to PATH environment variable
 C:\tinygo\bin
 
@@ -33,5 +33,5 @@ Flash arduino board
 Flash raspberry pi pico
 	tinygo flash -target=pico
 
-Garbage Collection on an 8-Bit Microcontroller? (its actually easy)
+an 8-bit microcontroller but it has a garbage collector
 https://www.youtube.com/watch?v=75VGzwtmgXc

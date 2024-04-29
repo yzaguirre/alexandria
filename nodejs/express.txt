@@ -1,0 +1,7 @@
+Express JS Full Course
+https://www.youtube.com/watch?v=nH9E25nkk3I
+	mkdir expressjs-tutorial
+	cd expressjs-tutorial
+	npm init -y
+	npm i express
+	npm i -D nodemon

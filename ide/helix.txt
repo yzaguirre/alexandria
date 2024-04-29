@@ -1,16 +1,18 @@
 A post-modern modal text editor.
 https://helix-editor.com
 https://github.com/helix-editor/helix
-	wget https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-linux.tar.xz
-	tar xf helix-22.08.1-x86_64-linux.tar.xz -C ~/.config --transform s/-22.08.1-x86_64-linux//
+Helix 23.10 Highlights
+https://news.ycombinator.com/item?id=38017541
+	wget https://github.com/helix-editor/helix/releases/download/23.10/helix-23.10-x86_64-linux.tar.xz
+	tar xf helix-23.10-x86_64-linux.tar.xz -C ~/.config --transform s/-23.10-x86_64-linux//
 	mv ~/.config/helix/hx /usr/local/bin
 Windows
 	choco install helix
 Binaries
-	wget https://github.com/helix-editor/helix/releases/download/22.08.1/helix-22.08.1-x86_64-windows.zip
-	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\" helix-22.08.1-x86_64-windows.zip
+	wget https://github.com/helix-editor/helix/releases/download/23.10/helix-23.10-x86_64-windows.zip
+	7z x -o"C:\Users\DAVIDY~1\AppData\Roaming\" helix-23.10-x86_64-windows.zip
 	cd C:\Users\DAVIDY~1\AppData\Roaming\
-	mv .\helix-22.08.1-x86_64-windows\ .\helix\
+	mv .\helix-23.10-x86_64-windows\ .\helix\
 	mv .\helix\hx.exe ..\..\bin\
 Homebrew
 	brew install helix

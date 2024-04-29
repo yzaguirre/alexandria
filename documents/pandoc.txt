@@ -33,8 +33,8 @@ https://github.com/jgm/pandoc/issues/265
 
 Lightweight and cross-platform GUI wrapper for the pandoc command line
 https://github.com/Ombrelin/pandoc-gui
-	wget https://github.com/Ombrelin/pandoc-gui/releases/download/1.1.1/PandocGui.1.0.0.deb
-	dpkg -i PandocGui.1.0.0.deb
+	wget https://github.com/Ombrelin/pandoc-gui/releases/download/1.1.1/PandocGui.1.1.35.deb
+	dpkg -i PandocGui.1.1.35.deb
 Windows
 	winget install Ombrelin.PandocGui
 Binaries

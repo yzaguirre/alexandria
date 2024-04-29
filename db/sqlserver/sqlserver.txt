@@ -1,3 +1,33 @@
+https://www.microsoft.com/en-us/sql-server/
+	winget install Microsoft.SQLServer.2022.Developer
+Installed at C:\SQL2022
+Instance root directory
+C:\Program Files\Microsoft SQL Server\
+SQL Server directory
+C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER
+Backup path
+C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup
+
+Configuration file path
+C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20231220_112916\ConfigurationFile.ini
+Summary log at
+C:\Program Files\Microsoft SQL Server\160\Setup Bootstrap\Log\20231220_112916\Summary_HPGS_20231220_112916.txt
+Services
+SQL Server Agent
+NT Service\SQLSERVERAGENT
+Manual
+
+SQL Server Database Engine
+NT Service\MSSQLSERVER
+Automatic
+
+SQL Server Browser
+NT AUTHORITY\LOCAL SERVICE
+Disabled
+
+Samples
+https://github.com/Microsoft/sql-server-samples/tree/master/samples
+
 https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
 Version: 15.0.18424.0
 	winget install Microsoft.SQLServerManagementStudio
@@ -7,6 +37,53 @@ Version: 15.0.18424.0
 Log at
 https://learn.microsoft.com/en-us/sql/relational-databases/backup-restore/sql-server-vss-writer-logging?view=sql-server-ver16
 C:\Program Files\Microsoft SQL Server\90\Shared\SqlWriterLogger.txt
+
+How to Find the Port for SQL Server [HD]
+https://www.youtube.com/watch?v=Nwe4IqRNPWs
+	netstat -an | find "1433"
+	xp_readerrorlog 0, 1, N'Server is listening on'
+GO
+
+Static port for a named instance
+https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?view=sql-server-ver15
+https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver15
+	start C:\Windows\SysWOW64\SQLServerManager15.msc
+	Get-Service | findstr 'SQL'
+	Get-Service 'MSSQL$SQLEXPRESS'
+	Get-Service 'SQLAgent$SQLEXPRESS'
+	Get-Service 'SQLBrowser'
+	Set-Service -name 'MSSQLSERVER' -startuptype 'manual'
+	Restart-Service 'MSSQL$SQLEXPRESS'
+	Restart-Service 'MSSQLSERVER' # Developer
+	Restart-Service 'SQLAgent$SQLEXPRESS'
+	Restart-Service 'SQLBrowser'
+Developer
+	Get-Service 'MSSQLSERVER'
+	Get-Service 'SQLBrowser'
+	Get-Service 'SQLSERVERAGENT'
+	Get-Service 'SQLTELEMETRY'
+	Get-Service 'SQLWriter'
+	Set-Service -name 'SQLTELEMETRY' -startuptype 'manual'
+	Set-Service -name 'SQLWriter' -startuptype 'manual'
+
+Firewall rules
+https://learn.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15
+https://superuser.com/questions/842698/how-to-open-a-firewall-port-in-windows-using-power-shell
+	New-NetFirewallRule -DisplayName "SQLServer default instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow -Profile "Public"
+	New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow -Profile "Public"
+Or
+	netsh advfirewall firewall add rule name="SQLServer default instance" protocol=TCP localport=1433 action=allow dir=IN
+	netsh advfirewall firewall add rule name="SQLServer Browser service" protocol=UDP localport=1434 action=allow dir=IN
+Check if open
+https://dba.stackexchange.com/questions/54767/sql-server-is-started-but-didnt-listen-on-any-port
+
+Get local firewall status powershell
+https://www.techthatworks.net/network/how-to-test-if-a-firewall-port-is-open-powershell
+	Get-NetFirewallProfile | Format-Table Name, Enabled
+	Get-NetFirewallRule | Select-Object DisplayName, Enabled, Direction, Action -First 10
+	Test-NetConnection WIN2012-RDS01 -Port 3389
+	Test-NetConnection WIN2012-RDS01 -Port 1433
+	Test-NetConnection WIN2012-RDS01 -Port 1434
 
 Restore a database
 https://stackoverflow.com/questions/19624189/backup-log-cannot-be-performed-because-there-is-no-current-database-backup
@@ -23,5 +100,5 @@ https://theflyingmaverick.com/2018/02/14/how-to-enable-dark-theme-for-sql-server
 https://www.mssqltips.com/sqlservertip/7218/dark-mode-ssms-configuration/
 C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio
 Later versions
-	cd "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE"
+	cd "C:\Program Files (x86)\Microsoft SQL Server Management Studio 19\Common7\IDE"
 	notepad++.exe ssms.pkgundef

@@ -4,6 +4,8 @@ C:\Users\David\Documents\IISExpress\config
 For example, the following command runs the specified application, "myapp," on http://localhost:9090/ by using .NET 2.0:
 	iisexpress /path:c:\myapp\ /port:9090 /clr:v2.0
 
+Install fd, rg, fzf, bat, less, notepad++, wez terminal, wget, curl
+
 https://stackoverflow.com/questions/3313616/how-to-enable-external-request-in-iis-express
 https://docs.microsoft.com/en-us/iis/extensions/using-iis-express/handling-url-binding-failures-in-iis-express
 https://docs.microsoft.com/en-us/iis/extensions/using-iis-express/running-iis-express-without-administrative-privileges
@@ -28,11 +30,33 @@ https://stackoverflow.com/questions/13279593/401-unauthorized-access-is-denied-d
 5 Select Application pool Identity and click ok
 
 List site
+https://learn.microsoft.com/en-us/iis/get-started/getting-started-with-iis/getting-started-with-appcmdexe#how-to-use-appcmdexe
 	appcmd list site
 Show list of applications created under Default Web Site
 	appcmd list app
-
+Add a directory
+https://serverfault.com/questions/46932/appcmd-to-create-a-virtual-directory-in-default-web-site-in-iis7
+	AppCmd.exe list vdir "Default Web Site/%1/" | findstr /I "Default Web Site/%1/" || AppCmd.exe add vdir /app.name:"Default Web Site/" /path:/%1 /physicalPath:%2
+	%systemroot%\system32\inetsrv\APPCMD add vdir /app.name:"MySite/app1" /path:/vdir1 /physicalPath:C:\inetpub\mysite\app1\vdir1
 Deploy website on IIS using command prompt
 https://www.youtube.com/watch?v=3YRDhCpwyJA
 Located at C:\Windows\System32\inetsrv
 	appcmd add app /site.name:"Default Web Site" /path:/app1 /physicalPath:"D:\sample\project\WebSite5"
+Server m3u8 files
+https://stackoverflow.com/questions/5513469/iis-server-m3u8-extension-not-opening
+https://learn.microsoft.com/en-us/iis/get-started/planning-your-iis-architecture/introduction-to-applicationhostconfig
+	vim %windir%\system32\inetsrv\config\applicationHost.config
+<remove fileExtension=".m3u8"/>
+<remove fileExtension=".ts"/>
+<mimeMap fileExtension=".m3u8" mimeType="application/x-mpegURL" />
+<mimeMap fileExtension=".ts" mimeType="video/MP2T" />
+https://learn.microsoft.com/en-us/iis/manage/configuring-security/configure-request-filtering-in-iis
+	appcmd set config /section:requestfiltering /+fileExtensions.[fileextension='.m3u8',allowed='true']
+	appcmd set config /section:requestfiltering /+fileExtensions.[fileextension='.ts',allowed='true']
+Remove
+	appcmd set config /section:requestfiltering /-fileExtensions.[fileextension='.xxx']
+Restart configuration
+https://superuser.com/questions/296548/how-do-i-restart-the-iis-application-pools-from-command-line
+	appcmd list APPPOOL
+	appcmd stop APPPOOL "MyAppPoolName"
+	appcmd start APPPOOL "MyAppPoolName"

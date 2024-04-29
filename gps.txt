@@ -1,5 +1,5 @@
-https://owntracks.org/
-https://www.traccar.org/
+https://owntracks.org
+https://www.traccar.org
 https://www.reddit.com/r/selfhosted/comments/9pdx60/phonetrack_is_a_nextcloud_application_agplv3_to/
 https://apps.nextcloud.com/apps/phonetrack
 https://github.com/bfabiszewski/ulogger-server
@@ -20,3 +20,7 @@ https://gitlab.com/ldutils-projects/zombietrackergps
 	gpg --verify zombietrackergps-1.09_amd64.deb.sig
 	sha256sum -c --ignore-missing sha256sums.txt
 	dpkg -i zombietrackergps-1.09_amd64.deb
+
+GPSJam: Daily maps of possible GPS interference
+https://gpsjam.org/?lat=45.00000&lon=35.00000&z=3.0&date=2023-10-10
+https://news.ycombinator.com/item?id=37868106

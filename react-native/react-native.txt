@@ -528,3 +528,6 @@ tasks.withType(Javadoc).all { enabled = false }
 Compile main.jsbundle
 https://stackoverflow.com/questions/69141867/react-native-ios-release
 	react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios/assets
+Compilation error
+https://stackoverflow.com/questions/74327301/more-than-one-file-was-found-with-os-independent-path-lib-armeabi-v7a-libfbjni
+https://github.com/facebook/react-native/issues/35210

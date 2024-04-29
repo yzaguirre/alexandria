@@ -1,0 +1,3 @@
+https://anydesk.com
+	winget install AnyDeskSoftwareGmbH.AnyDesk
+	choco install anydesk

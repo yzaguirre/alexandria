@@ -21,3 +21,7 @@ Page 17
 
 See ../video/ffmpeg.txt
 ../images/imagemagick.txt
+
+Video speed
+https://stackoverflow.com/questions/51956346/how-to-change-playback-speed-of-videos-on-facebook-or-other-platforms
+document.getElementsByTagName("video")[4].playbackRate = 2

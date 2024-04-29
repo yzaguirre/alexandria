@@ -46,8 +46,12 @@ http://darkk.net.ru/redsocks/
 http://proxychains.sourceforge.net/howto.html
 
 Chromium proxy
+https://peter.sh/experiments/chromium-command-line-switches/
 	chromium --proxy-server="socks5://foobar:66"
 	chromium --proxy-server="http://localhost:8080"
+Include localhost
+https://chromium.googlesource.com/chromium/src/+/refs/heads/main/net/docs/proxy.md
+	chromium --proxy-server="http://localhost:8080" --proxy-bypass-list="<-loopback>"
 Web proxy
 https://github.com/Kickball/awesome-selfhosted#proxy
 miniProxy

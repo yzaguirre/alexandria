@@ -11,3 +11,6 @@ Activate in Windows
 
 Deactivate
 	deactivate
+
+How To Create & Activate A Virtual Environment In Visual Studio Code (Python 3.12)
+https://www.youtube.com/watch?v=hC5rfoIY8nU

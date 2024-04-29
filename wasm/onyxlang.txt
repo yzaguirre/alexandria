@@ -1,0 +1,16 @@
+https://onyxlang.io
+https://github.com/onyx-lang/onyx
+https://wasmer.io/posts/onyxlang-powered-by-wasmer
+https://news.ycombinator.com/item?id=38489340
+Install Onyx in one command
+	sh <(curl https://get.onyxlang.io -sSfL) Copy
+Read the docs
+	curl onyxlang.io/docs
+Try Onyx in your browser
+	curl try.onyxlang.io
+Windows
+	wget https://github.com/onyx-lang/onyx/releases/download/v0.1.8-beta/onyx-windows-wasmer-amd64.zip
+	mkdir 'C:\Program Files\onyxlang'
+	7z x -o'C:\Program Files\onyxlang' onyx-windows-wasmer-amd64.zip
+Add to PATH environment variable
+C:\Program Files\onyxlang\dist

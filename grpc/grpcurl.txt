@@ -1,10 +1,16 @@
 https://github.com/fullstorydev/grpcurl
-	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_linux_x86_64.tar.gz
-	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_checksums.txt
-	sha256sum -c --ignore-missing grpcurl_1.8.5_checksums.txt
-	tar xf grpcurl_1.8.5_linux_x86_64.tar.gz -C /usr/local/bin grpcurl
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.1/grpcurl_1.9.1_linux_x86_64.tar.gz
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.1/grpcurl_1.9.1_checksums.txt
+	sha256sum -c --ignore-missing grpcurl_1.9.1_checksums.txt
+	tar xf grpcurl_1.9.1_linux_x86_64.tar.gz -C /usr/local/bin grpcurl
 Windows
-	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.8.5/grpcurl_1.8.5_windows_x86_64.zip
-	unzip grpcurl_1.8.5_windows_x86_64.zip grpcurl.exe -d ~/bin
+	wget https://github.com/fullstorydev/grpcurl/releases/download/v1.9.1/grpcurl_1.9.1_windows_x86_64.zip
+	7z e -o"..\bin" grpcurl_1.9.1_windows_x86_64.zip grpcurl.exe
 Homebrew
 	brew install grpcurl
+
+Usage
+	grpcurl -help
+	grpcurl grpc.server.com:443 my.custom.server.Service/Method
+no TLS
+	grpcurl -plaintext grpc.server.com:80 my.custom.server.Service/Method

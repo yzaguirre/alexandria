@@ -3,9 +3,9 @@ https://ibotpeaches.github.io/Apktool/
 https://github.com/iBotPeaches/Apktool
 https://bitbucket.org/iBotPeaches/apktool/downloads/
 https://www.reddit.com/r/reactnative/comments/uqkftc/use_apktool_to_inspect_your_apk_file_when/
-	wget -O apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.7.0/apktool_2.7.0.jar
+	wget -O apktool.jar https://github.com/iBotPeaches/Apktool/releases/download/v2.9.0/apktool_2.9.0.jar
 	wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
-	chmod u+x apktool_2.7.0.jar apktool
+	chmod u+x apktool_2.9.0.jar apktool
 	mv apktool.jar /usr/local/bin/apktool.jar
 	mv apktool /usr/local/bin/apktool
 Windows
@@ -15,3 +15,14 @@ Windows
 Usage
 	cd appName/app/android/app/build/outputs/apk/release
 	apktool decode app-release.apk
+	apktool d bar.apk -o baz
+SdkVersion
+https://stackoverflow.com/questions/8300822/android-how-to-find-which-platform-version-an-apk-targets
+	aapt list -a package.apk | rg SdkVersion
+	aapt dump badging package.apk | rg Version
+	apkanalyzer -h manifest min-sdk myapk.apk
+	apkanalyzer -h manifest target-sdk myapk.apk
+	vim apktool.yml
+sdkInfo:
+  minSdkVersion: '11'
+  targetSdkVersion: '17'

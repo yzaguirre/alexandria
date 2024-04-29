@@ -14,7 +14,7 @@ Binaries
 Setup SFTP server in Windows using OpenSSH with public key authentication, folder jailing
 https://www.youtube.com/watch?v=pOwXn4do7r0
 https://nagasudhir.blogspot.com/2022/03/setup-sftp-server-and-sftp-client-in.html
-	wget https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.9.1.0p1-Beta/OpenSSH-Win64.zip
+	wget https://github.com/PowerShell/Win32-OpenSSH/releases/download/v9.4.0.0p1-Beta/OpenSSH-Win32.zip
 	7z x -o"C:\Program Files\" OpenSSH-Win64.zip
 	cd "C:\Program Files\OpenSSH-Win64"
 	pwsh.exe -ExecutionPolicy Bypass -File install-sshd.ps1

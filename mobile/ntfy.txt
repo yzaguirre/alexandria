@@ -4,10 +4,10 @@ entirely without signup, cost or setup.
 https://ntfy.sh
 Send push notifications to your phone or desktop using PUT/POST
 https://github.com/binwiederhier/ntfy
-	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/ntfy_1.28.0_linux_amd64.deb
-	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/checksums.txt
+	wget https://github.com/binwiederhier/ntfy/releases/download/v2.9.0/ntfy_2.9.0_linux_amd64.deb
+	wget https://github.com/binwiederhier/ntfy/releases/download/v2.9.0/checksums.txt
 	sha256sum -c --ignore-missing checksums.txt
-	dpkg -i ntfy_1.28.0_linux_amd64.deb
+	dpkg -i ntfy_2.9.0_linux_amd64.deb
 	vim /etc/ntfy/server.yml
 	systemctl enable ntfy
 	systemctl start ntfy
@@ -15,11 +15,11 @@ https://github.com/binwiederhier/ntfy
 Windows
 	scoop install ntfy
 Binaries
-	wget https://github.com/binwiederhier/ntfy/releases/download/v1.28.0/ntfy_1.28.0_windows_x86_64.zip
-	7z e -o"..\bin\" ntfy_1.28.0_windows_x86_64.zip ntfy_1.28.0_windows_x86_64\ntfy.exe
+	wget https://github.com/binwiederhier/ntfy/releases/download/v2.9.0/ntfy_2.9.0_windows_amd64.zip
+	7z e -o"..\bin\" ntfy_2.9.0_windows_amd64.zip ntfy_2.9.0_windows_amd64\ntfy.exe
 	mv ..\bin\ntfy.exe ..\bin\ntfy-cli.exe
 	mkdir C:\Users\DAVIDY~1\AppData\Roaming\ntfy\
-	7z e -o"C:\Users\DAVIDY~1\AppData\Roaming\ntfy\" ntfy_1.28.0_windows_x86_64.zip ntfy_1.28.0_windows_x86_64\client\client.yml
+	7z e -o"C:\Users\DAVIDY~1\AppData\Roaming\ntfy\" ntfy_2.9.0_windows_amd64.zip ntfy_2.9.0_windows_amd64\client\client.yml
 
 Configuration at
 /etc/ntfy
